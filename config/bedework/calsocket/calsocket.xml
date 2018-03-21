@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<eventreg-properties xmlns="http://bedework.org/ns/" type="org.bedework.calsockets.common.conf.CalSocketsConfImpl">
+  <calDAVUrl>http://localhost:8080/socketws</calDAVUrl>
+  <token>abcd</token>
+</eventreg-properties>

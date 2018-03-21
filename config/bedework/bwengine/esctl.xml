@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<index-properties xmlns="http://bedework.org/ns/" type="org.bedework.indexer.IndexPropertiesImpl">
+  <dataDir>${org.bedework.data.dir}/elasticsearch/</dataDir>
+  <embeddedIndexer>true</embeddedIndexer>
+  <httpEnabled>false</httpEnabled>
+  <indexerURL>localhost:9300</indexerURL>
+</index-properties>

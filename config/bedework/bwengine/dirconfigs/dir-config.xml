@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<dir-config xmlns="http://bedework.org/ns/" type="org.bedework.calsvc.jmx.DirConfigPropertiesImpl">
+  <defaultDomain>mysite.edu</defaultDomain>
+  <domains>mysite.edu</domains>
+  <mbeanClassName>org.bedework.calsvc.jmx.DirConf</mbeanClassName>
+</dir-config>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<mailer xmlns="http://bedework.org/ns/" type="org.bedework.calfacade.mail.MailConfigPropertiesImpl">
+  <disabled>false</disabled>
+  <from>calendar.myplace.edu</from>
+  <protocol>smtp</protocol>
+  <serverPort>587</serverPort>
+  <serverUri>smtp.gmail.com</serverUri>
+  <starttls>true</starttls>
+  <subject>Message from demo calendar server</subject>
+</mailer>

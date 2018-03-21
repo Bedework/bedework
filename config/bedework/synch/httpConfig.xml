@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<http-properties xmlns="http://bedework.org/ns/" type="org.bedework.util.http.service.HttpConfigImpl">
+  <defaultMaxPerRoute>20</defaultMaxPerRoute>
+  <maxConnections>200</maxConnections>
+</http-properties>

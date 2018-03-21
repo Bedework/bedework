@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<bwcarddav xmlns="http://bedework.org/ns/" type="org.bedework.carddav.server.config.CardDAVConfig">
+  <dataOut>${org.bedework.data.dir}/carddav/dumprestore/</dataOut>
+  <defaultAddressbook>addressbook</defaultAddressbook>
+  <defaultVcardVersion>3.0</defaultVcardVersion>
+  <groupPrincipalRoot>/principals/groups</groupPrincipalRoot>
+  <hostPrincipalRoot>/principals/hosts</hostPrincipalRoot>
+  <principalRoot>/principals</principalRoot>
+  <resourcePrincipalRoot>/principals/resources</resourcePrincipalRoot>
+  <sysintfImpl>org.bedework.carddav.bwserver.BwSysIntfImpl</sysintfImpl>
+  <ticketPrincipalRoot>/principals/tickets</ticketPrincipalRoot>
+  <userHomeRoot>/user</userHomeRoot>
+  <userPrincipalRoot>/principals/users</userPrincipalRoot>
+  <venuePrincipalRoot>/principals/locations</venuePrincipalRoot>
+</bwcarddav>

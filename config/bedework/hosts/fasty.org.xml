@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<bwhost xmlns="http://bedework.org/ns/" 
+        type="org.bedework.calsvc.scheduling.hosts.HostInfo">
+  <hostname>fasty.org</hostname>
+  <port>8080</port>
+  <secure>false</secure>
+  <iScheduleUrl>www.fasty.org</iScheduleUrl>
+  <iSchedulePrincipal></iSchedulePrincipal>
+  <iScheduleCredentials></iScheduleCredentials>
+  <supportsISchedule>true</supportsISchedule>
+</bwhost>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<genkeys xmlns="http://bedework.org/ns/" type="org.bedework.util.security.keys.GenKeysConfigImpl">
+  <privKeyFileName>${org.bedework.data.dir}/privkeys</privKeyFileName>
+  <publicKeyFileName>${org.bedework.data.dir}/pubkeys</publicKeyFileName>
+</genkeys>

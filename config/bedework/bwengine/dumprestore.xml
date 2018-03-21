@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<dumprestore-properties xmlns="http://bedework.org/ns/" type="org.bedework.dumprestore.DumpRestorePropertiesImpl">
+  <account>admin</account>
+  <dataIn>${org.bedework.data.dir}/dumprestore/initbedework.xml</dataIn>
+  <dataOut>${org.bedework.data.dir}/dumprestore/</dataOut>
+  <dataOutPrefix>bwdata</dataOutPrefix>
+</dumprestore-properties>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bedework-svn" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../bw-access" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-caldav" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-calendar-client" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-calendar-engine" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-calendar-xsl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-calsockets" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-cli" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-event-registration" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-notifier" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-self-registration" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-synch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-timezone-server" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-util" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-util2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-webdav" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-xml" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../caldavTest" vcs="svn" />
+  </component>
+</project>

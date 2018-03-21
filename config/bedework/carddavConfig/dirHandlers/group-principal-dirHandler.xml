@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<bwcarddav-dirhandler xmlns="http://bedework.org/ns/" type="org.bedework.carddav.server.config.LdapDirHandlerConfig">
+  <addressBook>true</addressBook>
+  <addressbookEntryIdAttr>cn</addressbookEntryIdAttr>
+  <addressbookEntryObjectClass>groupOfUniqueNames</addressbookEntryObjectClass>
+  <addressbookIdAttr>ou</addressbookIdAttr>
+  <addressbookObjectClass>organizationalUnit</addressbookObjectClass>
+  <attrIds></attrIds>
+  <authDn>uid=admin,ou=system</authDn>
+  <authPw>secret</authPw>
+  <baseDn>ou=groups,dc=bedework,dc=org</baseDn>
+  <cardKind>group</cardKind>
+  <className>org.bedework.carddav.server.dirHandlers.ldap.LdapPrincipalDirHandler</className>
+  <confBeanClass>org.bedework.carddav.server.jmx.LdapDirHandlerConf</confBeanClass>
+  <confClass>org.bedework.carddav.util.LdapDirHandlerConfig</confClass>
+  <directory>false</directory>
+  <folderIdAttr>ou</folderIdAttr>
+  <initialContextFactory>com.sun.jndi.ldap.LdapCtxFactory</initialContextFactory>
+  <name>group-principal-dirHandler</name>
+  <pathPrefix>/directory/groups</pathPrefix>
+  <principalPrefix>/principals/groups/</principalPrefix>
+  <principalIdAttr>cn</principalIdAttr>
+  <providerUrl>ldap://localhost:10389/</providerUrl>
+  <queryLimit>1000</queryLimit>
+  <securityAuthentication>simple</securityAuthentication>
+  <securityProtocol>NONE</securityProtocol>
+</bwcarddav-dirhandler>

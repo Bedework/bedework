@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<synch-connector xmlns="http://bedework.org/ns/" type="org.bedework.synch.cnctrs.orgSyncV2.OrgSyncV2ConnectorConfig">
+  <bwWSDLURI>http://localhost:8080/xmlspecs/wsdls/synchws/wssvc.wsdl</bwWSDLURI>
+  <connectorClassName>org.bedework.synch.cnctrs.orgSyncV2.OrgSyncV2Connector</connectorClassName>
+  <keepAliveInterval>300</keepAliveInterval>
+  <uidPrefix>CAL-ff808081-5ecca97b-015e-ce9c8477-58c83456-</uidPrefix>
+  <mbeanClassName>org.bedework.synch.cnctrs.orgSyncV2.OrgSyncV2ConnConf</mbeanClassName>
+  <name>orgSyncV2</name>
+  <readOnly>false</readOnly>
+  <retryInterval>10</retryInterval>
+  <trustLastmod>false</trustLastmod>
+</synch-connector>

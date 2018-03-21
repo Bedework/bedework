@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<bwtz-confinfo xmlns="http://bedework.org/ns/" type="org.bedework.timezones.common.TzConfig">
+  <dtstamp>2015-06-30T03:14:12Z</dtstamp>
+  <lastChanged>0</lastChanged>
+  <leveldbPath>${org.bedework.data.dir}/tzsvr/leveldbData/</leveldbPath>
+  <name>config</name>
+  <primaryServer>false</primaryServer>
+  <primaryUrl>www.bedework.org</primaryUrl>
+  <refreshDelay>86400</refreshDelay>
+  <source>IANA 2014d</source>
+  <tzdataUrl>${org.bedework.data.dir}/tzsvr/tzdata2014d/zoneinfo/</tzdataUrl>
+  <version>1.0</version>
+</bwtz-confinfo>

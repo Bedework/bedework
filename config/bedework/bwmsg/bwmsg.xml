@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<system-properties xmlns="http://bedework.org/ns/" type="org.bedework.messages.impl.BwmsgPropertiesImpl">
+  <syseventsProperties>
+    <syseventsProperty>java.naming.provider.url = vm://bedework</syseventsProperty>
+    <syseventsProperty>org.bedework.connection.factory.name=java:/jms/BedeworkConnectionFactory</syseventsProperty>
+    <syseventsProperty>org.bedework.jms.queue.prefix=activemq/queue/</syseventsProperty>
+    <syseventsProperty>connectionFactoryNames = activemq/QueueConnectionFactory</syseventsProperty>
+    <syseventsProperty>queue.queue/sysevents = bedework.sysevents</syseventsProperty>
+    <syseventsProperty>queue.queue/syseventslog = bedework.sysevents.logger</syseventsProperty>
+    <syseventsProperty>queue.queue/monitor = bedework.sysevents.monitor</syseventsProperty>
+    <syseventsProperty>queue.queue/schedulerIn = bedework.scheduleIn</syseventsProperty>
+    <syseventsProperty>queue.queue/schedulerOut = bedework.scheduleOut</syseventsProperty>
+    <syseventsProperty>queue.queue/crawler = bedework.crawler</syseventsProperty>
+  </syseventsProperties>
+</system-properties>

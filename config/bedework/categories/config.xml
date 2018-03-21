@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<index-properties xmlns="http://bedework.org/ns/" type="org.bedework.categories.CategoriesPropertiesImpl">
+  <indexName>categories</indexName>
+  <structureDataPath>/Users/mike/data/dmoz/structure.rdf.u8</structureDataPath>
+  <indexMapping>/Users/mike/bedework/quickstart-4.0/bw-category/bw-category-service/src/main/resources/mappings.json</indexMapping>
+</index-properties>
