@@ -39,39 +39,42 @@ maven=
 # Projects we need to update - these are the svn projects - not internal variables
 # or user parameters.
 #updateProjects="access"
-updateProjects="bedework"
+#updateProjects="bedework"
 updateProjects="$updateProjects  bedework-carddav"
-updateProjects="$updateProjects  bwannotations"
-updateProjects="$updateProjects  bwcalcore"
-updateProjects="$updateProjects  bwcaldav"
-updateProjects="$updateProjects  bwcalFacade"
+#updateProjects="$updateProjects  bwannotations"
+#updateProjects="$updateProjects  bwcalcore"
+#updateProjects="$updateProjects  bwcaldav"
+#updateProjects="$updateProjects  bwcalFacade"
 #updateProjects="$updateProjects  bwdeployutil"
-updateProjects="$updateProjects  bwical"
-updateProjects="$updateProjects  bwinterfaces"
-updateProjects="$updateProjects  bwsysevents"
+#updateProjects="$updateProjects  bwical"
+#updateProjects="$updateProjects  bwinterfaces"
+#updateProjects="$updateProjects  bwsysevents"
 #updateProjects="$updateProjects  bwtzsvr"
-updateProjects="$updateProjects  bwtools"
-updateProjects="$updateProjects  bwwebapps"
+#updateProjects="$updateProjects  bwtools"
+#updateProjects="$updateProjects  bwwebapps"
 # updateProjects="$updateProjects  bwxml"
 #updateProjects="$updateProjects  caldav"
-updateProjects="$updateProjects  dumprestore"
+#updateProjects="$updateProjects  dumprestore"
 #updateProjects="$updateProjects  eventreg"
-updateProjects="$updateProjects  indexer"
+#updateProjects="$updateProjects  indexer"
 # updateProjects="$updateProjects  rpiutil"
 #updateProjects="$updateProjects  selfreg"
 #updateProjects="$updateProjects  synch"
 #updateProjects="$updateProjects  webdav"
 
-mvnUpdateProjects="bw-notifier"
+mvnUpdateProjects="bedework"
 mvnUpdateProjects="$mvnUpdateProjects  bw-access"
 mvnUpdateProjects="$mvnUpdateProjects  bw-caldav"
+mvnUpdateProjects="$mvnUpdateProjects  bw-calendar-client"
+mvnUpdateProjects="$mvnUpdateProjects  bw-calendar-engine"
+mvnUpdateProjects="$mvnUpdateProjects  bw-calsockets"
 mvnUpdateProjects="$mvnUpdateProjects  bw-cli"
 mvnUpdateProjects="$mvnUpdateProjects  bw-event-registration"
+mvnUpdateProjects="$mvnUpdateProjects  bw-notifier"
 mvnUpdateProjects="$mvnUpdateProjects  bw-self-registration"
 mvnUpdateProjects="$mvnUpdateProjects  bw-synch"
 mvnUpdateProjects="$mvnUpdateProjects  bw-timezone-server"
 mvnUpdateProjects="$mvnUpdateProjects  bw-webdav"
-mvnUpdateProjects="$mvnUpdateProjects  bw-calsockets"
 mvnUpdateProjects="$mvnUpdateProjects  bw-xml"
 mvnUpdateProjects="$mvnUpdateProjects  bw-util"
 mvnUpdateProjects="$mvnUpdateProjects  bw-util2"
@@ -81,18 +84,20 @@ mvnUpdateProjects="$mvnUpdateProjects  bw-cache-proxy"
 pkgdefault=yes
 access=
 bedework=
-bwannotations=
-bwcalcore=
-bwcaldav=
-bwcalfacade=
+bwcalclient=
+bwcaleng=
+#bwannotations=
+#bwcalcore=
+#bwcaldav=
+#bwcalfacade=
 bwcli=
-bwdeployutil=
-bwicalendar=
-bwinterfaces=
+#bwdeployutil=
+#bwicalendar=
+#bwinterfaces=
 bwnotifier=
-bwsysevents=
-bwtools=
-bwwebapps=
+#bwsysevents=
+#bwtools=
+#bwwebapps=
 bwcalsockets=
 bwxml=
 caldav=
@@ -100,11 +105,11 @@ caldavTest=
 carddav=
 catsvr=
 client=
-dumprestore=
+#dumprestore=
 eventreg=
 exchgGateway=
-geronimoHib=
-indexer=
+#geronimoHib=
+#indexer=
 naming=
 bwutil=
 bwutil2=
@@ -124,29 +129,13 @@ deployConf=
 deployData=
 deployDotWellKnown=
 deployWebcache=
-dirstart=
 saveData=
 
 specialTarget=
 
 dobuild=yes
-earName=
-warNames=
-deployEarsUrl=
 
 mavenRepoLocal=
-
-earNameDefault="bwcal"
-earNameCacheProxy="bw-cache"
-earNameCarddav="bw-carddav"
-#earNameEventreg="bw-eventreg"
-earNameNotifier="bw-notifier"
-#earNameSelfreg="bw-selfreg"
-#earNameSynch="bw-synch"
-#earNameTzsvr="bw-tzsvr"
-# earNameXml="bw-xml"
-
-# warnamescalsockets="pubcalwskt,ucalwskt"
 
 appserver="-Dorg.bedework.target.appserver=wildfly"
 
@@ -215,23 +204,15 @@ usage() {
   echo ""
   echo "   Core sub-projects: required for a functioning system"
   echo "     -access       Target is for the access classes"
-  echo "     -bwann        Target is for the annotation classes"
-  echo "     -bwcalcore    Target is for the bedework core api implementation"
-  echo "     -bwcaldav     Target is for the bedework CalDAV implementation"
-  echo "     -bwcalfacade  Target is for the bedework api interface classes"
-  echo "     -bwicalendar  Target is for the bedework icalendar classes"
-  echo "     -bwinterfaces Target is for the bedework service and api interfaces"
-  echo "     -bwsysevents  Target is for the system JMS event classes"
-  echo "     -bwwebapps    Target is for the bedework web ui classes"
+  echo "     -bwcalclient  Target is for the bedework client implementation"
+  echo "     -bwcaleng     Target is for the bedework cal engine implementation"
   echo "     -bwcalsockets Target is for the bedework calsockets classes"
   echo "     -bwxml        Target is for the Bedework XML schemas build"
   echo "                        (usually built automatically be dependent projects"
   echo "     -caldav       Target is for the generic CalDAV server"
   echo "     -carddav      Target is for the CardDAV build"
   echo "     -carddav deploy-addrbook    To deploy the Javascript Addressbook client."
-  echo "     -dumprestore  Target is for the Bedework dump/restore service"
   echo "     -eventreg     Target is for the event registration service build"
-  echo "     -indexer      Target is for the Bedework indexer service"
   echo "     -notifier     Target is the Bedework notification service"
   echo "     -bwutil       Target is for the Bedework util classes"
   echo "     -bwutil2      Target is for the Bedework util2 classes"
@@ -240,24 +221,14 @@ usage() {
   echo "     -tzsvr        Target is for the timezones server build"
   echo "     -webdav       Target is for the WebDAV build"
   echo "   Ancillary projects: not required"
-  echo "     -bwtools      Target is for the Bedework tools build"
   echo "     -caldavTest   Target is for the CalDAV Test build"
-  echo "     -deployutil   Target is for the Bedework deployment classes"
   echo "     -testsuite    Target is for the bedework test suite"
   echo "   Experimental projects: no guarantees"
   echo "     -catsvr       Target is for the Catsvr build"
   echo "     -client       Target is for the bedework client application build"
   echo "     -naming       Target is for the abstract naming api"
   echo ""
-  echo "   Invokes ant to build or deploy the Bedework system. Uses a configuration"
-  echo "   directory which contains one directory per configuration."
-  echo ""
-  echo "   Within each configuration directory we expect a file called build.properties"
-  echo "   which should point to the property and options file needed for the deploy process"
-  echo ""
-  echo "   In general these files will be in the same directory as build.properties."
-  echo "   The environment variable BEDEWORK_CONFIG contains the path to the current"
-  echo "   configuration directory and can be used to build a path to the other files."
+  echo "   Invokes maven to build or deploy the Bedework system. "
   echo ""
 }
 
@@ -273,46 +244,10 @@ errorUsage() {
   exit 1
 }
 
-# $1 - target directory
-# $2 - ear name without version or ".ear"
-# Used to copy out of the maven world into our deployable directory
-copyDeployable() {
-  basedir=$1
-#  echo "copyDeployable par 1 = $1"
-#  echo "copyDeployable par 2 = $2"
-
-  for dir in "$basedir"/$2*; do
-    if test -d "$dir"; then
-#      echo "copyDeployable dir = $dir"
-
-      mkdir -p $deployableDir
-      rm -r $deployableDir/$2*.ear
-      echo "cp -r $dir $deployableDir/$(basename $dir).ear"
-      cp -r $dir $deployableDir/$(basename $dir).ear
-    fi
-  done
-}
-
 # ----------------------------------------------------------------------------
 # Update the projects
 # ----------------------------------------------------------------------------
 actionUpdateall() {
-  for project in $updateProjects
-  do
-    if [ ! -d "$project" ] ; then
-      echo "*********************************************************************"
-      echo "Project $project is missing. Check it out from the repository"
-      echo "*********************************************************************"
-      exit 1
-    else
-      echo "*********************************************************************"
-      echo "Updating project $project"
-      echo "*********************************************************************"
-      svn cleanup $project
-      svn update --non-interactive --trust-server-cert $project
-    fi
-  done
-
   for project in $mvnUpdateProjects
   do
     if [ ! -d "$QUICKSTART_HOME/$project" ] ; then
@@ -339,16 +274,8 @@ setDirectory() {
   specialTarget=
   postDeploy=
   postDeployWars=
-  maven=
 
 #     Special targets
-    if [ "$dirstart" != "" ] ; then
-      cd $QUICKSTART_HOME
-      specialTarget=dirstart
-      dirstart=
-      return
-    fi
-
     if [ "$deployer" != "" ] ; then
       cd $QUICKSTART_HOME
       specialTarget=deployer
@@ -407,52 +334,39 @@ setDirectory() {
 
 #     projects
 
-	if [ "$bwnotifier" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-notifier
-      bwnotifier=
-      maven=yes
-      #deploy="$QUICKSTART_HOME/bw-notifier/bw-note-ear/target/"
-	  return
-	fi
-
-	if [ "$bwdeployutil" != "" ] ; then
-	  cd $QUICKSTART_HOME/bwdeployutil
-      bwdeployutil=
-	  return
-	fi
-
 	if [ "$bwutil" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-util
       bwutil=
-      maven=yes
 	  return
 	fi
 
 	if [ "$bwxml" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-xml
       bwxml=
-      maven=yes
 	  return
 	fi
 
 	if [ "$bwutil2" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-util2
       bwutil2=
-      maven=yes
 	  return
 	fi
 
 	if [ "$access" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-access
       access=
-      maven=yes
+	  return
+	fi
+
+	if [ "$bwnotifier" != "" ] ; then
+	  cd $QUICKSTART_HOME/bw-notifier
+      bwnotifier=
 	  return
 	fi
 
 	if [ "$eventreg" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-event-registration
       eventreg=
-      maven=yes
 	  return
 	fi
 
@@ -482,58 +396,21 @@ setDirectory() {
 	  return
 	fi
 
-	if [ "$bwannotations" != "" ] ; then
-	  cd $QUICKSTART_HOME/bwannotations
-      bwannotations=
+	if [ "$bwcaleng" != "" ] ; then
+	  cd $QUICKSTART_HOME/bw-calendar-engine
+      bwcaleng=
 	  return
 	fi
 
-	if [ "$bwcalfacade" != "" ] ; then
-	  cd $QUICKSTART_HOME/bwcalFacade
-      bwcalfacade=
+	if [ "$bwcalclient" != "" ] ; then
+	  cd $QUICKSTART_HOME/bw-calendar-client
+      bwcalclient=
 	  return
 	fi
 
 	if [ "$bwcli" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-cli
       bwcli=
-      maven=yes
-	  return
-	fi
-
-	if [ "$bwinterfaces" != "" ] ; then
-	  cd $QUICKSTART_HOME/bwinterfaces
-      bwinterfaces=
-	  return
-	fi
-
-	if [ "$bwsysevents" != "" ] ; then
-	  cd $QUICKSTART_HOME/bwsysevents
-      bwsysevents=
-	  return
-	fi
-
-	if [ "$bwicalendar" != "" ] ; then
-	  cd $QUICKSTART_HOME/bwical
-      bwicalendar=
-	  return
-	fi
-
-	if [ "$bwwebapps" != "" ] ; then
-	  cd $QUICKSTART_HOME/bwwebapps
-      bwwebapps=
-	  return
-	fi
-
-	if [ "$bwcaldav" != "" ] ; then
-	  cd $QUICKSTART_HOME/bwcaldav
-      bwcaldav=
-	  return
-	fi
-
-	if [ "$bwcalcore" != "" ] ; then
-	  cd $QUICKSTART_HOME/bwcalcore
-      bwcalcore=
 	  return
 	fi
 
@@ -549,28 +426,9 @@ setDirectory() {
 	  return
 	fi
 
-	if [ "$bwtools" != "" ] ; then
-	  cd $QUICKSTART_HOME/bwtools
-      bwtools=
-	  return
-	fi
-
-	if [ "$indexer" != "" ] ; then
-	  cd $QUICKSTART_HOME/indexer
-      indexer=
-	  return
-	fi
-
-	if [ "$dumprestore" != "" ] ; then
-	  cd $QUICKSTART_HOME/dumprestore
-      dumprestore=
-	  return
-	fi
-
 	if [ "$bwcalsockets" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-calsockets
     bwcalsockets=
-      maven=yes
 	  return
 	fi
 
@@ -595,14 +453,12 @@ setDirectory() {
 	if [ "$selfreg" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-self-registration
       selfreg=
-      maven=yes
 	  return
 	fi
 
   if [ "$synch" != "" ] ; then
     cd $QUICKSTART_HOME/bw-synch
       synch=
-      maven=yes
     return
   fi
 
@@ -615,27 +471,6 @@ setDirectory() {
 	if [ "$tzsvr" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-timezone-server
       tzsvr=
-      maven=yes
-	  return
-	fi
-
-	if [ "$earName" != "" ] ; then
-	  cd $QUICKSTART_HOME
-      postDeploy="$earName"
-      earName=
-      if [ "$deploy" != "" ] ; then
-        copyDeployable "$deploy" "$postDeploy"
-      fi
-	  return
-	fi
-
-	if [ "$warNames" != "" ] ; then
-	  cd $QUICKSTART_HOME
-      postDeployWars="$warNames"
-      warNames=
-#      if [ "$deploy" != "" ] ; then
-#        copyDeployable "$deploy" "$postDeploy"
-#      fi
 	  return
 	fi
 
@@ -762,39 +597,27 @@ do
       ;;
 # ----------------------- Log level
     -log-silent)
-      ant_loglevel="-quiet"
-      bw_loglevel="-Dorg.bedework.build.silent=true"
+      mvn_loglevel="-quiet"
       shift
       ;;
     -log-quiet)
       ant_loglevel="-quiet"
-      bw_loglevel=""
       shift
       ;;
     -log-inform)
-      ant_loglevel=""
-      bw_loglevel="-Dorg.bedework.build.inform=true"
+      mvn_loglevel=""
       shift
       ;;
     -log-verbose)
-      ant_loglevel="-verbose"
-      bw_loglevel="-Dorg.bedework.build.inform=true -Dorg.bedework.build.noisy=true"
+      mvn_loglevel="-verbose"
       shift
       ;;
-    -log-configs)
-      bw_loglevel="$bw_loglevel -Dorg.bedework.build.showconfigs=true"
-      shift
-      ;;
-    -ant-debug)
-      ant_loglevel="-debug"
+    -mvn-debug)
+      mvn_loglevel="-debug"
       shift
       ;;
     -pd-debug)
       postDeployDebug=" --debug "
-      shift
-      ;;
-    -build-debug)
-      bw_loglevel="-Dorg.bedework.build.inform=true -Dorg.bedework.build.noisy=true -Dorg.bedework.build.debug=true "
       shift
       ;;
 # ------------------------Special targets
@@ -839,9 +662,9 @@ do
       shift
       ;;
   dirstart)
-	  dirstart="yes"
-      pkgdefault=
-      shift
+      echo "The dirstart target is no longer supported"
+      echo "Use the dirstart script instead."
+      exit 1
       ;;
   saveData)
     saveData="yes"
@@ -857,20 +680,11 @@ do
       pkgdefault=
       shift
       ;;
-    -bwann)
-      bwannotations="yes"
-      pkgdefault=
-      shift
-      ;;
-    -bwcaldav)
-      bwcaldav="yes"
+    -bwcalclient)
+      bwcalclient="yes"
 
       access="yes"
-      bwannotations="yes"
-      bwcalfacade="yes"
-      bwicalendar="yes"
-      bwinterfaces="yes"
-      bwsysevents="yes"
+      bwcaleng="yes"
       bwxml="yes"
       caldav="yes"
       bwutil="yes"
@@ -879,28 +693,10 @@ do
       pkgdefault=
       shift
       ;;
-    -bwcalcore)
-      bwcalcore="yes"
+    -bwcaleng)
+      bwcaleng="yes"
 
       access="yes"
-      bwannotations="yes"
-      bwcalfacade="yes"
-      bwicalendar="yes"
-      bwinterfaces="yes"
-      bwsysevents="yes"
-      bwxml="yes"
-      caldav="yes"
-      bwutil="yes"
-      bwutil2="yes"
-      webdav="yes"
-      pkgdefault=
-      shift
-      ;;
-    -bwcalfacade)
-      bwcalfacade="yes"
-
-      access="yes"
-      bwannotations="yes"
       bwxml="yes"
       caldav="yes"
       bwutil="yes"
@@ -917,71 +713,9 @@ do
       pkgdefault=
       shift
       ;;
-    -bwicalendar)
-      bwicalendar="yes"
-
-      bwannotations="yes"
-      bwcalfacade="yes"
-      bwxml="yes"
-
-      pkgdefault=
-      shift
-      ;;
-    -bwinterfaces)
-      bwinterfaces="yes"
-
-      access="yes"
-      bwannotations="yes"
-      bwcalfacade="yes"
-      bwxml="yes"
-      caldav="yes"
-      bwutil="yes"
-      bwutil2="yes"
-      webdav="yes"
-
-      pkgdefault=
-      shift
-      ;;
     -notifier)
       bwnotifier="yes"
       #earName="$earNameNotifier"
-      pkgdefault=
-      shift
-      ;;
-    -bwsysevents)
-      bwsysevents="yes"
-
-      bwinterfaces="yes"
-      bwutil="yes"
-      pkgdefault=
-      shift
-      ;;
-    -bwtools)
-      bwtools="yes"
-
-      bwannotations="yes"
-      bwcalfacade="yes"
-      bwinterfaces="yes"
-      bwxml="yes"
-      bwutil="yes"
-      bwutil2="yes"
-      pkgdefault=
-      shift
-      ;;
-    -bwwebapps)
-      bwwebapps="yes"
-
-      access="yes"
-      bwannotations="yes"
-      bwcalfacade="yes"
-      bwicalendar="yes"
-      bwinterfaces="yes"
-      bwxml="yes"
-      caldav="yes"
-      bwutil="yes"
-      bwutil2="yes"
-      webdav="yes"
-
       pkgdefault=
       shift
       ;;
@@ -1026,7 +760,6 @@ do
       ;;
     -carddav)
       carddav="yes"
-      earName="$earNameCarddav"
 
       access="yes"
       bwxml="yes"
@@ -1051,48 +784,11 @@ do
       pkgdefault=
       shift
       ;;
-    -deployutil)
-      bwdeployutil="yes"
-
-      pkgdefault=
-      shift
-      ;;
-    -dumprestore)
-      dumprestore="yes"
-
-      access="yes"
-      bwannotations="yes"
-      bwcalcore="yes"
-      bwcalfacade="yes"
-      bwicalendar="yes"
-      bwinterfaces="yes"
-      bwsysevents="yes"
-      indexer="yes"
-      bwutil="yes"
-      bwutil2="yes"
-      pkgdefault=
-      shift
-      ;;
     -eventreg)
       eventreg="yes"
       #earName="$earNameEventreg"
 
       bwxml="yes"
-      bwutil="yes"
-      bwutil2="yes"
-      pkgdefault=
-      shift
-      ;;
-    -indexer)
-      indexer="yes"
-
-      access="yes"
-      bwannotations="yes"
-      bwcalcore="yes"
-      bwcalfacade="yes"
-      bwicalendar="yes"
-      bwinterfaces="yes"
-      bwsysevents="yes"
       bwutil="yes"
       bwutil2="yes"
       pkgdefault=
@@ -1179,74 +875,18 @@ do
 done
 
 if [ "$pkgdefault" = "yes" ] ; then
-  bedework="yes"
-  earName="$earNameDefault"
+  bwcalclient="yes"
 
   access="yes"
-  bwannotations="yes"
-  bwcalcore="yes"
-  bwcaldav="yes"
-  bwcalfacade="yes"
-  bwicalendar="yes"
-  bwinterfaces="yes"
-  bwsysevents="yes"
-  bwtools="yes"
-  bwwebapps="yes"
+  bwcaleng="yes"
   bwxml="yes"
   caldav="yes"
-  dumprestore="yes"
-  indexer="yes"
   bwutil="yes"
   bwutil2="yes"
   webdav="yes"
 fi
 
-BWCONFIGS=$QUICKSTART_HOME/bedework/config/bwbuild
-
-if [ "$BWJMXCONFIG" = "" ] ; then
-  BWJMXCONFIG=$QUICKSTART_HOME/bedework/config/bedework
-fi
-
-export BEDEWORK_CONFIGS_HOME=$BWCONFIGS
-export BEDEWORK_CONFIG=$BWCONFIGS/$bwc
-export BEDEWORK_JMX_CONFIG=$BWJMXCONFIG
-
-if [ ! -d "$BEDEWORK_CONFIGS_HOME/.platform" ] ; then
-  errorUsage "Configurations directory $BEDEWORK_CONFIGS_HOME is missing directory '.platform'."
-fi
-
-if [ ! -d "$BEDEWORK_CONFIGS_HOME/.defaults" ] ; then
-  errorUsage "Configurations directory $BEDEWORK_CONFIGS_HOME is missing directory '.defaults'."
-fi
-
-if [ ! -f "$BEDEWORK_CONFIG/build.properties" ] ; then
-  errorUsage "Configuration $BEDEWORK_CONFIG does not exist or is not a bedework configuration."
-fi
-
-# Make available for ant
-export BWCONFIG="-Dorg.bedework.build.properties=$BEDEWORK_CONFIG/build.properties"
 export QUICKSTART_HOME
-
-echo "BWCONFIGS=$BWCONFIGS"
-echo "BWCONFIG=$BWCONFIG"
-
-javacmd="$JAVA_HOME/bin/java -classpath $CLASSPATH"
-# Build (of bwxml) blew up with permgen error
-if [ "$java8plus" = "true" ] ; then
-  javacmd="$javacmd -Xmx512M -XX:MaxMetaspaceSize=512m"
-else
-  javacmd="$javacmd -Xmx512M -XX:MaxPermSize=512M"
-fi
-
-javacmd="$javacmd $ant_xmllogfile $offline $appserver"
-javacmd="$javacmd -Dant.home=$ANT_HOME org.apache.tools.ant.launch.Launcher"
-javacmd="$javacmd $BWCONFIG"
-javacmd="$javacmd $ant_listener $ant_logger $ant_loglevel $bw_loglevel"
-javacmd="$javacmd -lib $QUICKSTART_HOME/bedework/build/quickstart/antlib"
-
-if [ "$mavenRepoLocal" != "" ] ; then
-  javacmd="$javacmd -Dorg.bedework.appserver.repository.dir=$mavenRepoLocal"
-fi
 
 mvncmd=
 
@@ -1258,27 +898,6 @@ fi
 
 echo "mvncmd = $mvncmd"
 
-if [ "$maven" = "" ] ; then
-  # We do the deploy
-  if [ "$deployConfig" = "" ] ; then
-    deployConfig=./bedework/config/wildfly.deploy.properties
-  fi
-
-  postDeploycmd="./bw-util/bw-util-bw-deploy/target/rundeploy/bin/rundeploy $postDeployDebug--noversion --delete"
-
-  if [ "$deployEarsUrl" != "" ] ; then
-    postDeploycmd="$postDeploycmd --inurl $deployEarsUrl"
-  fi
-
-  postDeploycmd="$postDeploycmd --baseDir $QUICKSTART_HOME"
-
-  postDeploycmd="$postDeploycmd --props $deployConfig"
-
-  postDeploycmd="$postDeploycmd --in ./bedework/dist/deployable"
-
-  postDeploycmd="$postDeploycmd --out ./bedework/dist/deployableModified"
-fi
-
 while true
 do
   setDirectory
@@ -1289,31 +908,12 @@ do
   if [ "$specialTarget" != "" ] ; then
     # echo "Special target - command is $javacmd $specialTarget"
     $javacmd $specialTarget
-  elif [ "$maven" != "" ] ; then
+  else
     echo "mvncmd = $mvncmd"
     $mvncmd
     if [ "$?" -ne 0 ]; then
-        echo "Maven build unsuccessful"
-        exit 1
-    fi
-  elif [ "$postDeploy" != "" ] ; then
-    # Don't do this if bedework/dist does not exist. Probably a clean
-    if [ -d "./bedework/dist/" ] ; then
-      echo "$postDeploycmd --ear $postDeploy"
-      $postDeploycmd --ear $postDeploy
-    fi
-  elif [ "$postDeployWars" != "" ] ; then
-    # Don't do this if bedework/dist does not exist. Probably a clean
-    if [ -d "./bedework/dist/" ] ; then
-      echo "$postDeploycmd --war $postDeployWars"
-      $postDeploycmd --war $postDeployWars
-    fi
-  elif [ "$dobuild" = "yes" ] ; then
-#    echo $javacmd $*
-    $javacmd $*
-    if [ "$?" -ne 0 ]; then
-        echo "Java build unsuccessful"
-        exit 1
+      echo "Maven build unsuccessful"
+      exit 1
     fi
   fi
 done
