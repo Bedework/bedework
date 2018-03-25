@@ -1,3 +1,3 @@
 # Administrators table of contents
 
-[Subscribing to external feeds](subscriptions)
+[Subscribing to external feeds](subscriptions.md)
