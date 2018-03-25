@@ -1,4 +1,4 @@
-#Synch Engine
+# Synch Engine
 The synch engine handles the synchronization of external subscriptions with a bedework calendar - for example a Google web calendar or an ical feed from a department.
 
 Currently such a synchronization must be carried out to a single calendar collection which only contains data from the external resource. Also only one way synchronization is supported - inbound to bedework.
@@ -43,7 +43,7 @@ CREATE TABLE `bwsynch_subs` (
 
 ```
 
-(Re)build bwxml
+## (Re)build bw-xml
 
 The synch engine uses an extension of CalWS to communicate with bedework. It requires that the wsdl file contain the location of bedework. This is configured into the deploy.properties file - only one change for the synch engine should be necessary. Set the location of (one of) your application servers in the following.
 
@@ -57,8 +57,8 @@ org.bedework.app.bw-xml.bwwsdls.wsdl.synch=wssvc.wsdl
 # then provide the global properties
 org.bedework.global.synch.service.location=http://localhost:8080/synchws/ 
 
-
 ```
+
 If you are running everything on one server then the quickstart setting above will do. Note that at the moment the synch engine can only work against a single bedework server. It can accept requests from any member of the cluster however.
 Keys
 
@@ -83,7 +83,7 @@ Validity check succeeded
 If you are using multiple servers copy the resulting key file from <quickstart>/wildfly-10.1.0.Final/standalone/data/bedework/ on to each server.
 Ensure calendar server(s) can locate the synch engine.
 
-The bwengine/synch settings are configured to use a jvm system property to locate the synch engine. In file <quickstart>/wildfly-10.1.0.Final/standalone/confgiuration/bedework/bwengine/synch.xml you should see:
+The bwengine/synch settings are configured to use a jvm system property to locate the synch engine. In file <quickstart>/wildfly-10.1.0.Final/standalone/configuration/bedework/bwengine/synch.xml you should see:
 
 
 ```
@@ -97,5 +97,6 @@ The bwengine/synch settings are configured to use a jvm system property to locat
 
 ```
 If you are using multiple servers change the host in <managerUri> to refer to your sync server.
-Validating locations.
+
+###Validating locations.
 When an event arrives at the receiving end with an "X-BEDEWORK-LOCATION" property if the String value of the x-property is ...
