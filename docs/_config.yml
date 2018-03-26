@@ -1,1 +1,7 @@
 theme: jekyll-theme-slate
+
+github:
+  repository_name: Bedework
+  project_tagline: An Enterprise Calendaring and Scheduling Server
+
+show_downloads: true
