@@ -4,9 +4,9 @@ Bedework supports a public events registration system that allows authenticated 
 
 ![Registered Event]({{ site.baseurl }}/resources/eventRegRegistered.png)
 
-Administrators can specify how many users may register, how many tickets each registrant may request, and set the opening and closing dates of registration.  Administrators can view and modify a registration list and download CSV files of their registrations on-demand.
+Administrators can specify how many users may register, how many tickets each registrant may request, and set the opening and closing dates of registration. Administrators can view and modify a registration list and download CSV files of their registrations on-demand.
 
-![Register Event Form](/resources/eventRegAdminForm.png)
+![Register Event Form]({{ site.baseurl }}/resources/eventRegAdminForm.png)
 
 Data about the event is maintained in x-properties attached to the event and provides the following information:
 
