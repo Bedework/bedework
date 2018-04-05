@@ -7,7 +7,15 @@ For public events there are a few more options available when subscribing.
 **Process Locations and Contacts:** This causes locations and contacts to be moved into x-properties **"X-BEDEWORK-LOCATION"** and **"X-BEDEWORK-CONTACT"**. The receiving end (bedework) may carry out further actions to validate the location or contact and as a result may set a preexisting location or contact in the event. The x-property is always available for display but this process allows the system to validate the location/contact.
 
 **Process categories:** This does the same for categories.
-Creating a public subscription
+
+### Note:
+If you don't select those options then categories and locations will be created in bedework. This is probably not what is wanted as these are uncurated.
+
+By setting the **Process....** flag you ensure that such locations and categories don't end up in the database.
+
+**Suppress deletion of events?** This means that if events disappear from the feed they will stay in the database. This effectively turns the feed into a change feed adn can significantly reduce the size of the data. It does mean that events that MUST be deleted will require help from an administrator with sufficient privileges.
+ 
+### Creating a public subscription
 
 As a super user
   * Switch to the System tab and select "Manage calendars and folders".
