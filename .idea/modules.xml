@@ -3,11 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bedework.iml" filepath="$PROJECT_DIR$/bedework.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bedework-svn/bedework-svn.iml" filepath="$PROJECT_DIR$/../bedework-svn/bedework-svn.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-access/bw-access.iml" filepath="$PROJECT_DIR$/../bw-access/bw-access.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-caldav/bw-caldav.iml" filepath="$PROJECT_DIR$/../bw-caldav/bw-caldav.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-server/bw-caldav-server.iml" filepath="$PROJECT_DIR$/../bw-caldav/bw-caldav-server/bw-caldav-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-util/bw-caldav-util.iml" filepath="$PROJECT_DIR$/../bw-caldav/bw-caldav-util/bw-caldav-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-caldavTest/bw-caldavTest.iml" filepath="$PROJECT_DIR$/../bw-caldavTest/bw-caldavTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon/bw-calendar-client-appcommon.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon/bw-calendar-client-appcommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-bwcommon/bw-calendar-client-bwcommon.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-bwcommon/bw-calendar-client-bwcommon.iml" />
@@ -42,35 +42,28 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-ucaldav/bw-calendar-engine-ucaldav.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-ucaldav/bw-calendar-engine-ucaldav.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-userws/bw-calendar-engine-userws.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-userws/bw-calendar-engine-userws.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-xsl/bw-calendar-xsl.iml" filepath="$PROJECT_DIR$/../bw-calendar-xsl/bw-calendar-xsl.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-annotations/bw-caleng-annotations.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-annotations/bw-caleng-annotations.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api/bw-caleng-api.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api/bw-caleng-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-caldav/bw-caleng-caldav.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-caldav/bw-caleng-caldav.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-chgnote/bw-caleng-chgnote.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-chgnote/bw-caleng-chgnote.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core/bw-caleng-core.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core/bw-caleng-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore/bw-caleng-dumprestore.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore/bw-caleng-dumprestore.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-facade/bw-caleng-facade.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-facade/bw-caleng-facade.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-ical/bw-caleng-ical.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-ical/bw-caleng-ical.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-impl/bw-caleng-impl.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-impl/bw-caleng-impl.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-indexer/bw-caleng-indexer.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-indexer/bw-caleng-indexer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-inoutsched/bw-caleng-inoutsched.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-inoutsched/bw-caleng-inoutsched.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-interfaces/bw-caleng-interfaces.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-interfaces/bw-caleng-interfaces.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents/bw-caleng-sysevents.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents/bw-caleng-sysevents.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets.iml" filepath="$PROJECT_DIR$/../bw-calsockets/bw-calsockets.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-common/bw-calsockets-common.iml" filepath="$PROJECT_DIR$/../bw-calsockets/bw-calsockets-common/bw-calsockets-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-pubwar/bw-calsockets-pubwar.iml" filepath="$PROJECT_DIR$/../bw-calsockets/bw-calsockets-pubwar/bw-calsockets-pubwar.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-war/bw-calsockets-war.iml" filepath="$PROJECT_DIR$/../bw-calsockets/bw-calsockets-war/bw-calsockets-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-web/bw-calsockets-web.iml" filepath="$PROJECT_DIR$/../bw-calsockets/bw-calsockets-web/bw-calsockets-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-client/bw-carddav-client.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-client/bw-carddav-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-common/bw-carddav-common.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-common/bw-carddav-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-dumpres/bw-carddav-dumpres.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-dumpres/bw-carddav-dumpres.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-ear/bw-carddav-ear.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-ear/bw-carddav-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-public-war/bw-carddav-public-war.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-public-war/bw-carddav-public-war.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-server/bw-carddav-server.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-server/bw-carddav-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-tools/bw-carddav-tools.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-tools/bw-carddav-tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-user-war/bw-carddav-user-war.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-user-war/bw-carddav-user-war.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-userweb-war/bw-carddav-userweb-war.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-userweb-war/bw-carddav-userweb-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-cli/bw-cli.iml" filepath="$PROJECT_DIR$/../bw-cli/bw-cli.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-maven-deploy/bw-deploy-maven-plugin.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-maven-deploy/bw-deploy-maven-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-dotwell-known/bw-dotwell-known.iml" filepath="$PROJECT_DIR$/../bw-dotwell-known/bw-dotwell-known.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/bw-event-registration-common.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/bw-event-registration-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/bw-event-registration-ear.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/bw-event-registration-ear.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service/bw-event-registration-service.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service/bw-event-registration-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war/bw-event-registration-war.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war/bw-event-registration-war.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/bw-evreg-common.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/bw-evreg-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/bw-evreg-ear.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/bw-evreg-ear.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service/bw-evreg-service.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service/bw-evreg-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war/bw-evreg-war.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war/bw-evreg-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-bwconnector/bw-note-bwconnector.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-bwconnector/bw-note-bwconnector.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-common/bw-note-common.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-common/bw-note-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-db/bw-note-db.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-db/bw-note-db.iml" />
@@ -84,9 +77,6 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/bw-self-registration-ear.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/bw-self-registration-ear.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-war/bw-self-registration-war.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-war/bw-self-registration-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-selfreg.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-selfreg.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/bw-selfreg-common.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/bw-selfreg-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/bw-selfreg-ear.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/bw-selfreg-ear.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-war/bw-selfreg-war.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-war/bw-selfreg-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-selfregistration-web/bw-selfregistration-web.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-selfregistration-web/bw-selfregistration-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch-common/bw-synch-common.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch-common/bw-synch-common.iml" />
@@ -149,23 +139,6 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-xml/bw-xml-vcard/bw-xml-vcard.iml" filepath="$PROJECT_DIR$/../bw-xml/bw-xml-vcard/bw-xml-vcard.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-xml/bw-xml-war/bw-xml-war.iml" filepath="$PROJECT_DIR$/../bw-xml/bw-xml-war/bw-xml-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-xml/bw-xml-xrd/bw-xml-xrd.iml" filepath="$PROJECT_DIR$/../bw-xml/bw-xml-xrd/bw-xml-xrd.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bwannotations/bwannotations.iml" filepath="$PROJECT_DIR$/../bwannotations/bwannotations.iml" group="cal-engine" />
-      <module fileurl="file://$PROJECT_DIR$/../bwcalFacade/bwcalFacade.iml" filepath="$PROJECT_DIR$/../bwcalFacade/bwcalFacade.iml" group="cal-engine" />
-      <module fileurl="file://$PROJECT_DIR$/../bwcalcore/bwcalcore.iml" filepath="$PROJECT_DIR$/../bwcalcore/bwcalcore.iml" group="cal-engine" />
-      <module fileurl="file://$PROJECT_DIR$/../bwcaldav/bwcaldav.iml" filepath="$PROJECT_DIR$/../bwcaldav/bwcaldav.iml" group="cal-engine" />
-      <module fileurl="file://$PROJECT_DIR$/../bwical/bwical.iml" filepath="$PROJECT_DIR$/../bwical/bwical.iml" group="cal-engine" />
-      <module fileurl="file://$PROJECT_DIR$/../bwinterfaces/bwinterfaces.iml" filepath="$PROJECT_DIR$/../bwinterfaces/bwinterfaces.iml" group="cal-engine" />
-      <module fileurl="file://$PROJECT_DIR$/../bwsysevents/bwsysevents.iml" filepath="$PROJECT_DIR$/../bwsysevents/bwsysevents.iml" group="cal-engine" />
-      <module fileurl="file://$PROJECT_DIR$/../bwtools/bwtools.iml" filepath="$PROJECT_DIR$/../bwtools/bwtools.iml" group="cal-engine" />
-      <module fileurl="file://$PROJECT_DIR$/../bwwebapps/bwwebapps.iml" filepath="$PROJECT_DIR$/../bwwebapps/bwwebapps.iml" group="cal-engine" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon/bwwebcl-appcommon.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon/bwwebcl-appcommon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-notifyws/bwwebcl-ucalws.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-notifyws/bwwebcl-ucalws.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-webcommon/bwwebcl-webcommon.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-webcommon/bwwebcl-webcommon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../caldavTest/caldavTest.iml" filepath="$PROJECT_DIR$/../caldavTest/caldavTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bedework-carddav/carddav-trunk.iml" filepath="$PROJECT_DIR$/../bedework-carddav/carddav-trunk.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-common/common.iml" filepath="$PROJECT_DIR$/../bw-calsockets/bw-calsockets-common/common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../dumprestore/dumprestore.iml" filepath="$PROJECT_DIR$/../dumprestore/dumprestore.iml" group="cal-engine" />
-      <module fileurl="file://$PROJECT_DIR$/../indexer/indexer-3.10.iml" filepath="$PROJECT_DIR$/../indexer/indexer-3.10.iml" group="cal-engine" />
     </modules>
   </component>
 </project>

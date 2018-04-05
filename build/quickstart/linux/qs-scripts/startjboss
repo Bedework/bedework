@@ -1,0 +1,6 @@
+#! /bin/bash
+
+export JAVA_OPTS="$JAVA_OPTS -Dcom.bedework.site.name=bwtest"
+export JAVA_OPTS="$JAVA_OPTS -Dcom.bedework.db.ip=localhost"
+
+source ./bedework/build/quickstart/linux/startwildfly.sh

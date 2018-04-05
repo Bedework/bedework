@@ -1,0 +1,4 @@
+#! /bin/bash
+
+source ./bedework/build/quickstart/linux/bw.sh
+

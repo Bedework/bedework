@@ -6,138 +6,18 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/target/bw-cal-3.12.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="directory" name="bw-calendar-client-bedework-common-3.12.0-SNAPSHOT.war">
-        <element id="directory" name="WEB-INF">
-          <element id="directory" name="classes">
-            <element id="module-output" name="bw-calendar-client-bwcommon" />
-          </element>
-        </element>
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-bwcommon/target/bw-calendar-client-bedework-common-3.12.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="javaee-facet-resources" facet="bw-calendar-client-bwcommon/web/Web" />
-      </element>
-      <element id="directory" name="bw-calendar-client-cal-3.12.0-SNAPSHOT.war">
-        <element id="directory" name="WEB-INF">
-          <element id="directory" name="classes">
-            <element id="module-output" name="bw-calendar-client-cal" />
-          </element>
-        </element>
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-cal/target/bw-calendar-client-cal-3.12.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="javaee-facet-resources" facet="bw-calendar-client-cal/web/Web" />
-      </element>
-      <element id="directory" name="bw-calendar-client-caladmin-3.12.0-SNAPSHOT.war">
-        <element id="directory" name="WEB-INF">
-          <element id="directory" name="classes">
-            <element id="module-output" name="bw-calendar-client-caladmin" />
-          </element>
-        </element>
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-caladmin/target/bw-calendar-client-caladmin-3.12.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="javaee-facet-resources" facet="bw-calendar-client-caladmin/web/Web" />
-      </element>
-      <element id="directory" name="bw-calendar-client-feeder-3.12.0-SNAPSHOT.war">
-        <element id="directory" name="WEB-INF">
-          <element id="directory" name="classes">
-            <element id="module-output" name="bw-calendar-client-feeder" />
-          </element>
-        </element>
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-feeder/target/bw-calendar-client-feeder-3.12.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="javaee-facet-resources" facet="bw-calendar-client-feeder/web/Web" />
-      </element>
-      <element id="directory" name="bw-calendar-client-submit-3.12.0-SNAPSHOT.war">
-        <element id="directory" name="WEB-INF">
-          <element id="directory" name="classes">
-            <element id="module-output" name="bw-calendar-client-submit" />
-          </element>
-        </element>
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-submit/target/bw-calendar-client-submit-3.12.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="javaee-facet-resources" facet="bw-calendar-client-submit/web/Web" />
-      </element>
-      <element id="directory" name="bw-calendar-client-ucal-3.12.0-SNAPSHOT.war">
-        <element id="directory" name="WEB-INF">
-          <element id="directory" name="classes">
-            <element id="module-output" name="bw-calendar-client-ucal" />
-          </element>
-        </element>
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ucal/target/bw-calendar-client-ucal-3.12.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="javaee-facet-resources" facet="bw-calendar-client-ucal/web/Web" />
-      </element>
-      <element id="directory" name="bw-calendar-engine-notifyws-3.12.0-SNAPSHOT.war">
-        <element id="directory" name="WEB-INF">
-          <element id="directory" name="classes">
-            <element id="module-output" name="bw-calendar-engine-notifyws" />
-          </element>
-        </element>
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-notifyws/target/bw-calendar-engine-notifyws-3.12.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="javaee-facet-resources" facet="bw-calendar-engine-notifyws/web/Web" />
-      </element>
-      <element id="directory" name="bw-calendar-engine-pubcaldav-3.12.0-SNAPSHOT.war">
-        <element id="directory" name="WEB-INF">
-          <element id="directory" name="classes">
-            <element id="module-output" name="bw-calendar-engine-pubcaldav" />
-          </element>
-        </element>
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-pubcaldav/target/bw-calendar-engine-pubcaldav-3.12.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="javaee-facet-resources" facet="bw-calendar-engine-pubcaldav/web/Web" />
-      </element>
-      <element id="directory" name="bw-calendar-engine-publicws-3.12.0-SNAPSHOT.war">
-        <element id="directory" name="WEB-INF">
-          <element id="directory" name="classes">
-            <element id="module-output" name="bw-calendar-engine-publicws" />
-          </element>
-        </element>
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-publicws/target/bw-calendar-engine-publicws-3.12.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="javaee-facet-resources" facet="bw-calendar-engine-publicws/web/Web" />
-      </element>
-      <element id="directory" name="bw-calendar-engine-synchws-3.12.0-SNAPSHOT.war">
-        <element id="directory" name="WEB-INF">
-          <element id="directory" name="classes">
-            <element id="module-output" name="bw-calendar-engine-synchws" />
-          </element>
-        </element>
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-synchws/target/bw-calendar-engine-synchws-3.12.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="javaee-facet-resources" facet="bw-calendar-engine-synchws/web/Web" />
-      </element>
-      <element id="directory" name="bw-calendar-engine-ucaldav-3.12.0-SNAPSHOT.war">
-        <element id="directory" name="WEB-INF">
-          <element id="directory" name="classes">
-            <element id="module-output" name="bw-calendar-engine-ucaldav" />
-          </element>
-        </element>
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-ucaldav/target/bw-calendar-engine-ucaldav-3.12.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="javaee-facet-resources" facet="bw-calendar-engine-ucaldav/web/Web" />
-      </element>
-      <element id="directory" name="bw-calendar-engine-userws-3.12.0-SNAPSHOT.war">
-        <element id="directory" name="WEB-INF">
-          <element id="directory" name="classes">
-            <element id="module-output" name="bw-calendar-engine-userws" />
-          </element>
-        </element>
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-userws/target/bw-calendar-engine-userws-3.12.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="javaee-facet-resources" facet="bw-calendar-engine-userws/web/Web" />
-      </element>
+      <element id="directory" name="bw-calendar-client-bedework-common-3.12.0-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-cal-3.12.0-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-caladmin-3.12.0-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-feeder-3.12.0-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-submit-3.12.0-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-ucal-3.12.0-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-engine-notifyws-3.12.0-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-engine-pubcaldav-3.12.0-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-engine-publicws-3.12.0-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-engine-synchws-3.12.0-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-engine-ucaldav-3.12.0-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-engine-userws-3.12.0-SNAPSHOT.war" />
       <element id="directory" name="lib">
         <element id="archive" name="bw-calendar-client-appcommon-3.12.0-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-client-appcommon" />

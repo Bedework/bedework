@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="bw-dotwell-known:war exploded">
+    <output-path>$PROJECT_DIR$/../bw-dotwell-known/target/bw-dotwell-known-3.12.0-SNAPSHOT</output-path>
+    <root id="root" />
+  </artifact>
+</component>

@@ -3,6 +3,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-notifier/bw-note-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear" />
@@ -58,6 +59,9 @@
         <option value="$PROJECT_DIR$/../bw-calendar-engine/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-client/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-xsl/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-carddav/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-dotwell-known/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-caldavTest/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

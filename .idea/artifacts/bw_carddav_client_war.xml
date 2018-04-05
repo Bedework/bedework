@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bw-carddav-client:war">
+    <output-path>$PROJECT_DIR$/../bw-carddav/bw-carddav-client/target</output-path>
+    <root id="archive" name="bw-addrbook-client-4.0.2-SNAPSHOT.war" />
+  </artifact>
+</component>

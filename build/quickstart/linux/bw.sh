@@ -34,51 +34,25 @@ mvn_quiet=   # "-q"
 #mvn_binary="/usr/share/maven/bin/mvn";
 mvn_binary="mvn"
 
-maven=
-
-# Projects we need to update - these are the svn projects - not internal variables
-# or user parameters.
-#updateProjects="access"
-#updateProjects="bedework"
-updateProjects="$updateProjects  bedework-carddav"
-#updateProjects="$updateProjects  bwannotations"
-#updateProjects="$updateProjects  bwcalcore"
-#updateProjects="$updateProjects  bwcaldav"
-#updateProjects="$updateProjects  bwcalFacade"
-#updateProjects="$updateProjects  bwdeployutil"
-#updateProjects="$updateProjects  bwical"
-#updateProjects="$updateProjects  bwinterfaces"
-#updateProjects="$updateProjects  bwsysevents"
-#updateProjects="$updateProjects  bwtzsvr"
-#updateProjects="$updateProjects  bwtools"
-#updateProjects="$updateProjects  bwwebapps"
-# updateProjects="$updateProjects  bwxml"
-#updateProjects="$updateProjects  caldav"
-#updateProjects="$updateProjects  dumprestore"
-#updateProjects="$updateProjects  eventreg"
-#updateProjects="$updateProjects  indexer"
-# updateProjects="$updateProjects  rpiutil"
-#updateProjects="$updateProjects  selfreg"
-#updateProjects="$updateProjects  synch"
-#updateProjects="$updateProjects  webdav"
-
 mvnUpdateProjects="bedework"
 mvnUpdateProjects="$mvnUpdateProjects  bw-access"
+mvnUpdateProjects="$mvnUpdateProjects  bw-cache-proxy"
 mvnUpdateProjects="$mvnUpdateProjects  bw-caldav"
 mvnUpdateProjects="$mvnUpdateProjects  bw-calendar-client"
 mvnUpdateProjects="$mvnUpdateProjects  bw-calendar-engine"
 mvnUpdateProjects="$mvnUpdateProjects  bw-calsockets"
+mvnUpdateProjects="$mvnUpdateProjects  bw-carddav"
 mvnUpdateProjects="$mvnUpdateProjects  bw-cli"
+mvnUpdateProjects="$mvnUpdateProjects  bw-dotwell-known"
 mvnUpdateProjects="$mvnUpdateProjects  bw-event-registration"
 mvnUpdateProjects="$mvnUpdateProjects  bw-notifier"
 mvnUpdateProjects="$mvnUpdateProjects  bw-self-registration"
 mvnUpdateProjects="$mvnUpdateProjects  bw-synch"
 mvnUpdateProjects="$mvnUpdateProjects  bw-timezone-server"
-mvnUpdateProjects="$mvnUpdateProjects  bw-webdav"
-mvnUpdateProjects="$mvnUpdateProjects  bw-xml"
 mvnUpdateProjects="$mvnUpdateProjects  bw-util"
 mvnUpdateProjects="$mvnUpdateProjects  bw-util2"
-mvnUpdateProjects="$mvnUpdateProjects  bw-cache-proxy"
+mvnUpdateProjects="$mvnUpdateProjects  bw-webdav"
+mvnUpdateProjects="$mvnUpdateProjects  bw-xml"
 
 # Projects we will build - pkgdefault (bedework) is built if nothing specified
 pkgdefault=yes
@@ -86,18 +60,8 @@ access=
 bedework=
 bwcalclient=
 bwcaleng=
-#bwannotations=
-#bwcalcore=
-#bwcaldav=
-#bwcalfacade=
 bwcli=
-#bwdeployutil=
-#bwicalendar=
-#bwinterfaces=
 bwnotifier=
-#bwsysevents=
-#bwtools=
-#bwwebapps=
 bwcalsockets=
 bwxml=
 caldav=
@@ -105,11 +69,9 @@ caldavTest=
 carddav=
 catsvr=
 client=
-#dumprestore=
+dotWellKnown=
 eventreg=
 exchgGateway=
-#geronimoHib=
-#indexer=
 naming=
 bwutil=
 bwutil2=
@@ -127,7 +89,6 @@ deploylog4j=
 deploywf=
 deployConf=
 deployData=
-deployDotWellKnown=
 deployWebcache=
 saveData=
 
@@ -304,13 +265,6 @@ setDirectory() {
     return
   fi
 
-  if [ "$deployDotWellKnown" != "" ] ; then
-    cd $QUICKSTART_HOME
-    specialTarget=deployDotWellKnown
-    deployDotWellKnown=
-    return
-  fi
-
   if [ "$deployWebcache" != "" ] ; then
     cd $QUICKSTART_HOME
     specialTarget=deployWebcache
@@ -373,14 +327,18 @@ setDirectory() {
 	if [ "$webdav" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-webdav
       webdav=
-      maven=yes
+	  return
+	fi
+
+	if [ "$dotWellKnown" != "" ] ; then
+	  cd $QUICKSTART_HOME/bw-dotwell-known
+      dotWellKnown=
 	  return
 	fi
 
 	if [ "$caldav" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-caldav
       caldav=
-      maven=yes
 	  return
 	fi
 
