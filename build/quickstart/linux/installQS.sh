@@ -3,6 +3,9 @@
 # Create a bedework quickstart
 
 latestVersion="3.12.0"
+wildflyVersion="wildfly-10.1.0.Final"
+
+wildflyConfDir="${wildflyVersion}/standalone/configuration"
 
 # $1 - branch
 # $2 - name
@@ -84,11 +87,11 @@ cd $dirpath
 mkdir $qs
 cd $qs
 
+qs=`pwd`
+
 # download and unpack wildfly
 
 echo "Download wildfly"
-
-wildflyVersion="wildfly-10.1.0.Final"
 
 wget http://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.zip
 
@@ -111,12 +114,15 @@ wget http://dev.bedework.org/downloads/wfmodules.zip
 unzip wfmodules.zip
 cp -r wfmodules/* ${wildflyVersion}/modules/
 rm wfmodules.zip
+rm -r wfmodules
 
 # Hawtio
 
 cd ${wildflyVersion}/standalone/deployments
 wget http://dev.bedework.org/downloads/hawtio.war
 touch hawtio.war.dodeploy
+
+cd $qs
 
 # For the moment just build it all
 
@@ -129,3 +135,17 @@ touch hawtio.war.dodeploy
 ./bw -eventreg
 ./bw -selfreg
 ./bw deploy
+
+# Deploy config Copy the config files into the appserver
+
+cp -r bedework/config/bedework ${wildflyConfDir}
+cp bedework/config/standalone.xml ${wildflyConfDir}
+
+# Download and install data
+
+wget http://dev.bedework.org/downloads/qsdata.zip
+unzip qsdata.zip
+mkdir ${wildflyVersion}/standalone/data
+cp -r qsdata/* ${wildflyVersion}/standalone/data/
+rm -rf qsdata
+rm qsdata.zip
