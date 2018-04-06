@@ -148,23 +148,43 @@ done
 installScripts
 
 # Install drivers
-wget http://dev.bedework.org/downloads/wfmodules.zip
+wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/wfmodules.zip
 
 unzip wfmodules.zip
 cp -r wfmodules/* ${wildflyVersion}/modules/
 rm wfmodules.zip
 rm -r wfmodules
 
+# Replace h2 jar with later version
+rm -r ${wildflyVersion}/modules/system/layers/base/com/h2database
+cp -r bedework/build/quickstart/resources/h2database  ${wildflyVersion}/modules/system/layers/base/com/
+
 # Hawtio
 
-cd ${wildflyVersion}/standalone/deployments
-wget http://dev.bedework.org/downloads/hawtio.war
-touch hawtio.war.dodeploy
+wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/console.zip
+unzip console.zip
+cp console/hawtio.war ${wildflyVersion}/standalone/deployments/
+touch ${wildflyVersion}/standalone/deployments/hawtio.war.dodeploy
+rm console.zip
+rm console
 
-cd $qs
+# Deploy config Copy the config files into the appserver
+
+cp -r bedework/config/bedework ${wildflyConfDir}
+cp bedework/config/standalone.xml ${wildflyConfDir}
+
+# Download and install data
+
+wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/wfdata.zip
+unzip wfdata.zip
+mkdir ${wildflyVersion}/standalone/data
+cp -r wfdata/* ${wildflyVersion}/standalone/data/
+rm -rf wfdata
+rm wfdata.zip
 
 # For the moment just build it all
 
+./bw -xsl
 ./bw -bwutil
 ./bw -bwxml
 ./bw -bwutil2
@@ -174,17 +194,3 @@ cd $qs
 ./bw -eventreg
 ./bw -selfreg
 ./bw deploy
-
-# Deploy config Copy the config files into the appserver
-
-cp -r bedework/config/bedework ${wildflyConfDir}
-cp bedework/config/standalone.xml ${wildflyConfDir}
-
-# Download and install data
-
-wget http://dev.bedework.org/downloads/qsdata.zip
-unzip qsdata.zip
-mkdir ${wildflyVersion}/standalone/data
-cp -r qsdata/* ${wildflyVersion}/standalone/data/
-rm -rf qsdata
-rm qsdata.zip
