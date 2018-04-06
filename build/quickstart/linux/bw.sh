@@ -66,6 +66,7 @@ synch=
 testsuite=
 tzsvr=
 webdav=
+xsl=
 
 # Special targets - avoiding dependencies
 
@@ -166,6 +167,7 @@ usage() {
   echo "     -synch        Target is for the synch build"
   echo "     -tzsvr        Target is for the timezones server build"
   echo "     -webdav       Target is for the WebDAV build"
+  echo "     -xsl          Target is for the XSL module build"
   echo "   Ancillary projects: not required"
   echo "     -caldavTest   Target is for the CalDAV Test build"
   echo "     -testsuite    Target is for the bedework test suite"
@@ -272,6 +274,12 @@ setDirectory() {
   fi
 
 #     projects
+
+	if [ "$xsl" != "" ] ; then
+	  cd $QUICKSTART_HOME/bw-calendar-xsl
+      xsl=
+	  return
+	fi
 
 	if [ "$bwutil" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-util
