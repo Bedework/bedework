@@ -101,13 +101,13 @@ cat <<EOT >> $qs/profile.txt
     </profile>
 EOT
 
-echo
-echo "Insert the following text (from profile.txt) into your settings.xml file"
-echo
-cat $qs/profile.txt
+  echo
+  echo "Insert the following text (from profile.txt) into your settings.xml file"
+  echo
+  cat $qs/profile.txt
+  echo
+  read -p "Hit enter/return to continue" ignore
 }
-echo
-read -p "Hit enter/return to continue" ignore
 
 #read -p "Enter version - 'dev' or 'latest'" version
 
