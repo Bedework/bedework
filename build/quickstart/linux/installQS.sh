@@ -39,6 +39,11 @@ cloneRepoBranch() {
 
 # $1 - name
 cloneRepo() {
+  if [ "$2" == "echo" ] ; then
+    echo "git clone https://github.com/Bedework/$1.git"
+    exit
+  fi
+
   git clone https://github.com/Bedework/$1.git
   sleep 5
 }
@@ -48,25 +53,25 @@ installSources() {
 
   if [ "$version" == "dev" ] ; then
     # Bedework below
-    cloneRepo bw-access
-    cloneRepo bw-caldav
-    cloneRepo bw-caldavTest
-    cloneRepo bw-calendar-client
-    cloneRepo bw-calendar-engine
-    cloneRepo bw-calendar-xsl
-    cloneRepo bw-calsockets
-    cloneRepo bw-carddav
-    cloneRepo bw-cli
-    cloneRepo bw-dotwell-known
-    cloneRepo bw-event-registration
-    cloneRepo bw-notifier
-    cloneRepo bw-self-registration
-    cloneRepo bw-synch
-    cloneRepo bw-timezone-server
-    cloneRepo bw-util
-    cloneRepo bw-util2
-    cloneRepo bw-webdav
-    cloneRepo bw-xml
+    cloneRepo bw-access $1
+    cloneRepo bw-caldav $1
+    cloneRepo bw-caldavTest $1
+    cloneRepo bw-calendar-client $1
+    cloneRepo bw-calendar-engine $1
+    cloneRepo bw-calendar-xsl $1
+    cloneRepo bw-calsockets $1
+    cloneRepo bw-carddav $1
+    cloneRepo bw-cli $1
+    cloneRepo bw-dotwell-known $1
+    cloneRepo bw-event-registration $1
+    cloneRepo bw-notifier $1
+    cloneRepo bw-self-registration $1
+    cloneRepo bw-synch $1
+    cloneRepo bw-timezone-server $1
+    cloneRepo bw-util $1
+    cloneRepo bw-util2 $1
+    cloneRepo bw-webdav $1
+    cloneRepo bw-xml $1
   else
     echo "later"
   fi
@@ -96,9 +101,13 @@ cat <<EOT >> $qs/profile.txt
     </profile>
 EOT
 
+echo
 echo "Insert the following text (from profile.txt) into your settings.xml file"
+echo
 cat $qs/profile.txt
 }
+echo
+read -p "Hit enter/return to continue" ignore
 
 #read -p "Enter version - 'dev' or 'latest'" version
 
@@ -142,14 +151,6 @@ wget http://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.zip
 unzip ${wildflyVersion}.zip
 rm ${wildflyVersion}.zip
 
-echo "Do you wish to install the sources?"
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) installSources; break;;
-        No ) break;;
-    esac
-done
-
 installScripts
 
 # Install drivers
@@ -186,6 +187,17 @@ mkdir ${wildflyVersion}/standalone/data
 cp -r wfdata/* ${wildflyVersion}/standalone/data/
 rm -rf wfdata
 rm wfdata.zip
+
+echo "Do you wish to install the sources?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) break;;
+        No ) exit 0;;
+    esac
+done
+
+installSources "echo"
+installSources
 
 # For the moment just build it all
 
