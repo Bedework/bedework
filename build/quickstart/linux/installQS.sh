@@ -100,13 +100,7 @@ cat <<EOT >> $qs/profile.txt
       </properties>
     </profile>
 EOT
-
-  echo
-  echo "Insert the following text (from profile.txt) into your settings.xml file"
-  echo
   cat $qs/profile.txt
-  echo
-  read -p "Hit enter/return to continue" ignore
 }
 
 #read -p "Enter version - 'dev' or 'latest'" version
@@ -140,7 +134,15 @@ cd $qs
 
 qs=`pwd`
 
+
+echo
+echo "Insert the following text (from profile.txt) into your settings.xml file"
+echo
+
 createProfile
+
+echo
+read -p "Hit enter/return to continue" ignore
 
 # download and unpack wildfly
 
