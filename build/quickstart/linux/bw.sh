@@ -807,6 +807,12 @@ do
       pkgdefault=
       shift
       ;;
+    -xsl)
+      xsl="yes"
+
+      pkgdefault=
+      shift
+      ;;
     -*)
       usage
       exit 1
