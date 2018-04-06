@@ -60,14 +60,10 @@ fi
 
 version=$("$JAVA" -version 2>&1 | awk -F '"' '/version/ {print $2}')
 #echo version "$version"
-#echo "${version:0:3}"
+version="${version:2:1}"
 java8plus=false
-if [[ "${version:0:3}" > "1.7" ]]; then
-  java8plus=true
-fi
-
-if [ "$java8plus" = "false" ] ; then
-  echo "Requires java 8 or higher to run bedework"
+if [[ "$version" -lt "8" ]]; then
+  echo "Java 8 or greater is required for bedework"
   exit 1
 fi
 
