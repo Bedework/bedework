@@ -174,7 +174,7 @@ unzip console.zip
 cp console/hawtio.war ${wildflyVersion}/standalone/deployments/
 touch ${wildflyVersion}/standalone/deployments/hawtio.war.dodeploy
 rm console.zip
-rm console
+rm -r console
 
 # Deploy config Copy the config files into the appserver
 
