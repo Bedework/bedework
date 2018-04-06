@@ -41,7 +41,7 @@ cloneRepoBranch() {
 cloneRepo() {
   if [ "$2" == "echo" ] ; then
     echo "git clone https://github.com/Bedework/$1.git"
-    exit
+    return
   fi
 
   git clone https://github.com/Bedework/$1.git
