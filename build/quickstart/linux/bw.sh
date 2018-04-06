@@ -12,20 +12,6 @@ trap "exit 2" 1 2 3 15
 
 export QUICKSTART_HOME=$saveddir
 
-ANT_HOME=`dirname "$PRG"`/apache-ant-1.7.0
-ANT_HOME=`cd "$ANT_HOME" && pwd`
-
-#ant_listener="-listener org.apache.tools.ant.listener.Log4jListener"
-#ant_xmllogfile="-DXmlLogger.file=log.xml"
-#ant_logger="-logger org.apache.tools.ant.XmlLogger"
-
-deployableDir="$QUICKSTART_HOME/bedework/dist/deployable"
-
-ant_listener=
-ant_xmllogfile=
-ant_logger=
-
-ant_loglevel="-quiet"
 bw_loglevel=""
 postDeployDebug="";
 
@@ -148,10 +134,9 @@ usage() {
   echo "      -log-inform   A little more noisy"
   echo "      -log-verbose  Noisier"
   echo "      -log-configs  Some info about configurations"
-  echo "      -ant-debug    Vast amounts of ant output"
   echo "      -build-debug  Some bedework build debug output"
   echo ""
-  echo "   target       Special target or Ant target to execute"
+  echo "   target       Special target or compile target"
   echo ""
   echo "   Special targets"
   echo "      deployer          builds the deployer"
@@ -444,13 +429,10 @@ fi
 version=$("$JAVA_HOME/bin/java" -version 2>&1 | awk -F '"' '/version/ {print $2}')
 #echo version "$version"
 #echo "${version:0:3}"
-java8plus=false
-if [[ "${version:0:3}" > "1.7" ]]; then
-  java8plus=true
+if [[ "${version:0:3}" <= "1.7" ]]; then
+  echo "Java 8 is required for bedework."
+  exit 1
 fi
-
-CLASSPATH=$ANT_HOME/lib/ant-launcher.jar
-CLASSPATH=$CLASSPATH:$QUICKSTART_HOME/bedework/build/quickstart/antlib
 
 # Default some parameters
 
@@ -556,10 +538,6 @@ do
 # ----------------------- Log level
     -log-silent)
       mvn_loglevel="-quiet"
-      shift
-      ;;
-    -log-quiet)
-      ant_loglevel="-quiet"
       shift
       ;;
     -log-inform)

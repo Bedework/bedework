@@ -2,6 +2,24 @@
 
 # Create a bedework quickstart
 
+saveddir=`pwd`
+
+trap 'cd $saveddir' 0
+trap "exit 2" 1 2 3 15
+
+if [ -z "$JAVA_HOME" -o ! -d "$JAVA_HOME" ] ; then
+  echo "JAVA_HOME is not defined correctly for bedework."
+  exit 1
+fi
+
+version=$("$JAVA_HOME/bin/java" -version 2>&1 | awk -F '"' '/version/ {print $2}')
+#echo version "$version"
+#echo "${version:0:3}"
+if [[ "${version:0:3}" <= "1.7" ]]; then
+  echo "Java 8 is required for bedework."
+  exit 1
+fi
+
 latestVersion="3.12.0"
 wildflyVersion="wildfly-10.1.0.Final"
 
