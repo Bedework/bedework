@@ -15,7 +15,7 @@ fi
 version=$("$JAVA_HOME/bin/java" -version 2>&1 | awk -F '"' '/version/ {print $2}')
 #echo version "$version"
 #echo "${version:0:3}"
-if [[ "${version:0:3}" <= "1.7" ]]; then
+if [[ "${version:0:3}" -le "1.7" ]]; then
   echo "Java 8 is required for bedework."
   exit 1
 fi
@@ -29,11 +29,13 @@ wildflyConfDir="${wildflyVersion}/standalone/configuration"
 # $2 - name
 cloneRepoBranch() {
   git clone -b $1 https://github.com/Bedework/$2.git
+  sleep 5
 }
 
 # $1 - name
 cloneRepo() {
   git clone https://github.com/Bedework/$1.git
+  sleep 5
 }
 
 installSources() {
@@ -76,6 +78,23 @@ installScripts() {
   cp bedework/build/quickstart/linux/qs-scripts/* .
 }
 
+createProfile() {
+cat <<EOT >> $qs/profile.txt
+    <profile>
+      <id>bedework-3</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <org.bedework.deployment.properties>$qs/bedework/config/wildfly.deploy.properties</org.bedework.deployment.properties>
+      </properties>
+    </profile>
+EOT
+
+echo "Insert the following text (from profile.txt) into your settings.xml file"
+cat $qs/profile.txt
+}
+
 #read -p "Enter version - 'dev' or 'latest'" version
 
 echo "Which version"
@@ -106,6 +125,8 @@ mkdir $qs
 cd $qs
 
 qs=`pwd`
+
+createProfile
 
 # download and unpack wildfly
 

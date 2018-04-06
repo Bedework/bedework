@@ -429,7 +429,7 @@ fi
 version=$("$JAVA_HOME/bin/java" -version 2>&1 | awk -F '"' '/version/ {print $2}')
 #echo version "$version"
 #echo "${version:0:3}"
-if [[ "${version:0:3}" <= "1.7" ]]; then
+if [[ "${version:0:3}" -le "1.7" ]]; then
   echo "Java 8 is required for bedework."
   exit 1
 fi
