@@ -6,11 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="bedework" />
         <module name="bw-access" />
+        <module name="bw-addrbook-client" />
         <module name="bw-caldav-server" />
         <module name="bw-caldav-util" />
         <module name="bw-caldavTest" />
         <module name="bw-calendar-client-appcommon" />
+        <module name="bw-calendar-client-bedework-common" />
         <module name="bw-calendar-client-bwcommon" />
         <module name="bw-calendar-client-cal" />
         <module name="bw-calendar-client-caladmin" />
@@ -56,10 +59,10 @@
         <module name="bw-self-registration-common" />
         <module name="bw-self-registration-ear" />
         <module name="bw-self-registration-war" />
+        <module name="bw-self-registration-web" />
         <module name="bw-selfreg-common" />
         <module name="bw-selfreg-ear" />
         <module name="bw-selfreg-war" />
-        <module name="bw-selfregistration-web" />
         <module name="bw-synch-common" />
         <module name="bw-synch-ear" />
         <module name="bw-synch-shared" />
@@ -133,13 +136,16 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="bedework" target="1.5" />
       <module name="bw-access" target="1.7" />
+      <module name="bw-addrbook-client" target="1.8" />
       <module name="bw-caldav" target="1.7" />
       <module name="bw-caldav-server" target="1.7" />
       <module name="bw-caldav-util" target="1.7" />
       <module name="bw-caldavTest" target="1.8" />
       <module name="bw-calendar-client" target="1.8" />
       <module name="bw-calendar-client-appcommon" target="1.8" />
+      <module name="bw-calendar-client-bedework-common" target="1.8" />
       <module name="bw-calendar-client-bwcommon" target="1.8" />
       <module name="bw-calendar-client-cal" target="1.8" />
       <module name="bw-calendar-client-caladmin" target="1.8" />
@@ -217,21 +223,22 @@
       <module name="bw-evreg-ear" target="1.7" />
       <module name="bw-evreg-service" target="1.7" />
       <module name="bw-evreg-war" target="1.7" />
-      <module name="bw-note-bwconnector" target="1.7" />
-      <module name="bw-note-common" target="1.7" />
-      <module name="bw-note-db" target="1.7" />
-      <module name="bw-note-ear" target="1.7" />
-      <module name="bw-note-outbound" target="1.7" />
-      <module name="bw-note-servlet" target="1.7" />
-      <module name="bw-note-shared" target="1.7" />
-      <module name="bw-note-war" target="1.7" />
-      <module name="bw-notifier" target="1.7" />
+      <module name="bw-note-bwconnector" target="1.8" />
+      <module name="bw-note-common" target="1.8" />
+      <module name="bw-note-db" target="1.8" />
+      <module name="bw-note-ear" target="1.8" />
+      <module name="bw-note-outbound" target="1.8" />
+      <module name="bw-note-servlet" target="1.8" />
+      <module name="bw-note-shared" target="1.8" />
+      <module name="bw-note-war" target="1.8" />
+      <module name="bw-notifier" target="1.8" />
       <module name="bw-self-registration" target="1.8" />
       <module name="bw-self-registration-common" target="1.8" />
       <module name="bw-self-registration-ear" target="1.8" />
       <module name="bw-self-registration-ear (1)" target="1.8" />
       <module name="bw-self-registration-war" target="1.8" />
       <module name="bw-self-registration-war (1)" target="1.8" />
+      <module name="bw-self-registration-web" target="1.8" />
       <module name="bw-selfreg" target="1.8" />
       <module name="bw-selfreg-common" target="1.7" />
       <module name="bw-selfreg-ear" target="1.7" />
@@ -243,11 +250,11 @@
       <module name="bw-synch-shared" target="1.8" />
       <module name="bw-synch-war" target="1.8" />
       <module name="bw-synch-web" target="1.8" />
-      <module name="bw-timezone-server" target="1.7" />
-      <module name="bw-timezone-server-common" target="1.7" />
-      <module name="bw-timezone-server-ear" target="1.7" />
-      <module name="bw-timezone-server-tzconvert" target="1.7" />
-      <module name="bw-timezone-server-war" target="1.7" />
+      <module name="bw-timezone-server" target="1.8" />
+      <module name="bw-timezone-server-common" target="1.8" />
+      <module name="bw-timezone-server-ear" target="1.8" />
+      <module name="bw-timezone-server-tzconvert" target="1.8" />
+      <module name="bw-timezone-server-war" target="1.8" />
       <module name="bw-util" target="1.8" />
       <module name="bw-util (1)" target="1.8" />
       <module name="bw-util-args" target="1.8" />

@@ -33,6 +33,11 @@ wildflyConfDir="${wildflyVersion}/standalone/configuration"
 # $1 - branch
 # $2 - name
 cloneRepoBranch() {
+  if [ "$3" == "echo" ] ; then
+    echo "git clone -b $1 https://github.com/Bedework/$1.git"
+    return
+  fi
+
   git clone -b $1 https://github.com/Bedework/$2.git
   sleep 5
 }
@@ -73,7 +78,24 @@ installSources() {
     cloneRepo bw-webdav $1
     cloneRepo bw-xml $1
   else
-    echo "later"
+    cloneRepoBranch 4.0.2 bw-access $1
+    cloneRepoBranch 4.0.3 bw-caldav $1
+    cloneRepoBranch 3.12.0 bw-calendar-client $1
+    cloneRepoBranch 3.12.0 bw-calendar-engine $1
+    cloneRepoBranch 3.12.1 bw-calendar-xsl $1
+    #cloneRepo bw-calsockets $1
+    cloneRepoBranch 4.0.2 bw-carddav $1
+    cloneRepoBranch 4.0.0 bw-access $1
+    cloneRepo bw-dotwell-known $1
+    cloneRepoBranch 4.0.1 bw-event-registration $1
+    cloneRepoBranch 4.0.2 bw-notifier $1
+    cloneRepoBranch 4.0.3 bw-self-registration $1
+    cloneRepoBranch 4.0.0 bw-synch $1
+    cloneRepoBranch 4.0.1 bw-timezone-server $1
+    cloneRepoBranch 4.0.18 bw-util $1
+    cloneRepoBranch 4.0.0 bw-util2 $1
+    cloneRepoBranch 4.0.2 bw-webdav $1
+    cloneRepoBranch 4.0.5 bw-xml $1
   fi
 }
 
@@ -81,7 +103,7 @@ installScripts() {
   if [ "$version" == "dev" ] ; then
     cloneRepo bedework
   else
-    echo "later"
+    cloneRepoBranch 3.12.0 bedework
   fi
 
   chmod +x bedework/build/quickstart/linux/qs-scripts/*

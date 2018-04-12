@@ -64,17 +64,6 @@
         <option value="$PROJECT_DIR$/../bw-caldavTest/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-cli/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents/bwsysev-common/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents/bwsysev-monitor/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents/bwsysev-msgs/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-calsockets/bw-calsockets-ear/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-util/bw-util-calendar/pom.xml" />
-      </set>
-    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/../bin" />

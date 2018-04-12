@@ -34,12 +34,8 @@
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-pubcaldav" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-publicws" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-synchws" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-msgs" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents/bwsysev-common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents/bwsysev-monitor" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents/bwsysev-msgs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-tools" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-ucaldav" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-userws" charset="UTF-8" />
@@ -77,7 +73,7 @@
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-war" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-selfregistration-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-ear" charset="UTF-8" />
