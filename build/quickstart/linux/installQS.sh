@@ -34,11 +34,11 @@ wildflyConfDir="${wildflyVersion}/standalone/configuration"
 # $2 - name
 cloneRepoBranch() {
   if [ "$3" == "echo" ] ; then
-    echo "git clone -b $1 https://github.com/Bedework/$1.git"
+    echo "git clone -b $2-$1 https://github.com/Bedework/$2.git"
     return
   fi
 
-  git clone -b $1 https://github.com/Bedework/$2.git
+  git clone -b $2-$1 https://github.com/Bedework/$2.git
   sleep 5
 }
 
