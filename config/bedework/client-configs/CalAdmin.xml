@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <client-config xmlns="http://bedework.org/ns/" type="org.bedework.webcommon.config.AdminConfigImpl">
+  <adminGroupApprovers>true</adminGroupApprovers>
   <allowEditAllCategories>true</allowEditAllCategories>
   <allowEditAllContacts>true</allowEditAllContacts>
   <allowEditAllLocations>true</allowEditAllLocations>

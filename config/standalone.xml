@@ -622,6 +622,17 @@
                         </login-module>
                     </authentication>
                 </security-domain>
+                <security-domain name="extreg">
+                  <authentication>
+                    <login-module code="Database" flag="required">
+                      <module-option name="dsJndiName" value="java:/selfregDS"/>
+                      <module-option name="principalsQuery" value="select bw_pw from bw_accounts where bw_account=? and bw_enabled='T'"/>
+                      <module-option name="rolesQuery" value="select bw_role, 'Roles' from bw_roles where bw_account=?"/>
+                      <module-option name="hashAlgorithm" value="SHA"/>
+                      <module-option name="hashEncoding" value="base64"/>
+                    </login-module>
+                  </authentication>
+                </security-domain>
             </security-domains>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:transactions:3.0">

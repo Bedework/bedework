@@ -73,38 +73,90 @@
         <element id="archive" name="bw-calendar-engine-tools-3.12.1-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-engine-tools" />
         </element>
-        <element id="library" level="project" name="Maven: org.bedework:bw-access:4.0.2" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-args:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-caching:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-config:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-dav:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-elasticsearch:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-hibernate:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-http:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-indexing:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-jmx:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-json:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-misc:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-security:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet-filters:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-struts:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-timezones:4.0.18" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-xml:4.0.18" />
+        <element id="archive" name="bw-access-4.0.3-SNAPSHOT.jar">
+          <element id="module-output" name="bw-access" />
+        </element>
+        <element id="archive" name="bw-util-args-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-args" />
+        </element>
+        <element id="archive" name="bw-util-caching-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-caching" />
+        </element>
+        <element id="archive" name="bw-util-config-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-config" />
+        </element>
+        <element id="archive" name="bw-util-dav-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-dav" />
+        </element>
+        <element id="archive" name="bw-util-elasticsearch-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-elasticsearch" />
+        </element>
+        <element id="archive" name="bw-util-hibernate-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-hibernate" />
+        </element>
+        <element id="archive" name="bw-util-http-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-http" />
+        </element>
+        <element id="archive" name="bw-util-indexing-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-indexing" />
+        </element>
+        <element id="archive" name="bw-util-jmx-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-jmx" />
+        </element>
+        <element id="archive" name="bw-util-json-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-json" />
+        </element>
+        <element id="archive" name="bw-util-misc-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-misc" />
+        </element>
+        <element id="archive" name="bw-util-security-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-security" />
+        </element>
+        <element id="archive" name="bw-util-servlet-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-servlet" />
+        </element>
+        <element id="archive" name="bw-util-servlet-filters-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-servlet-filters" />
+        </element>
+        <element id="archive" name="bw-util-struts-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-struts" />
+        </element>
+        <element id="archive" name="bw-util-timezones-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-timezones" />
+        </element>
+        <element id="archive" name="bw-util-xml-4.0.19-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-xml" />
+        </element>
         <element id="archive" name="bw-util2-calendar-4.0.1-SNAPSHOT.jar">
           <element id="module-output" name="bw-util2-calendar" />
         </element>
         <element id="archive" name="bw-util2-vcard-4.0.1-SNAPSHOT.jar">
           <element id="module-output" name="bw-util2-vcard" />
         </element>
-        <element id="library" level="project" name="Maven: org.bedework:bw-xml-caldav:4.0.5" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-xml-calws-soap:4.0.5" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-xml-icalendar:4.0.5" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-xml-synchws:4.0.5" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-xml-tzsvr:4.0.5" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-webdav:4.0.2" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-caldav-server:4.0.3" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-caldav-util:4.0.3" />
+        <element id="archive" name="bw-xml-caldav-4.0.6-SNAPSHOT.jar">
+          <element id="module-output" name="bw-xml-caldav" />
+        </element>
+        <element id="archive" name="bw-xml-calws-soap-4.0.6-SNAPSHOT.jar">
+          <element id="module-output" name="bw-xml-calws-soap" />
+        </element>
+        <element id="archive" name="bw-xml-icalendar-4.0.6-SNAPSHOT.jar">
+          <element id="module-output" name="bw-xml-icalendar" />
+        </element>
+        <element id="archive" name="bw-xml-synchws-4.0.6-SNAPSHOT.jar">
+          <element id="module-output" name="bw-xml-synchws" />
+        </element>
+        <element id="archive" name="bw-xml-tzsvr-4.0.6-SNAPSHOT.jar">
+          <element id="module-output" name="bw-xml-tzsvr" />
+        </element>
+        <element id="archive" name="bw-webdav-4.0.3-SNAPSHOT.jar">
+          <element id="module-output" name="bw-webdav" />
+        </element>
+        <element id="archive" name="bw-caldav-server-4.0.4-SNAPSHOT.jar">
+          <element id="module-output" name="bw-caldav-server" />
+        </element>
+        <element id="archive" name="bw-caldav-util-4.0.4-SNAPSHOT.jar">
+          <element id="module-output" name="bw-caldav-util" />
+        </element>
         <element id="library" level="project" name="Maven: com.google.code.gson:gson:1.5" />
         <element id="library" level="project" name="Maven: org.imgscalr:imgscalr-lib:4.2" />
         <element id="library" level="project" name="Maven: struts:struts:1.2.9" />

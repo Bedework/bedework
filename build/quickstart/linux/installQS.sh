@@ -85,7 +85,7 @@ installSources() {
     cloneRepoBranch 3.12.1 bw-calendar-xsl $1
     #cloneRepo bw-calsockets $1
     cloneRepoBranch 4.0.2 bw-carddav $1
-    cloneRepoBranch 4.0.0 bw-access $1
+    cloneRepoBranch 4.0.0 bw-cli $1
     cloneRepo bw-dotwell-known $1
     cloneRepoBranch 4.0.1 bw-event-registration $1
     cloneRepoBranch 4.0.2 bw-notifier $1

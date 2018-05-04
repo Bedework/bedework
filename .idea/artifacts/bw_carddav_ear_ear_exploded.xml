@@ -51,7 +51,7 @@
         <element id="library" level="project" name="Maven: org.bedework:bw-ical4j-vcard:1.0.4" />
       </element>
       <element id="archive" name="bw-addrbook-client-4.0.3-SNAPSHOT.war">
-        <element id="module-output" name="bw-addrbook-client" />
+        <element id="module-output" name="bw-carddav-client" />
       </element>
       <element id="archive" name="bw-carddav-public-war-4.0.3-SNAPSHOT.war">
         <element id="module-output" name="bw-carddav-public-war" />

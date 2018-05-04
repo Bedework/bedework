@@ -75,11 +75,11 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-shared/bw-note-shared.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-shared/bw-note-shared.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-war/bw-note-war.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-war/bw-note-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-notifier.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-notifier.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-selfreg.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-selfreg.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/bw-self-registration-common.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/bw-self-registration-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/bw-self-registration-ear.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/bw-self-registration-ear.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-war/bw-self-registration-war.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-war/bw-self-registration-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-web/bw-self-registration-web.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-web/bw-self-registration-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-selfreg.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-selfreg.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch-common/bw-synch-common.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch-common/bw-synch-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch-ear/bw-synch-ear.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch-ear/bw-synch-ear.iml" />
