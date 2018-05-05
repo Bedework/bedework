@@ -2,10 +2,8 @@
 
 The Bedework system supports both personal and group calendaring and scheduling and public events.
 
-## Administrators
+[Introducing bedework](intro/introduction.md)
+
 [Pages for administrators](administrators/admin-toc)
 
-## Deployers and developers
-Links to pages for deployers and developers
-
-[Pages for deployers](deployers/deployer-toc.md)
+[Pages for deployers and developers](deployers/deployer-toc.md)
