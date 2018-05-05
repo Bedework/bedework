@@ -5,14 +5,12 @@ Bedework is an open-source enterprise calendar system that supports public, pers
 You may choose to deploy Bedework for public events calendaring, personal calendaring and scheduling, or both.  Bedework is suitable for embedding in other applications or in portals and has been deployed across a wide range of environments.
 
 
-[Features of Bedework](features.md)
-[New in Bedework 3.12](new-features.md)
-[System Overview](system-overview.md)
-[History and Background](history.md)
-[Calendaring Standards & Interoperability](
+  * [Features of Bedework](features.md)
+  * [New in Bedework 3.12](new-features.md)
+  * [System Overview](system-overview.md)
+  * [History and Background](history.md)
+  * [Calendaring Standards & Interoperability](
 standards.md)
-[Underlying technologies](technologies.md)
-
-[View an Apereo presentation](https://www.youtube.com/watch?v=nYZoufGfV6c&list=PLu_8PCta0pHeAe8FMkIHBPlemiZCDkNua#action=share)
+  * [Underlying technologies](technologies.md)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nYZoufGfV6c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
