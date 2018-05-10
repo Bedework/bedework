@@ -1,4 +1,37 @@
 {
+  "settings" : {
+    "analysis" : {
+      "analyzer" : {
+        "evprop_ngram_analyzer" : {
+          "tokenizer" : "evprop_ngram_tokenizer"
+        },
+        "evprop-autocomplete" : {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "standard",
+            "lowercase",
+            "ngram"
+          ]
+        }
+      },
+      "tokenizer" : {
+        "evprop_ngram_tokenizer" : {
+          "type" : "nGram",
+          "min_gram" : "3",
+          "max_gram" : "12",
+          "token_chars": [ "letter", "digit" ]
+        }
+      },
+      "filter" : {
+        "ngram": {
+          "type": "ngram",
+          "min_gram": 2,
+          "max_gram": 18
+        }
+      }
+    }
+  },
   "mappings" : {
     "updateTracker" : {
       "_source" : { "enabled" : true },
@@ -2127,6 +2160,10 @@
           "index" : "not_analyzed"
         },
 
+        "contact_all" : {
+          "type" : "string"
+        },
+
         "cn" : {
           "type" : "object",
           "properties" : {
@@ -2136,18 +2173,23 @@
             },
             "value" : {
               "type" : "string",
-              "include_in_all": true
+              "include_in_all": true,
+              "copy_to": "contact_all"
             }
           }
         },
+
         "phone" : {
           "type" : "string",
           "include_in_all": false,
+          "copy_to": "contact_all",
           "index" : "not_analyzed"
         },
+
         "email" : {
           "type" : "string",
           "include_in_all": false,
+          "copy_to": "contact_all",
           "index" : "not_analyzed"
         },
 
@@ -2216,6 +2258,15 @@
           "index" : "not_analyzed"
         },
 
+        "loc_all" : {
+          "type" : "string",
+          "index_analyzer" : "evprop-autocomplete"
+        },
+
+        "loc_all_terms" : {
+          "type" : "string"
+        },
+
         "address" : {
           "type" : "object",
           "properties" : {
@@ -2248,24 +2299,28 @@
         "addressField" : {
           "type" : "string",
           "include_in_all": true,
+          "copy_to": ["loc_all", "loc_all_terms"],
           "index" : "not_analyzed"
         },
 
         "roomField" : {
           "type" : "string",
           "include_in_all": true,
+          "copy_to": ["loc_all", "loc_all_terms"],
           "index" : "not_analyzed"
         },
 
         "subField1" : {
           "type" : "string",
           "include_in_all": true,
+          "copy_to": ["loc_all", "loc_all_terms"],
           "index" : "not_analyzed"
         },
 
         "subField2" : {
           "type" : "string",
           "include_in_all": true,
+          "copy_to": ["loc_all", "loc_all_terms"],
           "index" : "not_analyzed"
         },
 
@@ -2290,30 +2345,35 @@
         "street" : {
           "type" : "string",
           "include_in_all": true,
+          "copy_to": ["loc_all", "loc_all_terms"],
           "index" : "not_analyzed"
         },
 
         "city" : {
           "type" : "string",
           "include_in_all": true,
+          "copy_to": ["loc_all", "loc_all_terms"],
           "index" : "not_analyzed"
         },
 
         "state" : {
           "type" : "string",
           "include_in_all": true,
+          "copy_to": ["loc_all", "loc_all_terms"],
           "index" : "not_analyzed"
         },
 
         "zip" : {
           "type" : "string",
           "include_in_all": true,
+          "copy_to": ["loc_all", "loc_all_terms"],
           "index" : "not_analyzed"
         },
 
         "alternateAddress" : {
           "type" : "string",
           "include_in_all": true,
+          "copy_to": ["loc_all", "loc_all_terms"],
           "index" : "not_analyzed"
         },
 
