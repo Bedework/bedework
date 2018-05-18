@@ -1,9 +1,12 @@
 # Installing the quickstart (3.12.x onwards)
 
-The quickstart is installed by executing a script which willcreate the quickstart directory and then download, clone and build. In the event of a failure part way through, the script may be restarted with the **restart** parameter.
+Instructions for older releases are [here.](installing-old.md)
+
+The current quickstart is installed by executing a script which will create the quickstart directory and then download, clone and build. In the event of a failure part way through, the script may be restarted with the **restart** parameter.
 
 The script may be downloaded from **TBD**. Alternatively clone the [bedework](https://github.com/Bedework/bedework.git) repo and use the script at **bedework/build/quickstart/linux/installQS.sh**
 
+### Which version
 The script will ask you if you want the development or latest version.
 
 ### Apacheds
@@ -14,7 +17,7 @@ This is a maven project and as usual you need to set up your maven profile in ~/
 
 If you want to merge in the profile to an existing settings.xml ensure you also merge in the **pluginGroups** section.
 
-The profile does not need to be active by default if you have other profiles. The build process will spcify the bedework-3 profile.
+The profile does not need to be active by default if you have other profiles. The build process will specify the bedework-3 profile.
 
 Below is the contents of that settings.xml file. This must be in place before allowing the script to continue on to the builds otherwise they will fail diring deployment.
 
@@ -57,6 +60,6 @@ The deployment process may involve inserting filters for CAS, adding property va
 
 The file **bedework/config/wildfly.deploy.properties** is the quickstart version of that file.
 
-When developing your own service the first thing to do is create a repository with your files and copy the above file into that repository. Then set the **org.bedework.deployment.properties** value to point to that file.
+When developing your own service the first thing to do is create a repository with your files and copy the above file into that repository. Then set the **org.bedework.deployment.properties** value in your maven settings.xml to point to that file.
 
 DO NOT change the **org.bedework.deployment.basedir** property - unless you move the quickstart. This property is used to locate the wildfly instance.

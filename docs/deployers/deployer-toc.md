@@ -2,6 +2,8 @@
 
 [Installing the quickstart](installing.md)
 
+[Configuring Wildfly](configure-wildfly.md)
+
 [Configuring and deploying Elasticsearch](elasticsearch.md)
 
 [Public Events Registration](eventRegistration.md)
