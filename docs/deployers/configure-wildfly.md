@@ -29,4 +29,5 @@ cd wildfly-10.1.0.Final
    Added user 'hawtio-admin' with groups admin to file '/Users/xxx/dev/eap/wildfly-8.1.0.Final/domain/configuration/application-roles.properties'
    Is this new user going to be used for one AS process to connect to another AS process?
    e.g. for a slave host controller connecting to the master or for a Remoting connection for server to server EJB calls.
-   yes/no? no```
+   yes/no? no
+```
