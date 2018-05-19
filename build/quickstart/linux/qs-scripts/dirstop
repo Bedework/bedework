@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+source ./bedework/build/quickstart/linux/dirstop.sh

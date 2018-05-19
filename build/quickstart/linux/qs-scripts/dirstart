@@ -1,4 +1,3 @@
 #! /bin/sh
 
-cd apacheds-1.5.3-fixed
-./apacheds.sh
+source ./bedework/build/quickstart/linux/dirstart.sh
