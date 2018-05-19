@@ -18,8 +18,8 @@ resources=$BASE_DIR/bedework/build/quickstart
 JBOSS_CONFIG="standalone"
 JBOSS_SERVER_DIR="$BASE_DIR/$quickstart/$JBOSS_VERSION/$JBOSS_CONFIG"
 JBOSS_DATA_DIR="$JBOSS_SERVER_DIR/data"
-h2_data_dir="$JBOSS_DATA_DIR/bedework/h2"
-es_data_dir="$JBOSS_DATA_DIR/bedework/elasticsearch"
+bedework_data_dir="$JBOSS_DATA_DIR/bedework"
+es_data_dir="$bedework_data_dir/elasticsearch"
 
 TMP_DIR="$JBOSS_SERVER_DIR/tmp"
 
@@ -54,7 +54,8 @@ unzip h2.zip
 
 rm -f h2.zip
 
-cp -r h2 $h2_data_dir/
+rm -rf $bedework_data_dir/h2
+cp -r h2 $bedework_data_dir/
 rm -rf h2/
 
 cd $BASE_DIR
