@@ -4,8 +4,6 @@
 
 BASE_DIR=`pwd`
 
-# If you want them somewhere else then symlink. and symlink to this script to make it easier
-
 JBOSS_VERSION="wildfly-10.1.0.Final"
 
 if [ ! -d "$JBOSS_VERSION" ]; then
@@ -46,7 +44,7 @@ cd $TMP_DIR/
 
 rm -f h2.zip
 
-cp $resources/data/h2.zip $TMP_DIR
+cp $resources/data/h2.zip .
 
 rm -rf h2/
 
@@ -55,6 +53,7 @@ unzip h2.zip
 rm -f h2.zip
 
 rm -rf $bedework_data_dir/h2
+
 cp -r h2 $bedework_data_dir/
 rm -rf h2/
 
