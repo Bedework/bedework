@@ -39,49 +39,49 @@ progressPath=
 wildflyConfDir="${wildflyVersion}/standalone/configuration"
 
 sameVersion() {
-  if [! -f "$progressPath/installVersion" ]
+  if [ ! -f "$progressPath/installVersion" ]
   then
-    true
+    return 0
   fi
 
   read -r version < ${progressPath}/installVersion
 
   if [ "$version" != "$1" ] ; then
-    false
+    return 1
   fi
 
-  true
+  return 0
 }
 
 markVersion() {
-  echo $1 > $progressPath/installVersion
+  echo "$1" > $progressPath/installVersion
 }
 
 stepDone() {
   if [ -f "$progressPath/${1}.done" ]
   then
-    true
-  else
-    false
+    return 0
   fi
+
+  return 1
 }
 
 stepStarted() {
   if [ -f "$progressPath/${1}.started" ]
   then
-    true
-  else
-    false
+    return 0
   fi
+
+  return 1
 }
 
 stepSkipped() {
   if [ -f "$progressPath/${1}.skipped" ]
   then
-    true
-  else
-    false
+    return 0
   fi
+
+  return 1
 }
 
 unmark() {
@@ -89,20 +89,20 @@ unmark() {
 }
 
 markStarted() {
-  touch "$progressPath/${1}.started"
+  touch $progressPath/"${1}".started
 }
 
 markSkipped() {
-  touch "$progressPath/${1}.skipped"
+  touch $progressPath/"${1}".skipped
 }
 
 markDone() {
   if [ ! -f "$progressPath/${1}.started" ]
   then
     echo "Warning: missing marker $progressPath/${1}.started"
-    touch $progressPath/${1}.done
+    touch $progressPath/"${1}".done
   else
-    mv $progressPath/${1}.started $progressPath/${1}.done
+    mv $progressPath/"${1}".started $progressPath/"${1}".done
   fi
 }
 
@@ -136,7 +136,7 @@ usage() {
 }
 
 createProfile() {
-cat <<EOT >> $qs/profile.txt
+cat <<EOT >> "$qs"/profile.txt
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
@@ -159,7 +159,7 @@ cat <<EOT >> $qs/profile.txt
   </profiles>
 </settings>
 EOT
-  cat $qs/profile.txt
+  cat "$qs"/profile.txt
 }
 
 # -------------------------------------------------------------------
@@ -389,31 +389,31 @@ cloneRepo() {
 
   stepName=${installModule}$moduleName
 
-  if stepDone ${stepName}; then
+  if stepDone "${stepName}"; then
     echo "Already done"
     return
   fi
 
-  if stepSkipped $stepName; then
+  if stepSkipped "$stepName"; then
     echo "Skipped"
     return
   fi
 
-  if stepStarted $stepName; then
+  if stepStarted "$stepName"; then
     echo "Restarting from partial install"
-    rm -rf $moduleName
+    rm -rf "$moduleName"
   else
-    markStarted $stepName
+    markStarted "$stepName"
   fi
 
+  echo "git clone https://github.com/Bedework/$moduleName.git"
   if [ "$2" == "echo" ] ; then
-    echo "git clone https://github.com/Bedework/$moduleName.git"
     return
   fi
 
-  git clone https://github.com/Bedework/$moduleName.git
+  git clone https://github.com/Bedework/"$moduleName".git
 
-  markDone $stepName
+  markDone "$stepName"
 
   sleep 5
 }
@@ -428,27 +428,30 @@ cloneRepoBranch() {
 
   stepName=${installModule}$moduleName
 
-  if stepDone ${stepName}; then
+  if stepDone "${stepName}"; then
     echo "Already done"
     return
   fi
 
-  if stepSkipped $stepName; then
+  if stepSkipped "$stepName"; then
     echo "Skipped"
     return
   fi
 
-  if stepStarted $stepName; then
+  if stepStarted "$stepName"; then
     echo "Restarting from partial install"
-    rm -rf $moduleName
+    rm -rf "$moduleName"
   else
-    markStarted $stepName
+    markStarted "$stepName"
   fi
 
   echo "git clone -b $moduleName-$1 https://github.com/Bedework/$moduleName.git"
-  git clone -b $moduleName-$1 https://github.com/Bedework/$moduleName.git
+  if [ "$2" == "echo" ] ; then
+    return
+  fi
+  git clone -b "$moduleName"-"$1" https://github.com/Bedework/"$moduleName".git
 
-  markDone $stepName
+  markDone "$stepName"
 
   sleep 5
 }
@@ -477,44 +480,44 @@ installSources() {
 
   if [ "$version" == "dev" ] ; then
     # Bedework below
-    cloneRepo bw-access $1
-    cloneRepo bw-caldav $1
-    cloneRepo bw-caldavTest $1
-    cloneRepo bw-calendar-client $1
-    cloneRepo bw-calendar-engine $1
-    cloneRepo bw-calendar-xsl $1
-    cloneRepo bw-calsockets $1
-    cloneRepo bw-carddav $1
-    cloneRepo bw-cli $1
-    cloneRepo bw-dotwell-known $1
-    cloneRepo bw-event-registration $1
-    cloneRepo bw-notifier $1
-    cloneRepo bw-self-registration $1
-    cloneRepo bw-synch $1
-    cloneRepo bw-timezone-server $1
-    cloneRepo bw-util $1
-    cloneRepo bw-util2 $1
-    cloneRepo bw-webdav $1
-    cloneRepo bw-xml $1
+    cloneRepo bw-access "$1"
+    cloneRepo bw-caldav "$1"
+    cloneRepo bw-caldavTest "$1"
+    cloneRepo bw-calendar-client "$1"
+    cloneRepo bw-calendar-engine "$1"
+    cloneRepo bw-calendar-xsl "$1"
+    cloneRepo bw-calsockets "$1"
+    cloneRepo bw-carddav "$1"
+    cloneRepo bw-cli "$1"
+    cloneRepo bw-dotwell-known "$1"
+    cloneRepo bw-event-registration "$1"
+    cloneRepo bw-notifier "$1"
+    cloneRepo bw-self-registration "$1"
+    cloneRepo bw-synch "$1"
+    cloneRepo bw-timezone-server "$1"
+    cloneRepo bw-util "$1"
+    cloneRepo bw-util2 "$1"
+    cloneRepo bw-webdav "$1"
+    cloneRepo bw-xml "$1"
   else
-    cloneRepoBranch 4.0.2 bw-access $1
-    cloneRepoBranch 4.0.3 bw-caldav $1
-    cloneRepoBranch 3.12.0 bw-calendar-client $1
-    cloneRepoBranch 3.12.0 bw-calendar-engine $1
-    cloneRepoBranch 3.12.1 bw-calendar-xsl $1
-    #cloneRepo bw-calsockets $1
-    cloneRepoBranch 4.0.2 bw-carddav $1
-    cloneRepoBranch 4.0.0 bw-cli $1
-    cloneRepo bw-dotwell-known $1
-    cloneRepoBranch 4.0.1 bw-event-registration $1
-    cloneRepoBranch 4.0.2 bw-notifier $1
-    cloneRepoBranch 4.0.3 bw-self-registration $1
-    cloneRepoBranch 4.0.0 bw-synch $1
-    cloneRepoBranch 4.0.1 bw-timezone-server $1
-    cloneRepoBranch 4.0.18 bw-util $1
-    cloneRepoBranch 4.0.0 bw-util2 $1
-    cloneRepoBranch 4.0.2 bw-webdav $1
-    cloneRepoBranch 4.0.5 bw-xml $1
+    cloneRepoBranch 4.0.2 bw-access "$1"
+    cloneRepoBranch 4.0.3 bw-caldav "$1"
+    cloneRepoBranch 3.12.0 bw-calendar-client "$1"
+    cloneRepoBranch 3.12.0 bw-calendar-engine "$1"
+    cloneRepoBranch 3.12.1 bw-calendar-xsl "$1"
+    #cloneRepo bw-calsockets "$1"
+    cloneRepoBranch 4.0.2 bw-carddav "$1"
+    cloneRepoBranch 4.0.0 bw-cli "$1"
+    cloneRepo bw-dotwell-known "$1"
+    cloneRepoBranch 4.0.1 bw-event-registration "$1"
+    cloneRepoBranch 4.0.2 bw-notifier "$1"
+    cloneRepoBranch 4.0.3 bw-self-registration "$1"
+    cloneRepoBranch 4.0.0 bw-synch "$1"
+    cloneRepoBranch 4.0.1 bw-timezone-server "$1"
+    cloneRepoBranch 4.0.18 bw-util "$1"
+    cloneRepoBranch 4.0.0 bw-util2 "$1"
+    cloneRepoBranch 4.0.2 bw-webdav "$1"
+    cloneRepoBranch 4.0.5 bw-xml "$1"
   fi
 
   markDone $installSources
@@ -529,30 +532,30 @@ buildModule() {
 
   stepName=${buildModule}$moduleName
 
-  if stepDone ${stepName}; then
+  if stepDone "${stepName}"; then
     echo "Already done"
     return
   fi
 
-  if stepSkipped $stepName; then
+  if stepSkipped "$stepName"; then
     echo "Skipped"
     return
   fi
 
-  if stepStarted $stepName; then
+  if stepStarted "$stepName"; then
     echo "Restarting from partial build"
   else
-    markStarted $stepName
+    markStarted "$stepName"
   fi
 
 
   if [ "$moduleName" = "deploy" ] ; then
     ./bw deploy
   else
-    ./bw -$moduleName
+    ./bw -"$moduleName"
   fi
 
-  markDone $stepName
+  markDone "$stepName"
 
   sleep 5
 }
@@ -561,20 +564,20 @@ buildModules() {
   echo "---------------------------------------------------------------"
   echo "Build the modules"
 
-  if stepDone $buildModules; then
+  if stepDone "$buildModules"; then
     echo "Already done"
     return
   fi
 
-  if stepSkipped $buildModules; then
+  if stepSkipped "$buildModules"; then
     echo "Skipped"
     return
   fi
 
-  if stepStarted $buildModules; then
+  if stepStarted "$buildModules"; then
     echo "Restarting from partial build"
   else
-    markStarted $buildModules
+    markStarted "$buildModules"
   fi
 
 # For the moment just build it all
@@ -596,15 +599,15 @@ buildModules() {
 read -p "Enter path or name of empty or new directory: " dirpath
 
 if [ ! -d "$dirpath" ]; then
-  mkdir -p $dirpath
+  mkdir -p "$dirpath"
 fi
 
-cd $dirpath
+cd "$dirpath"
 dirpath=`pwd`
 
 progressPath="$dirpath/$progressDir"
 
-if ls -1qA $dirpath | grep -q .
+if ls -1qA "$dirpath" | grep -q .
 then
   # It's not empty. Does it contain our progress directory
   if [ -d "$progressPath" ]; then
@@ -617,7 +620,7 @@ then
       exit 1
     fi
   else
-    ! echo $dirpath is not empty
+    ! echo "$dirpath" is not empty
     exit 1
   fi
 else
@@ -636,7 +639,7 @@ select version in "dev" "latest"; do
 done
 
 qs="quickstart-$version"
-if [ ! sameVersion $qs ]; then
+if ! sameVersion $qs ; then
   echo "Cannot restart install for a different version."
   echo "Delete the directory and start again."
   exit 1
