@@ -4,13 +4,47 @@ The quickstart is configured to use h2 for demonstration only. For production yo
 ## postgresql
 We'll describe the process for the main calendar engine. The others are very similar.
 
-All configuration files are in standalone/configuration/ - we'll just refer to the relative path. 
+All bedework and wildfly configuration files are in standalone/configuration/ - we'll just refer to the relative path. 
 
   * Name: caldb (you can change that if you wish)
   * Configuration: bedework/bwcore/dbconfig.xml
   * datasource: CalendarDS
 
+#### Configure postgresql
+You'll probably need to configure postgres to allow your chosen role access to the server and databases.
+
+Depending on how you're running the system you may need to modify postgresql.conf and pg_haba.conf - both located by default in the daat directory.
+
+If you're running postgres on a separate system you may need to change the listen_addresses value and port:
+
+```
+listen_addresses = 'localhost'     # what IP address(es) to listen on;
+                                   # comma-separated list of addresses;
+                                   # defaults to 'localhost'; use '*' for all
+                                   # (change requires restart)
+port = 5432                        # (change requires restart)            
+```
+
+Change "localhost" to "*" or a list of addresses.
+
+5432 is the default port.
+
+To allow your account access you will need to add a line or lines to pg_hba.conf near the end something like:
+
+```
+host    all             bedework        10.0.0.1/32        md5
+```
+This can be made more restrictive by naming the db.
+
+
 Create a database with a known id/password. Ensure it is accessible from the host you are running bedework on.
+
+The psql commands are something like:
+
+```
+create role bedework with password 'xxxxxxxxx';
+create database caldb owner bedework;
+```
 
 Set the hibernate dialect in the config file:
 ```
