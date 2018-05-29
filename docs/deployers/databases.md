@@ -42,7 +42,7 @@ Create a database with a known id/password. Ensure it is accessible from the hos
 The psql commands are something like:
 
 ```
-create role bedework with password 'xxxxxxxxx';
+create role bedework with login password 'xxxxxxxxx';
 create database caldb owner bedework;
 ```
 
