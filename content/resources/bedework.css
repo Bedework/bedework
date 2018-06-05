@@ -1,0 +1,276 @@
+/*
+   Licensed to Jasig under one or more contributor license
+   agreements. See the NOTICE file distributed with this work
+   for additional information regarding copyright ownership.
+   Jasig licenses this file to you under the Apache License,
+   Version 2.0 (the "License"); you may not use this file
+   except in compliance with the License. You may obtain a
+   copy of the License at:
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on
+   an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied. See the License for the
+   specific language governing permissions and limitations
+   under the License.
+*/
+
+body {
+  background: #001F5E url('calendarBg2.gif') top left repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+#bodyBlock {
+  width: 950px;
+  margin: 0 auto;
+  padding: 0;
+  color: black;
+  background-color: white;
+}
+#header {
+  position: relative;
+  background: transparent url('headBg2.jpg') top left no-repeat;
+  color: white;
+  width: 950px;
+  height: 135px;
+  margin: 0;
+  padding: 0;
+}
+#header h2 {
+  position: absolute;
+  left: 44px;
+  top: 50px;
+  width: 363px;
+  height: 78px;
+  margin: 0;
+  padding: 0;
+}
+#bwLogoLeft {
+  position: absolute;
+  top: 14px;
+  left: -33px;
+}
+ul.menu,
+#subtitle {
+  margin: 0;
+  padding: 2px 0 2px 0;
+  color: #333;
+  background: #ccc url('menuBg.gif') bottom left repeat-x;
+  border-bottom: 1px solid #ccc;
+  /*border-left: 1px solid #ADBAFF;
+  border-right: 1px solid #ADBAFF;*/
+}
+ul.menu li {
+  display: inline;
+  list-style : none;
+  font-size: 12px;
+  padding: 0 0.5em 0 1em;
+  margin: 2px 0;
+  vertical-align: middle;
+  border-left: 1px dotted #999;
+}
+ul.menu li.first {
+  border-left: none;
+}
+#subtitle {
+   font-weight: bold;
+   padding: 1em 1em 1em 1.5em;
+   color:  #444;
+}
+#content {
+  width: 888px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 30px 30px 10px 30px;
+  background: white;
+  color: black;
+  font-size: 0.9em;
+}
+#content h1 {
+  font-size: 1.4em;
+  margin: 0 0 1em 0;
+}
+#content h3 {
+  font-size: 1.2em;
+}
+#content h2 {
+  font-size: 1.3em;
+}
+#content h4 {
+  font-size: 1.1em;
+}
+#clientSelect {
+  width: 850px;
+  margin: 0 auto;
+}
+fieldset {
+  float: left;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: black;
+}
+fieldset p {
+  margin: 3em 0 0 0;
+}
+legend {
+  color: black;
+  background-color: transparent;
+  font-weight: bold;
+}
+#clientPublic {
+  width: 350px;
+  height: 190px;
+  margin: 0 1.5em 1em 0;
+}
+#clientAdmin {
+  width: 470px;
+  height: 190px;
+  margin: 0 0 1em 0;
+}
+#clientSubmission {
+  width: 470px;
+  height: 180px;
+  margin: 0 1.5em 1em 0;
+}
+#clientPersonal {
+   margin: 0 0 1em 0;
+   width: 842px;
+   height: 180px;
+ }
+div.webclient {
+  float: left;
+  margin: 1em 1em 1em 1.5em;
+}
+div.webclient2 {
+  margin-left: 0;
+}
+div.webclient a.app {
+  float: left;
+  text-align: center;
+  display: block;
+}
+div.webclient img {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+}
+div.webclient img:hover {
+  border: 1px solid #900;
+}
+.loginInfo {
+  padding-top: 1em;
+  text-align: left;
+}
+div.loginInfo a.title {
+  display: block;
+  font-weight: bold;
+  margin: 0 0 1em 0;
+}
+#resources {
+  float: left;
+}
+#resources ul {
+  padding-left: 1em;
+  white-space: nowrap;
+}
+/* Generic Selectors */
+li {
+  padding: 0 0 0.5em 0;
+  list-style-position: inside;
+}
+code {
+
+}
+p {
+  padding-left: 1em;
+}
+em {
+  font-style: italic;
+}
+.clear {
+  clear: both;
+}
+.note {
+  font-size: 0.9em;
+}
+/* Footer and Links */
+#footMenu {
+  width: 948px;
+  text-align: left;
+  background-color: #CCC;
+  background-image: none;
+  color: #666;
+}
+#footer {
+  clear: both;
+  width: 948px;
+  margin: 0 auto;
+  padding: 0;
+  background: #eee;
+  color: black;
+}
+#footer p {
+  text-align: center;
+  font-size: 12px;
+  margin: 0;
+  padding: 1em;
+  color: #666;
+  background: transparent;
+  border-top: 1px solid #CCC;
+}
+#subFoot {
+  background: transparent url('subFoot2.gif') center no-repeat;
+  color: white;
+  width: 950px;
+  height: 22px;
+  margin: 0 auto 3em auto;
+  padding: 0;
+}
+ul.menu a:link,
+ul.menu a:active,
+ul.menu a:visited {
+  color: #333;
+  background-color: transparent;
+  text-decoration: none;
+}
+#footMenu {
+  margin: 0 auto;
+  border-left: 1px solid #ADBAFF;
+  border-right: 1px solid #ADBAFF;
+}
+#footMenu a:link,
+#footMenu a:active,
+#footMenu a:visited {
+  color: #666;
+  background-color: transparent;
+  text-decoration: none;
+}
+ul.menu a:hover,
+#footMenu a:hover {
+  color: #3157A5;
+  background-color: transparent;
+  text-decoration: none;
+}
+a {
+  color: #3157A5;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #900;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a#top:link,
+a#top:active,
+a#top:visited,
+a#top:hover {
+  color: black;
+  background-color: transparent;
+}

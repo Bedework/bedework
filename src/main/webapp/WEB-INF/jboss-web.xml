@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jboss-web>
+  <!-- Virtual host -->
+
+  <context-root>${app.context}</context-root>
+</jboss-web>

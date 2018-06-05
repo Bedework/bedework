@@ -4,9 +4,15 @@
 
   <groupId>org.bedework</groupId>
   <artifactId>bedework</artifactId>
+  <packaging>war</packaging>
+  <name>bedework</name>
 
   <description>Quickstart scripts and resources</description>
   <url>https://github.com/Bedework/bedework</url>
+
+  <properties>
+    <bw-util.version>4.0.18</bw-util.version>
+  </properties>
 
   <organization>
     <name>Bedework</name>
@@ -96,6 +102,27 @@
         <artifactId>versions-maven-plugin</artifactId>
         <version>2.3</version>
         <configuration>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.bedework</groupId>
+        <artifactId>bw-util-maven-deploy</artifactId>
+        <version>${bw-util.version}</version>
+        <executions>
+          <execution>
+            <phase>install</phase>
+            <goals>
+              <goal>bw-deploy</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <noversion>true</noversion>
+          <delete>true</delete>
+          <warName>bedework</warName>
+          <baseDirPath>${project.basedir}/..</baseDirPath>
+          <propsPath>${org.bedework.deployment.properties}</propsPath>
         </configuration>
       </plugin>
     </plugins>
