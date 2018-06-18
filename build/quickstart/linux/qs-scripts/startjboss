@@ -2,5 +2,6 @@
 
 export JAVA_OPTS="$JAVA_OPTS -Dcom.bedework.site.name=bwtest"
 export JAVA_OPTS="$JAVA_OPTS -Dcom.bedework.db.ip=localhost"
+export JAVA_OPTS="$JAVA_OPTS -Dcom.bedework.sync.server=http://localhost:8080"
 
 source ./bedework/build/quickstart/linux/startwildfly.sh
