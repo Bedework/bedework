@@ -14,8 +14,10 @@ export QUICKSTART_HOME=$saveddir
 
 bw_loglevel=""
 postDeployDebug="";
+deployConfig="./bedework/config/wildfly.deploy.properties"
 
 mvn_quiet=   # "-q"
+mvnProfile="bedework-3"
 
 #mvn_binary="/usr/share/maven/bin/mvn";
 mvn_binary="mvn"
@@ -110,7 +112,8 @@ usage() {
   echo "http://wiki.jasig.org/display/BWK310/Configuring+Bedework"
   echo ""
   echo "  $PRG ACTION"
-  echo "  $PRG [CONFIG-SOURCE] [PROJECT] [ -offline ] [-appserver=<server>]"
+  echo "  $PRG [-dc CONFIG-SOURCE] [-P PROFILE] [PROJECT] [ -offline ] "
+  echo "              [-appserver=<server>]"
   echo "              [LOG_LEVEL] [ target ] "
   echo ""
   echo " where:"
@@ -120,9 +123,11 @@ usage() {
   echo "    deployed application. ACTION may be one of"
   echo "      -updateall  Does an svn update of all projects"
   echo ""
-  echo "   CONFIG-SOURCE optionally defines the location of configurations and is"
-  echo "     -dc      to specify the location of the deploy properties"
-  echo "   The default is in bedework/config/deploy.properties."
+  echo "   CONFIG-SOURCE optionally defines the location of the deploy properties"
+  echo "   The default is in $deployConfig."
+  echo ""
+  echo "   PROFILE optionally defines the maven profile to use"
+  echo "   The default is $mvnProfile."
   echo ""
   echo "   -offline     Build without attempting to retrieve library jars"
   echo ""
@@ -454,7 +459,6 @@ BWJMXCONFIG=
 bwc=default
 BWCONFIG=
 offline=
-deployConfig=
 
 action=
 
@@ -846,9 +850,9 @@ export QUICKSTART_HOME
 mvncmd=
 
 if [ "$1" = "clean" ] ; then
-  mvncmd="$mvn_binary -P bedework-3 clean"
+  mvncmd="$mvn_binary -P $mvnProfile clean"
 else
-  mvncmd="$mvn_binary $mvn_quiet -P bedework-3 -Dmaven.test.skip=true install"
+  mvncmd="$mvn_binary $mvn_quiet -P $mvnProfile -Dmaven.test.skip=true install"
 fi
 
 echo "mvncmd = $mvncmd"
