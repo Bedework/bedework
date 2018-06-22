@@ -2161,7 +2161,8 @@
         },
 
         "contact_all" : {
-          "type" : "string"
+          "type" : "string",
+          "index_analyzer" : "evprop-autocomplete"
         },
 
         "cn" : {
