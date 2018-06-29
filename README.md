@@ -143,3 +143,14 @@ These modules are
   * Tasks collections were not getting created with correct type - nor were they returning a supportd component type.
   * Some fixes to the selfreg feature and additions to the cli to drive it.
    
+### Changes for release 3.12.1:
+##### Searching for contacts/locations
+  * In the admin and event submissions clients replaced simple drop down with a search interface. Requires back end support for the search )a restful style with json response).
+  
+##### ES only read-only clients.
+  * Implement an ES only read-only interface. Teh publci client can be built without any hibernate support as it doesn't interact with the database. This required at least:
+    * Minor API changes
+    * Indexing of more entities - principals, calendar suites, preferences, filters.
+    * New core interface implementation which only handles the read only methods.
+    * Refactored the core to remove a callback. Also to spilt off the read only code.
+     

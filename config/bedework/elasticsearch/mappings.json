@@ -32,6 +32,7 @@
       }
     }
   },
+
   "mappings" : {
     "updateTracker" : {
       "_source" : { "enabled" : true },
@@ -947,7 +948,6 @@
         }
       }
     },
-
 
     "vpoll" : {
       "_source" : { "enabled" : true },
@@ -1907,55 +1907,65 @@
           "type" : "string",
           "include_in_all": true
         },
+
         "description" : {
           "type" : "string",
           "include_in_all": true
         },
-
 
         "affectsFreeBusy" : {
           "type" : "boolean",
           "include_in_all": false,
           "index" : "not_analyzed"
         },
+
         "aliasURI" : {
           "type" : "string",
           "include_in_all": true
         },
+
         "caltype" : {
           "type" : "integer",
           "index" : "not_analyzed"
         },
+
         "display" : {
           "type" : "boolean",
           "include_in_all": false,
           "index" : "not_analyzed"
         },
+
         "filterExpr" : {
           "type" : "string",
           "include_in_all": true
         },
+
         "ignoreTransp" : {
           "type" : "boolean",
           "include_in_all": false,
           "index" : "not_analyzed"
         },
+
         "lastRefresh" : {
           "type" : "string",
           "include_in_all": true
         },
+
         "lastRefreshStatus" : {
           "type" : "string",
           "include_in_all": true
         },
+
         "refreshRate" : {
           "type" : "integer",
           "index" : "not_analyzed"
         },
+
         "remoteId" : {
           "type" : "string",
           "include_in_all": true
         },
+
         "remotePw" : {
           "type" : "string",
           "include_in_all": true
@@ -1965,7 +1975,6 @@
           "include_in_all": false,
           "index" : "not_analyzed"
         },
-
 
         "colProperties" : {
           "type" : "object",
@@ -2103,6 +2112,339 @@
       }
     },
 
+    "principal" : {
+      "_source": {
+        "enabled": true
+      },
+      "properties": {
+        "href" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "account" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "created" : {
+          "type" : "date",
+          "format": "basic_date_time_no_millis",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "lastAccess" : {
+          "type" : "date",
+          "format": "basic_date_time_no_millis",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "description" : {
+          "type" : "string",
+          "include_in_all": true
+        },
+
+        "quota" : {
+          "type" : "long",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "categoryAccess" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "contactAccess" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "locationAccess" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "memberHref" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "groupOwnerHref" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "ownerHref" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        }
+      }
+    },
+
+    "preferences" : {
+      "_source": {
+        "enabled": true
+      },
+      "properties": {
+        "href" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "views" : {
+          "type" : "object",
+          "properties" : {
+            "name" : {
+              "type" : "string",
+              "include_in_all": false,
+              "index" : "not_analyzed"
+            },
+            "colHrefs" : {
+              "type" : "string",
+              "include_in_all": false,
+              "index" : "not_analyzed"
+            }
+          }
+        },
+
+        "email" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "defaultCalendarPath" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "skinName" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "skinStyle" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "preferredView" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "preferredViewPeriod" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "pageSize" : {
+          "type" : "integer",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "workDays" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "workDayStart" : {
+          "type" : "integer",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "workDayEnd" : {
+          "type" : "integer",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "preferredEndType" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "userMode" : {
+          "type" : "integer",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "hour24" : {
+          "type" : "boolean",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "scheduleAutoRespond" : {
+          "type" : "boolean",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "scheduleAutoCancelAction" : {
+          "type" : "integer",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "scheduleDoubleBook" : {
+          "type" : "boolean",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "scheduleAutoProcessResponses" : {
+          "type" : "integer",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "userProperties" : {
+          "type" : "object",
+          "properties" : {
+            "name" : {
+              "type" : "string",
+              "include_in_all": false,
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "include_in_all": false,
+              "index" : "not_analyzed"
+            }
+          }
+        }
+      }
+    },
+
+    "resourceContent" : {
+      "_source": {
+        "enabled": true
+      },
+      "properties": {
+        "href": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+
+        "content": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        }
+      }
+    },
+
+    "resource" : {
+      "_source": {
+        "enabled": true
+      },
+      "properties": {
+        "href": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+
+        "colpath" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "name" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "creatorHref" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "ownerHref" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "acl" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "no"
+        },
+
+        "public" : {
+          "type" : "boolean",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "created" : {
+          "type" : "date",
+          "format": "basic_date_time_no_millis",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "lastModified" : {
+          "type" : "date",
+          "format": "basic_date_time_no_millis",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "sequence" : {
+          "type" : "integer",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "contentType" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "encoding" : {
+          "type" : "string",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        },
+
+        "contentLength" : {
+          "type" : "long",
+          "include_in_all": false,
+          "index" : "not_analyzed"
+        }
+      }
+    },
+
     "contact" : {
       "_source" : { "enabled" : true },
       "properties" : {
@@ -2165,6 +2507,10 @@
           "index_analyzer" : "evprop-autocomplete"
         },
 
+        "contact_all_terms" : {
+          "type" : "string"
+        },
+
         "cn" : {
           "type" : "object",
           "properties" : {
@@ -2175,7 +2521,7 @@
             "value" : {
               "type" : "string",
               "include_in_all": true,
-              "copy_to": "contact_all"
+              "copy_to": ["contact_all", "contact_all_terms"]
             }
           }
         },
@@ -2183,14 +2529,14 @@
         "phone" : {
           "type" : "string",
           "include_in_all": false,
-          "copy_to": "contact_all",
+          "copy_to": ["contact_all", "contact_all_terms"],
           "index" : "not_analyzed"
         },
 
         "email" : {
           "type" : "string",
           "include_in_all": false,
-          "copy_to": "contact_all",
+          "copy_to": ["contact_all", "contact_all_terms"],
           "index" : "not_analyzed"
         },
 

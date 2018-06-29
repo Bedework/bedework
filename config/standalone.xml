@@ -227,7 +227,7 @@
             <logger category="org.bedework.calcore.AccessUtil">
                 <level name="INFO"/>
             </logger>
-            <logger category="org.bedework.calcore.indexing.BwIndexEsImpl">
+            <logger category="org.bedework.calcore.common.indexing.BwIndexEsImpl">
                 <level name="INFO"/>
             </logger>
             <logger category="org.bedework.calsvc.CalSvc$SvcSimpleFilterParser">

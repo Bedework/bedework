@@ -160,6 +160,7 @@
       <module name="bw-calendar-engine-caldav" target="1.8" />
       <module name="bw-calendar-engine-chgnote" target="1.8" />
       <module name="bw-calendar-engine-core" target="1.8" />
+      <module name="bw-calendar-engine-core-common" target="1.8" />
       <module name="bw-calendar-engine-dumprestore" target="1.8" />
       <module name="bw-calendar-engine-facade" target="1.8" />
       <module name="bw-calendar-engine-ical" target="1.8" />
