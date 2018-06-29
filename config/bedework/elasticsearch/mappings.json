@@ -2508,22 +2508,14 @@
         },
 
         "contact_all_terms" : {
-          "type" : "string"
+          "type" : "string",
+          "store" : "true"
         },
 
         "cn" : {
-          "type" : "object",
-          "properties" : {
-            "language" : {
-              "type" : "string",
-              "include_in_all": false
-            },
-            "value" : {
-              "type" : "string",
-              "include_in_all": true,
-              "copy_to": ["contact_all", "contact_all_terms"]
-            }
-          }
+          "type" : "string",
+          "include_in_all": true,
+          "copy_to": ["contact_all", "contact_all_terms"]
         },
 
         "phone" : {
@@ -2727,6 +2719,7 @@
         "code" : {
           "type" : "string",
           "include_in_all": true,
+          "copy_to": ["loc_all", "loc_all_terms"],
           "index" : "not_analyzed"
         },
 
