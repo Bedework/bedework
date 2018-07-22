@@ -29,8 +29,6 @@ fi
 
 wildflyVersion="wildfly-10.1.0.Final"
 
-wildflyConfDir="${wildflyVersion}/standalone/configuration"
-
 # -------------------------------------------------------------------
 # Each step is a function
 # -------------------------------------------------------------------

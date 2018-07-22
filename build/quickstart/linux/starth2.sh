@@ -36,6 +36,6 @@ rm $PIDFILE
 
 BW_DATA_DIR=$JBOSS_DATA_DIR/bedework
 
-H2cp="$BASE_DIR/$JBOSS_VERSION/modules/system/layers/base/com/h2database/h2/main/h2*.jar"
+H2cp="$BASE_DIR/bedework/build/quickstart/data/h2/h2*.jar"
 
 $JAVA -cp $H2cp org.h2.tools.Server -tcp -web -baseDir $BW_DATA_DIR/h2 & echo $! >>$PIDFILE
