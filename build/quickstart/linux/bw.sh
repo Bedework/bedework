@@ -347,7 +347,7 @@ setDirectory() {
 	fi
 
 	if [ "$carddav" != "" ] ; then
-	  cd $QUICKSTART_HOME/bedework-carddav
+	  cd $QUICKSTART_HOME/bw-carddav
       carddav=
 	  return
 	fi
