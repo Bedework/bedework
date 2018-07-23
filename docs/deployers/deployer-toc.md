@@ -1,4 +1,4 @@
-# Deployers and developers pages
+# Deployers pages
 
 [Installing the quickstart](installing.md)
 
