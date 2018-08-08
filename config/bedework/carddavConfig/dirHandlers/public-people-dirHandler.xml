@@ -19,7 +19,7 @@
   <initialContextFactory>com.sun.jndi.ldap.LdapCtxFactory</initialContextFactory>
   <name>public-people-dirHandler</name>
   <ownerHref>/principals/users/admin</ownerHref>
-  <pathPrefix>/public/people/</pathPrefix>
+  <pathPrefix>/public/people</pathPrefix>
   <providerUrl>ldap://localhost:10389/</providerUrl>
   <queryLimit>1000</queryLimit>
   <securityAuthentication>simple</securityAuthentication>
