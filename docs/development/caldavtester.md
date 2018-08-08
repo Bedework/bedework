@@ -10,3 +10,20 @@ This script sets up the tester which needs to be cloned from the repository.
 Running the tester requires that a number of users be provisioned in a particular state. 
 
 The quickstart data comes with users user01-user04. Each is setup with 
+
+ * cn: 01,test
+ * objectclass: inetOrgPerson
+ * objectclass: organizationalPerson
+ * objectclass: person
+ * objectclass: top
+ * sn: user
+ * givenname: 01
+ * mail: user01@mysite.org
+ * uid: user01
+ * password: bedework
+ 
+(Replace 01 with 02-04 for the rest)
+
+
+ 
+
