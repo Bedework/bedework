@@ -10,7 +10,6 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-caldavTest/bw-caldavTest.iml" filepath="$PROJECT_DIR$/../bw-caldavTest/bw-caldavTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon/bw-calendar-client-appcommon.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon/bw-calendar-client-appcommon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-bwcommon/bw-calendar-client-bwcommon.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-bwcommon/bw-calendar-client-bwcommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-cal/bw-calendar-client-cal.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-cal/bw-calendar-client-cal.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-caladmin/bw-calendar-client-caladmin.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-caladmin/bw-calendar-client-caladmin.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/bw-calendar-client-ear.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/bw-calendar-client-ear.iml" />

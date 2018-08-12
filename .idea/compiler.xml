@@ -139,9 +139,9 @@
       <module name="bedework" target="1.5" />
       <module name="bw-access" target="1.7" />
       <module name="bw-addrbook-client" target="1.8" />
-      <module name="bw-caldav" target="1.7" />
-      <module name="bw-caldav-server" target="1.7" />
-      <module name="bw-caldav-util" target="1.7" />
+      <module name="bw-caldav" target="1.8" />
+      <module name="bw-caldav-server" target="1.8" />
+      <module name="bw-caldav-util" target="1.8" />
       <module name="bw-caldavTest" target="1.8" />
       <module name="bw-calendar-client" target="1.8" />
       <module name="bw-calendar-client-appcommon" target="1.8" />
