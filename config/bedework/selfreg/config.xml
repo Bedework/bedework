@@ -43,5 +43,5 @@
   <name>config</name>
   <schemaOutFile>${org.bedework.data.dir}/selfreg/schema.sql</schemaOutFile>
   <unauthCanRegister>true</unauthCanRegister>
-  <useLdap>false</useLdap>
+  <useLdap>true</useLdap>
 </selfreg>
