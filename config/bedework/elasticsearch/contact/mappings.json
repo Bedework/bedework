@@ -1,0 +1,136 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "evprop_ngram_analyzer": {
+          "tokenizer": "evprop_ngram_tokenizer"
+        },
+        "evprop-autocomplete": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "standard",
+            "lowercase",
+            "ngram"
+          ]
+        }
+      },
+      "tokenizer": {
+        "evprop_ngram_tokenizer": {
+          "type": "nGram",
+          "min_gram": "3",
+          "max_gram": "12",
+          "token_chars": [
+            "letter",
+            "digit"
+          ]
+        }
+      },
+      "filter": {
+        "ngram": {
+          "type": "ngram",
+          "min_gram": 2,
+          "max_gram": 18
+        }
+      }
+    }
+  },
+  "mappings": {
+    "contact": {
+      "_source": {
+        "enabled": true
+      },
+      "properties": {
+        "name": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "colPath": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "href": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "creatorHref": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "ownerHref": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "acl": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "no"
+        },
+        "deleted": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "public": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "tombstoned": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "uid": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "contact_all": {
+          "type": "string",
+          "index_analyzer": "evprop-autocomplete"
+        },
+        "contact_all_terms": {
+          "type": "string",
+          "store": "true"
+        },
+        "cn": {
+          "type": "string",
+          "include_in_all": true,
+          "copy_to": [
+            "contact_all",
+            "contact_all_terms"
+          ]
+        },
+        "phone": {
+          "type": "string",
+          "include_in_all": false,
+          "copy_to": [
+            "contact_all",
+            "contact_all_terms"
+          ],
+          "index": "not_analyzed"
+        },
+        "email": {
+          "type": "string",
+          "include_in_all": false,
+          "copy_to": [
+            "contact_all",
+            "contact_all_terms"
+          ],
+          "index": "not_analyzed"
+        },
+        "url": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        }
+      }
+    }
+  }
+}

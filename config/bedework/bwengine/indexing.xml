@@ -8,7 +8,7 @@
   <httpEnabled>false</httpEnabled>
   <indexPublic>true</indexPublic>
   <indexUsers>true</indexUsers>
-  <indexerConfig>${org.bedework.config.dir}/elasticsearch/mappings.json</indexerConfig>
+  <indexerConfig>${org.bedework.config.dir}/elasticsearch/</indexerConfig>
   <indexerURL>localhost:9300</indexerURL>
   <maxEntityThreads>5</maxEntityThreads>
   <maxPrincipalThreads>5</maxPrincipalThreads>

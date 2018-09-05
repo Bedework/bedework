@@ -154,3 +154,11 @@ These modules are
     * New core interface implementation which only handles the read only methods.
     * Refactored the core to remove a callback. Also to spilt off the read only code.
      
+##### Split out ES indexes
+  * Significant change to indexing to try to resolve the contacts issue and prepare for upgrade.
+
+  * ES v7 will require only one type per index. To prepare the index was split into many. Requires a doctype parameter to be added to most calls, significant changes to the (re)indexing process and other associated changes.
+
+  * Almost all calendar engine classes were affected in some way - mostly relatively minor.
+
+  * Configuration changes: no longer have a public/user calendar name. The location of the mappings is a directory - not a file and there are multiplemapping files under directories named with the lowercased doctype name.

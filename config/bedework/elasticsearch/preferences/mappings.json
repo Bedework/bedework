@@ -1,0 +1,167 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "evprop_ngram_analyzer": {
+          "tokenizer": "evprop_ngram_tokenizer"
+        },
+        "evprop-autocomplete": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "standard",
+            "lowercase",
+            "ngram"
+          ]
+        }
+      },
+      "tokenizer": {
+        "evprop_ngram_tokenizer": {
+          "type": "nGram",
+          "min_gram": "3",
+          "max_gram": "12",
+          "token_chars": [
+            "letter",
+            "digit"
+          ]
+        }
+      },
+      "filter": {
+        "ngram": {
+          "type": "ngram",
+          "min_gram": 2,
+          "max_gram": 18
+        }
+      }
+    }
+  },
+  "mappings": {
+    "preferences": {
+      "_source": {
+        "enabled": true
+      },
+      "properties": {
+        "href": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "views": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "colHrefs": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "email": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "defaultCalendarPath": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "skinName": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "skinStyle": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "preferredView": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "preferredViewPeriod": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "pageSize": {
+          "type": "integer",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "workDays": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "workDayStart": {
+          "type": "integer",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "workDayEnd": {
+          "type": "integer",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "preferredEndType": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "userMode": {
+          "type": "integer",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "hour24": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "scheduleAutoRespond": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "scheduleAutoCancelAction": {
+          "type": "integer",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "scheduleDoubleBook": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "scheduleAutoProcessResponses": {
+          "type": "integer",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "userProperties": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "value": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            }
+          }
+        }
+      }
+    }
+  }
+}

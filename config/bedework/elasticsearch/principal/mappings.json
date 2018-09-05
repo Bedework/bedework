@@ -1,0 +1,108 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "evprop_ngram_analyzer": {
+          "tokenizer": "evprop_ngram_tokenizer"
+        },
+        "evprop-autocomplete": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "standard",
+            "lowercase",
+            "ngram"
+          ]
+        }
+      },
+      "tokenizer": {
+        "evprop_ngram_tokenizer": {
+          "type": "nGram",
+          "min_gram": "3",
+          "max_gram": "12",
+          "token_chars": [
+            "letter",
+            "digit"
+          ]
+        }
+      },
+      "filter": {
+        "ngram": {
+          "type": "ngram",
+          "min_gram": 2,
+          "max_gram": 18
+        }
+      }
+    }
+  },
+  "mappings": {
+    "principal": {
+      "_source": {
+        "enabled": true
+      },
+      "properties": {
+        "href": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "account": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "created": {
+          "type": "date",
+          "format": "basic_date_time_no_millis",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "lastAccess": {
+          "type": "date",
+          "format": "basic_date_time_no_millis",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "description": {
+          "type": "string",
+          "include_in_all": true
+        },
+        "quota": {
+          "type": "long",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "categoryAccess": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "contactAccess": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "locationAccess": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "memberHref": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "groupOwnerHref": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "ownerHref": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        }
+      }
+    }
+  }
+}

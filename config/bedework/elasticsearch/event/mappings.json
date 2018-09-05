@@ -1,0 +1,848 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "evprop_ngram_analyzer": {
+          "tokenizer": "evprop_ngram_tokenizer"
+        },
+        "evprop-autocomplete": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "standard",
+            "lowercase",
+            "ngram"
+          ]
+        }
+      },
+      "tokenizer": {
+        "evprop_ngram_tokenizer": {
+          "type": "nGram",
+          "min_gram": "3",
+          "max_gram": "12",
+          "token_chars": [
+            "letter",
+            "digit"
+          ]
+        }
+      },
+      "filter": {
+        "ngram": {
+          "type": "ngram",
+          "min_gram": 2,
+          "max_gram": 18
+        }
+      }
+    }
+  },
+  "mappings": {
+    "event": {
+      "_source": {
+        "enabled": true
+      },
+      "properties": {
+        "creatorHref": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "ownerHref": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "calSuite": {
+          "type": "string",
+          "include_in_all": true,
+          "index": "not_analyzed"
+        },
+        "colPath": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "acl": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "no"
+        },
+        "public": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "tombstoned": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "deleted": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "name": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "href": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "master": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "instance": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "override": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "categories": {
+          "type": "object",
+          "properties": {
+            "uid": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "href": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "value": {
+              "type": "object",
+              "properties": {
+                "language": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "value": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            }
+          }
+        },
+        "summary": {
+          "type": "object",
+          "properties": {
+            "language": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "value": {
+              "type": "string",
+              "include_in_all": true
+            }
+          }
+        },
+        "description": {
+          "type": "object",
+          "properties": {
+            "language": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "value": {
+              "type": "string",
+              "include_in_all": true
+            }
+          }
+        },
+        "entityType": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "class": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "url": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "geo": {
+          "type": "geo_point",
+          "lat_lon": true,
+          "geohash_prefix": true
+        },
+        "status": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "cost": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "organizer": {
+          "type": "object",
+          "properties": {
+            "pars": {
+              "properties": {
+                "scheduleStatus": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "cn": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "dir": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "language": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "sentBy": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            },
+            "uri": {
+              "type": "string"
+            }
+          },
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "dtstamp": {
+          "type": "date",
+          "format": "basic_date_time_no_millis",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "lastModified": {
+          "type": "date",
+          "format": "basic_date_time_no_millis",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "lastModifiedSeq": {
+          "type": "integer",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "created": {
+          "type": "date",
+          "format": "basic_date_time_no_millis",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "scheduleTag": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "priority": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "sequence": {
+          "type": "integer",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "locationUid": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "locationStr": {
+          "type": "string",
+          "include_in_all": true,
+          "index": "not_analyzed"
+        },
+        "uid": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "transp": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "percentComplete": {
+          "type": "integer",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "completed": {
+          "type": "date",
+          "format": "basic_date_time_no_millis",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "scheduleMethod": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "originator": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "recipient": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "scheduleState": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "organizerSchedulingObject": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "attendeeSchedulingObject": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "relatedTo": {
+          "type": "nested",
+          "properties": {
+            "reltype": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "value": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            }
+          },
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "imageUrl": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "thumbImageUrl": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "topicalArea": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "suggestedTo": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "eventregMaxTickets": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "eventregMaxTicketsPerUser": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "eventregStart": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "eventregEnd": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "xprop": {
+          "type": "nested",
+          "properties": {
+            "name": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "pars": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "value": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            }
+          },
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "requestStatus": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "ctoken": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "recurring": {
+          "type": "boolean",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "recurrenceId": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "rrule": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "exrule": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "rdate": {
+          "type": "object",
+          "properties": {
+            "utc": {
+              "type": "date",
+              "format": "basic_date_time_no_millis",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "local": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "tzid": {
+              "type": "string",
+              "include_in_all": true,
+              "index": "not_analyzed"
+            },
+            "floating": {
+              "type": "boolean",
+              "include_in_all": true,
+              "index": "not_analyzed"
+            }
+          },
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "exdate": {
+          "type": "object",
+          "properties": {
+            "utc": {
+              "type": "date",
+              "format": "basic_date_time_no_millis",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "local": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "tzid": {
+              "type": "string",
+              "include_in_all": true,
+              "index": "not_analyzed"
+            },
+            "floating": {
+              "type": "boolean",
+              "include_in_all": true,
+              "index": "not_analyzed"
+            }
+          },
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "dtstart": {
+          "type": "object",
+          "properties": {
+            "utc": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "local": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "tzid": {
+              "type": "string",
+              "include_in_all": true,
+              "index": "not_analyzed"
+            },
+            "floating": {
+              "type": "boolean",
+              "include_in_all": true,
+              "index": "not_analyzed"
+            }
+          },
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "dtend": {
+          "type": "object",
+          "properties": {
+            "utc": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "local": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "tzid": {
+              "type": "string",
+              "include_in_all": true,
+              "index": "not_analyzed"
+            },
+            "floating": {
+              "type": "boolean",
+              "include_in_all": true,
+              "index": "not_analyzed"
+            }
+          },
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "noStart": {
+          "type": "boolean",
+          "store": "yes",
+          "include_in_all": true,
+          "index": "not_analyzed"
+        },
+        "endType": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "duration": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "indexStart": {
+          "type": "object",
+          "properties": {
+            "utc": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "local": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "tzid": {
+              "type": "string",
+              "include_in_all": true,
+              "index": "not_analyzed"
+            },
+            "floating": {
+              "type": "boolean",
+              "include_in_all": true,
+              "index": "not_analyzed"
+            }
+          },
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "indexEnd": {
+          "type": "object",
+          "properties": {
+            "utc": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "local": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "tzid": {
+              "type": "string",
+              "include_in_all": true,
+              "index": "not_analyzed"
+            },
+            "floating": {
+              "type": "boolean",
+              "include_in_all": true,
+              "index": "not_analyzed"
+            }
+          },
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "alarm": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "nextTrigger": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "trigger": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "triggerDateTime": {
+              "type": "boolean",
+              "index": "not_analyzed"
+            },
+            "duration": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "repeat": {
+              "type": "integer",
+              "index": "not_analyzed"
+            },
+            "description": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "summary": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "attach": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "attendee": {
+              "type": "object",
+              "properties": {
+                "pars": {
+                  "properties": {
+                    "rsvp": {
+                      "type": "boolean",
+                      "index": "not_analyzed"
+                    },
+                    "cn": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "partstat": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "scheduleStatus": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "cutype": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "delegatedFrom": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "delegatedTo": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "dir": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "language": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "member": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "role": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "sentBy": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "uri": {
+                  "type": "string"
+                }
+              },
+              "include_in_all": false,
+              "index": "not_analyzed"
+            }
+          },
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "attendee": {
+          "type": "object",
+          "properties": {
+            "pars": {
+              "properties": {
+                "rsvp": {
+                  "type": "boolean",
+                  "index": "not_analyzed"
+                },
+                "cn": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "partstat": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "scheduleStatus": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "cutype": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "delegatedFrom": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "delegatedTo": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "dir": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "language": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "member": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "role": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "sentBy": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            },
+            "uri": {
+              "type": "string"
+            }
+          },
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "comment": {
+          "type": "object",
+          "properties": {
+            "language": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "value": {
+              "type": "string",
+              "include_in_all": true
+            }
+          }
+        },
+        "contact": {
+          "type": "object",
+          "properties": {
+            "cn": {
+              "type": "object",
+              "properties": {
+                "language": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "value": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              },
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "href": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "uid": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            },
+            "altrep": {
+              "type": "string",
+              "include_in_all": false,
+              "index": "not_analyzed"
+            }
+          },
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+        "resources": {
+          "type": "object",
+          "properties": {
+            "language": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "value": {
+              "type": "string",
+              "include_in_all": true
+            }
+          }
+        }
+      }
+    }
+  }
+}
