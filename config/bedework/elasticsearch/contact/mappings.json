@@ -46,59 +46,77 @@
           "include_in_all": false,
           "index": "not_analyzed"
         },
+
         "colPath": {
           "type": "string",
           "include_in_all": false,
           "index": "not_analyzed"
         },
+
         "href": {
           "type": "string",
           "include_in_all": false,
           "index": "not_analyzed"
         },
-        "creatorHref": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
-        },
-        "ownerHref": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
-        },
-        "acl": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "no"
-        },
+
         "deleted": {
           "type": "boolean",
           "include_in_all": false,
           "index": "not_analyzed"
         },
+
+        "creatorHref": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+
+        "ownerHref": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "not_analyzed"
+        },
+
+        "acl": {
+          "type": "string",
+          "include_in_all": false,
+          "index": "no"
+        },
+
         "public": {
           "type": "boolean",
           "include_in_all": false,
           "index": "not_analyzed"
         },
+
         "tombstoned": {
           "type": "boolean",
           "include_in_all": false,
           "index": "not_analyzed"
         },
+
+        "status" : {
+          "type" : "string",
+          "include_in_all": true,
+          "index" : "not_analyzed"
+        },
+
         "uid": {
           "type": "string",
           "include_in_all": false,
           "index": "not_analyzed"
         },
+
         "contact_all": {
           "type": "string",
           "index_analyzer": "evprop-autocomplete"
         },
+
         "contact_all_terms": {
           "type": "string",
           "store": "true"
         },
+
         "cn": {
           "type": "string",
           "include_in_all": true,
@@ -107,6 +125,7 @@
             "contact_all_terms"
           ]
         },
+
         "phone": {
           "type": "string",
           "include_in_all": false,
@@ -116,6 +135,7 @@
           ],
           "index": "not_analyzed"
         },
+
         "email": {
           "type": "string",
           "include_in_all": false,
@@ -125,6 +145,7 @@
           ],
           "index": "not_analyzed"
         },
+
         "url": {
           "type": "string",
           "include_in_all": false,
