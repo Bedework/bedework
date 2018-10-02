@@ -27,7 +27,7 @@ if [[ "$version" -lt "8" ]]; then
   exit 1
 fi
 
-wildflyVersion="wildfly-10.1.0.Final"
+JBOSS_VERSION="wildfly-10.1.0.Final"
 
 resources=$BASE_DIR/bedework/build/quickstart
 
