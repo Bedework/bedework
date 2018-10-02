@@ -497,6 +497,7 @@ installSources() {
     cloneRepo bw-timezone-server "$1"
     cloneRepo bw-util "$1"
     cloneRepo bw-util2 "$1"
+    cloneRepo bw-util-hibernate "$1"
     cloneRepo bw-webdav "$1"
     cloneRepo bw-xml "$1"
   else
@@ -516,6 +517,7 @@ installSources() {
     cloneRepoBranch 4.0.1 bw-timezone-server "$1"
     cloneRepoBranch 4.0.18 bw-util "$1"
     cloneRepoBranch 4.0.0 bw-util2 "$1"
+  ###  cloneRepoBranch 4.x.x bw-util-hibernate "$1"
     cloneRepoBranch 4.0.2 bw-webdav "$1"
     cloneRepoBranch 4.0.5 bw-xml "$1"
   fi
