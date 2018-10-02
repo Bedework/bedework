@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+ #!/usr/bin/env bash
 
 # Reset a bedework quickstart to its initial state - for testing
 
