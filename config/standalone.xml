@@ -658,7 +658,7 @@
                     <filter-ref name="404-handler" predicate="true" />
                 </host>
             </server>
-            <servlet-container name="default">
+            <servlet-container name="default" default-encoding="UTF-8">
                 <jsp-config x-powered-by="false"/>
                 <websockets/>
             </servlet-container>
