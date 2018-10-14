@@ -2,11 +2,11 @@
 
 # Create a bedework quickstart
 
-saveddir=`pwd`
+BASE_DIR=`pwd`
 scriptName="$0"
 restart=
 
-trap 'cd $saveddir' 0
+trap 'cd $BASE_DIR' 0
 trap "exit 2" 1 2 3 15
 
 if [ -z "$JAVA_HOME" -o ! -d "$JAVA_HOME" ] ; then
@@ -28,7 +28,7 @@ if [[ "$version" -lt "8" ]]; then
 fi
 
 latestVersion="3.12.0"
-wildflyVersion="wildfly-10.1.0.Final"
+JBOSS_VERSION="wildfly-10.1.0.Final"
 
 # We create empty files in this directory to track progress
 progressDir="bwinstaller-progress"
@@ -36,7 +36,19 @@ progressDir="bwinstaller-progress"
 # Assigned below
 progressPath=
 
-wildflyConfDir="${wildflyVersion}/standalone/configuration"
+wildflyConfDir="${JBOSS_VERSION}/standalone/configuration"
+
+resources=$BASE_DIR/bedework/build/quickstart
+
+JBOSS_CONFIG="standalone"
+JBOSS_SERVER_DIR="$BASE_DIR/$quickstart/$JBOSS_VERSION/$JBOSS_CONFIG"
+JBOSS_DATA_DIR="$JBOSS_SERVER_DIR/data"
+bedework_data_dir="$JBOSS_DATA_DIR/bedework"
+es_data_dir="$bedework_data_dir/elasticsearch"
+
+TMP_DIR="$JBOSS_SERVER_DIR/tmp"
+
+echo "Temp dir is $TMP_DIR"
 
 sameVersion() {
   if [ ! -f "$progressPath/installVersion" ]
@@ -172,9 +184,9 @@ unpackWildfly="unpackWildFly"
 installScripts="installScripts"
 installDrivers="installDrivers"
 installHawtio="installHawtio"
-installApacheds="installApacheds"
-installData="installData"
 installSources="installSources"
+installData="installData"
+installApacheds="installApacheds"
 buildModules="buildModules"
 
 # Suffixed with module name
@@ -195,7 +207,7 @@ downloadWildFly() {
 
   if stepStarted $downloadWildfly; then
     echo "Remove possible partial download"
-    rm ${wildflyVersion}.zip
+    rm ${JBOSS_VERSION}.zip
   fi
 
   markStarted $downloadWildfly
@@ -217,13 +229,18 @@ unpackWildFly() {
 
   if stepStarted $unpackWildfly; then
     echo "Remove possible partial wildfly"
-    rm -rf ${wildflyVersion}
+    rm -rf ${JBOSS_VERSION}
     unmark $unpackWildfly
   fi
 
   markStarted $unpackWildfly
-  unzip ${wildflyVersion}.zip
-  rm ${wildflyVersion}.zip
+  unzip ${JBOSS_VERSION}.zip
+  rm ${JBOSS_VERSION}.zip
+
+  if [ ! -d "$TMP_DIR" ]; then
+    mkdir -p $TMP_DIR
+  fi
+
   markDone $unpackWildfly
 }
 
@@ -282,15 +299,100 @@ installDrivers() {
   wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/wfmodules.zip
 
   unzip wfmodules.zip
-  cp -r wfmodules/* ${wildflyVersion}/modules/
+  cp -r wfmodules/* ${JBOSS_VERSION}/modules/
   rm wfmodules.zip
   rm -r wfmodules
 
   # Replace h2 jar with later version
-  rm -r ${wildflyVersion}/modules/system/layers/base/com/h2database
-  cp -r bedework/build/quickstart/resources/h2database  ${wildflyVersion}/modules/system/layers/base/com/
+  rm -r ${JBOSS_VERSION}/modules/system/layers/base/com/h2database
+  cp -r bedework/build/quickstart/resources/h2database  ${JBOSS_VERSION}/modules/system/layers/base/com/
 
   markDone $installDrivers
+}
+
+installHawtio() {
+  echo "---------------------------------------------------------------"
+  echo "Install hawtio JMX console"
+
+  if stepDone $installHawtio; then
+    echo "Already done"
+    return
+  fi
+
+  if stepStarted $installHawtio; then
+    echo "Remove possible partial downloads"
+    rm console.zip
+    rm -r console
+    rm -r ${JBOSS_VERSION}/standalone/deployments/hawtio.war*
+    unmark $installHawtio
+  fi
+
+  markStarted $installHawtio
+
+  wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/console.zip
+  unzip console.zip
+  cp console/hawtio.war ${JBOSS_VERSION}/standalone/deployments/
+  touch ${JBOSS_VERSION}/standalone/deployments/hawtio.war.dodeploy
+  rm console.zip
+  rm -r console
+
+  markDone $installHawtio
+}
+
+installData() {
+  echo "---------------------------------------------------------------"
+  echo "Install data"
+
+  if stepDone $installData; then
+    echo "Already done"
+    return
+  fi
+
+  if stepStarted $installData; then
+#    echo "Remove possible partial downloads"
+#    rm -rf wfdata
+#    rm wfdata.zip
+#    rm -r ${JBOSS_VERSION}/standalone/data
+    unmark $installData
+  fi
+
+  markStarted $installData
+
+#  wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/wfdata.zip
+#  unzip wfdata.zip
+#  mkdir ${JBOSS_VERSION}/standalone/data
+#  cp -r wfdata/* ${JBOSS_VERSION}/standalone/data/
+#  rm -rf wfdata
+#  rm wfdata.zip
+  resources=$BASE_DIR/bedework/build/quickstart
+
+  # Unpack here
+  cd $TMP_DIR/
+
+  # ------------------------------------- h2 data
+
+  rm -f h2.zip
+  cp $resources/data/h2.zip .
+  rm -rf h2/
+  unzip h2.zip
+  rm -f h2.zip
+  rm -rf $bedework_data_dir/h2
+  cp -r h2 $bedework_data_dir/
+  rm -rf h2/
+
+  # ------------------------------------- ES data
+
+  rm =f elasticsearch.zip
+  rm -rf elasticsearch
+  cp $resources/data/elasticsearch.zip .
+  unzip elasticsearch.zip
+  rm elasticsearch.zip
+  rm -rf $es_data_dir
+  cp -r elasticsearch $bedework_data_dir/
+
+  cd $BASE_DIR
+
+  markDone $installData
 }
 
 installApacheds() {
@@ -308,76 +410,24 @@ installApacheds() {
   fi
 
   if stepStarted $installApacheds; then
-    echo "Remove possible partial downloads"
-    rm -rf apacheds*
     unmark $installApacheds
   fi
 
   markStarted $installApacheds
 
-  wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/apacheds.zip
+#  wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/apacheds.zip
+#  unzip apacheds.zip
+#  rm apacheds.zip
+
+  cd $BASE_DIR
+
+  rm -f apacheds.zip
+  rm -rf apacheds-1.5.3-fixed
+  cp $resources/data/apacheds.zip .
   unzip apacheds.zip
   rm apacheds.zip
 
   markDone $installApacheds
-}
-
-installHawtio() {
-  echo "---------------------------------------------------------------"
-  echo "Install hawtio JMX console"
-
-  if stepDone $installHawtio; then
-    echo "Already done"
-    return
-  fi
-
-  if stepStarted $installHawtio; then
-    echo "Remove possible partial downloads"
-    rm console.zip
-    rm -r console
-    rm -r ${wildflyVersion}/standalone/deployments/hawtio.war*
-    unmark $installHawtio
-  fi
-
-  markStarted $installHawtio
-
-  wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/console.zip
-  unzip console.zip
-  cp console/hawtio.war ${wildflyVersion}/standalone/deployments/
-  touch ${wildflyVersion}/standalone/deployments/hawtio.war.dodeploy
-  rm console.zip
-  rm -r console
-
-  markDone $installHawtio
-}
-
-installData() {
-  echo "---------------------------------------------------------------"
-  echo "Install data"
-
-  if stepDone $installData; then
-    echo "Already done"
-    return
-  fi
-
-  if stepStarted $installData; then
-    echo "Remove possible partial downloads"
-    rm -rf wfdata
-    rm wfdata.zip
-    rm -r ${wildflyVersion}/standalone/data
-    unmark $installData
-  fi
-
-  markStarted $installData
-
-  wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/wfdata.zip
-  unzip wfdata.zip
-  mkdir ${wildflyVersion}/standalone/data
-  cp -r wfdata/* ${wildflyVersion}/standalone/data/
-  rm -rf wfdata
-  rm wfdata.zip
-
-  markDone $installData
 }
 
 # $1 - name
@@ -686,12 +736,12 @@ installScripts
 
 installDrivers
 
-installApacheds
-
 installHawtio
+
+installSources
 
 installData
 
-installSources
+installApacheds
 
 buildModules

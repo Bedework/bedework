@@ -29,6 +29,11 @@ fi
 
 JBOSS_VERSION="wildfly-10.1.0.Final"
 
+if [ ! -d "$JBOSS_VERSION" ]; then
+  echo "Not located in the quickstart"
+  exit 1
+fi
+
 resources=$BASE_DIR/bedework/build/quickstart
 
 JBOSS_CONFIG="standalone"
@@ -45,6 +50,9 @@ if [ ! -d "$TMP_DIR" ]; then
   mkdir -p $TMP_DIR
 fi
 
+# Ensure nothing running
+./qsstop.sh
+
 # -------------------------------------------------------------------
 # Each step is a function
 # -------------------------------------------------------------------
@@ -59,7 +67,6 @@ installData() {
   # ------------------------------------- h2 data
 
   cd $BASE_DIR
-  ./stoph2
 
   cd $TMP_DIR/
 
@@ -97,7 +104,6 @@ installData() {
   # ------------------------------------- directory data
 
   cd $BASE_DIR
-  ./dirstop
 
   rm -rf apacheds-1.5.3-fixed
   cp $resources/data/apacheds.zip .
