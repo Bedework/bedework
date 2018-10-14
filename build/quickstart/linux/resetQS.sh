@@ -2,11 +2,11 @@
 
 # Reset a bedework quickstart to its initial state - for testing
 
-saveddir=`pwd`
+BASE_DIR=`pwd`
 scriptName="$0"
 restart=
 
-trap 'cd $saveddir' 0
+trap 'cd $BASE_DIR' 0
 trap "exit 2" 1 2 3 15
 
 if [ -z "$JAVA_HOME" -o ! -d "$JAVA_HOME" ] ; then
@@ -27,7 +27,23 @@ if [[ "$version" -lt "8" ]]; then
   exit 1
 fi
 
-wildflyVersion="wildfly-10.1.0.Final"
+JBOSS_VERSION="wildfly-10.1.0.Final"
+
+resources=$BASE_DIR/bedework/build/quickstart
+
+JBOSS_CONFIG="standalone"
+JBOSS_SERVER_DIR="$BASE_DIR/$quickstart/$JBOSS_VERSION/$JBOSS_CONFIG"
+JBOSS_DATA_DIR="$JBOSS_SERVER_DIR/data"
+bedework_data_dir="$JBOSS_DATA_DIR/bedework"
+es_data_dir="$bedework_data_dir/elasticsearch"
+
+TMP_DIR="$JBOSS_SERVER_DIR/tmp"
+
+echo "Temp dir is $TMP_DIR"
+
+if [ ! -d "$TMP_DIR" ]; then
+  mkdir -p $TMP_DIR
+fi
 
 # -------------------------------------------------------------------
 # Each step is a function
@@ -38,18 +54,56 @@ installData="installData"
 
 installData() {
   echo "---------------------------------------------------------------"
-  echo "Install data"
+  echo "Install data: this will stop h2 and apacheds but not restart them"
 
-  rm -rf wfdata
-  rm wfdata.zip
-  rm -r ${wildflyVersion}/standalone/data
+  # ------------------------------------- h2 data
 
-  wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/wfdata.zip
-  unzip wfdata.zip
-  mkdir ${wildflyVersion}/standalone/data
-  cp -r wfdata/* ${wildflyVersion}/standalone/data/
-  rm -rf wfdata
-  rm wfdata.zip
+  cd $BASE_DIR
+  ./stoph2
+
+  cd $TMP_DIR/
+
+  rm -f h2.zip
+
+  cp $resources/data/h2.zip .
+
+  rm -rf h2/
+
+  unzip h2.zip
+
+  rm -f h2.zip
+
+  rm -rf $bedework_data_dir/h2
+
+  cp -r h2 $bedework_data_dir/
+  rm -rf h2/
+
+  cd $BASE_DIR
+
+  # ------------------------------------- ES data
+
+  cd $TMP_DIR/
+  rm elasticsearch.zip
+  rm -rf elasticsearch
+  cp $resources/data/elasticsearch.zip .
+
+  unzip elasticsearch.zip
+
+  rm elasticsearch.zip
+
+  rm -rf $es_data_dir
+  cp -r elasticsearch $bedework_data_dir/
+
+  # ------------------------------------- directory data
+
+  cd $BASE_DIR
+  ./dirstop
+
+  rm -rf apacheds-1.5.3-fixed
+  cp $resources/data/apacheds.zip .
+  unzip apacheds.zip
+  rm apacheds.zip
+
 }
 
 installData
