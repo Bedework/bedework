@@ -72,15 +72,9 @@
       <element id="archive" name="bw-addrbook-client-4.0.3-SNAPSHOT.war">
         <element id="module-output" name="bw-carddav-client" />
       </element>
-      <element id="archive" name="bw-carddav-public-war-4.0.3-SNAPSHOT.war">
-        <element id="module-output" name="bw-carddav-public-war" />
-      </element>
-      <element id="archive" name="bw-carddav-user-war-4.0.3-SNAPSHOT.war">
-        <element id="module-output" name="bw-carddav-user-war" />
-      </element>
-      <element id="archive" name="bw-carddav-userweb-war-4.0.3-SNAPSHOT.war">
-        <element id="module-output" name="bw-carddav-userweb-war" />
-      </element>
+      <element id="directory" name="bw-carddav-public-war-4.0.3-SNAPSHOT.war" />
+      <element id="directory" name="bw-carddav-user-war-4.0.3-SNAPSHOT.war" />
+      <element id="directory" name="bw-carddav-userweb-war-4.0.3-SNAPSHOT.war" />
     </root>
   </artifact>
 </component>

@@ -100,7 +100,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-deployment/bw-util-deployment.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-deployment/bw-util-deployment.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-directory/bw-util-directory.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-directory/bw-util-directory.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-elasticsearch/bw-util-elasticsearch.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-elasticsearch/bw-util-elasticsearch.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-hibernate/bw-util-hibernate.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-hibernate/bw-util-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util-hibernate/bw-util-hibernate.iml" filepath="$PROJECT_DIR$/../bw-util-hibernate/bw-util-hibernate.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-http/bw-util-http.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-http/bw-util-http.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-indexing/bw-util-indexing.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-indexing/bw-util-indexing.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-jms/bw-util-jms.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-jms/bw-util-jms.iml" />

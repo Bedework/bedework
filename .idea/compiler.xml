@@ -269,6 +269,7 @@
       <module name="bw-util-directory" target="1.8" />
       <module name="bw-util-elasticsearch" target="1.8" />
       <module name="bw-util-hibernate" target="1.8" />
+      <module name="bw-util-hibernate (1)" target="1.8" />
       <module name="bw-util-http" target="1.8" />
       <module name="bw-util-indexing" target="1.8" />
       <module name="bw-util-jms" target="1.8" />

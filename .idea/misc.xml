@@ -63,7 +63,13 @@
         <option value="$PROJECT_DIR$/../bw-dotwell-known/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-caldavTest/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-util-hibernate/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../bw-util/bw-util-hibernate/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
@@ -84,179 +90,6 @@
                 </list>
               </option>
               <option name="trunkUrl" value="https://www.bedework.org/svn/bedework/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../bedework-carddav">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="https://www.bedework.org/svn/carddav/branches" />
-                  <option value="https://www.bedework.org/svn/carddav/releases" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="https://www.bedework.org/svn/carddav/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../bwannotations">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="https://www.bedework.org/svn/bwannotations/branches" />
-                  <option value="https://www.bedework.org/svn/bwannotations/releases" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="https://www.bedework.org/svn/bwannotations/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../bwcalFacade">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="https://www.bedework.org/svn/bwcalfacade/branches" />
-                  <option value="https://www.bedework.org/svn/bwcalfacade/releases" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="https://www.bedework.org/svn/bwcalfacade/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../bwcalcore">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="https://www.bedework.org/svn/bwcalcore/branches" />
-                  <option value="https://www.bedework.org/svn/bwcalcore/releases" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="https://www.bedework.org/svn/bwcalcore/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../bwcaldav">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="https://www.bedework.org/svn/bwcaldav/branches" />
-                  <option value="https://www.bedework.org/svn/bwcaldav/releases" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="https://www.bedework.org/svn/bwcaldav/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../bwical">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="https://www.bedework.org/svn/bwical/branches" />
-                  <option value="https://www.bedework.org/svn/bwical/releases" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="https://www.bedework.org/svn/bwical/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../bwinterfaces">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="https://www.bedework.org/svn/bwinterfaces/branches" />
-                  <option value="https://www.bedework.org/svn/bwinterfaces/releases" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="https://www.bedework.org/svn/bwinterfaces/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../bwsysevents">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="https://www.bedework.org/svn/bwsysevents/branches" />
-                  <option value="https://www.bedework.org/svn/bwsysevents/releases" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="https://www.bedework.org/svn/bwsysevents/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../bwtools">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="https://www.bedework.org/svn/bwtools/branches" />
-                  <option value="https://www.bedework.org/svn/bwtools/releases" />
-                  <option value="https://www.bedework.org/svn/bwtools/tags" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="https://www.bedework.org/svn/bwtools/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../bwwebapps">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="https://www.bedework.org/svn/bwwebapps/branches" />
-                  <option value="https://www.bedework.org/svn/bwwebapps/releases" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="https://www.bedework.org/svn/bwwebapps/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../caldavTest">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="https://www.bedework.org/svn/caldavTest/branches" />
-                  <option value="https://www.bedework.org/svn/caldavTest/releases" />
-                  <option value="https://www.bedework.org/svn/caldavTest/tags" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="https://www.bedework.org/svn/caldavTest/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../dumprestore">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="https://www.bedework.org/svn/dumprestore/branches" />
-                  <option value="https://www.bedework.org/svn/dumprestore/releases" />
-                  <option value="https://www.bedework.org/svn/dumprestore/tags" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="https://www.bedework.org/svn/dumprestore/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../indexer">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="https://www.bedework.org/svn/indexer/branches" />
-                  <option value="https://www.bedework.org/svn/indexer/releases" />
-                  <option value="https://www.bedework.org/svn/indexer/tags" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="https://www.bedework.org/svn/indexer/trunk" />
             </SvnBranchConfiguration>
           </value>
         </entry>

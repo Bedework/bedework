@@ -8,7 +8,6 @@
     <file url="file://$PROJECT_DIR$/../bw-caldavTest" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-bwcommon" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-cal" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-caladmin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear" charset="UTF-8" />
@@ -87,6 +86,7 @@
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-hibernate" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-args" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-bw-deploy" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-caching" charset="UTF-8" />

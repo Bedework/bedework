@@ -38,6 +38,7 @@ mvnUpdateProjects="$mvnUpdateProjects  bw-self-registration"
 mvnUpdateProjects="$mvnUpdateProjects  bw-synch"
 mvnUpdateProjects="$mvnUpdateProjects  bw-timezone-server"
 mvnUpdateProjects="$mvnUpdateProjects  bw-util"
+mvnUpdateProjects="$mvnUpdateProjects  bw-util-hibernate"
 mvnUpdateProjects="$mvnUpdateProjects  bw-util2"
 mvnUpdateProjects="$mvnUpdateProjects  bw-webdav"
 mvnUpdateProjects="$mvnUpdateProjects  bw-xml"
@@ -62,6 +63,7 @@ eventreg=
 exchgGateway=
 naming=
 bwutil=
+bwutilhib=
 bwutil2=
 selfreg=
 synch=
@@ -167,6 +169,7 @@ usage() {
   echo "     -eventreg     Target is for the event registration service build"
   echo "     -notifier     Target is the Bedework notification service"
   echo "     -bwutil       Target is for the Bedework util classes"
+  echo "     -bwutilhib    Target is for the Bedework hibernate util classes"
   echo "     -bwutil2      Target is for the Bedework util2 classes"
   echo "     -selfreg      Target is for the self registration build"
   echo "     -synch        Target is for the synch build"
@@ -289,6 +292,12 @@ setDirectory() {
 	if [ "$bwutil" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-util
       bwutil=
+	  return
+	fi
+
+	if [ "$bwutilhib" != "" ] ; then
+	  cd $QUICKSTART_HOME/bw-util-hibernate
+      bwutilhib=
 	  return
 	fi
 
@@ -641,6 +650,7 @@ do
       bwxml="yes"
       caldav="yes"
       bwutil="yes"
+      bwutilhib="yes"
       bwutil2="yes"
       webdav="yes"
       pkgdefault=
@@ -653,6 +663,7 @@ do
       bwxml="yes"
       caldav="yes"
       bwutil="yes"
+      bwutilhib="yes"
       bwutil2="yes"
       webdav="yes"
       pkgdefault=
@@ -717,6 +728,7 @@ do
       access="yes"
       bwxml="yes"
       bwutil="yes"
+      bwutilhib="yes"
       bwutil2="yes"
       webdav="yes"
       pkgdefault=
@@ -743,6 +755,7 @@ do
 
       bwxml="yes"
       bwutil="yes"
+      bwutilhib="yes"
       bwutil2="yes"
       pkgdefault=
       shift
@@ -755,6 +768,13 @@ do
     -bwutil)
       bwutil="yes"
 
+      pkgdefault=
+      shift
+      ;;
+    -bwutilhib)
+      bwutilhib="yes"
+
+      bwutil="yes"
       pkgdefault=
       shift
       ;;
@@ -779,6 +799,7 @@ do
       #earName="$earNameSelfreg"
 
       bwutil="yes"
+      bwutilhib="yes"
       pkgdefault=
       shift
       ;;
@@ -789,6 +810,7 @@ do
       access="yes"
       bwxml="yes"
       bwutil="yes"
+      bwutilhib="yes"
       bwutil2="yes"
       pkgdefault=
       shift
@@ -841,6 +863,7 @@ if [ "$pkgdefault" = "yes" ] ; then
   bwxml="yes"
   caldav="yes"
   bwutil="yes"
+  bwutilhib="yes"
   bwutil2="yes"
   webdav="yes"
 fi
