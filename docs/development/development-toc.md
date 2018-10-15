@@ -1,3 +1,3 @@
 # Developers pages
-
-[Running the caldav tester](caldavtester.md)
+  * [Todo list](todo.md)
+  * [Running the caldav tester](caldavtester.md)
