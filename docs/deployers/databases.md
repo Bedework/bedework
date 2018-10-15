@@ -81,6 +81,44 @@ In standalone.xml replace the datasource definition with something like:
      </datasource>
 ```
 
+Ensure you also have the driver loaded - for example the drivers section which usually follows the datasources shoudllook somethign like:
+
+You need to install the postgres driver - you're either missing the driver declaration - something like:
+
+```
+<drivers>
+    ...
+    <driver name="postgresql" module="org.postgresql"/>
+    ...
+</drivers>
+```
+
+Ensure the jdbc driver is installed in the modules directory - something like:
+
+```
+wildfly-10.1.0.Final/modules/org/postgresql/main/module.xml
+wildfly-10.1.0.Final/modules/org/postgresql/main/postgresql-8.4-701.jdbc4.jar
+```
+
+Module.xml for this example contains
+
+```
+<?xml version='1.0' encoding='UTF-8'?>
+
+<module xmlns="urn:jboss:module:1.1" name="org.postgresql">
+    <resources>
+        <resource-root path="postgresql-8.4-701.jdbc4.jar"/>
+    </resources>
+
+    <dependencies>
+        <module name="javax.api"/>
+        <module name="javax.transaction.api"/>
+    </dependencies>
+</module>
+```
+
+Modify it appropriately for different versions.
+
 Start wildfly and allow it to fully deploy. There will be many errors relating to the calendar database.
 
 Delete the file ***wildfly-10.1.0.Final/standalone/data/bedework/dumprestore/schema.sql***
