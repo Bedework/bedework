@@ -123,7 +123,7 @@ These modules are
     * bwengine/system.xml
     * eventreg.xml
   * Yet more refactoring was needed. Turns out we had an unbuildable set of modules with bw-xml depending on bw-util for the deployment. Broke out the 2 modules with a dependency on bw-xml as bw-util2
-  * Moved all teh xsl into it's own module - bw-calendar-xsl. Thi salso needs changes to configs - all xsl url paths are now prefixed with /approots - the context at which the xsl is deployed. Look for elements appRoots and browserResourceRoots in the configs
+  * Moved all the xsl into it's own module - bw-calendar-xsl. Thi salso needs changes to configs - all xsl url paths are now prefixed with /approots - the context at which the xsl is deployed. Look for elements appRoots and browserResourceRoots in the configs
 
 ##### Scheduling
   * Fixes to scheduling code to try to ensure pending inbox events get deleted
@@ -140,7 +140,7 @@ These modules are
 ##### Other 
   * Delay getting a change table entry when realiasing. Was intefering with a test in update.
   * Getting deadlocks when deleting tombstoned events. Change the colpath so they disapppear but need a purge process to finally remove them. 
-  * Tasks collections were not getting created with correct type - nor were they returning a supportd component type.
+  * Tasks collections were not getting created with correct type - nor were they returning a supported component type.
   * Some fixes to the selfreg feature and additions to the cli to drive it.
    
 ### Changes for release 3.12.1:
