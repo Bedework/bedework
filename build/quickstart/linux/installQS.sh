@@ -27,7 +27,7 @@ if [[ "$version" -lt "8" ]]; then
   exit 1
 fi
 
-latestVersion="3.12.0"
+latestVersion="3.12.1"
 JBOSS_VERSION="wildfly-10.1.0.Final"
 
 # We create empty files in this directory to track progress
