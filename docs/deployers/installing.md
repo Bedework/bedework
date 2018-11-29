@@ -4,7 +4,7 @@ Instructions for older releases are [here.](installing-old.md)
 
 The current quickstart is installed by executing a script which will create the quickstart directory and then download, clone and build. In the event of a failure part way through, the script may be restarted with the **restart** parameter.
 
-The script may be downloaded from [here](https://github.com/Bedework/bedework/blob/master/build/quickstart/linux/installQS.sh). Alternatively clone the [bedework](https://github.com/Bedework/bedework.git) repo and use the script at **bedework/build/quickstart/linux/installQS.sh**
+The script may be downloaded from [here](https://github.com/Bedework/bedework/raw/master/build/quickstart/linux/installQS.sh). Alternatively clone the [bedework](https://github.com/Bedework/bedework.git) repo and use the script at **bedework/build/quickstart/linux/installQS.sh**
 
 ### Which version
 The script will ask you if you want the development or latest version.
