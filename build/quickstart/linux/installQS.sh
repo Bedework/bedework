@@ -636,6 +636,7 @@ buildModules() {
 
   buildModule xsl
   buildModule bwutil
+  buildModule bwutilhib
   buildModule bwxml
   buildModule bwutil2
   buildModule notifier
@@ -744,4 +745,5 @@ installData
 
 installApacheds
 
+cd $qs
 buildModules
