@@ -10,7 +10,7 @@ The script may be downloaded from [here](https://github.com/Bedework/bedework/bl
 The script will ask you if you want the development or latest version.
 
 ### Apacheds
-The script will also ask if you want apacheds installed. If you just want to try out bedework you probably need to respond yes. This will install a directory with some initial ids in place for testing. If you are downloading to upgrade to a new version you may want to say no and configure to use your own directory.
+The script will install apacheds. This will install a directory with some initial ids in place for testing. Ultimately you'll want to use your own directory service.
 
 ### Maven
 This is a maven project and as usual you need to set up your maven profile in ~/.m2/settings.xml. The script will display a possible settings.xml file with the paths filled in.
@@ -19,7 +19,7 @@ If you want to merge in the profile to an existing settings.xml ensure you also 
 
 The profile does not need to be active by default if you have other profiles. The build process will specify the bedework-3 profile.
 
-Below is the contents of that settings.xml file. This must be in place before allowing the script to continue on to the builds otherwise they will fail diring deployment.
+Below is the contents of that settings.xml file. This must be in place before allowing the script to continue on to the builds otherwise they will fail during deployment.
 
 ```
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
