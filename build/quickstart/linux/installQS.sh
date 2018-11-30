@@ -41,7 +41,9 @@ wildflyConfDir="${JBOSS_VERSION}/standalone/configuration"
 resources=$BASE_DIR/bedework/build/quickstart
 
 JBOSS_CONFIG="standalone"
-JBOSS_SERVER_DIR="$BASE_DIR/$quickstart/$JBOSS_VERSION/$JBOSS_CONFIG"
+
+# These relative to $qs
+JBOSS_SERVER_DIR="$JBOSS_VERSION/$JBOSS_CONFIG"
 JBOSS_DATA_DIR="$JBOSS_SERVER_DIR/data"
 bedework_data_dir="$JBOSS_DATA_DIR/bedework"
 es_data_dir="$bedework_data_dir/elasticsearch"
@@ -237,8 +239,8 @@ unpackWildFly() {
   unzip ${JBOSS_VERSION}.zip
   rm ${JBOSS_VERSION}.zip
 
-  if [ ! -d "$TMP_DIR" ]; then
-    mkdir -p $TMP_DIR
+  if [ ! -d "$qs/$TMP_DIR" ]; then
+    mkdir -p $qs/$TMP_DIR
   fi
 
   markDone $unpackWildfly
@@ -364,10 +366,10 @@ installData() {
 #  cp -r wfdata/* ${JBOSS_VERSION}/standalone/data/
 #  rm -rf wfdata
 #  rm wfdata.zip
-  resources=$BASE_DIR/bedework/build/quickstart
+  resources=$qs/bedework/build/quickstart
 
   # Unpack here
-  cd $TMP_DIR/
+  cd $qs/$TMP_DIR/
 
   # ------------------------------------- h2 data
 
@@ -376,8 +378,8 @@ installData() {
   rm -rf h2/
   unzip h2.zip
   rm -f h2.zip
-  rm -rf $bedework_data_dir/h2
-  cp -r h2 $bedework_data_dir/
+  rm -rf $qs/$bedework_data_dir/h2
+  cp -r h2 $qs/$bedework_data_dir/
   rm -rf h2/
 
   # ------------------------------------- ES data
@@ -387,8 +389,8 @@ installData() {
   cp $resources/data/elasticsearch.zip .
   unzip elasticsearch.zip
   rm elasticsearch.zip
-  rm -rf $es_data_dir
-  cp -r elasticsearch $bedework_data_dir/
+  rm -rf $qs/$es_data_dir
+  cp -r elasticsearch $qs/$bedework_data_dir/
 
   cd $BASE_DIR
 
