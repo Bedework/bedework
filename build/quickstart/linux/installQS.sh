@@ -243,6 +243,8 @@ unpackWildFly() {
     mkdir -p $qs/$TMP_DIR
   fi
 
+  mkdir $qs/$JBOSS_DATA_DIR
+
   markDone $unpackWildfly
 }
 
@@ -367,6 +369,7 @@ installData() {
 #  rm -rf wfdata
 #  rm wfdata.zip
   resources=$qs/bedework/build/quickstart
+  mkdir $qs/$bedework_data_dir
 
   # Unpack here
   cd $qs/$TMP_DIR/
@@ -384,7 +387,7 @@ installData() {
 
   # ------------------------------------- ES data
 
-  rm =f elasticsearch.zip
+  rm -f elasticsearch.zip
   rm -rf elasticsearch
   cp $resources/data/elasticsearch.zip .
   unzip elasticsearch.zip
