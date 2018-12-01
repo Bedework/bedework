@@ -6,7 +6,7 @@ You may choose to deploy Bedework for public events calendaring, personal calend
 
 
   * [Features of Bedework](features.md)
-  * [New in Bedework 3.12](new-features.md)
+  * [Release Notes](release-notes.md)
   * [System Overview](system-overview.md)
   * [History and Background](history.md)
   * [Calendaring Standards & Interoperability](
