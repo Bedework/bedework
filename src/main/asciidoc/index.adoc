@@ -26,7 +26,7 @@ include::{overview-dir}release-notes.adoc[]
 
 include::{overview-dir}system-overview.adoc[]
 
-include::{overview-dir}history.adoc[]
+link:{overview-dir}history.adoc[Bedework History!!!]
 
 include::{overview-dir}standards.adoc[]
 
