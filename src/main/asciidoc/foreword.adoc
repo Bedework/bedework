@@ -1,0 +1,2 @@
+The Bedework system supports both personal and group calendaring and scheduling and public events.
+

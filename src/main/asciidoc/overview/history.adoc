@@ -1,0 +1,8 @@
+[[history-background]]
+=== Bedework History and Background
+
+Bedework was established in March 2005 in succession to UW Calendar. In December 2006 Bedework received the Andrew W. Mellon Foundation's Technology Collaboration (MATC) Award. Since then the project has prospered, and in early 2009, Bedework became an incubator project of Jasig (http://www.jasig.org/) now a part of the Apereo Foundation (http://www.apereo.org). 
+
+Bedework is in use by institutions large and small, educational, governmental, commercial, and non-profit.
+
+Bedework is named after the Venerable Bede, a highly influential monk and scholar from the area of Northumbria in Britain who in 725AD wrote the treatise, "On the Reckoning of Time".  Bede is pronounced like “bead”, Bedework is pronounced “bead work”.  

@@ -1,0 +1,58 @@
+[[configure-events-registration]
+=== Enabling and Disabling Public Events Registration
+==== Enabling Public Events Registration
+
+The public events registration system is enabled by default if you have installed Bedework with the data available in the quickstart.
+
+==== Disabling Public Events Registration
+
+If you wish to disable the public events registration system remove the "Eventreg admin token" from the System Preferences in the jmx console:
+
+  * Log into the Bedework jmx console, e.g. http://localhost:8080/hawtio 
+     ** Click "org.bedework.bwengine" in the left menu, then "service=System" in the right menu 
+     ** Remove the value in the EventRegAdminToken field
+     ** Click "Apply Changes"
+     ** Invoke "saveConfig" to save your changes. 
+
+==== Enabling Public Events Registration (possibly after upgrade from a previous release)
+
+First ensure that the CalWs interface is available. This is the SOAP service that the event registration service uses o communicate with bedework. In system.xml make sure the <calSoapWsURI> element is present and has the same value as the soap:address element in pubcalws-soap/wssvc.wsdl (this requires better explanation - it's a file deployed in the bw-xml ear)
+
+If you have upgraded from an older release, you may not have the data required for event registration in your system yet.  Follow these steps to turn on the event registration system:  (Please note: the process outlined below is only set up for the default quickstart and postgresql configs at the moment.) 
+
+  * Start up jboss and apacheDS
+
+  * Log into the JMX-Console shipped with Bedework's JBoss, e.g. http://localhost:8080/hawtio
+     ** Click "org.bedework.eventreg" in the left menu, then "service=Eventreg" in the right menu
+         *** If no database exists:
+             *** Set “create” and “export” attributes to "True"
+             *** Click "Apply changes" button (at the bottom of the list of attribute values)
+             *** Find the "schema" operation in the lower list, and click the “Invoke” button to export schema and create database
+             *** You should see a successful result; click "Back to MBean" button to return to "service=Eventreg"
+         *** Point at needed systems:
+             *** Set the WsdlUri attribute value to: http://localhost:8080/wsdls/pubcalws-soap/wssvc.wsdl 
+             *** Set the TzsUri attribute value to:  http://localhost:8080/tzsvr 
+             *** Click "Apply changes" button 
+         *** Admin token:
+             *** If no admin token exists, click “generateAdminToken”
+             *** You should see a successful result; click "Back to MBean" button to return to "service=Eventreg"
+             *** You should see a string such as "c0e93685-93cd-4bee-bed2-9996b89be28c" in the EventRegAdminToken attribute value.
+             *** Copy the EventRegAdminToken value (for use in the next step)
+
+     ** Click "org.bedework.bwengine" in the left menu, then "service=System" in the right menu
+         
+         *** Paste the value into the EventRegAdminToken field
+         *** Click "Apply Changes" button
+         *** Invoke the "saveConfig" operation to save your changes.
+
+  * Test:
+     ** Add a new public event.  You should be able to select the checkbox "Users may register for this event", and make the event registerable.
+     ** Visit the event in public client -- you should be able to register for it.  
+
+==== Notifications from EventReg
+
+The event registration service will send notifications to the calendar engine when changes take place that might require notifying users. The event registration service calls the calendar engine notification web service (not to be confused with the notification engine). This web service allows the core engine to add notifications to the accounts of subscribed users. It is the job of the notification engine to forward those via email or some other service.
+
+To configure notifications from eventreg you need to set the BwId, BwToken and BwUri properties in "service=Eventreg"and the NotifierId and NotifierToken values in  "org.bedework.bwengine" -> "notifications"
+
+

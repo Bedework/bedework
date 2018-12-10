@@ -49,7 +49,7 @@
         "content": {
           "type": "string",
           "include_in_all": false,
-          "index": "not_analyzed"
+          "index": "no"
         }
       }
     }

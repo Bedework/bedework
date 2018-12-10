@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <client-config xmlns="http://bedework.org/ns/" type="org.bedework.webcommon.config.ConfigCommonImpl">
-  <appRoot>http://localhost:8080/calfeedrsrc</appRoot>
+  <appRoot>http://localhost:8080/approots/calfeedrsrc</appRoot>
   <appType>feeder</appType>
   <autoCreateContacts>false</autoCreateContacts>
   <autoCreateLocations>false</autoCreateLocations>

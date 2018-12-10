@@ -1,0 +1,50 @@
+= Bedework Enterprise Calendar System
+:title: Bedework Enterprise Calendar System
+:doctype: standard
+:imagesdir: ./resources/
+:toc: left
+:toclevels: 4
+
+:overview-dir: overview/
+:admin-dir: administrators/
+:deployer-dir: deployers/
+:dev-dir: development/
+
+:sectnums!:
+
+include::foreword.adoc[]
+include::introduction.adoc[]
+
+:sectnums:
+
+[[overview]]
+== Overview
+
+include::{overview-dir}features.adoc[]
+
+include::{overview-dir}release-notes.adoc[]
+
+include::{overview-dir}system-overview.adoc[]
+
+include::{overview-dir}history.adoc[]
+
+include::{overview-dir}standards.adoc[]
+
+include::{overview-dir}technologies.adoc[]
+
+== Public Administrator Features
+include::{admin-dir}eventRegistration.adoc[]
+include::{admin-dir}subscriptions.adoc[]
+
+== Deployers
+include::{deployer-dir}installing.adoc[]
+include::{deployer-dir}configure-wildfly.adoc[]
+include::{deployer-dir}databases.adoc[]
+include::{deployer-dir}elasticsearch.adoc[]
+include::{deployer-dir}eventRegistration.adoc[]
+include::{deployer-dir}synch-engine.adoc[]
+include::{deployer-dir}locations.adoc[]
+
+== Development
+include::{dev-dir}todo.adoc[]
+include::{dev-dir}caldavtester.adoc[]

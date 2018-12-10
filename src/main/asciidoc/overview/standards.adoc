@@ -1,0 +1,7 @@
+[[calendar-standards-interoperability]]
+=== Calendaring Standards & Interoperability
+The Bedework implementation team participates in the standards process as a member of http://www.calconnect.org/[CalConnect, the Calendaring and Scheduling Consortium], which is "focused on the interoperable exchange of calendaring and scheduling information between dissimilar programs, platforms, and technologies."
+
+Interoperability with other calendar systems and clients by way of standards compliance is an important design goal of the Bedework system.
+
+Bedework is designed to conform to existing calendar standards. For more information about calendaring and calendaring standards, please visit https://devguide.calconnect.org/Appendix/Standards/[the CalConnect Devguide].
