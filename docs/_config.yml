@@ -1,8 +1,11 @@
-theme: jekyll-theme-slate
+remote_theme: "mmistakes/minimal-mistakes@4.14.1"
 
 github:
   repository_name: Bedework
   project_tagline: An Enterprise Calendaring and Scheduling Server
 
 title: Bedework
-show_downloads: false
+show_downloads: true
+
+plugins:
+  - jekyll-include-cache
