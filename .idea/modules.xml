@@ -49,7 +49,6 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-war/bw-calsockets-war.iml" filepath="$PROJECT_DIR$/../bw-calsockets/bw-calsockets-war/bw-calsockets-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-web/bw-calsockets-web.iml" filepath="$PROJECT_DIR$/../bw-calsockets/bw-calsockets-web/bw-calsockets-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-client/bw-carddav-client.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-client/bw-carddav-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-common/bw-carddav-common.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-common/bw-carddav-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-dumpres/bw-carddav-dumpres.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-dumpres/bw-carddav-dumpres.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-ear/bw-carddav-ear.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-ear/bw-carddav-ear.iml" />
@@ -79,7 +78,6 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/bw-self-registration-ear.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/bw-self-registration-ear.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-war/bw-self-registration-war.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-war/bw-self-registration-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-web/bw-self-registration-web.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-web/bw-self-registration-web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-selfreg.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-selfreg.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch-common/bw-synch-common.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch-common/bw-synch-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch-ear/bw-synch-ear.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch-ear/bw-synch-ear.iml" />
@@ -92,7 +90,6 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/bw-timezone-server-tzconvert.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/bw-timezone-server-tzconvert.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util-logging/bw-util (1).iml" filepath="$PROJECT_DIR$/../bw-util-logging/bw-util (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-args/bw-util-args.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-args/bw-util-args.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-bw-deploy/bw-util-bw-deploy.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-bw-deploy/bw-util-bw-deploy.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-caching/bw-util-caching.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-caching/bw-util-caching.iml" />
