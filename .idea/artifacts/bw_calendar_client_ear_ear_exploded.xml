@@ -75,7 +75,9 @@
         <element id="archive" name="bw-calendar-engine-tools-3.12.2-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-engine-tools" />
         </element>
-        <element id="library" level="project" name="Maven: org.bedework:bw-access:4.0.3" />
+        <element id="archive" name="bw-access-4.0.4-SNAPSHOT.jar">
+          <element id="module-output" name="bw-access" />
+        </element>
         <element id="archive" name="bw-util-args-4.0.20-SNAPSHOT.jar">
           <element id="module-output" name="bw-util-args" />
         </element>
@@ -148,7 +150,9 @@
         <element id="archive" name="bw-xml-tzsvr-4.0.7-SNAPSHOT.jar">
           <element id="module-output" name="bw-xml-tzsvr" />
         </element>
-        <element id="library" level="project" name="Maven: org.bedework:bw-webdav:4.0.4" />
+        <element id="archive" name="bw-webdav-4.0.5-SNAPSHOT.jar">
+          <element id="module-output" name="bw-webdav" />
+        </element>
         <element id="archive" name="bw-caldav-server-4.0.5-SNAPSHOT.jar">
           <element id="module-output" name="bw-caldav-server" />
         </element>

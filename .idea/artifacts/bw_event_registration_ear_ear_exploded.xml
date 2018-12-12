@@ -59,9 +59,15 @@
         <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.5.3" />
         <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.5" />
         <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.6" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-xml-calws-soap:4.0.6" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-xml-icalendar:4.0.6" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-xml-synchws:4.0.6" />
+        <element id="archive" name="bw-xml-calws-soap-4.0.7-SNAPSHOT.jar">
+          <element id="module-output" name="bw-xml-calws-soap" />
+        </element>
+        <element id="archive" name="bw-xml-icalendar-4.0.7-SNAPSHOT.jar">
+          <element id="module-output" name="bw-xml-icalendar" />
+        </element>
+        <element id="archive" name="bw-xml-synchws-4.0.7-SNAPSHOT.jar">
+          <element id="module-output" name="bw-xml-synchws" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework.ical4j:ical4j:2.0.3" />
         <element id="library" level="project" name="Maven: org.jasig.cas.client:cas-client-core:3.4.1" />
         <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.1" />

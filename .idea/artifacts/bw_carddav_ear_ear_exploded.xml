@@ -55,14 +55,18 @@
         <element id="archive" name="bw-util2-calendar-4.0.2-SNAPSHOT.jar">
           <element id="module-output" name="bw-util2-calendar" />
         </element>
-        <element id="library" level="project" name="Maven: org.bedework:bw-xml-icalendar:4.0.6" />
+        <element id="archive" name="bw-xml-icalendar-4.0.7-SNAPSHOT.jar">
+          <element id="module-output" name="bw-xml-icalendar" />
+        </element>
         <element id="archive" name="bw-util2-vcard-4.0.2-SNAPSHOT.jar">
           <element id="module-output" name="bw-util2-vcard" />
         </element>
         <element id="archive" name="bw-webdav-4.0.5-SNAPSHOT.jar">
           <element id="module-output" name="bw-webdav" />
         </element>
-        <element id="library" level="project" name="Maven: org.bedework:bw-xml-calws-soap:4.0.6" />
+        <element id="archive" name="bw-xml-calws-soap-4.0.7-SNAPSHOT.jar">
+          <element id="module-output" name="bw-xml-calws-soap" />
+        </element>
         <element id="library" level="project" name="Maven: org.hibernate:hibernate-ehcache:5.2.5.Final" />
         <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.10.3" />
         <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
