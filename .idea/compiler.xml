@@ -90,6 +90,7 @@
         <module name="bw-util-jmx" />
         <module name="bw-util-jolokia" />
         <module name="bw-util-json" />
+        <module name="bw-util-logging" />
         <module name="bw-util-maven-deploy" />
         <module name="bw-util-misc" />
         <module name="bw-util-options" />
@@ -137,7 +138,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bedework" target="1.5" />
-      <module name="bw-access" target="1.7" />
+      <module name="bw-access" target="1.8" />
       <module name="bw-addrbook-client" target="1.8" />
       <module name="bw-caldav" target="1.8" />
       <module name="bw-caldav-server" target="1.8" />
@@ -276,6 +277,7 @@
       <module name="bw-util-jmx" target="1.8" />
       <module name="bw-util-jolokia" target="1.8" />
       <module name="bw-util-json" target="1.8" />
+      <module name="bw-util-logging" target="1.8" />
       <module name="bw-util-maven-deploy" target="1.8" />
       <module name="bw-util-misc" target="1.8" />
       <module name="bw-util-options" target="1.8" />

@@ -87,6 +87,7 @@
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-hibernate" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-logging" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-args" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-bw-deploy" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-caching" charset="UTF-8" />
@@ -97,7 +98,6 @@
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-deployment" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-directory" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-elasticsearch" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-hibernate" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-http" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-indexing" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-jms" charset="UTF-8" />

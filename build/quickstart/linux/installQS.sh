@@ -27,7 +27,7 @@ if [[ "$version" -lt "8" ]]; then
   exit 1
 fi
 
-latestVersion="3.12.1"
+latestVersion="3.12.2"
 JBOSS_VERSION="wildfly-10.1.0.Final"
 
 # We create empty files in this directory to track progress
@@ -553,6 +553,7 @@ installSources() {
     cloneRepo bw-util "$1"
     cloneRepo bw-util2 "$1"
     cloneRepo bw-util-hibernate "$1"
+    cloneRepo bw-util-logging "$1"
     cloneRepo bw-webdav "$1"
     cloneRepo bw-xml "$1"
   else
@@ -573,6 +574,7 @@ installSources() {
     cloneRepoBranch 4.0.19 bw-util "$1"
     cloneRepoBranch 4.0.1 bw-util2 "$1"
     cloneRepoBranch 4.0.19 bw-util-hibernate "$1"
+    cloneRepoBranch 4.0.0 bw-util-logging "$1"
     cloneRepoBranch 4.0.4 bw-webdav "$1"
     cloneRepoBranch 4.0.6 bw-xml "$1"
   fi

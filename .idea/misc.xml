@@ -64,6 +64,7 @@
         <option value="$PROJECT_DIR$/../bw-caldavTest/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-hibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-util-logging/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

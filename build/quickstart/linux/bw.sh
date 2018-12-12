@@ -38,8 +38,9 @@ mvnUpdateProjects="$mvnUpdateProjects  bw-self-registration"
 mvnUpdateProjects="$mvnUpdateProjects  bw-synch"
 mvnUpdateProjects="$mvnUpdateProjects  bw-timezone-server"
 mvnUpdateProjects="$mvnUpdateProjects  bw-util"
-mvnUpdateProjects="$mvnUpdateProjects  bw-util-hibernate"
 mvnUpdateProjects="$mvnUpdateProjects  bw-util2"
+mvnUpdateProjects="$mvnUpdateProjects  bw-util-hibernate"
+mvnUpdateProjects="$mvnUpdateProjects  bw-util-logging"
 mvnUpdateProjects="$mvnUpdateProjects  bw-webdav"
 mvnUpdateProjects="$mvnUpdateProjects  bw-xml"
 
@@ -169,8 +170,9 @@ usage() {
   echo "     -eventreg     Target is for the event registration service build"
   echo "     -notifier     Target is the Bedework notification service"
   echo "     -bwutil       Target is for the Bedework util classes"
-  echo "     -bwutilhib    Target is for the Bedework hibernate util classes"
   echo "     -bwutil2      Target is for the Bedework util2 classes"
+  echo "     -bwutilhib    Target is for the Bedework hibernate util classes"
+  echo "     -bwutillog    Target is for the Bedework logging util classes"
   echo "     -selfreg      Target is for the self registration build"
   echo "     -synch        Target is for the synch build"
   echo "     -tzsvr        Target is for the timezones server build"
@@ -286,6 +288,12 @@ setDirectory() {
 	if [ "$xsl" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-calendar-xsl
       xsl=
+	  return
+	fi
+
+	if [ "$bwutillog" != "" ] ; then
+	  cd $QUICKSTART_HOME/bw-util-logging
+      bwutillog=
 	  return
 	fi
 
@@ -767,6 +775,7 @@ do
       ;;
     -bwutil)
       bwutil="yes"
+      bwutillog="yes"
 
       pkgdefault=
       shift
@@ -775,6 +784,12 @@ do
       bwutilhib="yes"
 
       bwutil="yes"
+      pkgdefault=
+      shift
+      ;;
+    -bwutillog)
+      bwutillog="yes"
+
       pkgdefault=
       shift
       ;;
