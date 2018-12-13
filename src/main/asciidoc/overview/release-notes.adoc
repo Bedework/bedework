@@ -1,8 +1,10 @@
 [[release-notes]]
 === Release Notes
 
-==== Upcoming release 3.12.2:
+==== Release 3.12.2:
   * Added new cli command to allow refresh of tz data.
+  * Widespread changes to remove references to log4j. All localized in one source file (and a few poms for runnable code).
+  * Use asciidoctor to generate this document.
 
 ==== Release 3.12.1:
 ===== Searching for contacts/locations
@@ -26,7 +28,10 @@
   
 ===== Use ES only read-only interface for CalDAV read-only methods.
   * The hope is this will provide a significant performance improvement for those methods.
-  
+
+===== Other changes.
+  * Merged pull request from viqueen. Deal with DAV security issue.
+
 ==== Release 3.12.0:
 ===== Move to github/maven
   * A number of modules have been replaced with their github/maven equivalents from the 4.x branches. Other than changes for the build process these modules are functionally equivalent. This change was initiated to make some module classes available for externally built plugin modules. The 3.x modules and their 4.x replacements are:
