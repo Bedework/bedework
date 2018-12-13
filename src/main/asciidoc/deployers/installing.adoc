@@ -1,4 +1,4 @@
-[[Installing the quickstart]]
+[[installing-the-quickstart]]
 === Installing the quickstart (3.12.x onwards)
 
 The current quickstart is installed by executing a script which will create the quickstart directory and then download, clone and build. In the event of a failure part way through, the script may be restarted with the **restart** parameter.

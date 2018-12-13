@@ -58,15 +58,19 @@
 </ul>
 </li>
 <li><a href="#_deployers">3. Deployers</a>
+<ul class="sectlevel2">
+<li><a href="#installing-the-quickstart">3.1. Installing the quickstart (3.12.x onwards)</a>
 <ul class="sectlevel3">
-<li><a href="#_which_version">3.1. Which version</a></li>
-<li><a href="#_apacheds">3.2. Apacheds</a></li>
-<li><a href="#_maven">3.3. Maven</a></li>
-<li><a href="#_building">3.4. Building</a></li>
-<li><a href="#_deploying">3.5. Deploying</a></li>
-<li><a href="#configuring-wildfly">3.6. Configuring wildfly</a>
+<li><a href="#_which_version">3.1.1. Which version</a></li>
+<li><a href="#_apacheds">3.1.2. Apacheds</a></li>
+<li><a href="#_maven">3.1.3. Maven</a></li>
+<li><a href="#_building">3.1.4. Building</a></li>
+<li><a href="#_deploying">3.1.5. Deploying</a></li>
+</ul>
+</li>
+<li><a href="#configuring-wildfly">3.2. Configuring wildfly</a>
 <ul class="sectlevel3">
-<li><a href="#_adding_an_admin_account">3.6.1. Adding an admin account</a></li>
+<li><a href="#_adding_an_admin_account">3.2.1. Adding an admin account</a></li>
 </ul>
 </li>
 <li><a href="#_setting_up_databases">Setting up databases</a>
@@ -75,18 +79,18 @@
 <li><a href="#_mysql">MySQL</a></li>
 </ul>
 </li>
-<li><a href="#elasticsearch">3.7. Elasticsearch</a>
+<li><a href="#elasticsearch">3.3. Elasticsearch</a>
 <ul class="sectlevel3">
-<li><a href="#_disabling_public_events_registration">3.7.1. Disabling Public Events Registration</a></li>
-<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">3.7.2. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
-<li><a href="#_notifications_from_eventreg">3.7.3. Notifications from EventReg</a></li>
+<li><a href="#_disabling_public_events_registration">3.3.1. Disabling Public Events Registration</a></li>
+<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">3.3.2. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
+<li><a href="#_notifications_from_eventreg">3.3.3. Notifications from EventReg</a></li>
 </ul>
 </li>
-<li><a href="#_initializing_the_database">3.8. Initializing the database</a>
+<li><a href="#_initializing_the_database">3.4. Initializing the database</a>
 <ul class="sectlevel3">
-<li><a href="#_rebuild_bw_xml">3.8.1. (Re)build bw-xml</a></li>
-<li><a href="#_validating_locations">3.8.2. Validating locations.</a></li>
-<li><a href="#_searching_for_public_locations">3.8.3. Searching for public locations</a></li>
+<li><a href="#_rebuild_bw_xml">3.4.1. (Re)build bw-xml</a></li>
+<li><a href="#_validating_locations">3.4.2. Validating locations.</a></li>
+<li><a href="#_searching_for_public_locations">3.4.3. Searching for public locations</a></li>
 </ul>
 </li>
 </ul>
@@ -1034,10 +1038,8 @@ autokill killing off some of the long running system jobs.</p>
 <div class="sect1">
 <h2 id="_deployers">3. Deployers</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>[[Installing the quickstart]]
-=== Installing the quickstart (3.12.x onwards)</p>
-</div>
+<div class="sect2">
+<h3 id="installing-the-quickstart">3.1. Installing the quickstart (3.12.x onwards)</h3>
 <div class="paragraph">
 <p>The current quickstart is installed by executing a script which will create the quickstart directory and then download, clone and build. In the event of a failure part way through, the script may be restarted with the <strong>restart</strong> parameter.</p>
 </div>
@@ -1045,19 +1047,19 @@ autokill killing off some of the long running system jobs.</p>
 <p>The script may be downloaded from <a href="https://github.com/Bedework/bedework/raw/master/build/quickstart/linux/installQS.sh">githuib</a>. Alternatively clone the <a href="https://github.com/Bedework/bedework.git">bedework repo</a> and use the script at <strong>bedework/build/quickstart/linux/installQS.sh</strong></p>
 </div>
 <div class="sect3">
-<h4 id="_which_version">3.1. Which version</h4>
+<h4 id="_which_version">3.1.1. Which version</h4>
 <div class="paragraph">
 <p>The script will ask you if you want the development or latest version.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_apacheds">3.2. Apacheds</h4>
+<h4 id="_apacheds">3.1.2. Apacheds</h4>
 <div class="paragraph">
 <p>The script will install apacheds. This will install a directory with some initial ids in place for testing. Ultimately you&#8217;ll want to use your own directory service.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_maven">3.3. Maven</h4>
+<h4 id="_maven">3.1.3. Maven</h4>
 <div class="paragraph">
 <p>This is a maven project and as usual you need to set up your maven profile in ~/.m2/settings.xml. The script will display a possible settings.xml file with the paths filled in.</p>
 </div>
@@ -1097,7 +1099,7 @@ autokill killing off some of the long running system jobs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_building">3.4. Building</h4>
+<h4 id="_building">3.1.4. Building</h4>
 <div class="paragraph">
 <p>In many cases it is possible to simply cd in to the appropriate directory and do a mvn install with the bedework-3 profile. However there is a <strong>bw</strong> script which - while taking longer - does build all projects a module depends upon. This avoids the need to work out the dependency orderings of the independent projects. Thus</p>
 </div>
@@ -1111,7 +1113,7 @@ autokill killing off some of the long running system jobs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_deploying">3.5. Deploying</h4>
+<h4 id="_deploying">3.1.5. Deploying</h4>
 <div class="paragraph">
 <p>As part of the bedework project there is a maven plugin which uses a properties file to handle post-build deployment issues. Essentially the ear or war as built acts as a template for the deployer.</p>
 </div>
@@ -1128,10 +1130,11 @@ autokill killing off some of the long running system jobs.</p>
 <p>DO NOT change the <strong>org.bedework.deployment.basedir</strong> property - unless you move the quickstart. This property is used to locate the wildfly instance.</p>
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="configuring-wildfly">3.6. Configuring wildfly</h3>
+<h3 id="configuring-wildfly">3.2. Configuring wildfly</h3>
 <div class="sect3">
-<h4 id="_adding_an_admin_account">3.6.1. Adding an admin account</h4>
+<h4 id="_adding_an_admin_account">3.2.1. Adding an admin account</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code>cd wildfly-10.1.0.Final
@@ -1415,7 +1418,7 @@ calschema export</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="elasticsearch">3.7. Elasticsearch</h3>
+<h3 id="elasticsearch">3.3. Elasticsearch</h3>
 <div class="paragraph">
 <p>Bedework uses ElasticSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as an embedded engine - as it arrives in the quickstart - or as an external service - which will be required for clustering.</p>
 </div>
@@ -1464,7 +1467,7 @@ calschema export</code></pre>
 <p>The public events registration system is enabled by default if you have installed Bedework with the data available in the quickstart.</p>
 </div>
 <div class="sect3">
-<h4 id="_disabling_public_events_registration">3.7.1. Disabling Public Events Registration</h4>
+<h4 id="_disabling_public_events_registration">3.3.1. Disabling Public Events Registration</h4>
 <div class="paragraph">
 <p>If you wish to disable the public events registration system remove the "Eventreg admin token" from the System Preferences in the jmx console:</p>
 </div>
@@ -1493,7 +1496,7 @@ calschema export</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">3.7.2. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
+<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">3.3.2. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
 <div class="paragraph">
 <p>First ensure that the CalWs interface is available. This is the SOAP service that the event registration service uses o communicate with bedework. In system.xml make sure the &lt;calSoapWsURI&gt; element is present and has the same value as the soap:address element in pubcalws-soap/wssvc.wsdl (this requires better explanation - it&#8217;s a file deployed in the bw-xml ear)</p>
 </div>
@@ -1594,7 +1597,7 @@ calschema export</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_notifications_from_eventreg">3.7.3. Notifications from EventReg</h4>
+<h4 id="_notifications_from_eventreg">3.3.3. Notifications from EventReg</h4>
 <div class="paragraph">
 <p>The event registration service will send notifications to the calendar engine when changes take place that might require notifying users. The event registration service calls the calendar engine notification web service (not to be confused with the notification engine). This web service allows the core engine to add notifications to the accounts of subscribed users. It is the job of the notification engine to forward those via email or some other service.</p>
 </div>
@@ -1615,7 +1618,7 @@ The synch engine handles the synchronization of external subscriptions with a be
 </div>
 </div>
 <div class="sect2">
-<h3 id="_initializing_the_database">3.8. Initializing the database</h3>
+<h3 id="_initializing_the_database">3.4. Initializing the database</h3>
 <div class="paragraph">
 <p>If running with mysql the built in hibernate schema export doesn&#8217;t work - mysql jdbc does not support it.</p>
 </div>
@@ -1656,7 +1659,7 @@ grant all on synchDb.* to '&lt;id&gt;'@'%' identified by '&lt;pw&gt;';</code></p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_rebuild_bw_xml">3.8.1. (Re)build bw-xml</h4>
+<h4 id="_rebuild_bw_xml">3.4.1. (Re)build bw-xml</h4>
 <div class="paragraph">
 <p>The synch engine uses an extension of CalWS to communicate with bedework. It requires that the wsdl file contain the location of bedework. This is configured into the deploy.properties file - only one change for the synch engine should be necessary. Set the location of (one of) your application servers in the following.</p>
 </div>
@@ -1716,7 +1719,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_validating_locations">3.8.2. Validating locations.</h4>
+<h4 id="_validating_locations">3.4.2. Validating locations.</h4>
 <div class="paragraph">
 <p>When an event arrives at the receiving end with an "X-BEDEWORK-LOCATION" property if the String value of the x-property is &#8230;&#8203;
 === Locations in bedework</p>
@@ -1726,7 +1729,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_searching_for_public_locations">3.8.3. Searching for public locations</h4>
+<h4 id="_searching_for_public_locations">3.4.3. Searching for public locations</h4>
 <div class="paragraph">
 <p>There is a web service endpoint which can be used to search for public locations. It takes a filter expression as a parameter and will return &lt;a limited?&gt; number</p>
 </div>
