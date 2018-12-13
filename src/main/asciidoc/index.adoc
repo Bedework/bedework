@@ -3,7 +3,8 @@
 :doctype: standard
 :imagesdir: ./resources/
 :toc: left
-:toclevels: 4
+:toclevels: 3
+:sectnumlevels: 3
 
 :overview-dir: overview/
 :admin-dir: administrators/

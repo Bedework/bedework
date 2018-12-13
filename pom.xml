@@ -141,7 +141,6 @@
               <sourceHighlighter>coderay</sourceHighlighter>
               <backend>html</backend>
               <attributes>
-                <toc/>
                 <linkcss>true</linkcss>
                 <safe>true</safe>
               </attributes>
