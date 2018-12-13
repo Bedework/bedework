@@ -25,9 +25,6 @@
         <element id="archive" name="bw-util-config-4.0.20-SNAPSHOT.jar">
           <element id="module-output" name="bw-util-config" />
         </element>
-        <element id="archive" name="bw-util-logging-4.0.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-logging" />
-        </element>
         <element id="archive" name="bw-util-hibernate-4.0.20-SNAPSHOT.jar">
           <element id="module-output" name="bw-util-hibernate" />
         </element>
@@ -43,6 +40,9 @@
         <element id="library" level="project" name="Maven: javax.jms:javax.jms-api:2.0" />
         <element id="archive" name="bw-util-jmx-4.0.20-SNAPSHOT.jar">
           <element id="module-output" name="bw-util-jmx" />
+        </element>
+        <element id="archive" name="bw-util-logging-4.0.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-logging" />
         </element>
         <element id="archive" name="bw-util-misc-4.0.20-SNAPSHOT.jar">
           <element id="module-output" name="bw-util-misc" />

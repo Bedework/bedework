@@ -108,6 +108,9 @@
         <element id="archive" name="bw-util-json-4.0.20-SNAPSHOT.jar">
           <element id="module-output" name="bw-util-json" />
         </element>
+        <element id="archive" name="bw-util-logging-4.0.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-logging" />
+        </element>
         <element id="archive" name="bw-util-misc-4.0.20-SNAPSHOT.jar">
           <element id="module-output" name="bw-util-misc" />
         </element>
