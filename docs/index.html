@@ -22,7 +22,7 @@
 <li><a href="#features-of-Bedework">1.1. Features of Bedework</a></li>
 <li><a href="#release-notes">1.2. Release Notes</a>
 <ul class="sectlevel3">
-<li><a href="#_upcoming_release_3_12_2">1.2.1. Upcoming release 3.12.2:</a></li>
+<li><a href="#_release_3_12_2">1.2.1. Release 3.12.2:</a></li>
 <li><a href="#_release_3_12_1">1.2.2. Release 3.12.1:</a></li>
 <li><a href="#_release_3_12_0">1.2.3. Release 3.12.0:</a></li>
 <li><a href="#_release_3_11_2">1.2.4. Release 3.11.2:</a></li>
@@ -254,11 +254,17 @@
 <div class="sect2">
 <h3 id="release-notes">1.2. Release Notes</h3>
 <div class="sect3">
-<h4 id="_upcoming_release_3_12_2">1.2.1. Upcoming release 3.12.2:</h4>
+<h4 id="_release_3_12_2">1.2.1. Release 3.12.2:</h4>
 <div class="ulist">
 <ul>
 <li>
 <p>Added new cli command to allow refresh of tz data.</p>
+</li>
+<li>
+<p>Widespread changes to remove references to log4j. All localized in one source file (and a few poms for runnable code).</p>
+</li>
+<li>
+<p>Use asciidoctor to generate this document.</p>
 </li>
 </ul>
 </div>
@@ -326,6 +332,16 @@
 <ul>
 <li>
 <p>The hope is this will provide a significant performance improvement for those methods.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_other_changes">Other changes.</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Merged pull request from viqueen. Deal with DAV security issue.</p>
 </li>
 </ul>
 </div>
@@ -1044,7 +1060,7 @@ autokill killing off some of the long running system jobs.</p>
 <p>The current quickstart is installed by executing a script which will create the quickstart directory and then download, clone and build. In the event of a failure part way through, the script may be restarted with the <strong>restart</strong> parameter.</p>
 </div>
 <div class="paragraph">
-<p>The script may be downloaded from <a href="https://github.com/Bedework/bedework/raw/master/build/quickstart/linux/installQS.sh">githuib</a>. Alternatively clone the <a href="https://github.com/Bedework/bedework.git">bedework repo</a> and use the script at <strong>bedework/build/quickstart/linux/installQS.sh</strong></p>
+<p>The script may be downloaded from <a href="https://github.com/Bedework/bedework/raw/master/build/quickstart/linux/installQS.sh">github</a>. Alternatively clone the <a href="https://github.com/Bedework/bedework.git">bedework repo</a> and use the script at <strong>bedework/build/quickstart/linux/installQS.sh</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_which_version">3.1.1. Which version</h4>
