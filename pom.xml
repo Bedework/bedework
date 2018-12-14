@@ -11,7 +11,13 @@
   <url>https://github.com/Bedework/bedework</url>
 
   <properties>
-    <bw-util.version>4.0.19</bw-util.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- Maven Plugin Versions -->
+    <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
+    <maven.source.plugin.version>2.1.2</maven.source.plugin.version>
+
+    <!-- Bedework Versions -->
+    <bw-util.version>4.0.20</bw-util.version>
   </properties>
 
   <organization>
