@@ -1,0 +1,85 @@
+Some notes:
+
+
+bw-util-logging - referened by everything (almost)
+
+bw-util:
+bw-util-args
+
+bw-webdav
+  bw-util-logging
+
+  bw-util-caching  (access)
+  bw-util-config
+  bw-util-jmx
+  bw-util-misc
+  bw-util-servlet
+  bw-util-xml
+
+  bw-access - bw-util-caching
+
+bw-caldav-server
+  bw-util-logging
+
+  bw-webdav
+  bw-xml
+
+  bw-util2-calendar
+
+
+bw-caldav-util
+  bw-util-logging
+
+  bw-util-http
+  bw-util-timezones
+
+  bw-webdav
+  bw-xml
+
+
+bw-calendar-engine:
+       <artifactId>bw-util-args</artifactId>
+        <artifactId>bw-util-caching</artifactId>
+        <artifactId>bw-util-cli</artifactId>
+        <artifactId>bw-util-dav</artifactId>
+        <artifactId>bw-util-elasticsearch</artifactId>
+        <artifactId>bw-util-http</artifactId>
+        <artifactId>bw-util-indexing</artifactId>
+        <artifactId>bw-util-jmx</artifactId>
+        <artifactId>bw-util-jolokia</artifactId>
+        <artifactId>bw-util-logging</artifactId>
+        <artifactId>bw-util-misc</artifactId>
+        <artifactId>bw-util-security</artifactId>
+        <artifactId>bw-util-timezones</artifactId>
+        <artifactId>bw-util-xml</artifactId>
+
+        <artifactId>bw-util-hibernate</artifactId>
+
+        <artifactId>bw-util2-calendar</artifactId>
+        <artifactId>bw-util2-vcard</artifactId>
+        <artifactId>bw-access</artifactId>
+        <artifactId>bw-webdav</artifactId>
+        <artifactId>bw-caldav-util</artifactId>
+        <artifactId>bw-caldav-server</artifactId>
+        <artifactId>bw-xml-icalendar</artifactId>
+        <artifactId>bw-xml-bwlicense</artifactId>
+        <artifactId>bw-xml-tzsvr</artifactId>
+        <artifactId>bw-xml-synchws</artifactId>
+        <artifactId>bw-xml-calws-soap</artifactId>
+        <artifactId>${ical4j.artifactId}</artifactId>
+        <artifactId>bw-ical4j-vcard</artifactId>
+        <artifactId>hibernate-core</artifactId>
+        <artifactId>hibernate-validator</artifactId>
+        <artifactId>dom4j</artifactId>
+        <artifactId>servlet-api</artifactId>
+        <artifactId>apache-jdkim-library</artifactId>
+        <artifactId>commons-io</artifactId>
+        <artifactId>commons-csv</artifactId>
+        <artifactId>commons-digester</artifactId>
+        <artifactId>javax.mail</artifactId>
+        <artifactId>javax.mail-api</artifactId>
+        <artifactId>jms-api</artifactId>
+        <artifactId>elasticsearch</artifactId>
+        <artifactId>jackson-core</artifactId>
+        <artifactId>jackson-annotations</artifactId>
+        <artifactId>jackson-databind</artifactId>
