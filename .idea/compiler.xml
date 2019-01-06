@@ -74,7 +74,6 @@
         <module name="bw-timezone-server-war" />
         <module name="bw-util (1)" />
         <module name="bw-util-args" />
-        <module name="bw-util-bw-deploy" />
         <module name="bw-util-caching" />
         <module name="bw-util-cli" />
         <module name="bw-util-config" />

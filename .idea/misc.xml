@@ -69,6 +69,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/../bw-util/bw-util-bw-deploy/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util/bw-util-hibernate/pom.xml" />
       </set>
     </option>

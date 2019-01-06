@@ -91,7 +91,6 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-args/bw-util-args.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-args/bw-util-args.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-bw-deploy/bw-util-bw-deploy.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-bw-deploy/bw-util-bw-deploy.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-caching/bw-util-caching.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-caching/bw-util-caching.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-cli/bw-util-cli.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-cli/bw-util-cli.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-config/bw-util-config.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-config/bw-util-config.iml" />
