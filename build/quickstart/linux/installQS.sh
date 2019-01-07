@@ -27,7 +27,7 @@ if [[ "$version" -lt "8" ]]; then
   exit 1
 fi
 
-latestVersion="3.12.2"
+latestVersion="3.12.3"
 JBOSS_VERSION="wildfly-10.1.0.Final"
 
 # We create empty files in this directory to track progress
@@ -557,26 +557,26 @@ installSources() {
     cloneRepo bw-webdav "$1"
     cloneRepo bw-xml "$1"
   else
-    cloneRepoBranch 4.0.4 bw-access "$1"
-    cloneRepoBranch 4.0.5 bw-caldav "$1"
-    cloneRepoBranch 3.12.2 bw-calendar-client "$1"
-    cloneRepoBranch 3.12.2 bw-calendar-engine "$1"
-    cloneRepoBranch 3.12.2 bw-calendar-xsl "$1"
-    #cloneRepo bw-calsockets "$1"
-    cloneRepoBranch 4.0.5 bw-carddav "$1"
-    cloneRepoBranch 4.0.2 bw-cli "$1"
-    cloneRepo bw-dotwell-known "$1"
-    cloneRepoBranch 4.0.3 bw-event-registration "$1"
-    cloneRepoBranch 4.0.5 bw-notifier "$1"
-    cloneRepoBranch 4.0.6 bw-self-registration "$1"
-    cloneRepoBranch 4.0.2 bw-synch "$1"
-    cloneRepoBranch 4.0.3 bw-timezone-server "$1"
+    cloneRepoBranch 4.0.0 bw-util-logging "$1"
+    cloneRepoBranch 4.0.7 bw-xml "$1"
     cloneRepoBranch 4.0.20 bw-util "$1"
     cloneRepoBranch 4.0.2 bw-util2 "$1"
     cloneRepoBranch 4.0.20 bw-util-hibernate "$1"
-    cloneRepoBranch 4.0.0 bw-util-logging "$1"
+    cloneRepoBranch 4.0.4 bw-access "$1"
     cloneRepoBranch 4.0.5 bw-webdav "$1"
-    cloneRepoBranch 4.0.7 bw-xml "$1"
+    cloneRepoBranch 4.0.5 bw-caldav "$1"
+    cloneRepoBranch 4.0.3 bw-timezone-server "$1"
+    cloneRepoBranch 4.0.2 bw-synch "$1"
+    cloneRepoBranch 4.0.6 bw-self-registration "$1"
+    cloneRepoBranch 4.0.3 bw-event-registration "$1"
+    cloneRepoBranch 4.0.5 bw-notifier "$1"
+    cloneRepoBranch 4.0.2 bw-cli "$1"
+    cloneRepoBranch 4.0.5 bw-carddav "$1"
+    cloneRepoBranch 3.12.2 bw-calendar-engine "$1"
+    cloneRepoBranch 3.12.2 bw-calendar-client "$1"
+    cloneRepoBranch 3.12.2 bw-calendar-xsl "$1"
+    #cloneRepo bw-calsockets "$1"
+    cloneRepo bw-dotwell-known "$1"
   fi
 
   markDone $installSources
