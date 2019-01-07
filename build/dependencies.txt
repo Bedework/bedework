@@ -3,16 +3,17 @@ Some notes:
 3.12.3 release
 Modules that don't need releasing
 
+bw-util-logging
+bw-xml
+bw-util-hibernate
+bw-timezone-server
+bw-synch
+bw-self-registration
+bw-notifier
+
 bw-caldavTest
 bw-calsockets
 bw-dotwell-known
-bw-notifier
-bw-self-registration
-bw-synch
-bw-timezone-server
-bw-util-hibernate
-bw-util-logging
-bw-xml
 
 
 --------------------------------------------------------------------
