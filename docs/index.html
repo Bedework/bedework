@@ -22,11 +22,12 @@
 <li><a href="#features-of-Bedework">1.1. Features of Bedework</a></li>
 <li><a href="#release-notes">1.2. Release Notes</a>
 <ul class="sectlevel3">
-<li><a href="#_release_3_12_2">1.2.1. Release 3.12.2:</a></li>
-<li><a href="#_release_3_12_1">1.2.2. Release 3.12.1:</a></li>
-<li><a href="#_release_3_12_0">1.2.3. Release 3.12.0:</a></li>
-<li><a href="#_release_3_11_2">1.2.4. Release 3.11.2:</a></li>
-<li><a href="#_release_3_11_1">1.2.5. Release 3.11.1:</a></li>
+<li><a href="#_release_3_12_3">1.2.1. Release 3.12.3:</a></li>
+<li><a href="#_release_3_12_2">1.2.2. Release 3.12.2:</a></li>
+<li><a href="#_release_3_12_1">1.2.3. Release 3.12.1:</a></li>
+<li><a href="#_release_3_12_0">1.2.4. Release 3.12.0:</a></li>
+<li><a href="#_release_3_11_2">1.2.5. Release 3.11.2:</a></li>
+<li><a href="#_release_3_11_1">1.2.6. Release 3.11.1:</a></li>
 </ul>
 </li>
 <li><a href="#system-overview">1.3. System Overview</a>
@@ -254,7 +255,74 @@
 <div class="sect2">
 <h3 id="release-notes">1.2. Release Notes</h3>
 <div class="sect3">
-<h4 id="_release_3_12_2">1.2.1. Release 3.12.2:</h4>
+<h4 id="_release_3_12_3">1.2.1. Release 3.12.3:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Added new cli command to analyze log data.</p>
+</li>
+<li>
+<p>Add new REQUEST-OUT log message for analyzer</p>
+</li>
+<li>
+<p>A number of bug fixes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Touch collection on update of acls - was not getting indexed</p>
+</li>
+<li>
+<p>Calling wrong indexer to update resource content</p>
+</li>
+<li>
+<p>Wasn&#8217;t saving entity in response from indexer</p>
+</li>
+<li>
+<p>Add cache to SvcSimpleFilterParser so we don&#8217;t repeatedly attempt to fetch children of collections.</p>
+</li>
+<li>
+<p>Should be returning an empty array when the event is not found</p>
+</li>
+<li>
+<p>Was calling wrong method to fetch location for update</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Note: A bug was discovered almost immediately. The commit is at <a href="https://github.com/Bedework/bw-calendar-engine/commit/c83e77e3f5ceb990029b84ca7440af83fdc4e568" class="bare">https://github.com/Bedework/bw-calendar-engine/commit/c83e77e3f5ceb990029b84ca7440af83fdc4e568</a> and a patch:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Index: bw-calendar-engine-facade/src/main/java/org/bedework/calfacade/BwResourceContent.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+&lt;+&gt;UTF-8
+===================================================================
+--- bw-calendar-engine-facade/src/main/java/org/bedework/calfacade/BwResourceContent.java	(revision b248db13b030a73828d7b8c9428dda9ebf262a0c)
++++ bw-calendar-engine-facade/src/main/java/org/bedework/calfacade/BwResourceContent.java	(revision c83e77e3f5ceb990029b84ca7440af83fdc4e568)
+@@ -187,14 +187,11 @@
+       while((len = str.read(buffer)) != -1) {
+         b64out.write(buffer, 0, len);
+       }
++      b64out.close();
+
+       return new String(baos.toByteArray());
+     } catch (final Throwable t) {
+       throw new CalFacadeException(t);
+-    } finally {
+-      try {
+-        b64out.close();
+-      } catch (Throwable t) {}
+     }
+   }</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_12_2">1.2.2. Release 3.12.2:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -270,7 +338,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_1">1.2.2. Release 3.12.1:</h4>
+<h4 id="_release_3_12_1">1.2.3. Release 3.12.1:</h4>
 <div class="sect4">
 <h5 id="_searching_for_contactslocations">Searching for contacts/locations</h5>
 <div class="ulist">
@@ -348,7 +416,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_0">1.2.3. Release 3.12.0:</h4>
+<h4 id="_release_3_12_0">1.2.4. Release 3.12.0:</h4>
 <div class="sect4">
 <h5 id="_move_to_githubmaven">Move to github/maven</h5>
 <div class="ulist">
@@ -488,7 +556,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_11_2">1.2.4. Release 3.11.2:</h4>
+<h4 id="_release_3_11_2">1.2.5. Release 3.11.2:</h4>
 <div class="sect4">
 <h5 id="_indexing">Indexing</h5>
 <div class="ulist">
@@ -740,7 +808,7 @@ autokill killing off some of the long running system jobs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_11_1">1.2.5. Release 3.11.1:</h4>
+<h4 id="_release_3_11_1">1.2.6. Release 3.11.1:</h4>
 <div class="ulist">
 <ul>
 <li>

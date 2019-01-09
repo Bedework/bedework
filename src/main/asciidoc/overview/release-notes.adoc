@@ -1,7 +1,7 @@
 [[release-notes]]
 === Release Notes
 
-==== Release 3.12.2:
+==== Release 3.12.3:
   * Added new cli command to analyze log data.
   * Add new REQUEST-OUT log message for analyzer
   * A number of bug fixes
@@ -11,6 +11,35 @@
     ** Add cache to SvcSimpleFilterParser so we don't repeatedly attempt to fetch children of collections.
     ** Should be returning an empty array when the event is not found
     ** Was calling wrong method to fetch location for update
+
+Note: A bug was discovered almost immediately. The commit is at https://github.com/Bedework/bw-calendar-engine/commit/c83e77e3f5ceb990029b84ca7440af83fdc4e568 and a patch:
+
+----
+Index: bw-calendar-engine-facade/src/main/java/org/bedework/calfacade/BwResourceContent.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- bw-calendar-engine-facade/src/main/java/org/bedework/calfacade/BwResourceContent.java	(revision b248db13b030a73828d7b8c9428dda9ebf262a0c)
++++ bw-calendar-engine-facade/src/main/java/org/bedework/calfacade/BwResourceContent.java	(revision c83e77e3f5ceb990029b84ca7440af83fdc4e568)
+@@ -187,14 +187,11 @@
+       while((len = str.read(buffer)) != -1) {
+         b64out.write(buffer, 0, len);
+       }
++      b64out.close();
+
+       return new String(baos.toByteArray());
+     } catch (final Throwable t) {
+       throw new CalFacadeException(t);
+-    } finally {
+-      try {
+-        b64out.close();
+-      } catch (Throwable t) {}
+     }
+   }
+
+----
+
 
 ==== Release 3.12.2:
   * Added new cli command to allow refresh of tz data.
