@@ -80,6 +80,7 @@
         <module name="bw-util-config-http" />
         <module name="bw-util-dav" />
         <module name="bw-util-deployment" />
+        <module name="bw-util-deployment (1)" />
         <module name="bw-util-directory" />
         <module name="bw-util-elasticsearch" />
         <module name="bw-util-hibernate" />
@@ -91,6 +92,7 @@
         <module name="bw-util-json" />
         <module name="bw-util-logging" />
         <module name="bw-util-maven-deploy" />
+        <module name="bw-util-maven-deploy (1)" />
         <module name="bw-util-misc" />
         <module name="bw-util-options" />
         <module name="bw-util-security" />
@@ -265,7 +267,9 @@
       <module name="bw-util-config" target="1.8" />
       <module name="bw-util-config-http" target="1.8" />
       <module name="bw-util-dav" target="1.8" />
+      <module name="bw-util-deploy" target="1.8" />
       <module name="bw-util-deployment" target="1.8" />
+      <module name="bw-util-deployment (1)" target="1.8" />
       <module name="bw-util-directory" target="1.8" />
       <module name="bw-util-elasticsearch" target="1.8" />
       <module name="bw-util-hibernate" target="1.8" />
@@ -278,6 +282,7 @@
       <module name="bw-util-json" target="1.8" />
       <module name="bw-util-logging" target="1.8" />
       <module name="bw-util-maven-deploy" target="1.8" />
+      <module name="bw-util-maven-deploy (1)" target="1.8" />
       <module name="bw-util-misc" target="1.8" />
       <module name="bw-util-options" target="1.8" />
       <module name="bw-util-security" target="1.8" />

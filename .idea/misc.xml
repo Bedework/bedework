@@ -65,12 +65,15 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-logging/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-util-deploy/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/../bw-util/bw-util-bw-deploy/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-util/bw-util-deployment/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util/bw-util-hibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-util/bw-util-maven-deploy/pom.xml" />
       </set>
     </option>
   </component>

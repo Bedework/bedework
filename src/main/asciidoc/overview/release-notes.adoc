@@ -1,6 +1,17 @@
 [[release-notes]]
 === Release Notes
 
+==== Release 3.12.4:
+  * Fixed a few bugs.
+    ** BwResourceContent bug below
+    ** Suppress a request-out log message unlesss really on way out
+    ** Index wrapper type for calsuite - not calsuite itself
+    ** Try to force refresh after adding calsuite
+    ** HttpUtil POST produced Accept rather than Content-type
+    ** Bad forward in add calsuite produced bogus error message
+  * Updated log analyzer so results are easier to read.
+  * Factor deployment modules out of bw-util into new bw-util-deploy
+
 ==== Release 3.12.3:
   * Added new cli command to analyze log data.
   * Add new REQUEST-OUT log message for analyzer
