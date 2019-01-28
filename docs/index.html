@@ -22,12 +22,15 @@
 <li><a href="#features-of-Bedework">1.1. Features of Bedework</a></li>
 <li><a href="#release-notes">1.2. Release Notes</a>
 <ul class="sectlevel3">
-<li><a href="#_release_3_12_3">1.2.1. Release 3.12.3:</a></li>
-<li><a href="#_release_3_12_2">1.2.2. Release 3.12.2:</a></li>
-<li><a href="#_release_3_12_1">1.2.3. Release 3.12.1:</a></li>
-<li><a href="#_release_3_12_0">1.2.4. Release 3.12.0:</a></li>
-<li><a href="#_release_3_11_2">1.2.5. Release 3.11.2:</a></li>
-<li><a href="#_release_3_11_1">1.2.6. Release 3.11.1:</a></li>
+<li><a href="#_dev">1.2.1. Dev:</a></li>
+<li><a href="#_release_3_12_5">1.2.2. Release 3.12.5:</a></li>
+<li><a href="#_release_3_12_4">1.2.3. Release 3.12.4:</a></li>
+<li><a href="#_release_3_12_3">1.2.4. Release 3.12.3:</a></li>
+<li><a href="#_release_3_12_2">1.2.5. Release 3.12.2:</a></li>
+<li><a href="#_release_3_12_1">1.2.6. Release 3.12.1:</a></li>
+<li><a href="#_release_3_12_0">1.2.7. Release 3.12.0:</a></li>
+<li><a href="#_release_3_11_2">1.2.8. Release 3.11.2:</a></li>
+<li><a href="#_release_3_11_1">1.2.9. Release 3.11.1:</a></li>
 </ul>
 </li>
 <li><a href="#system-overview">1.3. System Overview</a>
@@ -255,7 +258,110 @@
 <div class="sect2">
 <h3 id="release-notes">1.2. Release Notes</h3>
 <div class="sect3">
-<h4 id="_release_3_12_3">1.2.1. Release 3.12.3:</h4>
+<h4 id="_dev">1.2.1. Dev:</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_release_3_12_5">1.2.2. Release 3.12.5:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Logging</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add a bunch of jsonIgnore to the Logged interface to stop the fields turning up in json.</p>
+</li>
+<li>
+<p>Fix error methods. Use exception message as first param.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Client</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Cache default filters for ro client. Use calsuite as key</p>
+</li>
+<li>
+<p>Cache user collections in session. Use calsuite group as key</p>
+</li>
+<li>
+<p>NoopAction extended MainAction. Should not as it retrieves a lot of unused data.</p>
+</li>
+<li>
+<p>Make session timeout for /cal and /soedept configurable and default to 5</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Don&#8217;t store collection in BwCollectionFilter. Was never used. Just store path as entity</p>
+</li>
+<li>
+<p>Fix FlushMap in utils. Current fetched value was not discarded.</p>
+</li>
+<li>
+<p>Fix bw script - was missing some of the newer modules</p>
+</li>
+<li>
+<p>BwLastMod:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add JsonIgnore to getDbEntity or we get a loop.</p>
+</li>
+<li>
+<p>Set the db entity when we clone or we get an NPE</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_12_4">1.2.3. Release 3.12.4:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Fixed a few bugs.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>BwResourceContent bug below</p>
+</li>
+<li>
+<p>Suppress a request-out log message unlesss really on way out</p>
+</li>
+<li>
+<p>Index wrapper type for calsuite - not calsuite itself</p>
+</li>
+<li>
+<p>Try to force refresh after adding calsuite</p>
+</li>
+<li>
+<p>HttpUtil POST produced Accept rather than Content-type</p>
+</li>
+<li>
+<p>Bad forward in add calsuite produced bogus error message</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Updated log analyzer so results are easier to read.</p>
+</li>
+<li>
+<p>Factor deployment modules out of bw-util into new bw-util-deploy</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_12_3">1.2.4. Release 3.12.3:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -322,7 +428,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_2">1.2.2. Release 3.12.2:</h4>
+<h4 id="_release_3_12_2">1.2.5. Release 3.12.2:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -338,7 +444,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_1">1.2.3. Release 3.12.1:</h4>
+<h4 id="_release_3_12_1">1.2.6. Release 3.12.1:</h4>
 <div class="sect4">
 <h5 id="_searching_for_contactslocations">Searching for contacts/locations</h5>
 <div class="ulist">
@@ -416,7 +522,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_0">1.2.4. Release 3.12.0:</h4>
+<h4 id="_release_3_12_0">1.2.7. Release 3.12.0:</h4>
 <div class="sect4">
 <h5 id="_move_to_githubmaven">Move to github/maven</h5>
 <div class="ulist">
@@ -556,7 +662,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_11_2">1.2.5. Release 3.11.2:</h4>
+<h4 id="_release_3_11_2">1.2.8. Release 3.11.2:</h4>
 <div class="sect4">
 <h5 id="_indexing">Indexing</h5>
 <div class="ulist">
@@ -808,7 +914,7 @@ autokill killing off some of the long running system jobs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_11_1">1.2.6. Release 3.11.1:</h4>
+<h4 id="_release_3_11_1">1.2.9. Release 3.11.1:</h4>
 <div class="ulist">
 <ul>
 <li>
