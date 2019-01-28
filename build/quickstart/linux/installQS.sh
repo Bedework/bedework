@@ -5,7 +5,7 @@
 BASE_DIR=`pwd`
 scriptName="$0"
 restart=
-latestVersion="3.12.4"
+latestVersion="3.12.5"
 
 trap 'cd $BASE_DIR' 0
 trap "exit 2" 1 2 3 15
@@ -558,11 +558,11 @@ installSources() {
     cloneRepo bw-webdav "$1"
     cloneRepo bw-xml "$1"
   else
-    cloneRepoBranch 4.0.0 bw-util-logging "$1"
+    cloneRepoBranch 4.0.1 bw-util-logging "$1"
     cloneRepoBranch 4.0.7 bw-xml "$1"
-    cloneRepoBranch 4.0.22 bw-util "$1"
+    cloneRepoBranch 4.0.23 bw-util "$1"
     cloneRepoBranch 4.0.3 bw-util2 "$1"
-    cloneRepoBranch 4.0.22 bw-util-deploy "$1"
+    cloneRepoBranch 4.0.23 bw-util-deploy "$1"
     cloneRepoBranch 4.0.20 bw-util-hibernate "$1"
     cloneRepoBranch 4.0.5 bw-access "$1"
     cloneRepoBranch 4.0.6 bw-webdav "$1"
@@ -574,8 +574,8 @@ installSources() {
     cloneRepoBranch 4.0.5 bw-notifier "$1"
     cloneRepoBranch 4.0.3 bw-cli "$1"
     cloneRepoBranch 4.0.6 bw-carddav "$1"
-    cloneRepoBranch 3.12.4 bw-calendar-engine "$1"
-    cloneRepoBranch 3.12.3 bw-calendar-client "$1"
+    cloneRepoBranch 3.12.5 bw-calendar-engine "$1"
+    cloneRepoBranch 3.12.5 bw-calendar-client "$1"
     cloneRepoBranch 3.12.3 bw-calendar-xsl "$1"
     #cloneRepo bw-calsockets "$1"
     cloneRepo bw-dotwell-known "$1"

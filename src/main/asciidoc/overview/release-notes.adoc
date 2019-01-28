@@ -1,6 +1,26 @@
 [[release-notes]]
 === Release Notes
 
+==== Dev:
+
+==== Release 3.12.5:
+  * Logging
+    ** Add a bunch of jsonIgnore to the Logged interface to stop the fields turning up in json.
+    ** Fix error methods. Use exception message as first param.
+
+  * Client
+    ** Cache default filters for ro client. Use calsuite as key
+    ** Cache user collections in session. Use calsuite group as key
+    ** NoopAction extended MainAction. Should not as it retrieves a lot of unused data.
+    ** Make session timeout for /cal and /soedept configurable and default to 5
+
+  * Don't store collection in BwCollectionFilter. Was never used. Just store path as entity
+  * Fix FlushMap in utils. Current fetched value was not discarded.
+  * Fix bw script - was missing some of the newer modules
+  * BwLastMod:
+    ** Add JsonIgnore to getDbEntity or we get a loop.
+    ** Set the db entity when we clone or we get an NPE
+
 ==== Release 3.12.4:
   * Fixed a few bugs.
     ** BwResourceContent bug below

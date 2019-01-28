@@ -66,6 +66,8 @@ naming=
 bwutil=
 bwutilhib=
 bwutil2=
+bwutildeploy=
+bwutillog=
 selfreg=
 synch=
 testsuite=
@@ -173,6 +175,7 @@ usage() {
   echo "     -bwutil2      Target is for the Bedework util2 classes"
   echo "     -bwutilhib    Target is for the Bedework hibernate util classes"
   echo "     -bwutillog    Target is for the Bedework logging util classes"
+  echo "     -bwutildeploy Target is for the Bedework deployment util classes"
   echo "     -selfreg      Target is for the self registration build"
   echo "     -synch        Target is for the synch build"
   echo "     -tzsvr        Target is for the timezones server build"
@@ -288,6 +291,12 @@ setDirectory() {
 	if [ "$xsl" != "" ] ; then
 	  cd $QUICKSTART_HOME/bw-calendar-xsl
       xsl=
+	  return
+	fi
+
+	if [ "$bwutildeploy" != "" ] ; then
+	  cd $QUICKSTART_HOME/bw-util-deploy
+      bwutildeploy=
 	  return
 	fi
 
@@ -647,6 +656,7 @@ do
 
       bwxml="yes"
       bwutil="yes"
+      bwutillog="yes"
       pkgdefault=
       shift
       ;;
@@ -658,6 +668,8 @@ do
       bwxml="yes"
       caldav="yes"
       bwutil="yes"
+      bwutildeploy="yes"
+      bwutillog="yes"
       bwutilhib="yes"
       bwutil2="yes"
       webdav="yes"
@@ -671,6 +683,7 @@ do
       bwxml="yes"
       caldav="yes"
       bwutil="yes"
+      bwutillog="yes"
       bwutilhib="yes"
       bwutil2="yes"
       webdav="yes"
@@ -681,6 +694,7 @@ do
       bwcli="yes"
 
       bwutil="yes"
+      bwutillog="yes"
       bwutil2="yes"
       pkgdefault=
       shift
@@ -698,6 +712,7 @@ do
       access="yes"
       bwxml="yes"
       bwutil="yes"
+      bwutillog="yes"
 
       pkgdefault=
       shift
@@ -715,6 +730,7 @@ do
       access="yes"
       bwxml="yes"
       bwutil="yes"
+      bwutillog="yes"
       webdav="yes"
       pkgdefault=
       shift
@@ -725,6 +741,7 @@ do
       access="yes"
       bwxml="yes"
       bwutil="yes"
+      bwutillog="yes"
       bwutil2="yes"
       webdav="yes"
       pkgdefault=
@@ -736,6 +753,7 @@ do
       access="yes"
       bwxml="yes"
       bwutil="yes"
+      bwutillog="yes"
       bwutilhib="yes"
       bwutil2="yes"
       webdav="yes"
@@ -748,6 +766,8 @@ do
       access="yes"
       bwxml="yes"
       bwutil="yes"
+      bwutildeploy="yes"
+      bwutillog="yes"
       webdav="yes"
       pkgdefault=
       shift
@@ -763,6 +783,8 @@ do
 
       bwxml="yes"
       bwutil="yes"
+      bwutildeploy="yes"
+      bwutillog="yes"
       bwutilhib="yes"
       bwutil2="yes"
       pkgdefault=
@@ -784,6 +806,15 @@ do
       bwutilhib="yes"
 
       bwutil="yes"
+      bwutillog="yes"
+      pkgdefault=
+      shift
+      ;;
+    -bwutildeploy)
+      bwutildeploy="yes"
+
+      bwutil="yes"
+      bwutillog="yes"
       pkgdefault=
       shift
       ;;
@@ -814,6 +845,8 @@ do
       #earName="$earNameSelfreg"
 
       bwutil="yes"
+      bwutildeploy="yes"
+      bwutillog="yes"
       bwutilhib="yes"
       pkgdefault=
       shift
@@ -825,6 +858,8 @@ do
       access="yes"
       bwxml="yes"
       bwutil="yes"
+      bwutildeploy="yes"
+      bwutillog="yes"
       bwutilhib="yes"
       bwutil2="yes"
       pkgdefault=
@@ -841,6 +876,8 @@ do
 
       bwxml="yes"
       bwutil="yes"
+      bwutildeploy="yes"
+      bwutillog="yes"
       bwutil2="yes"
       pkgdefault=
       shift
@@ -850,12 +887,14 @@ do
 
       access="yes"
       bwutil="yes"
+      bwutillog="yes"
       pkgdefault=
       shift
       ;;
     -xsl)
       xsl="yes"
 
+      bwutildeploy="yes"
       pkgdefault=
       shift
       ;;
@@ -878,6 +917,8 @@ if [ "$pkgdefault" = "yes" ] ; then
   bwxml="yes"
   caldav="yes"
   bwutil="yes"
+  bwutildeploy="yes"
+  bwutillog="yes"
   bwutilhib="yes"
   bwutil2="yes"
   webdav="yes"
