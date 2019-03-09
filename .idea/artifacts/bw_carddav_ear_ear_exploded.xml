@@ -31,7 +31,9 @@
         <element id="library" level="project" name="Maven: org.bedework:bw-util2-calendar:4.0.3" />
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-icalendar:4.0.7" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util2-vcard:4.0.3" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-webdav:4.0.6" />
+        <element id="archive" name="bw-webdav-4.0.7-SNAPSHOT.jar">
+          <element id="module-output" name="bw-webdav" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util-logging:4.0.0" />
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-calws-soap:4.0.7" />
         <element id="library" level="project" name="Maven: org.hibernate:hibernate-ehcache:5.2.5.Final" />

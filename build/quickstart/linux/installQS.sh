@@ -424,7 +424,7 @@ installApacheds() {
 #  unzip apacheds.zip
 #  rm apacheds.zip
 
-  cd $BASE_DIR
+  cd $qs
 
   rm -f apacheds.zip
   rm -rf apacheds-1.5.3-fixed
