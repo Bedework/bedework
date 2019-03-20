@@ -94,8 +94,12 @@
         <element id="library" level="project" name="Maven: org.bedework:bw-util-struts:4.0.23" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-timezones:4.0.23" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-xml:4.0.23" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util2-calendar:4.0.3" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util2-vcard:4.0.3" />
+        <element id="archive" name="bw-util2-calendar-4.0.4-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util2-calendar" />
+        </element>
+        <element id="archive" name="bw-util2-vcard-4.0.4-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util2-vcard" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-caldav:4.0.7" />
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-calws-soap:4.0.7" />
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-icalendar:4.0.7" />
@@ -104,8 +108,12 @@
         <element id="archive" name="bw-webdav-4.0.7-SNAPSHOT.jar">
           <element id="module-output" name="bw-webdav" />
         </element>
-        <element id="library" level="project" name="Maven: org.bedework:bw-caldav-server:4.0.6" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-caldav-util:4.0.6" />
+        <element id="archive" name="bw-caldav-server-4.0.7-SNAPSHOT.jar">
+          <element id="module-output" name="bw-caldav-server" />
+        </element>
+        <element id="archive" name="bw-caldav-util-4.0.7-SNAPSHOT.jar">
+          <element id="module-output" name="bw-caldav-util" />
+        </element>
         <element id="library" level="project" name="Maven: com.google.code.gson:gson:1.5" />
         <element id="library" level="project" name="Maven: org.imgscalr:imgscalr-lib:4.2" />
         <element id="library" level="project" name="Maven: struts:struts:1.2.9" />

@@ -37,7 +37,29 @@ As a super user
   * Save
 
 ==== Mapping Locations
+Locations created and stored within bedework are broken out into a number of fields. Out of these the following are used to create a combined address value which is used for export and import mapping:
 
-The update process uses a key field set in locations to map the locations. The key field value should be an exact copy of what appears in the events.
+  * Street address
+  * Room
+  * City
+  * State
+  * zip/postcode
 
-The actual  location will be stored in an x-property
+These values are separated by a comma and a space. Missing values are skipped.
+
+The update process matches the value of the supplied LOCATION property against that combined value.
+
+If there is an EXACT match then the bedework location will be attached to the syncronized event. Otherwise the location will be left in the x-property. Feeds and the front end display will normally display the x-location as the location for the event.
+
+==== Mapping categories
+An equivalent process takes place with categories though the mapping is much simpler. Categories only have a single value. An exact match in the imported event will cause the bedework category to be applied.
+
+The use of bedework categories is important for much of the front-end filtering of events as this is driven primarily by categories.
+
+As an example if we have the alias structure +
+`performances/comedy` +
+and comedy is tagged with the category *comedy* and performances with the category *performances* then the imported event needs both categories.
+
+==== Examples
+
+
