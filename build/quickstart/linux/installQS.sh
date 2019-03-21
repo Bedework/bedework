@@ -653,6 +653,7 @@ buildModules() {
   buildModule synch
   buildModule eventreg
   buildModule selfreg
+  buildModule bwcli
   buildModule deploy
 
   markDone $buildModules
