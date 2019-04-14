@@ -41,9 +41,9 @@
         <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
         <element id="library" level="project" name="Maven: org.bedework.ical4j:ical4j:2.0.3" />
         <element id="library" level="project" name="Maven: org.bedework:bw-ical4j-vcard:1.0.4" />
-        <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.6" />
-        <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.6" />
-        <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.6" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.8" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.8" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.8" />
         <element id="library" level="project" name="Maven: org.apache.commons:commons-collections4:4.0" />
         <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.3" />
         <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.3.2" />
