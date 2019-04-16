@@ -5,7 +5,29 @@
 BASE_DIR=`pwd`
 scriptName="$0"
 restart=
-latestVersion="3.12.5"
+latestVersion="3.12.6"
+
+# -------------------Module versions -----------------------------
+bwUtilLoggingVersion="4.0.2"
+bwXmlVersion="4.0.8"
+bwUtilVersion="4.0.24"
+bwUtil2Version="4.0.4"
+bwUtilDeployVersion="4.0.24"
+bwUtilHibernateVersion="4.0.21"
+bwAccessVersion="4.0.6"
+bwWebdavVersion="4.0.7"
+bwCaldavVersion="4.0.7"
+bwTimezoneServerVersion="4.0.4"
+bwSynchVersion="4.0.3"
+bwSelfRegistrationVersion="4.0.7"
+bwEventRegistrationVersion="4.0.5"
+bwNotifierVersion="4.0.6"
+bwCliVersion="4.0.4"
+bwCarddavVersion="4.0.7"
+bwCalendarEngineVersion="3.12.6"
+bwCalendarClientVersion="3.12.6"
+bwCalendarXslVersion="3.12.4"
+
 
 trap 'cd $BASE_DIR' 0
 trap "exit 2" 1 2 3 15
@@ -15,11 +37,11 @@ if [ -z "$JAVA_HOME" -o ! -d "$JAVA_HOME" ] ; then
   exit 1
 fi
 
-version=$("$JAVA_HOME/bin/java" -version 2>&1 | awk -F '"' '/version/ {print $2}')
+javaVersion=$("$JAVA_HOME/bin/java" -version 2>&1 | awk -F '"' '/version/ {print $2}')
 #echo version "$version"
-version="${version:2:1}"
+javaVersion="${javaVersion:2:1}"
 #echo "$version"
-if [[ "$version" -lt "8" ]]; then
+if [[ "$javaVersion" -lt "8" ]]; then
   echo
   echo "************************************************"
   echo "*  Java 8 or greater is required for bedework."
@@ -265,7 +287,7 @@ installScripts() {
 
   markStarted $installScripts
 
-  if [ "$version" == "dev" ] ; then
+  if [ "$javaVersion" == "dev" ] ; then
     cloneRepo bedework
   else
     cloneRepoBranch $latestVersion bedework
@@ -533,7 +555,7 @@ installSources() {
 
   # Clone the repos
 
-  if [ "$version" == "dev" ] ; then
+  if [ "$javaVersion" == "dev" ] ; then
     # Bedework below
     cloneRepo bw-access "$1"
     cloneRepo bw-caldav "$1"
@@ -558,25 +580,25 @@ installSources() {
     cloneRepo bw-webdav "$1"
     cloneRepo bw-xml "$1"
   else
-    cloneRepoBranch 4.0.1 bw-util-logging "$1"
-    cloneRepoBranch 4.0.7 bw-xml "$1"
-    cloneRepoBranch 4.0.23 bw-util "$1"
-    cloneRepoBranch 4.0.3 bw-util2 "$1"
-    cloneRepoBranch 4.0.23 bw-util-deploy "$1"
-    cloneRepoBranch 4.0.20 bw-util-hibernate "$1"
-    cloneRepoBranch 4.0.5 bw-access "$1"
-    cloneRepoBranch 4.0.6 bw-webdav "$1"
-    cloneRepoBranch 4.0.6 bw-caldav "$1"
-    cloneRepoBranch 4.0.3 bw-timezone-server "$1"
-    cloneRepoBranch 4.0.2 bw-synch "$1"
-    cloneRepoBranch 4.0.6 bw-self-registration "$1"
-    cloneRepoBranch 4.0.4 bw-event-registration "$1"
-    cloneRepoBranch 4.0.5 bw-notifier "$1"
-    cloneRepoBranch 4.0.3 bw-cli "$1"
-    cloneRepoBranch 4.0.6 bw-carddav "$1"
-    cloneRepoBranch 3.12.5 bw-calendar-engine "$1"
-    cloneRepoBranch 3.12.5 bw-calendar-client "$1"
-    cloneRepoBranch 3.12.3 bw-calendar-xsl "$1"
+    cloneRepoBranch $bwUtilLoggingVersion bw-util-logging "$1"
+    cloneRepoBranch $bwXmlVersion bw-xml "$1"
+    cloneRepoBranch $bwUtilVersion bw-util "$1"
+    cloneRepoBranch $bwUtil2Version bw-util2 "$1"
+    cloneRepoBranch $bwUtilDeployVersion bw-util-deploy "$1"
+    cloneRepoBranch $bwUtilHibernateVersion bw-util-hibernate "$1"
+    cloneRepoBranch $bwAccessVersion bw-access "$1"
+    cloneRepoBranch $bwWebdavVersion bw-webdav "$1"
+    cloneRepoBranch $bwCaldavVersion bw-caldav "$1"
+    cloneRepoBranch $bwTimezoneServerVersion bw-timezone-server "$1"
+    cloneRepoBranch $bwSynchVersion bw-synch "$1"
+    cloneRepoBranch $bwSelfRegistrationVersion bw-self-registration "$1"
+    cloneRepoBranch $bwEventRegistrationVersion bw-event-registration "$1"
+    cloneRepoBranch $bwNotifierVersion bw-notifier "$1"
+    cloneRepoBranch $bwCliVersion bw-cli "$1"
+    cloneRepoBranch $bwCarddavVersion bw-carddav "$1"
+    cloneRepoBranch $bwCalendarEngineVersion bw-calendar-engine "$1"
+    cloneRepoBranch $bwCalendarClientVersion bw-calendar-client "$1"
+    cloneRepoBranch $bwCalendarXslVersion bw-calendar-xsl "$1"
     #cloneRepo bw-calsockets "$1"
     cloneRepo bw-dotwell-known "$1"
   fi
@@ -694,14 +716,14 @@ echo "-------------------------------------------------------------"
 echo " Building in $dirpath"
 
 echo "Which version"
-select version in "dev" "latest"; do
-    case $version in
+select javaVersion in "dev" "latest"; do
+    case $javaVersion in
         dev ) break;;
-        latest ) version=$latestVersion; break;;
+        latest ) javaVersion=$latestVersion; break;;
     esac
 done
 
-qs="quickstart-$version"
+qs="quickstart-$javaVersion"
 if ! sameVersion $qs ; then
   echo "Cannot restart install for a different version."
   echo "Delete the directory and start again."

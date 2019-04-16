@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="ear" name="bw-event-registration-ear:ear">
     <output-path>$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/target</output-path>
-    <root id="archive" name="bw-event-registration-4.0.5-SNAPSHOT.ear">
+    <root id="archive" name="bw-event-registration-4.0.6-SNAPSHOT.ear">
       <element id="artifact" artifact-name="bw-event-registration-ear:ear exploded" />
     </root>
   </artifact>
