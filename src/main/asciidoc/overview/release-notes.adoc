@@ -3,6 +3,33 @@
 
 ==== Dev:
 
+==== Release 3.12.6:
+  * Library updates
+    ** Update servlet api version
+    ** Update jackson version to avoid security issues
+    ** Update http client version to avoid security issues
+  * Log analysis
+    ** Updates to generated figures and some analysis of access logs
+  * Sync process
+    ** Update category prop updater to fix NPE
+    ** Add callback method to fetch location by combined value. Use it when updating or adding an event.
+  * Indexing
+    ** Fix location mapping - was missing combined field.
+  * Install
+    ** bwcli wasn't being built by install script
+  * Restores
+    ** Restores were failing because the fake event property calpath code was getting an NPE - no principal. Fixed it so principal isn't needed. Caused cascading updates up the stack. Dropped the principal object where possible. Generally only need the href.
+    ** Resource content handling was broken in restore. Should just set the byte value and create the blob when we have a session
+  * Client
+    ** Add action to clear any principals notifications
+    ** Fix feeder main/listEvents action - now works
+  * Others
+    ** Svci pars wasn't handling the readonly flag properly. Worked for unauth but wasn't turning on readonly for authenticated methods.
+    ** Drop loader-repository elements from (some) jboss-app.xml
+    ** Better error messages when building index docs and in AccessUtil
+    ** Watch for null home in CalSuites
+    ** Response: Add method to set Response status from a response
+
 ==== Release 3.12.5:
   * Logging
     ** Add a bunch of jsonIgnore to the Logged interface to stop the fields turning up in json.
