@@ -23,14 +23,15 @@
 <li><a href="#release-notes">1.2. Release Notes</a>
 <ul class="sectlevel3">
 <li><a href="#_dev">1.2.1. Dev:</a></li>
-<li><a href="#_release_3_12_5">1.2.2. Release 3.12.5:</a></li>
-<li><a href="#_release_3_12_4">1.2.3. Release 3.12.4:</a></li>
-<li><a href="#_release_3_12_3">1.2.4. Release 3.12.3:</a></li>
-<li><a href="#_release_3_12_2">1.2.5. Release 3.12.2:</a></li>
-<li><a href="#_release_3_12_1">1.2.6. Release 3.12.1:</a></li>
-<li><a href="#_release_3_12_0">1.2.7. Release 3.12.0:</a></li>
-<li><a href="#_release_3_11_2">1.2.8. Release 3.11.2:</a></li>
-<li><a href="#_release_3_11_1">1.2.9. Release 3.11.1:</a></li>
+<li><a href="#_release_3_12_6">1.2.2. Release 3.12.6:</a></li>
+<li><a href="#_release_3_12_5">1.2.3. Release 3.12.5:</a></li>
+<li><a href="#_release_3_12_4">1.2.4. Release 3.12.4:</a></li>
+<li><a href="#_release_3_12_3">1.2.5. Release 3.12.3:</a></li>
+<li><a href="#_release_3_12_2">1.2.6. Release 3.12.2:</a></li>
+<li><a href="#_release_3_12_1">1.2.7. Release 3.12.1:</a></li>
+<li><a href="#_release_3_12_0">1.2.8. Release 3.12.0:</a></li>
+<li><a href="#_release_3_11_2">1.2.9. Release 3.11.2:</a></li>
+<li><a href="#_release_3_11_1">1.2.10. Release 3.11.1:</a></li>
 </ul>
 </li>
 <li><a href="#system-overview">1.3. System Overview</a>
@@ -57,6 +58,8 @@
 <li><a href="#_note">2.2.1. Note:</a></li>
 <li><a href="#_creating_a_public_subscription">2.2.2. Creating a public subscription</a></li>
 <li><a href="#_mapping_locations">2.2.3. Mapping Locations</a></li>
+<li><a href="#_mapping_categories">2.2.4. Mapping categories</a></li>
+<li><a href="#_examples">2.2.5. Examples</a></li>
 </ul>
 </li>
 </ul>
@@ -262,7 +265,121 @@
 
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_5">1.2.2. Release 3.12.5:</h4>
+<h4 id="_release_3_12_6">1.2.2. Release 3.12.6:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Library updates</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Update servlet api version</p>
+</li>
+<li>
+<p>Update jackson version to avoid security issues</p>
+</li>
+<li>
+<p>Update http client version to avoid security issues</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Log analysis</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Updates to generated figures and some analysis of access logs</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sync process</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Update category prop updater to fix NPE</p>
+</li>
+<li>
+<p>Add callback method to fetch location by combined value. Use it when updating or adding an event.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Indexing</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix location mapping - was missing combined field.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Install</p>
+<div class="ulist">
+<ul>
+<li>
+<p>bwcli wasn&#8217;t being built by install script</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Restores</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Restores were failing because the fake event property calpath code was getting an NPE - no principal. Fixed it so principal isn&#8217;t needed. Caused cascading updates up the stack. Dropped the principal object where possible. Generally only need the href.</p>
+</li>
+<li>
+<p>Resource content handling was broken in restore. Should just set the byte value and create the blob when we have a session</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Client</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add action to clear any principals notifications</p>
+</li>
+<li>
+<p>Fix feeder main/listEvents action - now works</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Others</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Svci pars wasn&#8217;t handling the readonly flag properly. Worked for unauth but wasn&#8217;t turning on readonly for authenticated methods.</p>
+</li>
+<li>
+<p>Drop loader-repository elements from (some) jboss-app.xml</p>
+</li>
+<li>
+<p>Better error messages when building index docs and in AccessUtil</p>
+</li>
+<li>
+<p>Watch for null home in CalSuites</p>
+</li>
+<li>
+<p>Response: Add method to set Response status from a response</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_12_5">1.2.3. Release 3.12.5:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -323,7 +440,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_4">1.2.3. Release 3.12.4:</h4>
+<h4 id="_release_3_12_4">1.2.4. Release 3.12.4:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -361,7 +478,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_3">1.2.4. Release 3.12.3:</h4>
+<h4 id="_release_3_12_3">1.2.5. Release 3.12.3:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -428,7 +545,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_2">1.2.5. Release 3.12.2:</h4>
+<h4 id="_release_3_12_2">1.2.6. Release 3.12.2:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -444,7 +561,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_1">1.2.6. Release 3.12.1:</h4>
+<h4 id="_release_3_12_1">1.2.7. Release 3.12.1:</h4>
 <div class="sect4">
 <h5 id="_searching_for_contactslocations">Searching for contacts/locations</h5>
 <div class="ulist">
@@ -522,7 +639,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_0">1.2.7. Release 3.12.0:</h4>
+<h4 id="_release_3_12_0">1.2.8. Release 3.12.0:</h4>
 <div class="sect4">
 <h5 id="_move_to_githubmaven">Move to github/maven</h5>
 <div class="ulist">
@@ -662,7 +779,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_11_2">1.2.8. Release 3.11.2:</h4>
+<h4 id="_release_3_11_2">1.2.9. Release 3.11.2:</h4>
 <div class="sect4">
 <h5 id="_indexing">Indexing</h5>
 <div class="ulist">
@@ -914,7 +1031,7 @@ autokill killing off some of the long running system jobs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_11_1">1.2.9. Release 3.11.1:</h4>
+<h4 id="_release_3_11_1">1.2.10. Release 3.11.1:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1216,11 +1333,54 @@ autokill killing off some of the long running system jobs.</p>
 <div class="sect3">
 <h4 id="_mapping_locations">2.2.3. Mapping Locations</h4>
 <div class="paragraph">
-<p>The update process uses a key field set in locations to map the locations. The key field value should be an exact copy of what appears in the events.</p>
+<p>Locations created and stored within bedework are broken out into a number of fields. Out of these the following are used to create a combined address value which is used for export and import mapping:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Street address</p>
+</li>
+<li>
+<p>Room</p>
+</li>
+<li>
+<p>City</p>
+</li>
+<li>
+<p>State</p>
+</li>
+<li>
+<p>zip/postcode</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>The actual  location will be stored in an x-property</p>
+<p>These values are separated by a comma and a space. Missing values are skipped.</p>
 </div>
+<div class="paragraph">
+<p>The update process matches the value of the supplied LOCATION property against that combined value.</p>
+</div>
+<div class="paragraph">
+<p>If there is an EXACT match then the bedework location will be attached to the syncronized event. Otherwise the location will be left in the x-property. Feeds and the front end display will normally display the x-location as the location for the event.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mapping_categories">2.2.4. Mapping categories</h4>
+<div class="paragraph">
+<p>An equivalent process takes place with categories though the mapping is much simpler. Categories only have a single value. An exact match in the imported event will cause the bedework category to be applied.</p>
+</div>
+<div class="paragraph">
+<p>The use of bedework categories is important for much of the front-end filtering of events as this is driven primarily by categories.</p>
+</div>
+<div class="paragraph">
+<p>As an example if we have the alias structure<br>
+<code>performances/comedy</code><br>
+and comedy is tagged with the category <strong>comedy</strong> and performances with the category <strong>performances</strong> then the imported event needs both categories.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_examples">2.2.5. Examples</h4>
+
 </div>
 </div>
 </div>
