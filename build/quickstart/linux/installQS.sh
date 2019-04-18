@@ -417,6 +417,17 @@ installData() {
   rm -rf $qs/$es_data_dir
   cp -r elasticsearch $qs/$bedework_data_dir/
 
+  # ------------------------------------- TZ data
+
+# NEXT RELEASE
+#  rm -f tzsvr.zip
+#  rm -rf tzsvr
+#  cp $resources/data/tzsvr.zip .
+#  unzip tzsvr.zip
+#  rm tzsvr.zip
+#  rm -rf $qs/$bedework_data_dir/tzsvr
+#  cp -r tzsvr $qs/$bedework_data_dir/
+
   cd $BASE_DIR
 
   markDone $installData

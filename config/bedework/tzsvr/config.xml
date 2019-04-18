@@ -8,7 +8,7 @@
   <primaryServer>false</primaryServer>
   <primaryUrl>www.bedework.org</primaryUrl>
   <refreshDelay>86400</refreshDelay>
-  <source>IANA 2014d</source>
-  <tzdataUrl>${org.bedework.data.dir}/tzsvr/tzdata2014d/zoneinfo/</tzdataUrl>
+  <source>IANA 2015d</source>
+  <tzdataUrl>${org.bedework.data.dir}/tzsvr/tzdata2015d/zoneinfo/</tzdataUrl>
   <version>1.0</version>
 </bwtz-confinfo>
