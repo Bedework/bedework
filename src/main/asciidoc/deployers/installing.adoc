@@ -3,7 +3,15 @@
 
 The current quickstart is installed by executing a script which will create the quickstart directory and then download, clone and build. In the event of a failure part way through, the script may be restarted with the **restart** parameter.
 
-The script may be downloaded from https://github.com/Bedework/bedework/raw/master/build/quickstart/linux/installQS.sh[github]. Alternatively clone the https://github.com/Bedework/bedework.git[bedework repo] and use the script at *bedework/build/quickstart/linux/installQS.sh*
+NOTE: This requires git 2.x or greater. The clones use a tag rather than branch and this does not work for older gits.
+
+The latest script may be downloaded from https://github.com/Bedework/bedework/raw/master/build/quickstart/linux/installQS.sh[github]. Alternatively clone the https://github.com/Bedework/bedework.git[bedework repo] and use the script at *bedework/build/quickstart/linux/installQS.sh*
+
+Specific versions of the script are at:
+
+ * https://github.com/Bedework/bedework/raw/bedework-3.12.6/build/quickstart/linux/installQS.sh[3.12.6]
+ * https://github.com/Bedework/bedework/raw/bedework-3.12.5/build/quickstart/linux/installQS.sh[3.12.5]
+ * https://github.com/Bedework/bedework/raw/bedework-3.12.3/build/quickstart/linux/installQS.sh[3.12.3]
 
 ==== Which version
 The script will ask you if you want the development or latest version.
