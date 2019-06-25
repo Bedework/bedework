@@ -386,17 +386,17 @@
             "name": {
               "type": "string",
               "include_in_all": false,
-              "index": "not_analyzed"
+              "index": "no"
             },
             "pars": {
               "type": "string",
               "include_in_all": false,
-              "index": "not_analyzed"
+              "index": "no"
             },
             "value": {
               "type": "string",
               "include_in_all": false,
-              "index": "not_analyzed"
+              "index": "no"
             }
           },
           "include_in_all": false,
