@@ -4,7 +4,10 @@
 # This currently needs to be executed out of the quickstart directory
 # (via a source)
 
-export JBOSS_PIDFILE=/var/tmp/bedework.jboss.pid
+if [ "x$JBOSS_PIDFILE" = "x" ]; then
+  export JBOSS_PIDFILE=/var/tmp/bedework.jboss.pid
+fi
+
 BASE_DIR=`pwd`
 
 PRG="$0"
