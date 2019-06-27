@@ -287,7 +287,7 @@ installScripts() {
 
   markStarted $installScripts
 
-  if [ "$javaVersion" == "dev" ] ; then
+  if [ "$version" == "dev" ] ; then
     cloneRepo bedework
   else
     cloneRepoBranch $latestVersion bedework
@@ -565,7 +565,7 @@ installSources() {
 
   # Clone the repos
 
-  if [ "$javaVersion" == "dev" ] ; then
+  if [ "$version" == "dev" ] ; then
     # Bedework below
     cloneRepo bw-access "$1"
     cloneRepo bw-caldav "$1"
@@ -726,14 +726,14 @@ echo "-------------------------------------------------------------"
 echo " Building in $dirpath"
 
 echo "Which version"
-select javaVersion in "dev" "latest"; do
-    case $javaVersion in
+select version in "dev" "latest"; do
+    case $version in
         dev ) break;;
-        latest ) javaVersion=$latestVersion; break;;
+        latest ) version=$latestVersion; break;;
     esac
 done
 
-qs="quickstart-$javaVersion"
+qs="quickstart-$version"
 if ! sameVersion $qs ; then
   echo "Cannot restart install for a different version."
   echo "Delete the directory and start again."
