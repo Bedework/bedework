@@ -1,17 +1,17 @@
 <component name="ArtifactManager">
   <artifact type="exploded-ear" name="bw-event-registration-ear:ear exploded">
-    <output-path>$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/target/bw-event-registration-4.0.6-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/target/bw-event-registration-4.0.7-SNAPSHOT</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="bw-event-registration-ear/javaeeApplication/JavaEE" />
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/target/bw-event-registration-4.0.6-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/target/bw-event-registration-4.0.7-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="dir-copy" path="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/src/main/application" />
       <element id="directory" name="lib">
-        <element id="archive" name="bw-event-registration-service-4.0.6-SNAPSHOT.jar">
+        <element id="archive" name="bw-event-registration-service-4.0.7-SNAPSHOT.jar">
           <element id="module-output" name="bw-event-registration-service" />
         </element>
-        <element id="archive" name="bw-event-registration-common-4.0.6-SNAPSHOT.jar">
+        <element id="archive" name="bw-event-registration-common-4.0.7-SNAPSHOT.jar">
           <element id="module-output" name="bw-event-registration-common" />
         </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util2-calendar:4.0.4" />
@@ -61,7 +61,7 @@
         <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.0.5.RELEASE" />
         <element id="library" level="project" name="Maven: org.springframework:spring-context-support:3.0.5.RELEASE" />
       </element>
-      <element id="directory" name="bw-event-registration-war-4.0.6-SNAPSHOT.war" />
+      <element id="directory" name="bw-event-registration-war-4.0.7-SNAPSHOT.war" />
     </root>
   </artifact>
 </component>

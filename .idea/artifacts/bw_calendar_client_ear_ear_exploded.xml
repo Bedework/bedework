@@ -1,46 +1,46 @@
 <component name="ArtifactManager">
   <artifact type="exploded-ear" name="bw-calendar-client-ear:ear exploded">
-    <output-path>$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/target/bw-cal-3.12.7-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/target/bw-cal-3.12.8-SNAPSHOT</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="bw-calendar-client-ear/javaeeApplication/JavaEE" />
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/target/bw-cal-3.12.7-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/target/bw-cal-3.12.8-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="directory" name="bw-calendar-client-cal-3.12.7-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-client-caladmin-3.12.7-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-client-feeder-3.12.7-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-client-submit-3.12.7-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-client-ucal-3.12.7-SNAPSHOT.war" />
-      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-notifyws:war:3.12.6" />
-      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-pubcaldav:war:3.12.6" />
-      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-publicws:war:3.12.6" />
-      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-synchws:war:3.12.6" />
-      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-ucaldav:war:3.12.6" />
-      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-userws:war:3.12.6" />
+      <element id="directory" name="bw-calendar-client-cal-3.12.8-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-caladmin-3.12.8-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-feeder-3.12.8-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-submit-3.12.8-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-ucal-3.12.8-SNAPSHOT.war" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-notifyws:war:3.12.7" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-pubcaldav:war:3.12.7" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-publicws:war:3.12.7" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-synchws:war:3.12.7" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-ucaldav:war:3.12.7" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-userws:war:3.12.7" />
       <element id="directory" name="lib">
-        <element id="archive" name="bw-calendar-client-appcommon-3.12.7-SNAPSHOT.jar">
+        <element id="archive" name="bw-calendar-client-appcommon-3.12.8-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-client-appcommon" />
         </element>
-        <element id="archive" name="bw-calendar-client-webcommon-3.12.7-SNAPSHOT.jar">
+        <element id="archive" name="bw-calendar-client-webcommon-3.12.8-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-client-webcommon" />
         </element>
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-annotations:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-api:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-caldav:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-chgnote:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-core:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-core-common:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-dumprestore:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-facade:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-ical:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-impl:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-indexer:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-inoutsched:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-interfaces:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-mail:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-sysevents-common:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-sysevents-msgs:3.12.6" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-tools:3.12.6" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-annotations:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-api:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-caldav:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-chgnote:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-core:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-core-common:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-dumprestore:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-facade:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-ical:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-impl:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-indexer:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-inoutsched:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-interfaces:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-mail:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-sysevents-common:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-sysevents-msgs:3.12.7" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-tools:3.12.7" />
         <element id="library" level="project" name="Maven: org.bedework:bw-access:4.0.6" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-args:4.0.24" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-caching:4.0.24" />

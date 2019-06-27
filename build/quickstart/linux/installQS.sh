@@ -5,7 +5,7 @@
 BASE_DIR=`pwd`
 scriptName="$0"
 restart=
-latestVersion="3.12.6"
+latestVersion="3.12.7"
 
 # -------------------Module versions -----------------------------
 bwUtilLoggingVersion="4.0.2"
@@ -18,15 +18,15 @@ bwAccessVersion="4.0.6"
 bwWebdavVersion="4.0.7"
 bwCaldavVersion="4.0.7"
 bwTimezoneServerVersion="4.0.4"
-bwSynchVersion="4.0.3"
+bwSynchVersion="4.0.4"
 bwSelfRegistrationVersion="4.0.7"
-bwEventRegistrationVersion="4.0.5"
-bwNotifierVersion="4.0.6"
-bwCliVersion="4.0.4"
+bwEventRegistrationVersion="4.0.6"
+bwNotifierVersion="4.0.7"
+bwCliVersion="4.0.5"
 bwCarddavVersion="4.0.7"
-bwCalendarEngineVersion="3.12.6"
-bwCalendarClientVersion="3.12.6"
-bwCalendarXslVersion="3.12.4"
+bwCalendarEngineVersion="3.12.7"
+bwCalendarClientVersion="3.12.7"
+bwCalendarXslVersion="3.12.5"
 
 
 trap 'cd $BASE_DIR' 0

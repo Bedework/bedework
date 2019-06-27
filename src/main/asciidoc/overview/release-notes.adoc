@@ -3,6 +3,27 @@
 
 ==== Dev:
 
+==== Release 3.12.7:
+  * Fixes to install script
+  * Library updates
+    ** Update http version to avoid security issues
+    ** Add missing dependencies to eventreg
+  * Add tzsvr data to quickstart
+  * Changes to tz conversion - still broken
+  * XSL fixes - missing approots
+  * Client
+    ** Remove empty x-properties on event update
+  * Log processing
+    ** Was missing log prefix in parser
+    ** Add more checks for same task
+  * Deployment
+    ** Use deployment base
+  * Sync
+    ** Use last-modified if etag not present
+  * Watch for null x-properties in event list. Can be caused by deleting them in db.
+  *  Indexing
+    ** Don't index x-properties - can be large
+
 ==== Release 3.12.6:
   * Library updates
     ** Update servlet api version
