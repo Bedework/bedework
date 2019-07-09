@@ -11,12 +11,12 @@
       <element id="directory" name="bw-calendar-client-feeder-3.12.8-SNAPSHOT.war" />
       <element id="directory" name="bw-calendar-client-submit-3.12.8-SNAPSHOT.war" />
       <element id="directory" name="bw-calendar-client-ucal-3.12.8-SNAPSHOT.war" />
-      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-notifyws:war:3.12.7" />
-      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-pubcaldav:war:3.12.7" />
-      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-publicws:war:3.12.7" />
-      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-synchws:war:3.12.7" />
-      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-ucaldav:war:3.12.7" />
-      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-userws:war:3.12.7" />
+      <element id="directory" name="bw-calendar-engine-notifyws-3.12.8-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-engine-pubcaldav-3.12.8-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-engine-publicws-3.12.8-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-engine-synchws-3.12.8-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-engine-ucaldav-3.12.8-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-engine-userws-3.12.8-SNAPSHOT.war" />
       <element id="directory" name="lib">
         <element id="archive" name="bw-calendar-client-appcommon-3.12.8-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-client-appcommon" />
@@ -24,42 +24,108 @@
         <element id="archive" name="bw-calendar-client-webcommon-3.12.8-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-client-webcommon" />
         </element>
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-annotations:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-api:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-caldav:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-chgnote:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-core:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-core-common:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-dumprestore:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-facade:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-ical:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-impl:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-indexer:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-inoutsched:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-interfaces:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-mail:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-sysevents-common:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-sysevents-msgs:3.12.7" />
-        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-tools:3.12.7" />
+        <element id="archive" name="bw-calendar-engine-annotations-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-annotations" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-api-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-api" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-caldav-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-caldav" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-chgnote-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-chgnote" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-core-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-core" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-core-common-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-core-common" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-dumprestore-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-dumprestore" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-facade-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-facade" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-ical-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-ical" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-impl-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-impl" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-indexer-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-indexer" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-inoutsched-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-inoutsched" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-interfaces-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-interfaces" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-mail-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-mail" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-sysevents-common-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-sysevents-common" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-sysevents-msgs-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-sysevents-msgs" />
+        </element>
+        <element id="archive" name="bw-calendar-engine-tools-3.12.8-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-engine-tools" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-access:4.0.6" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-args:4.0.24" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-caching:4.0.24" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-config:4.0.24" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-dav:4.0.24" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-elasticsearch:4.0.24" />
+        <element id="archive" name="bw-util-args-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-args" />
+        </element>
+        <element id="archive" name="bw-util-caching-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-caching" />
+        </element>
+        <element id="archive" name="bw-util-config-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-config" />
+        </element>
+        <element id="archive" name="bw-util-dav-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-dav" />
+        </element>
+        <element id="archive" name="bw-util-elasticsearch-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-elasticsearch" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util-hibernate:4.0.21" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-http:4.0.24" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-indexing:4.0.24" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-jmx:4.0.24" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-json:4.0.24" />
+        <element id="archive" name="bw-util-http-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-http" />
+        </element>
+        <element id="archive" name="bw-util-indexing-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-indexing" />
+        </element>
+        <element id="archive" name="bw-util-jmx-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-jmx" />
+        </element>
+        <element id="archive" name="bw-util-json-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-json" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util-logging:4.0.2" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-misc:4.0.24" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-security:4.0.24" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet:4.0.24" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet-filters:4.0.24" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-struts:4.0.24" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-timezones:4.0.24" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-xml:4.0.24" />
+        <element id="archive" name="bw-util-misc-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-misc" />
+        </element>
+        <element id="archive" name="bw-util-security-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-security" />
+        </element>
+        <element id="archive" name="bw-util-servlet-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-servlet" />
+        </element>
+        <element id="archive" name="bw-util-servlet-filters-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-servlet-filters" />
+        </element>
+        <element id="archive" name="bw-util-struts-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-struts" />
+        </element>
+        <element id="archive" name="bw-util-timezones-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-timezones" />
+        </element>
+        <element id="archive" name="bw-util-xml-4.0.25-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-xml" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util2-calendar:4.0.4" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util2-vcard:4.0.4" />
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-caldav:4.0.8" />
@@ -90,7 +156,52 @@
         <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.3.2" />
         <element id="library" level="project" name="Maven: commons-validator:commons-validator:1.3.0" />
         <element id="library" level="project" name="Maven: dnsjava:dnsjava:2.1.1" />
-        <element id="library" level="project" name="Maven: org.elasticsearch:elasticsearch:1.5.2" />
+        <element id="library" level="project" name="Maven: org.elasticsearch:elasticsearch:7.2.0" />
+        <element id="library" level="project" name="Maven: org.elasticsearch:elasticsearch-core:7.2.0" />
+        <element id="library" level="project" name="Maven: org.elasticsearch:elasticsearch-secure-sm:7.2.0" />
+        <element id="library" level="project" name="Maven: org.elasticsearch:elasticsearch-x-content:7.2.0" />
+        <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.17" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.8" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.8.11" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.11" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.8.11" />
+        <element id="library" level="project" name="Maven: org.elasticsearch:elasticsearch-geo:7.2.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-core:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-analyzers-common:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-backward-codecs:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-grouping:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-highlighter:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-join:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-memory:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-misc:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-queries:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-queryparser:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-sandbox:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-spatial:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-spatial-extras:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-spatial3d:8.0.0" />
+        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-suggest:8.0.0" />
+        <element id="library" level="project" name="Maven: org.elasticsearch:elasticsearch-cli:7.2.0" />
+        <element id="library" level="project" name="Maven: net.sf.jopt-simple:jopt-simple:5.0.2" />
+        <element id="library" level="project" name="Maven: com.carrotsearch:hppc:0.7.1" />
+        <element id="library" level="project" name="Maven: joda-time:joda-time:2.10.2" />
+        <element id="library" level="project" name="Maven: com.tdunning:t-digest:3.2" />
+        <element id="library" level="project" name="Maven: org.hdrhistogram:HdrHistogram:2.1.9" />
+        <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.11.1" />
+        <element id="library" level="project" name="Maven: org.elasticsearch:jna:4.5.1" />
+        <element id="library" level="project" name="Maven: org.elasticsearch.client:elasticsearch-rest-high-level-client:7.2.0" />
+        <element id="library" level="project" name="Maven: org.elasticsearch.client:elasticsearch-rest-client:7.2.0" />
+        <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.5.8" />
+        <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.4.11" />
+        <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpasyncclient:4.1.4" />
+        <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore-nio:4.4.11" />
+        <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.11" />
+        <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.3" />
+        <element id="library" level="project" name="Maven: org.elasticsearch.plugin:parent-join-client:7.2.0" />
+        <element id="library" level="project" name="Maven: org.elasticsearch.plugin:aggs-matrix-stats-client:7.2.0" />
+        <element id="library" level="project" name="Maven: org.elasticsearch.plugin:rank-eval-client:7.2.0" />
+        <element id="library" level="project" name="Maven: org.elasticsearch.plugin:lang-mustache-client:7.2.0" />
+        <element id="library" level="project" name="Maven: com.github.spullara.mustache.java:compiler:0.9.3" />
         <element id="library" level="project" name="Maven: com.google.collections:google-collections:1.0" />
         <element id="library" level="project" name="Maven: org.codehaus.groovy:groovy-all:2.4.0" />
         <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.10.3" />
@@ -99,44 +210,9 @@
         <element id="library" level="project" name="Maven: javax.mail:javax.mail-api:1.5.4" />
         <element id="library" level="project" name="Maven: javax.servlet:jstl:1.1.2" />
         <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
-        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-analyzers-common:4.10.4" />
-        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-core:4.10.4" />
-        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-expressions:4.10.4" />
-        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-highlighter:4.10.4" />
-        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-join:4.10.4" />
-        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-grouping:4.10.4" />
-        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-memory:4.10.4" />
-        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-queries:4.10.4" />
-        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-queryparser:4.10.4" />
-        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-sandbox:4.10.4" />
-        <element id="library" level="project" name="Maven: jakarta-regexp:jakarta-regexp:1.4" />
-        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-spatial:4.10.4" />
-        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-suggest:4.10.4" />
-        <element id="library" level="project" name="Maven: org.apache.lucene:lucene-misc:4.10.4" />
-        <element id="library" level="project" name="Maven: org.jasig.cas.client:cas-client-core:3.3.3" />
-        <element id="library" level="project" name="Maven: org.opensaml:opensaml:2.5.1-1" />
-        <element id="library" level="project" name="Maven: org.opensaml:openws:1.4.2-1" />
-        <element id="library" level="project" name="Maven: org.opensaml:xmltooling:1.3.2-1" />
-        <element id="library" level="project" name="Maven: org.slf4j:log4j-over-slf4j:1.6.1" />
-        <element id="library" level="project" name="Maven: org.slf4j:jul-to-slf4j:1.6.1" />
-        <element id="library" level="project" name="Maven: joda-time:joda-time:1.6.2" />
-        <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk15:1.45" />
-        <element id="library" level="project" name="Maven: org.apache.santuario:xmlsec:1.4.4" />
-        <element id="library" level="project" name="Maven: ca.juliusdavies:not-yet-commons-ssl:0.3.9" />
-        <element id="library" level="project" name="Maven: net.jcip:jcip-annotations:1.0" />
-        <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.3" />
-        <element id="library" level="project" name="Maven: commons-httpclient:commons-httpclient:3.1" />
-        <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.1" />
-        <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.1" />
-        <element id="library" level="project" name="Maven: velocity:velocity:1.5" />
-        <element id="library" level="project" name="Maven: org.owasp.esapi:esapi:2.0GA" />
-        <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.4.01" />
-        <element id="library" level="project" name="Maven: xerces:xercesImpl:2.10.0" />
-        <element id="library" level="project" name="Maven: xml-resolver:xml-resolver:1.2" />
-        <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.1" />
-        <element id="library" level="project" name="Maven: xalan:serializer:2.7.1" />
-        <element id="library" level="project" name="Maven: com.spatial4j:spatial4j:0.3" />
         <element id="library" level="project" name="Maven: xalan:xalan:2.7.1" />
+        <element id="library" level="project" name="Maven: xalan:serializer:2.7.1" />
+        <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.3.04" />
       </element>
     </root>
   </artifact>

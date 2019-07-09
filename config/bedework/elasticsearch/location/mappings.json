@@ -1,5 +1,6 @@
 {
   "settings": {
+    "max_ngram_diff" : 16,
     "analysis": {
       "analyzer": {
         "evprop_ngram_analyzer": {
@@ -9,7 +10,6 @@
           "type": "custom",
           "tokenizer": "standard",
           "filter": [
-            "standard",
             "lowercase",
             "ngram"
           ]
@@ -17,7 +17,7 @@
       },
       "tokenizer": {
         "evprop_ngram_tokenizer": {
-          "type": "nGram",
+          "type": "ngram",
           "min_gram": "3",
           "max_gram": "12",
           "token_chars": [
@@ -36,88 +36,78 @@
     }
   },
   "mappings": {
-    "location" : {
       "_source" : { "enabled" : true },
       "properties" : {
+        "all_content" : {
+          "type" : "text"
+        },
+
+        "esUpdateCount" : {
+          "type" : "long",
+          "store" : "true",
+          "index" : "false"
+        },
+
         "name" : {
-          "type" : "string",
-          "include_in_all": false,
-          "index" : "not_analyzed"
+          "type": "keyword"
         },
 
         "colPath" : {
-          "type" : "string",
-          "include_in_all": false,
-          "index" : "not_analyzed"
+          "type": "keyword"
         },
 
         "href" : {
-          "type" : "string",
-          "include_in_all": false,
-          "index" : "not_analyzed"
+          "type": "keyword"
         },
 
         "deleted" : {
-          "type" : "boolean",
-          "include_in_all": false,
-          "index" : "not_analyzed"
+          "type" : "boolean"
         },
 
         "creatorHref" : {
-          "type" : "string",
-          "include_in_all": false,
-          "index" : "not_analyzed"
+          "type": "keyword"
         },
 
         "ownerHref" : {
-          "type" : "string",
-          "include_in_all": false,
-          "index" : "not_analyzed"
+          "type": "keyword"
         },
 
         "acl" : {
-          "type" : "string",
-          "include_in_all": false,
-          "index" : "no"
+          "type" : "keyword",
+          "index" : "false"
         },
 
         "public" : {
-          "type" : "boolean",
-          "include_in_all": false,
-          "index" : "not_analyzed"
+          "type" : "boolean"
         },
 
         "tombstoned" : {
-          "type" : "boolean",
-          "include_in_all": false,
-          "index" : "not_analyzed"
+          "type" : "boolean"
         },
 
         "uid" : {
-          "type" : "string",
-          "include_in_all": false,
-          "index" : "not_analyzed"
+          "type": "keyword"
         },
 
         "loc_all" : {
-          "type" : "string",
-          "index_analyzer" : "evprop-autocomplete"
+          "type" : "text",
+          "analyzer" : "evprop-autocomplete",
+          "search_analyzer" : "standard"
         },
 
         "loc_all_terms" : {
-          "type" : "string"
+          "type" : "text"
         },
 
         "address" : {
           "type" : "object",
           "properties" : {
-            "language" : {
-              "type" : "string",
-              "include_in_all": false
+            "lang": {
+              "type": "keyword"
             },
-            "value" : {
-              "type" : "string",
-              "include_in_all": true
+            "value": {
+              "type": "text",
+              "copy_to": "all_content"
             }
           }
         },
@@ -125,132 +115,104 @@
         "subaddress" : {
           "type" : "object",
           "properties" : {
-            "language" : {
-              "type" : "string",
-              "include_in_all": false
+            "lang": {
+              "type": "keyword"
             },
-            "value" : {
-              "type" : "string",
-              "include_in_all": true,
-              "index" : "not_analyzed"
+            "value": {
+              "type": "text",
+              "copy_to": [
+                "loc_all",
+                "loc_all_terms"
+              ]
             }
           }
         },
 
         "addressField" : {
-          "type" : "string",
-          "include_in_all": true,
-          "copy_to": ["loc_all", "loc_all_terms"],
-          "index" : "not_analyzed"
+          "type" : "keyword",
+          "copy_to": ["all_content", "loc_all", "loc_all_terms"]
         },
 
         "roomField" : {
-          "type" : "string",
-          "include_in_all": true,
-          "copy_to": ["loc_all", "loc_all_terms"],
-          "index" : "not_analyzed"
+          "type" : "keyword",
+          "copy_to": ["all_content", "loc_all", "loc_all_terms"]
         },
 
         "subField1" : {
-          "type" : "string",
-          "include_in_all": true,
-          "copy_to": ["loc_all", "loc_all_terms"],
-          "index" : "not_analyzed"
+          "type" : "keyword",
+          "copy_to": ["all_content", "loc_all", "loc_all_terms"]
         },
 
         "subField2" : {
-          "type" : "string",
-          "include_in_all": true,
-          "copy_to": ["loc_all", "loc_all_terms"],
-          "index" : "not_analyzed"
+          "type" : "keyword",
+          "copy_to": ["all_content", "loc_all", "loc_all_terms"]
         },
 
         "accessible" : {
-          "type" : "boolean",
-          "include_in_all": true,
-          "index" : "not_analyzed"
+          "type" : "boolean"
         },
 
         "geouri" : {
-          "type" : "string",
-          "include_in_all": true,
-          "index" : "not_analyzed"
+          "type" : "keyword"
         },
 
         "status" : {
-          "type" : "string",
-          "include_in_all": true,
-          "index" : "not_analyzed"
+          "type" : "keyword"
         },
 
         "street" : {
-          "type" : "string",
-          "include_in_all": true,
-          "copy_to": ["loc_all", "loc_all_terms"],
-          "index" : "not_analyzed"
+          "type" : "keyword",
+          "copy_to": ["all_content", "loc_all", "loc_all_terms"]
         },
 
         "city" : {
-          "type" : "string",
-          "include_in_all": true,
-          "copy_to": ["loc_all", "loc_all_terms"],
-          "index" : "not_analyzed"
+          "type" : "keyword",
+          "copy_to": ["all_content", "loc_all", "loc_all_terms"]
         },
 
         "state" : {
-          "type" : "string",
-          "include_in_all": true,
-          "copy_to": ["loc_all", "loc_all_terms"],
-          "index" : "not_analyzed"
+          "type" : "keyword",
+          "copy_to": ["all_content", "loc_all", "loc_all_terms"]
         },
 
         "zip" : {
-          "type" : "string",
-          "include_in_all": true,
-          "copy_to": ["loc_all", "loc_all_terms"],
-          "index" : "not_analyzed"
+          "type" : "keyword",
+          "copy_to": ["all_content", "loc_all", "loc_all_terms"]
         },
 
         "alternateAddress" : {
-          "type" : "string",
-          "include_in_all": true,
-          "copy_to": ["loc_all", "loc_all_terms"],
-          "index" : "not_analyzed"
+          "type" : "keyword",
+          "copy_to": ["all_content", "loc_all", "loc_all_terms"]
         },
 
         "code" : {
-          "type" : "string",
-          "include_in_all": true,
-          "copy_to": ["loc_all", "loc_all_terms"],
-          "index" : "not_analyzed"
+          "type" : "keyword",
+          "copy_to": ["all_content", "loc_all", "loc_all_terms"]
         },
 
         "combinedValues" : {
-          "type" : "string",
-          "include_in_all": false,
-          "index" : "not_analyzed"
+          "type": "keyword"
         },
 
         "keys" : {
           "type" : "nested",
           "properties" : {
-            "name" : {
-              "type" : "string",
-              "include_in_all": false
+            "name": {
+              "type": "keyword"
             },
-            "value" : {
-              "type" : "string",
-              "include_in_all": false
+            "value": {
+              "type": "text",
+              "copy_to": [
+                "loc_all",
+                "loc_all_terms"
+              ]
             }
           }
         },
 
-        "url" : {
-          "type" : "string",
-          "include_in_all": false,
-          "index" : "not_analyzed"
+        "link" : {
+          "type": "keyword"
         }
       }
     }
-  }
 }

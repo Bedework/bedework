@@ -1,5 +1,6 @@
 {
   "settings": {
+    "max_ngram_diff" : 16,
     "analysis": {
       "analyzer": {
         "evprop_ngram_analyzer": {
@@ -9,7 +10,6 @@
           "type": "custom",
           "tokenizer": "standard",
           "filter": [
-            "standard",
             "lowercase",
             "ngram"
           ]
@@ -17,7 +17,7 @@
       },
       "tokenizer": {
         "evprop_ngram_tokenizer": {
-          "type": "nGram",
+          "type": "ngram",
           "min_gram": "3",
           "max_gram": "12",
           "token_chars": [
@@ -37,97 +37,71 @@
   },
 
   "mappings": {
-    "filter": {
-      "_source": {
-        "enabled": true
+    "_source": {
+      "enabled": true
+    },
+    "properties": {
+      "all_content": {
+        "type": "text"
       },
-
-      "properties": {
-        "name": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
-        },
-
-        "colPath": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
-        },
-
-        "href": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
-        },
-
-        "deleted": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
-        },
-
-        "creatorHref": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
-        },
-
-        "ownerHref": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
-        },
-
-        "acl": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "no"
-        },
-
-        "public": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
-        },
-
-        "tombstoned": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
-        },
-
-        "displayNames": {
-          "type": "object",
-          "properties": {
-            "language": {
-              "type": "string",
-              "include_in_all": false
-            },
-            "value": {
-              "type": "string",
-              "include_in_all": true
-            }
+      "esUpdateCount": {
+        "type": "long",
+        "store": "true",
+        "index": "false"
+      },
+      "name": {
+        "type": "keyword"
+      },
+      "colPath": {
+        "type": "keyword"
+      },
+      "href": {
+        "type": "keyword"
+      },
+      "deleted": {
+        "type": "boolean"
+      },
+      "creatorHref": {
+        "type": "keyword"
+      },
+      "ownerHref": {
+        "type": "keyword"
+      },
+      "acl": {
+        "type": "keyword",
+        "index": "false"
+      },
+      "public": {
+        "type": "boolean"
+      },
+      "tombstoned": {
+        "type": "boolean"
+      },
+      "displayNames": {
+        "type": "object",
+        "properties": {
+          "lang": {
+            "type": "keyword"
+          },
+          "value": {
+            "type": "text",
+            "copy_to": "all_content"
           }
-        },
-
-        "definition": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "no"
-        },
-
-        "descriptions": {
-          "type": "object",
-          "properties": {
-            "language": {
-              "type": "string",
-              "include_in_all": false
-            },
-            "value": {
-              "type": "string",
-              "include_in_all": true
-            }
+        }
+      },
+      "definition": {
+        "type": "keyword",
+        "index": "false"
+      },
+      "descriptions": {
+        "type": "object",
+        "properties": {
+          "lang": {
+            "type": "keyword"
+          },
+          "value": {
+            "type": "text",
+            "copy_to": "all_content"
           }
         }
       }

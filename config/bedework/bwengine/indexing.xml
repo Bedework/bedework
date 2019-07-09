@@ -4,12 +4,10 @@
   <account>admin</account>
   <dataDir>${org.bedework.data.dir}/elasticsearch/</dataDir>
   <discardMessages>true</discardMessages>
-  <embeddedIndexer>true</embeddedIndexer>
-  <httpEnabled>false</httpEnabled>
   <indexPublic>true</indexPublic>
   <indexUsers>true</indexUsers>
   <indexerConfig>${org.bedework.config.dir}/elasticsearch/</indexerConfig>
-  <indexerURL>localhost:9300</indexerURL>
+  <indexerURL>localhost:9200</indexerURL>
   <maxEntityThreads>5</maxEntityThreads>
   <maxPrincipalThreads>5</maxPrincipalThreads>
   <publicIndexName>bwpublic</publicIndexName>

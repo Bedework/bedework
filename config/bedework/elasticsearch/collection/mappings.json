@@ -1,5 +1,6 @@
 {
   "settings": {
+    "max_ngram_diff" : 16,
     "analysis": {
       "analyzer": {
         "evprop_ngram_analyzer": {
@@ -9,7 +10,6 @@
           "type": "custom",
           "tokenizer": "standard",
           "filter": [
-            "standard",
             "lowercase",
             "ngram"
           ]
@@ -17,7 +17,7 @@
       },
       "tokenizer": {
         "evprop_ngram_tokenizer": {
-          "type": "nGram",
+          "type": "ngram",
           "min_gram": "3",
           "max_gram": "12",
           "token_chars": [
@@ -36,150 +36,113 @@
     }
   },
   "mappings": {
-    "collection": {
       "_source": {
         "enabled": true
       },
       "properties": {
+        "all_content" : {
+          "type" : "text"
+        },
+        "esUpdateCount" : {
+          "type" : "long",
+          "store" : "true",
+          "index" : "false"
+        },
         "key": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "name": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "colPath": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "href": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "deleted": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "creatorHref": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "ownerHref": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "acl": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "no"
+          "type": "keyword",
+          "index": "false"
         },
         "public": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "tombstoned": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "created": {
           "type": "date",
-          "format": "basic_date_time_no_millis",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "format": "basic_date_time_no_millis"
         },
         "lastModified": {
           "type": "date",
-          "format": "basic_date_time_no_millis",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "format": "basic_date_time_no_millis"
         },
         "lastModifiedSeq": {
-          "type": "integer",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "integer"
         },
         "summary": {
-          "type": "string",
-          "include_in_all": true
+          "type": "text",
+          "copy_to" : "all_content"
         },
         "description": {
-          "type": "string",
-          "include_in_all": true
+          "type": "text",
+          "copy_to" : "all_content"
         },
         "affectsFreeBusy": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "aliasURI": {
-          "type": "string",
-          "include_in_all": true
+          "type": "text",
+          "copy_to" : "all_content"
         },
         "caltype": {
-          "type": "integer",
-          "index": "not_analyzed"
+          "type": "integer"
         },
         "display": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "filterExpr": {
-          "type": "string",
-          "include_in_all": true
+          "type": "keyword"
         },
         "ignoreTransp": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "lastRefresh": {
-          "type": "string",
-          "include_in_all": true
+          "type": "keyword"
         },
         "lastRefreshStatus": {
-          "type": "string",
-          "include_in_all": true
+          "type": "keyword"
         },
         "refreshRate": {
-          "type": "integer",
-          "index": "not_analyzed"
+          "type": "integer"
         },
         "remoteId": {
-          "type": "string",
-          "include_in_all": true
+          "type": "keyword"
         },
         "remotePw": {
-          "type": "string",
-          "include_in_all": true
+          "type": "keyword"
         },
         "unremoveable": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "colProperties": {
           "type": "object",
           "properties": {
             "name": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "value": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             }
           }
         },
@@ -187,25 +150,20 @@
           "type": "object",
           "properties": {
             "uid": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "href": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "value": {
               "type": "object",
               "properties": {
-                "language": {
-                  "type": "string",
-                  "include_in_all": false
+                "lang": {
+                  "type": "keyword"
                 },
                 "value": {
-                  "type": "string",
-                  "include_in_all": true
+                  "type": "text",
+                  "copy_to" : "all_content"
                 }
               }
             }
@@ -213,5 +171,4 @@
         }
       }
     }
-  }
 }

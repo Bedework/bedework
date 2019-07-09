@@ -1,5 +1,6 @@
 {
   "settings": {
+    "max_ngram_diff" : 16,
     "analysis": {
       "analyzer": {
         "evprop_ngram_analyzer": {
@@ -9,7 +10,6 @@
           "type": "custom",
           "tokenizer": "standard",
           "filter": [
-            "standard",
             "lowercase",
             "ngram"
           ]
@@ -17,7 +17,7 @@
       },
       "tokenizer": {
         "evprop_ngram_tokenizer": {
-          "type": "nGram",
+          "type": "ngram",
           "min_gram": "3",
           "max_gram": "12",
           "token_chars": [
@@ -36,84 +36,64 @@
     }
   },
   "mappings": {
-    "resource": {
       "_source": {
         "enabled": true
       },
       "properties": {
-        "href": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+        "all_content" : {
+          "type" : "text"
         },
-        "colpath": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+        "esUpdateCount" : {
+          "type" : "long",
+          "store" : "true",
+          "index" : "false"
+        },
+
+        "href": {
+          "type": "keyword"
+        },
+        "colPath": {
+          "type": "keyword"
         },
         "name": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "creatorHref": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "ownerHref": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "acl": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "no"
+          "type": "keyword",
+          "index": "false"
         },
         "public": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "tombstoned": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "created": {
           "type": "date",
-          "format": "basic_date_time_no_millis",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "format": "basic_date_time_no_millis"
         },
         "lastModified": {
           "type": "date",
-          "format": "basic_date_time_no_millis",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "format": "basic_date_time_no_millis"
         },
         "sequence": {
-          "type": "integer",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "integer"
         },
         "contentType": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "encoding": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "contentLength": {
-          "type": "long",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "long"
         }
       }
     }
-  }
 }

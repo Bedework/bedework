@@ -1,5 +1,6 @@
 {
   "settings": {
+    "max_ngram_diff" : 16,
     "analysis": {
       "analyzer": {
         "evprop_ngram_analyzer": {
@@ -9,7 +10,6 @@
           "type": "custom",
           "tokenizer": "standard",
           "filter": [
-            "standard",
             "lowercase",
             "ngram"
           ]
@@ -17,7 +17,7 @@
       },
       "tokenizer": {
         "evprop_ngram_tokenizer": {
-          "type": "nGram",
+          "type": "ngram",
           "min_gram": "3",
           "max_gram": "12",
           "token_chars": [
@@ -36,90 +36,73 @@
     }
   },
   "mappings": {
-    "contact": {
       "_source": {
         "enabled": true
       },
       "properties": {
+        "esUpdateCount" : {
+          "type" : "long",
+          "store" : "true",
+          "index" : "false"
+        },
         "name": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
 
         "colPath": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
 
         "href": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
 
         "deleted": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
 
         "creatorHref": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
 
         "ownerHref": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
 
         "acl": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "no"
+          "type": "keyword",
+          "index": "false"
         },
 
         "public": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
 
         "tombstoned": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
 
         "status" : {
-          "type" : "string",
-          "include_in_all": true,
-          "index" : "not_analyzed"
+          "type" : "keyword"
         },
 
         "uid": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
 
         "contact_all": {
-          "type": "string",
-          "index_analyzer": "evprop-autocomplete"
+          "type": "text",
+          "analyzer": "evprop-autocomplete",
+          "search_analyzer" : "standard"
         },
 
         "contact_all_terms": {
-          "type": "string",
+          "type": "text",
           "store": "true"
         },
 
         "cn": {
-          "type": "string",
-          "include_in_all": true,
+          "type": "text",
           "copy_to": [
             "contact_all",
             "contact_all_terms"
@@ -127,31 +110,24 @@
         },
 
         "phone": {
-          "type": "string",
-          "include_in_all": false,
+          "type": "keyword",
           "copy_to": [
             "contact_all",
             "contact_all_terms"
-          ],
-          "index": "not_analyzed"
+          ]
         },
 
         "email": {
-          "type": "string",
-          "include_in_all": false,
+          "type": "keyword",
           "copy_to": [
             "contact_all",
             "contact_all_terms"
-          ],
-          "index": "not_analyzed"
+          ]
         },
 
-        "url": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+        "link": {
+          "type": "keyword"
         }
       }
     }
-  }
 }

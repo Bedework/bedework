@@ -1,5 +1,6 @@
 {
   "settings": {
+    "max_ngram_diff" : 16,
     "analysis": {
       "analyzer": {
         "evprop_ngram_analyzer": {
@@ -9,7 +10,6 @@
           "type": "custom",
           "tokenizer": "standard",
           "filter": [
-            "standard",
             "lowercase",
             "ngram"
           ]
@@ -17,7 +17,7 @@
       },
       "tokenizer": {
         "evprop_ngram_tokenizer": {
-          "type": "nGram",
+          "type": "ngram",
           "min_gram": "3",
           "max_gram": "12",
           "token_chars": [
@@ -36,132 +36,96 @@
     }
   },
   "mappings": {
-    "preferences": {
       "_source": {
         "enabled": true
       },
       "properties": {
+        "all_content" : {
+          "type" : "text"
+        },
+
+        "esUpdateCount" : {
+          "type" : "long",
+          "store" : "true",
+          "index" : "false"
+        },
+
         "href": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "views": {
           "type": "object",
           "properties": {
             "name": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
-            "colHrefs": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+            "colPath": {
+              "type": "keyword"
             }
           }
         },
         "email": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "defaultCalendarPath": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "skinName": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "skinStyle": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "preferredView": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "preferredViewPeriod": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "pageSize": {
-          "type": "integer",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "integer"
         },
         "workDays": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "workDayStart": {
-          "type": "integer",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "integer"
         },
         "workDayEnd": {
-          "type": "integer",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "integer"
         },
         "preferredEndType": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "userMode": {
-          "type": "integer",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "integer"
         },
         "hour24": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "scheduleAutoRespond": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "scheduleAutoCancelAction": {
-          "type": "integer",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "integer"
         },
         "scheduleDoubleBook": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "scheduleAutoProcessResponses": {
-          "type": "integer",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "integer"
         },
         "userProperties": {
           "type": "object",
           "properties": {
             "name": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "value": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             }
           }
         }
       }
     }
-  }
 }

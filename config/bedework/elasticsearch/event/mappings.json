@@ -1,5 +1,6 @@
 {
   "settings": {
+    "max_ngram_diff" : 16,
     "analysis": {
       "analyzer": {
         "evprop_ngram_analyzer": {
@@ -9,7 +10,6 @@
           "type": "custom",
           "tokenizer": "standard",
           "filter": [
-            "standard",
             "lowercase",
             "ngram"
           ]
@@ -17,7 +17,7 @@
       },
       "tokenizer": {
         "evprop_ngram_tokenizer": {
-          "type": "nGram",
+          "type": "ngram",
           "min_gram": "3",
           "max_gram": "12",
           "token_chars": [
@@ -36,99 +36,76 @@
     }
   },
   "mappings": {
-    "event": {
       "_source": {
         "enabled": true
       },
       "properties": {
+        "all_content" : {
+          "type" : "text"
+        },
+        "esUpdateCount" : {
+          "type" : "long",
+          "store" : "true",
+          "index" : "false"
+        },
         "creatorHref": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "ownerHref": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "calSuite": {
-          "type": "string",
-          "include_in_all": true,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "colPath": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "acl": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "no"
+          "type": "keyword",
+          "index": "false"
         },
         "public": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "tombstoned": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "deleted": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "name": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "href": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "master": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "instance": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "override": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "categories": {
           "type": "object",
           "properties": {
             "uid": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "href": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "value": {
               "type": "object",
               "properties": {
-                "language": {
-                  "type": "string",
-                  "include_in_all": false
+                "lang": {
+                  "type": "keyword"
                 },
                 "value": {
-                  "type": "string",
-                  "include_in_all": true
+                  "type": "text",
+                  "copy_to" : "all_content"
                 }
               }
             }
@@ -137,58 +114,44 @@
         "summary": {
           "type": "object",
           "properties": {
-            "language": {
-              "type": "string",
-              "include_in_all": false
+            "lang": {
+              "type": "keyword"
             },
             "value": {
-              "type": "string",
-              "include_in_all": true
+              "type": "text",
+              "copy_to" : "all_content"
             }
           }
         },
         "description": {
           "type": "object",
           "properties": {
-            "language": {
-              "type": "string",
-              "include_in_all": false
+            "lang": {
+              "type": "keyword"
             },
             "value": {
-              "type": "string",
-              "include_in_all": true
+              "type": "text",
+              "copy_to" : "all_content"
             }
           }
         },
         "entityType": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "class": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
-        "url": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+        "link": {
+          "type": "keyword"
         },
         "geo": {
-          "type": "geo_point",
-          "lat_lon": true,
-          "geohash_prefix": true
+          "type": "geo_point"
         },
         "status": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "cost": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "organizer": {
           "type": "object",
@@ -196,460 +159,311 @@
             "pars": {
               "properties": {
                 "scheduleStatus": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 },
                 "cn": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 },
                 "dir": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 },
-                "language": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                "lang": {
+                  "type": "keyword"
                 },
                 "sentBy": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 }
               }
             },
             "uri": {
-              "type": "string"
+              "type": "keyword",
+              "index": "false"
             }
-          },
-          "include_in_all": false,
-          "index": "not_analyzed"
+          }
         },
         "dtstamp": {
           "type": "date",
-          "format": "basic_date_time_no_millis",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "format": "basic_date_time_no_millis"
         },
         "lastModified": {
           "type": "date",
-          "format": "basic_date_time_no_millis",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "format": "basic_date_time_no_millis"
         },
         "lastModifiedSeq": {
-          "type": "integer",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "integer"
         },
         "created": {
           "type": "date",
-          "format": "basic_date_time_no_millis",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "format": "basic_date_time_no_millis"
         },
         "scheduleTag": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "priority": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "sequence": {
-          "type": "integer",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "integer"
         },
-        "locationUid": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+        "locationHref": {
+          "type": "keyword"
         },
         "locationStr": {
-          "type": "string",
-          "include_in_all": true,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "uid": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "transp": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "percentComplete": {
-          "type": "integer",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "integer"
         },
         "completed": {
           "type": "date",
-          "format": "basic_date_time_no_millis",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "format": "basic_date_time_no_millis"
         },
         "scheduleMethod": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "originator": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "recipient": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "scheduleState": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "organizerSchedulingObject": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "attendeeSchedulingObject": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "relatedTo": {
           "type": "nested",
           "properties": {
             "reltype": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "value": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             }
-          },
-          "include_in_all": false,
-          "index": "not_analyzed"
+          }
         },
-        "imageUrl": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+        "image": {
+          "type": "keyword"
         },
-        "thumbImageUrl": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+        "thumbimage": {
+          "type": "keyword"
         },
         "topicalArea": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "suggestedTo": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "eventregMaxTickets": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "eventregMaxTicketsPerUser": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "eventregStart": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "eventregEnd": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
+        },
+        "eventregWaitListLimit": {
+          "type": "keyword"
         },
         "xprop": {
           "type": "nested",
           "properties": {
             "name": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "no"
+              "type": "keyword",
+              "index": "false"
             },
             "pars": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "no"
+              "type": "keyword",
+              "index": "false"
             },
             "value": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "no"
+              "type": "keyword",
+              "index": "false"
             }
-          },
-          "include_in_all": false,
-          "index": "not_analyzed"
+          }
         },
         "requestStatus": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "ctoken": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "recurring": {
-          "type": "boolean",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "boolean"
         },
         "recurrenceId": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "rrule": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "exrule": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "rdate": {
           "type": "object",
           "properties": {
             "utc": {
               "type": "date",
-              "format": "basic_date_time_no_millis",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "format": "basic_date_time_no_millis"
             },
             "local": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "tzid": {
-              "type": "string",
-              "include_in_all": true,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "floating": {
-              "type": "boolean",
-              "include_in_all": true,
-              "index": "not_analyzed"
+              "type": "boolean"
             }
-          },
-          "include_in_all": false,
-          "index": "not_analyzed"
+          }
         },
         "exdate": {
           "type": "object",
           "properties": {
             "utc": {
               "type": "date",
-              "format": "basic_date_time_no_millis",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "format": "basic_date_time_no_millis"
             },
             "local": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "tzid": {
-              "type": "string",
-              "include_in_all": true,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "floating": {
-              "type": "boolean",
-              "include_in_all": true,
-              "index": "not_analyzed"
+              "type": "boolean"
             }
-          },
-          "include_in_all": false,
-          "index": "not_analyzed"
+          }
         },
         "dtstart": {
           "type": "object",
           "properties": {
             "utc": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "local": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "tzid": {
-              "type": "string",
-              "include_in_all": true,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "floating": {
-              "type": "boolean",
-              "include_in_all": true,
-              "index": "not_analyzed"
+              "type": "boolean"
             }
-          },
-          "include_in_all": false,
-          "index": "not_analyzed"
+          }
         },
         "dtend": {
           "type": "object",
           "properties": {
             "utc": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "local": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "tzid": {
-              "type": "string",
-              "include_in_all": true,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "floating": {
-              "type": "boolean",
-              "include_in_all": true,
-              "index": "not_analyzed"
+              "type": "boolean"
             }
-          },
-          "include_in_all": false,
-          "index": "not_analyzed"
+          }
         },
         "noStart": {
           "type": "boolean",
-          "store": "yes",
-          "include_in_all": true,
-          "index": "not_analyzed"
+          "store": "true"
         },
         "endType": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "duration": {
-          "type": "string",
-          "include_in_all": false,
-          "index": "not_analyzed"
+          "type": "keyword"
         },
         "indexStart": {
           "type": "object",
           "properties": {
             "utc": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "local": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "tzid": {
-              "type": "string",
-              "include_in_all": true,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "floating": {
-              "type": "boolean",
-              "include_in_all": true,
-              "index": "not_analyzed"
+              "type": "boolean"
             }
-          },
-          "include_in_all": false,
-          "index": "not_analyzed"
+          }
         },
         "indexEnd": {
           "type": "object",
           "properties": {
             "utc": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "local": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "tzid": {
-              "type": "string",
-              "include_in_all": true,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "floating": {
-              "type": "boolean",
-              "include_in_all": true,
-              "index": "not_analyzed"
+              "type": "boolean"
             }
-          },
-          "include_in_all": false,
-          "index": "not_analyzed"
+          }
         },
         "alarm": {
           "type": "object",
           "properties": {
+            "ownerHref": {
+              "type": "keyword"
+            },
+            "public": {
+              "type": "boolean"
+            },
             "action": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "nextTrigger": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "trigger": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "triggerDateTime": {
-              "type": "boolean",
-              "index": "not_analyzed"
+              "type": "boolean"
             },
             "duration": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "repeat": {
-              "type": "integer",
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "description": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "summary": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "attach": {
-              "type": "string",
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "attendee": {
               "type": "object",
@@ -657,65 +471,50 @@
                 "pars": {
                   "properties": {
                     "rsvp": {
-                      "type": "boolean",
-                      "index": "not_analyzed"
+                      "type": "boolean"
                     },
                     "cn": {
-                      "type": "string",
-                      "index": "not_analyzed"
+                      "type": "keyword"
                     },
                     "partstat": {
-                      "type": "string",
-                      "index": "not_analyzed"
+                      "type": "keyword"
                     },
                     "scheduleStatus": {
-                      "type": "string",
-                      "index": "not_analyzed"
+                      "type": "keyword"
                     },
                     "cutype": {
-                      "type": "string",
-                      "index": "not_analyzed"
+                      "type": "keyword"
                     },
                     "delegatedFrom": {
-                      "type": "string",
-                      "index": "not_analyzed"
+                      "type": "keyword"
                     },
                     "delegatedTo": {
-                      "type": "string",
-                      "index": "not_analyzed"
+                      "type": "keyword"
                     },
                     "dir": {
-                      "type": "string",
-                      "index": "not_analyzed"
+                      "type": "keyword"
                     },
-                    "language": {
-                      "type": "string",
-                      "index": "not_analyzed"
+                    "lang": {
+                      "type": "keyword"
                     },
                     "member": {
-                      "type": "string",
-                      "index": "not_analyzed"
+                      "type": "keyword"
                     },
                     "role": {
-                      "type": "string",
-                      "index": "not_analyzed"
+                      "type": "keyword"
                     },
                     "sentBy": {
-                      "type": "string",
-                      "index": "not_analyzed"
+                      "type": "keyword"
                     }
                   }
                 },
                 "uri": {
-                  "type": "string"
+                  "type": "keyword",
+                  "index": "false"
                 }
-              },
-              "include_in_all": false,
-              "index": "not_analyzed"
+              }
             }
-          },
-          "include_in_all": false,
-          "index": "not_analyzed"
+          }
         },
         "attendee": {
           "type": "object",
@@ -723,126 +522,98 @@
             "pars": {
               "properties": {
                 "rsvp": {
-                  "type": "boolean",
-                  "index": "not_analyzed"
+                  "type": "boolean"
                 },
                 "cn": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 },
                 "partstat": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 },
                 "scheduleStatus": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 },
                 "cutype": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 },
                 "delegatedFrom": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 },
                 "delegatedTo": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 },
                 "dir": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 },
-                "language": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                "lang": {
+                  "type": "keyword"
                 },
                 "member": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 },
                 "role": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 },
                 "sentBy": {
-                  "type": "string",
-                  "index": "not_analyzed"
+                  "type": "keyword"
                 }
               }
             },
             "uri": {
-              "type": "string"
+              "type": "keyword"
             }
-          },
-          "include_in_all": false,
-          "index": "not_analyzed"
+          }
         },
         "comment": {
           "type": "object",
           "properties": {
-            "language": {
-              "type": "string",
-              "include_in_all": false
+            "lang": {
+              "type": "keyword"
             },
             "value": {
-              "type": "string",
-              "include_in_all": true
+              "type": "text",
+              "copy_to" : "all_content"
             }
           }
         },
-        "contact": {
+        "contacts": {
           "type": "object",
           "properties": {
             "cn": {
               "type": "object",
               "properties": {
-                "language": {
-                  "type": "string",
-                  "include_in_all": false
+                "lang": {
+                  "type": "keyword"
                 },
                 "value": {
-                  "type": "string",
-                  "include_in_all": true
+                  "type": "text",
+                  "copy_to" : "all_content"
                 }
-              },
-              "include_in_all": false,
-              "index": "not_analyzed"
+              }
             },
             "href": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "uid": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             },
             "altrep": {
-              "type": "string",
-              "include_in_all": false,
-              "index": "not_analyzed"
+              "type": "keyword"
             }
-          },
-          "include_in_all": false,
-          "index": "not_analyzed"
+          }
         },
         "resources": {
           "type": "object",
           "properties": {
-            "language": {
-              "type": "string",
-              "include_in_all": false
+            "lang": {
+              "type": "keyword"
             },
             "value": {
-              "type": "string",
-              "include_in_all": true
+              "type": "text",
+              "copy_to" : "all_content"
             }
           }
         }
       }
     }
-  }
 }
