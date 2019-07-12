@@ -98,7 +98,6 @@
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-config-http" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-dav" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-deployment" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-directory" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-elasticsearch" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-http" charset="UTF-8" />
@@ -107,7 +106,6 @@
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-jmx" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-jolokia" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-json" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-maven-deploy" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-misc" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-options" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-security" charset="UTF-8" />
@@ -120,5 +118,24 @@
     <file url="file://$PROJECT_DIR$/../bw-util2/bw-util2-calendar" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util2/bw-util2-vcard" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webdav" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-appleServer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-bwlicense" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-caldav" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-calws-soap" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-calws-soap-strict" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-carddav" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-catdav" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-category" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-dav" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-ear" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-exchangews" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-icalendar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-icalendar-strict" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-synchws" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-tzsvr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-vcard" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-war" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-xrd" charset="UTF-8" />
   </component>
 </project>
