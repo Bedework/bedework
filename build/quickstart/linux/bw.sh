@@ -651,7 +651,7 @@ do
       shift
       ;;
 # ------------------------Projects
-    -access)
+    access)
       access="yes"
 
       bwxml="yes"
@@ -660,7 +660,7 @@ do
       pkgdefault=
       shift
       ;;
-    -bwcalclient)
+    bwcalclient)
       bwcalclient="yes"
 
       access="yes"
@@ -676,7 +676,7 @@ do
       pkgdefault=
       shift
       ;;
-    -bwcaleng)
+    bwcaleng)
       bwcaleng="yes"
 
       access="yes"
@@ -690,7 +690,7 @@ do
       pkgdefault=
       shift
       ;;
-    -bwcli)
+    bwcli)
       bwcli="yes"
 
       bwutil="yes"
@@ -699,13 +699,13 @@ do
       pkgdefault=
       shift
       ;;
-    -notifier)
+    notifier)
       bwnotifier="yes"
       #earName="$earNameNotifier"
       pkgdefault=
       shift
       ;;
-    -bwcalsockets)
+    bwcalsockets)
       bwcalsockets="yes"
       #warNames="$warnamescalsockets"
 
@@ -718,13 +718,13 @@ do
       shift
       ;;
 
-    -bwxml)
+    bwxml)
       bwxml="yes"
       #earName="$earNameXml"
       pkgdefault=
       shift
       ;;
-    -caldav)
+    caldav)
       caldav="yes"
 
       access="yes"
@@ -735,7 +735,7 @@ do
       pkgdefault=
       shift
       ;;
-    -caldavTest)
+    caldavTest)
       caldavTest="yes"
 
       access="yes"
@@ -747,7 +747,7 @@ do
       pkgdefault=
       shift
       ;;
-    -carddav)
+    carddav)
       carddav="yes"
 
       access="yes"
@@ -760,7 +760,7 @@ do
       pkgdefault=
       shift
       ;;
-    -catsvr)
+    catsvr)
       catsvr="yes"
 
       access="yes"
@@ -772,12 +772,12 @@ do
       pkgdefault=
       shift
       ;;
-    -client)
+    client)
       client="yes"
       pkgdefault=
       shift
       ;;
-    -eventreg)
+    eventreg)
       eventreg="yes"
       #earName="$earNameEventreg"
 
@@ -790,19 +790,19 @@ do
       pkgdefault=
       shift
       ;;
-    -naming)
+    naming)
       naming="yes"
       pkgdefault=
       shift
       ;;
-    -bwutil)
+    bwutil)
       bwutil="yes"
       bwutillog="yes"
 
       pkgdefault=
       shift
       ;;
-    -bwutilhib)
+    bwutilhib)
       bwutilhib="yes"
 
       bwutil="yes"
@@ -810,7 +810,7 @@ do
       pkgdefault=
       shift
       ;;
-    -bwutildeploy)
+    bwutildeploy)
       bwutildeploy="yes"
 
       bwutil="yes"
@@ -818,20 +818,20 @@ do
       pkgdefault=
       shift
       ;;
-    -bwutillog)
+    bwutillog)
       bwutillog="yes"
 
       pkgdefault=
       shift
       ;;
-    -bwutil2)
+    bwutil2)
       bwutil2="yes"
 
       bwxml="yes"
       pkgdefault=
       shift
       ;;
-    -exchgGateway)
+    exchgGateway)
       exchgGateway="yes"
 
 #      access="yes"
@@ -840,7 +840,7 @@ do
       pkgdefault=
       shift
       ;;
-    -selfreg)
+    selfreg)
       selfreg="yes"
       #earName="$earNameSelfreg"
 
@@ -851,7 +851,7 @@ do
       pkgdefault=
       shift
       ;;
-    -synch)
+    synch)
       synch="yes"
       #earName="$earNameSynch"
 
@@ -865,13 +865,13 @@ do
       pkgdefault=
       shift
       ;;
-    -testsuite)
+    testsuite)
       testsuite="yes"
 
       pkgdefault="yes"
       shift
       ;;
-    -tzsvr)
+    tzsvr)
       tzsvr="yes"
 
       bwxml="yes"
@@ -882,7 +882,7 @@ do
       pkgdefault=
       shift
       ;;
-    -webdav)
+    webdav)
       webdav="yes"
 
       access="yes"
@@ -891,7 +891,7 @@ do
       pkgdefault=
       shift
       ;;
-    -xsl)
+    xsl)
       xsl="yes"
 
       bwutildeploy="yes"

@@ -19,7 +19,6 @@
     <hibernateProperty>hibernate.dialect=org.hibernate.dialect.H2Dialect</hibernateProperty>
     <hibernateProperty>net.sf.ehcache.configurationResourceName=/ehcache.xml</hibernateProperty>
   </hibernateProperties>
-  <lastChanged>0</lastChanged>
   <missingTargetRetries>10</missingTargetRetries>
   <name>synch-config</name>
   <privKeys>${org.bedework.data.dir}/privkeys</privKeys>
