@@ -138,7 +138,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="bedework" target="1.5" />
+      <module name="bedework" target="1.8" />
       <module name="bw-access" target="1.8" />
       <module name="bw-addrbook-client" target="1.8" />
       <module name="bw-caldav" target="1.8" />
@@ -181,7 +181,7 @@
       <module name="bw-calendar-engine-tools" target="1.8" />
       <module name="bw-calendar-engine-ucaldav" target="1.8" />
       <module name="bw-calendar-engine-userws" target="1.8" />
-      <module name="bw-calendar-xsl" target="1.5" />
+      <module name="bw-calendar-xsl" target="1.8" />
       <module name="bw-caleng-annotations" target="1.8" />
       <module name="bw-caleng-api" target="1.8" />
       <module name="bw-caleng-caldav" target="1.8" />
@@ -216,7 +216,7 @@
       <module name="bw-carddav-userweb-war" target="1.8" />
       <module name="bw-cli" target="1.8" />
       <module name="bw-deploy-maven-plugin" target="1.8" />
-      <module name="bw-dotwell-known" target="1.5" />
+      <module name="bw-dotwell-known" target="1.8" />
       <module name="bw-event-registration" target="1.8" />
       <module name="bw-event-registration-common" target="1.8" />
       <module name="bw-event-registration-ear" target="1.8" />

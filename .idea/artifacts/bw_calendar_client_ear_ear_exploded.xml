@@ -208,6 +208,10 @@
         <element id="library" level="project" name="Maven: org.hibernate:hibernate-ehcache:5.2.5.Final" />
         <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.5.4" />
         <element id="library" level="project" name="Maven: javax.mail:javax.mail-api:1.5.4" />
+        <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.3.0" />
+        <element id="library" level="project" name="Maven: javax.xml.soap:javax.xml.soap-api:1.4.0" />
+        <element id="library" level="project" name="Maven: javax.xml.ws:jaxws-api:2.3.1" />
+        <element id="library" level="project" name="Maven: javax.annotation:javax.annotation-api:1.3.2" />
         <element id="library" level="project" name="Maven: javax.servlet:jstl:1.1.2" />
         <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
         <element id="library" level="project" name="Maven: xalan:xalan:2.7.1" />
