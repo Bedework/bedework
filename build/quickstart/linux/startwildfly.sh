@@ -61,14 +61,23 @@ if [ "x$JAVA" = "x" ]; then
     fi
 fi
 
-version=$("$JAVA" -version 2>&1 | awk -F '"' '/version/ {print $2}')
-#echo version "$version"
-version="${version:2:1}"
-java8plus=false
-if [[ "$version" -lt "8" ]]; then
-  echo "Java 8 or greater is required for bedework"
+
+# 11 onwards
+version=$($JAVA -version 2>&1 | sed -E -n 's/.* version "([^.-]*).*/\1/p')
+if [[ "$version" -lt "11" ]]; then
+  echo "Java 11 or greater is required for bedework"
   exit 1
 fi
+
+# Up to Java 8
+
+# version=$("$JAVA" -version 2>&1 | awk -F '"' '/version/ {print $2}')
+#echo version "$version"
+# version="${version:2:1}"
+# if [[ "$version" -lt "8" ]]; then
+#   echo "Java 8 or greater is required for bedework"
+#   exit 1
+# fi
 
 # =================== End defaults ===============================
 
@@ -185,7 +194,8 @@ JAVA_OPTS="$JAVA_OPTS $profiler"
 HAWT_OPTS="-Dhawtio.authenticationEnabled=true -Dhawtio.realm=other -Dhawtio.role=hawtioadmin"
 
 if [ "$debugGc" = "true" ] ; then
-  export JAVA_OPTS="$JAVA_OPTS -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -Xloggc:$JBOSS_SERVER_DIR/log/jvm.log -verbose:gc "
+  # Java 8 export JAVA_OPTS="$JAVA_OPTS -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -Xloggc:$JBOSS_SERVER_DIR/log/jvm.log -verbose:gc "
+  export JAVA_OPTS="$JAVA_OPTS -Xlog:gc* -Xloggc:$JBOSS_SERVER_DIR/log/jvm.log -verbose:gc "
 fi
  
 export JAVA_OPTS="$JAVA_OPTS -XX:MetaspaceSize=$permsize -XX:MaxMetaspaceSize=$permsize"
