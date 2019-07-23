@@ -237,7 +237,13 @@ downloadWildFly() {
   fi
 
   markStarted $downloadWildfly
-  wget http://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.zip
+#  wget http://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.zip
+# First download galleon
+
+  wget https://github.com/wildfly/galleon/releases/download/4.0.3.Final/galleon-4.0.3.Final.zip
+  unzip ...
+  galleon.sh install wildfly:current --dir=my-wildfly-server --layers=wildfly-core,jms-activemq
+
   markDone $downloadWildfly
 }
 

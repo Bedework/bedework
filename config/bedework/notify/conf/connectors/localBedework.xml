@@ -4,7 +4,6 @@
   <connectorClassName>org.bedework.notifier.cnctrs.bedework.BedeworkConnector</connectorClassName>
   <id>bedeworkCal</id>
   <keepAliveInterval>300</keepAliveInterval>
-  <lastChanged>0</lastChanged>
   <mbeanClassName>org.bedework.notifier.cnctrs.bedework.BedeworkConnConf</mbeanClassName>
   <name>localBedework</name>
   <readOnly>false</readOnly>

@@ -10,7 +10,5 @@
   <indexerURL>localhost:9200</indexerURL>
   <maxEntityThreads>5</maxEntityThreads>
   <maxPrincipalThreads>5</maxPrincipalThreads>
-  <publicIndexName>bwpublic</publicIndexName>
   <skipPaths>*/Deleted</skipPaths>
-  <userIndexName>bwuser</userIndexName>
 </index-properties>
