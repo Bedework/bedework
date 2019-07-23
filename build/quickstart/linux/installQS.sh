@@ -242,7 +242,12 @@ downloadWildFly() {
 
   wget https://github.com/wildfly/galleon/releases/download/4.0.3.Final/galleon-4.0.3.Final.zip
   unzip ...
-  galleon.sh install wildfly:current --dir=my-wildfly-server --layers=wildfly-core,jms-activemq
+
+  mkdir wildfly
+  galleon.sh install wildfly:current --dir=wildfly --layers=core-serverll,jms-activemq
+
+  mkdir wildfly/standalone/log
+
 
   markDone $downloadWildfly
 }
