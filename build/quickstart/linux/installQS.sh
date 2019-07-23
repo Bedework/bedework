@@ -37,20 +37,28 @@ if [ -z "$JAVA_HOME" -o ! -d "$JAVA_HOME" ] ; then
   exit 1
 fi
 
-javaVersion=$("$JAVA_HOME/bin/java" -version 2>&1 | awk -F '"' '/version/ {print $2}')
-#echo version "$version"
-javaVersion="${javaVersion:2:1}"
-#echo "$version"
-if [[ "$javaVersion" -lt "8" ]]; then
-  echo
-  echo "************************************************"
-  echo "*  Java 8 or greater is required for bedework."
-  echo "************************************************"
-  echo
+# 11 onwards
+version=$($JAVA -version 2>&1 | sed -E -n 's/.* version "([^.-]*).*/\1/p')
+if [[ "$version" -lt "11" ]]; then
+  echo "Java 11 or greater is required for bedework"
   exit 1
 fi
 
-JBOSS_VERSION="wildfly-10.1.0.Final"
+#javaVersion=$("$JAVA_HOME/bin/java" -version 2>&1 | awk -F '"' '/version/ {print $2}')
+#echo version "$version"
+#javaVersion="${javaVersion:2:1}"
+#echo "$version"
+#if [[ "$javaVersion" -lt "8" ]]; then
+#  echo
+#  echo "************************************************"
+#  echo "*  Java 8 or greater is required for bedework."
+#  echo "************************************************"
+#  echo
+#  exit 1
+#fi
+
+#JBOSS_VERSION="wildfly-10.1.0.Final"
+JBOSS_VERSION="wildfly"
 
 # We create empty files in this directory to track progress
 progressDir="bwinstaller-progress"
@@ -244,7 +252,7 @@ downloadWildFly() {
   unzip ...
 
   mkdir wildfly
-  galleon.sh install wildfly:current --dir=wildfly --layers=core-serverll,jms-activemq
+  ./galleon-4.0.3.Final/bin/galleon.sh install wildfly:current --dir=wildfly --layers=core-server,jms-activemq,core-tools
 
   mkdir wildfly/standalone/log
 
