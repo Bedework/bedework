@@ -9,7 +9,6 @@
   <groupDnPrefix>cn=</groupDnPrefix>
   <groupDnSuffix>,ou=groups,dc=bedework, dc=org</groupDnSuffix>
   <groupIdAttr>cn</groupIdAttr>
-  <groupMemberAttr>member</groupMemberAttr>
   <groupMemberGroupIdAttr>cn</groupMemberGroupIdAttr>
   <groupMemberUserIdAttr>uid</groupMemberUserIdAttr>
   <groupObjectClass>groupOfUniqueNames</groupObjectClass>
