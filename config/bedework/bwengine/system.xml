@@ -11,8 +11,6 @@
   <featureFlags>-VPOLLUI-</featureFlags>
   <ischeduleURI>/ischedule/</ischeduleURI>
   <mailerClass>org.bedework.mail.DummyMailer</mailerClass>
-  <notifierId>notify-user</notifierId>
-  <notifierToken>abcd</notifierToken>
   <rootUsers>admin</rootUsers>
   <socketToken>abcd</socketToken>
   <suggestionEnabled>true</suggestionEnabled>
