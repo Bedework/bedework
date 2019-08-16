@@ -196,8 +196,8 @@ cat <<EOT >> "$qs"/profile.txt
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <maven.compiler.source>1.11</maven.compiler.source>
-        <maven.compiler.target>1.11</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <org.bedework.deployment.basedir>$qs</org.bedework.deployment.basedir>
         <org.bedework.deployment.properties>$qs/bedework/config/wildfly.deploy.properties</org.bedework.deployment.properties>
       </properties>
