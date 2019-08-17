@@ -254,6 +254,8 @@ installWildFly() {
 
   ./galleon-4.0.3.Final/bin/galleon.sh install wildfly:17.0#$JBOSS_VERSION --dir=wildfly --layers=core-server,jms-activemq,core-tools
 
+  cp bedework/config/standalone.xml ${wildflyConfDir}
+
   mkdir $JBOSS_BASE_DIR/standalone/log
 
   if [ ! -d "$qs/$TMP_DIR" ]; then
@@ -261,6 +263,9 @@ installWildFly() {
   fi
 
   mkdir $qs/$JBOSS_DATA_DIR
+
+  # Add a generic named link to the current wildfly
+  ln -s $JBOSS_BASE_DIR wildfly
 
   markDone $installWildfly
 }
@@ -294,7 +299,6 @@ installScripts() {
   # Copy the config files into the appserver
 
   cp -r bedework/config/bedework ${wildflyConfDir}
-  cp bedework/config/standalone.xml ${wildflyConfDir}
 
   markDone $installScripts
 }
