@@ -1,6 +1,13 @@
 <component name="ArtifactManager">
   <artifact type="exploded-ear" name="bw-calendar-client-ear:ear exploded">
     <output-path>$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/target/bw-cal-3.12.8-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>bw-calendar-client-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
     <root id="root">
       <element id="javaee-facet-resources" facet="bw-calendar-client-ear/javaeeApplication/JavaEE" />
       <element id="directory" name="META-INF">

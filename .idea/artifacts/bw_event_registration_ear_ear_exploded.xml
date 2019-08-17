@@ -1,6 +1,13 @@
 <component name="ArtifactManager">
   <artifact type="exploded-ear" name="bw-event-registration-ear:ear exploded">
     <output-path>$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/target/bw-event-registration-4.0.7-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>bw-event-registration-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
     <root id="root">
       <element id="javaee-facet-resources" facet="bw-event-registration-ear/javaeeApplication/JavaEE" />
       <element id="directory" name="META-INF">

@@ -2,6 +2,15 @@
 === Release Notes
 
 ==== Dev:
+  * Upgrade to ES 7.2.0
+  * Upgrade to wildfly 17.0.1.Final
+    ** Use galleon to install - allows updates
+  * Require java 11.
+    ** Many changes to build. Much of the XML support is removed from java core.
+  * Minor changes
+    ** Add an error log handler
+    ** Add auth user update to cli tools
+    ** Some fixes for travis build
 
 ==== Release 3.12.7:
   * Fixes to install script

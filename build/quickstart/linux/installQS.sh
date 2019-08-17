@@ -57,8 +57,8 @@ fi
 #  exit 1
 #fi
 
-#JBOSS_VERSION="wildfly-10.1.0.Final"
-JBOSS_VERSION="wildfly"
+JBOSS_VERSION="17.0.1.Final"
+JBOSS_BASE_DIR="wildfly-$JBOSS_VERSION"
 
 # We create empty files in this directory to track progress
 progressDir="bwinstaller-progress"
@@ -66,14 +66,14 @@ progressDir="bwinstaller-progress"
 # Assigned below
 progressPath=
 
-wildflyConfDir="${JBOSS_VERSION}/standalone/configuration"
+wildflyConfDir="${JBOSS_BASE_DIR}/standalone/configuration"
 
 resources=$BASE_DIR/bedework/build/quickstart
 
 JBOSS_CONFIG="standalone"
 
 # These relative to $qs
-JBOSS_SERVER_DIR="$JBOSS_VERSION/$JBOSS_CONFIG"
+JBOSS_SERVER_DIR="$JBOSS_BASE_DIR/$JBOSS_CONFIG"
 JBOSS_DATA_DIR="$JBOSS_SERVER_DIR/data"
 bedework_data_dir="$JBOSS_DATA_DIR/bedework"
 es_data_dir="$bedework_data_dir/elasticsearch"
@@ -213,8 +213,7 @@ EOT
 # -------------------------------------------------------------------
 
 # These are the steps in the process
-downloadWildfly="downloadWildFly"
-unpackWildfly="unpackWildFly"
+installWildfly="installWildFly"
 installScripts="installScripts"
 installDrivers="installDrivers"
 installHawtio="installHawtio"
@@ -228,59 +227,33 @@ installModule="installModule-"
 buildModule="buildModule-"
 
 # -------------------------------------------------------------------
-# download wildfly
+# install wildfly
 # -------------------------------------------------------------------
-downloadWildFly() {
+installWildFly() {
   echo "---------------------------------------------------------------"
-  echo "Download wildfly"
+  echo "Install wildfly"
 
-  if stepDone $downloadWildfly; then
+  if stepDone $installWildfly; then
     echo "Already done"
     return
   fi
 
-  if stepStarted $downloadWildfly; then
+  if stepStarted $installWildfly; then
     echo "Remove possible partial download"
-    rm ${JBOSS_VERSION}.zip
+    rm -rf galleon-4.0.3.Final*
+    rm -rf $JBOSS_BASE_DIR
   fi
 
-  markStarted $downloadWildfly
-#  wget http://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.zip
+  markStarted $installWildfly
 # First download galleon
 
   wget https://github.com/wildfly/galleon/releases/download/4.0.3.Final/galleon-4.0.3.Final.zip
-  unzip ...
+  unzip galleon-4.0.3.Final.zip
+  rm galleon-4.0.3.Final.zip
 
-  mkdir wildfly
-  ./galleon-4.0.3.Final/bin/galleon.sh install wildfly:current --dir=wildfly --layers=core-server,jms-activemq,core-tools
+  ./galleon-4.0.3.Final/bin/galleon.sh install wildfly:17.0#$JBOSS_VERSION --dir=wildfly --layers=core-server,jms-activemq,core-tools
 
-  mkdir wildfly/standalone/log
-
-
-  markDone $downloadWildfly
-}
-
-# -------------------------------------------------------------------
-# unpack wildfly
-# -------------------------------------------------------------------
-unpackWildFly() {
-  echo "---------------------------------------------------------------"
-  echo "unpack wildfly"
-
-  if stepDone $unpackWildfly; then
-    echo "Already done"
-    return
-  fi
-
-  if stepStarted $unpackWildfly; then
-    echo "Remove possible partial wildfly"
-    rm -rf ${JBOSS_VERSION}
-    unmark $unpackWildfly
-  fi
-
-  markStarted $unpackWildfly
-  unzip ${JBOSS_VERSION}.zip
-  rm ${JBOSS_VERSION}.zip
+  mkdir $JBOSS_BASE_DIR/standalone/log
 
   if [ ! -d "$qs/$TMP_DIR" ]; then
     mkdir -p $qs/$TMP_DIR
@@ -288,7 +261,7 @@ unpackWildFly() {
 
   mkdir $qs/$JBOSS_DATA_DIR
 
-  markDone $unpackWildfly
+  markDone $installWildfly
 }
 
 installScripts() {
@@ -346,13 +319,13 @@ installDrivers() {
   wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/wfmodules.zip
 
   unzip wfmodules.zip
-  cp -r wfmodules/* ${JBOSS_VERSION}/modules/
+  cp -r wfmodules/* ${JBOSS_BASE_DIR}/modules/
   rm wfmodules.zip
   rm -r wfmodules
 
   # Replace h2 jar with later version
-  rm -r ${JBOSS_VERSION}/modules/system/layers/base/com/h2database
-  cp -r bedework/build/quickstart/resources/h2database  ${JBOSS_VERSION}/modules/system/layers/base/com/
+  rm -r ${JBOSS_BASE_DIR}/modules/system/layers/base/com/h2database
+  cp -r bedework/build/quickstart/resources/h2database  ${JBOSS_BASE_DIR}/modules/system/layers/base/com/
 
   markDone $installDrivers
 }
@@ -370,7 +343,7 @@ installHawtio() {
     echo "Remove possible partial downloads"
     rm console.zip
     rm -r console
-    rm -r ${JBOSS_VERSION}/standalone/deployments/hawtio.war*
+    rm -r ${JBOSS_BASE_DIR}/standalone/deployments/hawtio.war*
     unmark $installHawtio
   fi
 
@@ -378,8 +351,8 @@ installHawtio() {
 
   wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/console.zip
   unzip console.zip
-  cp console/hawtio.war ${JBOSS_VERSION}/standalone/deployments/
-  touch ${JBOSS_VERSION}/standalone/deployments/hawtio.war.dodeploy
+  cp console/hawtio.war ${JBOSS_BASE_DIR}/standalone/deployments/
+  touch ${JBOSS_BASE_DIR}/standalone/deployments/hawtio.war.dodeploy
   rm console.zip
   rm -r console
 
@@ -399,7 +372,7 @@ installData() {
 #    echo "Remove possible partial downloads"
 #    rm -rf wfdata
 #    rm wfdata.zip
-#    rm -r ${JBOSS_VERSION}/standalone/data
+#    rm -r ${JBOSS_BASE_DIR}/standalone/data
     unmark $installData
   fi
 
@@ -407,8 +380,8 @@ installData() {
 
 #  wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/wfdata.zip
 #  unzip wfdata.zip
-#  mkdir ${JBOSS_VERSION}/standalone/data
-#  cp -r wfdata/* ${JBOSS_VERSION}/standalone/data/
+#  mkdir ${JBOSS_BASE_DIR}/standalone/data
+#  cp -r wfdata/* ${JBOSS_BASE_DIR}/standalone/data/
 #  rm -rf wfdata
 #  rm wfdata.zip
   resources=$qs/bedework/build/quickstart
@@ -788,9 +761,7 @@ read -p "Hit enter/return to continue" ignore
 #  Installation starts here
 # -------------------------------------------------------------------
 
-downloadWildFly
-
-unpackWildFly
+installWildFly
 
 installScripts
 

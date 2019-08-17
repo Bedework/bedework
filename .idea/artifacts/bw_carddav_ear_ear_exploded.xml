@@ -1,6 +1,13 @@
 <component name="ArtifactManager">
   <artifact type="exploded-ear" name="bw-carddav-ear:ear exploded">
     <output-path>$PROJECT_DIR$/../bw-carddav/bw-carddav-ear/target/bw-carddav-4.0.8-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>bw-carddav-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
     <root id="root">
       <element id="javaee-facet-resources" facet="bw-carddav-ear/javaeeApplication/JavaEE" />
       <element id="directory" name="META-INF">

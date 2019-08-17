@@ -1,6 +1,12 @@
 <component name="ArtifactManager">
   <artifact type="ear" name="bw-carddav-ear:ear">
     <output-path>$PROJECT_DIR$/../bw-carddav/bw-carddav-ear/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>bw-carddav-ear</module>
+        <packaging>ear</packaging>
+      </options>
+    </properties>
     <root id="archive" name="bw-carddav-4.0.8-SNAPSHOT.ear">
       <element id="artifact" artifact-name="bw-carddav-ear:ear exploded" />
     </root>

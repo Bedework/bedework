@@ -1,7 +1,7 @@
 [[features-of-Bedework]]
 === Features of Bedework
 
-  * Java: Written completely in Java, Bedework is system independent.  This version compiles and runs in Java 1.8.
+  * Java: Written completely in Java, Bedework is system independent.  This version compiles and runs in Java 11.
 
   * Standards based and interoperable: Interoperability with other calendar systems and clients by way of standards compliance is a fundamental design goal of the Bedework system. The following standards are supported:
     ** iCalendar support (rfc5545)
