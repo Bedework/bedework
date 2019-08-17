@@ -104,8 +104,8 @@ Ensure the jdbc driver is installed in the modules directory - something like:
 
 [source]
 ----
-wildfly-10.1.0.Final/modules/org/postgresql/main/module.xml
-wildfly-10.1.0.Final/modules/org/postgresql/main/postgresql-8.4-701.jdbc4.jar
+wildfly/modules/org/postgresql/main/module.xml
+wildfly/modules/org/postgresql/main/postgresql-8.4-701.jdbc4.jar
 ----
 
 Module.xml for this example contains
@@ -130,7 +130,7 @@ Modify it appropriately for different versions.
 
 Start wildfly and allow it to fully deploy. There will be many errors relating to the calendar database.
 
-Delete the file ***wildfly-10.1.0.Final/standalone/data/bedework/dumprestore/schema.sql***
+Delete the file ***wildfly/standalone/data/bedework/dumprestore/schema.sql***
 
 ===== Use the cli to install the schema.
 
@@ -147,10 +147,10 @@ This should install the schema. It will also create a file which can be manually
 
 [source]
 ----
-psql caldb < wildfly-10.1.0.Final/standalone/data/bedework/dumprestore/schema.sql
+psql caldb < wildfly/standalone/data/bedework/dumprestore/schema.sql
 ----
 
-Next you need to add some basic data. For this you need the full path to the initial data in wildfly-10.1.0.Final/standalone/data/bedework/dumprestore/initbedework.xml
+Next you need to add some basic data. For this you need the full path to the initial data in wildfly/standalone/data/bedework/dumprestore/initbedework.xml
 
 In the cli enter the command
 

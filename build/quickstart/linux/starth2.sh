@@ -14,7 +14,7 @@ if [ "x$JAVA" = "x" ]; then
   fi
 fi
 
-JBOSS_VERSION="wildfly-10.1.0.Final"
+JBOSS_VERSION="wildfly"
 
 JBOSS_CONFIG="standalone"
 JBOSS_SERVER_DIR="$BASE_DIR/$JBOSS_VERSION/$JBOSS_CONFIG"

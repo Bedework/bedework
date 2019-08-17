@@ -14,20 +14,14 @@ if [ -z "$JAVA_HOME" -o ! -d "$JAVA_HOME" ] ; then
   exit 1
 fi
 
-version=$("$JAVA_HOME/bin/java" -version 2>&1 | awk -F '"' '/version/ {print $2}')
-#echo version "$version"
-version="${version:2:1}"
-#echo "$version"
-if [[ "$version" -lt "8" ]]; then
-  echo
-  echo "************************************************"
-  echo "*  Java 8 or greater is required for bedework."
-  echo "************************************************"
-  echo
+# Check our java version
+version=$($JAVA -version 2>&1 | sed -E -n 's/.* version "([^.-]*).*/\1/p')
+if [[ "$version" -lt "11" ]]; then
+  echo "Java 11 or greater is required for bedework"
   exit 1
 fi
 
-JBOSS_VERSION="wildfly-10.1.0.Final"
+JBOSS_VERSION="wildfly"
 
 if [ ! -d "$JBOSS_VERSION" ]; then
   echo "Not located in the quickstart"

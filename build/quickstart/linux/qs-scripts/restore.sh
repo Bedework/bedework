@@ -4,7 +4,7 @@
 
 BASE_DIR=`pwd`
 
-JBOSS_VERSION="wildfly-10.1.0.Final"
+JBOSS_VERSION="wildfly"
 
 if [ ! -d "$JBOSS_VERSION" ]; then
   echo "Not located in the quickstart"

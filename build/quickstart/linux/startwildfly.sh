@@ -61,28 +61,17 @@ if [ "x$JAVA" = "x" ]; then
     fi
 fi
 
-
-# 11 onwards
+# Check our java version
 version=$($JAVA -version 2>&1 | sed -E -n 's/.* version "([^.-]*).*/\1/p')
 if [[ "$version" -lt "11" ]]; then
   echo "Java 11 or greater is required for bedework"
   exit 1
 fi
 
-# Up to Java 8
-
-# version=$("$JAVA" -version 2>&1 | awk -F '"' '/version/ {print $2}')
-#echo version "$version"
-# version="${version:2:1}"
-# if [[ "$version" -lt "8" ]]; then
-#   echo "Java 8 or greater is required for bedework"
-#   exit 1
-# fi
-
 # =================== End defaults ===============================
 
 LOG_THRESHOLD="-Dorg.bedework.log.level=INFO"
-JBOSS_VERSION="wildfly-10.1.0.Final"
+JBOSS_VERSION="wildfly"
 
 while [ "$1" != "" ]
 do

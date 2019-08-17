@@ -80,10 +80,10 @@ decrypts to-->A variable of array type holds a reference to an object.
 Validity check succeeded
 ----
 
-If you are using multiple servers copy the resulting key file from <quickstart>/wildfly-10.1.0.Final/standalone/data/bedework/ on to each server.
+If you are using multiple servers copy the resulting key file from <quickstart>/wildfly/standalone/data/bedework/ on to each server.
 Ensure calendar server(s) can locate the synch engine.
 
-The bwengine/synch settings are configured to use a jvm system property to locate the synch engine. In file <quickstart>/wildfly-10.1.0.Final/standalone/configuration/bedework/bwengine/synch.xml you should see:
+The bwengine/synch settings are configured to use a jvm system property to locate the synch engine. In file <quickstart>/wildfly/standalone/configuration/bedework/bwengine/synch.xml you should see:
 
 
 [source,xml]

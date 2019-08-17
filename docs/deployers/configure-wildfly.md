@@ -3,7 +3,7 @@
 ### Adding an admin account
 
 ```
-cd wildfly-10.1.0.Final
+cd wildfly
 ./bin/add-user.sh
     
    What type of user do you wish to add?
