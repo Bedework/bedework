@@ -5,7 +5,7 @@
 BASE_DIR=`pwd`
 scriptName="$0"
 restart=
-latestVersion="3.12.7"
+latestVersion="3.13.0"
 
 # -------------------Module versions -----------------------------
 bwUtilLoggingVersion="4.0.2"
@@ -24,9 +24,10 @@ bwEventRegistrationVersion="4.0.6"
 bwNotifierVersion="4.0.7"
 bwCliVersion="4.0.5"
 bwCarddavVersion="4.0.7"
-bwCalendarEngineVersion="3.12.7"
-bwCalendarClientVersion="3.12.7"
-bwCalendarXslVersion="3.12.5"
+
+bwCalendarEngineVersion="3.13.0"
+bwCalendarClientVersion="3.13.0"
+bwCalendarXslVersion="3.13.0"
 
 
 trap 'cd $BASE_DIR' 0
@@ -308,24 +309,13 @@ installDrivers() {
   fi
 
   if stepStarted $installDrivers; then
-    echo "Remove possible partial downloads"
-    rm wfmodules.zip
-    rm -r wfmodules
+    echo "Remove possible partial copy"
     unmark $installDrivers
   fi
 
   markStarted $installDrivers
 
-  wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/wfmodules.zip
-
-  unzip wfmodules.zip
-  cp -r wfmodules/* ${JBOSS_BASE_DIR}/modules/
-  rm wfmodules.zip
-  rm -r wfmodules
-
-  # Replace h2 jar with later version
-  rm -r ${JBOSS_BASE_DIR}/modules/system/layers/base/com/h2database
-  cp -r bedework/build/quickstart/resources/h2database  ${JBOSS_BASE_DIR}/modules/system/layers/base/com/
+  cp -r bedework/build/quickstart/resources/wfmodules/*  ${JBOSS_BASE_DIR}/modules/
 
   markDone $installDrivers
 }
