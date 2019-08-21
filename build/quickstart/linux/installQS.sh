@@ -252,7 +252,7 @@ installWildFly() {
   unzip galleon-4.0.3.Final.zip
   rm galleon-4.0.3.Final.zip
 
-  ./galleon-4.0.3.Final/bin/galleon.sh install wildfly:17.0#$JBOSS_VERSION --dir=wildfly --layers=core-server,jms-activemq,core-tools
+  ./galleon-4.0.3.Final/bin/galleon.sh install wildfly:17.0#$JBOSS_VERSION --dir=$JBOSS_BASE_DIR --layers=core-server,jms-activemq,core-tools
 
   cp bedework/config/standalone.xml ${wildflyConfDir}
 
@@ -265,6 +265,8 @@ installWildFly() {
   mkdir $qs/$JBOSS_DATA_DIR
 
   # Add a generic named link to the current wildfly
+  cd $qs
+
   ln -s $JBOSS_BASE_DIR wildfly
 
   markDone $installWildfly
