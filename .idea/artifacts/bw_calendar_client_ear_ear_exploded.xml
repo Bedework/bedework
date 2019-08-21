@@ -228,6 +228,11 @@
         <element id="library" level="project" name="Maven: org.elasticsearch.plugin:lang-mustache-client:7.2.0" />
         <element id="library" level="project" name="Maven: com.github.spullara.mustache.java:compiler:0.9.3" />
         <element id="library" level="project" name="Maven: com.google.collections:google-collections:1.0" />
+        <element id="library" level="project" name="Maven: com.sun.xml.messaging.saaj:saaj-impl:1.4.0" />
+        <element id="library" level="project" name="Maven: org.jvnet.mimepull:mimepull:1.9.7" />
+        <element id="library" level="project" name="Maven: org.jvnet.staxex:stax-ex:1.7.8" />
+        <element id="library" level="project" name="Maven: javax.xml.stream:stax-api:1.0-2" />
+        <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
         <element id="library" level="project" name="Maven: org.codehaus.groovy:groovy-all:2.4.0" />
         <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.10.3" />
         <element id="library" level="project" name="Maven: org.hibernate:hibernate-ehcache:5.2.5.Final" />

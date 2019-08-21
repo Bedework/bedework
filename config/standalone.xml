@@ -600,9 +600,7 @@
       <server name="default-server">
         <http-listener name="stunnel" socket-binding="stunnel" secure="true" redirect-socket="https" proxy-address-forwarding="true" enable-http2="true"/>
         <http-listener name="default" socket-binding="http" redirect-socket="https" enable-http2="true"/>
-        <https-listener name="https" socket-binding="https" security-realm="ApplicationRealm" enable-http2="true"/>
         <host name="default-host" alias="localhost">
-          <location name="/welcome" handler="welcome-content"/>
           <location name="/" handler="bedework-content"/>
           <access-log pattern="%h %l %u [%t] &quot;%r&quot; %s %b &quot;%{i,Referer}&quot; &quot;%{i,User-Agent}&quot;"/>
           <filter-ref name="server-header"/>
@@ -616,13 +614,12 @@
         <websockets/>
       </servlet-container>
       <handlers>
-        <file name="welcome-content" path="${jboss.home.dir}/welcome-content"/>
         <file name="bedework-content" path="${jboss.home.dir}/bedework-content" directory-listing="true"/>
       </handlers>
       <filters>
         <response-header name="server-header" header-name="Server" header-value="WildFly/17"/>
         <response-header name="x-powered-by-header" header-name="X-Powered-By" header-value="Undertow/9"/>
-        <error-page name="404-handler" code="404" path="${jboss.home.dir}/welcome-content/Error404.html"/>
+        <error-page name="404-handler" code="404" path="${jboss.home.dir}/bedework-content/Error404.html"/>
       </filters>
     </subsystem>
   </profile>
