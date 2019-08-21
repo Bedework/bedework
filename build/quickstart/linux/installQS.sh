@@ -39,7 +39,7 @@ if [ -z "$JAVA_HOME" -o ! -d "$JAVA_HOME" ] ; then
 fi
 
 # 11 onwards
-version=$($JAVA -version 2>&1 | sed -E -n 's/.* version "([^.-]*).*/\1/p')
+version=$($JAVA_HOME/bin/java -version 2>&1 | sed -E -n 's/.* version "([^.-]*).*/\1/p')
 if [[ "$version" -lt "11" ]]; then
   echo "Java 11 or greater is required for bedework"
   exit 1
