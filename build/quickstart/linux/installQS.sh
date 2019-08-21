@@ -254,7 +254,7 @@ installWildFly() {
 
   ./galleon-4.0.3.Final/bin/galleon.sh install wildfly:17.0#$JBOSS_VERSION --dir=$JBOSS_BASE_DIR --layers=core-server,jms-activemq,core-tools
 
-  cp bedework/config/standalone.xml ${wildflyConfDir}
+  cp $qs/bedework/config/standalone.xml ${wildflyConfDir}
 
   mkdir $JBOSS_BASE_DIR/standalone/log
 
