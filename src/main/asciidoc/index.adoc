@@ -36,6 +36,7 @@ include::{overview-dir}technologies.adoc[]
 == Public Administrator Features
 include::{admin-dir}eventRegistration.adoc[]
 include::{admin-dir}subscriptions.adoc[]
+include::{admin-dir}authusers.adoc[]
 
 == Deployers
 include::{deployer-dir}installing.adoc[]
