@@ -7,6 +7,10 @@ scriptName="$0"
 restart=
 latestVersion="3.13.0"
 
+esDownlloadLink="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-linux-x86_64.tar.gz"
+JBOSS_VERSION="17.0.1.Final"
+galleonVersion="4.0.3.Final"
+
 # -------------------Module versions -----------------------------
 bwUtilLoggingVersion="4.0.2"
 bwXmlVersion="4.0.8"
@@ -58,7 +62,6 @@ fi
 #  exit 1
 #fi
 
-JBOSS_VERSION="17.0.1.Final"
 JBOSS_BASE_DIR="wildfly-$JBOSS_VERSION"
 
 # We create empty files in this directory to track progress
@@ -241,18 +244,18 @@ installWildFly() {
 
   if stepStarted $installWildfly; then
     echo "Remove possible partial download"
-    rm -rf galleon-4.0.3.Final*
+    rm -rf galleon-$galleonVersion*
     rm -rf $JBOSS_BASE_DIR
   fi
 
   markStarted $installWildfly
 # First download galleon
 
-  wget https://github.com/wildfly/galleon/releases/download/4.0.3.Final/galleon-4.0.3.Final.zip
-  unzip galleon-4.0.3.Final.zip
-  rm galleon-4.0.3.Final.zip
+  wget https://github.com/wildfly/galleon/releases/download/$galleonVersion/galleon-$galleonVersion.zip
+  unzip galleon-$galleonVersion.zip
+  rm galleon-$galleonVersion.zip
 
-  ./galleon-4.0.3.Final/bin/galleon.sh install wildfly:17.0#$JBOSS_VERSION --dir=$JBOSS_BASE_DIR --layers=core-server,jms-activemq,core-tools
+  ./galleon-$galleonVersion/bin/galleon.sh install wildfly:17.0#$JBOSS_VERSION --dir=$JBOSS_BASE_DIR --layers=core-server,jms-activemq,core-tools
 
   cp $qs/bedework/config/standalone.xml ${wildflyConfDir}
 

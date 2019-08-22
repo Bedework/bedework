@@ -5,11 +5,17 @@
   * Upgrade to ES 7.2.0
   * Upgrade to wildfly 17.0.1.Final
     ** Use galleon to install - allows updates
+    ** Don't use wildfly modules for deployed ear dependencies.
   * Require java 11.
     ** Many changes to build. Much of the XML support is removed from java core.
+    ** Updates to maven plugin versions
   * Minor changes
     ** Add an error log handler
+    ** Reduce noise in logs
+      *** Remove bogus elemens from config files
+      *** Remove ldap group member so we don't get annoying error messages
     ** Add auth user update to cli tools
+    ** Fix NPE when editing auth user that doesn't exist
     ** Some fixes for travis build
 
 ==== Release 3.12.7:
