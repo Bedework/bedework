@@ -1,10 +1,10 @@
-# Configuring wildfly
+== Configuring wildfly
 
-### Adding an admin account
+==== Adding an admin account
 
 ```
 cd wildfly
-./bin/add-user.sh
+./bin/add-user.sh -dc standalone
     
    What type of user do you wish to add?
     a) Management User (mgmt-users.properties)
@@ -23,10 +23,10 @@ cd wildfly
    What groups do you want this user to belong to? (Please enter a comma separated list, or leave blank for none)[  ]: admin
    About to add user 'hawtio-admin' for realm 'ApplicationRealm'
    Is this correct yes/no? yes
-   Added user 'hawtio-admin' to file '/Users/xxx/dev/eap/wildfly-8.1.0.Final/standalone/configuration/application-users.properties'
-   Added user 'hawtio-admin' to file '/Users/xxx/dev/eap/wildfly-8.1.0.Final/domain/configuration/application-users.properties'
-   Added user 'hawtio-admin' with groups admin to file '/Users/xxx/dev/eap/wildfly-8.1.0.Final/standalone/configuration/application-roles.properties'
-   Added user 'hawtio-admin' with groups admin to file '/Users/xxx/dev/eap/wildfly-8.1.0.Final/domain/configuration/application-roles.properties'
+   Added user 'hawtio-admin' to file '/Users/xxx/dev/wildfly/standalone/configuration/application-users.properties'
+   Added user 'hawtio-admin' to file '/Users/xxx/dev/wildfly/standalone/configuration/application-users.properties'
+   Added user 'hawtio-admin' with groups admin to file '/Users/xxx/dev/wildfly/standalone/configuration/application-roles.properties'
+   Added user 'hawtio-admin' with groups admin to file '/Users/xxx/dev/wildfly/standalone/configuration/application-roles.properties'
    Is this new user going to be used for one AS process to connect to another AS process?
    e.g. for a slave host controller connecting to the master or for a Remoting connection for server to server EJB calls.
    yes/no? no

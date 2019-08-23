@@ -7,7 +7,7 @@ scriptName="$0"
 restart=
 latestVersion="3.13.0"
 
-esDownlloadLink="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-linux-x86_64.tar.gz"
+esDockerPull="docker pull docker.elastic.co/elasticsearch/elasticsearch:7.2.0"
 JBOSS_VERSION="17.0.1.Final"
 galleonVersion="4.0.3.Final"
 
@@ -218,6 +218,7 @@ EOT
 
 # These are the steps in the process
 installWildfly="installWildFly"
+installES="installES"
 installScripts="installScripts"
 installDrivers="installDrivers"
 installHawtio="installHawtio"
@@ -225,13 +226,14 @@ installSources="installSources"
 installData="installData"
 installApacheds="installApacheds"
 buildModules="buildModules"
+indexData="indexData"
 
 # Suffixed with module name
 installModule="installModule-"
 buildModule="buildModule-"
 
 # -------------------------------------------------------------------
-# install wildfly
+# -------------------------------------------------------------------
 # -------------------------------------------------------------------
 installWildFly() {
   echo "---------------------------------------------------------------"
@@ -275,9 +277,42 @@ installWildFly() {
 
   ln -s $JBOSS_BASE_DIR wildfly
 
+  read -p "Enter the admin account: " adminId
+  read -p "Enter the admin password: " -s adminPw
+
+  ./wildfly/bin/add-user.sh -a -dc wildfly/standalone/configuration -g admin $adminId $adminPw
+
   markDone $installWildfly
 }
 
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+installES() {
+  echo "---------------------------------------------------------------"
+  echo "Install elasticsearch"
+
+  if stepDone $installES; then
+    echo "Already done"
+    return
+  fi
+
+  if stepStarted $installES; then
+    echo "Remove possible partial download"
+  fi
+
+  markStarted $installES
+
+  $esDockerPull
+
+  # can be started/stopped with the startES.sh and stopES.sh scripts
+
+  markDone $installES
+}
+
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
 installScripts() {
   echo "---------------------------------------------------------------"
   echo "Install scripts from bedework repo"
@@ -490,10 +525,6 @@ cloneRepo() {
   fi
 
   echo "git clone https://github.com/Bedework/$moduleName.git"
-  if [ "$2" == "echo" ] ; then
-    return
-  fi
-
   git clone https://github.com/Bedework/"$moduleName".git
 
   markDone "$stepName"
@@ -529,9 +560,6 @@ cloneRepoBranch() {
   fi
 
   echo "git clone -b $moduleName-$1 https://github.com/Bedework/$moduleName.git"
-  if [ "$2" == "echo" ] ; then
-    return
-  fi
   git clone -b "$moduleName"-"$1" https://github.com/Bedework/"$moduleName".git
 
   markDone "$stepName"
@@ -563,50 +591,50 @@ installSources() {
 
   if [ "$version" == "dev" ] ; then
     # Bedework below
-    cloneRepo bw-access "$1"
-    cloneRepo bw-caldav "$1"
-    cloneRepo bw-caldavTest "$1"
-    cloneRepo bw-calendar-client "$1"
-    cloneRepo bw-calendar-engine "$1"
-    cloneRepo bw-calendar-xsl "$1"
-    cloneRepo bw-calsockets "$1"
-    cloneRepo bw-carddav "$1"
-    cloneRepo bw-cli "$1"
-    cloneRepo bw-dotwell-known "$1"
-    cloneRepo bw-event-registration "$1"
-    cloneRepo bw-notifier "$1"
-    cloneRepo bw-self-registration "$1"
-    cloneRepo bw-synch "$1"
-    cloneRepo bw-timezone-server "$1"
-    cloneRepo bw-util "$1"
-    cloneRepo bw-util2 "$1"
-    cloneRepo bw-util-deploy "$1"
-    cloneRepo bw-util-hibernate "$1"
-    cloneRepo bw-util-logging "$1"
-    cloneRepo bw-webdav "$1"
-    cloneRepo bw-xml "$1"
+    cloneRepo bw-access
+    cloneRepo bw-caldav
+    cloneRepo bw-caldavTest
+    cloneRepo bw-calendar-client
+    cloneRepo bw-calendar-engine
+    cloneRepo bw-calendar-xsl
+    cloneRepo bw-calsockets
+    cloneRepo bw-carddav
+    cloneRepo bw-cli
+    cloneRepo bw-dotwell-known
+    cloneRepo bw-event-registration
+    cloneRepo bw-notifier
+    cloneRepo bw-self-registration
+    cloneRepo bw-synch
+    cloneRepo bw-timezone-server
+    cloneRepo bw-util
+    cloneRepo bw-util2
+    cloneRepo bw-util-deploy
+    cloneRepo bw-util-hibernate
+    cloneRepo bw-util-logging
+    cloneRepo bw-webdav
+    cloneRepo bw-xml
   else
-    cloneRepoBranch $bwUtilLoggingVersion bw-util-logging "$1"
-    cloneRepoBranch $bwXmlVersion bw-xml "$1"
-    cloneRepoBranch $bwUtilVersion bw-util "$1"
-    cloneRepoBranch $bwUtil2Version bw-util2 "$1"
-    cloneRepoBranch $bwUtilDeployVersion bw-util-deploy "$1"
-    cloneRepoBranch $bwUtilHibernateVersion bw-util-hibernate "$1"
-    cloneRepoBranch $bwAccessVersion bw-access "$1"
-    cloneRepoBranch $bwWebdavVersion bw-webdav "$1"
-    cloneRepoBranch $bwCaldavVersion bw-caldav "$1"
-    cloneRepoBranch $bwTimezoneServerVersion bw-timezone-server "$1"
-    cloneRepoBranch $bwSynchVersion bw-synch "$1"
-    cloneRepoBranch $bwSelfRegistrationVersion bw-self-registration "$1"
-    cloneRepoBranch $bwEventRegistrationVersion bw-event-registration "$1"
-    cloneRepoBranch $bwNotifierVersion bw-notifier "$1"
-    cloneRepoBranch $bwCliVersion bw-cli "$1"
-    cloneRepoBranch $bwCarddavVersion bw-carddav "$1"
-    cloneRepoBranch $bwCalendarEngineVersion bw-calendar-engine "$1"
-    cloneRepoBranch $bwCalendarClientVersion bw-calendar-client "$1"
-    cloneRepoBranch $bwCalendarXslVersion bw-calendar-xsl "$1"
-    #cloneRepo bw-calsockets "$1"
-    cloneRepo bw-dotwell-known "$1"
+    cloneRepoBranch $bwUtilLoggingVersion bw-util-logging
+    cloneRepoBranch $bwXmlVersion bw-xml
+    cloneRepoBranch $bwUtilVersion bw-util
+    cloneRepoBranch $bwUtil2Version bw-util2
+    cloneRepoBranch $bwUtilDeployVersion bw-util-deploy
+    cloneRepoBranch $bwUtilHibernateVersion bw-util-hibernate
+    cloneRepoBranch $bwAccessVersion bw-access
+    cloneRepoBranch $bwWebdavVersion bw-webdav
+    cloneRepoBranch $bwCaldavVersion bw-caldav
+    cloneRepoBranch $bwTimezoneServerVersion bw-timezone-server
+    cloneRepoBranch $bwSynchVersion bw-synch
+    cloneRepoBranch $bwSelfRegistrationVersion bw-self-registration
+    cloneRepoBranch $bwEventRegistrationVersion bw-event-registration
+    cloneRepoBranch $bwNotifierVersion bw-notifier
+    cloneRepoBranch $bwCliVersion bw-cli
+    cloneRepoBranch $bwCarddavVersion bw-carddav
+    cloneRepoBranch $bwCalendarEngineVersion bw-calendar-engine
+    cloneRepoBranch $bwCalendarClientVersion bw-calendar-client
+    cloneRepoBranch $bwCalendarXslVersion bw-calendar-xsl
+    #cloneRepo bw-calsockets
+    cloneRepo bw-dotwell-known
   fi
 
   markDone $installSources
@@ -680,8 +708,40 @@ buildModules() {
   buildModule bwcli
   buildModule deploy
 
+  # Add some links
+
+  ln -s bw-cli/target/client/bin/client
+
   markDone $buildModules
 }
+
+
+indexData() {
+  echo "---------------------------------------------------------------"
+  echo "Index data"
+
+  if stepDone $indexData; then
+    echo "Already done"
+    return
+  fi
+
+  if stepStarted $indexData; then
+    unmark $indexData
+  fi
+
+  markStarted $indexData
+
+  cd $qs
+
+  ./client -id $adminId -pw $adminPw <<EOF
+rebuildidx
+makeidxprod all
+listidx
+EOF
+
+  markDone $indexData
+}
+
 
 read -p "Enter path or name of empty or new directory: " dirpath
 
@@ -742,6 +802,14 @@ select yn in "Yes" "No"; do
     esac
 done
 
+echo "Do you wish to install and start a docker image of elasticsearch?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) break;;
+        No ) markSkipped ${installES}; break;;
+    esac
+done
+
 mkdir $qs
 cd $qs
 
@@ -765,6 +833,8 @@ read -p "Hit enter/return to continue" ignore
 
 installWildFly
 
+installES
+
 installScripts
 
 installDrivers
@@ -779,3 +849,5 @@ installApacheds
 
 cd $qs
 buildModules
+
+indexData
