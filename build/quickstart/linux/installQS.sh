@@ -226,6 +226,7 @@ installSources="installSources"
 installData="installData"
 installApacheds="installApacheds"
 buildModules="buildModules"
+updateWildfly="updateWildFly"
 indexData="indexData"
 
 # Suffixed with module name
@@ -258,13 +259,6 @@ installWildFly() {
   rm galleon-$galleonVersion.zip
 
   ./galleon-$galleonVersion/bin/galleon.sh install wildfly:17.0#$JBOSS_VERSION --dir=$JBOSS_BASE_DIR --layers=core-server,jms-activemq,core-tools
-
-  cp $qs/bedework/config/standalone.xml ${wildflyConfDir}
-
-  mkdir $JBOSS_BASE_DIR/standalone/log
-  mkdir $JBOSS_BASE_DIR/bedework-content
-  cp $qs/bedework/content/resources/bedework.ico $JBOSS_BASE_DIR/bedework-content/favicon.ico
-  cp $qs/bedework/content/resources/Error404,html $JBOSS_BASE_DIR/bedework-content/
 
   if [ ! -d "$qs/$TMP_DIR" ]; then
     mkdir -p $qs/$TMP_DIR
@@ -346,6 +340,9 @@ installScripts() {
   markDone $installScripts
 }
 
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
 installDrivers() {
   echo "---------------------------------------------------------------"
   echo "Install wildfly drivers"
@@ -716,6 +713,34 @@ buildModules() {
 }
 
 
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+updateWildFly() {
+  echo "---------------------------------------------------------------"
+  echo "update wildfly"
+
+  if stepDone $updateWildfly; then
+    echo "Already done"
+    return
+  fi
+
+  if stepStarted $updateWildfly; then
+    echo "Remove possible partial download"
+  fi
+
+  markStarted $updateWildfly
+
+  cp $qs/bedework/config/standalone.xml ${wildflyConfDir}/
+
+  mkdir $JBOSS_BASE_DIR/standalone/log
+  mkdir $JBOSS_BASE_DIR/bedework-content
+  cp $qs/bedework/content/resources/bedework.ico $JBOSS_BASE_DIR/bedework-content/favicon.ico
+  cp $qs/bedework/content/resources/Error404,html $JBOSS_BASE_DIR/bedework-content/
+
+  markDone $updateWildfly
+}
+
 indexData() {
   echo "---------------------------------------------------------------"
   echo "Index data"
@@ -732,6 +757,16 @@ indexData() {
   markStarted $indexData
 
   cd $qs
+
+  ./starth2
+  ./startES
+  ./startjboss
+
+  # We should have a test to see if it's up - just wait 30 secs
+  sleep 30s
+
+  # Wake it up
+  wget http://localhost:8080/cal
 
   ./client -id $adminId -pw $adminPw <<EOF
 rebuildidx
@@ -849,5 +884,7 @@ installApacheds
 
 cd $qs
 buildModules
+
+updateWildFly
 
 indexData
