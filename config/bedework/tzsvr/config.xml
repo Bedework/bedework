@@ -4,7 +4,7 @@
   <dtstamp>2017-02-24T01:50:00Z</dtstamp>
   <leveldbPath>${org.bedework.data.dir}/tzsvr/leveldbData/</leveldbPath>
   <name>config</name>
-  <primaryServer>false</primaryServer>
+  <primaryServer>true</primaryServer>
   <primaryUrl>www.bedework.org</primaryUrl>
   <refreshDelay>86400</refreshDelay>
   <source>IANA 2016j</source>
