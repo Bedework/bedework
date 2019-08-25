@@ -297,23 +297,12 @@
     <subsystem xmlns="urn:jboss:domain:datasources:5.0">
       <datasources>
         <datasource jndi-name="java:/CalendarDS" pool-name="CalendarDS" enabled="true" use-ccm="false">
-          <connection-url>jdbc:mysql://localhost:3306/calprddb00?useSSL=false</connection-url>
-          <driver>mysql</driver>
-          <pool>
-            <min-pool-size>1</min-pool-size>
-            <max-pool-size>10</max-pool-size>
-            <prefill>true</prefill>
-          </pool>
+          <connection-url>jdbc:h2:tcp://localhost/CalDb</connection-url>
+          <driver>h2</driver>
           <security>
-            <user-name>bw</user-name>
-            <password>bw</password>
+            <user-name>sa</user-name>
+            <password>sa</password>
           </security>
-          <timeout>
-            <idle-timeout-minutes>15</idle-timeout-minutes>
-          </timeout>
-          <statement>
-            <share-prepared-statements>false</share-prepared-statements>
-          </statement>
         </datasource>
         <datasource jta="true" jndi-name="java:/CardDS" pool-name="CardDS" enabled="true" use-ccm="false">
           <connection-url>jdbc:h2:tcp://localhost/CardDb</connection-url>
@@ -324,11 +313,11 @@
           </security>
         </datasource>
         <datasource jndi-name="java:/EventregDS" pool-name="EventregDS" enabled="true" use-java-context="true" use-ccm="false">
-          <connection-url>jdbc:mysql://localhost:3306/eventregdb?useSSL=false</connection-url>
-          <driver>mysql</driver>
+          <connection-url>jdbc:h2:tcp://localhost/EventRegDb</connection-url>
+          <driver>h2</driver>
           <security>
-            <user-name>bw</user-name>
-            <password>bw</password>
+            <user-name>sa</user-name>
+            <password>sa</password>
           </security>
         </datasource>
         <datasource jndi-name="java:/NotifyDS" pool-name="NotifyDS" enabled="true" use-java-context="true" use-ccm="false">
@@ -348,11 +337,11 @@
           </security>
         </datasource>
         <datasource jndi-name="java:/SynchDS" pool-name="SynchDS" enabled="true" use-java-context="true" use-ccm="false">
-          <connection-url>jdbc:mysql://localhost:3306/synchdb?useSSL=false</connection-url>
-          <driver>mysql</driver>
+          <connection-url>jdbc:h2:tcp://localhost/SynchDb</connection-url>
+          <driver>h2</driver>
           <security>
-            <user-name>bw</user-name>
-            <password>bw</password>
+            <user-name>sa</user-name>
+            <password>sa</password>
           </security>
         </datasource>
         <drivers>
