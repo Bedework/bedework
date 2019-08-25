@@ -10,10 +10,12 @@ TMP_DIR="$JBOSS_SERVER_DIR/tmp"
 
 export JBOSS_PIDFILE=$TMP_DIR/bedework.jboss.pid
 
-if [ -e JBOSS_PIDFILE ]; then
+echo "pidfile=$JBOSS_PIDFILE"
+
+if [ -e $JBOSS_PIDFILE ]; then
   printf "Shutting down jboss:  "
-  kill -15 `cat JBOSS_PIDFILE`
-  rm JBOSS_PIDFILE
+  kill -15 `cat $JBOSS_PIDFILE`
+  rm $JBOSS_PIDFILE
 else
   echo "jboss doesn't appear to be running."
 fi
