@@ -8,6 +8,8 @@ if [ "x$JBOSS_PIDFILE" = "x" ]; then
   export JBOSS_PIDFILE=/var/tmp/bedework.jboss.pid
 fi
 
+echo "pidfile=$JBOSS_PIDFILE"
+
 BASE_DIR=`pwd`
 
 PRG="$0"
