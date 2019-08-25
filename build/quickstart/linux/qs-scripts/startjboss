@@ -9,6 +9,7 @@ JBOSS_DATA_DIR="$JBOSS_SERVER_DIR/data"
 TMP_DIR="$JBOSS_SERVER_DIR/tmp"
 
 export JBOSS_PIDFILE=$TMP_DIR/bedework.jboss.pid
+export LAUNCH_JBOSS_IN_BACKGROUND=true
 
 export JAVA_OPTS="$JAVA_OPTS -Dcom.bedework.site.name=bwtest"
 export JAVA_OPTS="$JAVA_OPTS -Dcom.bedework.db.ip=localhost"
