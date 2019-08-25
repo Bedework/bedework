@@ -1,5 +1,7 @@
 #! /bin/bash
 
+BASE_DIR=`pwd`
+
 JBOSS_VERSION="wildfly"
 
 JBOSS_CONFIG="standalone"
