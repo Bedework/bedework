@@ -736,7 +736,7 @@ updateWildFly() {
   mkdir $JBOSS_BASE_DIR/standalone/log
   mkdir $JBOSS_BASE_DIR/bedework-content
   cp $qs/bedework/content/resources/bedework.ico $JBOSS_BASE_DIR/bedework-content/favicon.ico
-  cp $qs/bedework/content/resources/Error404,html $JBOSS_BASE_DIR/bedework-content/
+  cp $qs/bedework/content/resources/Error404.html $JBOSS_BASE_DIR/bedework-content/
 
   markDone $updateWildfly
 }
