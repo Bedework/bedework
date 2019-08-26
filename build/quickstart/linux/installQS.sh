@@ -750,6 +750,11 @@ indexData() {
     return
   fi
 
+  if stepSkipped $indexData; then
+    echo "Skipped"
+    return
+  fi
+
   if stepStarted $indexData; then
     unmark $indexData
   fi
@@ -841,7 +846,7 @@ echo "Do you wish to install and start a docker image of elasticsearch?"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) break;;
-        No ) markSkipped ${installES}; break;;
+        No ) markSkipped ${installES}; markSkipped ${indexData}; break;;
     esac
 done
 
