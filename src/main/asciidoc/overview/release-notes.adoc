@@ -2,6 +2,16 @@
 === Release Notes
 
 ==== Dev:
+
+==== Release 3.13.0:
+This release mostly consists of upgrades to almost the latest ElasticSearch (always a moving target), the currently latest wildfly and to Java 11 the current LTS release.
+
+Installing the quickstart requires that you first install docker if you wish to have a quickstart image of elasticsearch installed.
+
+There have additionally been some minor changes in configuration and the addition of a tool feature to help in calendar suite creation.
+
+Beyond that there is very little functional change since the last release. However, note that the move to the latest ES required a complete rewrite of the query and indexing modules.
+
   * Upgrade to ES 7.2.0
   * Upgrade to wildfly 17.0.1.Final
     ** Use galleon to install - allows updates
@@ -12,7 +22,7 @@
   * Minor changes
     ** Add an error log handler
     ** Reduce noise in logs
-      *** Remove bogus elemens from config files
+      *** Remove bogus elements from config files
       *** Remove ldap group member so we don't get annoying error messages
     ** Add auth user update to cli tools
     ** Fix NPE when editing auth user that doesn't exist

@@ -23,16 +23,17 @@
 <li><a href="#release-notes">1.2. Release Notes</a>
 <ul class="sectlevel3">
 <li><a href="#_dev">1.2.1. Dev:</a></li>
-<li><a href="#_release_3_12_7">1.2.2. Release 3.12.7:</a></li>
-<li><a href="#_release_3_12_6">1.2.3. Release 3.12.6:</a></li>
-<li><a href="#_release_3_12_5">1.2.4. Release 3.12.5:</a></li>
-<li><a href="#_release_3_12_4">1.2.5. Release 3.12.4:</a></li>
-<li><a href="#_release_3_12_3">1.2.6. Release 3.12.3:</a></li>
-<li><a href="#_release_3_12_2">1.2.7. Release 3.12.2:</a></li>
-<li><a href="#_release_3_12_1">1.2.8. Release 3.12.1:</a></li>
-<li><a href="#_release_3_12_0">1.2.9. Release 3.12.0:</a></li>
-<li><a href="#_release_3_11_2">1.2.10. Release 3.11.2:</a></li>
-<li><a href="#_release_3_11_1">1.2.11. Release 3.11.1:</a></li>
+<li><a href="#_release_3_13_0">1.2.2. Release 3.13.0:</a></li>
+<li><a href="#_release_3_12_7">1.2.3. Release 3.12.7:</a></li>
+<li><a href="#_release_3_12_6">1.2.4. Release 3.12.6:</a></li>
+<li><a href="#_release_3_12_5">1.2.5. Release 3.12.5:</a></li>
+<li><a href="#_release_3_12_4">1.2.6. Release 3.12.4:</a></li>
+<li><a href="#_release_3_12_3">1.2.7. Release 3.12.3:</a></li>
+<li><a href="#_release_3_12_2">1.2.8. Release 3.12.2:</a></li>
+<li><a href="#_release_3_12_1">1.2.9. Release 3.12.1:</a></li>
+<li><a href="#_release_3_12_0">1.2.10. Release 3.12.0:</a></li>
+<li><a href="#_release_3_11_2">1.2.11. Release 3.11.2:</a></li>
+<li><a href="#_release_3_11_1">1.2.12. Release 3.11.1:</a></li>
 </ul>
 </li>
 <li><a href="#system-overview">1.3. System Overview</a>
@@ -79,9 +80,11 @@
 <ul class="sectlevel3">
 <li><a href="#_which_version">3.1.1. Which version</a></li>
 <li><a href="#_apacheds">3.1.2. Apacheds</a></li>
-<li><a href="#_maven">3.1.3. Maven</a></li>
-<li><a href="#_building">3.1.4. Building</a></li>
-<li><a href="#_deploying">3.1.5. Deploying</a></li>
+<li><a href="#_elasticsearch">3.1.3. ElasticSearch</a></li>
+<li><a href="#_maven">3.1.4. Maven</a></li>
+<li><a href="#_security">3.1.5. Security</a></li>
+<li><a href="#_building">3.1.6. Building</a></li>
+<li><a href="#_deploying">3.1.7. Deploying</a></li>
 </ul>
 </li>
 <li><a href="#configuring-wildfly">3.2. Configuring wildfly</a>
@@ -271,6 +274,22 @@
 <h3 id="release-notes">1.2. Release Notes</h3>
 <div class="sect3">
 <h4 id="_dev">1.2.1. Dev:</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_release_3_13_0">1.2.2. Release 3.13.0:</h4>
+<div class="paragraph">
+<p>This release mostly consists of upgrades to almost the latest ElasticSearch (always a moving target), the currently latest wildfly and to Java 11 the current LTS release.</p>
+</div>
+<div class="paragraph">
+<p>Installing the quickstart requires that you first install docker if you wish to have a quickstart image of elasticsearch installed.</p>
+</div>
+<div class="paragraph">
+<p>There have additionally been some minor changes in configuration and the addition of a tool feature to help in calendar suite creation.</p>
+</div>
+<div class="paragraph">
+<p>Beyond that there is very little functional change since the last release. However, note that the move to the latest ES required a complete rewrite of the query and indexing modules.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -314,7 +333,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Remove bogus elemens from config files</p>
+<p>Remove bogus elements from config files</p>
 </li>
 <li>
 <p>Remove ldap group member so we don&#8217;t get annoying error messages</p>
@@ -338,7 +357,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_7">1.2.2. Release 3.12.7:</h4>
+<h4 id="_release_3_12_7">1.2.3. Release 3.12.7:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -426,7 +445,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_6">1.2.3. Release 3.12.6:</h4>
+<h4 id="_release_3_12_6">1.2.4. Release 3.12.6:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -540,7 +559,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_5">1.2.4. Release 3.12.5:</h4>
+<h4 id="_release_3_12_5">1.2.5. Release 3.12.5:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -601,7 +620,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_4">1.2.5. Release 3.12.4:</h4>
+<h4 id="_release_3_12_4">1.2.6. Release 3.12.4:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -639,7 +658,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_3">1.2.6. Release 3.12.3:</h4>
+<h4 id="_release_3_12_3">1.2.7. Release 3.12.3:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -706,7 +725,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_2">1.2.7. Release 3.12.2:</h4>
+<h4 id="_release_3_12_2">1.2.8. Release 3.12.2:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -722,7 +741,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_1">1.2.8. Release 3.12.1:</h4>
+<h4 id="_release_3_12_1">1.2.9. Release 3.12.1:</h4>
 <div class="sect4">
 <h5 id="_searching_for_contactslocations">Searching for contacts/locations</h5>
 <div class="ulist">
@@ -800,7 +819,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_0">1.2.9. Release 3.12.0:</h4>
+<h4 id="_release_3_12_0">1.2.10. Release 3.12.0:</h4>
 <div class="sect4">
 <h5 id="_move_to_githubmaven">Move to github/maven</h5>
 <div class="ulist">
@@ -940,7 +959,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_11_2">1.2.10. Release 3.11.2:</h4>
+<h4 id="_release_3_11_2">1.2.11. Release 3.11.2:</h4>
 <div class="sect4">
 <h5 id="_indexing">Indexing</h5>
 <div class="ulist">
@@ -1192,7 +1211,7 @@ autokill killing off some of the long running system jobs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_11_1">1.2.11. Release 3.11.1:</h4>
+<h4 id="_release_3_11_1">1.2.12. Release 3.11.1:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1641,6 +1660,9 @@ This requires git 2.x or greater. The clones use a tag rather than branch and th
 <div class="ulist">
 <ul>
 <li>
+<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.13.0/build/quickstart/linux/installQS.sh">3.13.0</a></p>
+</li>
+<li>
 <p><a href="https://github.com/Bedework/bedework/raw/bedework-3.12.7/build/quickstart/linux/installQS.sh">3.12.7</a></p>
 </li>
 <li>
@@ -1667,7 +1689,25 @@ This requires git 2.x or greater. The clones use a tag rather than branch and th
 </div>
 </div>
 <div class="sect3">
-<h4 id="_maven">3.1.3. Maven</h4>
+<h4 id="_elasticsearch">3.1.3. ElasticSearch</h4>
+<div class="paragraph">
+<p>You need a running elasticsearch - release 7.2. The quickstart install will install a docker image and customize it for the quickstart.</p>
+</div>
+<div class="paragraph">
+<p>This requires you to have docker and docker-compose installed first.</p>
+</div>
+<div class="paragraph">
+<p>The elasticsearch instructions related to installing a docker image can be found at <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html" class="bare">https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html</a></p>
+</div>
+<div class="paragraph">
+<p>After the install is complete there will be 2 scripts startES.sh and stopES.sh which will start and stop the docker image.</p>
+</div>
+<div class="paragraph">
+<p>If you want to install your own copy and configure it there is an elasticsearch.yml configuration file in bedework/conf/bedework/elasticsearch. Use this to replace the config in the downloaded ES.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_maven">3.1.4. Maven</h4>
 <div class="paragraph">
 <p>This is a maven project and as usual you need to set up your maven profile in ~/.m2/settings.xml. The script will display a possible settings.xml file with the paths filled in.</p>
 </div>
@@ -1707,7 +1747,13 @@ This requires git 2.x or greater. The clones use a tag rather than branch and th
 </div>
 </div>
 <div class="sect3">
-<h4 id="_building">3.1.4. Building</h4>
+<h4 id="_security">3.1.5. Security</h4>
+<div class="paragraph">
+<p>During the install an id and password will be set up so that the install process can reindex the data. These will allow use of the cli and the hawtio console.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_building">3.1.6. Building</h4>
 <div class="paragraph">
 <p>In many cases it is possible to simply cd in to the appropriate directory and do a mvn install with the bedework-3 profile. However there is a <strong>bw</strong> script which - while taking longer - does build all projects a module depends upon. This avoids the need to work out the dependency orderings of the independent projects. Thus</p>
 </div>
@@ -1721,7 +1767,7 @@ This requires git 2.x or greater. The clones use a tag rather than branch and th
 </div>
 </div>
 <div class="sect3">
-<h4 id="_deploying">3.1.5. Deploying</h4>
+<h4 id="_deploying">3.1.7. Deploying</h4>
 <div class="paragraph">
 <p>As part of the bedework project there is a maven plugin which uses a properties file to handle post-build deployment issues. Essentially the ear or war as built acts as a template for the deployer.</p>
 </div>

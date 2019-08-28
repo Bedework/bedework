@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-ear" name="bw-calendar-client-ear:ear exploded">
-    <output-path>$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/target/bw-cal-3.13.0-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/target/bw-cal-3.13.1-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -11,160 +11,74 @@
     <root id="root">
       <element id="javaee-facet-resources" facet="bw-calendar-client-ear/javaeeApplication/JavaEE" />
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/target/bw-cal-3.13.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/target/bw-cal-3.13.1-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="directory" name="bw-calendar-client-cal-3.13.0-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-client-caladmin-3.13.0-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-client-feeder-3.13.0-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-client-submit-3.13.0-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-client-ucal-3.13.0-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-engine-notifyws-3.13.0-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-engine-pubcaldav-3.13.0-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-engine-publicws-3.13.0-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-engine-synchws-3.13.0-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-engine-ucaldav-3.13.0-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-engine-userws-3.13.0-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-cal-3.13.1-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-caladmin-3.13.1-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-feeder-3.13.1-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-submit-3.13.1-SNAPSHOT.war" />
+      <element id="directory" name="bw-calendar-client-ucal-3.13.1-SNAPSHOT.war" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-notifyws:war:3.13.0" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-pubcaldav:war:3.13.0" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-publicws:war:3.13.0" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-synchws:war:3.13.0" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-ucaldav:war:3.13.0" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-userws:war:3.13.0" />
       <element id="directory" name="lib">
-        <element id="archive" name="bw-calendar-client-appcommon-3.13.0-SNAPSHOT.jar">
+        <element id="archive" name="bw-calendar-client-appcommon-3.13.1-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-client-appcommon" />
         </element>
-        <element id="archive" name="bw-calendar-client-webcommon-3.13.0-SNAPSHOT.jar">
+        <element id="archive" name="bw-calendar-client-webcommon-3.13.1-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-client-webcommon" />
         </element>
-        <element id="archive" name="bw-calendar-engine-annotations-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-annotations" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-api-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-api" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-caldav-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-caldav" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-chgnote-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-chgnote" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-core-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-core" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-core-common-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-core-common" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-dumprestore-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-dumprestore" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-facade-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-facade" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-ical-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-ical" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-impl-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-impl" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-indexer-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-indexer" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-inoutsched-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-inoutsched" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-interfaces-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-interfaces" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-mail-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-mail" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-sysevents-common-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-sysevents-common" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-sysevents-msgs-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-sysevents-msgs" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-tools-3.13.0-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-tools" />
-        </element>
-        <element id="archive" name="bw-access-4.0.7-SNAPSHOT.jar">
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-annotations:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-api:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-caldav:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-chgnote:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-core:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-core-common:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-dumprestore:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-facade:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-ical:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-impl:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-indexer:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-inoutsched:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-interfaces:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-mail:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-sysevents-common:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-sysevents-msgs:3.13.0" />
+        <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-tools:3.13.0" />
+        <element id="archive" name="bw-access-4.0.7.jar">
           <element id="module-output" name="bw-access" />
         </element>
-        <element id="archive" name="bw-util-args-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-args" />
-        </element>
-        <element id="archive" name="bw-util-caching-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-caching" />
-        </element>
-        <element id="archive" name="bw-util-config-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-config" />
-        </element>
-        <element id="archive" name="bw-util-dav-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-dav" />
-        </element>
-        <element id="archive" name="bw-util-elasticsearch-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-elasticsearch" />
-        </element>
-        <element id="archive" name="bw-util-hibernate-4.0.22-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-hibernate" />
-        </element>
-        <element id="archive" name="bw-util-http-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-http" />
-        </element>
-        <element id="archive" name="bw-util-indexing-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-indexing" />
-        </element>
-        <element id="archive" name="bw-util-jmx-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-jmx" />
-        </element>
-        <element id="archive" name="bw-util-json-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-json" />
-        </element>
-        <element id="archive" name="bw-util-logging-4.0.3-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-logging" />
-        </element>
-        <element id="archive" name="bw-util-misc-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-misc" />
-        </element>
-        <element id="archive" name="bw-util-security-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-security" />
-        </element>
-        <element id="archive" name="bw-util-servlet-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-servlet" />
-        </element>
-        <element id="archive" name="bw-util-servlet-filters-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-servlet-filters" />
-        </element>
-        <element id="archive" name="bw-util-struts-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-struts" />
-        </element>
-        <element id="archive" name="bw-util-timezones-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-timezones" />
-        </element>
-        <element id="archive" name="bw-util-xml-4.0.25-SNAPSHOT.jar">
-          <element id="module-output" name="bw-util-xml" />
-        </element>
-        <element id="library" level="project" name="Maven: org.bedework:bw-util2-calendar:4.0.4" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util2-vcard:4.0.4" />
-        <element id="archive" name="bw-xml-caldav-4.0.9-SNAPSHOT.jar">
-          <element id="module-output" name="bw-xml-caldav" />
-        </element>
-        <element id="archive" name="bw-xml-calws-soap-4.0.9-SNAPSHOT.jar">
-          <element id="module-output" name="bw-xml-calws-soap" />
-        </element>
-        <element id="archive" name="bw-xml-icalendar-4.0.9-SNAPSHOT.jar">
-          <element id="module-output" name="bw-xml-icalendar" />
-        </element>
-        <element id="archive" name="bw-xml-synchws-4.0.9-SNAPSHOT.jar">
-          <element id="module-output" name="bw-xml-synchws" />
-        </element>
-        <element id="archive" name="bw-xml-tzsvr-4.0.9-SNAPSHOT.jar">
-          <element id="module-output" name="bw-xml-tzsvr" />
-        </element>
-        <element id="archive" name="bw-webdav-4.0.8-SNAPSHOT.jar">
-          <element id="module-output" name="bw-webdav" />
-        </element>
-        <element id="archive" name="bw-caldav-server-4.0.8-SNAPSHOT.jar">
-          <element id="module-output" name="bw-caldav-server" />
-        </element>
-        <element id="archive" name="bw-caldav-util-4.0.8-SNAPSHOT.jar">
-          <element id="module-output" name="bw-caldav-util" />
-        </element>
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-args:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-caching:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-config:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-dav:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-elasticsearch:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-hibernate:4.0.22" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-http:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-indexing:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-jmx:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-json:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-logging:4.0.4" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-misc:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-security:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet-filters:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-struts:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-timezones:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-xml:4.0.25" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util2-calendar:4.0.5" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util2-vcard:4.0.5" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-xml-caldav:4.0.9" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-xml-calws-soap:4.0.9" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-xml-icalendar:4.0.9" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-xml-synchws:4.0.9" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-xml-tzsvr:4.0.9" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-webdav:4.0.8" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-caldav-server:4.0.8" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-caldav-util:4.0.8" />
         <element id="library" level="project" name="Maven: com.google.code.gson:gson:1.5" />
         <element id="library" level="project" name="Maven: org.imgscalr:imgscalr-lib:4.2" />
         <element id="library" level="project" name="Maven: struts:struts:1.2.9" />

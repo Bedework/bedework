@@ -9,6 +9,7 @@ The latest script may be downloaded from https://github.com/Bedework/bedework/ra
 
 Specific versions of the script are at:
 
+* https://github.com/Bedework/bedework/raw/bedework-3.13.0/build/quickstart/linux/installQS.sh[3.13.0]
  * https://github.com/Bedework/bedework/raw/bedework-3.12.7/build/quickstart/linux/installQS.sh[3.12.7]
  * https://github.com/Bedework/bedework/raw/bedework-3.12.6/build/quickstart/linux/installQS.sh[3.12.6]
  * https://github.com/Bedework/bedework/raw/bedework-3.12.5/build/quickstart/linux/installQS.sh[3.12.5]
