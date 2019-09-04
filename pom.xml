@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <version>3.13.0-SNAPSHOT</version>
+  <version>3.13.1-SNAPSHOT</version>
 
   <groupId>org.bedework</groupId>
   <artifactId>bedework</artifactId>
@@ -17,7 +17,7 @@
     <maven.source.plugin.version>2.1.2</maven.source.plugin.version>
 
     <!-- Bedework Versions -->
-    <bw-util.version>4.0.25</bw-util.version>
+    <bw-util-deploy.version>4.0.25</bw-util-deploy.version>
   </properties>
 
   <organization>
@@ -114,7 +114,7 @@
       <plugin>
         <groupId>org.bedework</groupId>
         <artifactId>bw-util-maven-deploy</artifactId>
-        <version>${bw-util.version}</version>
+        <version>${bw-util-deploy.version}</version>
         <executions>
           <execution>
             <phase>install</phase>
