@@ -23,9 +23,7 @@
         <element id="archive" name="bw-carddav-dumpres-4.0.9-SNAPSHOT.jar">
           <element id="module-output" name="bw-carddav-dumpres" />
         </element>
-        <element id="archive" name="bw-access-4.0.7.jar">
-          <element id="module-output" name="bw-access" />
-        </element>
+        <element id="library" level="project" name="Maven: org.bedework:bw-access:4.0.7" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-args:4.0.25" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-caching:4.0.25" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-config:4.0.25" />
