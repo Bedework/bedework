@@ -5,7 +5,7 @@
   * Updated google maps url generation to use location combinedValues property
   * If the location map url is "NO-LINK" (without quotes) then no link will be generated.
   * Require that the location name be set.
-  * Remove use of BasicHttpClient. This necessitated some config changes -
+  * Remove BasicHttpClient. This necessitated some config changes -
     ** authCardDav.xml and unauthCardDav.xml in bwengine now have a url rather than host, port and context.
     ** notify/notify-config.xml changed - removed host, port, context. Added URI
 
