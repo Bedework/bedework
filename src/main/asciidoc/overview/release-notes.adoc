@@ -5,7 +5,9 @@
   * Updated google maps url generation to use location combinedValues property
   * If the location map url is "NO-LINK" (without quotes) then no link will be generated.
   * Require that the location name be set.
-  * Remove use of BasicHttpClient from BwCli
+  * Remove use of BasicHttpClient. This necessitated some config changes -
+    ** authCardDav.xml and unauthCardDav.xml in bwengine now have a url rather than host, port and context.
+    ** notify/notify-config.xml changed - removed host, port, context. Added URI
 
 ==== Release 3.13.0:
 This release mostly consists of upgrades to almost the latest ElasticSearch (always a moving target), the currently latest wildfly and to Java 11 the current LTS release.

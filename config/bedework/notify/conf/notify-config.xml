@@ -2,6 +2,7 @@
 
 <note-confinfo xmlns="http://bedework.org/ns/" type="org.bedework.notifier.conf.NotifyConfig">
   <callbackURI>http://localhost:8080/notify/</callbackURI>
+  <cardDAVURI>http://localhost:8080/pubcarddav/</cardDAVURI>
   <hibernateProperties>
     <hibernateProperty>hibernate.dialect=org.hibernate.dialect.H2Dialect</hibernateProperty>
     <hibernateProperty>hibernate.connection.datasource=java:/NotifyDS</hibernateProperty>
