@@ -291,6 +291,11 @@ installES() {
     return
   fi
 
+  if stepSkipped $installES; then
+    echo "Skipped"
+    return
+  fi
+
   if stepStarted $installES; then
     echo "Remove possible partial download"
   fi
