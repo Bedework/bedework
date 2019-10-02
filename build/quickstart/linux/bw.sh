@@ -895,13 +895,9 @@ do
       pkgdefault=
       shift
       ;;
-    -*)
+    *)
       usage
       exit 1
-      ;;
-    *)
-      # Assume we've reached the target(s)
-      break
       ;;
   esac
 done
