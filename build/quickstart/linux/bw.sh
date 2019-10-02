@@ -482,6 +482,7 @@ BWJMXCONFIG=
 bwc=default
 BWCONFIG=
 offline=
+clean=
 
 action=
 
@@ -597,6 +598,10 @@ do
       shift
       ;;
 # ------------------------Special targets
+    clean)
+      clean="yes"
+      shift
+      ;;
     cmdutil)
     cmdutil="yes"
       pkgdefault=
@@ -921,7 +926,7 @@ export QUICKSTART_HOME
 
 mvncmd=
 
-if [ "$1" = "clean" ] ; then
+if [ "$clean" = "yes" ] ; then
   mvncmd="$mvn_binary -P $mvnProfile clean"
 else
   mvncmd="$mvn_binary $mvn_quiet -P $mvnProfile -Dmaven.test.skip=true install"
