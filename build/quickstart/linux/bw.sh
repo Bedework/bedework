@@ -22,27 +22,27 @@ mvnProfile="bedework-3"
 #mvn_binary="/usr/share/maven/bin/mvn";
 mvn_binary="mvn"
 
-mvnUpdateProjects="bedework"
-mvnUpdateProjects="$mvnUpdateProjects  bw-access"
-mvnUpdateProjects="$mvnUpdateProjects  bw-cache-proxy"
-mvnUpdateProjects="$mvnUpdateProjects  bw-caldav"
-mvnUpdateProjects="$mvnUpdateProjects  bw-calendar-client"
-mvnUpdateProjects="$mvnUpdateProjects  bw-calendar-engine"
-mvnUpdateProjects="$mvnUpdateProjects  bw-calsockets"
-mvnUpdateProjects="$mvnUpdateProjects  bw-carddav"
-mvnUpdateProjects="$mvnUpdateProjects  bw-cli"
-mvnUpdateProjects="$mvnUpdateProjects  bw-dotwell-known"
-mvnUpdateProjects="$mvnUpdateProjects  bw-event-registration"
-mvnUpdateProjects="$mvnUpdateProjects  bw-notifier"
-mvnUpdateProjects="$mvnUpdateProjects  bw-self-registration"
-mvnUpdateProjects="$mvnUpdateProjects  bw-synch"
-mvnUpdateProjects="$mvnUpdateProjects  bw-timezone-server"
-mvnUpdateProjects="$mvnUpdateProjects  bw-util"
-mvnUpdateProjects="$mvnUpdateProjects  bw-util2"
-mvnUpdateProjects="$mvnUpdateProjects  bw-util-hibernate"
-mvnUpdateProjects="$mvnUpdateProjects  bw-util-logging"
-mvnUpdateProjects="$mvnUpdateProjects  bw-webdav"
-mvnUpdateProjects="$mvnUpdateProjects  bw-xml"
+bedeworkProjects="bedework"
+bedeworkProjects="$bedeworkProjects  bw-access"
+bedeworkProjects="$bedeworkProjects  bw-cache-proxy"
+bedeworkProjects="$bedeworkProjects  bw-caldav"
+bedeworkProjects="$bedeworkProjects  bw-calendar-client"
+bedeworkProjects="$bedeworkProjects  bw-calendar-engine"
+bedeworkProjects="$bedeworkProjects  bw-calsockets"
+bedeworkProjects="$bedeworkProjects  bw-carddav"
+bedeworkProjects="$bedeworkProjects  bw-cli"
+bedeworkProjects="$bedeworkProjects  bw-dotwell-known"
+bedeworkProjects="$bedeworkProjects  bw-event-registration"
+bedeworkProjects="$bedeworkProjects  bw-notifier"
+bedeworkProjects="$bedeworkProjects  bw-self-registration"
+bedeworkProjects="$bedeworkProjects  bw-synch"
+bedeworkProjects="$bedeworkProjects  bw-timezone-server"
+bedeworkProjects="$bedeworkProjects  bw-util"
+bedeworkProjects="$bedeworkProjects  bw-util2"
+bedeworkProjects="$bedeworkProjects  bw-util-hibernate"
+bedeworkProjects="$bedeworkProjects  bw-util-logging"
+bedeworkProjects="$bedeworkProjects  bw-webdav"
+bedeworkProjects="$bedeworkProjects  bw-xml"
 
 # Projects we will build - pkgdefault (bedework) is built if nothing specified
 pkgdefault=yes
@@ -209,7 +209,7 @@ errorUsage() {
 # Update the projects
 # ----------------------------------------------------------------------------
 actionUpdateall() {
-  for project in $mvnUpdateProjects
+  for project in $bedeworkProjects
   do
     if [ ! -d "$QUICKSTART_HOME/$project" ] ; then
       echo "*********************************************************************"
@@ -222,6 +222,29 @@ actionUpdateall() {
       echo "*********************************************************************"
       cd $project
       git pull
+      cd $QUICKSTART_HOME
+    fi
+  done
+
+  exit 0
+}
+
+# ----------------------------------------------------------------------------
+# Clean the projects
+# ----------------------------------------------------------------------------
+actionUpdateall() {
+  for project in $bedeworkProjects
+  do
+    if [ ! -d "$QUICKSTART_HOME/$project" ] ; then
+      echo "*********************************************************************"
+      echo "Project $project is missing. Check it out from the repository"
+      echo "*********************************************************************"
+    else
+      echo "*********************************************************************"
+      echo "Cleaning project $QUICKSTART_HOME/$project"
+      echo "*********************************************************************"
+      cd $project
+      $mvn_binary $mvn_quiet -P $mvnProfile clean
       cd $QUICKSTART_HOME
     fi
   done
@@ -500,6 +523,12 @@ fi
 
 if [ "$1" = "-updateall" ] ; then
   actionUpdateall
+  exit 0
+fi
+
+if [ "$1" = "-cleanall" ] ; then
+  actionCleanall
+  exit 0
 fi
 
 # ----------------------------------------------------------------------------
@@ -924,13 +953,13 @@ fi
 
 export QUICKSTART_HOME
 
-mvncmd=
+mvncmd="$mvn_binary $mvn_quiet -P $mvnProfile -Dmaven.test.skip=true"
 
 if [ "$clean" = "yes" ] ; then
-  mvncmd="$mvn_binary -P $mvnProfile clean"
-else
-  mvncmd="$mvn_binary $mvn_quiet -P $mvnProfile -Dmaven.test.skip=true install"
+  mvncmd="$mvncmd clean"
 fi
+
+mvncmd="$mvncmd install"
 
 echo "mvncmd = $mvncmd"
 
@@ -945,7 +974,6 @@ do
     # echo "Special target - command is $javacmd $specialTarget"
     $javacmd $specialTarget
   else
-    echo "mvncmd = $mvncmd"
     $mvncmd
     if [ "$?" -ne 0 ]; then
       echo "Maven build unsuccessful"
