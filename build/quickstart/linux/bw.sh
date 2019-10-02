@@ -657,7 +657,7 @@ do
       pkgdefault=
       shift
       ;;
-    bwcalclient)
+    bwcalclient|deploy)
       bwcalclient="yes"
 
       access="yes"
