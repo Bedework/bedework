@@ -19,6 +19,7 @@
   <publicAdmin>false</publicAdmin>
   <publicAdminUri>/caladmin</publicAdminUri>
   <publicCalendarUri>/cal</publicCalendarUri>
+  <readWrite>true</readWrite>
   <refreshAction>setup.do</refreshAction>
   <refreshInterval>0</refreshInterval>
   <showYearData>false</showYearData>

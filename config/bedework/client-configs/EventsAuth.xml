@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <client-config xmlns="http://bedework.org/ns/" type="org.bedework.webcommon.config.ConfigCommonImpl">
-  <appRoot>http://localhost:8080/approots/ucalrsrc</appRoot>
-  <appType>webuser</appType>
+  <appRoot>http://localhost:8080/approots/calrsrc</appRoot>
+  <appType>webpublic</appType>
   <autoCreateContacts>false</autoCreateContacts>
   <autoCreateLocations>false</autoCreateLocations>
   <autoDeleteContacts>false</autoDeleteContacts>
   <autoDeleteLocations>false</autoDeleteLocations>
-  <browserResourceRoot>/approots/ucalrsrc</browserResourceRoot>
+  <browserResourceRoot>/approots/calrsrc</browserResourceRoot>
+  <calSuite>MainCampus</calSuite>
   <guestMode>false</guestMode>
   <hour24>true</hour24>
-  <logPrefix>PersonalCalendar</logPrefix>
+  <logPrefix>PubEvents</logPrefix>
   <mbeanClassName>org.bedework.webcommon.config.ClientConf</mbeanClassName>
   <minIncrement>5</minIncrement>
-  <name>UserCal</name>
+  <name>Events</name>
   <personalCalendarUri>/ucal</personalCalendarUri>
   <publicAdmin>false</publicAdmin>
   <publicAdminUri>/caladmin</publicAdminUri>
   <publicCalendarUri>/cal</publicCalendarUri>
-  <readWrite>true</readWrite>
   <refreshAction>setup.do</refreshAction>
-  <refreshInterval>300</refreshInterval>
+  <refreshInterval>0</refreshInterval>
   <showYearData>false</showYearData>
 </client-config>

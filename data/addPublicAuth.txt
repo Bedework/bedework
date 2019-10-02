@@ -1,0 +1,55 @@
+#
+# bwcli script to add the public/auth folder and some example calendars
+#
+user admin super
+
+# What we're creating:
+#
+#   Academic:
+#     o   ARPT (Academic Review Promotion & Tenure) calendar
+#     o   Research Dates
+#     o   XX
+#
+#   Human Resources:
+#     o   Benefits Enrollment Dates
+#     o   Staff Review Dates
+#     o   Compliance - Reporting Dates
+#     o   New Employee Orientation Dates
+#     o   XX
+#
+#   Payroll:
+#     o   Pay Cycle Due Dates
+#     o   Compliance – Reporting Dates (e.g. W2, 1099, ACA, etc.)
+#     o   XX
+#
+#   Admissions:
+#     o   Event Dates
+#     o   Milestone Dates
+#     o   XX
+#
+#   Enrollment Services:
+#     o   Academic Calendar Dates (Registration, Add Drop, etc.)
+#     o   Financial Aid Packaging Dates
+#     o   Bill Dates
+#     o   Graduation Ceremony related Dates
+#     o   XX
+#
+#   Alumni & Development:
+#     o   Alumni Events
+#     o   Gala
+#     o   XX
+#
+#   Other
+#     o   XX
+
+# create collection...
+#     folder: parent name summary owner creator [desc=""] [filter=""] [category=""]
+#     alias/topic: parent name summary alias-path owner creator [desc=""] [filter=""] [category=""]
+
+# clean up to start
+
+delete collection "/public/auth" recursive
+
+
+
+

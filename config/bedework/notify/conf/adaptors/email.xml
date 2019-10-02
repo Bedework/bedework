@@ -4,7 +4,6 @@
   <adaptorClassName>org.bedework.notifier.outbound.email.EmailAdaptor</adaptorClassName>
   <defaultSubject>Message from Bedework</defaultSubject>
   <from>bedework@bedework.org</from>
-  <lastChanged>0</lastChanged>
   <locale>en_US</locale>
   <maxInstances>1</maxInstances>
   <mbeanClassName>org.bedework.notifier.outbound.email.EmailConf</mbeanClassName>
