@@ -232,7 +232,7 @@ actionUpdateall() {
 # ----------------------------------------------------------------------------
 # Clean the projects
 # ----------------------------------------------------------------------------
-actionUpdateall() {
+actionCleanall() {
   for project in $bedeworkProjects
   do
     if [ ! -d "$QUICKSTART_HOME/$project" ] ; then
