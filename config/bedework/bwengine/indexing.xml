@@ -8,7 +8,7 @@
   <indexUsers>true</indexUsers>
   <indexerConfig>${org.bedework.config.dir}/elasticsearch/</indexerConfig>
   <indexerURL>localhost:9200</indexerURL>
-  <maxEntityThreads>5</maxEntityThreads>
-  <maxPrincipalThreads>5</maxPrincipalThreads>
+  <maxEntityThreads>2</maxEntityThreads>
+  <maxPrincipalThreads>2</maxPrincipalThreads>
   <skipPaths>*/Deleted</skipPaths>
 </index-properties>

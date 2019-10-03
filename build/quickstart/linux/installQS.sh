@@ -442,13 +442,13 @@ installData() {
 
   # ------------------------------------- ES data
 
-  rm -f elasticsearch.zip
-  rm -rf elasticsearch
-  cp $resources/data/elasticsearch.zip .
-  unzip elasticsearch.zip
-  rm elasticsearch.zip
-  rm -rf $qs/$es_data_dir
-  cp -r elasticsearch $qs/$bedework_data_dir/
+  #rm -f elasticsearch.zip
+  #rm -rf elasticsearch
+  #cp $resources/data/elasticsearch.zip .
+  #unzip elasticsearch.zip
+  #rm elasticsearch.zip
+  #rm -rf $qs/$es_data_dir
+  #cp -r elasticsearch $qs/$bedework_data_dir/
 
   # ------------------------------------- TZ data
 
