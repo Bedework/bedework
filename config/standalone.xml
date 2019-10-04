@@ -612,8 +612,8 @@
     <subsystem xmlns="urn:jboss:domain:undertow:9.0" default-server="default-server" default-virtual-host="default-host" default-servlet-container="default" statistics-enabled="${wildfly.undertow.statistics-enabled:${wildfly.statistics-enabled:false}}">
       <buffer-cache name="default"/>
       <server name="default-server">
-        <http-listener name="stunnel" socket-binding="stunnel" secure="true" redirect-socket="https" proxy-address-forwarding="true" enable-http2="true"/>
-        <http-listener name="default" socket-binding="http" redirect-socket="https" enable-http2="true"/>
+        <http-listener name="stunnel" socket-binding="stunnel" secure="true" redirect-socket="https" proxy-address-forwarding="true" enable-http2="true"allow-unescaped-characters-in-url="true" />
+        <http-listener name="default" socket-binding="http" redirect-socket="https" enable-http2="true" allow-unescaped-characters-in-url="true" />
         <host name="default-host" alias="localhost">
           <location name="/" handler="bedework-content"/>
           <access-log pattern="%h %l %u [%t] &quot;%r&quot; %s %b &quot;%{i,Referer}&quot; &quot;%{i,User-Agent}&quot;"/>
