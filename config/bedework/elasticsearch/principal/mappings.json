@@ -92,6 +92,16 @@
         "ownerHref": {
           "type": "keyword"
         },
+        "creatorHref": {
+          "type": "keyword"
+        },
+        "acl": {
+          "type": "keyword",
+          "index": "false"
+        },
+        "public": {
+          "type": "boolean"
+        },
         "rootCollectionPath": {
           "type": "keyword"
         }
