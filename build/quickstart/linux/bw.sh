@@ -561,7 +561,7 @@ do
   # Process the next arg
   case $1       # Look at $1
   in
-    -usage | -help | -? | ?)
+    -usage | -help | -\? | ?)
       usage
       exit
       shift
