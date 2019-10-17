@@ -5,15 +5,15 @@
 BASE_DIR=`pwd`
 scriptName="$0"
 restart=
-latestVersion="3.13.0"
+latestVersion="3.13.1"
 
 esDockerPull="docker pull docker.elastic.co/elasticsearch/elasticsearch:7.2.0"
 JBOSS_VERSION="17.0.1.Final"
-galleonVersion="4.0.3.Final"
+galleonVersion="4.1.0.Final"
 
 # -------------------Module versions -----------------------------
 bwUtilLoggingVersion="4.0.4"
-bwUtilVersion="4.0.25"
+bwUtilVersion="4.0.26"
 bwUtil2Version="4.0.5"
 bwUtilDeployVersion="4.0.25"
 bwXmlVersion="4.0.9"
@@ -22,16 +22,16 @@ bwAccessVersion="4.0.7"
 bwWebdavVersion="4.0.8"
 bwCaldavVersion="4.0.8"
 bwTimezoneServerVersion="4.0.6"
-bwSynchVersion="4.0.5"
-bwSelfRegistrationVersion="4.0.8"
-bwEventRegistrationVersion="4.0.7"
-bwNotifierVersion="4.0.8"
-bwCliVersion="4.0.7"
-bwCarddavVersion="4.0.8"
+bwSynchVersion="4.0.7"
+bwSelfRegistrationVersion="4.0.9"
+bwEventRegistrationVersion="4.0.8"
+bwNotifierVersion="4.0.9"
+bwCliVersion="4.0.8"
+bwCarddavVersion="4.0.9"
 
-bwCalendarEngineVersion="3.13.0"
-bwCalendarClientVersion="3.13.0"
-bwCalendarXslVersion="3.13.0"
+bwCalendarEngineVersion="3.13.1"
+bwCalendarClientVersion="3.13.1"
+bwCalendarXslVersion="3.13.1"
 
 
 trap 'cd $BASE_DIR' 0
@@ -822,7 +822,7 @@ fi
 echo "-------------------------------------------------------------"
 echo " Building in $dirpath"
 
-echo "Which version"
+echo "Which version - dev or latest ($latestVersion)?"
 select version in "dev" "latest"; do
     case $version in
         dev ) break;;
