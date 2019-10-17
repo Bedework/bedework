@@ -17,7 +17,7 @@ postDeployDebug="";
 deployConfig="./bedework/config/wildfly.deploy.properties"
 
 mvn_quiet=   # "-q"
-mvnProfile="bedework-3"
+mvnProfile=
 
 #mvn_binary="/usr/share/maven/bin/mvn";
 mvn_binary="mvn"
@@ -132,7 +132,7 @@ usage() {
   echo "   The default is in $deployConfig."
   echo ""
   echo "   PROFILE optionally defines the maven profile to use"
-  echo "   The default is $mvnProfile."
+  echo "   Otherwise the maven default is used"
   echo ""
   echo "   -offline     Build without attempting to retrieve library jars"
   echo ""
@@ -244,7 +244,7 @@ actionCleanall() {
       echo "Cleaning project $QUICKSTART_HOME/$project"
       echo "*********************************************************************"
       cd $project
-      $mvn_binary $mvn_quiet -P $mvnProfile clean
+      $mvn_binary $mvn_quiet $mvnProfile clean
       cd $QUICKSTART_HOME
     fi
   done
@@ -569,6 +569,11 @@ do
     -mrl)
       shift
       mavenRepoLocal="$1"
+      shift
+      ;;
+    -P)
+      shift
+      mvnProfile="-P $1"
       shift
       ;;
     -dc)
@@ -953,7 +958,7 @@ fi
 
 export QUICKSTART_HOME
 
-mvncmd="$mvn_binary $mvn_quiet -P $mvnProfile -Dmaven.test.skip=true"
+mvncmd="$mvn_binary $mvn_quiet $mvnProfile -Dmaven.test.skip=true"
 
 if [ "$clean" = "yes" ] ; then
   mvncmd="$mvncmd clean"

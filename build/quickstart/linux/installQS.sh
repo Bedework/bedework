@@ -6,6 +6,7 @@ BASE_DIR=`pwd`
 scriptName="$0"
 restart=
 latestVersion="3.13.1"
+mvnProfile="bedework-3"
 
 esDockerPull="docker pull docker.elastic.co/elasticsearch/elasticsearch:7.2.0"
 JBOSS_VERSION="17.0.1.Final"
@@ -668,7 +669,7 @@ buildModule() {
   fi
 
 
-  ./bw "$moduleName"
+  ./bw -P "$mvnProfile" "$moduleName"
 
   markDone "$stepName"
 
