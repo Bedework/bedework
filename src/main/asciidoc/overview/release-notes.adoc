@@ -2,8 +2,8 @@
 === Release Notes
 
 ==== Dev:
-This release
 
+==== Release 3.13.1:
 There was long standing a bug in category handling for updates. An attempt
 was made to preserve default categories for calsuites when an event is
 updated. For example if an event is suggested and accepted the
