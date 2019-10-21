@@ -9,6 +9,7 @@ The latest script may be downloaded from https://github.com/Bedework/bedework/ra
 
 Specific versions of the script are at:
 
+* https://github.com/Bedework/bedework/raw/bedework-3.13.1/build/quickstart/linux/installQS.sh[3.13.1]
 * https://github.com/Bedework/bedework/raw/bedework-3.13.0/build/quickstart/linux/installQS.sh[3.13.0]
  * https://github.com/Bedework/bedework/raw/bedework-3.12.7/build/quickstart/linux/installQS.sh[3.12.7]
  * https://github.com/Bedework/bedework/raw/bedework-3.12.6/build/quickstart/linux/installQS.sh[3.12.6]
@@ -22,7 +23,7 @@ The script will ask you if you want the development or latest version.
 The script will install apacheds. This will install a directory with some initial ids in place for testing. Ultimately you'll want to use your own directory service.
 
 ==== ElasticSearch
-You need a running elasticsearch - release 7.2. The quickstart install will install a docker image and customize it for the quickstart.
+You need a running elasticsearch - release 7.2. The quickstart install will optionally install a docker image and customize it for the quickstart.
 
 This requires you to have docker and docker-compose installed first.
 
@@ -83,7 +84,7 @@ mvn -P bedework-3 help:active-profiles
 ----
 
 To alleviate some of the issues of having multiple profiles for bedework
-builds the bw script now includes a .bw file in the home directory
+builds the bw script now sources a .bw file in the home directory
 which can set some defaults. At the moment the only default is the
 profile. An example .bw file is:
 

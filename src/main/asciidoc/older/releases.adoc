@@ -1,0 +1,442 @@
+:sectnums!:
+
+==== 3.10.4
+_December 14, 2016_
+
+  * Significant web client performance improvements
+  * Fixes to sharing
+  * Enhancements to the notification system
+
+==== 3.10.3
+
+  * Core engine
+      ** Flag all entities as indexed
+      ** Fix hibernate query which pulled in too many objects
+      ** Fix bug in ES query which missed a number of recurrences
+      ** Fixes to synch report
+      ** Fixes to sharing
+      ** Work on notifications
+      ** Allow disable of ldap group check
+      ** Add code to stop autokill killing the indexer
+      ** Better cleanup of http connections
+      ** Fix up timestamps in ical
+      ** Dumprestore sets status of process
+
+  * Caldav
+  ** Better handling of error conditions
+  ** Better error responses
+  ** Fixes to content type
+  ** Eventreg
+  ** Fixes for eventreg id
+  ** Use activemq to queue actions so they don't get lost on  restart
+
+  * Webapps
+  ** Some fixes to the grid view
+  ** Remove a synchronized to reduce a bottleneck
+  ** Try refactor and recode calendar collection cloning for navigation
+  ** Fix copy of event
+  ** More cleanup of http connections
+
+  * Util
+  ** Allow deployer to work with war files
+  ** Add jms classes extracted from sysevents module
+  ** Add jolokia module to allow  a client to interact with jmx
+
+  * Webdav
+  ** Minor propstat fix
+  ** Better error responses
+
+==== Bedework 3.10.2
+
+  * Performance Improvements
+    ** numerous updates to correct for bottlenecks and other performance issues allowing for significant load and large-scale deployments
+
+    * External Subscriptions
+      ** significant improvements to external subscription handling
+      ** better handling of contacts and categories for public calendaring
+    * Workflow (public calendaring)
+      ** new author and approver roles allow for moderated publishing of events by administrative groups
+    * Cross-Suite Suggestions (public calendaring)
+      ** new suggestion mechanism allows different calendar suites to suggest and accept (or reject) events across teams
+    * Event Registration (public calendaring)
+      ** significant improvements to event registration features
+      ** addition of custom fields to any registration form and a form builder for constructing and managing custom forms (extra text inputs, checkboxes, radio buttons, and select boxes)
+      ** email notifications (see Notifications)
+    * Notifications (public calendaring)
+      ** In public calendaring, administrative users now receive notifications of actionable items (workflow approval requests, suggestions from other groups, and responses to each)
+      ** In event registration, the notification engine is used to communicate with registrants concerning registration, waitlisting, and event cancellation
+    * Self Registration
+      ** Allows users to register with the calendaring system so that they may register for public events
+    * Web Client Improvements
+      ** Improvements to the public administration client
+        *** Locations can be broken into locations and sub-locations (i.e. buildings and rooms)
+        *** Rooms can be added on-the-fly during event creation
+        *** Improved location and contact look-up during event creation
+        *** Numerous other stylistic and usability enhancements in the administrative client
+      ** Improvements to the public web client
+        *** improvements to accessibility compliance
+    * Bug fixes
+  
+==== 3.10
+
+  * A largely-revamped public client, which features:
+      ** Responsive design - the public client will display reasonably on almost any screen size.
+      ** More powerful and flexible left-hand navigation - in just a few clicks, site visitors can ask for the "Arts events and Films taking place on West Campus"
+      ** Event filtering by string. – ex., “Arts events and Films on West Campus that include 'Sherlock'".
+      ** An endless stream of events - All events that match the criteria are presented, starting with today's events (or any other date specified), and advancing into the future.   An initial group of events are displayed on the page, and as the visitor scrolls towards the bottom of the page, the next group is presented.
+      ** Improved performance with fewer page reloads - most operations, such as adding or removing a filter, are done "in-page" (using Ajax calls). 
+
+  * Enhancements to indexing
+      ** Bedework 3.10 has a new search engine – ElasticSearch.  In the Bedework context, ElasticSearch, provides better remote management of indexes,   better scalability options, and much simpler configuration than Solr. ElasticSearch is used by, among others,  Wikimedia, Foursquare Etsy, and GitHub.
+      ** Improved performance and scalability by directing most queries to an ElasticSearch index rather than directly to the database engine
+
+  * More real-time site configuration
+      ** All configuration settings are now set through the JMX console, eliminating the need for rebuilds to reconfigure
+
+  * An improved Quickstart
+      ** A smaller (~40%) Quickstart - no-longer-used code (such as webcache) and unused JBoss components have been removed
+      ** Better Quickstart documentation
+
+==== 3.8.0.13
+_April 17, 2012_ +
+  * Administrative client:
+      ** Support for image uploads and auto-generation of                 thumbnails during event creation and editing
+      ** "Manage events" page now uses date range and date                 navigation to list events
+      ** The event description field now tracks the number of characters used     while the user types.
+      ** Pending event topical areas are auto-selected (when                 possible) based on the selections made in the                 submissions client
+      ** Pending event "preferred" and "all" listings are                 correctly selected when first editing a pending event
+      ** "Preferred" and "all" listings now sorted
+      ** Auto-focus first available field code updated to be                 more generally useful (based on work done by Eric                 Wittman
+      ** Bug fix: pending event titles are correctly escaped on                 publish
+
+  * Public events client:
+      ** Bug fix: correct ids on nodes of the calendar explorer                 menu (new feature in 3.8)
+
+  * Submissions client:
+      ** Removed Confirmed/Tentative/Cancelled radio buttons
+      ** Correctly associate selected topical areas between                 submissions client and admin client (where possible)
+
+  * Bedework servers / utils:
+      ** Configure Tomcat to fully support UTF-8 URLs
+      ** Bug fixes to dump/restore utilities
+      ** Bug fix: for long standing bug in date/time util.
+      ** Bug fix:  missing tz and locale update
+      ** Bug fix: tombstone related bug in methods called by                 indexer
+      ** Bug fix: correct check for duplicate collection name
+      ** Bug fix: various DST, timezone fixes, support for UTC,                 etc.
+      ** Bug fix: blob caching fixes
+
+==== 3.8.0.11
+_February 27, 2012_ +
+  * Fix issue preventing display of events on a DST boundary.
+  * Fix iSchedule so it works again.
+  * Fix change set so that added/deleted attendees get notified.
+  * Storing of resources/attachments was broken. Required upgrade to     hibernate 3.6
+  * Added some quota support because we can now store resources.
+  * Added some missing datasource files.
+  * Watch out for and fix bad PARTSTAT.
+  * Don't email freebusy requests.
+  * SOAP namespace change.
+
+==== 3.8
+_January 30, 2012_ +
+  * Synchronization Engine, providing more efficient synchronization of external data. read-only .ics subscriptions/feeds into Bedework are supported in this release.
+
+  * CalWS-SOAP, a SOAP protocol for calendaring being developed by OASIS and CalConnect. Bedework 3.8 uses CalWS-SOAP for communication between the synchronization engine and Bedework.
+
+  * WebDAV Synch, which is a draft RFC extension to WebDAV/CalDAV (https://tools.ietf.org/html/rfc6578), providing a more efficient method for client synchronization. WebDAV synch is currently supported by iCal - the Apple desktop calendaring client, and also by aCal - an Android CalDAV client (http://andrew.mcmillan.net.nz/projects/aCal).
+
+  * New UI Feature - a theme setting that produces an explorer view of the calendars for navigation
+
+  * Quickstart has a smaller footprint
+
+  * New, simplified theme (using the new calendar explorer menu) providing easier integration with an organization's web design.
+
+  * Hypersonic (HSQL) is now packaged with the Quickstart instead of Derby. Derby never met our expectations that it could be deployed as the production DBMS for Bedework, and the advantages of HSQL, including Quickstart support for the Scheduling Assistant,  are compelling.  
+
+  * Structural changes to projects. 
+
+  * All references to Bedework documentation are updated in the web clients to point to the Bedework website and latest documentation wiki. Previously, some references were to the older, deprecated bedework.org site, which created some confusion in previous releases.
+
+  * Various bugfixes
+
+==== 3.7
+_March 10, 2011_ +
+  * The Bedework personal client has been simplified, and presents  new displays for FreeBusy, and for scheduling and managing meetings.
+
+  * Bedework 3.7 uses CardDAV for managing contacts, and provides a   new, standalone address book web client  as well as a significantly   improved and enhanced CardDAV V4 server.
+
+  * Improved internationalization - the web clients are distributed  with language strings in Spanish (all clients) and German (public and  personal clients).  The Spanish translations are the result of a  collaboration between the Universidad Pública de Navarra  and their  Pamplona colleagues  at Universidad de Navarra, and the German  translation is the contribution of Werner Frerichs of the University of  Kiel.
+
+  * Personal  calendaring client UI has been upgraded,  with particular attention to Scheduling and Free/Busy
+
+  * Improved environmentals  - Reduced memory footprint  in the  quickstart; logging overhead  has been decreased
+
+  * Public and private calendar display names can now be changed,  providing a means to safely modify the labeling of calendars over time  as well as stronger internationalization.
+
+  * Addressbook enhancements, including a CardDAV V4 server, support  for groups,  and  a stand-alone address book web client appropriate for  deployment within multiple applications
+
+  * An initial version of the CalWS restful web service API is available in the system shipped with the quickstart.   
+See: http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20Web%20Services%20Protocol%20for%20Calendaring.pdf
+
+  * Bug fixes to all servers and clients
+
+==== 3.6
+_February 3, 2010_
+  * Core Bedework services packaged in JBoss
+  * Spanish translation of public calendaring themes shipped       with quickstart
+  * Bug fixes and final enhancements
+  * See http://www.bedework.org/trac/bedework/milestone/Bedework%203.6[Bedework 3.6 Milestone page] for information about post-release bug fixes.
+
+==== 3.6 release candidate 1
+_January 9, 2010_ +
+  * Public calendaring
+  ** New default public theme based on Duke/Yale           themes
+  ** Feed URL and Widget Builder for generating rss, json,           xml, and ical feeds as well as embeddable javascript           widgets
+  ** A "feeder" application that serves as a common source           for public data feeds and widgets
+  ** A web cache application for storing and serving the           feeds and widgets
+  ** Internationalized and modularized themes
+  ** New mobile theme for iPhones and other           smartphones
+
+  * System notifications now built on JMS (ApacheMQ) allowing         more modular design of the services
+
+  ** Indexing reworked as outboard process
+  ** Scheduling reworked as outboard process
+  ** Logging of system notifications
+
+  * Performance improvements
+  ** in CalDAV
+  ** event retrieval (system wide)
+
+  * Other Enhancements
+  ** improved ical subscriptions, user and public           clients
+  ** UI support of deleting collections
+  ** improvements to scheduling in the user client
+  ** subscription coloring in the user client
+  ** general bugfixes
+  ** improvements to documentation
+
+==== 3.5
+_July 17, 2009_ +
+  * Bug fixes and final enhancements
+  * See href="http://www.bedework.org/trac/bedework/milestone/Bedework%203.5[Bedework 3.5 Milestone page] for information about post-release bug fixes.
+
+==== 3.5 release candidate 2
+_June 3, 2009_ +
+  * Bug fixes and final enhancements
+  * Further support for draft 0.7 of CalDAV scheduling
+  * Improved personal client user interface
+
+==== 3.5 release candidate 1
+_May 19, 2009_ +
+  * Performance improvements
+  ** reduce JVM memory usage
+  ** decrease database system load
+
+  * Large-scale restructuring of data and administrative UI       to map to new conceptual model of the single calendar       pool
+  * public events submissions client enhanced with added       workflow in the admin client for pending events, including       email notification when an event is published
+  * admin client: cross-tagging of events by administrative       groups (currently locate events by searching)
+  * Support for draft 0.7 of CalDAV scheduling
+  * Stronger support for xproperties
+
+==== 3.5 preview release
+_January 29, 2009_ +
+  * Public events optimized for a single calendar pool model
+
+  ** simplifies public events calendaring
+  ** filtering can be applied to all collections allowing for fine-grained control over subscriptions from within the user interfaces; no longer necessary to filter in the xslt of public client
+  ** administrative users tag events by topical area based on subscriptions within each calendar suite. The system then assigns appropriate categories to events.
+  ** administrative users can tag events with as many topical areas as appropriate
+  ** categories are maintained by superusers
+  ** categories can be set on all collections
+  ** adding a user to a calendar suite group will allow the user to administer the calendar suite
+
+  * Subscriptions greatly improved
+  ** all subscriptions are reimplimented as calendar           aliases
+  ** subscriptions now appear in caldav clients such as           Mozilla Lightning or Apple's iCal
+  ** users can apply filters to aliases allowing for           fine-grained control over subscriptions in the user           client
+  ** subscriptions to external ical feeds available in           public and personal clients
+
+  * Apache DS ldap directory ships with quickstart
+  ** used for user accounts, authentication, and the new           CardDAV server
+  ** quickstart more closely resembles a production           system
+
+  * CardDAV server first release
+  ** address book widget used in personal client queries           attendees for meetings
+
+  * Timezone server in use
+      ** provides standardized timezone service
+
+  * CalDAV improvements
+  ** Support for draft 6 of CalDAV scheduling
+  ** Support for storing resources (e.g. files,           attachments) within the folder hierarchy
+
+==== 3.4.1.1
+_June 3, 2008_ +
+  * Support for RFC-2445 x-properties
+  * Inclusion of image URL for public events
+  * Improvements to public event submission web client
+  * Improvements to CalDAV and WebDAV
+  * Improvements to dump/restore
+  * Improvements to access control
+  * Better support for driving public events client with categories
+  * Fixes to scheduling - better support for COUNTER
+  * Support deletion of non-empty calendars via CalDAV
+  * Performance improvements to Lucene indexing
+  * Bug fix for null parameters in x-props (thanks to Roberto Polli)
+
+==== 3.4.1
+_March 18, 2008_ +
+  * CalDAV: many improvements; greatly enhanced interoperability with http://www.jasig.org/trac/bedework/wiki/BedeworkUserHelp/Lightning[Mozilla       Lightning] and Apple's iCal; support for subscriptions to web calendars through the CalDAV server, allowing Bedework to expose user subscriptions to desktop clients; improved support for CalDAV filters
+  * Addition of Public Events Submission web client (beta) which allows non-admin users to suggest public events. (http://www.jasig.org/trac/bedework/wiki/DeployDocs/SubmissionACLs[configuration       details])
+  * Much better support for RSS and Javascript feeds       including the addition of category filters and date       ranges
+  * Rudimentary interface for adding named CalDAV filters that can be used with the public web client providing powerful filtering features
+  * Improvements to scheduling
+  * Improvements to recurring event support
+  * Improvements to freebusy
+  * Improvemenst to locale support
+  * Improvements to Lucene searching
+  * Improvements to access control
+  * Better handling of tasks
+  * Better timezone handling
+  * Numerous UI improvements including updated web template       for mobile devices and an improved administrative interface
+  * Bugfix to set all character encoding to utf-8 (thanks to       Martin Blom)
+
+==== 3.4
+_September 14, 2007_ +
+  * Better standards support: A much more complete       implementation of the calendaring standards RFC2445, RFC2446,       RFC791 (CalDAV) and the CalDAV scheduling draft       standard.
+  * A reasonably complete implementation of iTIP scheduling,       such as simple (non-recurring) iTIP scheduling, display of       attendee FreeBusy information, sending invitations, update of       attendee status, canceling meetings. There is some support of       recurring meetings and modifications to instances partially       works.
+  * Portal support: A number of changes to make the user       interface more portal friendly.
+  * CalDAV: Changes/fixes have been implemented to improve       interoperability with Apple's iCal, and there is significant       support now for CalDAV scheduling.
+  * UI improvements to access control and recurring       events.
+  * Initial support for FREEBUSY URL and calendar       subscription URL.
+  * Apache Ant: Upgrade to 1.7 to make apt task available for further development.
+
+==== 3.3.1
+_April 25, 2007_ +
+  * Access fixes. Note this requires a change to the /public       folder. Previously read + write-content was sufficient for       administrative privileges. Now it must be read +       write-content + bind (may also want unbind to allow       deletions)
+  * A number of bugfixes to CalDAV support.
+  * Implemented some missing CalDAV features.
+  ** attachments now work,
+  ** copy/move/rename partially works.
+  ** Freebusy information can be stored
+  ** Tasks (todos)
+  ** Search filters
+
+  * Bug fixes for recurring events
+  * Timezones shared correctly
+  * Oracle now builds and deploys without alterations to       generated schema.
+  * Fixed up restore so that it can handle UWcal 2.3.2       data
+  * 12/24 mode works correctly
+  * One-shot free and busy url works allow users to publicize       their busy time.
+  * Scheduling is now close to completion and largely usable.       Some of the more esoteric features still require work, e.g.       instances of recurring meetings, COUNTER is untested.
+  * UI supports all access control features.
+  * Import and export of calendars completed
+
+==== 3.3.1 preview release
+_February 23, 2007_ +
+  * CalDAV - Fixes to problems uncovered in the       interoperability testing at CalConnect.
+  * Recurring events - Fixes to some bugs, especially in the       sharing of these events.
+  * Timezones - Fixes to problems sharing events with       'private' timezones, such as those added via CalDAV or       imported as ics.
+  * Access control - Fixed some bugs in setting ACLs. The UI       has been updated to enable all features of access       control.
+  * Scheduling - Implemented additional functionality.       Scheduling is still incomplete but more features are exposed       in 3.3.1 to allow further testing. We have successfully sent       an invitation, posted a response, and observed the resulting       event in the calendar. Scheduling support is "fragile" but       progressing rapidly.
+  * Bedework 3.3.1 is much more Oracle-friendly than previous       versions. Based on work done by Julian Ball at Queens, and       Chris Mann at Maryland, we have significantly overhauled the       XML schema, with the intent of eliminating or at least       drastically reducing the modifications Oracle users would       have to make.
+
+==== 3.3
+_January 24, 2007_ +
+  * Java 1.5 and Tomcat 5.5 as implementation       requirements
+  * Lucene searching has been implemented for all       clients
+  * Categories have been reinstated
+  * Many changes to CalDAV to better support various       clients.
+  * Significant progress supporting http://openconnector.org/[OpenConnector]
+  * Support for recipients and attendees
+  * iCal import and export of multiple events / whole       calendars
+  * Improved timezone displays / support
+  * Support for floating time values
+  * Support for storing UTC time values
+  * Recurring event support
+  * Human readable text fields now stored with language       information to facilitate internationalization
+  * Scheduling (meeting requests, replies etc) are now mostly       implemented
+  * Significant improvements to the web user interfaces,       XHTML user clients &amp; dojo based widgets
+  * Bug fixes (e.g. access control) and housekeeping (e.g.       all tables given consistent names)
+
+==== 3.3 release candidate
+_December 15, 2006_ +
+  * A subset of the 3.3 release, above
+
+==== 3.3 preview release
+_November 22, 2006_ +
+  * Lucene searching added
+  * Recurring and annotated event support rewritten
+  * Added a String table to facilitate       internationalization
+  * Category support resuscitated, categories attached to       calendars - implement changes to event categories
+  * Java 5 language features to facilitate development
+  * Fixes to access control and improved ui support
+  * Added back-end support for todos
+  * Support for scheduling operations
+  * CalDAV improvements
+
+==== 3.2
+_August 15, 2006_ +
+  * SVN Restructuring complete
+  * CalDAV improvements
+
+==== 3.1
+_August 1, 2006_ +
+  * Restructuring of system into multiple SVN projects
+  * Working personal calendars released
+  * Freebusy aggregator added
+  * CalDAV server restructured to allow use as a proxy
+
+==== 3.1 release candidate 4
+_June 22, 2006_ +
+  * Restructuring of stylesheet directories to better support       calendar suites
+  * Initial release of jsr-168 compliant portlet for use       within uPortal
+
+==== 3.1 release candidate 3
+_June 19, 2006_ +
+  * Further interface updates and bug fixes
+  * Calendar Suites (departmental calendars) updated and       highlighted
+
+==== 3.1 release candidate 2
+_June 12, 2006_ +
+  * Bug fixes
+  * Upgrade to struts 1.2.9
+  * Introduction of Calendar Suites:
+    ** the Bedework system can now be defined as a           collection of "calendar suites" which allows for the           implementation of departmental calendars.
+
+==== 3.1 release candidate 1
+_May 19, 2006_ +
+  * Dump/restore and schema:
+    ** Now zipped up with shell script for running           stand-alone
+  * Caldav fixes to bring up to draft 12
+  * Prototype free/busy aggregator
+  * Personal Client:
+    ** sharing of events (as well as calendars and           free-busy)
+    ** bug fixes and interface updates
+
+  * Admin and Public Clients:
+    ** brought up-to-date with all changes
+
+==== 3.1pre
+_May 5, 2006_ +
+  * Personal Client:
+  ** Preferences management in place
+  ** Can select destination calendar when importing an           event or adding an event reference
+  ** Updates to access control
+  ** Schema changes
+  ** Graphical updates (also to public client)
+
+==== 3.1pre
+_April 21, 2006_ +
+  * Personal Client:
+  ** Full calendar management in place
+  ** Free/Busy display
+  ** Basic sharing of calendars and free/busy
+
+==== 3.1pre
+_April 14, 2006_ +
+  * Personal Client: Fixed up personal client so basic       functionality is restored. Client has been given a graphical       overhaul.
+  * Free/Busy: Preliminary work on free/busy
+  * Lucene full text searching: Added classes to support       Lucene indexing
+:sectnums:

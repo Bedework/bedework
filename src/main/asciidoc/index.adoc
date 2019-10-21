@@ -10,6 +10,7 @@
 :admin-dir: administrators/
 :deployer-dir: deployers/
 :dev-dir: development/
+:older-dir: older/
 
 :sectnums!:
 
@@ -50,3 +51,7 @@ include::{deployer-dir}locations.adoc[]
 == Development
 include::{dev-dir}todo.adoc[]
 include::{dev-dir}caldavtester.adoc[]
+
+[[older-releases]]
+== Older Bedework Versions (3.10 and Prior)
+include::{older-dir}releases.adoc[]
