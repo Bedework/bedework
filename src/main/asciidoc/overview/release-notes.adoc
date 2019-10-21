@@ -2,12 +2,40 @@
 === Release Notes
 
 ==== Dev:
+This release
+
+There was long standing a bug in category handling for updates. An attempt
+was made to preserve default categories for calsuites when an event is
+updated. For example if an event is suggested and accepted the
+accepting calsuite has its default category added to the event.
+
+This code was being applied to collections which made it impossible to
+turn off a default category added to, e.g. an alias, by mistake.
+
+This release also introduces a new authenticated public context. This
+is intended to be used for departmental calendars for example. There were
+a number of changes needed to make this work but most of the work will
+come in setting up the calendar collections and aliases. Documentation
+and examples will follow later as always.
+
+  * Drop the explicit reference to maven profile bedework-3 in the bw script. Fix that script to allow -P <profile> and use that in the install script to use bedework-3 +
+  This allows us to specify a default profile that differs from the bedework-3 profile.
+  * Additionally - add support for a .bw file in the user home which allows setting of the profile. See <<default-maven-profiles,Default Maven Profiles>>
+  * Wildfly galleon installer 4.0.3.Final stopped working soon after the last release. Updating to a later version and hoping this won't break.
   * Updated google maps url generation to use location combinedValues property
   * If the location map url is "NO-LINK" (without quotes) then no link will be generated.
-  * Require that the location name be set.
   * Remove BasicHttpClient. This necessitated some config changes -
     ** authCardDav.xml and unauthCardDav.xml in bwengine now have a url rather than host, port and context.
     ** notify/notify-config.xml changed - removed host, port, context. Added URI
+  * Web client changes
+    ** Change how we select the mode of working -
+    ** Config for user and submission clients require new entry - <readWrite>true</readWrite>
+    ** Add a new authenticated public client. This should allow limited read-only access to views of the data. Users will be added to admin groups to control the access.
+    ** Removed bwapptype parameter from web.xml files. Value is duplicated in client configs.
+  * Bug fixes
+    ** User TermsFilterBuilder for collections. Was generating partially working query
+    ** change "|" to " or " in xsl - was not encoded - broke some pages
+    ** Problem related to timestamp handling was causing ES version errors.
 
 ==== Release 3.13.0:
 This release mostly consists of upgrades to almost the latest ElasticSearch (always a moving target), the currently latest wildfly and to Java 11 the current LTS release.

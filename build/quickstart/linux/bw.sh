@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 #
 # This file is included by the quickstart script file "bw" so that it can live
@@ -12,12 +12,15 @@ trap "exit 2" 1 2 3 15
 
 export QUICKSTART_HOME=$saveddir
 
+. $HOME/.bw
+
 bw_loglevel=""
 postDeployDebug="";
 deployConfig="./bedework/config/wildfly.deploy.properties"
 
 mvn_quiet=   # "-q"
-mvnProfile=
+mvnProfile=${bw_mvnProfile:-}
+echoOnly=false
 
 #mvn_binary="/usr/share/maven/bin/mvn";
 mvn_binary="mvn"
@@ -88,8 +91,6 @@ saveData=
 
 specialTarget=
 
-dobuild=yes
-
 mavenRepoLocal=
 
 appserver="-Dorg.bedework.target.appserver=wildfly"
@@ -100,6 +101,20 @@ echo "  ------------------------"
 echo ""
 
 PRG="$0"
+
+echoExec() {
+  echo "$@"
+  if [ "$echoOnly" = false ] ; then
+    eval "$@"
+    return $?
+  fi
+
+  return 0
+}
+
+mvnExec() {
+  echoExec "$mvn_binary" "$@"
+}
 
 usage() {
   echo "The build and deploy process is changed from previous releases."
@@ -205,6 +220,10 @@ errorUsage() {
   exit 1
 }
 
+setDir() {
+  echoExec cd $1
+}
+
 # ----------------------------------------------------------------------------
 # Update the projects
 # ----------------------------------------------------------------------------
@@ -220,9 +239,9 @@ actionUpdateall() {
       echo "*********************************************************************"
       echo "Updating project $QUICKSTART_HOME/$project"
       echo "*********************************************************************"
-      cd $project
+      setDir $project
       git pull
-      cd $QUICKSTART_HOME
+      setDir $QUICKSTART_HOME
     fi
   done
 
@@ -243,9 +262,9 @@ actionCleanall() {
       echo "*********************************************************************"
       echo "Cleaning project $QUICKSTART_HOME/$project"
       echo "*********************************************************************"
-      cd $project
-      $mvn_binary $mvn_quiet $mvnProfile clean
-      cd $QUICKSTART_HOME
+      setDir $project
+      mvnExec $mvn_quiet $mvnProfile clean
+      setDir $QUICKSTART_HOME
     fi
   done
 
@@ -261,49 +280,49 @@ setDirectory() {
 
 #     Special targets
     if [ "$deployer" != "" ] ; then
-      cd $QUICKSTART_HOME
+      setDir $QUICKSTART_HOME
       specialTarget=deployer
       deployer=
       return
     fi
 
     if [ "$deploylog4j" != "" ] ; then
-      cd $QUICKSTART_HOME
+      setDir $QUICKSTART_HOME
       specialTarget=deploylog4j
       deploylog4j=
       return
     fi
 
     if [ "$deploywf" != "" ] ; then
-      cd $QUICKSTART_HOME
+      setDir $QUICKSTART_HOME
       specialTarget=deploywf
       deploywf=
       return
     fi
 
   if [ "$deployConf" != "" ] ; then
-    cd $QUICKSTART_HOME
+    setDir $QUICKSTART_HOME
     specialTarget=deployConf
     deployConf=
     return
   fi
 
   if [ "$deployWebcache" != "" ] ; then
-    cd $QUICKSTART_HOME
+    setDir $QUICKSTART_HOME
     specialTarget=deployWebcache
     deployWebcache=
     return
   fi
 
   if [ "$deployData" != "" ] ; then
-    cd $QUICKSTART_HOME
+    setDir $QUICKSTART_HOME
     specialTarget=deployData
     deployData=
     return
   fi
 
   if [ "$saveData" != "" ] ; then
-    cd $QUICKSTART_HOME
+    setDir $QUICKSTART_HOME
     specialTarget=saveData
       saveData=
     return
@@ -312,169 +331,169 @@ setDirectory() {
 #     projects
 
 	if [ "$xsl" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-calendar-xsl
+	  setDir $QUICKSTART_HOME/bw-calendar-xsl
       xsl=
 	  return
 	fi
 
 	if [ "$bwutildeploy" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-util-deploy
+	  setDir $QUICKSTART_HOME/bw-util-deploy
       bwutildeploy=
 	  return
 	fi
 
 	if [ "$bwutillog" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-util-logging
+	  setDir $QUICKSTART_HOME/bw-util-logging
       bwutillog=
 	  return
 	fi
 
 	if [ "$bwutil" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-util
+	  setDir $QUICKSTART_HOME/bw-util
       bwutil=
 	  return
 	fi
 
 	if [ "$bwutilhib" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-util-hibernate
+	  setDir $QUICKSTART_HOME/bw-util-hibernate
       bwutilhib=
 	  return
 	fi
 
 	if [ "$bwxml" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-xml
+	  setDir $QUICKSTART_HOME/bw-xml
       bwxml=
 	  return
 	fi
 
 	if [ "$bwutil2" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-util2
+	  setDir $QUICKSTART_HOME/bw-util2
       bwutil2=
 	  return
 	fi
 
 	if [ "$access" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-access
+	  setDir $QUICKSTART_HOME/bw-access
       access=
 	  return
 	fi
 
 	if [ "$bwnotifier" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-notifier
+	  setDir $QUICKSTART_HOME/bw-notifier
       bwnotifier=
 	  return
 	fi
 
 	if [ "$eventreg" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-event-registration
+	  setDir $QUICKSTART_HOME/bw-event-registration
       eventreg=
 	  return
 	fi
 
 	if [ "$webdav" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-webdav
+	  setDir $QUICKSTART_HOME/bw-webdav
       webdav=
 	  return
 	fi
 
 	if [ "$dotWellKnown" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-dotwell-known
+	  setDir $QUICKSTART_HOME/bw-dotwell-known
       dotWellKnown=
 	  return
 	fi
 
 	if [ "$caldav" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-caldav
+	  setDir $QUICKSTART_HOME/bw-caldav
       caldav=
 	  return
 	fi
 
 	if [ "$caldavTest" != "" ] ; then
-	  cd $QUICKSTART_HOME/caldavTest
+	  setDir $QUICKSTART_HOME/caldavTest
       caldavTest=
 	  return
 	fi
 
 	if [ "$carddav" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-carddav
+	  setDir $QUICKSTART_HOME/bw-carddav
       carddav=
 	  return
 	fi
 
 	if [ "$bwcaleng" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-calendar-engine
+	  setDir $QUICKSTART_HOME/bw-calendar-engine
       bwcaleng=
 	  return
 	fi
 
 	if [ "$bwcalclient" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-calendar-client
+	  setDir $QUICKSTART_HOME/bw-calendar-client
       bwcalclient=
 	  return
 	fi
 
 	if [ "$bwcli" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-cli
+	  setDir $QUICKSTART_HOME/bw-cli
       bwcli=
 	  return
 	fi
 
 	if [ "$catsvr" != "" ] ; then
-	  cd $QUICKSTART_HOME/catsvr
+	  setDir $QUICKSTART_HOME/catsvr
       catsvr=
 	  return
 	fi
 
 	if [ "$client" != "" ] ; then
-	  cd $QUICKSTART_HOME/bwclient
+	  setDir $QUICKSTART_HOME/bwclient
       client=
 	  return
 	fi
 
 	if [ "$bwcalsockets" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-calsockets
+	  setDir $QUICKSTART_HOME/bw-calsockets
     bwcalsockets=
 	  return
 	fi
 
 	if [ "$bedework" != "" ] ; then
-	  cd $QUICKSTART_HOME
+	  setDir $QUICKSTART_HOME
       bedework=
 	  return
 	fi
 
 	if [ "$naming" != "" ] ; then
-	  cd $QUICKSTART_HOME/bwnaming
+	  setDir $QUICKSTART_HOME/bwnaming
       naming=
 	  return
 	fi
 
 	if [ "$exchgGateway" != "" ] ; then
-	  cd $QUICKSTART_HOME/exchgGateway
+	  setDir $QUICKSTART_HOME/exchgGateway
       exchgGateway=
 	  return
 	fi
 
 	if [ "$selfreg" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-self-registration
+	  setDir $QUICKSTART_HOME/bw-self-registration
       selfreg=
 	  return
 	fi
 
   if [ "$synch" != "" ] ; then
-    cd $QUICKSTART_HOME/bw-synch
+    setDir $QUICKSTART_HOME/bw-synch
       synch=
     return
   fi
 
 	if [ "$testsuite" != "" ] ; then
-	  cd $QUICKSTART_HOME/testsuite
+	  setDir $QUICKSTART_HOME/testsuite
       testsuite=
 	  return
 	fi
 
 	if [ "$tzsvr" != "" ] ; then
-	  cd $QUICKSTART_HOME/bw-timezone-server
+	  setDir $QUICKSTART_HOME/bw-timezone-server
       tzsvr=
 	  return
 	fi
@@ -566,6 +585,10 @@ do
       exit
       shift
       ;;
+    -echoonly)
+      echoOnly=true
+      shift
+      ;;
     -mrl)
       shift
       mavenRepoLocal="$1"
@@ -584,10 +607,6 @@ do
     -bwjmxconf)
       shift
       BWJMXCONFIG="$1"
-      shift
-      ;;
-    -nobuild)
-      dobuild="no"
       shift
       ;;
     -deployUrl)
@@ -958,15 +977,13 @@ fi
 
 export QUICKSTART_HOME
 
-mvncmd="$mvn_binary $mvn_quiet $mvnProfile -Dmaven.test.skip=true"
+mvncmd="$mvn_quiet $mvnProfile -Dmaven.test.skip=true"
 
 if [ "$clean" = "yes" ] ; then
   mvncmd="$mvncmd clean"
 fi
 
 mvncmd="$mvncmd install"
-
-echo "mvncmd = $mvncmd"
 
 while true
 do
@@ -979,8 +996,7 @@ do
     # echo "Special target - command is $javacmd $specialTarget"
     $javacmd $specialTarget
   else
-    $mvncmd
-    if [ "$?" -ne 0 ]; then
+    if ! mvnExec $mvncmd ; then
       echo "Maven build unsuccessful"
       exit 1
     fi

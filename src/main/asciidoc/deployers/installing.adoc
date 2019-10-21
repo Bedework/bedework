@@ -37,9 +37,9 @@ This is a maven project and as usual you need to set up your maven profile in ~/
 
 If you want to merge in the profile to an existing settings.xml ensure you also merge in the *pluginGroups* section.
 
-The profile does not need to be active by default if you have other profiles. The build process will specify the bedework-3 profile.
+The profile does not need to be active by default if you have other profiles. The build process will specify the bedework-qs profile.
 
-Below is the contents of that settings.xml file. This must be in place before allowing the script to continue on to the builds otherwise they will fail during deployment.
+Below is the contents of an example settings.xml file. This file must be set up before allowing the script to continue on to the builds otherwise they will fail during deployment.
 
 [source,xml]
 ----
@@ -55,7 +55,7 @@ Below is the contents of that settings.xml file. This must be in place before al
     <profile>
       <id>bedework-3</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <activeByDefault>false</activeByDefault>
       </activation>
       <properties>
         <org.bedework.deployment.basedir>$qs</org.bedework.deployment.basedir>
@@ -66,6 +66,38 @@ Below is the contents of that settings.xml file. This must be in place before al
 </settings>
 
 ----
+[[default-maven-profiles]]
+==== Default Maven Profiles
+Note there appears to be a bug in the use of ***activeByDefault***.
+Explicitly specifying a profile with the maven -P parameter is supposed
+to deactivate a profile marked as activeByDefault. This is not (always?)
+happening.
+
+If you only have profile marking by default should be fine. To ensure
+only one profile (or the expected profiles) are active cd into the project
+and try
+
+[source]
+----
+mvn -P bedework-3 help:active-profiles
+----
+
+To alleviate some of the issues of having multiple profiles for bedework
+builds the bw script now includes a .bw file in the home directory
+which can set some defaults. At the moment the only default is the
+profile. An example .bw file is:
+
+[source]
+----
+#
+# Defaults for bw script
+#
+echo "Setting defaults from .bw"
+bw_mvnProfile="-P bedework_dev"
+
+----
+
+Note the setting needs to include the -P.
 
 ==== Security
 During the install an id and password will be set up so that the install process can reindex the data. These will allow use of the cli and the hawtio console.

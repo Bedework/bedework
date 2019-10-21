@@ -82,9 +82,10 @@
 <li><a href="#_apacheds">3.1.2. Apacheds</a></li>
 <li><a href="#_elasticsearch">3.1.3. ElasticSearch</a></li>
 <li><a href="#_maven">3.1.4. Maven</a></li>
-<li><a href="#_security">3.1.5. Security</a></li>
-<li><a href="#_building">3.1.6. Building</a></li>
-<li><a href="#_deploying">3.1.7. Deploying</a></li>
+<li><a href="#default-maven-profiles">3.1.5. Default Maven Profiles</a></li>
+<li><a href="#_security">3.1.6. Security</a></li>
+<li><a href="#_building">3.1.7. Building</a></li>
+<li><a href="#_deploying">3.1.8. Deploying</a></li>
 </ul>
 </li>
 <li><a href="#configuring-wildfly">3.2. Configuring wildfly</a>
@@ -274,7 +275,94 @@
 <h3 id="release-notes">1.2. Release Notes</h3>
 <div class="sect3">
 <h4 id="_dev">1.2.1. Dev:</h4>
-
+<div class="paragraph">
+<p>This release</p>
+</div>
+<div class="paragraph">
+<p>There was long standing a bug in category handling for updates. An attempt
+was made to preserve default categories for calsuites when an event is
+updated. For example if an event is suggested and accepted the
+accepting calsuite has its default category added to the event.</p>
+</div>
+<div class="paragraph">
+<p>This code was being applied to collections which made it impossible to
+turn off a default category added to, e.g. an alias, by mistake.</p>
+</div>
+<div class="paragraph">
+<p>This release also introduces a new authenticated public context. This
+is intended to be used for departmental calendars for example. There were
+a number of changes needed to make this work but most of the work will
+come in setting up the calendar collections and aliases. Documentation
+and examples will follow later as always.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Drop the explicit reference to maven profile bedework-3 in the bw script. Fix that script to allow -P &lt;profile&gt; and use that in the install script to use bedework-3<br>
+This allows us to specify a default profile that differs from the bedework-3 profile.</p>
+</li>
+<li>
+<p>Additionally - add support for a .bw file in the user home which allows setting of the profile. See <a href="#default-maven-profiles">Default Maven Profiles</a></p>
+</li>
+<li>
+<p>Wildfly galleon installer 4.0.3.Final stopped working soon after the last release. Updating to a later version and hoping this won&#8217;t break.</p>
+</li>
+<li>
+<p>Updated google maps url generation to use location combinedValues property</p>
+</li>
+<li>
+<p>If the location map url is "NO-LINK" (without quotes) then no link will be generated.</p>
+</li>
+<li>
+<p>Remove BasicHttpClient. This necessitated some config changes -</p>
+<div class="ulist">
+<ul>
+<li>
+<p>authCardDav.xml and unauthCardDav.xml in bwengine now have a url rather than host, port and context.</p>
+</li>
+<li>
+<p>notify/notify-config.xml changed - removed host, port, context. Added URI</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Web client changes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Change how we select the mode of working -</p>
+</li>
+<li>
+<p>Config for user and submission clients require new entry - &lt;readWrite&gt;true&lt;/readWrite&gt;</p>
+</li>
+<li>
+<p>Add a new authenticated public client. This should allow limited read-only access to views of the data. Users will be added to admin groups to control the access.</p>
+</li>
+<li>
+<p>Removed bwapptype parameter from web.xml files. Value is duplicated in client configs.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Bug fixes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>User TermsFilterBuilder for collections. Was generating partially working query</p>
+</li>
+<li>
+<p>change "|" to " or " in xsl - was not encoded - broke some pages</p>
+</li>
+<li>
+<p>Problem related to timestamp handling was causing ES version errors.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_release_3_13_0">1.2.2. Release 3.13.0:</h4>
@@ -1715,10 +1803,10 @@ This requires git 2.x or greater. The clones use a tag rather than branch and th
 <p>If you want to merge in the profile to an existing settings.xml ensure you also merge in the <strong>pluginGroups</strong> section.</p>
 </div>
 <div class="paragraph">
-<p>The profile does not need to be active by default if you have other profiles. The build process will specify the bedework-3 profile.</p>
+<p>The profile does not need to be active by default if you have other profiles. The build process will specify the bedework-qs profile.</p>
 </div>
 <div class="paragraph">
-<p>Below is the contents of that settings.xml file. This must be in place before allowing the script to continue on to the builds otherwise they will fail during deployment.</p>
+<p>Below is the contents of an example settings.xml file. This file must be set up before allowing the script to continue on to the builds otherwise they will fail during deployment.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1734,7 +1822,7 @@ This requires git 2.x or greater. The clones use a tag rather than branch and th
     <span class="tag">&lt;profile&gt;</span>
       <span class="tag">&lt;id&gt;</span>bedework-3<span class="tag">&lt;/id&gt;</span>
       <span class="tag">&lt;activation&gt;</span>
-        <span class="tag">&lt;activeByDefault&gt;</span>true<span class="tag">&lt;/activeByDefault&gt;</span>
+        <span class="tag">&lt;activeByDefault&gt;</span>false<span class="tag">&lt;/activeByDefault&gt;</span>
       <span class="tag">&lt;/activation&gt;</span>
       <span class="tag">&lt;properties&gt;</span>
         <span class="tag">&lt;org.bedework.deployment.basedir&gt;</span>$qs<span class="tag">&lt;/org.bedework.deployment.basedir&gt;</span>
@@ -1747,13 +1835,50 @@ This requires git 2.x or greater. The clones use a tag rather than branch and th
 </div>
 </div>
 <div class="sect3">
-<h4 id="_security">3.1.5. Security</h4>
+<h4 id="default-maven-profiles">3.1.5. Default Maven Profiles</h4>
+<div class="paragraph">
+<p>Note there appears to be a bug in the use of <strong><strong>activeByDefault</strong></strong>.
+Explicitly specifying a profile with the maven -P parameter is supposed
+to deactivate a profile marked as activeByDefault. This is not (always?)
+happening.</p>
+</div>
+<div class="paragraph">
+<p>If you only have profile marking by default should be fine. To ensure
+only one profile (or the expected profiles) are active cd into the project
+and try</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>mvn -P bedework-3 help:active-profiles</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To alleviate some of the issues of having multiple profiles for bedework
+builds the bw script now includes a .bw file in the home directory
+which can set some defaults. At the moment the only default is the
+profile. An example .bw file is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>#
+# Defaults for bw script
+#
+echo "Setting defaults from .bw"
+bw_mvnProfile="-P bedework_dev"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note the setting needs to include the -P.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_security">3.1.6. Security</h4>
 <div class="paragraph">
 <p>During the install an id and password will be set up so that the install process can reindex the data. These will allow use of the cli and the hawtio console.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_building">3.1.6. Building</h4>
+<h4 id="_building">3.1.7. Building</h4>
 <div class="paragraph">
 <p>In many cases it is possible to simply cd in to the appropriate directory and do a mvn install with the bedework-3 profile. However there is a <strong>bw</strong> script which - while taking longer - does build all projects a module depends upon. This avoids the need to work out the dependency orderings of the independent projects. Thus</p>
 </div>
@@ -1767,7 +1892,7 @@ This requires git 2.x or greater. The clones use a tag rather than branch and th
 </div>
 </div>
 <div class="sect3">
-<h4 id="_deploying">3.1.7. Deploying</h4>
+<h4 id="_deploying">3.1.8. Deploying</h4>
 <div class="paragraph">
 <p>As part of the bedework project there is a maven plugin which uses a properties file to handle post-build deployment issues. Essentially the ear or war as built acts as a template for the deployer.</p>
 </div>

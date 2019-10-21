@@ -7,7 +7,7 @@
         <packaging>ear</packaging>
       </options>
     </properties>
-    <root id="archive" name="bw-event-registration-4.0.8-SNAPSHOT.ear">
+    <root id="archive" name="bw-event-registration-4.0.9-SNAPSHOT.ear">
       <element id="artifact" artifact-name="bw-event-registration-ear:ear exploded" />
     </root>
   </artifact>
