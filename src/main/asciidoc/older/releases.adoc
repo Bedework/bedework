@@ -273,6 +273,7 @@ _January 29, 2009_ +
 
 ==== 3.4.1.1
 _June 3, 2008_ +
+
   * Support for RFC-2445 x-properties
   * Inclusion of image URL for public events
   * Improvements to public event submission web client
@@ -287,6 +288,7 @@ _June 3, 2008_ +
 
 ==== 3.4.1
 _March 18, 2008_ +
+
   * CalDAV: many improvements; greatly enhanced interoperability with http://www.jasig.org/trac/bedework/wiki/BedeworkUserHelp/Lightning[Mozilla       Lightning] and Apple's iCal; support for subscriptions to web calendars through the CalDAV server, allowing Bedework to expose user subscriptions to desktop clients; improved support for CalDAV filters
   * Addition of Public Events Submission web client (beta) which allows non-admin users to suggest public events. (http://www.jasig.org/trac/bedework/wiki/DeployDocs/SubmissionACLs[configuration       details])
   * Much better support for RSS and Javascript feeds       including the addition of category filters and date       ranges
@@ -304,6 +306,7 @@ _March 18, 2008_ +
 
 ==== 3.4
 _September 14, 2007_ +
+
   * Better standards support: A much more complete       implementation of the calendaring standards RFC2445, RFC2446,       RFC791 (CalDAV) and the CalDAV scheduling draft       standard.
   * A reasonably complete implementation of iTIP scheduling,       such as simple (non-recurring) iTIP scheduling, display of       attendee FreeBusy information, sending invitations, update of       attendee status, canceling meetings. There is some support of       recurring meetings and modifications to instances partially       works.
   * Portal support: A number of changes to make the user       interface more portal friendly.
@@ -314,6 +317,7 @@ _September 14, 2007_ +
 
 ==== 3.3.1
 _April 25, 2007_ +
+
   * Access fixes. Note this requires a change to the /public       folder. Previously read + write-content was sufficient for       administrative privileges. Now it must be read +       write-content + bind (may also want unbind to allow       deletions)
   * A number of bugfixes to CalDAV support.
   * Implemented some missing CalDAV features.
@@ -335,6 +339,7 @@ _April 25, 2007_ +
 
 ==== 3.3.1 preview release
 _February 23, 2007_ +
+
   * CalDAV - Fixes to problems uncovered in the       interoperability testing at CalConnect.
   * Recurring events - Fixes to some bugs, especially in the       sharing of these events.
   * Timezones - Fixes to problems sharing events with       'private' timezones, such as those added via CalDAV or       imported as ics.
@@ -344,6 +349,7 @@ _February 23, 2007_ +
 
 ==== 3.3
 _January 24, 2007_ +
+
   * Java 1.5 and Tomcat 5.5 as implementation       requirements
   * Lucene searching has been implemented for all       clients
   * Categories have been reinstated
@@ -362,10 +368,12 @@ _January 24, 2007_ +
 
 ==== 3.3 release candidate
 _December 15, 2006_ +
+
   * A subset of the 3.3 release, above
 
 ==== 3.3 preview release
 _November 22, 2006_ +
+
   * Lucene searching added
   * Recurring and annotated event support rewritten
   * Added a String table to facilitate       internationalization
@@ -378,11 +386,13 @@ _November 22, 2006_ +
 
 ==== 3.2
 _August 15, 2006_ +
+
   * SVN Restructuring complete
   * CalDAV improvements
 
 ==== 3.1
 _August 1, 2006_ +
+
   * Restructuring of system into multiple SVN projects
   * Working personal calendars released
   * Freebusy aggregator added
@@ -390,16 +400,19 @@ _August 1, 2006_ +
 
 ==== 3.1 release candidate 4
 _June 22, 2006_ +
+
   * Restructuring of stylesheet directories to better support       calendar suites
   * Initial release of jsr-168 compliant portlet for use       within uPortal
 
 ==== 3.1 release candidate 3
 _June 19, 2006_ +
+
   * Further interface updates and bug fixes
   * Calendar Suites (departmental calendars) updated and       highlighted
 
 ==== 3.1 release candidate 2
 _June 12, 2006_ +
+
   * Bug fixes
   * Upgrade to struts 1.2.9
   * Introduction of Calendar Suites:
@@ -407,6 +420,7 @@ _June 12, 2006_ +
 
 ==== 3.1 release candidate 1
 _May 19, 2006_ +
+
   * Dump/restore and schema:
     ** Now zipped up with shell script for running           stand-alone
   * Caldav fixes to bring up to draft 12
@@ -420,6 +434,7 @@ _May 19, 2006_ +
 
 ==== 3.1pre
 _May 5, 2006_ +
+
   * Personal Client:
   ** Preferences management in place
   ** Can select destination calendar when importing an           event or adding an event reference
@@ -429,6 +444,7 @@ _May 5, 2006_ +
 
 ==== 3.1pre
 _April 21, 2006_ +
+
   * Personal Client:
   ** Full calendar management in place
   ** Free/Busy display
@@ -436,6 +452,7 @@ _April 21, 2006_ +
 
 ==== 3.1pre
 _April 14, 2006_ +
+
   * Personal Client: Fixed up personal client so basic       functionality is restored. Client has been given a graphical       overhaul.
   * Free/Busy: Preliminary work on free/busy
   * Lucene full text searching: Added classes to support       Lucene indexing
