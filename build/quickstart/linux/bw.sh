@@ -12,7 +12,11 @@ trap "exit 2" 1 2 3 15
 
 export QUICKSTART_HOME=$saveddir
 
-. $HOME/.bw
+bwOptions=$HOME/.bw
+
+if [ -f "$bwOptions" ]; then
+  . "bwOptions"
+fi
 
 bw_loglevel=""
 postDeployDebug="";
