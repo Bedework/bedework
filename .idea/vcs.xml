@@ -15,6 +15,7 @@
     <mapping directory="$PROJECT_DIR$/../bw-cli" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-dotwell-known" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-event-registration" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-jsforj" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-notifier" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-self-registration" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-synch" vcs="Git" />

@@ -66,6 +66,7 @@
         <option value="$PROJECT_DIR$/../bw-util-hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-logging/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-deploy/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-jsforj/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

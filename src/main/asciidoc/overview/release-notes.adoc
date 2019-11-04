@@ -2,6 +2,8 @@
 === Release Notes
 
 ==== Dev:
+    * Bring libraries (jackson + spring) up to the current up to date
+    * Mew jsforj module to pase and generate jscalendar amd jscontact structures.
 
 ==== Release 3.13.1:
 There was long standing a bug in category handling for updates. An attempt
