@@ -15,7 +15,7 @@ export QUICKSTART_HOME=$saveddir
 bwOptions=$HOME/.bw
 
 if [ -f "$bwOptions" ]; then
-  . "bwOptions"
+  . "$bwOptions"
 fi
 
 bw_loglevel=""
@@ -133,7 +133,7 @@ usage() {
   echo "allows you to set the security-domain, transport guarantees, "
   echo "virtual hosts and add or remove calendar suites."
   echo "See"
-  echo "http://wiki.jasig.org/display/BWK310/Configuring+Bedework"
+  echo "http://bedework.github.io/bedework/"
   echo ""
   echo "  $PRG ACTION"
   echo "  $PRG [-dc CONFIG-SOURCE] [-P PROFILE] [PROJECT] [ -offline ] "
