@@ -3,7 +3,14 @@
 
 ==== Dev:
     * Bring libraries (jackson + spring) up to the current up to date
-    * Mew jsforj module to pase and generate jscalendar amd jscontact structures.
+    * New jsforj module to parse and generate jscalendar amd jscontact structures.
+    * Major internal refactor ready for embedding jsCalendar support:
+        ** Moved bw-calendar-engine-ical to bw-calendar-engine-convert
+        ** Added packages in that module for ical, jcal and xcal.
+    * Changed a number of internal api calls to use response objects and
+        return errorcodes rather than throw exceptions. Where an
+        exception is the only way out use RuntimeException.
+    * More fixes to bw script.
 
 ==== Release 3.13.1:
 There was long standing a bug in category handling for updates. An attempt

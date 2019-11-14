@@ -6,27 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bw-util-maven-deploy (1)" />
         <module name="bw-evreg-ear" />
-        <module name="bw-calendar-xsl" />
-        <module name="bw-util-servlet-filters" />
+        <module name="bw-xml-calws-soap-strict" />
         <module name="bw-xml-bwlicense" />
         <module name="bw-carddav-ear" />
         <module name="bw-xml-icalendar-strict" />
         <module name="bw-caldavTest" />
         <module name="bw-evreg-service" />
         <module name="bw-webdav" />
-        <module name="bw-xml-vcard" />
         <module name="bw-selfreg-war" />
         <module name="bw-util-xml" />
-        <module name="bw-xml-xrd" />
+        <module name="bw-calendar-client-bwcommon" />
         <module name="bw-util-cli" />
         <module name="bw-carddav-tools" />
         <module name="bw-carddav-server" />
         <module name="bw-xml-carddav" />
         <module name="bw-calendar-client-cal" />
-        <module name="bw-xml-calws-soap" />
-        <module name="bw-util-jolokia" />
+        <module name="bw-event-registration-service" />
+        <module name="bw-synch-shared" />
         <module name="bw-synch-common" />
         <module name="bw-util-elasticsearch" />
         <module name="bw-util-hibernate" />
@@ -38,95 +35,98 @@
         <module name="bw-calendar-client-calauth" />
         <module name="bw-calendar-client-webcommon" />
         <module name="bw-dotwell-known" />
-        <module name="bw-util-servlet" />
         <module name="bw-calendar-client-feeder" />
-        <module name="bw-calsockets-common" />
+        <module name="bw-util2-vcard" />
+        <module name="bw-util-jmx" />
         <module name="bw-timezone-server-war" />
         <module name="bw-util-deployment" />
-        <module name="bw-util-misc" />
+        <module name="bw-calendar-xsl" />
         <module name="bw-util-timezones" />
         <module name="bw-calendar-client-ear" />
         <module name="bw-calendar-client-ucal" />
-        <module name="bw-xml-war" />
+        <module name="bw-caldav-util" />
         <module name="bw-addrbook-client" />
         <module name="bw-util-logging" />
-        <module name="bw-xml-icalendar" />
+        <module name="bw-note-bwconnector" />
+        <module name="bw-note-outbound" />
         <module name="bw-evreg-common" />
         <module name="bw-calutil" />
         <module name="bw-calendar-client-appcommon" />
         <module name="bw-util-options" />
-        <module name="bw-xml-calws-soap-strict" />
+        <module name="bw-util-maven-deploy" />
         <module name="bw-timezone-server-ear" />
-        <module name="common" />
         <module name="bw-carddav-dumpres" />
         <module name="bw-util-indexing" />
         <module name="bw-util2-calendar" />
-        <module name="bw-util-caching" />
+        <module name="bw-timezone-server-tzconvert" />
         <module name="bw-xml-appleServer" />
         <module name="bw-self-registration-war" />
+        <module name="bw-evreg-war" />
         <module name="bw-access" />
-        <module name="bwwebcl-webcommon" />
         <module name="bw-deploy-maven-plugin" />
         <module name="bw-note-shared" />
         <module name="bw-note-war" />
-        <module name="bw-calendar-client-bwcommon" />
+        <module name="bw-util-json" />
+        <module name="bw-xml-xrd" />
         <module name="bw-caldav-server" />
         <module name="bw-carddav-client" />
         <module name="bw-cli" />
         <module name="bw-util (1)" />
         <module name="bw-event-registration-war" />
         <module name="bw-xml-dav" />
-        <module name="bw-util-jmx" />
-        <module name="bw-util2-vcard" />
+        <module name="bw-xml-war" />
+        <module name="bw-calsockets-common" />
+        <module name="bw-xml-caldav" />
         <module name="bw-util-jms" />
         <module name="bw-selfreg-common" />
-        <module name="bw-xml-catdav" />
+        <module name="bw-carddav-user-war" />
         <module name="bw-util-security" />
         <module name="bw-note-ear" />
         <module name="bw-timezone-server-common" />
         <module name="bw-self-registration-common" />
         <module name="bw-calsockets-pubwar" />
         <module name="bedework" />
-        <module name="bw-carddav-user-war" />
+        <module name="bw-util-caching" />
         <module name="bw-event-registration-ear" />
-        <module name="bw-note-db" />
+        <module name="bw-util-maven-deploy (1)" />
         <module name="bw-xml-ear" />
         <module name="bw-util-args" />
         <module name="bw-jsforj" />
+        <module name="bw-synch-web" />
         <module name="bw-note-servlet" />
-        <module name="bw-xml-caldav" />
+        <module name="bw-xml-catdav" />
+        <module name="bw-util-misc" />
         <module name="bw-calendar-client-caladmin" />
         <module name="bw-xml-exchangews" />
         <module name="bw-util-config" />
-        <module name="bw-evreg-war" />
+        <module name="bw-util-servlet-filters" />
         <module name="bw-xml-synchws" />
         <module name="bw-calsockets-war" />
         <module name="bw-synch-ear" />
         <module name="bw-calsockets-web" />
         <module name="bw-util-dav" />
         <module name="bw-util-deployment (1)" />
-        <module name="bw-self-registration-web" />
         <module name="bw-util-struts" />
-        <module name="bw-caldav-util" />
-        <module name="bw-event-registration-service" />
+        <module name="bw-xml-vcard" />
+        <module name="bw-self-registration-web" />
         <module name="bw-carddav-common" />
-        <module name="bw-note-bwconnector" />
+        <module name="bw-util-servlet" />
         <module name="bw-calendar-client-submit" />
         <module name="bw-event-registration-common" />
-        <module name="bw-synch-shared" />
+        <module name="bwwebcl-webcommon" />
         <module name="bw-note-common" />
         <module name="bw-util-directory" />
         <module name="bw-calendar-client-bedework-common" />
-        <module name="bw-synch-war" />
-        <module name="bw-note-outbound" />
-        <module name="bw-timezone-server-tzconvert" />
+        <module name="bw-xml-icalendar" />
+        <module name="common" />
+        <module name="bw-note-db" />
         <module name="bw-util-config-http" />
-        <module name="bw-util-maven-deploy" />
-        <module name="bw-util-json" />
+        <module name="bw-xml-calws-soap" />
+        <module name="bw-synch-war" />
         <module name="bw-util-http" />
         <module name="bw-self-registration-ear" />
         <module name="bw-xml-tzsvr" />
-        <module name="bw-synch-web" />
+        <module name="bw-util-jolokia" />
       </profile>
       <profile name="Annotation profile for bw-calendar-engine" enabled="true">
         <sourceOutputDir name="target/generated-sources/apt" />
@@ -164,6 +164,7 @@
       <module name="bw-calendar-engine-api" target="11" />
       <module name="bw-calendar-engine-caldav" target="11" />
       <module name="bw-calendar-engine-chgnote" target="11" />
+      <module name="bw-calendar-engine-convert" target="11" />
       <module name="bw-calendar-engine-core" target="11" />
       <module name="bw-calendar-engine-core-common" target="11" />
       <module name="bw-calendar-engine-dumprestore" target="11" />
@@ -333,6 +334,7 @@
       <module name="bw-calendar-engine-api" options="-proc:none" />
       <module name="bw-calendar-engine-caldav" options="-proc:none" />
       <module name="bw-calendar-engine-chgnote" options="-proc:none" />
+      <module name="bw-calendar-engine-convert" options="-proc:none" />
       <module name="bw-calendar-engine-core" options="-proc:none" />
       <module name="bw-calendar-engine-core-common" options="-proc:none" />
       <module name="bw-calendar-engine-dumprestore" options="-proc:none" />
