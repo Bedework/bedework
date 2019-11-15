@@ -70,14 +70,6 @@
         <option value="$PROJECT_DIR$/../bw-cliutil/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/../bw-util/bw-util-bw-deploy/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-util/bw-util-deployment/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-util/bw-util-hibernate/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-util/bw-util-maven-deploy/pom.xml" />
-      </set>
-    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/../bin" />

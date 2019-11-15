@@ -61,6 +61,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-user-war/bw-carddav-user-war.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-user-war/bw-carddav-user-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-userweb-war/bw-carddav-userweb-war.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-userweb-war/bw-carddav-userweb-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-cli/bw-cli.iml" filepath="$PROJECT_DIR$/../bw-cli/bw-cli.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-cliutil/bw-cliutil.iml" filepath="$PROJECT_DIR$/../bw-cliutil/bw-cliutil.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-dotwell-known/bw-dotwell-known.iml" filepath="$PROJECT_DIR$/../bw-dotwell-known/bw-dotwell-known.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/bw-event-registration-common.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/bw-event-registration-common.iml" />
@@ -94,7 +95,6 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/bw-timezone-server-tzconvert.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/bw-timezone-server-tzconvert.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-cliutil/bw-util (1).iml" filepath="$PROJECT_DIR$/../bw-cliutil/bw-util (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-args/bw-util-args.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-args/bw-util-args.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-caching/bw-util-caching.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-caching/bw-util-caching.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-cliutil/bw-util-cli/bw-util-cli.iml" filepath="$PROJECT_DIR$/../bw-cliutil/bw-util-cli/bw-util-cli.iml" />

@@ -38,6 +38,7 @@ bedeworkProjects="$bedeworkProjects  bw-calendar-engine"
 bedeworkProjects="$bedeworkProjects  bw-calsockets"
 bedeworkProjects="$bedeworkProjects  bw-carddav"
 bedeworkProjects="$bedeworkProjects  bw-cli"
+bedeworkProjects="$bedeworkProjects  bw-cliutil"
 bedeworkProjects="$bedeworkProjects  bw-dotwell-known"
 bedeworkProjects="$bedeworkProjects  bw-event-registration"
 bedeworkProjects="$bedeworkProjects  bw-notifier"
@@ -58,6 +59,7 @@ bedework=
 bwcalclient=
 bwcaleng=
 bwcli=
+bwcliutil=
 bwnotifier=
 bwcalsockets=
 bwxml=
@@ -183,6 +185,8 @@ usage() {
   echo "     bwcalclient  Target is for the bedework client implementation"
   echo "     bwcaleng     Target is for the bedework cal engine implementation"
   echo "     bwcalsockets Target is for the bedework calsockets classes"
+  echo "     bwcli        Target is for the bedework cli implementation"
+  echo "     bwcliutil    Target is for the bedework cli util library"
   echo "     bwxml        Target is for the Bedework XML schemas build"
   echo "                        (usually built automatically be dependent projects"
   echo "     caldav       Target is for the generic CalDAV server"
@@ -439,6 +443,12 @@ setDirectory() {
 	if [ "$bwcli" != "" ] ; then
 	  setDir $QUICKSTART_HOME/bw-cli
       bwcli=
+	  return
+	fi
+
+	if [ "$bwcliutil" != "" ] ; then
+	  setDir $QUICKSTART_HOME/bw-cliutil
+      bwcliutil=
 	  return
 	fi
 
@@ -751,6 +761,13 @@ do
       ;;
     bwcli)
       bwcli="yes"
+
+      bwcliutil="yes"
+      pkgdefault=
+      shift
+      ;;
+    bwcliutil)
+      bwcliutil="yes"
 
       bwutil="yes"
       bwutillog="yes"
