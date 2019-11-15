@@ -13,6 +13,7 @@
     <mapping directory="$PROJECT_DIR$/../bw-calsockets" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-carddav" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-cli" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-cliutil" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-dotwell-known" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-event-registration" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-jsforj" vcs="Git" />

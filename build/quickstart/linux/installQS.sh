@@ -27,6 +27,7 @@ bwSynchVersion="4.0.7"
 bwSelfRegistrationVersion="4.0.9"
 bwEventRegistrationVersion="4.0.8"
 bwNotifierVersion="4.0.9"
+bwCliutilVersion="4.1.0"
 bwCliVersion="4.0.8"
 bwCarddavVersion="4.0.9"
 
@@ -631,6 +632,7 @@ installSources() {
     cloneRepoBranch $bwSelfRegistrationVersion bw-self-registration
     cloneRepoBranch $bwEventRegistrationVersion bw-event-registration
     cloneRepoBranch $bwNotifierVersion bw-notifier
+    cloneRepoBranch $bwCliutilVersion bw-cliutil
     cloneRepoBranch $bwCliVersion bw-cli
     cloneRepoBranch $bwCarddavVersion bw-carddav
     cloneRepoBranch $bwCalendarEngineVersion bw-calendar-engine

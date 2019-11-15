@@ -71,7 +71,6 @@
         <module name="bw-caldav-server" />
         <module name="bw-carddav-client" />
         <module name="bw-cli" />
-        <module name="bw-util (1)" />
         <module name="bw-event-registration-war" />
         <module name="bw-xml-dav" />
         <module name="bw-xml-war" />
@@ -219,6 +218,7 @@
       <module name="bw-carddav-user-war" target="11" />
       <module name="bw-carddav-userweb-war" target="11" />
       <module name="bw-cli" target="11" />
+      <module name="bw-cliutil" target="11" />
       <module name="bw-deploy-maven-plugin" target="1.8" />
       <module name="bw-dotwell-known" target="11" />
       <module name="bw-event-registration" target="11" />
@@ -264,7 +264,6 @@
       <module name="bw-timezone-server-tzconvert" target="11" />
       <module name="bw-timezone-server-war" target="11" />
       <module name="bw-util" target="11" />
-      <module name="bw-util (1)" target="1.8" />
       <module name="bw-util-args" target="11" />
       <module name="bw-util-bw-deploy" target="1.8" />
       <module name="bw-util-caching" target="11" />

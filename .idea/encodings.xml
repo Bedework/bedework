@@ -58,6 +58,9 @@
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-user-war" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-userweb-war" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cli" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cliutil" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cliutil/bw-util-cli" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cliutil/bw-util-jolokia" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear" charset="UTF-8" />
@@ -97,7 +100,6 @@
     <file url="file://$PROJECT_DIR$/../bw-util-logging" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-args" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-caching" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-cli" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-config-http" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-dav" charset="UTF-8" />
@@ -107,7 +109,6 @@
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-indexing" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-jms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-jmx" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-jolokia" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-misc" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-options" charset="UTF-8" />
