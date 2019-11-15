@@ -19,6 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-feeder/bw-calendar-client-feeder.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-feeder/bw-calendar-client-feeder.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-submit/bw-calendar-client-submit.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-submit/bw-calendar-client-submit.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ucal/bw-calendar-client-ucal.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ucal/bw-calendar-client-ucal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util/bw-calendar-client-util.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util/bw-calendar-client-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-webcommon/bw-calendar-client-webcommon.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-webcommon/bw-calendar-client-webcommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-annotations/bw-calendar-engine-annotations.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-annotations/bw-calendar-engine-annotations.iml" />
@@ -60,7 +61,6 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-user-war/bw-carddav-user-war.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-user-war/bw-carddav-user-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-userweb-war/bw-carddav-userweb-war.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-userweb-war/bw-carddav-userweb-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-cli/bw-cli.iml" filepath="$PROJECT_DIR$/../bw-cli/bw-cli.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-cliutil/bw-util (1).iml" filepath="$PROJECT_DIR$/../bw-cliutil/bw-util (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-dotwell-known/bw-dotwell-known.iml" filepath="$PROJECT_DIR$/../bw-dotwell-known/bw-dotwell-known.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/bw-event-registration-common.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/bw-event-registration-common.iml" />
@@ -94,6 +94,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/bw-timezone-server-tzconvert.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/bw-timezone-server-tzconvert.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-cliutil/bw-util (1).iml" filepath="$PROJECT_DIR$/../bw-cliutil/bw-util (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-args/bw-util-args.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-args/bw-util-args.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-caching/bw-util-caching.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-caching/bw-util-caching.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-cliutil/bw-util-cli/bw-util-cli.iml" filepath="$PROJECT_DIR$/../bw-cliutil/bw-util-cli/bw-util-cli.iml" />
@@ -118,7 +119,6 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-security/bw-util-security.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-security/bw-util-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-servlet/bw-util-servlet.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-servlet/bw-util-servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-servlet-filters/bw-util-servlet-filters.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-servlet-filters/bw-util-servlet-filters.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-struts/bw-util-struts.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-struts/bw-util-struts.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-timezones/bw-util-timezones.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-timezones/bw-util-timezones.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-xml/bw-util-xml.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-xml/bw-util-xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util2/bw-util2.iml" filepath="$PROJECT_DIR$/../bw-util2/bw-util2.iml" />

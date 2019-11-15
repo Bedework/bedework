@@ -31,6 +31,9 @@
         <element id="archive" name="bw-calendar-client-appcommon-3.13.2-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-client-appcommon" />
         </element>
+        <element id="archive" name="bw-calendar-client-util-3.13.2-SNAPSHOT.jar">
+          <element id="module-output" name="bw-calendar-client-util" />
+        </element>
         <element id="archive" name="bw-calendar-client-webcommon-3.13.2-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-client-webcommon" />
         </element>
@@ -101,7 +104,6 @@
         <element id="library" level="project" name="Maven: org.bedework:bw-util-security:4.0.26" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet:4.0.26" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet-filters:4.0.26" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-struts:4.0.26" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-timezones:4.0.26" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-xml:4.0.26" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util2-calendar:4.0.5" />

@@ -11,6 +11,9 @@
         return errorcodes rather than throw exceptions. Where an
         exception is the only way out use RuntimeException.
     * More fixes to bw script.
+    * bw-util
+        ** move cli libraries into new bw-cliutil project
+        ** move bw-util-struts into bw-calendar-client-util
 
 ==== Release 3.13.1:
 There was long standing a bug in category handling for updates. An attempt
