@@ -115,6 +115,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-util-logging/bw-util-logging.iml" filepath="$PROJECT_DIR$/../bw-util-logging/bw-util-logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy/bw-util-maven-deploy.iml" filepath="$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy/bw-util-maven-deploy.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-misc/bw-util-misc.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-misc/bw-util-misc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util-network/bw-util-network.iml" filepath="$PROJECT_DIR$/../bw-util-network/bw-util-network.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-options/bw-util-options.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-options/bw-util-options.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-security/bw-util-security.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-security/bw-util-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-servlet/bw-util-servlet.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-servlet/bw-util-servlet.iml" />
