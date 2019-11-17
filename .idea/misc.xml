@@ -68,6 +68,10 @@
         <option value="$PROJECT_DIR$/../bw-util-deploy/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-jsforj/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-cliutil/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-util-tz/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-util-index/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-util-network/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-util-security/pom.xml" />
       </list>
     </option>
   </component>

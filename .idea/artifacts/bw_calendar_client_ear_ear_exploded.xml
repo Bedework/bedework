@@ -92,19 +92,31 @@
         <element id="library" level="project" name="Maven: org.bedework:bw-util-args:4.0.26" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-caching:4.0.26" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-config:4.0.26" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-dav:4.0.26" />
+        <element id="archive" name="bw-util-dav-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-dav" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util-elasticsearch:4.0.26" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-hibernate:4.0.22" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-http:4.0.26" />
+        <element id="archive" name="bw-util-http-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-http" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util-indexing:4.0.26" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-jmx:4.0.26" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-json:4.0.26" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-logging:4.0.4" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-misc:4.0.26" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-security:4.0.26" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet:4.0.26" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet-filters:4.0.26" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-timezones:4.0.26" />
+        <element id="archive" name="bw-util-security-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-security" />
+        </element>
+        <element id="archive" name="bw-util-servlet-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-servlet" />
+        </element>
+        <element id="archive" name="bw-util-servlet-filters-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-servlet-filters" />
+        </element>
+        <element id="archive" name="bw-util-tz-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-tz" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util-xml:4.0.26" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util2-calendar:4.0.5" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util2-vcard:4.0.5" />

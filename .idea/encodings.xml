@@ -97,25 +97,22 @@
     <file url="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-deployment" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-hibernate" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-index" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-elasticsearch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-indexing" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-logging" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-args" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-dav" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-http" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet-filters" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-security" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-tz" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-caching" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-config" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-config-http" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-dav" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-directory" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-elasticsearch" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-http" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-indexing" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-jms" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-jmx" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-misc" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-options" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-security" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-servlet" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-servlet-filters" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-timezones" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util2/bw-util2-calendar" charset="UTF-8" />

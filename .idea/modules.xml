@@ -95,32 +95,28 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/bw-timezone-server-tzconvert.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/bw-timezone-server-tzconvert.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-args/bw-util-args.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-args/bw-util-args.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-caching/bw-util-caching.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-caching/bw-util-caching.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-cliutil/bw-util-cli/bw-util-cli.iml" filepath="$PROJECT_DIR$/../bw-cliutil/bw-util-cli/bw-util-cli.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-config/bw-util-config.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-config/bw-util-config.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-config-http/bw-util-config-http.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-config-http/bw-util-config-http.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-dav/bw-util-dav.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-dav/bw-util-dav.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util-network/bw-util-dav/bw-util-dav.iml" filepath="$PROJECT_DIR$/../bw-util-network/bw-util-dav/bw-util-dav.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-deploy.iml" filepath="$PROJECT_DIR$/../bw-util-deploy/bw-util-deploy.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-deployment/bw-util-deployment.iml" filepath="$PROJECT_DIR$/../bw-util-deploy/bw-util-deployment/bw-util-deployment.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-directory/bw-util-directory.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-directory/bw-util-directory.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-elasticsearch/bw-util-elasticsearch.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-elasticsearch/bw-util-elasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util-index/bw-util-elasticsearch/bw-util-elasticsearch.iml" filepath="$PROJECT_DIR$/../bw-util-index/bw-util-elasticsearch/bw-util-elasticsearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util-hibernate/bw-util-hibernate.iml" filepath="$PROJECT_DIR$/../bw-util-hibernate/bw-util-hibernate.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-http/bw-util-http.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-http/bw-util-http.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-indexing/bw-util-indexing.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-indexing/bw-util-indexing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util-network/bw-util-http/bw-util-http.iml" filepath="$PROJECT_DIR$/../bw-util-network/bw-util-http/bw-util-http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util-index/bw-util-index.iml" filepath="$PROJECT_DIR$/../bw-util-index/bw-util-index.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util-index/bw-util-indexing/bw-util-indexing.iml" filepath="$PROJECT_DIR$/../bw-util-index/bw-util-indexing/bw-util-indexing.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-jms/bw-util-jms.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-jms/bw-util-jms.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-jmx/bw-util-jmx.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-jmx/bw-util-jmx.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-cliutil/bw-util-jolokia/bw-util-jolokia.iml" filepath="$PROJECT_DIR$/../bw-cliutil/bw-util-jolokia/bw-util-jolokia.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-json/bw-util-json.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-json/bw-util-json.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util-logging/bw-util-logging.iml" filepath="$PROJECT_DIR$/../bw-util-logging/bw-util-logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy/bw-util-maven-deploy.iml" filepath="$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy/bw-util-maven-deploy.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-misc/bw-util-misc.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-misc/bw-util-misc.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util-network/bw-util-network.iml" filepath="$PROJECT_DIR$/../bw-util-network/bw-util-network.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-options/bw-util-options.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-options/bw-util-options.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-security/bw-util-security.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-security/bw-util-security.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-servlet/bw-util-servlet.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-servlet/bw-util-servlet.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-servlet-filters/bw-util-servlet-filters.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-servlet-filters/bw-util-servlet-filters.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-timezones/bw-util-timezones.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-timezones/bw-util-timezones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util-security/bw-util-security.iml" filepath="$PROJECT_DIR$/../bw-util-security/bw-util-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet/bw-util-servlet.iml" filepath="$PROJECT_DIR$/../bw-util-network/bw-util-servlet/bw-util-servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet-filters/bw-util-servlet-filters.iml" filepath="$PROJECT_DIR$/../bw-util-network/bw-util-servlet-filters/bw-util-servlet-filters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util-tz/bw-util-tz.iml" filepath="$PROJECT_DIR$/../bw-util-tz/bw-util-tz.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-xml/bw-util-xml.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-xml/bw-util-xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util2/bw-util2.iml" filepath="$PROJECT_DIR$/../bw-util2/bw-util2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util2/bw-util2-calendar/bw-util2-calendar.iml" filepath="$PROJECT_DIR$/../bw-util2/bw-util2-calendar/bw-util2-calendar.iml" />

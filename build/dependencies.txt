@@ -70,7 +70,7 @@ bw-caldav-util
   bw-util-logging
 
   bw-util-http
-  bw-util-timezones
+  bw-util-tz
 
   bw-webdav
   bw-xml
@@ -89,7 +89,7 @@ bw-calendar-engine:
         <artifactId>bw-util-logging</artifactId>
         <artifactId>bw-util-misc</artifactId>
         <artifactId>bw-util-security</artifactId>
-        <artifactId>bw-util-timezones</artifactId>
+        <artifactId>bw-util-tz</artifactId>
         <artifactId>bw-util-xml</artifactId>
 
         <artifactId>bw-util-hibernate</artifactId>

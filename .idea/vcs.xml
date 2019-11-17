@@ -24,7 +24,11 @@
     <mapping directory="$PROJECT_DIR$/../bw-util" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-deploy" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-hibernate" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-util-index" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-logging" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-util-network" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-util-security" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-util-tz" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-webdav" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-xml" vcs="Git" />
