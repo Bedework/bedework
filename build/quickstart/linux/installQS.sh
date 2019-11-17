@@ -15,6 +15,11 @@ galleonVersion="4.1.0.Final"
 # -------------------Module versions -----------------------------
 bwUtilLoggingVersion="4.0.4"
 bwUtilVersion="4.0.26"
+bwUtilConfVersion="4.1.0"
+bwUtilNetworkVersion="4.1.0"
+bwUtilSecurityVersion="4.1.0"
+bwUtilTzVersion="4.1.0"
+bwUtilIndexVersion="4.1.0"
 bwUtil2Version="4.0.5"
 bwUtilDeployVersion="4.0.25"
 bwXmlVersion="4.0.9"
@@ -603,6 +608,7 @@ installSources() {
     cloneRepo bw-calendar-xsl
     cloneRepo bw-calsockets
     cloneRepo bw-carddav
+    cloneRepo bw-cliutil
     cloneRepo bw-cli
     cloneRepo bw-dotwell-known
     cloneRepo bw-event-registration
@@ -611,6 +617,11 @@ installSources() {
     cloneRepo bw-synch
     cloneRepo bw-timezone-server
     cloneRepo bw-util
+    cloneRepo bw-util-conf
+    cloneRepo bw-util-index
+    cloneRepo bw-util-network
+    cloneRepo bw-util-security
+    cloneRepo bw-util-tz
     cloneRepo bw-util2
     cloneRepo bw-util-deploy
     cloneRepo bw-util-hibernate
@@ -621,6 +632,11 @@ installSources() {
     cloneRepoBranch $bwUtilLoggingVersion bw-util-logging
     cloneRepoBranch $bwXmlVersion bw-xml
     cloneRepoBranch $bwUtilVersion bw-util
+    cloneRepoBranch $bwUtilConfVersion bw-util-conf
+    cloneRepoBranch $bwUtilIndexVersion bw-util-index
+    cloneRepoBranch $bwUtilNetworkVersion bw-util-network
+    cloneRepoBranch $bwUtilSecurityVersion bw-util-security
+    cloneRepoBranch $bwUtilTzVersion bw-util-tz
     cloneRepoBranch $bwUtil2Version bw-util2
     cloneRepoBranch $bwUtilDeployVersion bw-util-deploy
     cloneRepoBranch $bwUtilHibernateVersion bw-util-hibernate
@@ -701,17 +717,22 @@ buildModules() {
 # For the moment just build it all
 
   buildModule xsl
-  buildModule bwutil
-  buildModule bwutilhib
-  buildModule bwxml
-  buildModule bwutil2
+
+# These and more get built by the build script
+#  buildModule bwutil
+#  buildModule bwutilhib
+#  buildModule bwxml
+#  buildModule bwutil2
+
+  buildModule deploy
+
+# These are the deployable or runnable components
   buildModule notifier
   buildModule tzsvr
   buildModule synch
   buildModule eventreg
   buildModule selfreg
   buildModule bwcli
-  buildModule deploy
 
   # Add some links
 

@@ -46,6 +46,11 @@ bedeworkProjects="$bedeworkProjects  bw-self-registration"
 bedeworkProjects="$bedeworkProjects  bw-synch"
 bedeworkProjects="$bedeworkProjects  bw-timezone-server"
 bedeworkProjects="$bedeworkProjects  bw-util"
+bedeworkProjects="$bedeworkProjects  bw-util-conf"
+bedeworkProjects="$bedeworkProjects  bw-util-network"
+bedeworkProjects="$bedeworkProjects  bw-util-security"
+bedeworkProjects="$bedeworkProjects  bw-util-tz"
+bedeworkProjects="$bedeworkProjects  bw-util-index"
 bedeworkProjects="$bedeworkProjects  bw-util2"
 bedeworkProjects="$bedeworkProjects  bw-util-hibernate"
 bedeworkProjects="$bedeworkProjects  bw-util-logging"
@@ -73,6 +78,11 @@ eventreg=
 exchgGateway=
 naming=
 bwutil=
+bwutilconf=
+bwutilnetwork=
+bwutilsecurity=
+bwutiltz=
+bwutilindex=
 bwutilhib=
 bwutil2=
 bwutildeploy=
@@ -194,6 +204,12 @@ usage() {
   echo "     carddav deploy-addrbook    To deploy the Javascript Addressbook client."
   echo "     eventreg     Target is for the event registration service build"
   echo "     notifier     Target is the Bedework notification service"
+  echo "     bwutil       Target is for the Bedework util classes"
+  echo "     bwutilConf   Target is for the Bedework config util classes"
+  echo "     bwutilNetwork Target is for the Bedework networking util classes"
+  echo "     bwutilSecurity Target is for the Bedework security util classes"
+  echo "     bwutilTz     Target is for the Bedework timezone util classes"
+  echo "     bwutilIndex  Target is for the Bedework indexing util classes"
   echo "     bwutil       Target is for the Bedework util classes"
   echo "     bwutil2      Target is for the Bedework util2 classes"
   echo "     bwutilhib    Target is for the Bedework hibernate util classes"
@@ -359,6 +375,36 @@ setDirectory() {
 	if [ "$bwutil" != "" ] ; then
 	  setDir $QUICKSTART_HOME/bw-util
       bwutil=
+	  return
+	fi
+
+	if [ "$bwutilconf" != "" ] ; then
+	  setDir $QUICKSTART_HOME/bw-util-conf
+      bwutilconf=
+	  return
+	fi
+
+	if [ "$bwutilnetwork" != "" ] ; then
+	  setDir $QUICKSTART_HOME/bw-util-network
+      bwutilnetwork=
+	  return
+	fi
+
+	if [ "$bwutilsecurity" != "" ] ; then
+	  setDir $QUICKSTART_HOME/bw-util-security
+      bwutilsecurity=
+	  return
+	fi
+
+	if [ "$bwutiltz" != "" ] ; then
+	  setDir $QUICKSTART_HOME/bw-util-tz
+      bwutiltz=
+	  return
+	fi
+
+	if [ "$bwutilindex" != "" ] ; then
+	  setDir $QUICKSTART_HOME/bw-util-index
+      bwutilindex=
 	  return
 	fi
 
@@ -874,6 +920,51 @@ do
     bwutil)
       bwutil="yes"
       bwutillog="yes"
+
+      pkgdefault=
+      shift
+      ;;
+    bwutilConf)
+      bwutilconf="yes"
+      bwutil="yes"
+      bwutillog="yes"
+
+      pkgdefault=
+      shift
+      ;;
+    bwutilNetwork)
+      bwutilnetwork="yes"
+      bwutil="yes"
+      bwutilconf="yes"
+      bwutillog="yes"
+
+      pkgdefault=
+      shift
+      ;;
+    bwutilSecurity)
+      bwutilsecurity="yes"
+      bwutil="yes"
+      bwutilconf="yes"
+      bwutillog="yes"
+
+      pkgdefault=
+      shift
+      ;;
+    bwutilTz)
+      bwutiltz="yes"
+      bwutil="yes"
+      bwutillog="yes"
+      bwutilnetwork="yes"
+
+      pkgdefault=
+      shift
+      ;;
+    bwutilIndex)
+      bwutilindex="yes"
+      bwutil="yes"
+      bwutilconf="yes"
+      bwutillog="yes"
+      bwutiltz="yes"
 
       pkgdefault=
       shift

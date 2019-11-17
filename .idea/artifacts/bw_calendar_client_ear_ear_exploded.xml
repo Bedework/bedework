@@ -99,7 +99,9 @@
         <element id="archive" name="bw-util-dav-4.1.0-SNAPSHOT.jar">
           <element id="module-output" name="bw-util-dav" />
         </element>
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-elasticsearch:4.1.0-SNAPSHOT" />
+        <element id="archive" name="bw-util-elasticsearch-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-elasticsearch" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util-hibernate:4.0.22" />
         <element id="archive" name="bw-util-http-4.1.0-SNAPSHOT.jar">
           <element id="module-output" name="bw-util-http" />
