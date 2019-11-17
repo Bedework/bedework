@@ -22,6 +22,7 @@
     <mapping directory="$PROJECT_DIR$/../bw-synch" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-timezone-server" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-util-conf" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-deploy" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-hibernate" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-index" vcs="Git" />

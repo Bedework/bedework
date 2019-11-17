@@ -24,15 +24,25 @@
           <element id="module-output" name="bw-carddav-dumpres" />
         </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-access:4.0.7" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-args:4.0.26" />
+        <element id="archive" name="bw-util-args-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-args" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util-caching:4.0.26" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-config:4.0.26" />
+        <element id="archive" name="bw-util-config-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-config" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util-hibernate:4.0.22" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-http:4.0.26" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-jmx:4.0.26" />
+        <element id="archive" name="bw-util-http-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-http" />
+        </element>
+        <element id="archive" name="bw-util-jmx-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-jmx" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util-json:4.0.26" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-misc:4.0.26" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet:4.0.26" />
+        <element id="archive" name="bw-util-servlet-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-servlet" />
+        </element>
         <element id="archive" name="bw-util-tz-4.1.0-SNAPSHOT.jar">
           <element id="module-output" name="bw-util-tz" />
         </element>

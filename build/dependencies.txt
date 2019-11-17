@@ -21,6 +21,13 @@ Order of release - i.e. order of dependencies
 
 bw-util-logging
 bw-xml
+
+
+bw-util-conf
+bw-util-tz
+bw-util-indexing
+
+
 bw-util
 bw-util2
 bw-util-hibernate
