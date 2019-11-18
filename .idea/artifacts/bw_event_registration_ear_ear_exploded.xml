@@ -24,7 +24,9 @@
         <element id="library" level="project" name="Maven: org.bedework:bw-util2-calendar:4.0.5" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-xml:4.0.26" />
         <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.6" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-config:4.0.26" />
+        <element id="archive" name="bw-util-config-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-config" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util-hibernate:4.0.22" />
         <element id="library" level="project" name="Maven: org.apache.derby:derbynet:10.8.2.2" />
         <element id="library" level="project" name="Maven: org.apache.derby:derby:10.8.2.2" />
@@ -34,7 +36,7 @@
         <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-jms:4.0.26" />
         <element id="library" level="project" name="Maven: javax.jms:javax.jms-api:2.0" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-jmx:4.0.26" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-jmx:${bw-util-config.version}" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-logging:4.0.4" />
         <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.8" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-misc:4.0.26" />
@@ -44,7 +46,9 @@
         <element id="archive" name="bw-util-caching-4.0.27-SNAPSHOT.jar">
           <element id="module-output" name="bw-util-caching" />
         </element>
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-http:4.0.26" />
+        <element id="archive" name="bw-util-http-4.1.0-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-http" />
+        </element>
         <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.10.0" />
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-calws-soap:4.0.9" />
         <element id="library" level="project" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.2" />

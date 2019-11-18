@@ -782,10 +782,14 @@ do
       bwcaleng="yes"
       bwxml="yes"
       caldav="yes"
+      bwcliutil="yes"
       bwutil="yes"
-      bwutildeploy="yes"
-      bwutillog="yes"
+      bwutilconf="yes"
       bwutilhib="yes"
+      bwutilindex="yes"
+      bwutillog="yes"
+      bwutilsecurity="yes"
+      bwutiltz="yes"
       bwutil2="yes"
       webdav="yes"
       pkgdefault=
@@ -797,11 +801,17 @@ do
       access="yes"
       bwxml="yes"
       caldav="yes"
+      bwcliutil="yes"
       bwutil="yes"
-      bwutillog="yes"
+      bwutilconf="yes"
       bwutilhib="yes"
+      bwutilindex="yes"
+      bwutillog="yes"
+      bwutilsecurity="yes"
+      bwutiltz="yes"
       bwutil2="yes"
       webdav="yes"
+
       pkgdefault=
       shift
       ;;
@@ -809,6 +819,11 @@ do
       bwcli="yes"
 
       bwcliutil="yes"
+      bwutil="yes"
+      bwutilconf="yes"
+      bwutillog="yes"
+      bwutilnetwork="yes"
+
       pkgdefault=
       shift
       ;;
@@ -816,14 +831,28 @@ do
       bwcliutil="yes"
 
       bwutil="yes"
+      bwutilconf="yes"
       bwutillog="yes"
-      bwutil2="yes"
+
       pkgdefault=
       shift
       ;;
     notifier)
       bwnotifier="yes"
       #earName="$earNameNotifier"
+
+      access="yes"
+      bwxml="yes"
+      bwutil="yes"
+      bwutilconf="yes"
+      bwutildeploy="yes"
+      bwutillog="yes"
+      bwutilhib="yes"
+      bwutilnetwork="yes"
+      bwutilsecurity="yes"
+      bwutiltz="yes"
+      bwutillog="yes"
+
       pkgdefault=
       shift
       ;;
@@ -834,7 +863,10 @@ do
       access="yes"
       bwxml="yes"
       bwutil="yes"
+      bwutilconf="yes"
+      bwutildeploy="yes"
       bwutillog="yes"
+      bwutilnetwork="yes"
 
       pkgdefault=
       shift
@@ -846,17 +878,21 @@ do
       pkgdefault=
       shift
       ;;
+
     caldav)
       caldav="yes"
 
       access="yes"
       bwxml="yes"
       bwutil="yes"
+      bwutilconf="yes"
       bwutillog="yes"
+      bwutiltz="yes"
       webdav="yes"
       pkgdefault=
       shift
       ;;
+
     caldavTest)
       caldavTest="yes"
 
@@ -864,8 +900,7 @@ do
       bwxml="yes"
       bwutil="yes"
       bwutillog="yes"
-      bwutil2="yes"
-      webdav="yes"
+      bwutilnetwork="yes"
       pkgdefault=
       shift
       ;;
@@ -875,8 +910,12 @@ do
       access="yes"
       bwxml="yes"
       bwutil="yes"
+      bwutilconf="yes"
+      bwutildeploy="yes"
       bwutillog="yes"
       bwutilhib="yes"
+      bwutilnetwork="yes"
+      bwutiltz="yes"
       bwutil2="yes"
       webdav="yes"
       pkgdefault=
@@ -905,8 +944,11 @@ do
 
       bwxml="yes"
       bwutil="yes"
+      bwutilconf="yes"
       bwutildeploy="yes"
       bwutillog="yes"
+      bwutilnetwork="yes"
+      bwutiltz="yes"
       bwutilhib="yes"
       bwutil2="yes"
       pkgdefault=
@@ -1012,9 +1054,12 @@ do
       #earName="$earNameSelfreg"
 
       bwutil="yes"
+      bwutilconf="yes"
       bwutildeploy="yes"
       bwutillog="yes"
+      bwutilnetwork="yes"
       bwutilhib="yes"
+      bwutilsecurity="yes"
       pkgdefault=
       shift
       ;;
@@ -1025,8 +1070,12 @@ do
       access="yes"
       bwxml="yes"
       bwutil="yes"
+      bwutilconf="yes"
       bwutildeploy="yes"
       bwutillog="yes"
+      bwutilnetwork="yes"
+      bwutilsecurity="yes"
+      bwutiltz="yes"
       bwutilhib="yes"
       bwutil2="yes"
       pkgdefault=
@@ -1043,8 +1092,12 @@ do
 
       bwxml="yes"
       bwutil="yes"
+      bwutilconf="yes"
       bwutildeploy="yes"
+      bwutilindex="yes"
       bwutillog="yes"
+      bwutilnetwork="yes"
+      bwutiltz="yes"
       bwutil2="yes"
       pkgdefault=
       shift
@@ -1055,6 +1108,7 @@ do
       access="yes"
       bwutil="yes"
       bwutillog="yes"
+      bwutilnetwork="yes"
       pkgdefault=
       shift
       ;;
