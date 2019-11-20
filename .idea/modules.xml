@@ -62,6 +62,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-userweb-war/bw-carddav-userweb-war.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-userweb-war/bw-carddav-userweb-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-cli/bw-cli.iml" filepath="$PROJECT_DIR$/../bw-cli/bw-cli.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-cliutil/bw-cliutil.iml" filepath="$PROJECT_DIR$/../bw-cliutil/bw-cliutil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-dav-tester/bw-dav-tester.iml" filepath="$PROJECT_DIR$/../bw-dav-tester/bw-dav-tester.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-dotwell-known/bw-dotwell-known.iml" filepath="$PROJECT_DIR$/../bw-dotwell-known/bw-dotwell-known.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/bw-event-registration-common.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/bw-event-registration-common.iml" />

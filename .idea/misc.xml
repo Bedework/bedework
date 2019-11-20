@@ -73,6 +73,7 @@
         <option value="$PROJECT_DIR$/../bw-util-network/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-security/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-conf/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-dav-tester/pom.xml" />
       </list>
     </option>
   </component>
