@@ -68,7 +68,7 @@
         <element id="library" level="project" name="Maven: org.hibernate:hibernate-ehcache:5.2.5.Final" />
         <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.10.3" />
         <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
-        <element id="library" level="project" name="Maven: org.bedework.ical4j:ical4j:2.0.11" />
+        <element id="library" level="project" name="Maven: org.bedework.ical4j:ical4j:2.0.12" />
         <element id="library" level="project" name="Maven: org.bedework:bw-ical4j-vcard:1.0.4" />
         <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.10.0" />
         <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.0" />
