@@ -9,6 +9,12 @@ restart=
 trap 'cd $BASE_DIR' 0
 trap "exit 2" 1 2 3 15
 
+bwOptions=$HOME/.bw
+
+if [ -f "$bwOptions" ]; then
+  . "$bwOptions"
+fi
+
 if [ -z "$JAVA_HOME" -o ! -d "$JAVA_HOME" ] ; then
   echo "JAVA_HOME is not defined correctly for bedework."
   exit 1
@@ -43,7 +49,7 @@ JBOSS_CONFIG="standalone"
 JBOSS_SERVER_DIR="$BASE_DIR/$JBOSS_VERSION/$JBOSS_CONFIG"
 JBOSS_DATA_DIR="$JBOSS_SERVER_DIR/data"
 bedework_data_dir="$JBOSS_DATA_DIR/bedework"
-#es_data_dir="$bedework_data_dir/elasticsearch"
+es_data_dir="$bwESdatadir"
 
 TMP_DIR="$JBOSS_SERVER_DIR/tmp"
 
@@ -54,7 +60,15 @@ if [ ! -d "$TMP_DIR" ]; then
 fi
 
 # Ensure nothing running
-./qsstop.sh
+
+echo -n "Shutting down h2:  "
+./stoph2
+
+echo -n "Shutting down apacheds:  "
+./dirstop
+
+echo -n "Shutting down elastic search:  "
+./stopES
 
 # -------------------------------------------------------------------
 # Each step is a function
@@ -92,17 +106,17 @@ installData() {
 
   # ------------------------------------- ES data
 
-#  cd $TMP_DIR/
-#  rm elasticsearch.zip
-#  rm -rf elasticsearch
-#  cp $resources/data/elasticsearch.zip .
+  cd $TMP_DIR/
+  rm elasticsearch.zip
+  rm -rf nodes
+  cp $resources/data/elasticsearch.zip .
 
-#  unzip elasticsearch.zip
+  unzip elasticsearch.zip
 
-#  rm elasticsearch.zip
+  rm elasticsearch.zip
 
-#  rm -rf $es_data_dir
-#  cp -r elasticsearch $bedework_data_dir/
+  rm -rf $es_data_dir/nodes
+  cp -r nodes $es_data_dir/
 
   # ------------------------------------- directory data
 
