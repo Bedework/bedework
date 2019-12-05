@@ -136,8 +136,12 @@
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-synchws:4.0.9" />
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-tzsvr:4.0.9" />
         <element id="library" level="project" name="Maven: org.bedework:bw-webdav:4.0.8" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-caldav-server:4.0.8" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-caldav-util:4.0.8" />
+        <element id="archive" name="bw-caldav-server-4.0.9-SNAPSHOT.jar">
+          <element id="module-output" name="bw-caldav-server" />
+        </element>
+        <element id="archive" name="bw-caldav-util-4.0.9-SNAPSHOT.jar">
+          <element id="module-output" name="bw-caldav-util" />
+        </element>
         <element id="library" level="project" name="Maven: com.google.code.gson:gson:1.5" />
         <element id="library" level="project" name="Maven: org.imgscalr:imgscalr-lib:4.2" />
         <element id="library" level="project" name="Maven: struts:struts:1.2.9" />
