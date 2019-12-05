@@ -263,6 +263,21 @@
         <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.10.0" />
         <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.0" />
         <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.0" />
+        <element id="library" level="project" name="Maven: com.sun.xml.ws:rt:2.3.1" />
+        <element id="library" level="project" name="Maven: javax.activation:javax.activation-api:1.2.0" />
+        <element id="library" level="project" name="Maven: com.sun.xml.ws:policy:2.7.5" />
+        <element id="library" level="project" name="Maven: org.glassfish.jaxb:txw2:2.4.0-b180608.0325" />
+        <element id="library" level="project" name="Maven: com.sun.activation:javax.activation:1.2.0" />
+        <element id="library" level="project" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.1" />
+        <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:3.0.7" />
+        <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15" />
+        <element id="library" level="project" name="Maven: org.glassfish.gmbal:gmbal-api-only:3.1.0-b001" />
+        <element id="library" level="project" name="Maven: org.glassfish.external:management-api:3.0.0-b012" />
+        <element id="library" level="project" name="Maven: com.sun.xml.stream.buffer:streambuffer:1.5.6" />
+        <element id="library" level="project" name="Maven: com.fasterxml.woodstox:woodstox-core:5.1.0" />
+        <element id="library" level="project" name="Maven: org.codehaus.woodstox:stax2-api:4.1" />
+        <element id="library" level="project" name="Maven: org.glassfish.ha:ha-api:3.1.9" />
+        <element id="library" level="project" name="Maven: javax.jws:javax.jws-api:1.1" />
       </element>
     </root>
   </artifact>
