@@ -18,11 +18,14 @@
     <extension module="org.wildfly.extension.security.manager"/>
     <extension module="org.wildfly.extension.undertow"/>
   </extensions>
+
   <system-properties>
     <property name="hawtio.authenticationEnabled" value="true"/>
     <property name="hawtio.realm" value="jboss-web-policy"/>
     <property name="hawtio.role" value="admin"/>
   </system-properties>
+
+
   <management>
     <security-realms>
       <security-realm name="ManagementRealm">
@@ -294,20 +297,29 @@
     <subsystem xmlns="urn:jboss:domain:datasources:5.0">
       <datasources>
         <datasource jndi-name="java:/CalendarDS" pool-name="CalendarDS" enabled="true" use-ccm="false">
-          <connection-url>jdbc:h2:tcp://localhost/CalDb</connection-url>
-          <driver>h2</driver>
+          <connection-url>jdbc:postgresql://${com.bedework.db.ip}:5432/caldb</connection-url>
+          <driver>postgresql</driver>
+          <pool>
+            <min-pool-size>1</min-pool-size>
+            <max-pool-size>50</max-pool-size>
+            <prefill>true</prefill>
+          </pool>
           <security>
-            <user-name>sa</user-name>
-            <password>sa</password>
+            <user-name>bw</user-name>
+            <password></password>
           </security>
-        </datasource>
-        <datasource jta="true" jndi-name="java:/CardDS" pool-name="CardDS" enabled="true" use-ccm="false">
-          <connection-url>jdbc:h2:tcp://localhost/CardDb</connection-url>
-          <driver>h2</driver>
-          <security>
-            <user-name>sa</user-name>
-            <password>sa</password>
-          </security>
+          <timeout>
+            <idle-timeout-minutes>15</idle-timeout-minutes>
+          </timeout>
+          <validation>
+            <validate-on-match>true</validate-on-match>
+            <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker"/>
+
+            <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLExceptionSorter"/>
+          </validation>
+          <statement>
+            <share-prepared-statements>false</share-prepared-statements>
+          </statement>
         </datasource>
         <datasource jndi-name="java:/EventregDS" pool-name="EventregDS" enabled="true" use-java-context="true" use-ccm="false">
           <connection-url>jdbc:h2:tcp://localhost/EventRegDb</connection-url>
@@ -506,7 +518,20 @@
           <role name="guest" send="true" consume="true" create-non-durable-queue="true" delete-non-durable-queue="true"/>
         </security-setting>
         <address-setting name="#" dead-letter-address="jms.queue.DLQ" expiry-address="jms.queue.ExpiryQueue" max-size-bytes="10485760" page-size-bytes="2097152" message-counter-history-day-limit="10"/>
+        <!--
+        <http-connector name="http-connector" socket-binding="http" endpoint="http-acceptor"/>
+        <http-connector name="http-connector-throughput" socket-binding="http" endpoint="http-acceptor-throughput">
+          <param name="batch-delay" value="50"/>
+        </http-connector>
+        -->
         <in-vm-connector name="in-vm" server-id="0"/>
+        <!--
+        <http-acceptor name="http-acceptor" http-listener="default"/>
+        <http-acceptor name="http-acceptor-throughput" http-listener="default">
+          <param name="batch-delay" value="50"/>
+          <param name="direct-deliver" value="false"/>
+        </http-acceptor>
+        -->
         <in-vm-acceptor name="in-vm" server-id="0"/>
         <jms-queue name="ExpiryQueue" entries="java:/jms/queue/ExpiryQueue"/>
         <jms-queue name="DLQ" entries="java:/jms/queue/DLQ"/>
@@ -520,6 +545,9 @@
         <jms-queue name="bedework.sysevents.eventregAction" entries="activemq/queue/eventregAction bwqueues/eventregAction"/>
         <jms-queue name="bedework.sysevents.eventregActionDelay" entries="activemq/queue/eventregActionDelay bwqueues/eventregActionDelay"/>
         <connection-factory name="InVmConnectionFactory" entries="java:/ConnectionFactory" connectors="in-vm"/>
+        <!--
+        <connection-factory name="RemoteConnectionFactory" entries="java:jboss/exported/jms/RemoteConnectionFactory" connectors="http-connector"/>
+        -->
         <connection-factory name="BedeworkConnectionFactory" entries="java:/BedeworkConnectionFactory java:/jms/BedeworkConnectionFactory" connectors="in-vm"/>
         <pooled-connection-factory name="activemq-ra" entries="java:/JmsXA java:jboss/DefaultJMSConnectionFactory" connectors="in-vm" transaction="xa"/>
       </server>
@@ -593,8 +621,8 @@
     <subsystem xmlns="urn:jboss:domain:undertow:9.0" default-server="default-server" default-virtual-host="default-host" default-servlet-container="default" statistics-enabled="${wildfly.undertow.statistics-enabled:${wildfly.statistics-enabled:false}}">
       <buffer-cache name="default"/>
       <server name="default-server">
-                <http-listener name="stunnel" socket-binding="stunnel" secure="true" allow-unescaped-characters-in-url="true" redirect-socket="https" proxy-address-forwarding="true" enable-http2="true"/>
-                <http-listener name="default" socket-binding="http" allow-unescaped-characters-in-url="true" redirect-socket="https" enable-http2="true"/>
+        <http-listener name="stunnel" socket-binding="stunnel" secure="true" redirect-socket="https" proxy-address-forwarding="true" enable-http2="true"allow-unescaped-characters-in-url="true" />
+        <http-listener name="default" socket-binding="http" redirect-socket="https" enable-http2="true" allow-unescaped-characters-in-url="true" />
         <host name="default-host" alias="localhost">
           <location name="/" handler="bedework-content"/>
           <access-log pattern="%h %l %u [%t] &quot;%r&quot; %s %b &quot;%{i,Referer}&quot; &quot;%{i,User-Agent}&quot;"/>

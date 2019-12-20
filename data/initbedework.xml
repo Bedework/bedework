@@ -9386,57 +9386,6 @@ aXA+DQogICAgICA8L2ltYWdlPg0KICAgIDwvZ3JvdXA+DQogIDwvZ2VuZXJpY3M+DQo8L2ZlYXR1
 cmVkRXZlbnRz</encodedContent>
         <id>1</id>
         <name>FeaturedEvents</name>
-        <seq>13</seq>
-        <stringContent><![CDATA[<?xml version="1.0"?>
-<!-- Global settings for featured events are set in themeSettings.xsl.  
-     This file provides the data for featured events with some switches
-     for how they are used.-->
-<featuredEvents>
-  <featuresOn>true</featuresOn> <!-- true to use features, false to use generic placeholders -->
-  <singleMode>false</singleMode> <!-- true for a single pane (single), false for a triptych (group) -->
-  <features>
-    <group>
-      <image>
-        <name>/calrsrc.MainCampus/themes/bedeworkTheme/featured/bede.jpg</name>
-        <link>http://en.wikipedia.org/wiki/De_temporum_ratione</link>
-        <toolTip>De temporum ratione</toolTip>
-      </image>
-      <image>
-        <name>/calrsrc.MainCampus/themes/bedeworkTheme/featured/gettingstarted.jpg</name>
-        <link>http://wiki.jasig.org/display/BWK38/BW+3.8+Getting+Started</link>
-        <toolTip>Bedework Getting Started Guide</toolTip>
-      </image>
-      <image>
-        <name>/calrsrc.MainCampus/themes/bedeworkTheme/featured/bedework.jpg</name>
-        <link>http://www.jasig.org/bedework/documentation</link>
-        <toolTip>Bedework Documentation</toolTip>
-      </image>
-    </group>
-    <single>
-      <image>
-        <name>/calrsrc.MainCampus/themes/bedeworkTheme/featured/bwSinglePanel.jpg</name>
-        <link>http://www.jasig.org/bedework</link>
-        <toolTip>Bedework Website</toolTip>
-      </image>
-    </single>
-  </features>
-  <generics>
-    <group>
-      <image>
-	<name>/calrsrc.MainCampus/themes/bedeworkTheme/featured/bede.jpg</name>
-	<toolTip>De temporum ratione</toolTip>
-      </image>
-      <image>
-        <name>/calrsrc.MainCampus/themes/bedeworkTheme/featured/gettingstarted.jpg</name>
-        <toolTip>Bedework Documentation</toolTip>
-      </image>
-      <image>
-        <name>/calrsrc.MainCampus/themes/bedeworkTheme/featured/bedework.jpg</name>
-        <toolTip>Bedework Website</toolTip>
-      </image>
-    </group>
-  </generics>
-</featuredEvents>]]></stringContent>
       </content>
       <contentLength>2005</contentLength>
       <contentType>application/xml	type=FeaturedEvents</contentType>
@@ -9459,8 +9408,6 @@ cmVkRXZlbnRz</encodedContent>
         <encodedContent>dGVz</encodedContent>
         <id>2</id>
         <name>Test</name>
-        <seq>2</seq>
-        <stringContent>test2</stringContent>
       </content>
       <contentLength>5</contentLength>
       <contentType>text/plain	type=text</contentType>
