@@ -520,7 +520,7 @@
         <jms-queue name="bedework.sysevents.eventregAction" entries="activemq/queue/eventregAction bwqueues/eventregAction"/>
         <jms-queue name="bedework.sysevents.eventregActionDelay" entries="activemq/queue/eventregActionDelay bwqueues/eventregActionDelay"/>
         <connection-factory name="InVmConnectionFactory" entries="java:/ConnectionFactory" connectors="in-vm"/>
-        <connection-factory name="BedeworkConnectionFactory" entries="java:/BedeworkConnectionFactory java:/jms/BedeworkConnectionFactory" connectors="in-vm"/>
+        <connection-factory name="BedeworkConnectionFactory" entries="java:/BedeworkConnectionFactory java:/jms/BedeworkConnectionFactory" confirmation-window-size="10000000" connectors="in-vm"/>
         <pooled-connection-factory name="activemq-ra" entries="java:/JmsXA java:jboss/DefaultJMSConnectionFactory" connectors="in-vm" transaction="xa"/>
       </server>
     </subsystem>

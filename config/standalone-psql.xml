@@ -548,7 +548,7 @@
         <!--
         <connection-factory name="RemoteConnectionFactory" entries="java:jboss/exported/jms/RemoteConnectionFactory" connectors="http-connector"/>
         -->
-        <connection-factory name="BedeworkConnectionFactory" entries="java:/BedeworkConnectionFactory java:/jms/BedeworkConnectionFactory" connectors="in-vm"/>
+        <connection-factory name="BedeworkConnectionFactory" entries="java:/BedeworkConnectionFactory java:/jms/BedeworkConnectionFactory" confirmation-window-size="10000000" connectors="in-vm"/>
         <pooled-connection-factory name="activemq-ra" entries="java:/JmsXA java:jboss/DefaultJMSConnectionFactory" connectors="in-vm" transaction="xa"/>
       </server>
     </subsystem>
