@@ -61,6 +61,9 @@ fi
 
 # Ensure nothing running
 
+echo -n "Shutting down h2:  "
+./stoph2
+
 echo -n "Shutting down apacheds:  "
 ./dirstop
 
@@ -78,11 +81,26 @@ installData() {
   echo "---------------------------------------------------------------"
   echo "Install data: this will stop h2 and apacheds but not restart them"
 
+  cd $TMP_DIR/
+
   # ------------------------------------- h2 data
 
-  cd $BASE_DIR
+  rm -f h2.zip
 
-  cd $TMP_DIR/
+  cp $resources/data/h2.zip .
+
+  rm -rf h2/
+
+  unzip h2.zip
+
+  rm -f h2.zip
+
+  rm -rf $bedework_data_dir/h2
+
+  cp -r h2 $bedework_data_dir/
+  rm -rf h2/
+
+  # ------------------------------------- postgres data
 
   rm -f psql.zip
 
