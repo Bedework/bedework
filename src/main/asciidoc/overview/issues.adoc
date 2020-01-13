@@ -1,0 +1,12 @@
+[[issues]]
+=== Issues
+
+    * Modifying a recurring event so that it is not recurring will leave instances indexed.
+
+    * CalintfHelper.getCollection returns null - causes failures higher up.
+
+    * Index waits and refresh could be set to only occur on testing if there is any real performance issue. Generally - in real life - the delay isn't a problem.
+
+    * Should I be removing the entity from entity caches in the indexer?
+
+

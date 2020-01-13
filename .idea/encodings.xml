@@ -3,128 +3,236 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-access" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-access/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldav" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldavTest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-caldavTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-caldavTest/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-cal" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-caladmin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-calauth" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-feeder" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-submit" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ucal" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-webcommon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-webcommon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-annotations" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-annotations/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-caldav" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-caldav/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-chgnote" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-chgnote/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-convert" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-convert/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-facade" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-facade/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-facade/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-impl/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-indexer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-indexer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-inoutsched" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-inoutsched/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-interfaces" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-interfaces/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-mail" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-mail/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-mail/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-notifyws" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-pubcaldav" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-publicws" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-synchws" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-msgs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-msgs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-msgs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-tools" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-tools/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-ucaldav" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-userws" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calsockets" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-pubwar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-pubwar/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-pubwar/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-war" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-war/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-war/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-dumpres" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-dumpres/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-ear" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-public-war" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-tools" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-tools/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-tools/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-user-war" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-userweb-war" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cli" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cli/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cli/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cliutil" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cliutil/bw-util-cli" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cliutil/bw-util-cli/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cliutil/bw-util-jolokia" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cliutil/bw-util-jolokia/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-dav-tester" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-dav-tester/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-dav-tester/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-jsforj" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-jsforj/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-notifier" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-bwconnector" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-bwconnector/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-db" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-db/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-db/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-ear" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-outbound" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-outbound/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-servlet" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-servlet/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-shared" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-shared/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-war" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-war" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-war/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-war/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-ear" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-shared" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-shared/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-shared/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-war" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-war/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-ear" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-conf" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-conf/bw-util-args" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-conf/bw-util-args/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-conf/bw-util-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-conf/bw-util-config/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-conf/bw-util-jmx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-conf/bw-util-jmx/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-conf/bw-util-options" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-conf/bw-util-options/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-deploy" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-deployment" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-deployment/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-hibernate" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-hibernate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-index" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-elasticsearch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-elasticsearch/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-indexing" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-indexing/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-logging" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-logging/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-config-http" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-config-http/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-dav" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-dav/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-http" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-http/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet-filters" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet-filters/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-security" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-security/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-tz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-tz/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-caching" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-caching/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-directory" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-directory/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-jms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-jms/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-json/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-misc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-misc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-xml/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util2/bw-util2-calendar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util2/bw-util2-calendar/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util2/bw-util2-vcard" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util2/bw-util2-vcard/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webdav" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-webdav/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-appleServer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-bwlicense" charset="UTF-8" />

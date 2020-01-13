@@ -2,18 +2,31 @@
 === Release Notes
 
 ==== Dev:
+Making a serious effort to get rid of ide warnings. Removing the trivia lets the important stuff stand out. Starting work on implementing new jscalendar and jscontact representations and the jmap protocol.
+
     * Bring libraries (jackson + spring) up to the current up to date
     * New jsforj module to parse and generate jscalendar amd jscontact structures.
     * Major internal refactor ready for embedding jsCalendar support:
         ** Moved bw-calendar-engine-ical to bw-calendar-engine-convert
         ** Added packages in that module for ical, jcal and xcal.
-    * Changed a number of internal api calls to use response objects and
-        return errorcodes rather than throw exceptions. Where an
-        exception is the only way out use RuntimeException.
+    * Cleanup:
+        ** Changed a number of internal api calls to use response objects and
+           return errorcodes rather than throw exceptions. Where an
+           exception is the only way out use RuntimeException.
+        ** Where methods rarely throw an exception - or the exception is the result of a truly hosed system - throw runtime exception instead. Cleans up code and we can concentrate on the issues that matter.
     * More fixes to bw script.
+    * Performance
+        ** Dropped a wait in indexing mark-transaction. Added a significant amount of time to calls.
+        ** Figured out how to handle provisioning a new account when we have a read-only svci. Allowed reinstating read-only for caldav read-only methods.
+        ** Reconfigured and rewrote some of the JMS code to allow asynch sends. Required update of a library version.
     * bw-util
         ** move cli libraries into new bw-cliutil project
         ** move bw-util-struts into bw-calendar-client-util
+        ** Split into a number of util projects
+    * webdav
+        ** Fixes to report/propfind - allprops and propname were not being handled correctly.
+    * Indexing
+        ** Use scroll search for multiget query
 
 ==== Release 3.13.1:
 There was long standing a bug in category handling for updates. An attempt

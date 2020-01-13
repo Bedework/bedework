@@ -26,6 +26,8 @@ include::{overview-dir}features.adoc[]
 
 include::{overview-dir}release-notes.adoc[]
 
+include::{overview-dir}issues.adoc[]
+
 include::{overview-dir}system-overview.adoc[]
 
 include::{overview-dir}history.adoc[]

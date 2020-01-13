@@ -59,7 +59,9 @@
         <element id="library" level="project" name="Maven: com.sun.activation:jakarta.activation:1.2.1" />
         <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.3.0" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util2-vcard:4.0.5" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-webdav:4.0.8" />
+        <element id="archive" name="bw-webdav-4.0.9-SNAPSHOT.jar">
+          <element id="module-output" name="bw-webdav" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util-logging:4.0.4" />
         <element id="library" level="project" name="Maven: javax.xml.ws:jaxws-api:2.3.1" />
         <element id="library" level="project" name="Maven: javax.xml.soap:javax.xml.soap-api:1.4.0" />
