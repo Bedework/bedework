@@ -3,6 +3,13 @@
 
 This is a (moderately) sorted list of features/changes etc for bedework. Could be a set of tickets but this is easier to read.
 
+==== Index/updates after touch collection
+The lastmod db update is not versioned as we get a lot and it causes frequent stale state exceptions.
+
+The update should only take place if the new valueis after the old value.
+
+Also when indexing - if we're indexing because of a touch - we should ignore version conflict exceptions.
+
 ==== Filter x-properties
 Filter x-properties in public clients/feeds - list of x-props to retain.
 

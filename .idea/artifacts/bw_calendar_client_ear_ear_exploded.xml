@@ -136,8 +136,12 @@
         <element id="archive" name="bw-util-xml-4.0.27-SNAPSHOT.jar">
           <element id="module-output" name="bw-util-xml" />
         </element>
-        <element id="library" level="project" name="Maven: org.bedework:bw-util2-calendar:4.0.5" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util2-vcard:4.0.5" />
+        <element id="archive" name="bw-util2-calendar-4.0.6-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util2-calendar" />
+        </element>
+        <element id="archive" name="bw-util2-vcard-4.0.6-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util2-vcard" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-caldav:4.0.9" />
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-calws-soap:4.0.9" />
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-icalendar:4.0.9" />
