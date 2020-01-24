@@ -788,6 +788,7 @@ do
       bwutilhib="yes"
       bwutilindex="yes"
       bwutillog="yes"
+      bwutilnetwork="yes"
       bwutilsecurity="yes"
       bwutiltz="yes"
       bwutil2="yes"
@@ -807,6 +808,7 @@ do
       bwutilhib="yes"
       bwutilindex="yes"
       bwutillog="yes"
+      bwutilnetwork="yes"
       bwutilsecurity="yes"
       bwutiltz="yes"
       bwutil2="yes"
@@ -887,6 +889,7 @@ do
       bwutil="yes"
       bwutilconf="yes"
       bwutillog="yes"
+      bwutilnetwork="yes"
       bwutiltz="yes"
       webdav="yes"
       pkgdefault=
@@ -929,6 +932,7 @@ do
       bwutil="yes"
       bwutildeploy="yes"
       bwutillog="yes"
+      bwutilnetwork="yes"
       webdav="yes"
       pkgdefault=
       shift
