@@ -618,28 +618,28 @@ installSources() {
     cloneRepo bw-timezone-server
     cloneRepo bw-util
     cloneRepo bw-util-conf
+    cloneRepo bw-util-deploy
+    cloneRepo bw-util-hibernate
     cloneRepo bw-util-index
+    cloneRepo bw-util-logging
     cloneRepo bw-util-network
     cloneRepo bw-util-security
     cloneRepo bw-util-tz
     cloneRepo bw-util2
-    cloneRepo bw-util-deploy
-    cloneRepo bw-util-hibernate
-    cloneRepo bw-util-logging
     cloneRepo bw-webdav
     cloneRepo bw-xml
   else
-    cloneRepoBranch $bwUtilLoggingVersion bw-util-logging
     cloneRepoBranch $bwXmlVersion bw-xml
     cloneRepoBranch $bwUtilVersion bw-util
     cloneRepoBranch $bwUtilConfVersion bw-util-conf
+    cloneRepoBranch $bwUtilDeployVersion bw-util-deploy
+    cloneRepoBranch $bwUtilHibernateVersion bw-util-hibernate
     cloneRepoBranch $bwUtilIndexVersion bw-util-index
+    cloneRepoBranch $bwUtilLoggingVersion bw-util-logging
     cloneRepoBranch $bwUtilNetworkVersion bw-util-network
     cloneRepoBranch $bwUtilSecurityVersion bw-util-security
     cloneRepoBranch $bwUtilTzVersion bw-util-tz
     cloneRepoBranch $bwUtil2Version bw-util2
-    cloneRepoBranch $bwUtilDeployVersion bw-util-deploy
-    cloneRepoBranch $bwUtilHibernateVersion bw-util-hibernate
     cloneRepoBranch $bwAccessVersion bw-access
     cloneRepoBranch $bwWebdavVersion bw-webdav
     cloneRepoBranch $bwCaldavVersion bw-caldav
