@@ -147,28 +147,27 @@ usage() {
   echo "See"
   echo "http://bedework.github.io/bedework/"
   echo ""
-  echo "  $PRG ACTION"
-  echo "  $PRG [-dc CONFIG-SOURCE] [-P PROFILE] [PROJECT] [ -offline ] "
-  echo "              [-appserver=<server>]"
+  echo "  $PRG -cleanall      Do clean on all projects"
+  echo "  $PRG -updateall     Does a git update of all projects"
+  echo "  $PRG [-dc CONFIG-SOURCE] [-P PROFILE] <clean-build> [PROJECT] <options>"
   echo "              [LOG_LEVEL] [ target ] "
   echo ""
   echo " where:"
-  echo ""
-  echo "   ACTION defines an action to take usually in the context of the quickstart."
-  echo "    In a deployed system many of these actions are handled directly by a"
-  echo "    deployed application. ACTION may be one of"
-  echo "      -updateall  Does an svn update of all projects"
-  echo ""
   echo "   CONFIG-SOURCE optionally defines the location of the deploy properties"
   echo "   The default is in $deployConfig."
   echo ""
   echo "   PROFILE optionally defines the maven profile to use"
   echo "   Otherwise the maven default is used"
   echo ""
-  echo "   -offline     Build without attempting to retrieve library jars"
+  echo "   <options> is zero or more of:"
+  echo "     -echoonly    Show the commands but don't execute"
+  echo "     -offline     Build without attempting to retrieve library jars"
+  echo "     -appserver=wildfly Build for wildfly - the default"
+  echo "     -appserver=jboss5  Build for jboss 5 (probably doesn't work)"
   echo ""
-  echo "   -appserver=wildfly Build for wildfly - the default"
-  echo "   -appserver=jboss5  Build for jboss 5"
+  echo "   <clean-build> is zero or more of:"
+  echo "     clean          Do a maven clean"
+  echo "     build          Do a maven install (default)"
   echo ""
   echo "   LOG_LEVEL sets the level of logging and can be"
   echo "      -log-silent   Nearly silent"
@@ -469,7 +468,7 @@ setDirectory() {
 	fi
 
 	if [ "$carddav" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-carddav
+	  setDir "$QUICKSTART_HOME"/bw-carddav
       carddav=
 	  return
 	fi
@@ -585,6 +584,7 @@ bwc=default
 BWCONFIG=
 offline=
 clean=
+build=
 
 action=
 
@@ -711,6 +711,10 @@ do
       shift
       ;;
 # ------------------------Special targets
+    build)
+      build="yes"
+      shift
+      ;;
     clean)
       clean="yes"
       shift
@@ -1156,9 +1160,12 @@ mvncmd="$mvn_quiet $mvnProfile -Dmaven.test.skip=true"
 
 if [ "$clean" = "yes" ] ; then
   mvncmd="$mvncmd clean"
+  if [ "$build" = "yes" ] ; then
+    mvncmd="$mvncmd install"
+  fi
+else
+  mvncmd="$mvncmd install"
 fi
-
-mvncmd="$mvncmd install"
 
 while true
 do
