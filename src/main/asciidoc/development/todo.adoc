@@ -3,6 +3,19 @@
 
 This is a (moderately) sorted list of features/changes etc for bedework. Could be a set of tickets but this is easier to read.
 
+==== CoreEvents exceptions
+Don't do this:
+
+[source]
+----
+    if ((val.getEntityType() != IcalDefs.entityTypeAvailable) &&
+        (calendarNameExists(val, false, true) ||
+          calendarNameExists(val, true, true))) {
+      throwException(CalFacadeException.duplicateName, val.getName());
+    }
+----
+Rollback and return an error indication. Should be a bad request - not a 500.
+
 ==== Index/updates after touch collection
 The lastmod db update is not versioned as we get a lot and it causes frequent stale state exceptions.
 
