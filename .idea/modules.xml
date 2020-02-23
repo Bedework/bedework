@@ -70,6 +70,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service/bw-event-registration-service.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service/bw-event-registration-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war/bw-event-registration-war.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war/bw-event-registration-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-jsforj/bw-jsforj.iml" filepath="$PROJECT_DIR$/../bw-jsforj/bw-jsforj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-logs/bw-logs.iml" filepath="$PROJECT_DIR$/../bw-logs/bw-logs.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-bwconnector/bw-note-bwconnector.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-bwconnector/bw-note-bwconnector.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-common/bw-note-common.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-common/bw-note-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-db/bw-note-db.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-db/bw-note-db.iml" />
