@@ -41,6 +41,7 @@ bedeworkProjects="$bedeworkProjects  bw-cli"
 bedeworkProjects="$bedeworkProjects  bw-cliutil"
 bedeworkProjects="$bedeworkProjects  bw-dotwell-known"
 bedeworkProjects="$bedeworkProjects  bw-event-registration"
+bedeworkProjects="$bedeworkProjects  bw-logs"
 bedeworkProjects="$bedeworkProjects  bw-notifier"
 bedeworkProjects="$bedeworkProjects  bw-self-registration"
 bedeworkProjects="$bedeworkProjects  bw-synch"
@@ -76,6 +77,7 @@ client=
 dotWellKnown=
 eventreg=
 exchgGateway=
+bwlogs=
 naming=
 bwutil=
 bwutilconf=
@@ -202,6 +204,7 @@ usage() {
   echo "     carddav      Target is for the CardDAV build"
   echo "     carddav deploy-addrbook    To deploy the Javascript Addressbook client."
   echo "     eventreg     Target is for the event registration service build"
+  echo "     bwlogs       Target is the Bedework log processing library"
   echo "     notifier     Target is the Bedework notification service"
   echo "     bwutil       Target is for the Bedework util classes"
   echo "     bwutilConf   Target is for the Bedework config util classes"
@@ -482,6 +485,12 @@ setDirectory() {
 	if [ "$bwcalclient" != "" ] ; then
 	  setDir $QUICKSTART_HOME/bw-calendar-client
       bwcalclient=
+	  return
+	fi
+
+	if [ "$bwlogs" != "" ] ; then
+	  setDir $QUICKSTART_HOME/bw-logs
+      bwlogs=
 	  return
 	fi
 
@@ -817,6 +826,14 @@ do
       bwutiltz="yes"
       bwutil2="yes"
       webdav="yes"
+
+      pkgdefault=
+      shift
+      ;;
+    bwlogs)
+      bwlogs="yes"
+      bwutil="yes"
+      bwutillog="yes"
 
       pkgdefault=
       shift

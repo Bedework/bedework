@@ -32,6 +32,7 @@ bwSynchVersion="4.0.7"
 bwSelfRegistrationVersion="4.0.9"
 bwEventRegistrationVersion="4.0.8"
 bwNotifierVersion="4.0.9"
+bwLogsVersion="1.0.0"
 bwCliutilVersion="4.1.0"
 bwCliVersion="4.0.8"
 bwCarddavVersion="4.0.9"
@@ -612,6 +613,7 @@ installSources() {
     cloneRepo bw-cli
     cloneRepo bw-dotwell-known
     cloneRepo bw-event-registration
+    cloneRepo bw-logs
     cloneRepo bw-notifier
     cloneRepo bw-self-registration
     cloneRepo bw-synch
@@ -648,6 +650,7 @@ installSources() {
     cloneRepoBranch $bwSelfRegistrationVersion bw-self-registration
     cloneRepoBranch $bwEventRegistrationVersion bw-event-registration
     cloneRepoBranch $bwNotifierVersion bw-notifier
+    cloneRepoBranch $bwLogsVersion bw-logs
     cloneRepoBranch $bwCliutilVersion bw-cliutil
     cloneRepoBranch $bwCliVersion bw-cli
     cloneRepoBranch $bwCarddavVersion bw-carddav
