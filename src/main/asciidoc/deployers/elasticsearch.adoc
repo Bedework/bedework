@@ -2,29 +2,38 @@
 === Elasticsearch
 Bedework uses ElasticSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as an embedded engine - as it arrives in the quickstart - or as an external service - which will be required for clustering.
 
-Currently elasticSearch is completely unsecured. For testing and debugging it is possible to enable the http interface but this may expose your index. DO NOT run in production with the ES http interface open. In embedded mode the only access should be through the api.
+Currently elasticSearch is run completely unsecured. DO NOT run in production with the ES interfaces open to the outside.
 
-Later versions of ES do appear to offer the ability to secure ES. This may be an option when we upgrade.
+You can run ES on the same server but preferably it should be running on a different server. ES - depending on the amount of data and types of search - can use a lot of memory for caching of filters. See the ES site for full instructions on running and installing.
 
-In non-embedded mode you can run ES on the same server or preferably a different server. ES - depending on the amount of data and types of search - can use a lot of memory for caching of filters. See the ES site for full instructions on running a non-embedded version.
+In general this is an easy process - ES offers various installation formats of all their versions.
 
-In general this is an easy process - ES offers various installation formats of all their versions including the very old 15.2 we are running currently.
-
-Both embedded and non-embedded require a small number of changes to the configuration. These are already in place for the embedded version and are available in the quickstart in
+Bedework requires a small number of changes to the configuration. These are available in the quickstart in
 
 [source]
 ----
-bedework/config/bedework/elasticsearch/config/elasticsearch.yml
+bedework/config/bedework/elasticsearch/elasticsearch.yml
 ----
-
-Note that the mappings and settings do not need to be installed. They are used when creating a new index.
 
 The changes made are
 
-*action.auto_create_index: false*
+[source]
+----
+action.auto_create_index: ".security*,.monitoring*,.watches,.triggered_watches,.watcher-history*,.ml*"*
+
+# Limit to inline only
+script.allowed_types: inline
+----
 
 Prevent ES from creating indexes implicitly. This can cause issues when reindexing.
 
-Uncomment the following
+[source]
+----
+cluster.name: bedework-2019
+...
+node.name: bw2019-1
+...
+cluster.initial_master_nodes: ["bw2019-1"]
+----
 
-*node.max_local_storage_nodes: 1*
+Use specific names for the cluster and nodes.

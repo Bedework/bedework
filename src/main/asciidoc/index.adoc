@@ -23,17 +23,11 @@ include::introduction.adoc[]
 == Overview
 
 include::{overview-dir}features.adoc[]
-
 include::{overview-dir}release-notes.adoc[]
-
 include::{overview-dir}issues.adoc[]
-
 include::{overview-dir}system-overview.adoc[]
-
 include::{overview-dir}history.adoc[]
-
 include::{overview-dir}standards.adoc[]
-
 include::{overview-dir}technologies.adoc[]
 
 == Public Administrator Features
@@ -43,6 +37,7 @@ include::{admin-dir}authusers.adoc[]
 
 == Deployers
 include::{deployer-dir}installing.adoc[]
+include::{deployer-dir}deploying-servers.adoc[]
 include::{deployer-dir}configure-wildfly.adoc[]
 include::{deployer-dir}databases.adoc[]
 include::{deployer-dir}elasticsearch.adoc[]

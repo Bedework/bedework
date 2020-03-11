@@ -4,6 +4,8 @@
 ==== Dev:
 Making a serious effort to get rid of ide warnings. Removing the trivia lets the important stuff stand out. Starting work on implementing new jscalendar and jscontact representations and the jmap protocol.
 
+Changes to log file processor/analyzer. Can produce summary of addresses per ip-address/domain.
+
     * Bring libraries (jackson + spring) up to the current up to date
     * New jsforj module to parse and generate jscalendar amd jscontact structures.
     * Major internal refactor ready for embedding jsCalendar support:
@@ -27,6 +29,13 @@ Making a serious effort to get rid of ide warnings. Removing the trivia lets the
         ** Fixes to report/propfind - allprops and propname were not being handled correctly.
     * Indexing
         ** Use scroll search for multiget query
+        ** Delay indexing to end transaction call. Allows for greater efficiency and also less likelihood of index inconsistencies.
+    * Other bugs.
+        ** Fixed alarm equality checks. Bad comparisons for some fields.
+        ** A few scheduling and sharing fixes.
+        ** Add a recurrence instance to db for overrides. Need for link back to master.
+        ** Scheduling: fixes for attendees only on override.
+        ** Fix cleanup of description and summary strings. Was inserting escaped newlines.
 
 ==== Release 3.13.1:
 There was long standing a bug in category handling for updates. An attempt
