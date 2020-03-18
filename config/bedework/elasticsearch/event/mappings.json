@@ -41,7 +41,8 @@
       },
       "properties": {
         "all_content" : {
-          "type" : "text"
+          "type" : "text",
+          "analyzer" : "evprop_ngram_analyzer"
         },
         "esUpdateCount" : {
           "type" : "long",
