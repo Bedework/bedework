@@ -18,18 +18,21 @@ Changes to log file processor/analyzer. Can produce summary of addresses per ip-
         ** Where methods rarely throw an exception - or the exception is the result of a truly hosed system - throw runtime exception instead. Cleans up code and we can concentrate on the issues that matter.
     * More fixes to bw script.
     * Performance
-        ** Dropped a wait in indexing mark-transaction. Added a significant amount of time to calls.
+        ** Dropped a wait in indexing mark-transaction which was adding a significant amount of time to calls.
         ** Figured out how to handle provisioning a new account when we have a read-only svci. Allowed reinstating read-only for caldav read-only methods.
         ** Reconfigured and rewrote some of the JMS code to allow asynch sends. Required update of a library version.
     * bw-util
         ** move cli libraries into new bw-cliutil project
         ** move bw-util-struts into bw-calendar-client-util
         ** Split into a number of util projects
+    * bw-util-logging
+        ** Allow setting of log level.
     * webdav
         ** Fixes to report/propfind - allprops and propname were not being handled correctly.
     * Indexing
         ** Use scroll search for multiget query
         ** Delay indexing to end transaction call. Allows for greater efficiency and also less likelihood of index inconsistencies.
+        ** Fixed mapping so that queries work better against all_content.
     * Other bugs.
         ** Fixed alarm equality checks. Bad comparisons for some fields.
         ** A few scheduling and sharing fixes.
