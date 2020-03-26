@@ -1,4 +1,4 @@
-[[configure-events-registration]
+[[configure-events-registration]]
 === Enabling and Disabling Public Events Registration
 ==== Enabling Public Events Registration
 
