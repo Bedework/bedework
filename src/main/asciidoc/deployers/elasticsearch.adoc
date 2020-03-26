@@ -1,8 +1,8 @@
 [[elasticsearch]]
 === Elasticsearch
-Bedework uses ElasticSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as an embedded engine - as it arrives in the quickstart - or as an external service - which will be required for clustering.
+Bedework uses ElasticSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as a local application, useful for development - or as an external service - which will be required for clustering.
 
-Currently elasticSearch is run completely unsecured. DO NOT run in production with the ES interfaces open to the outside.
+ElasticSearch is generally run completely unsecured. DO NOT run in production with the ES interfaces open to the outside.
 
 You can run ES on the same server but preferably it should be running on a different server. ES - depending on the amount of data and types of search - can use a lot of memory for caching of filters. See the ES site for full instructions on running and installing.
 
@@ -37,3 +37,56 @@ cluster.initial_master_nodes: ["bw2019-1"]
 ----
 
 Use specific names for the cluster and nodes.
+
+[[installing]]
+==== Installing ElasticSearch 7.2.0 as a service
+There are a number of options available.
+
+Look here for downloadable copies https://www.elastic.co/downloads/past-releases/elasticsearch-7-2-0
+
+Some instructions are here: https://linuxize.com/post/how-to-install-elasticsearch-on-ubuntu-18-04/
+
+If you're looking to install as a production service you need to install elasticsearch as a service. The instructions here are for installing as a service on Ubuntu.
+
+.................
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-amd64.deb
+sudo dpkg -i elasticsearch-7.2.0-amd64.deb
+sudo systemctl enable elasticsearch.service
+.................
+
+Copy the configuration out of the bedework quickstart to replace the elasticsearch config.
+
+.................
+sudo cp bw-3.13.2/quickstart-3.13.2/bedework/config/bedework/elasticsearch/elasticsearch.yml /etc/elasticsearch/
+sudo systemctl start elasticsearch.service
+.................
+
+After installing and starting the service you will need to restore and reindex the data.
+
+==== Installing a runnable ElasticSearch 7.2.0
+If you just want to try out bedework it may be easier to install elasticsearch as a runnable module.
+
+.................
+cd <somewhere>
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-darwin-x86_64.tar.gz
+gunzip elasticsearch-7.2.0-darwin-x86_64.tar.gz
+tar xf elasticsearch-7.2.0-darwin-x86_64.tar
+cp <path-to>/quickstart-3.13.2/bedework/config/bedework/elasticsearch/elasticsearch.yml elasticsearch-7.2.0/config/
+.................
+
+In your <home>/.bw file add
+
+.................
+#
+# ES options
+#
+bwESdatadir="<somewhere>/elasticsearch-7.2.0/data/"
+.................
+
+Then you can use the restore script to restore the data and indexes:
+
+.................
+cd <path-to>/quickstart-3.13.2/
+./resetQS.sh
+.................
+

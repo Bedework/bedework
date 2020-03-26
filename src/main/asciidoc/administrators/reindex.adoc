@@ -1,0 +1,56 @@
+[[reindex]]
+=== Reindexing
+Elasticsearch (ES) is used for indexing and searching the data. Nearly all complex queries take place against ES. The public facing web client and feeds use ES exclusively - there are no database interactions. CalDAV read-only methods (e.g. GET, PROPFIND, etc) also interact only with ES.
+
+The database is used only as a transactional store and only the admin clients and CalDAV write methods (PUT, POST etc) use the database. Changes made to the database result in updates to the index which in some cases can take up to a second to appear.
+
+Occasionally the index will get out of step with the database. The database is the authoritative copy of the data. Sometimes - for an individual entity making a trivial change to the data via the admin client can get things back in step. If it's an event which was being destroyed and it remained in the index a super-user can delete by href from the system tab.
+
+If things are significantly out of step or you are restoring data you'll need to reindex. Depending on the amount of data present this can take from a few minutes to some hours.
+
+During reindexing the system can continue to run using the previous index. However, any changes to the data may be lost so it is better to suspend any such changes until after reindexing is complete.
+
+A reindex takes 2 steps:
+
+. Build a new set of indexes from the data
+. If no errors make the new indexes production.
+
+These are both manually initiated.
+
+To reindex
+
+....
+cd bw-cli
+./target/client/bin/client -id <adminid> -pw <adminpw>
+rebuildidx
+<some time passes>
+makeidxprod all
+....
+
+Before the last step ensure that all phases of the indexing took place.
+If - for some reason - the client loses touch with the server, you can check the status with
+
+....
+rebuildstatus
+....
+
+The response should include a section which might look like this (for the quickstart data)
+
+....
+Statistics for Public
+current status: indexCollection(/public/unbrowsable/submissions/submissions)
+Statistics for Public
+unreachableEntities: 0
+principals: 11
+preferences: 1
+collections: 71
+categories: 62
+locations: 5
+contacts: 4
+filters: 0
+events: 3
+resources: 10
+resourceContents: 10
+....
+
+Note that - other than for filters - there are non-zero counts for everything. If resources for example are 0 check for errors.

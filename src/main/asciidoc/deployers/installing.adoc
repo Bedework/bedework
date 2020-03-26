@@ -1,0 +1,81 @@
+[[installing-bedwork]]
+=== Installing bedework on Ubuntu
+. Install maven.
++
+.................
+sudo apt install maven
+.................
+. Install git
++
+.................
+sudo apt install git
+.................
+
+. Ensure java 11 jdk installed
++
+.................
+sudo apt-get update
+sudo apt-get install openjdk-11-jdk-headless
+sudo update-alternatives --config java
+.................
++
+The last command should state there are no alternatives but if another has been installed pick the appropriate version.
+
+. Install the quickstart
++
+We create a directory in which to install bedework, download an install script and execute the script.
++
+There are options to install elasticsearch as a docker image but we'll provide elasticsearch instructions later.
++
+First set up the maven profile which must be named "bedework-3"
++
+.................
+mkdir ~/.m2
+emacs ~/.m2/settings.xml
+.................
++
+and paste in a modified form of the following (change the paths)
++
+.................
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                         http://maven.apache.org/xsd/settings-1.0.0.xsd">
+<pluginGroups>
+<pluginGroup>org.bedework</pluginGroup>
+</pluginGroups>
+
+  <profiles>
+    <profile>
+      <id>bedework-3</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <org.bedework.deployment.basedir>/home/mike/bw-3.13.2/quickstart-dev</org.bedework.deployment.basedir>
+        <org.bedework.deployment.properties>/home/mike/bw-3.13.2/quickstart-dev/bedework/config/wildfly.deploy.properties</org.bedework.deployment.properties>
+      </properties>
+    </profile>
+  </profiles>
+</settings>
+.................
++
+.................
+mkdir bw-3.13.2
+wget https://github.com/Bedework/bedework/raw/bedework-3.13.2/build/quickstart/linux/installQS.sh
+chmod +x installQS.sh
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+./installQS.sh
+.................
++
+and answer the questions presented to you. If you need to restart - probably easier to delete and recreate the directory.
++
+Some time will pass. You'll be asked to provide an id and password for wildfly admin. I suggest hawtadmin and a password of your own choosing. More time will pass...
+
+. Install ElasticSearch 7.2.0
++
+See <<elasticsearch.adoc#installing>> for instructions on installing and (re)indexing.
+
+

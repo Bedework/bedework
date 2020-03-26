@@ -13,39 +13,39 @@ JBOSS_VERSION="17.0.1.Final"
 galleonVersion="4.1.0.Final"
 
 # -------------------Module versions -----------------------------
-bwUtilLoggingVersion="4.0.4"
-bwUtilVersion="4.0.26"
+bwXmlVersion="4.0.10"
+bwUtilLoggingVersion="4.0.5"
+bwUtilVersion="4.0.27"
 bwUtilConfVersion="4.1.0"
 bwUtilNetworkVersion="4.1.0"
 bwUtilSecurityVersion="4.1.0"
 bwUtilTzVersion="4.1.0"
 bwUtilIndexVersion="4.1.0"
-bwUtil2Version="4.0.5"
-bwUtilDeployVersion="4.0.25"
-bwXmlVersion="4.0.9"
-bwUtilHibernateVersion="4.0.22"
-bwAccessVersion="4.0.7"
-bwWebdavVersion="4.0.8"
-bwCaldavVersion="4.0.8"
-bwTimezoneServerVersion="4.0.6"
-bwSynchVersion="4.0.7"
-bwSelfRegistrationVersion="4.0.9"
-bwEventRegistrationVersion="4.0.8"
-bwNotifierVersion="4.0.9"
+bwUtil2Version="4.0.6"
+bwUtilDeployVersion="4.0.26"
+bwUtilHibernateVersion="4.0.23"
+bwAccessVersion="4.0.8"
+bwWebdavVersion="4.0.9"
+bwCaldavVersion="4.0.9"
+bwTimezoneServerVersion="4.0.7"
+bwSynchVersion="4.0.8"
+bwSelfRegistrationVersion="4.0.10"
+bwEventRegistrationVersion="4.0.9"
+bwNotifierVersion="4.0.10"
 bwLogsVersion="1.0.0"
 bwCliutilVersion="4.1.0"
-bwCliVersion="4.0.8"
-bwCarddavVersion="4.0.9"
+bwJsforJVersion="1.0.0"
+bwCliVersion="4.0.9"
+bwCarddavVersion="4.0.10"
 
-bwCalendarEngineVersion="3.13.1"
-bwCalendarClientVersion="3.13.1"
-bwCalendarXslVersion="3.13.1"
-
+bwCalendarEngineVersion="3.13.2"
+bwCalendarClientVersion="3.13.2"
+bwCalendarXslVersion="3.13.2"
 
 trap 'cd $BASE_DIR' 0
 trap "exit 2" 1 2 3 15
 
-if [ -z "$JAVA_HOME" -o ! -d "$JAVA_HOME" ] ; then
+if [ -z "$JAVA_HOME" ] || [ ! -d "$JAVA_HOME" ] ; then
   echo "JAVA_HOME is not defined correctly for bedework."
   exit 1
 fi
@@ -269,13 +269,13 @@ installWildFly() {
   ./galleon-$galleonVersion/bin/galleon.sh install wildfly:17.0#$JBOSS_VERSION --dir=$JBOSS_BASE_DIR --layers=core-server,jms-activemq,core-tools
 
   if [ ! -d "$qs/$TMP_DIR" ]; then
-    mkdir -p $qs/$TMP_DIR
+    mkdir -p "$qs"/$TMP_DIR
   fi
 
-  mkdir $qs/$JBOSS_DATA_DIR
+  mkdir "$qs"/$JBOSS_DATA_DIR
 
   # Add a generic named link to the current wildfly
-  cd $qs
+  cd $qs || { echo "Quickstart directory $qs doesn't exist"; exit 1; }
 
   ln -s $JBOSS_BASE_DIR wildfly
 
@@ -613,6 +613,7 @@ installSources() {
     cloneRepo bw-cli
     cloneRepo bw-dotwell-known
     cloneRepo bw-event-registration
+    cloneRepo bw-jsforj
     cloneRepo bw-logs
     cloneRepo bw-notifier
     cloneRepo bw-self-registration
@@ -642,6 +643,7 @@ installSources() {
     cloneRepoBranch $bwUtilSecurityVersion bw-util-security
     cloneRepoBranch $bwUtilTzVersion bw-util-tz
     cloneRepoBranch $bwUtil2Version bw-util2
+    cloneRepoBranch $bwJsforJVersion bw-jsforj
     cloneRepoBranch $bwAccessVersion bw-access
     cloneRepoBranch $bwWebdavVersion bw-webdav
     cloneRepoBranch $bwCaldavVersion bw-caldav
@@ -719,7 +721,8 @@ buildModules() {
 
 # For the moment just build it all
 
-  buildModule xsl
+  modules="xsl"
+  # buildModule xsl
 
 # These and more get built by the build script
 #  buildModule bwutil
@@ -727,19 +730,29 @@ buildModules() {
 #  buildModule bwxml
 #  buildModule bwutil2
 
-  buildModule deploy
+  modules="$modules bwcalclient"
+  # buildModule bwcalclient
 
 # These are the deployable or runnable components
-  buildModule notifier
-  buildModule tzsvr
-  buildModule synch
-  buildModule eventreg
-  buildModule selfreg
-  buildModule bwcli
+  modules="$modules notifier"
+  modules="$modules tzsvr"
+  modules="$modules synch"
+  modules="$modules eventreg"
+  modules="$modules selfreg"
+  modules="$modules bwcli"
+
+  # buildModule notifier
+  # buildModule tzsvr
+  # buildModule synch
+  # buildModule eventreg
+  # buildModule selfreg
+  # buildModule bwcli
+
+  buildModule $modules
 
   # Add some links
 
-  ln -s bw-cli/target/client/bin/client
+  ln -s bw-cli/target/client/bin/client .
 
   markDone $buildModules
 }
