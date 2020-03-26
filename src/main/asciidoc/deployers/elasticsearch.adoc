@@ -61,7 +61,7 @@ sudo cp bw-3.13.2/quickstart-3.13.2/bedework/config/bedework/elasticsearch/elast
 sudo systemctl start elasticsearch.service
 .................
 
-After installing and starting the service you will need to restore and reindex the data.
+After installing and starting the service you will need to restore and reindex the data. For instructions see <<reindex>>.
 
 ==== Installing a runnable ElasticSearch 7.2.0
 If you just want to try out bedework it may be easier to install elasticsearch as a runnable module.
