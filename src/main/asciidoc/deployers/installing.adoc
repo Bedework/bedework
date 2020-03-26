@@ -76,6 +76,6 @@ Some time will pass. You'll be asked to provide an id and password for wildfly a
 
 . Install ElasticSearch 7.2.0
 +
-See <<elasticsearch.adoc#installing>> for instructions on installing and (re)indexing.
+See <<elasticsearch>> for instructions on installing and (re)indexing.
 
 
