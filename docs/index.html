@@ -112,16 +112,21 @@
 <ul class="sectlevel3">
 <li><a href="#installing">4.5.1. Installing ElasticSearch 7.2.0 as a service</a></li>
 <li><a href="#_installing_a_runnable_elasticsearch_7_2_0">4.5.2. Installing a runnable ElasticSearch 7.2.0</a></li>
-<li><a href="#_disabling_public_events_registration">4.5.3. Disabling Public Events Registration</a></li>
-<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">4.5.4. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
-<li><a href="#_notifications_from_eventreg">4.5.5. Notifications from EventReg</a></li>
 </ul>
 </li>
-<li><a href="#_initializing_the_database">4.6. Initializing the database</a>
+<li><a href="#configure-events-registration">4.6. Enabling and Disabling Public Events Registration</a>
 <ul class="sectlevel3">
-<li><a href="#_rebuild_bw_xml">4.6.1. (Re)build bw-xml</a></li>
-<li><a href="#_validating_locations">4.6.2. Validating locations.</a></li>
-<li><a href="#_searching_for_public_locations">4.6.3. Searching for public locations</a></li>
+<li><a href="#_enabling_public_events_registration">4.6.1. Enabling Public Events Registration</a></li>
+<li><a href="#_disabling_public_events_registration">4.6.2. Disabling Public Events Registration</a></li>
+<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">4.6.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
+<li><a href="#_notifications_from_eventreg">4.6.4. Notifications from EventReg</a></li>
+</ul>
+</li>
+<li><a href="#_initializing_the_database">4.7. Initializing the database</a>
+<ul class="sectlevel3">
+<li><a href="#_rebuild_bw_xml">4.7.1. (Re)build bw-xml</a></li>
+<li><a href="#_validating_locations">4.7.2. Validating locations.</a></li>
+<li><a href="#_searching_for_public_locations">4.7.3. Searching for public locations</a></li>
 </ul>
 </li>
 </ul>
@@ -2777,17 +2782,18 @@ bwESdatadir="&lt;somewhere&gt;/elasticsearch-7.2.0/data/"</pre>
 ./resetQS.sh</pre>
 </div>
 </div>
-<div class="paragraph">
-<p>[[configure-events-registration]
-=== Enabling and Disabling Public Events Registration
-==== Enabling Public Events Registration</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="configure-events-registration">4.6. Enabling and Disabling Public Events Registration</h3>
+<div class="sect3">
+<h4 id="_enabling_public_events_registration">4.6.1. Enabling Public Events Registration</h4>
 <div class="paragraph">
 <p>The public events registration system is enabled by default if you have installed Bedework with the data available in the quickstart.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_disabling_public_events_registration">4.5.3. Disabling Public Events Registration</h4>
+<h4 id="_disabling_public_events_registration">4.6.2. Disabling Public Events Registration</h4>
 <div class="paragraph">
 <p>If you wish to disable the public events registration system remove the "Eventreg admin token" from the System Preferences in the jmx console:</p>
 </div>
@@ -2816,7 +2822,7 @@ bwESdatadir="&lt;somewhere&gt;/elasticsearch-7.2.0/data/"</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">4.5.4. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
+<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">4.6.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
 <div class="paragraph">
 <p>First ensure that the CalWs interface is available. This is the SOAP service that the event registration service uses o communicate with bedework. In system.xml make sure the &lt;calSoapWsURI&gt; element is present and has the same value as the soap:address element in pubcalws-soap/wssvc.wsdl (this requires better explanation - it&#8217;s a file deployed in the bw-xml ear)</p>
 </div>
@@ -2917,7 +2923,7 @@ bwESdatadir="&lt;somewhere&gt;/elasticsearch-7.2.0/data/"</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_notifications_from_eventreg">4.5.5. Notifications from EventReg</h4>
+<h4 id="_notifications_from_eventreg">4.6.4. Notifications from EventReg</h4>
 <div class="paragraph">
 <p>The event registration service will send notifications to the calendar engine when changes take place that might require notifying users. The event registration service calls the calendar engine notification web service (not to be confused with the notification engine). This web service allows the core engine to add notifications to the accounts of subscribed users. It is the job of the notification engine to forward those via email or some other service.</p>
 </div>
@@ -2938,7 +2944,7 @@ The synch engine handles the synchronization of external subscriptions with a be
 </div>
 </div>
 <div class="sect2">
-<h3 id="_initializing_the_database">4.6. Initializing the database</h3>
+<h3 id="_initializing_the_database">4.7. Initializing the database</h3>
 <div class="paragraph">
 <p>If running with mysql the built in hibernate schema export doesn&#8217;t work - mysql jdbc does not support it.</p>
 </div>
@@ -2979,7 +2985,7 @@ grant all on synchDb.* to '&lt;id&gt;'@'%' identified by '&lt;pw&gt;';</code></p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_rebuild_bw_xml">4.6.1. (Re)build bw-xml</h4>
+<h4 id="_rebuild_bw_xml">4.7.1. (Re)build bw-xml</h4>
 <div class="paragraph">
 <p>The synch engine uses an extension of CalWS to communicate with bedework. It requires that the wsdl file contain the location of bedework. This is configured into the deploy.properties file - only one change for the synch engine should be necessary. Set the location of (one of) your application servers in the following.</p>
 </div>
@@ -3039,7 +3045,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_validating_locations">4.6.2. Validating locations.</h4>
+<h4 id="_validating_locations">4.7.2. Validating locations.</h4>
 <div class="paragraph">
 <p>When an event arrives at the receiving end with an "X-BEDEWORK-LOCATION" property if the String value of the x-property is &#8230;&#8203;
 === Locations in bedework</p>
@@ -3049,7 +3055,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_searching_for_public_locations">4.6.3. Searching for public locations</h4>
+<h4 id="_searching_for_public_locations">4.7.3. Searching for public locations</h4>
 <div class="paragraph">
 <p>There is a web service endpoint which can be used to search for public locations. It takes a filter expression as a parameter and will return &lt;a limited?&gt; number</p>
 </div>
