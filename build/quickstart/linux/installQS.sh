@@ -748,7 +748,7 @@ buildModules() {
   # buildModule selfreg
   # buildModule bwcli
 
-  buildModule $modules
+  ./bw -P "$mvnProfile" "$modules"
 
   # Add some links
 
