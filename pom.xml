@@ -127,7 +127,7 @@
           <noversion>true</noversion>
           <delete>true</delete>
           <warName>bedework</warName>
-          <baseDirPath>${project.basedir}/..</baseDirPath>
+          <baseDirPath>${org.bedework.deployment.basedir}</baseDirPath>
           <propsPath>${org.bedework.deployment.properties}</propsPath>
         </configuration>
       </plugin>
@@ -168,6 +168,17 @@
           <sourceDirectory>src/main/asciidoc</sourceDirectory>
           <headerFooter>true</headerFooter>
           <preserveDirectories>true</preserveDirectories>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+        <configuration>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <useReleaseProfile>false</useReleaseProfile>
+          <releaseProfiles>release</releaseProfiles>
         </configuration>
       </plugin>
     </plugins>
