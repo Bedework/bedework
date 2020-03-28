@@ -748,7 +748,7 @@ buildModules() {
   # buildModule selfreg
   # buildModule bwcli
 
-  ./bw -P "$mvnProfile" "$modules"
+  ./bw -P "$mvnProfile" $modules
 
   # Add some links
 
@@ -827,6 +827,7 @@ EOF
   markDone $indexData
 }
 
+args $*
 
 read -p "Enter path or name of empty or new directory: " dirpath
 
@@ -847,7 +848,7 @@ then
       echo "Restarting installation of quickstart"
     else
       ! echo "$dirpath is not empty but contains the progress marker."
-      ! echo "If you wish to restart the install specify 'restart' when"
+      ! echo "If you wish to restart the install specify '-restart' when"
       ! echo "running the script"
       exit 1
     fi
