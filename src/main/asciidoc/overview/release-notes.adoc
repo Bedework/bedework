@@ -2,6 +2,8 @@
 === Release Notes
 
 ==== Dev:
+
+==== Release 3.13.2:
 Making a serious effort to get rid of ide warnings. Removing the trivia lets the important stuff stand out. Starting work on implementing new jscalendar and jscontact representations and the jmap protocol.
 
 Changes to log file processor/analyzer. Can produce summary of addresses per ip-address/domain.
