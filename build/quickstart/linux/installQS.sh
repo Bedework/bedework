@@ -5,7 +5,7 @@
 BASE_DIR=`pwd`
 scriptName="$0"
 restart=
-latestVersion="3.13.1"
+latestVersion="3.13.2"
 mvnProfile="bedework-3"
 
 esDockerPull="docker pull docker.elastic.co/elasticsearch/elasticsearch:7.2.0"
@@ -338,6 +338,8 @@ installScripts() {
   markStarted $installScripts
 
   if [ "$version" == "dev" ] ; then
+    cloneRepo bedework
+  elif [ "$prerelease" == "yes" ]; then
     cloneRepo bedework
   else
     cloneRepoBranch $latestVersion bedework
@@ -863,11 +865,22 @@ fi
 echo "-------------------------------------------------------------"
 echo " Building in $dirpath"
 
+echo "Select the version to install:"
+echo "   dev: the current development state of all projects"
+echo "   latest: the latest release ($latestVersion)"
+echo "   prerelease: the latest release ($latestVersion) "
+echo "         except for the bedework project which will be the current dev"
+
+echo "Prerelease allows testing of the release before finally committing a release version."
+
+prerelease="no"
+
 echo "Which version - dev or latest ($latestVersion)?"
 select version in "dev" "latest"; do
     case $version in
         dev ) break;;
         latest ) version=$latestVersion; break;;
+        prerelease ) version=$latestVersion; prerelease="yes"; break;;
     esac
 done
 
