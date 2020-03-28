@@ -876,7 +876,7 @@ echo "Prerelease allows testing of the release before finally committing a relea
 prerelease="no"
 
 echo "Which version - dev or latest ($latestVersion)?"
-select version in "dev" "latest"; do
+select version in "dev" "latest" "prerelease"; do
     case $version in
         dev ) break;;
         latest ) version=$latestVersion; break;;
