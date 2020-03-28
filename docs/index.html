@@ -2128,10 +2128,25 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 <li>
 <p>Install ElasticSearch 7.2.0</p>
 <div class="paragraph">
-<p>See <a href="#elasticsearch">Elasticsearch</a> for instructions on installing and (re)indexing.</p>
+<p>See <a href="#elasticsearch">Elasticsearch</a> for instructions on installing and (re)indexing.
+You&#8217;ll need to start the system before reindexing.</p>
+</div>
+</li>
+<li>
+<p>Start the system</p>
+<div class="literalblock">
+<div class="content">
+<pre>cd &lt;into quickstart&gt;
+./starth2
+./dirstart
+./startjboss</pre>
+</div>
 </div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>If you need to reindex there will certainly be some errors at startup.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2736,16 +2751,16 @@ sudo systemctl enable elasticsearch.service</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Copy the configuration out of the bedework quickstart to replace the elasticsearch config.</p>
+<p>Copy the Ubuntu service configuration out of the bedework quickstart to replace the elasticsearch config.</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>sudo cp bw-3.13.2/quickstart-3.13.2/bedework/config/bedework/elasticsearch/elasticsearch.yml /etc/elasticsearch/
+<pre>sudo cp bw-3.13.2/quickstart-3.13.2/bedework/config/bedework/elasticsearch/ubuntu-svc-elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 sudo systemctl start elasticsearch.service</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>After installing and starting the service you will need to restore and reindex the data.</p>
+<p>After installing and starting the service you will need to restore and reindex the data. For instructions see <a href="#reindex">Reindexing</a>.</p>
 </div>
 </div>
 <div class="sect3">

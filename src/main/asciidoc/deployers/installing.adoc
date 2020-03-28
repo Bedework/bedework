@@ -77,5 +77,15 @@ Some time will pass. You'll be asked to provide an id and password for wildfly a
 . Install ElasticSearch 7.2.0
 +
 See <<elasticsearch>> for instructions on installing and (re)indexing.
+You'll need to start the system before reindexing.
 
+. Start the system
++
+.................
+cd <into quickstart>
+./starth2
+./dirstart
+./startjboss
+.................
 
+If you need to reindex there will certainly be some errors at startup.
