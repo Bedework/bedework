@@ -54,10 +54,10 @@ sudo dpkg -i elasticsearch-7.2.0-amd64.deb
 sudo systemctl enable elasticsearch.service
 .................
 
-Copy the configuration out of the bedework quickstart to replace the elasticsearch config.
+Copy the Ubuntu service configuration out of the bedework quickstart to replace the elasticsearch config.
 
 .................
-sudo cp bw-3.13.2/quickstart-3.13.2/bedework/config/bedework/elasticsearch/elasticsearch.yml /etc/elasticsearch/
+sudo cp bw-3.13.2/quickstart-3.13.2/bedework/config/bedework/elasticsearch/ubuntu-svc-elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 sudo systemctl start elasticsearch.service
 .................
 
