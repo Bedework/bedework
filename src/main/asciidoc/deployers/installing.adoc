@@ -34,7 +34,9 @@ mkdir ~/.m2
 emacs ~/.m2/settings.xml
 .................
 +
-and paste in a modified form of the following (change the paths)
+and paste in a modified form of the following (change the paths
+"/home/mike/bw-3.13.2/" to correspond to the directory you're about
+to create)
 +
 .................
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
