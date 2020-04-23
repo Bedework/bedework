@@ -41,6 +41,7 @@ bedeworkProjects="$bedeworkProjects  bw-cli"
 bedeworkProjects="$bedeworkProjects  bw-cliutil"
 bedeworkProjects="$bedeworkProjects  bw-dotwell-known"
 bedeworkProjects="$bedeworkProjects  bw-event-registration"
+bedeworkProjects="$bedeworkProjects  bw-jsforj"
 bedeworkProjects="$bedeworkProjects  bw-logs"
 bedeworkProjects="$bedeworkProjects  bw-notifier"
 bedeworkProjects="$bedeworkProjects  bw-self-registration"
@@ -64,21 +65,11 @@ access=
 bedework=
 bwcalclient=
 bwcaleng=
+bwcalsockets=
 bwcli=
 bwcliutil=
-bwnotifier=
-bwcalsockets=
-bwxml=
-caldav=
-caldavTest=
-carddav=
-catsvr=
-client=
-dotWellKnown=
-eventreg=
-exchgGateway=
 bwlogs=
-naming=
+bwnotifier=
 bwutil=
 bwutilconf=
 bwutilnetwork=
@@ -89,6 +80,17 @@ bwutilhib=
 bwutil2=
 bwutildeploy=
 bwutillog=
+bwxml=
+caldav=
+caldavTest=
+carddav=
+catsvr=
+client=
+dotWellKnown=
+eventreg=
+exchgGateway=
+jsforj=
+naming=
 selfreg=
 synch=
 testsuite=
@@ -223,6 +225,7 @@ usage() {
   echo "     bwutilhib    Target is for the Bedework hibernate util classes"
   echo "     bwutillog    Target is for the Bedework logging util classes"
   echo "     bwutildeploy Target is for the Bedework deployment util classes"
+  echo "     jsforj       Target is for the JSCalendar library build"
   echo "     webdav       Target is for the WebDAV build"
   echo "   Ancillary projects: not required"
   echo "     caldavTest   Target is for the CalDAV Test build"
@@ -427,6 +430,12 @@ setDirectory() {
 	if [ "$bwutil2" != "" ] ; then
 	  setDir $QUICKSTART_HOME/bw-util2
       bwutil2=
+	  return
+	fi
+
+	if [ "$jsforj" != "" ] ; then
+	  setDir $QUICKSTART_HOME/bw-jsforj
+      jsforj=
 	  return
 	fi
 
@@ -827,6 +836,7 @@ do
       bwutilsecurity="yes"
       bwutiltz="yes"
       bwutil2="yes"
+      jsforj="yes"
       webdav="yes"
 
       pkgdefault=
@@ -1073,6 +1083,14 @@ do
 #      access="yes"
       bwxml="yes"
 #      bwutil="yes"
+      pkgdefault=
+      shift
+      ;;
+    jsforj)
+      jsforj="yes"
+
+      bwutil="yes"
+      bwutillog="yes"
       pkgdefault=
       shift
       ;;
