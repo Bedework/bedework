@@ -87,7 +87,7 @@ xmlDownload="bw-xml-ear-$bwXmlVersion.ear"
 xmlRepoPath="${mvnrepo}bw-xml-ear/$bwXmlVersion/"
 
 cliName="bw-cli"
-cliDownload="bw-cli-$bwCliVersion.bin.zip"
+cliDownload="bw-cli-$bwCliVersion-bin.zip"
 cliRepoPath="${mvnrepo}bw-cli/$bwCliVersion/"
 
 trap 'cd $BASE_DIR' 0
@@ -1100,7 +1100,7 @@ installDrivers
 
 installHawtio
 
-if [ "$withSources" == "yes" ]; then
+if [ "$withSources" == "yes" ] ; then
   installSources
 else
   installEars
@@ -1112,7 +1112,7 @@ installData
 installApacheds
 
 cd $qs
-if [ "$withSources" == "yes" ]; then
+if [ "$withSources" == "yes" ] ; then
   buildModules
 fi
 
