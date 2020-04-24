@@ -588,9 +588,11 @@ deploy() {
   unzip $2
   rm -r $2
   cd ..
-  cp -r $1 ${JBOSS_BASE_DIR}/standalone/deployments/
-  touch ${JBOSS_BASE_DIR}/standalone/deployments/$1.dodeploy
+  cp -r $1 $qs/${JBOSS_BASE_DIR}/standalone/deployments/
+  touch $qs/${JBOSS_BASE_DIR}/standalone/deployments/$1.dodeploy
   rm -r $1
+
+  cd $BASE_DIR
 
   markDone $1
 }
@@ -646,6 +648,8 @@ installApp() {
   unzip $2
   rm -r $2
   cd ..
+
+  cd $BASE_DIR
 
   markDone $1
 }
