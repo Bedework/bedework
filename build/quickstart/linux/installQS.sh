@@ -1050,7 +1050,7 @@ withSources="no"
 
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) break;;
+        Yes ) withSources="yes"; break;;
         No ) markSkipped ${installSources}; break;;
     esac
 done
@@ -1059,7 +1059,7 @@ echo "Do you wish to install and start a docker image of elasticsearch?"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) break;;
-        No ) markSkipped ${installES}; markSkipped ${indexData}; withSources="yes"; break;;
+        No ) markSkipped ${installES}; markSkipped ${indexData}; break;;
     esac
 done
 
