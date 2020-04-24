@@ -48,19 +48,19 @@ mvnrepo="https://repo1.maven.org/maven2/org/bedework/"
 # Deployed names
 bedeworkName="bedework-$latestVersion.war"
 bedeworkDownload="bedework-$latestVersion.war"
-bedeworkRepoPath="${mvnrepo}bedework/bedework/$latestVersion/bedework-$latestVersion.war"
+bedeworkRepoPath="${mvnrepo}bedework/bedework/$latestVersion/"
 
 calName="bw-cal-$bwCalendarClientVersion.ear"
 calDownload="bw-calendar-client-ear-$bwCalendarClientVersion.ear"
-calRepoPath="${mvnrepo}bwwebcl/$bwCalendarClientVersion/bw-calendar-client-ear-$bwCalendarClientVersion.ear"
+calRepoPath="${mvnrepo}bwwebcl/$bwCalendarClientVersion/"
 
 xslName="bw-calendar-xsl-$bwCalendarXslVersion.war"
 xslDownload="bw-calendar-xsl-$bwCalendarXslVersion.war"
-xslRepoPath="${mvnrepo}bwxsl/$bwCalendarXslVersion/bw-calendar-xsl-$bwCalendarXslVersion.war"
+xslRepoPath="${mvnrepo}bwxsl/$bwCalendarXslVersion/"
 
 carddavName="bw-carddav-$bwCarddavVersion.ear"
 carddavDownload="bw-carddav-ear-$bwCarddavVersion.ear"
-carddavRepoPath="${mvnrepo}bw-cardav-ear/$bwCarddavVersion/bw-carddav-ear-$bwCarddavVersion.ear"
+carddavRepoPath="${mvnrepo}bw-cardav-ear/$bwCarddavVersion/"
 
 eventregName="bw-event-registration-$bwEventRegistrationVersion.ear"
 eventregDownload="bw-event-registration-ear-$bwEventRegistrationVersion.ear"
