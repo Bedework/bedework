@@ -649,6 +649,8 @@ installApp() {
   rm -r $2
   cd ..
 
+  mv $1 $qs
+
   cd $BASE_DIR
 
   markDone $1
