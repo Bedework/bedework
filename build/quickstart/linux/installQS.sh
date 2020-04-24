@@ -583,7 +583,7 @@ deploy() {
 
   mkdir $1
   cd $1
-  wget $3/$2
+  wget ${3}${2}
 
   unzip $2
   rm -r $2
@@ -641,7 +641,7 @@ installApp() {
 
   mkdir $1
   cd $1
-  wget $3/$2
+  wget ${3}${2}
 
   unzip $2
   rm -r $2
