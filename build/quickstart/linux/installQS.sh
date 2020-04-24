@@ -42,6 +42,54 @@ bwCalendarEngineVersion="3.13.2"
 bwCalendarClientVersion="3.13.2"
 bwCalendarXslVersion="3.13.2"
 
+# -------------------Ear locations -----------------------------
+mvnrepo="https://repo1.maven.org/maven2/org/bedework/"
+
+# Deployed names
+bedeworkName="bedework-$latestVersion.war"
+bedeworkDownload="bedework-$latestVersion.war"
+bedeworkRepoPath="${mvnrepo}bedework/bedework/$latestVersion/bedework-$latestVersion.war"
+
+calName="bw-cal-$bwCalendarClientVersion.ear"
+calDownload="bw-calendar-client-ear-$bwCalendarClientVersion.ear"
+calRepoPath="${mvnrepo}bwwebcl/$bwCalendarClientVersion/bw-calendar-client-ear-$bwCalendarClientVersion.ear"
+
+xslName="bw-calendar-xsl-$bwCalendarXslVersion.war"
+xslDownload="bw-calendar-xsl-$bwCalendarXslVersion.war"
+xslRepoPath="${mvnrepo}bwxsl/$bwCalendarXslVersion/bw-calendar-xsl-$bwCalendarXslVersion.war"
+
+carddavName="bw-carddav-$bwCarddavVersion.ear"
+carddavDownload="bw-carddav-ear-$bwCarddavVersion.ear"
+carddavRepoPath="${mvnrepo}bw-cardav-ear/$bwCarddavVersion/bw-carddav-ear-$bwCarddavVersion.ear"
+
+eventregName="bw-event-registration-$bwEventRegistrationVersion.ear"
+eventregDownload="bw-event-registration-ear-$bwEventRegistrationVersion.ear"
+eventregRepoPath="${mvnrepo}evreg/bw-event-registration-ear/$bwEventRegistrationVersion/"
+
+notifierName="bw-notifier-$bwNotifierVersion.ear"
+notifierDownload="bw-note-ear-$bwNotifierVersion.ear"
+notifierRepoPath="${mvnrepo}notifier/bw-note-ear/$bwNotifierVersion/"
+
+selfregName="bw-self-registration-$bwSelfRegistrationVersion.ear"
+selfregDownload="bw-self-registration-ear-$bwSelfRegistrationVersion.ear"
+selfregRepoPath="${mvnrepo}selfreg/bw-self-registration-ear/$bwSelfRegistrationVersion/"
+
+synchName="bw-synch-$bwSynchVersion.ear"
+synchDownload="bw-synch-ear-$bwSynchVersion.ear"
+synchRepoPath="${mvnrepo}bw-synch/bw-synch-ear/$bwSynchVersion/"
+
+tzName="bw-timezone-server-$bwTimezoneServerVersion.ear"
+tzDownload="bw-timezone-server-ear-$bwTimezoneServerVersion.ear"
+tzRepoPath="${mvnrepo}bw-tzsvr/bw-timezone-server-ear/$bwTimezoneServerVersion/"
+
+xmlName="bw-xml-$bwXmlVersion.ear"
+xmlDownload="bw-xml-ear-$bwXmlVersion.ear"
+xmlRepoPath="${mvnrepo}bw-xml-ear/$bwXmlVersion/"
+
+cliName="bw-cli"
+cliDownload="bw-cli-$bwCliVersion.bin.zip"
+cliRepoPath="${mvnrepo}bw-cli/$bwCliVersion/"
+
 trap 'cd $BASE_DIR' 0
 trap "exit 2" 1 2 3 15
 
@@ -510,6 +558,102 @@ installApacheds() {
   markDone $installApacheds
 }
 
+
+# $1 - deployable module name
+# $2 - download file name
+# $3 - repo url to download file name
+deploy() {
+  echo "---------------------------------------------------------------"
+  echo "Deploy $1"
+
+  if stepDone $1; then
+    echo "Already done"
+    return
+  fi
+
+  cd $qs/$TMP_DIR/
+
+  if stepStarted $1; then
+    echo "Remove possible partial downloads"
+    rm -r $1
+    unmark $1
+  fi
+
+  markStarted $1
+
+  mkdir $1
+  cd $1
+  wget $3/$2
+
+  unzip $2
+  rm -r $2
+  cd ..
+  cp -r $1 ${JBOSS_BASE_DIR}/standalone/deployments/
+  touch ${JBOSS_BASE_DIR}/standalone/deployments/$1.dodeploy
+  rm -r $1
+
+  markDone $1
+}
+
+installEars() {
+  deploy $bedeworkName $bedeworkDownload $bedeworkRepoPath
+
+  deploy $calName $calDownload $calRepoPath
+
+  deploy $xslName $xslDownload $xslRepoPath
+
+  deploy $carddavName $carddavDownload $carddavRepoPath
+
+  deploy $eventregName $eventregDownload $eventregRepoPath
+
+  deploy $notifierName $notifierDownload $notifierRepoPath
+
+  deploy $selfregName $selfregDownload $selfregRepoPath
+
+  deploy $synchName $synchDownload $synchRepoPath
+
+  deploy $tzName $tzDownload $tzRepoPath
+
+  deploy $xmlName $xmlDownload $xmlRepoPath
+}
+
+# $1 - directory name for expansion
+# $2 - download file name
+# $3 - repo url to download file name
+installApp() {
+  echo "---------------------------------------------------------------"
+  echo "Deploy $1"
+
+  if stepDone $1; then
+    echo "Already done"
+    return
+  fi
+
+  cd $qs/$TMP_DIR/
+
+  if stepStarted $1; then
+    echo "Remove possible partial downloads"
+    rm -r $1
+    unmark $1
+  fi
+
+  markStarted $1
+
+  mkdir $1
+  cd $1
+  wget $3/$2
+
+  unzip $2
+  rm -r $2
+  cd ..
+
+  markDone $1
+}
+
+installApps() {
+  installApp $cliName $cliDownload $cliRepoPath
+}
+
 # $1 - name
 cloneRepo() {
   moduleName=$1
@@ -866,20 +1010,23 @@ echo "-------------------------------------------------------------"
 echo " Building in $dirpath"
 
 echo "Select the version to install:"
-echo "   dev: the current development state of all projects"
 echo "   latest: the latest release ($latestVersion)"
+echo "   dev: the current development state of all projects"
 echo "   prerelease: the latest release ($latestVersion) "
 echo "         except for the bedework project which will be the current dev"
 
+echo "Latest is probably the one you want."
+echo "Dev is for serious developers."
 echo "Prerelease allows testing of the release before finally committing a release version."
+echo ""
 
 prerelease="no"
 
 echo "Which version - dev or latest ($latestVersion)?"
-select version in "dev" "latest" "prerelease"; do
+select version in "latest" "dev" "prerelease"; do
     case $version in
-        dev ) break;;
         latest ) version=$latestVersion; break;;
+        dev ) break;;
         prerelease ) version=$latestVersion; prerelease="yes"; break;;
     esac
 done
@@ -894,6 +1041,13 @@ fi
 markVersion $qs
 
 echo "Do you wish to install the sources?"
+echo "If yes a full quickstart with all sources will be installed"
+echo "and the system built from those sources. This also requires"
+echo "maven, git and a correct maven profile (one will be displayed soon)."
+echo ""
+
+withSources="no"
+
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) break;;
@@ -905,7 +1059,7 @@ echo "Do you wish to install and start a docker image of elasticsearch?"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) break;;
-        No ) markSkipped ${installES}; markSkipped ${indexData}; break;;
+        No ) markSkipped ${installES}; markSkipped ${indexData}; withSources="yes"; break;;
     esac
 done
 
@@ -914,17 +1068,19 @@ cd $qs
 
 qs=`pwd`
 
-echo
-echo "Either merge these settings (from profile.txt) into your ~/.m2/settings.xml file"
-echo "or create that file with the content"
-echo
-echo "You need to do this before continuing or subsequent builds will fail."
-echo
+if [ "$withSources" == "yes" ]; then
+  echo
+  echo "Either merge these settings (from profile.txt) into your ~/.m2/settings.xml file"
+  echo "or create that file with the content"
+  echo
+  echo "You need to do this before continuing or subsequent builds will fail."
+  echo
 
-createProfile
+  createProfile
 
-echo
-read -p "Hit enter/return to continue" ignore
+  echo
+  read -p "Hit enter/return to continue" ignore
+fi
 
 # -------------------------------------------------------------------
 #  Installation starts here
@@ -940,14 +1096,21 @@ installDrivers
 
 installHawtio
 
-installSources
+if [ "$withSources" == "yes" ]; then
+  installSources
+else
+  installEars
+  installApps
+fi
 
 installData
 
 installApacheds
 
 cd $qs
-buildModules
+if [ "$withSources" == "yes" ]; then
+  buildModules
+fi
 
 updateWildFly
 
