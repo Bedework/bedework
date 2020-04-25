@@ -6,7 +6,15 @@ BASE_DIR=`pwd`
 scriptName="$0"
 restart=
 latestVersion="3.13.2"
-mvnProfile="bedework-3"
+
+bwOptions=$HOME/.bw
+
+if [ -f "$bwOptions" ]; then
+  . "$bwOptions"
+fi
+
+deployerDir="$HOME/deployer/"
+mvnProfile=${bw_mvnProfile:-"bedework-3"}
 
 esDockerPull="docker pull docker.elastic.co/elasticsearch/elasticsearch:7.2.0"
 JBOSS_VERSION="17.0.1.Final"
@@ -46,42 +54,52 @@ bwCalendarXslVersion="3.13.2"
 mvnrepo="https://repo1.maven.org/maven2/org/bedework/"
 
 # Deployed names
+bedeworkPrefix="bedework"
 bedeworkName="bedework-$latestVersion.war"
 bedeworkDownload="bedework-$latestVersion.war"
 bedeworkRepoPath="${mvnrepo}bedework/$latestVersion/"
 
+calPrefix="bw-cal"
 calName="bw-cal-$bwCalendarClientVersion.ear"
 calDownload="bw-calendar-client-ear-$bwCalendarClientVersion.ear"
 calRepoPath="${mvnrepo}bwwebcl/bw-calendar-client-ear/$bwCalendarClientVersion/"
 
+xslPrefix="bw-calendar-xsl"
 xslName="bw-calendar-xsl-$bwCalendarXslVersion.war"
 xslDownload="bw-calendar-xsl-$bwCalendarXslVersion.war"
 xslRepoPath="${mvnrepo}bwxsl/bw-calendar-xsl/$bwCalendarXslVersion/"
 
+carddavPrefix="bw-carddav"
 carddavName="bw-carddav-$bwCarddavVersion.ear"
 carddavDownload="bw-carddav-ear-$bwCarddavVersion.ear"
 carddavRepoPath="${mvnrepo}bw-carddav-ear/$bwCarddavVersion/"
 
+eventregPrefix="bw-event-registration"
 eventregName="bw-event-registration-$bwEventRegistrationVersion.ear"
 eventregDownload="bw-event-registration-ear-$bwEventRegistrationVersion.ear"
 eventregRepoPath="${mvnrepo}evreg/bw-event-registration-ear/$bwEventRegistrationVersion/"
 
+notifierPrefix="bw-notifier"
 notifierName="bw-notifier-$bwNotifierVersion.ear"
 notifierDownload="bw-note-ear-$bwNotifierVersion.ear"
 notifierRepoPath="${mvnrepo}notifier/bw-note-ear/$bwNotifierVersion/"
 
+selfregPrefix="bw-self-registration"
 selfregName="bw-self-registration-$bwSelfRegistrationVersion.ear"
 selfregDownload="bw-self-registration-ear-$bwSelfRegistrationVersion.ear"
 selfregRepoPath="${mvnrepo}selfreg/bw-self-registration-ear/$bwSelfRegistrationVersion/"
 
+synchPrefix="bw-synch"
 synchName="bw-synch-$bwSynchVersion.ear"
 synchDownload="bw-synch-ear-$bwSynchVersion.ear"
 synchRepoPath="${mvnrepo}bw-synch/bw-synch-ear/$bwSynchVersion/"
 
+tzPrefix="bw-timezone-server"
 tzName="bw-timezone-server-$bwTimezoneServerVersion.ear"
 tzDownload="bw-timezone-server-ear-$bwTimezoneServerVersion.ear"
 tzRepoPath="${mvnrepo}bw-tzsvr/bw-timezone-server-ear/$bwTimezoneServerVersion/"
 
+xmlPrefix="bw-xml"
 xmlName="bw-xml-$bwXmlVersion.ear"
 xmlDownload="bw-xml-ear-$bwXmlVersion.ear"
 xmlRepoPath="${mvnrepo}bw-xml-ear/$bwXmlVersion/"
@@ -559,7 +577,8 @@ installApacheds() {
 }
 
 
-# $1 - deployable module name
+# $1 - deployable module name prefix
+# $1 - deployable full module name
 # $2 - download file name
 # $3 - repo url to download file name
 deploy() {
@@ -581,16 +600,25 @@ deploy() {
 
   markStarted $1
 
-  mkdir $1
-  cd $1
-  wget ${3}${2}
+  # Create a directory to download the released ear - download and unzip
 
-  unzip $2
-  rm -r $2
-  cd ..
-  cp -r $1 $qs/${JBOSS_BASE_DIR}/standalone/deployments/
-  touch $qs/${JBOSS_BASE_DIR}/standalone/deployments/$1.dodeploy
-  rm -r $1
+  mkdir deployin
+  mkdir deployout
+  cd deployin
+  mkdir $2
+  cd $2
+  wget ${4}${3}
+
+  unzip $3
+  rm -r $3
+
+  cd ../..
+
+  deployCmd="$deployerDir/target/deployer/bin/deployer --in deployin/ --props $deployProps --out deployout --baseDir $qs --ear $1"
+
+  #cp -r $1 $qs/${JBOSS_BASE_DIR}/standalone/deployments/
+  #touch $qs/${JBOSS_BASE_DIR}/standalone/deployments/$1.dodeploy
+  rm -r deployin
 
   cd $BASE_DIR
 
@@ -598,25 +626,27 @@ deploy() {
 }
 
 installEars() {
-  deploy $bedeworkName $bedeworkDownload $bedeworkRepoPath
+  deployProps=${bw_deployProps:-"${qs}/bedework/config/wildfly.deploy.properties"}
 
-  deploy $calName $calDownload $calRepoPath
+  deploy $bedeworkPrefix $bedeworkName $bedeworkDownload $bedeworkRepoPath
 
-  deploy $xslName $xslDownload $xslRepoPath
+  deploy $bedeworkPrefix $bedeworkName $calDownload $calRepoPath
 
-  deploy $carddavName $carddavDownload $carddavRepoPath
+  deploy $xslPrefix $xslName $xslDownload $xslRepoPath
 
-  deploy $eventregName $eventregDownload $eventregRepoPath
+  deploy $carddavPrefix $carddavName $carddavDownload $carddavRepoPath
 
-  deploy $notifierName $notifierDownload $notifierRepoPath
+  deploy $eventregPrefix $eventregName $eventregDownload $eventregRepoPath
 
-  deploy $selfregName $selfregDownload $selfregRepoPath
+  deploy $notifierPrefix $notifierName $notifierDownload $notifierRepoPath
 
-  deploy $synchName $synchDownload $synchRepoPath
+  deploy $selfregPrefix $selfregName $selfregDownload $selfregRepoPath
 
-  deploy $tzName $tzDownload $tzRepoPath
+  deploy $synchPrefix $synchName $synchDownload $synchRepoPath
 
-  deploy $xmlName $xmlDownload $xmlRepoPath
+  deploy $tzPrefix $tzName $tzDownload $tzRepoPath
+
+  deploy $xmlPrefix $xmlName $xmlDownload $xmlRepoPath
 }
 
 # $1 - directory name for expansion
