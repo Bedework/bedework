@@ -580,7 +580,7 @@ installApacheds() {
 }
 
 installDeployer() {
-  deployerDir="$dirpath/deployer/"
+  deployerDir="$dirpath/$qs/deployer/"
 
   installApp $deployerName $deployerDownload $deployerRepoPath
 }
