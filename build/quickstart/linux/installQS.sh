@@ -578,9 +578,10 @@ installApacheds() {
 
 
 # $1 - deployable module name prefix
-# $1 - deployable full module name
-# $2 - download file name
-# $3 - repo url to download file name
+# $2 - deployable full module name
+# $3 - download file name
+# $4 - repo url to download file name
+# $5 - --war or --ear (--ear is default)
 deploy() {
   echo "---------------------------------------------------------------"
   echo "Deploy $1"
@@ -618,7 +619,7 @@ deploy() {
 
   cd ../..
 
-  deployCmd="$deployerDir/target/deployer/bin/deployer --in deployin/ --props $deployProps --out deployout --baseDir $qs --ear $1"
+  deployCmd="$deployerDir/target/deployer/bin/deployer --in deployin/ --props $deployProps --out deployout --baseDir $qs ${5:-"--ear"} $1"
 
   #cp -r $1 $qs/${JBOSS_BASE_DIR}/standalone/deployments/
   #touch $qs/${JBOSS_BASE_DIR}/standalone/deployments/$1.dodeploy
@@ -638,9 +639,9 @@ installEars() {
 
   deploy $bedeworkPrefix $bedeworkName $bedeworkDownload $bedeworkRepoPath
 
-  deploy $bedeworkPrefix $bedeworkName $calDownload $calRepoPath
+  deploy $calPrefix $calName $calDownload $calRepoPath
 
-  deploy $xslPrefix $xslName $xslDownload $xslRepoPath
+  deploy $xslPrefix $xslName $xslDownload $xslRepoPath --war
 
   deploy $carddavPrefix $carddavName $carddavDownload $carddavRepoPath
 
