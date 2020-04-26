@@ -13,7 +13,6 @@ if [ -f "$bwOptions" ]; then
   . "$bwOptions"
 fi
 
-deployerDir="$HOME/deployer/"
 mvnProfile=${bw_mvnProfile:-"bedework-3"}
 
 esDockerPull="docker pull docker.elastic.co/elasticsearch/elasticsearch:7.2.0"
@@ -30,7 +29,7 @@ bwUtilSecurityVersion="4.1.0"
 bwUtilTzVersion="4.1.0"
 bwUtilIndexVersion="4.1.0"
 bwUtil2Version="4.0.6"
-bwUtilDeployVersion="4.0.26"
+bwUtilDeployVersion="4.0.27"
 bwUtilHibernateVersion="4.0.23"
 bwAccessVersion="4.0.8"
 bwWebdavVersion="4.0.9"
@@ -52,6 +51,10 @@ bwCalendarXslVersion="3.13.2"
 
 # -------------------Ear locations -----------------------------
 mvnrepo="https://repo1.maven.org/maven2/org/bedework/"
+
+deployerName="deployer"
+deployerDownload="bw-util-deployment-$bwCliVersion-bin.zip"
+deployerRepoPath="${mvnrepo}bw-util-deployment/$bwCliVersion/"
 
 # Deployed names
 bedeworkPrefix="bedework"
@@ -576,6 +579,11 @@ installApacheds() {
   markDone $installApacheds
 }
 
+installDeployer() {
+  deployerDir="$dirpath/deployer/"
+
+  installApp $deployerName $deployerDownload $deployerRepoPath
+}
 
 # $1 - deployable module name prefix
 # $2 - deployable full module name
@@ -1144,6 +1152,7 @@ installHawtio
 if [ "$withSources" == "yes" ] ; then
   installSources
 else
+  installDeployer
   installEars
   installApps
 fi
