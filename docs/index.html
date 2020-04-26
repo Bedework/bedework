@@ -92,9 +92,10 @@
 <li><a href="#_elasticsearch">4.2.3. ElasticSearch</a></li>
 <li><a href="#_maven">4.2.4. Maven</a></li>
 <li><a href="#default-maven-profiles">4.2.5. Default Maven Profiles</a></li>
-<li><a href="#_security">4.2.6. Security</a></li>
-<li><a href="#_building">4.2.7. Building</a></li>
-<li><a href="#_deploying">4.2.8. Deploying</a></li>
+<li><a href="#_settings_for_build_and_install">4.2.6. Settings for build and install</a></li>
+<li><a href="#_security">4.2.7. Security</a></li>
+<li><a href="#_building">4.2.8. Building</a></li>
+<li><a href="#_deploying">4.2.9. Deploying</a></li>
 </ul>
 </li>
 <li><a href="#deploying-servers">4.3. Deploying servers</a></li>
@@ -343,7 +344,24 @@
 <h3 id="release-notes">1.2. Release Notes</h3>
 <div class="sect3">
 <h4 id="_dev">1.2.1. Dev:</h4>
-
+<div class="paragraph">
+<p>A significant bug discovered soon after release of 3.13.2:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Indexing:
+Referenced entities - e.g. locations, were not getting restored
+  in some cases - see <a href="https://github.com/Bedework/bw-calendar-engine/commit/58df20469660d4fe4f2fcef15992147979e3717c#diff-4fb4cfb2524a3a8ea92fc90a4fc31b60" class="bare">https://github.com/Bedework/bw-calendar-engine/commit/58df20469660d4fe4f2fcef15992147979e3717c#diff-4fb4cfb2524a3a8ea92fc90a4fc31b60</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>New quickstart deployment method. Opting for no sources in the install script will now mean that the required components are downloaded directly from maven central. Currently git is required for part of the install but maven will not be required in this case.</p>
+</div>
+<div class="paragraph">
+<p>The intent is to have a further script which will check for the availability of later versions.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_release_3_13_2">1.2.2. Release 3.13.2:</h4>
@@ -2039,7 +2057,15 @@ and comedy is tagged with the category <strong>comedy</strong> and performances 
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Install maven.</p>
+<p>Make sure that apt is up to date</p>
+<div class="literalblock">
+<div class="content">
+<pre>sudo apt-get update</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Install maven if you want to do builds.</p>
 <div class="literalblock">
 <div class="content">
 <pre>sudo apt install maven</pre>
@@ -2058,8 +2084,7 @@ and comedy is tagged with the category <strong>comedy</strong> and performances 
 <p>Ensure java 11 jdk installed</p>
 <div class="literalblock">
 <div class="content">
-<pre>sudo apt-get update
-sudo apt-get install openjdk-11-jdk-headless
+<pre>sudo apt-get install openjdk-11-jdk-headless
 sudo update-alternatives --config java</pre>
 </div>
 </div>
@@ -2068,15 +2093,9 @@ sudo update-alternatives --config java</pre>
 </div>
 </li>
 <li>
-<p>Install the quickstart</p>
+<p>Set up maven</p>
 <div class="paragraph">
-<p>We create a directory in which to install bedework, download an install script and execute the script.</p>
-</div>
-<div class="paragraph">
-<p>There are options to install elasticsearch as a docker image but we&#8217;ll provide elasticsearch instructions later.</p>
-</div>
-<div class="paragraph">
-<p>First set up the maven profile which must be named "bedework-3"</p>
+<p>If you are doing builds set up the maven profile which must be named "bedework-3"</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -2085,7 +2104,9 @@ emacs ~/.m2/settings.xml</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>and paste in a modified form of the following (change the paths)</p>
+<p>and paste in a modified form of the following (change the paths
+"/home/mike/bw-3.13.2/" to correspond to the directory you&#8217;re about
+to create)</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -2113,6 +2134,35 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
   &lt;/profiles&gt;
 &lt;/settings&gt;</pre>
 </div>
+</div>
+</li>
+<li>
+<p>Provide a bw settings file.</p>
+<div class="paragraph">
+<p>If necessary create a <strong>.bw</strong> file in your home directory and add properties to it. Currently the only proeprties allow setting the profile for the <strong>.bw</strong> script used to build and the location of the deployment proeprties used to configure your deployed modules.</p>
+</div>
+<div class="paragraph">
+<p>An example file is</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>#
+# Defaults for bw script
+#
+echo "Setting defaults from .bw"
+bw_mvnProfile="-P bedework_dev"
+
+bw_deployProps="/home/myhome/bwstuff/myprops.properties"</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Install the quickstart</p>
+<div class="paragraph">
+<p>We create a directory in which to install bedework, download an install script and execute the script.</p>
+</div>
+<div class="paragraph">
+<p>There are options to install elasticsearch as a docker image but we&#8217;ll provide elasticsearch instructions later.</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -2147,11 +2197,29 @@ You&#8217;ll need to start the system before reindexing.</p>
 ./startjboss</pre>
 </div>
 </div>
+<div class="paragraph">
+<p>If you need to reindex there will certainly be some errors at startup.</p>
+</div>
+</li>
+<li>
+<p>Reindex</p>
+<div class="paragraph">
+<p>Use the installed script to run the reindexer</p>
+</div>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>If you need to reindex there will certainly be some errors at startup.</p>
+<div class="literalblock">
+<div class="content">
+<pre>cd &lt;into quickstart&gt;
+./bw-cli/target/client/bin/client -id hawtadmin -pw mypw
+help
+listidx
+rebuildidx
+listidx
+makeidxprod all
+q</pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -2205,7 +2273,10 @@ This requires git 2.x or greater. The clones use a tag rather than branch and th
 <div class="sect3">
 <h4 id="_which_version">4.2.1. Which version</h4>
 <div class="paragraph">
-<p>The script will ask you if you want the development or latest version.</p>
+<p>The script will ask you if you want the latest, developmentor pre-release version.</p>
+</div>
+<div class="paragraph">
+<p>You probably want latest. The dev version is obviously for development adn can be very unstable. The pre-release version is ther only for testing of the install script.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2229,11 +2300,17 @@ This requires git 2.x or greater. The clones use a tag rather than branch and th
 <p>After the install is complete there will be 2 scripts startES.sh and stopES.sh which will start and stop the docker image.</p>
 </div>
 <div class="paragraph">
+<p>In reality - installing ES is relatively simple. It may be easier to install the appropriate service for your system. Downloads can be found at <a href="https://www.elastic.co/downloads/past-releases/elasticsearch-7-2-0" class="bare">https://www.elastic.co/downloads/past-releases/elasticsearch-7-2-0</a></p>
+</div>
+<div class="paragraph">
 <p>If you want to install your own copy and configure it there is an elasticsearch.yml configuration file in bedework/conf/bedework/elasticsearch. Use this to replace the config in the downloaded ES.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_maven">4.2.4. Maven</h4>
+<div class="paragraph">
+<p>Maven is required if you want to install the sources. If not you can skip this section.</p>
+</div>
 <div class="paragraph">
 <p>This is a maven project and as usual you need to set up your maven profile in ~/.m2/settings.xml. The script will display a possible settings.xml file with the paths filled in.</p>
 </div>
@@ -2290,11 +2367,25 @@ and try</p>
 <pre class="CodeRay highlight"><code>mvn -P bedework-3 help:active-profiles</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_settings_for_build_and_install">4.2.6. Settings for build and install</h4>
 <div class="paragraph">
-<p>To alleviate some of the issues of having multiple profiles for bedework
-builds the bw script now sources a .bw file in the home directory
-which can set some defaults. At the moment the only default is the
-profile. An example .bw file is:</p>
+<p>The bw and install scripts now source a .bw file in the home directory
+which can set some defaults.</p>
+</div>
+<div class="paragraph">
+<p>To alleviate some of the issues of having multiple maven profiles for bedework
+builds set the profile here with the <strong>bw-mvnProfile</strong> property. Note the setting needs to include the -P.</p>
+</div>
+<div class="paragraph">
+<p>When building with maven the profile provides the location of the deployment properties. For the quickstart this is located in the bedework module at <strong>bedework/config/wildfly.deploy.properties</strong>.</p>
+</div>
+<div class="paragraph">
+<p>When using the nobuild option you need to take a copy of that file and modify it according to the needs of your installation. Update the <strong>.bw</strong> file property <strong>bw_deployProps</strong> to define the location of the modified property file.</p>
+</div>
+<div class="paragraph">
+<p>An example .bw file is:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2302,21 +2393,20 @@ profile. An example .bw file is:</p>
 # Defaults for bw script
 #
 echo "Setting defaults from .bw"
-bw_mvnProfile="-P bedework_dev"</code></pre>
+bw_mvnProfile="-P bedework_dev"
+
+bw_deployProps="/home/myhome/bwstuff/myprops.properties"</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>Note the setting needs to include the -P.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_security">4.2.6. Security</h4>
+<h4 id="_security">4.2.7. Security</h4>
 <div class="paragraph">
 <p>During the install an id and password will be set up so that the install process can reindex the data. These will allow use of the cli and the hawtio console.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_building">4.2.7. Building</h4>
+<h4 id="_building">4.2.8. Building</h4>
 <div class="paragraph">
 <p>In many cases it is possible to simply cd in to the appropriate directory and do a mvn install with the bedework-3 profile. However there is a <strong>bw</strong> script which - while taking longer - does build all projects a module depends upon. This avoids the need to work out the dependency orderings of the independent projects. Thus</p>
 </div>
@@ -2330,7 +2420,7 @@ bw_mvnProfile="-P bedework_dev"</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_deploying">4.2.8. Deploying</h4>
+<h4 id="_deploying">4.2.9. Deploying</h4>
 <div class="paragraph">
 <p>As part of the bedework project there is a maven plugin which uses a properties file to handle post-build deployment issues. Essentially the ear or war as built acts as a template for the deployer.</p>
 </div>
