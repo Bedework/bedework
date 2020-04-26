@@ -600,6 +600,10 @@ deploy() {
 
   markStarted $1
 
+  # clean up - just in case
+  rm -rf deployin
+  rm -rf deployout
+
   # Create a directory to download the released ear - download and unzip
 
   mkdir deployin
