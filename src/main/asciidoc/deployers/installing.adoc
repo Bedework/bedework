@@ -1,6 +1,11 @@
 [[installing-bedwork]]
 === Installing bedework on Ubuntu
-. Install maven.
+. Make sure that apt is up to date
++
+.................
+sudo apt-get update
+.................
+. Install maven if you want to do builds.
 +
 .................
 sudo apt install maven
@@ -10,24 +15,17 @@ sudo apt install maven
 .................
 sudo apt install git
 .................
-
 . Ensure java 11 jdk installed
 +
 .................
-sudo apt-get update
 sudo apt-get install openjdk-11-jdk-headless
 sudo update-alternatives --config java
 .................
 +
 The last command should state there are no alternatives but if another has been installed pick the appropriate version.
-
-. Install the quickstart
+. Set up maven
 +
-We create a directory in which to install bedework, download an install script and execute the script.
-+
-There are options to install elasticsearch as a docker image but we'll provide elasticsearch instructions later.
-+
-First set up the maven profile which must be named "bedework-3"
+If you are doing builds set up the maven profile which must be named "bedework-3"
 +
 .................
 mkdir ~/.m2
@@ -63,6 +61,26 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
   </profiles>
 </settings>
 .................
+. Provide a bw settings file.
++
+If necessary create a *.bw* file in your home directory and add properties to it. Currently the only proeprties allow setting the profile for the *.bw* script used to build and the location of the deployment proeprties used to configure your deployed modules.
++
+An example file is
++
+.................
+#
+# Defaults for bw script
+#
+echo "Setting defaults from .bw"
+bw_mvnProfile="-P bedework_dev"
+
+bw_deployProps="/home/myhome/bwstuff/myprops.properties"
+.................
+. Install the quickstart
++
+We create a directory in which to install bedework, download an install script and execute the script.
++
+There are options to install elasticsearch as a docker image but we'll provide elasticsearch instructions later.
 +
 .................
 mkdir bw-3.13.2
@@ -89,5 +107,18 @@ cd <into quickstart>
 ./dirstart
 ./startjboss
 .................
-
++
 If you need to reindex there will certainly be some errors at startup.
+. Reindex
++
+Use the installed script to run the reindexer
+.................
+cd <into quickstart>
+./bw-cli/target/client/bin/client -id hawtadmin -pw mypw
+help
+listidx
+rebuildidx
+listidx
+makeidxprod all
+q
+.................

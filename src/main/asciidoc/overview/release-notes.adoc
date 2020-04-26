@@ -8,6 +8,10 @@ A significant bug discovered soon after release of 3.13.2:
         Referenced entities - e.g. locations, were not getting restored
           in some cases - see https://github.com/Bedework/bw-calendar-engine/commit/58df20469660d4fe4f2fcef15992147979e3717c#diff-4fb4cfb2524a3a8ea92fc90a4fc31b60
 
+New quickstart deployment method. Opting for no sources in the install script will now mean that the required components are downloaded directly from maven central. Currently git is required for part of the install but maven will not be required in this case.
+
+The intent is to have a further script which will check for the availability of later versions.
+
 ==== Release 3.13.2:
 Making a serious effort to get rid of ide warnings. Removing the trivia lets the important stuff stand out. Starting work on implementing new jscalendar and jscontact representations and the jmap protocol.
 
