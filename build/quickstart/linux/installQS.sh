@@ -53,8 +53,8 @@ bwCalendarXslVersion="3.13.2"
 mvnrepo="https://repo1.maven.org/maven2/org/bedework/"
 
 deployerName="deployer"
-deployerDownload="bw-util-deployment-$bwCliVersion-bin.zip"
-deployerRepoPath="${mvnrepo}bw-util-deployment/$bwCliVersion/"
+deployerDownload="bw-util-deployment-$bwUtilDeployVersion-bin.zip"
+deployerRepoPath="${mvnrepo}bw-util-deployment/$bwbwUtilDeployVersion/"
 
 # Deployed names
 bedeworkPrefix="bedework"
@@ -580,7 +580,7 @@ installApacheds() {
 }
 
 installDeployer() {
-  deployerDir="$dirpath/$qs/deployer/"
+  deployerDir="$qs/deployer/"
 
   installApp $deployerName $deployerDownload $deployerRepoPath
 }
