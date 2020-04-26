@@ -637,7 +637,9 @@ deploy() {
 installEars() {
   deployProps=${bw_deployProps:-"${qs}/bedework/config/wildfly.deploy.properties"}
 
-  deploy $bedeworkPrefix $bedeworkName $bedeworkDownload $bedeworkRepoPath
+  deploy $xmlPrefix $xmlName $xmlDownload $xmlRepoPath
+
+  deploy $bedeworkPrefix $bedeworkName $bedeworkDownload $bedeworkRepoPath --war
 
   deploy $calPrefix $calName $calDownload $calRepoPath
 
@@ -654,8 +656,6 @@ installEars() {
   deploy $synchPrefix $synchName $synchDownload $synchRepoPath
 
   deploy $tzPrefix $tzName $tzDownload $tzRepoPath
-
-  deploy $xmlPrefix $xmlName $xmlDownload $xmlRepoPath
 }
 
 # $1 - directory name for expansion
