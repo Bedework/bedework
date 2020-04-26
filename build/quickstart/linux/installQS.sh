@@ -54,7 +54,7 @@ mvnrepo="https://repo1.maven.org/maven2/org/bedework/"
 
 deployerName="deployer"
 deployerDownload="bw-util-deployment-$bwUtilDeployVersion-bin.zip"
-deployerRepoPath="${mvnrepo}bw-util-deployment/$bwbwUtilDeployVersion/"
+deployerRepoPath="${mvnrepo}bw-util-deployment/$bwUtilDeployVersion/"
 
 # Deployed names
 bedeworkPrefix="bedework"
