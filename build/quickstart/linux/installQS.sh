@@ -618,7 +618,11 @@ deploy() {
 
   #cp -r $1 $qs/${JBOSS_BASE_DIR}/standalone/deployments/
   #touch $qs/${JBOSS_BASE_DIR}/standalone/deployments/$1.dodeploy
+
+  $deployCmd
+
   rm -r deployin
+  rm -r deployout
 
   cd $BASE_DIR
 
