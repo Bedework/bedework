@@ -5,8 +5,8 @@
 
 [source]
 ----
-cd wildfly
-./bin/add-user.sh
+cd <quickstart-dir>
+./wildfly/bin/add-user.sh  -a -dc wildfly/standalone/configuration
     
    What type of user do you wish to add?
     a) Management User (mgmt-users.properties)
