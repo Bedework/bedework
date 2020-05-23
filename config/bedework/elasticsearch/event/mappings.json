@@ -577,6 +577,24 @@
             }
           }
         },
+        "attach": {
+          "type": "object",
+          "properties": {
+            "fmtType": {
+              "type": "keyword"
+            },
+            "valueType": {
+              "type": "keyword"
+            },
+            "encoding": {
+              "type": "keyword"
+            },
+            "value": {
+              "type": "text",
+              "index": "false"
+            }
+          }
+        },
         "contacts": {
           "type": "object",
           "properties": {
