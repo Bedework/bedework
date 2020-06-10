@@ -1,0 +1,26 @@
+=== Adding a topical area.
+
+==== First create a category for the topical area.
+Or categories if necessary. The normal case is to filter and categorise with the same category.
+
+Go to system/manage-categories and add any required new category or categories.
+
+==== Create a system alias.
+Go to system/Manage calendars & folders and determine where in the hierarchy you want the topical area to appear.
+
+Create a new subscription, set the system name, display name and
+description and set the category or categories for auto-tagging and
+filtering and select "Subscription".
+
+Set the url to bwcal:///public/cals/MainCal - ensure all other fields
+are blank and add the alias.
+
+Using system aliases in this way ensures consistency in categorisation.
+
+==== Create a subscription to the new alias.
+If the new alias is in a folder it may already by available.
+
+Otherwise switch to the "Calendar Suite" tab.
+Select "Manage Subscriptions" and open up the top level folder (named the same as the suite)...
+
+

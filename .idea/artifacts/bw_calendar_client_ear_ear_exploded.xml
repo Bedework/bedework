@@ -88,6 +88,9 @@
         <element id="archive" name="bw-calendar-engine-tools-3.13.3-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-engine-tools" />
         </element>
+        <element id="archive" name="bw-jsforj-1.0.1-SNAPSHOT.jar">
+          <element id="module-output" name="bw-jsforj" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-access:4.0.8" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-args:4.1.0" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-caching:4.0.27" />
@@ -104,7 +107,9 @@
         <element id="library" level="project" name="Maven: org.bedework:bw-util-security:4.1.0" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet:4.1.0" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet-filters:4.1.0" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-tz:4.1.0" />
+        <element id="archive" name="bw-util-tz-4.1.1-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util-tz" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-util-xml:4.0.27" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util2-calendar:4.0.6" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util2-vcard:4.0.6" />
@@ -114,8 +119,12 @@
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-synchws:4.0.10" />
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-tzsvr:4.0.10" />
         <element id="library" level="project" name="Maven: org.bedework:bw-webdav:4.0.9" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-caldav-server:4.0.9" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-caldav-util:4.0.9" />
+        <element id="archive" name="bw-caldav-server-4.0.10-SNAPSHOT.jar">
+          <element id="module-output" name="bw-caldav-server" />
+        </element>
+        <element id="archive" name="bw-caldav-util-4.0.10-SNAPSHOT.jar">
+          <element id="module-output" name="bw-caldav-util" />
+        </element>
         <element id="library" level="project" name="Maven: com.google.code.gson:gson:1.5" />
         <element id="library" level="project" name="Maven: org.imgscalr:imgscalr-lib:4.2" />
         <element id="library" level="project" name="Maven: struts:struts:1.2.9" />

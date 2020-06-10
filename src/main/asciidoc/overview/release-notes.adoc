@@ -2,15 +2,56 @@
 === Release Notes
 
 ==== Dev:
-A significant bug discovered soon after release of 3.13.2:
+**Admonition Block:**
+[NOTE]
+====
+A significant - but long standing - bug was discovered. Override attachments were not being stored as the table and schema entries were missing. Updating will require adding the table to the database (or recreating the data from the XML dump).
+
+Additionally - ensure the elasticsearch schema is up to date
+(wildfly/standalone/configuration/bedework/elasticsearch) and reindex
+after the system is updated.
+
+See below for details.
+====
+
+A further significant bug discovered soon after release of 3.13.2:
 
     * Indexing:
         Referenced entities - e.g. locations, were not getting restored
           in some cases - see https://github.com/Bedework/bw-calendar-engine/commit/58df20469660d4fe4f2fcef15992147979e3717c#diff-4fb4cfb2524a3a8ea92fc90a4fc31b60
 
-New quickstart deployment method. Opting for no sources in the install script will now mean that the required components are downloaded directly from maven central. Currently git is required for part of the install but maven will not be required in this case.
+**To fix attachements in postgres.**
 
-The intent is to have a further script which will check for the availability of later versions.
+ * *BACK UP THE DATABASE*
+ * log in to psql
+  * select the calendar database and execute the following commands. This may (should) be done ahead of time.
+
+----
+CREATE TABLE bw_eventann_attachments (
+    eventid integer NOT NULL,
+    attachid integer NOT NULL
+);
+
+-- Change bedework to whatever you have as owner for your db
+ALTER TABLE bw_eventann_attachments OWNER TO bedework;
+
+ALTER TABLE ONLY bw_eventann_attachments
+    ADD CONSTRAINT bw_eventann_attachments_pkey PRIMARY KEY (eventid, attachid);
+
+ALTER TABLE ONLY bw_eventann_attachments
+    ADD CONSTRAINT bw_eann_attach_fk FOREIGN KEY (attachid) REFERENCES bw_attachments(bwid);
+
+ALTER TABLE ONLY bw_eventann_attachments
+    ADD CONSTRAINT bw_eannattach_eid_fk FOREIGN KEY (eventid) REFERENCES bw_event_annotations(eventid);
+----
+
+Ensure all configurations are up to date, especially the elasticsearch schema then reindex the data.
+
+*Further bug with recurrences.* In caldav if an override was deleted from the event it was not deleted from the system.
+
+*New quickstart deployment method.* Opting for no sources in the install script will now mean that the required components are downloaded directly from maven central. Currently git is required for part of the install but maven will not be required in this case.
+
+The intent is to have another script which will check for the availability of later versions.
 
 ==== Release 3.13.2:
 Making a serious effort to get rid of ide warnings. Removing the trivia lets the important stuff stand out. Starting work on implementing new jscalendar and jscontact representations and the jmap protocol.
@@ -52,7 +93,7 @@ Changes to log file processor/analyzer. Can produce summary of addresses per ip-
         ** Fix cleanup of description and summary strings. Was inserting escaped newlines.
 
 ==== Release 3.13.1:
-There was long standing a bug in category handling for updates. An attempt
+There was a long standing bug in category handling for updates. An attempt
 was made to preserve default categories for calsuites when an event is
 updated. For example if an event is suggested and accepted the
 accepting calsuite has its default category added to the event.

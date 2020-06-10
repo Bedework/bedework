@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /bin/sh
 
 # Create a bedework quickstart
 

@@ -765,7 +765,7 @@ do
       shift
       ;;
   deployDotWellKnown)
-    deployDotWellKnown="yes"
+    dotWellKnown="yes"
       pkgdefault=
       shift
       ;;
@@ -803,6 +803,7 @@ do
       bwcalclient="yes"
 
       access="yes"
+      jsforj="yes"
       bwcaleng="yes"
       bwxml="yes"
       caldav="yes"
@@ -824,6 +825,7 @@ do
       bwcaleng="yes"
 
       access="yes"
+      jsforj="yes"
       bwxml="yes"
       caldav="yes"
       bwcliutil="yes"
@@ -1175,6 +1177,7 @@ if [ "$pkgdefault" = "yes" ] ; then
   bwcalclient="yes"
 
   access="yes"
+  jsforj="yes"
   bwcaleng="yes"
   bwxml="yes"
   bwcliutil="yes"
