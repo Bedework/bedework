@@ -53,11 +53,17 @@ Ensure all configurations are up to date, especially the elasticsearch schema th
 
 *Category bug fix* For personal events, multiple new categories in an event were not getting indexed correctly - only the last one. They were created correctly in the database - a reindex will fix any missing categories.
 
-This dos not affect public events.
+This does not affect public events.
 
 *New quickstart deployment method.* Opting for no sources in the install script will now mean that the required components are downloaded directly from maven central. Currently git is required for part of the install but maven will not be required in this case.
 
 The intent is to have another script which will check for the availability of later versions.
+
+*Make some config options constants* A number of path elements - e.g. the name of the user root collection - are in basic system properties - then flagged with "do not change".
+
+These are being changed to constant strings. Changing the internal path element name is likely to be a problem and having to locate the current config in some places is also a problem.
+
+This does not prevent sites setting the display name to something else.
 
 ==== Release 3.13.2:
 Making a serious effort to get rid of ide warnings. Removing the trivia lets the important stuff stand out. Starting work on implementing new jscalendar and jscontact representations and the jmap protocol.
