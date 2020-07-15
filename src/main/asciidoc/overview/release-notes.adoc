@@ -59,11 +59,13 @@ This does not affect public events.
 
 The intent is to have another script which will check for the availability of later versions.
 
-*Make some config options constants* A number of path elements - e.g. the name of the user root collection - are in basic system properties - then flagged with "do not change".
+*Make basic config options constants* A number of path elements - e.g. the name of the user root collection - are in basic system properties - then flagged with "do not change".
 
 These are being changed to constant strings. Changing the internal path element name is likely to be a problem and having to locate the current config in some places is also a problem.
 
 This does not prevent sites setting the display name to something else.
+
+The properties in question are all those that were in basicSystem.xml, which used to populate BasicSystemProperties.
 
 ==== Release 3.13.2:
 Making a serious effort to get rid of ide warnings. Removing the trivia lets the important stuff stand out. Starting work on implementing new jscalendar and jscontact representations and the jmap protocol.
