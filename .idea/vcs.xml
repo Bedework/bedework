@@ -22,6 +22,7 @@
     <mapping directory="$PROJECT_DIR$/../bw-notifier" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-self-registration" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-synch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-sometime" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-timezone-server" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-conf" vcs="Git" />

@@ -7,6 +7,7 @@
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-notifier/bw-note-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-sometime/bw-sched-assist-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-synch/bw-synch-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-xml/bw-xml-ear" />
@@ -75,6 +76,7 @@
         <option value="$PROJECT_DIR$/../bw-util-conf/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-dav-tester/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-logs/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-sometime/pom.xml" />
       </list>
     </option>
   </component>

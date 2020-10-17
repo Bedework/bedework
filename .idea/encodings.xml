@@ -154,6 +154,20 @@
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/bw-sometime-database/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/bw-sometime-database/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-mock/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-portlet/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-portlet/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi-caldav-integrationtest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi-caldav-integrationtest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi-caldav/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi-relationships/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-war/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-common/src/main/java" charset="UTF-8" />
