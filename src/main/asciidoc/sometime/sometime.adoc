@@ -1,0 +1,5 @@
+== Bedework Sometime
+
+This is a fork of the Apereo (formerly jasig) scheduling assistant project. It was developed at the University of Wisconsin and provides a way for students to book time with faculty.
+
+See the bw-sometime documentation at ...

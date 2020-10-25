@@ -116,6 +116,7 @@
         <module name="bw-xml-war" />
         <module name="bw-xml-tzsvr" />
         <module name="bw-event-registration-war" />
+        <module name="bw-sometime-doc" />
         <module name="common" />
         <module name="sched-assist-mock" />
         <module name="bw-dotwell-known" />
@@ -272,6 +273,7 @@
       <module name="bw-selfregistration-web" target="1.8" />
       <module name="bw-sometime" target="11" />
       <module name="bw-sometime-database" target="11" />
+      <module name="bw-sometime-doc" target="11" />
       <module name="bw-synch" target="11" />
       <module name="bw-synch-common" target="11" />
       <module name="bw-synch-ear" target="11" />

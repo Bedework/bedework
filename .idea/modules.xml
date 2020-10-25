@@ -88,6 +88,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-web/bw-self-registration-web.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-web/bw-self-registration-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-sometime/bw-sometime.iml" filepath="$PROJECT_DIR$/../bw-sometime/bw-sometime.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-sometime/bw-sometime-database/bw-sometime-database.iml" filepath="$PROJECT_DIR$/../bw-sometime/bw-sometime-database/bw-sometime-database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-sometime/bw-sometime-doc/bw-sometime-doc.iml" filepath="$PROJECT_DIR$/../bw-sometime/bw-sometime-doc/bw-sometime-doc.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch-common/bw-synch-common.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch-common/bw-synch-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch-ear/bw-synch-ear.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch-ear/bw-synch-ear.iml" />
