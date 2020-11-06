@@ -67,6 +67,18 @@ This does not prevent sites setting the display name to something else.
 
 The properties in question are all those that were in basicSystem.xml, which used to populate BasicSystemProperties.
 
+==== Release 3.13.3:
+
+===== Bug Fixes
+
+* One
++
+Some text for one
+
+* and another
++
+Some text for another
+
 ==== Release 3.13.2:
 Making a serious effort to get rid of ide warnings. Removing the trivia lets the important stuff stand out. Starting work on implementing new jscalendar and jscontact representations and the jmap protocol.
 
