@@ -17,11 +17,6 @@
     <extension module="org.wildfly.extension.security.manager"/>
     <extension module="org.wildfly.extension.undertow"/>
   </extensions>
-  <system-properties>
-    <property name="hawtio.authenticationEnabled" value="true"/>
-    <property name="hawtio.realm" value="jboss-web-policy"/>
-    <property name="hawtio.role" value="admin"/>
-  </system-properties>
   <management>
     <identity security-domain="ManagementDomain"/>
     <security-realms>
@@ -335,6 +330,14 @@
             <password>sa</password>
           </security>
         </datasource>
+        <datasource jndi-name="java:/SometimeDS" pool-name="SometimeDS" enabled="true" use-java-context="true" use-ccm="false">
+          <connection-url>jdbc:h2:tcp://localhost/SometimeDb</connection-url>
+          <driver>h2</driver>
+          <security>
+            <user-name>sa</user-name>
+            <password>sa</password>
+          </security>
+        </datasource>
         <datasource jndi-name="java:/SynchDS" pool-name="SynchDS" enabled="true" use-java-context="true" use-ccm="false">
           <connection-url>jdbc:h2:tcp://localhost/SynchDb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE</connection-url>
           <driver>h2</driver>
@@ -396,8 +399,8 @@
           <realm name="ManagementRealm" role-decoder="groups-to-roles"/>
           <realm name="local" role-mapper="super-user-mapper"/>
         </security-domain>
-        <security-domain name="bedework" default-realm="bedeworkRealm" permission-mapper="default-permission-mapper">
-          <realm name="bedeworkRealm" role-decoder="groups-to-roles"/>
+        <security-domain name="bedeworkSD" default-realm="bedeworkRealm" permission-mapper="default-permission-mapper">
+          <realm name="bedeworkRealm" role-decoder="from-roles-attribute"/>
         </security-domain>
       </security-domains>
       <security-realms>
@@ -415,6 +418,7 @@
             <attribute-mapping>
               <attribute from="uid" to="Roles" filter="(uniqueMember={1})" filter-base-dn="ou=groups,dc=bedework,dc=org"/>
             </attribute-mapping>
+            <user-password-mapper from="userPassword"/>
           </identity-mapping>
         </ldap-realm>
       </security-realms>
@@ -431,6 +435,7 @@
         </simple-permission-mapper>
         <constant-realm-mapper name="local" realm-name="local"/>
         <simple-role-decoder name="groups-to-roles" attribute="groups"/>
+        <simple-role-decoder name="from-roles-attribute" attribute="Roles"/>
         <constant-role-mapper name="super-user-mapper">
           <role name="SuperUser"/>
         </constant-role-mapper>
@@ -449,6 +454,14 @@
             <mechanism mechanism-name="DIGEST">
               <mechanism-realm realm-name="ManagementRealm"/>
             </mechanism>
+          </mechanism-configuration>
+        </http-authentication-factory>
+        <http-authentication-factory name="bedeworkAuth" security-domain="bedeworkSD" http-server-mechanism-factory="global">
+          <mechanism-configuration>
+            <mechanism mechanism-name="BASIC">
+              <mechanism-realm realm-name="bedework"/>
+            </mechanism>
+            <mechanism mechanism-name="FORM"/>
           </mechanism-configuration>
         </http-authentication-factory>
         <provider-http-server-mechanism-factory name="global"/>
@@ -518,8 +531,8 @@
     </subsystem>
     <subsystem xmlns="urn:jboss:domain:messaging-activemq:11.0">
       <server name="default">
+                <security elytron-domain="bedeworkSD"/>
         <journal type="NIO"/>
-        <security elytron-domain="bedework" />
         <address-setting name="#" dead-letter-address="jms.queue.DLQ" expiry-address="jms.queue.ExpiryQueue" max-size-bytes="10485760" page-size-bytes="2097152" message-counter-history-day-limit="10"/>
         <in-vm-connector name="in-vm" server-id="0"/>
         <in-vm-acceptor name="in-vm" server-id="0"/>
@@ -535,7 +548,7 @@
         <jms-queue name="bedework.sysevents.eventregAction" entries="activemq/queue/eventregAction bwqueues/eventregAction"/>
         <jms-queue name="bedework.sysevents.eventregActionDelay" entries="activemq/queue/eventregActionDelay bwqueues/eventregActionDelay"/>
         <connection-factory name="InVmConnectionFactory" entries="java:/ConnectionFactory" connectors="in-vm"/>
-        <connection-factory name="BedeworkConnectionFactory" entries="java:/BedeworkConnectionFactory java:/jms/BedeworkConnectionFactory" connectors="in-vm"/>
+                <connection-factory name="BedeworkConnectionFactory" entries="java:/BedeworkConnectionFactory java:/jms/BedeworkConnectionFactory" connectors="in-vm" confirmation-window-size="10000000"/>
         <pooled-connection-factory name="activemq-ra" entries="java:/JmsXA java:jboss/DefaultJMSConnectionFactory" connectors="in-vm" transaction="xa"/>
       </server>
     </subsystem>
@@ -587,6 +600,7 @@
       </filters>
       <application-security-domains>
         <application-security-domain name="other" security-domain="ApplicationDomain"/>
+                <application-security-domain name="bedework" http-authentication-factory="bedeworkAuth"/>
       </application-security-domains>
     </subsystem>
   </profile>
@@ -600,10 +614,10 @@
   </interfaces>
   <socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:0}">
     <socket-binding name="http" port="${jboss.http.port:8080}"/>
-    <socket-binding name="stunnel" port="8081"/>
     <socket-binding name="https" port="${jboss.https.port:8443}"/>
     <socket-binding name="management-http" interface="management" port="${jboss.management.http.port:9990}"/>
     <socket-binding name="management-https" interface="management" port="${jboss.management.https.port:9993}"/>
+        <socket-binding name="stunnel" port="8081"/>
     <socket-binding name="txn-recovery-environment" port="4712"/>
     <socket-binding name="txn-status-manager" port="4713"/>
   </socket-binding-group>
