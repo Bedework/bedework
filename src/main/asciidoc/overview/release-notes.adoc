@@ -47,6 +47,8 @@ ALTER TABLE ONLY bw_eventann_attachments
 
 Ensure all configurations are up to date, especially the elasticsearch schema then reindex the data.
 
+===== Other Bug Fixes
+
 *Further bug with recurrences.* In caldav if an override was deleted from the event it was not deleted from the system.
 
 *Scheduling bug fix* Trying to invite a new bedework user to a meeting could result in an NPE
@@ -54,6 +56,14 @@ Ensure all configurations are up to date, especially the elasticsearch schema th
 *Category bug fix* For personal events, multiple new categories in an event were not getting indexed correctly - only the last one. They were created correctly in the database - a reindex will fix any missing categories.
 
 This does not affect public events.
+
+*Core* RDATE only recurring events were not being inxexed correctly - instances didn't show up.
+
+*WebClient* Filter out Inbox from result
+*WebClient* Events were being moved incorrectly (from Inbox) causing indexing issues.
+*WebClient* Fixed the timeview - events near the enf=d of the day appeared in the next days cell.
+
+===== Updates
 
 *New quickstart deployment method.* Opting for no sources in the install script will now mean that the required components are downloaded directly from maven central. Currently git is required for part of the install but maven will not be required in this case.
 
@@ -67,17 +77,11 @@ This does not prevent sites setting the display name to something else.
 
 The properties in question are all those that were in basicSystem.xml, which used to populate BasicSystemProperties.
 
-==== Release 3.13.3:
+*Updated to wildfly 21* appears to have better memory handling.
 
-===== Bug Fixes
+*Updated ical4j* brought it close to the Ben Fortuna version.
 
-* One
-+
-Some text for one
-
-* and another
-+
-Some text for another
+*Many library version updates*
 
 ==== Release 3.13.2:
 Making a serious effort to get rid of ide warnings. Removing the trivia lets the important stuff stand out. Starting work on implementing new jscalendar and jscontact representations and the jmap protocol.
