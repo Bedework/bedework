@@ -35,7 +35,9 @@
         <element id="library" level="project" name="Maven: org.bedework:bw-util-servlet:4.1.0" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-tz:4.1.0" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-xml:4.0.27" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util2-calendar:4.0.6" />
+        <element id="archive" name="bw-util2-calendar-4.0.7-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util2-calendar" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-xml-icalendar:4.0.10" />
         <element id="library" level="project" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.2" />
         <element id="library" level="project" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2" />
@@ -46,7 +48,9 @@
         <element id="library" level="project" name="Maven: jakarta.activation:jakarta.activation-api:1.2.1" />
         <element id="library" level="project" name="Maven: com.sun.activation:jakarta.activation:1.2.1" />
         <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.3.0" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util2-vcard:4.0.6" />
+        <element id="archive" name="bw-util2-vcard-4.0.7-SNAPSHOT.jar">
+          <element id="module-output" name="bw-util2-vcard" />
+        </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-webdav:4.0.9" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-logging:4.0.5" />
         <element id="library" level="project" name="Maven: javax.xml.ws:jaxws-api:2.3.1" />
