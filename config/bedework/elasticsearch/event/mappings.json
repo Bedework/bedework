@@ -116,6 +116,14 @@
             }
           }
         },
+        "concepts": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "keyword"
+            }
+          }
+        },
         "summary": {
           "type": "object",
           "properties": {
