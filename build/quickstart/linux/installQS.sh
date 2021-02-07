@@ -16,8 +16,10 @@ fi
 mvnProfile=${bw_mvnProfile:-"bedework-3"}
 
 esDockerPull="docker pull docker.elastic.co/elasticsearch/elasticsearch:7.2.0"
-JBOSS_VERSION="21.0.0.Final"
+JBOSS_VERSION="22.0.0.Final"
 galleonVersion="4.2.5.Final"
+galleonFeaturePack="wildfly:22.0#$JBOSS_VERSION"
+galleonLayers="datasources-web-server,jms-activemq"
 
 # -------------------Module versions -----------------------------
 bwXmlVersion="4.0.10"
@@ -335,7 +337,7 @@ installWildFly() {
   unzip galleon-$galleonVersion.zip
   rm galleon-$galleonVersion.zip
 
-  ./galleon-$galleonVersion/bin/galleon.sh install wildfly:21.0#$JBOSS_VERSION --dir=$JBOSS_BASE_DIR --layers=datasources-web-server,jms-activemq
+  ./galleon-$galleonVersion/bin/galleon.sh install $galleonFeaturePack --dir=$JBOSS_BASE_DIR --layers=galleonLayers
 
   if [ ! -d "$qs/$TMP_DIR" ]; then
     mkdir -p "$qs"/$TMP_DIR
@@ -798,7 +800,7 @@ installSources() {
 
   # Clone the repos
 
-  if [ "$version" == "dev" ] ; then
+  if [ "$version" = "dev" ] ; then
     # Bedework below
     cloneRepo bw-access
     cloneRepo bw-caldav
@@ -1121,7 +1123,7 @@ cd $qs
 
 qs=`pwd`
 
-if [ "$withSources" == "yes" ]; then
+if [ "$withSources" = "yes" ]; then
   echo
   echo "Either merge these settings (from profile.txt) into your ~/.m2/settings.xml file"
   echo "or create that file with the content"
@@ -1149,7 +1151,7 @@ installDrivers
 
 installHawtio
 
-if [ "$withSources" == "yes" ] ; then
+if [ "$withSources" = "yes" ] ; then
   installSources
 else
   installDeployer
@@ -1162,7 +1164,7 @@ installData
 installApacheds
 
 cd $qs
-if [ "$withSources" == "yes" ] ; then
+if [ "$withSources" = "yes" ] ; then
   buildModules
 fi
 
