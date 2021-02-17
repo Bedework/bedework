@@ -1,7 +1,7 @@
 [[release-notes]]
 === Release Notes
 
-==== Dev:
+==== Dev (3.14-SNAPSHOT):
 
 [NOTE]
 ====
@@ -80,6 +80,8 @@ The properties in question are all those that were in basicSystem.xml, which use
 *Updated to wildfly 21* appears to have better memory handling.
 
 *Updated ical4j* brought it close to the Ben Fortuna version.
+
+*JsCalendar* largely supported.
 
 *Many library version updates*
 

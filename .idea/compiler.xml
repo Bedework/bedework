@@ -26,7 +26,6 @@
         <module name="bw-self-registration-common" />
         <module name="bw-util2-vcard" />
         <module name="bw-calsockets-common" />
-        <module name="bw-util-maven-deploy (1)" />
         <module name="bw-timezone-server-war" />
         <module name="bw-xml-calws-soap-strict" />
         <module name="bw-evreg-service" />
@@ -47,6 +46,7 @@
         <module name="bw-util-options" />
         <module name="bw-evreg-war" />
         <module name="bw-carddav-common" />
+        <module name="bw-util-maven-deploy-wfmodule" />
         <module name="bw-util2-calendar" />
         <module name="bw-calendar-client-webcommon" />
         <module name="bw-xml-icalendar" />
@@ -308,6 +308,7 @@
       <module name="bw-util-json" target="11" />
       <module name="bw-util-logging" target="11" />
       <module name="bw-util-maven-deploy" target="11" />
+      <module name="bw-util-maven-deploy-wfmodule" target="11" />
       <module name="bw-util-misc" target="11" />
       <module name="bw-util-network" target="11" />
       <module name="bw-util-options" target="11" />
@@ -322,6 +323,11 @@
       <module name="bw-util2-calendar" target="11" />
       <module name="bw-util2-vcard" target="11" />
       <module name="bw-webdav" target="11" />
+      <module name="bw-wfmodules" target="11" />
+      <module name="bw-wfmodules (1)" target="11" />
+      <module name="bw-wfmodules (2)" target="11" />
+      <module name="bw-wfmodules-ro" target="11" />
+      <module name="bw-wfmodules-rw" target="11" />
       <module name="bw-xml" target="11" />
       <module name="bw-xml-appleServer" target="11" />
       <module name="bw-xml-bwlicense" target="11" />

@@ -206,6 +206,7 @@
     <file url="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-deployment" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-deployment/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy-wfmodule/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-hibernate" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-hibernate/src/main/java" charset="UTF-8" />
@@ -250,6 +251,7 @@
     <file url="file://$PROJECT_DIR$/../bw-util2/bw-util2-vcard/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webdav" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webdav/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-rw/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-appleServer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-bwlicense" charset="UTF-8" />

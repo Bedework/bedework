@@ -21,7 +21,7 @@ galleonVersion="4.2.5.Final"
 galleonFeaturePack="wildfly:22.0#$JBOSS_VERSION"
 galleonLayers="datasources-web-server,jms-activemq"
 
-# -------------------Module versions -----------------------------
+# -------------------Package versions -----------------------------
 bwXmlVersion="4.0.10"
 bwUtilLoggingVersion="4.0.5"
 bwUtilVersion="4.0.27"
@@ -304,13 +304,14 @@ installHawtio="installHawtio"
 installSources="installSources"
 installData="installData"
 installApacheds="installApacheds"
-buildModules="buildModules"
+installModules="installModules"
+buildPackages="buildPackages"
 updateWildfly="updateWildFly"
 indexData="indexData"
 
-# Suffixed with module name
-installModule="installModule-"
-buildModule="buildModule-"
+# Suffixed with package name
+installPackage="installPackage-"
+buildPackage="buildPackage-"
 
 # -------------------------------------------------------------------
 # -------------------------------------------------------------------
@@ -401,7 +402,7 @@ installScripts() {
   fi
 
   if stepStarted $installScripts; then
-    echo "Remove possible partial module"
+    echo "Remove possible partial package"
     rm -rf bedework
     unmark $installScripts
   fi
@@ -587,8 +588,8 @@ installDeployer() {
   installApp $deployerName $deployerDownload $deployerRepoPath
 }
 
-# $1 - deployable module name prefix
-# $2 - deployable full module name
+# $1 - deployable package name prefix
+# $2 - deployable full package name
 # $3 - download file name
 # $4 - repo url to download file name
 # $5 - --war or --ear (--ear is default)
@@ -711,12 +712,12 @@ installApps() {
 
 # $1 - name
 cloneRepo() {
-  moduleName=$1
+  packageName=$1
 
   echo "---------------------------------------------------------------"
-  echo "Clone $moduleName"
+  echo "Clone $packageName"
 
-  stepName=${installModule}$moduleName
+  stepName=${installPackage}$packageName
 
   if stepDone "${stepName}"; then
     echo "Already done"
@@ -730,13 +731,13 @@ cloneRepo() {
 
   if stepStarted "$stepName"; then
     echo "Restarting from partial install"
-    rm -rf "$moduleName"
+    rm -rf "$packageName"
   else
     markStarted "$stepName"
   fi
 
-  echo "git clone https://github.com/Bedework/$moduleName.git"
-  git clone https://github.com/Bedework/"$moduleName".git
+  echo "git clone https://github.com/Bedework/$packageName.git"
+  git clone https://github.com/Bedework/"$packageName".git
 
   markDone "$stepName"
 
@@ -746,12 +747,12 @@ cloneRepo() {
 # $1 - branch
 # $2 - name
 cloneRepoBranch() {
-  moduleName=$2
+  packageName=$2
 
   echo "---------------------------------------------------------------"
-  echo "Clone $moduleName"
+  echo "Clone $packageName"
 
-  stepName=${installModule}$moduleName
+  stepName=${installPackage}$packageName
 
   if stepDone "${stepName}"; then
     echo "Already done"
@@ -765,13 +766,13 @@ cloneRepoBranch() {
 
   if stepStarted "$stepName"; then
     echo "Restarting from partial install"
-    rm -rf "$moduleName"
+    rm -rf "$packageName"
   else
     markStarted "$stepName"
   fi
 
-  echo "git clone -b $moduleName-$1 https://github.com/Bedework/$moduleName.git"
-  git clone -b "$moduleName"-"$1" https://github.com/Bedework/"$moduleName".git
+  echo "git clone -b $packageName-$1 https://github.com/Bedework/$packageName.git"
+  git clone -b "$packageName"-"$1" https://github.com/Bedework/"$packageName".git
 
   markDone "$stepName"
 
@@ -867,14 +868,40 @@ installSources() {
   markDone $installSources
 }
 
+installModules() {
+  echo "---------------------------------------------------------------"
+  echo "Build the packages"
+
+  if stepDone "installModules"; then
+    echo "Already done"
+    return
+  fi
+
+  if stepSkipped "installModules"; then
+    echo "Skipped"
+    return
+  fi
+
+  if stepStarted "installModules"; then
+    echo "Restarting from partial build"
+  else
+    markStarted "installModules"
+  fi
+
+  ./bw -P "$mvnProfile" bwutillog
+  ./bw -P "$mvnProfile" bwutil
+  ./bw -P "$mvnProfile" bwutilConf
+  ./bw -P "$mvnProfile" bwutilNetwork
+}
+
 # $1 - name
-buildModule() {
-  moduleName=$1
+buildPackage() {
+  packageName=$1
 
   echo "---------------------------------------------------------------"
-  echo "Build $moduleName"
+  echo "Build $packageName"
 
-  stepName=${buildModule}$moduleName
+  stepName=${buildPackage}$packageName
 
   if stepDone "${stepName}"; then
     echo "Already done"
@@ -892,70 +919,69 @@ buildModule() {
     markStarted "$stepName"
   fi
 
-
-  ./bw -P "$mvnProfile" "$moduleName"
+  ./bw -P "$mvnProfile" "$packageName"
 
   markDone "$stepName"
 
   sleep 5
 }
 
-buildModules() {
+buildPackages() {
   echo "---------------------------------------------------------------"
-  echo "Build the modules"
+  echo "Build the packages"
 
-  if stepDone "$buildModules"; then
+  if stepDone "$buildPackages"; then
     echo "Already done"
     return
   fi
 
-  if stepSkipped "$buildModules"; then
+  if stepSkipped "$buildPackages"; then
     echo "Skipped"
     return
   fi
 
-  if stepStarted "$buildModules"; then
+  if stepStarted "$buildPackages"; then
     echo "Restarting from partial build"
   else
-    markStarted "$buildModules"
+    markStarted "$buildPackages"
   fi
 
 # For the moment just build it all
 
-  modules="xsl"
-  # buildModule xsl
+  packages="xsl"
+  # buildPackage xsl
 
 # These and more get built by the build script
-#  buildModule bwutil
-#  buildModule bwutilhib
-#  buildModule bwxml
-#  buildModule bwutil2
+#  buildPackage bwutil
+#  buildPackage bwutilhib
+#  buildPackage bwxml
+#  buildPackage bwutil2
 
-  modules="$modules bwcalclient"
-  # buildModule bwcalclient
+  packages="$packages bwcalclient"
+  # buildPackage bwcalclient
 
 # These are the deployable or runnable components
-  modules="$modules notifier"
-  modules="$modules tzsvr"
-  modules="$modules synch"
-  modules="$modules eventreg"
-  modules="$modules selfreg"
-  modules="$modules bwcli"
+  packages="$packages notifier"
+  packages="$packages tzsvr"
+  packages="$packages synch"
+  packages="$packages eventreg"
+  packages="$packages selfreg"
+  packages="$packages bwcli"
 
-  # buildModule notifier
-  # buildModule tzsvr
-  # buildModule synch
-  # buildModule eventreg
-  # buildModule selfreg
-  # buildModule bwcli
+  # buildPackage notifier
+  # buildPackage tzsvr
+  # buildPackage synch
+  # buildPackage eventreg
+  # buildPackage selfreg
+  # buildPackage bwcli
 
-  ./bw -P "$mvnProfile" $modules
+  ./bw -P "$mvnProfile" $packages
 
   # Add some links
 
   ln -s bw-cli/target/client/bin/client .
 
-  markDone $buildModules
+  markDone $buildPackages
 }
 
 
@@ -1165,7 +1191,7 @@ installApacheds
 
 cd $qs
 if [ "$withSources" = "yes" ] ; then
-  buildModules
+  buildPackages
 fi
 
 updateWildFly

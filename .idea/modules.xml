@@ -122,6 +122,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-json/bw-util-json.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-json/bw-util-json.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util-logging/bw-util-logging.iml" filepath="$PROJECT_DIR$/../bw-util-logging/bw-util-logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy/bw-util-maven-deploy.iml" filepath="$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy/bw-util-maven-deploy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy-wfmodule/bw-util-maven-deploy-wfmodule.iml" filepath="$PROJECT_DIR$/../bw-util-deploy/bw-util-maven-deploy-wfmodule/bw-util-maven-deploy-wfmodule.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-misc/bw-util-misc.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-misc/bw-util-misc.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util-network/bw-util-network.iml" filepath="$PROJECT_DIR$/../bw-util-network/bw-util-network.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util-conf/bw-util-options/bw-util-options.iml" filepath="$PROJECT_DIR$/../bw-util-conf/bw-util-options/bw-util-options.iml" />
@@ -134,6 +135,9 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-util2/bw-util2-calendar/bw-util2-calendar.iml" filepath="$PROJECT_DIR$/../bw-util2/bw-util2-calendar/bw-util2-calendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util2/bw-util2-vcard/bw-util2-vcard.iml" filepath="$PROJECT_DIR$/../bw-util2/bw-util2-vcard/bw-util2-vcard.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-webdav/bw-webdav.iml" filepath="$PROJECT_DIR$/../bw-webdav/bw-webdav.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ro/bw-wfmodules-ro.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ro/bw-wfmodules-ro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-rw/bw-wfmodules-rw.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-rw/bw-wfmodules-rw.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-xml/bw-xml.iml" filepath="$PROJECT_DIR$/../bw-xml/bw-xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-xml/bw-xml-appleServer/bw-xml-appleServer.iml" filepath="$PROJECT_DIR$/../bw-xml/bw-xml-appleServer/bw-xml-appleServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-xml/bw-xml-bwlicense/bw-xml-bwlicense.iml" filepath="$PROJECT_DIR$/../bw-xml/bw-xml-bwlicense/bw-xml-bwlicense.iml" />
