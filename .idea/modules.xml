@@ -136,6 +136,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-util2/bw-util2-vcard/bw-util2-vcard.iml" filepath="$PROJECT_DIR$/../bw-util2/bw-util2-vcard/bw-util2-vcard.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-webdav/bw-webdav.iml" filepath="$PROJECT_DIR$/../bw-webdav/bw-webdav.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-jasig-cas/bw-wfmodules-jasig-cas.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-jasig-cas/bw-wfmodules-jasig-cas.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ro/bw-wfmodules-ro.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ro/bw-wfmodules-ro.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-rw/bw-wfmodules-rw.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-rw/bw-wfmodules-rw.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-xml/bw-xml.iml" filepath="$PROJECT_DIR$/../bw-xml/bw-xml.iml" />

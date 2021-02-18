@@ -251,6 +251,8 @@
     <file url="file://$PROJECT_DIR$/../bw-util2/bw-util2-vcard/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webdav" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webdav/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-jasig-cas/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-jasig-cas/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-rw/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-appleServer" charset="UTF-8" />

@@ -28,6 +28,7 @@
         <module name="bw-calsockets-common" />
         <module name="bw-timezone-server-war" />
         <module name="bw-xml-calws-soap-strict" />
+        <module name="bw-wfmodules-jasig-cas" />
         <module name="bw-evreg-service" />
         <module name="bw-synch-ear" />
         <module name="sched-assist-api" />
@@ -294,8 +295,8 @@
       <module name="bw-util-config" target="11" />
       <module name="bw-util-config-http" target="11" />
       <module name="bw-util-dav" target="11" />
-      <module name="bw-util-deploy" target="11" />
-      <module name="bw-util-deployment" target="11" />
+      <module name="bw-util-deploy" target="1.8" />
+      <module name="bw-util-deployment" target="1.8" />
       <module name="bw-util-directory" target="11" />
       <module name="bw-util-elasticsearch" target="11" />
       <module name="bw-util-hibernate" target="11" />
@@ -307,8 +308,8 @@
       <module name="bw-util-jolokia" target="11" />
       <module name="bw-util-json" target="11" />
       <module name="bw-util-logging" target="11" />
-      <module name="bw-util-maven-deploy" target="11" />
-      <module name="bw-util-maven-deploy-wfmodule" target="11" />
+      <module name="bw-util-maven-deploy" target="1.8" />
+      <module name="bw-util-maven-deploy-wfmodule" target="1.8" />
       <module name="bw-util-misc" target="11" />
       <module name="bw-util-network" target="11" />
       <module name="bw-util-options" target="11" />
@@ -326,6 +327,7 @@
       <module name="bw-wfmodules" target="11" />
       <module name="bw-wfmodules (1)" target="11" />
       <module name="bw-wfmodules (2)" target="11" />
+      <module name="bw-wfmodules-jasig-cas" target="11" />
       <module name="bw-wfmodules-ro" target="11" />
       <module name="bw-wfmodules-rw" target="11" />
       <module name="bw-xml" target="11" />
