@@ -135,6 +135,7 @@
         <module name="bw-util-dav" />
         <module name="bw-evreg-ear" />
         <module name="sched-assist-spi-relationships" />
+        <module name="bw-wfmodules-ical4j" />
         <module name="bw-calsockets-war" />
         <module name="bw-event-registration-common" />
         <module name="sched-assist-war" />
@@ -327,6 +328,7 @@
       <module name="bw-wfmodules" target="11" />
       <module name="bw-wfmodules (1)" target="11" />
       <module name="bw-wfmodules (2)" target="11" />
+      <module name="bw-wfmodules-ical4j" target="11" />
       <module name="bw-wfmodules-jasig-cas" target="11" />
       <module name="bw-wfmodules-ro" target="11" />
       <module name="bw-wfmodules-rw" target="11" />

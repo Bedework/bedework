@@ -58,6 +58,7 @@ bedeworkProjects="$bedeworkProjects  bw-util-security"
 bedeworkProjects="$bedeworkProjects  bw-util-tz"
 bedeworkProjects="$bedeworkProjects  bw-util2"
 bedeworkProjects="$bedeworkProjects  bw-webdav"
+bedeworkProjects="$bedeworkProjects  bw-wfmodules"
 bedeworkProjects="$bedeworkProjects  bw-xml"
 
 # Projects we will build - pkgdefault (bedework) is built if nothing specified
@@ -97,6 +98,7 @@ synch=
 testsuite=
 tzsvr=
 webdav=
+wfmodules=
 xsl=
 
 # Special targets - avoiding dependencies
@@ -195,6 +197,7 @@ usage() {
   echo "           the core, ancillary or experimental targets below:"
   echo ""
   echo "   Top level deployable or runnable projects"
+  echo "     wfmodules    Build rw and ro full set of bedework wildfly modules"
   echo "     bwcalclient  Target is for the bedework client implementation"
   echo "     bwcli        Target is for the bedework cli implementation"
   echo "     bwxml        Target is for the Bedework XML schemas build"
@@ -449,6 +452,12 @@ setDirectory() {
 	if [ "$bwnotifier" != "" ] ; then
 	  setDir $QUICKSTART_HOME/bw-notifier
       bwnotifier=
+	  return
+	fi
+
+	if [ "$wfmodules" != "" ] ; then
+	  setDir $QUICKSTART_HOME/bw-wfmodules
+      wfmodules=
 	  return
 	fi
 
@@ -800,9 +809,10 @@ do
       pkgdefault=
       shift
       ;;
-    bwcalclient|deploy)
+    bwcalclient)
       bwcalclient="yes"
 
+      wfmodules="yes"
       access="yes"
       jsforj="yes"
       bwcaleng="yes"
@@ -810,16 +820,39 @@ do
       caldav="yes"
       bwcliutil="yes"
       jsforj="yes"
+      #bwutil="yes"
+      #bwutilconf="yes"
+      bwutilhib="yes"
+      #bwutilindex="yes"
+      #bwutillog="yes"
+      #bwutilnetwork="yes"
+      bwutilsecurity="yes"
+      #bwutiltz="yes"
+      bwutil2="yes"
+      webdav="yes"
+      pkgdefault=
+      shift
+      ;;
+    wfmodules)
+      wfmodules="yes"
+
+      #access="yes"
+      #jsforj="yes"
+      #bwcaleng="yes"
+      #bwxml="yes"
+      #caldav="yes"
+      #bwcliutil="yes"
+      #jsforj="yes"
       bwutil="yes"
       bwutilconf="yes"
-      bwutilhib="yes"
+      #bwutilhib="yes"
       bwutilindex="yes"
       bwutillog="yes"
       bwutilnetwork="yes"
-      bwutilsecurity="yes"
+      #bwutilsecurity="yes"
       bwutiltz="yes"
-      bwutil2="yes"
-      webdav="yes"
+      #bwutil2="yes"
+      #webdav="yes"
       pkgdefault=
       shift
       ;;
