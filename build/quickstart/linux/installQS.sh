@@ -19,7 +19,7 @@ esDockerPull="docker pull docker.elastic.co/elasticsearch/elasticsearch:7.2.0"
 JBOSS_VERSION="22.0.0.Final"
 galleonVersion="4.2.5.Final"
 galleonFeaturePack="wildfly:22.0#$JBOSS_VERSION"
-galleonLayers="datasources-web-server,jms-activemq"
+galleonLayers="datasources-web-server,jms-activemq,webservices"
 
 # -------------------Package versions -----------------------------
 bwXmlVersion="4.0.10"
