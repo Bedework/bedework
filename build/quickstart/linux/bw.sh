@@ -845,7 +845,7 @@ do
       #jsforj="yes"
       bwutil="yes"
       bwutilconf="yes"
-      #bwutilhib="yes"
+      bwutilhib="yes"
       bwutilindex="yes"
       bwutillog="yes"
       bwutilnetwork="yes"
