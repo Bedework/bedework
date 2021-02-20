@@ -138,6 +138,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-apache-jdkim-library/bw-wfmodules-apache-jdkim-library.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-apache-jdkim-library/bw-wfmodules-apache-jdkim-library.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j/bw-wfmodules-ical4j.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j/bw-wfmodules-ical4j.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j-vcard/bw-wfmodules-ical4j-vcard.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j-vcard/bw-wfmodules-ical4j-vcard.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-jasig-cas/bw-wfmodules-jasig-cas.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-jasig-cas/bw-wfmodules-jasig-cas.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ro/bw-wfmodules-ro.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ro/bw-wfmodules-ro.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-rw/bw-wfmodules-rw.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-rw/bw-wfmodules-rw.iml" />
