@@ -455,12 +455,6 @@ setDirectory() {
 	  return
 	fi
 
-	if [ "$wfmodules" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-wfmodules
-      wfmodules=
-	  return
-	fi
-
 	if [ "$eventreg" != "" ] ; then
 	  setDir $QUICKSTART_HOME/bw-event-registration
       eventreg=
@@ -500,6 +494,12 @@ setDirectory() {
 	if [ "$bwcaleng" != "" ] ; then
 	  setDir $QUICKSTART_HOME/bw-calendar-engine
       bwcaleng=
+	  return
+	fi
+
+	if [ "$wfmodules" != "" ] ; then
+	  setDir $QUICKSTART_HOME/bw-wfmodules
+      wfmodules=
 	  return
 	fi
 
@@ -813,22 +813,8 @@ do
       bwcalclient="yes"
 
       wfmodules="yes"
-      #access="yes"
-      #jsforj="yes"
       bwcaleng="yes"
-      #bwxml="yes"
-      caldav="yes"
       bwcliutil="yes"
-      #bwutil="yes"
-      #bwutilconf="yes"
-      #bwutilhib="yes"
-      #bwutilindex="yes"
-      #bwutillog="yes"
-      #bwutilnetwork="yes"
-      #bwutilsecurity="yes"
-      #bwutiltz="yes"
-      #bwutil2="yes"
-      webdav="yes"
       pkgdefault=
       shift
       ;;
@@ -839,7 +825,7 @@ do
       jsforj="yes"
       #bwcaleng="yes"
       bwxml="yes"
-      #caldav="yes"
+      caldav="yes"
       #bwcliutil="yes"
       bwutil="yes"
       bwutilconf="yes"
@@ -850,7 +836,7 @@ do
       bwutilsecurity="yes"
       bwutiltz="yes"
       bwutil2="yes"
-      #webdav="yes"
+      webdav="yes"
       pkgdefault=
       shift
       ;;
