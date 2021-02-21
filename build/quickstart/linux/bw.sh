@@ -826,7 +826,6 @@ do
       #bwcaleng="yes"
       bwxml="yes"
       caldav="yes"
-      #bwcliutil="yes"
       bwutil="yes"
       bwutilconf="yes"
       bwutilhib="yes"

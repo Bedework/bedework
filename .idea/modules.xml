@@ -101,7 +101,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/bw-timezone-server-tzconvert.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/bw-timezone-server-tzconvert.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-util-conf/bw-util-args/bw-util-args.iml" filepath="$PROJECT_DIR$/../bw-util-conf/bw-util-args/bw-util-args.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-args/bw-util-args.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-args/bw-util-args.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-caching/bw-util-caching.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-caching/bw-util-caching.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-cliutil/bw-util-cli/bw-util-cli.iml" filepath="$PROJECT_DIR$/../bw-cliutil/bw-util-cli/bw-util-cli.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util-conf/bw-util-conf.iml" filepath="$PROJECT_DIR$/../bw-util-conf/bw-util-conf.iml" />
@@ -131,6 +131,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet-filters/bw-util-servlet-filters.iml" filepath="$PROJECT_DIR$/../bw-util-network/bw-util-servlet-filters/bw-util-servlet-filters.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util-tz/bw-util-tz.iml" filepath="$PROJECT_DIR$/../bw-util-tz/bw-util-tz.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-xml/bw-util-xml.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-xml/bw-util-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-util/bw-util-xmltools/bw-util-xmltools.iml" filepath="$PROJECT_DIR$/../bw-util/bw-util-xmltools/bw-util-xmltools.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util2/bw-util2.iml" filepath="$PROJECT_DIR$/../bw-util2/bw-util2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util2/bw-util2-calendar/bw-util2-calendar.iml" filepath="$PROJECT_DIR$/../bw-util2/bw-util2-calendar/bw-util2-calendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util2/bw-util2-vcard/bw-util2-vcard.iml" filepath="$PROJECT_DIR$/../bw-util2/bw-util2-vcard/bw-util2-vcard.iml" />

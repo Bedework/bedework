@@ -37,79 +37,18 @@
         <element id="archive" name="bw-calendar-client-webcommon-3.14-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-client-webcommon" />
         </element>
-        <element id="archive" name="bw-calendar-engine-annotations-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-annotations" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-api-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-api" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-caldav-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-caldav" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-chgnote-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-chgnote" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-core-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-core" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-core-common-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-core-common" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-dumprestore-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-dumprestore" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-facade-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-facade" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-convert-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-convert" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-impl-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-impl" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-indexer-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-indexer" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-inoutsched-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-inoutsched" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-interfaces-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-interfaces" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-mail-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-mail" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-sysevents-common-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-sysevents-common" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-sysevents-msgs-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-sysevents-msgs" />
-        </element>
-        <element id="archive" name="bw-calendar-engine-tools-3.14-SNAPSHOT.jar">
-          <element id="module-output" name="bw-calendar-engine-tools" />
-        </element>
         <element id="library" level="project" name="Maven: com.google.code.gson:gson:1.5" />
         <element id="library" level="project" name="Maven: org.imgscalr:imgscalr-lib:4.2" />
         <element id="library" level="project" name="Maven: struts:struts:1.2.9" />
-        <element id="library" level="project" name="Maven: commons-digester:commons-digester:1.8" />
-        <element id="library" level="project" name="Maven: org.apache.commons:commons-text:1.7" />
         <element id="library" level="project" name="Maven: org.apache.commons:commons-collections4:4.1" />
-        <element id="library" level="project" name="Maven: org.apache.commons:commons-csv:1.2" />
-        <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3.3" />
-        <element id="library" level="project" name="Maven: commons-io:commons-io:2.2" />
         <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.3.2" />
         <element id="library" level="project" name="Maven: commons-validator:commons-validator:1.3.0" />
         <element id="library" level="project" name="Maven: dnsjava:dnsjava:2.1.1" />
         <element id="library" level="project" name="Maven: com.google.collections:google-collections:1.0" />
-        <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.5.4" />
-        <element id="library" level="project" name="Maven: javax.mail:javax.mail-api:1.5.4" />
         <element id="library" level="project" name="Maven: javax.servlet:jstl:1.1.2" />
         <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
         <element id="library" level="project" name="Maven: xalan:xalan:2.7.1" />
         <element id="library" level="project" name="Maven: xalan:serializer:2.7.1" />
-        <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.4" />
-        <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
-        <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.2" />
         <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.3" />
       </element>
     </root>

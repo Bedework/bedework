@@ -70,6 +70,7 @@
         <module name="bw-calendar-client-ear" />
         <module name="bw-util-config" />
         <module name="bw-util-xml" />
+        <module name="bw-util-xmltools" />
         <module name="bw-cli" />
         <module name="bw-xml-icalendar-strict" />
         <module name="bw-util-indexing" />
@@ -100,7 +101,6 @@
         <module name="bw-util-misc" />
         <module name="bw-note-shared" />
         <module name="bw-util-json" />
-        <module name="bw-util-args" />
         <module name="bwwebcl-appcommon" />
         <module name="bw-timezone-server-ear" />
         <module name="bw-calendar-client-caladmin" />
@@ -155,6 +155,12 @@
         <processor name="org.bedework.calfacade.annotations.process.BedeworkAp" />
         <module name="bw-caleng-facade" />
         <module name="bw-calendar-engine-facade" />
+      </profile>
+      <profile name="Annotation profile for bw-util-conf" enabled="true">
+        <sourceOutputDir name="../../bw-util-conf/bw-util-args/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../bw-util-conf/bw-util-args/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bw-util-args" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -323,6 +329,7 @@
       <module name="bw-util-timezones" target="11" />
       <module name="bw-util-tz" target="11" />
       <module name="bw-util-xml" target="11" />
+      <module name="bw-util-xmltools" target="11" />
       <module name="bw-util2" target="11" />
       <module name="bw-util2-calendar" target="11" />
       <module name="bw-util2-vcard" target="11" />
