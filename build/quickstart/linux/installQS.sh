@@ -2,6 +2,9 @@
 
 # Create a bedework quickstart
 
+# NOTE - must install modified hibernate in maven central.
+echo "must install modified hibernate in maven central."
+
 BASE_DIR=`pwd`
 scriptName="$0"
 restart=

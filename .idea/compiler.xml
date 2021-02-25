@@ -102,6 +102,7 @@
         <module name="bw-note-shared" />
         <module name="bw-util-json" />
         <module name="bwwebcl-appcommon" />
+        <module name="bw-util-args" />
         <module name="bw-timezone-server-ear" />
         <module name="bw-calendar-client-caladmin" />
         <module name="bw-event-registration-service" />
@@ -156,12 +157,6 @@
         <module name="bw-caleng-facade" />
         <module name="bw-calendar-engine-facade" />
       </profile>
-      <profile name="Annotation profile for bw-util-conf" enabled="true">
-        <sourceOutputDir name="../../bw-util-conf/bw-util-args/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../../bw-util-conf/bw-util-args/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="bw-util-args" />
-      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bedework" target="11" />
@@ -187,6 +182,7 @@
       <module name="bw-calendar-engine" target="11" />
       <module name="bw-calendar-engine-annotations" target="11" />
       <module name="bw-calendar-engine-api" target="11" />
+      <module name="bw-calendar-engine-api-ro" target="11" />
       <module name="bw-calendar-engine-caldav" target="11" />
       <module name="bw-calendar-engine-chgnote" target="11" />
       <module name="bw-calendar-engine-convert" target="11" />
@@ -385,6 +381,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="bw-calendar-engine-annotations" options="-proc:none" />
       <module name="bw-calendar-engine-api" options="-proc:none" />
+      <module name="bw-calendar-engine-api-ro" options="-proc:none" />
       <module name="bw-calendar-engine-caldav" options="-proc:none" />
       <module name="bw-calendar-engine-chgnote" options="-proc:none" />
       <module name="bw-calendar-engine-convert" options="-proc:none" />

@@ -33,6 +33,8 @@
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-annotations" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-annotations/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api-ro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api-ro/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-caldav" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-caldav/src/main/java" charset="UTF-8" />

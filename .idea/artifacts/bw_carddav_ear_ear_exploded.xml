@@ -24,7 +24,7 @@
           <element id="module-output" name="bw-carddav-dumpres" />
         </element>
         <element id="library" level="project" name="Maven: org.bedework:bw-access:4.0.8" />
-        <element id="library" level="project" name="Maven: org.bedework:bw-util-args:4.1.0" />
+        <element id="library" level="project" name="Maven: org.bedework:bw-util-args:4.0.27" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-caching:4.0.27" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-config:4.1.0" />
         <element id="library" level="project" name="Maven: org.bedework:bw-util-hibernate:4.0.23" />

@@ -813,7 +813,6 @@ do
       bwcalclient="yes"
 
       wfmodules="yes"
-      bwcaleng="yes"
       bwcliutil="yes"
       pkgdefault=
       shift
@@ -823,7 +822,7 @@ do
 
       access="yes"
       jsforj="yes"
-      #bwcaleng="yes"
+      bwcaleng="yes"
       bwxml="yes"
       caldav="yes"
       bwutil="yes"
