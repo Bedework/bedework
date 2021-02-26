@@ -34,6 +34,7 @@ bedeworkProjects="$bedeworkProjects  bw-access"
 bedeworkProjects="$bedeworkProjects  bw-cache-proxy"
 bedeworkProjects="$bedeworkProjects  bw-caldav"
 bedeworkProjects="$bedeworkProjects  bw-calendar-client"
+bedeworkProjects="$bedeworkProjects  bw-calendar-common"
 bedeworkProjects="$bedeworkProjects  bw-calendar-engine"
 bedeworkProjects="$bedeworkProjects  bw-calsockets"
 bedeworkProjects="$bedeworkProjects  bw-carddav"
@@ -66,6 +67,7 @@ pkgdefault=yes
 access=
 bedework=
 bwcalclient=
+bwcalcommon=
 bwcaleng=
 bwcalsockets=
 bwcli=
@@ -213,6 +215,7 @@ usage() {
   echo "                      Do not need to be explicitly built"
   echo "     access       Target is for the access classes"
   echo "     bwcaleng     Target is for the bedework cal engine implementation"
+  echo "     bwcalcommon  Target is for the bedework calendar common classes"
   echo "     bwcalsockets Target is for the bedework calsockets classes"
   echo "     bwcliutil    Target is for the bedework cli util library"
   echo "     caldav       Target is for the generic CalDAV server"
@@ -488,6 +491,12 @@ setDirectory() {
 	if [ "$carddav" != "" ] ; then
 	  setDir "$QUICKSTART_HOME"/bw-carddav
       carddav=
+	  return
+	fi
+
+	if [ "$bwcalcommon" != "" ] ; then
+	  setDir $QUICKSTART_HOME/bw-calendar-common
+      bwcalcommon=
 	  return
 	fi
 
@@ -822,6 +831,7 @@ do
 
       access="yes"
       jsforj="yes"
+      bwcalcommon="yes"
       bwcaleng="yes"
       bwxml="yes"
       caldav="yes"
@@ -835,6 +845,24 @@ do
       bwutiltz="yes"
       bwutil2="yes"
       webdav="yes"
+      pkgdefault=
+      shift
+      ;;
+    bwcalcommon)
+      bwcalcommon="yes"
+
+      access="yes"
+      jsforj="yes"
+      bwxml="yes"
+      bwutil="yes"
+      bwutilconf="yes"
+      bwutilindex="yes"
+      bwutillog="yes"
+      bwutilsecurity="yes"
+      bwutiltz="yes"
+      bwutil2="yes"
+      jsforj="yes"
+
       pkgdefault=
       shift
       ;;
@@ -1195,6 +1223,7 @@ if [ "$pkgdefault" = "yes" ] ; then
 
   access="yes"
   jsforj="yes"
+  bwcalcommon="yes"
   bwcaleng="yes"
   bwxml="yes"
   bwcliutil="yes"

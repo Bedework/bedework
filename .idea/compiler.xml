@@ -154,7 +154,6 @@
         <option name="debug" value="false" />
         <option name="resourcePath" value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-facade/src/main/resources" />
         <processor name="org.bedework.calfacade.annotations.process.BedeworkAp" />
-        <module name="bw-calendar-engine-facade" />
         <module name="bw-caleng-facade" />
       </profile>
       <profile name="Annotation profile for bw-calendar-common" enabled="true">
