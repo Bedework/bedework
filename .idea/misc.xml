@@ -78,6 +78,9 @@
         <option value="$PROJECT_DIR$/../bw-logs/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-sometime/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-convert/pom.xml~" />
+        <option value="$PROJECT_DIR$/../bw-calendar-common/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-common/pom.xml~" />
       </list>
     </option>
   </component>

@@ -147,25 +147,36 @@
         <module name="sched-assist-spi-caldav" />
         <module name="sched-assist-spi-caldav-integrationtest" />
       </profile>
-      <profile name="Annotation profile for bw-calendar-engine" enabled="true">
+      <profile name="Annotation profile for bw-calendar-engine-facade" enabled="true">
         <sourceOutputDir name="target/generated-sources/apt" />
         <sourceTestOutputDir name="target/generated-sources/apt-test" />
         <outputRelativeToContentRoot value="true" />
         <option name="debug" value="false" />
         <option name="resourcePath" value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-facade/src/main/resources" />
         <processor name="org.bedework.calfacade.annotations.process.BedeworkAp" />
-        <module name="bw-caleng-facade" />
         <module name="bw-calendar-engine-facade" />
+        <module name="bw-caleng-facade" />
+      </profile>
+      <profile name="Annotation profile for bw-calendar-common" enabled="true">
+        <sourceOutputDir name="target/generated-sources/apt" />
+        <sourceTestOutputDir name="target/generated-sources/apt-test" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="debug" value="false" />
+        <option name="resourcePath" value="$PROJECT_DIR$/../bw-calendar-common/bw-calendar-facade/src/main/resources" />
+        <processor name="org.bedework.calfacade.annotations.process.BedeworkAp" />
+        <module name="bw-calendar-facade" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bedework" target="11" />
       <module name="bw-access" target="11" />
+      <module name="bw-access (1)" target="11" />
       <module name="bw-addrbook-client" target="11" />
       <module name="bw-caldav" target="11" />
       <module name="bw-caldav-server" target="11" />
       <module name="bw-caldav-util" target="11" />
       <module name="bw-caldavTest" target="11" />
+      <module name="bw-calendar-annotations" target="11" />
       <module name="bw-calendar-client" target="11" />
       <module name="bw-calendar-client-appcommon" target="11" />
       <module name="bw-calendar-client-bedework-common" target="1.8" />
@@ -179,7 +190,10 @@
       <module name="bw-calendar-client-ucal" target="11" />
       <module name="bw-calendar-client-util" target="11" />
       <module name="bw-calendar-client-webcommon" target="11" />
+      <module name="bw-calendar-common" target="11" />
+      <module name="bw-calendar-convert" target="11" />
       <module name="bw-calendar-engine" target="11" />
+      <module name="bw-calendar-engine (1)" target="11" />
       <module name="bw-calendar-engine-annotations" target="11" />
       <module name="bw-calendar-engine-api" target="11" />
       <module name="bw-calendar-engine-api-ro" target="11" />
@@ -206,6 +220,7 @@
       <module name="bw-calendar-engine-tools" target="11" />
       <module name="bw-calendar-engine-ucaldav" target="11" />
       <module name="bw-calendar-engine-userws" target="11" />
+      <module name="bw-calendar-facade" target="11" />
       <module name="bw-calendar-xsl" target="11" />
       <module name="bw-caleng-annotations" target="1.8" />
       <module name="bw-caleng-api" target="1.8" />
@@ -379,6 +394,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bw-calendar-annotations" options="-proc:none" />
+      <module name="bw-calendar-convert" options="-proc:none" />
       <module name="bw-calendar-engine-annotations" options="-proc:none" />
       <module name="bw-calendar-engine-api" options="-proc:none" />
       <module name="bw-calendar-engine-api-ro" options="-proc:none" />
@@ -404,6 +421,7 @@
       <module name="bw-calendar-engine-tools" options="-proc:none" />
       <module name="bw-calendar-engine-ucaldav" options="-proc:none" />
       <module name="bw-calendar-engine-userws" options="-proc:none" />
+      <module name="bw-calendar-facade" options="-proc:none" />
     </option>
   </component>
 </project>

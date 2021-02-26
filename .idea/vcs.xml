@@ -8,6 +8,7 @@
     <mapping directory="$PROJECT_DIR$/../bw-caldav" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldavTest" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-client" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-calendar-common" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-engine" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-xsl" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calsockets" vcs="Git" />
