@@ -37,6 +37,8 @@
     <file url="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-convert/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-facade/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-facade/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-mail/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-mail/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-sysevents-msgs/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-sysevents-msgs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine" charset="UTF-8" />
@@ -63,9 +65,6 @@
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-inoutsched/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-interfaces" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-interfaces/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-mail" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-mail/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-mail/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-notifyws" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-pubcaldav" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-publicws" charset="UTF-8" />

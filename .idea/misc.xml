@@ -86,6 +86,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api-ro/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-mail/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-msgs/pom.xml" />
       </set>
     </option>

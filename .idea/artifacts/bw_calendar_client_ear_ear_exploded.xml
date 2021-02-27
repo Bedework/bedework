@@ -51,7 +51,7 @@
         <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
         <element id="library" level="project" name="Maven: xalan:xalan:2.7.1" />
         <element id="library" level="project" name="Maven: xalan:serializer:2.7.1" />
-        <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.3" />
+        <element id="library" level="project" name="Maven: commons-lang:commons-lang:${commons-lang.version}" />
       </element>
     </root>
   </artifact>

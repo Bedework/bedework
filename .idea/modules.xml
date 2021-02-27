@@ -37,7 +37,6 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-indexer/bw-calendar-engine-indexer.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-indexer/bw-calendar-engine-indexer.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-inoutsched/bw-calendar-engine-inoutsched.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-inoutsched/bw-calendar-engine-inoutsched.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-interfaces/bw-calendar-engine-interfaces.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-interfaces/bw-calendar-engine-interfaces.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-mail/bw-calendar-engine-mail.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-mail/bw-calendar-engine-mail.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-notifyws/bw-calendar-engine-notifyws.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-notifyws/bw-calendar-engine-notifyws.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-pubcaldav/bw-calendar-engine-pubcaldav.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-pubcaldav/bw-calendar-engine-pubcaldav.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-publicws/bw-calendar-engine-publicws.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-publicws/bw-calendar-engine-publicws.iml" />
@@ -47,6 +46,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-ucaldav/bw-calendar-engine-ucaldav.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-ucaldav/bw-calendar-engine-ucaldav.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-userws/bw-calendar-engine-userws.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-userws/bw-calendar-engine-userws.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-facade/bw-calendar-facade.iml" filepath="$PROJECT_DIR$/../bw-calendar-common/bw-calendar-facade/bw-calendar-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-mail/bw-calendar-mail.iml" filepath="$PROJECT_DIR$/../bw-calendar-common/bw-calendar-mail/bw-calendar-mail.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-sysevents-msgs/bw-calendar-sysevents-msgs.iml" filepath="$PROJECT_DIR$/../bw-calendar-common/bw-calendar-sysevents-msgs/bw-calendar-sysevents-msgs.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-xsl/bw-calendar-xsl.iml" filepath="$PROJECT_DIR$/../bw-calendar-xsl/bw-calendar-xsl.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets.iml" filepath="$PROJECT_DIR$/../bw-calsockets/bw-calsockets.iml" />

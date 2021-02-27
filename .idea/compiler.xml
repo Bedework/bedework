@@ -222,6 +222,7 @@
       <module name="bw-calendar-engine-ucaldav" target="11" />
       <module name="bw-calendar-engine-userws" target="11" />
       <module name="bw-calendar-facade" target="11" />
+      <module name="bw-calendar-mail" target="11" />
       <module name="bw-calendar-sysevents-msgs" target="11" />
       <module name="bw-calendar-xsl" target="11" />
       <module name="bw-caleng-annotations" target="1.8" />
@@ -426,6 +427,7 @@
       <module name="bw-calendar-engine-ucaldav" options="-proc:none" />
       <module name="bw-calendar-engine-userws" options="-proc:none" />
       <module name="bw-calendar-facade" options="-proc:none" />
+      <module name="bw-calendar-mail" options="-proc:none" />
       <module name="bw-calendar-sysevents-msgs" options="-proc:none" />
     </option>
   </component>
