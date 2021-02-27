@@ -83,6 +83,12 @@
         <option value="$PROJECT_DIR$/../bw-calendar-common/pom.xml~" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api-ro/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-msgs/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/../bin" />

@@ -176,6 +176,8 @@
       <module name="bw-caldav-util" target="11" />
       <module name="bw-caldavTest" target="11" />
       <module name="bw-calendar-annotations" target="11" />
+      <module name="bw-calendar-api" target="11" />
+      <module name="bw-calendar-api-ro" target="11" />
       <module name="bw-calendar-client" target="11" />
       <module name="bw-calendar-client-appcommon" target="11" />
       <module name="bw-calendar-client-bedework-common" target="1.8" />
@@ -220,6 +222,7 @@
       <module name="bw-calendar-engine-ucaldav" target="11" />
       <module name="bw-calendar-engine-userws" target="11" />
       <module name="bw-calendar-facade" target="11" />
+      <module name="bw-calendar-sysevents-msgs" target="11" />
       <module name="bw-calendar-xsl" target="11" />
       <module name="bw-caleng-annotations" target="1.8" />
       <module name="bw-caleng-api" target="1.8" />
@@ -394,6 +397,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="bw-calendar-annotations" options="-proc:none" />
+      <module name="bw-calendar-api" options="-proc:none" />
+      <module name="bw-calendar-api-ro" options="-proc:none" />
       <module name="bw-calendar-convert" options="-proc:none" />
       <module name="bw-calendar-engine-annotations" options="-proc:none" />
       <module name="bw-calendar-engine-api" options="-proc:none" />
@@ -421,6 +426,7 @@
       <module name="bw-calendar-engine-ucaldav" options="-proc:none" />
       <module name="bw-calendar-engine-userws" options="-proc:none" />
       <module name="bw-calendar-facade" options="-proc:none" />
+      <module name="bw-calendar-sysevents-msgs" options="-proc:none" />
     </option>
   </component>
 </project>
