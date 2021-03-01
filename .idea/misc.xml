@@ -4,6 +4,7 @@
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-deploy/bw-calendar-all-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-notifier/bw-note-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear" />
@@ -78,15 +79,22 @@
         <option value="$PROJECT_DIR$/../bw-logs/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-sometime/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-calendar-convert/pom.xml~" />
         <option value="$PROJECT_DIR$/../bw-calendar-common/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-calendar-common/pom.xml~" />
+        <option value="$PROJECT_DIR$/../bw-deploy/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-cal/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-caladmin/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-calauth/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-feeder/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-submit/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ucal/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api-ro/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-mail/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-common/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-msgs/pom.xml" />
       </set>
     </option>

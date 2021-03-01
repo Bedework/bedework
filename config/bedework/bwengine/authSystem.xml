@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<auth-properties xmlns="http://bedework.org/ns/" type="org.bedework.calsvc.jmx.AuthPropertiesImpl">
+<auth-properties xmlns="http://bedework.org/ns/" type="org.bedework.common.jmx.AuthPropertiesImpl">
   <defaultChangesNotifications>true</defaultChangesNotifications>
   <defaultFBPeriod>31</defaultFBPeriod>
   <defaultUserHour24>true</defaultUserHour24>

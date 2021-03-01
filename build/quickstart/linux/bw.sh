@@ -20,7 +20,6 @@ fi
 
 bw_loglevel=""
 postDeployDebug="";
-deployConfig="./bedework/config/wildfly.deploy.properties"
 
 mvn_quiet=   # "-q"
 mvnProfile=${bw_mvnProfile:-}
@@ -40,6 +39,7 @@ bedeworkProjects="$bedeworkProjects  bw-calsockets"
 bedeworkProjects="$bedeworkProjects  bw-carddav"
 bedeworkProjects="$bedeworkProjects  bw-cli"
 bedeworkProjects="$bedeworkProjects  bw-cliutil"
+bedeworkProjects="$bedeworkProjects  bw-deploy"
 bedeworkProjects="$bedeworkProjects  bw-dotwell-known"
 bedeworkProjects="$bedeworkProjects  bw-event-registration"
 bedeworkProjects="$bedeworkProjects  bw-jsforj"
@@ -62,16 +62,18 @@ bedeworkProjects="$bedeworkProjects  bw-webdav"
 bedeworkProjects="$bedeworkProjects  bw-wfmodules"
 bedeworkProjects="$bedeworkProjects  bw-xml"
 
-# Projects we will build - pkgdefault (bedework) is built if nothing specified
-pkgdefault=yes
+# Projects we will build
+buildall=
 access=
 bedework=
+bwcal=
 bwcalclient=
 bwcalcommon=
 bwcaleng=
 bwcalsockets=
 bwcli=
 bwcliutil=
+bwdeploy=
 bwlogs=
 bwnotifier=
 bwutil=
@@ -105,20 +107,11 @@ xsl=
 
 # Special targets - avoiding dependencies
 
-cmdutil=
-deployer=
-deploylog4j=
-deploywf=
 deployConf=
-deployData=
-deployWebcache=
-saveData=
 
 specialTarget=
 
 mavenRepoLocal=
-
-appserver="-Dorg.bedework.target.appserver=wildfly"
 
 echo ""
 echo "  Bedework Calendar System"
@@ -142,37 +135,25 @@ mvnExec() {
 }
 
 usage() {
-  echo "The build and deploy process is changed from previous releases."
-  echo ""
-  echo "Nearly all configuration is handled by the run-time configuration"
-  echo "files deployed with the "
-  echo "   deployConf "
-  echo "target. That target should be executed ONCE only after download "
-  echo "to copy a set of config files into jboss."
-  echo ""
-  echo "A small amount of post-build configuration may be needed. This "
-  echo "allows you to set the security-domain, transport guarantees, "
-  echo "virtual hosts and add or remove calendar suites."
   echo "See"
   echo "http://bedework.github.io/bedework/"
+  echo "for information on configuring bedework."
   echo ""
+  echo "The location of the configuration for the deployment is set"
+  echo "in your maven settings.xml. The quickstart version is at"
+  echo "    <quickstart>/bedework/config/wildfly.deploy.properties"
   echo "  $PRG -cleanall      Do clean on all projects"
   echo "  $PRG -updateall     Does a git update of all projects"
-  echo "  $PRG [-dc CONFIG-SOURCE] [-P PROFILE] <clean-build> [PROJECT] <options>"
+  echo "  $PRG [-P PROFILE] <clean-build> [PROJECT] <options>"
   echo "              [LOG_LEVEL] [ target ] "
   echo ""
   echo " where:"
-  echo "   CONFIG-SOURCE optionally defines the location of the deploy properties"
-  echo "   The default is in $deployConfig."
-  echo ""
   echo "   PROFILE optionally defines the maven profile to use"
   echo "   Otherwise the maven default is used"
   echo ""
   echo "   <options> is zero or more of:"
   echo "     -echoonly    Show the commands but don't execute"
   echo "     -offline     Build without attempting to retrieve library jars"
-  echo "     -appserver=wildfly Build for wildfly - the default"
-  echo "     -appserver=jboss5  Build for jboss 5 (probably doesn't work)"
   echo ""
   echo "   <clean-build> is zero or more of:"
   echo "     clean          Do a maven clean"
@@ -189,9 +170,6 @@ usage() {
   echo "   target       Special target or compile target"
   echo ""
   echo "   Special targets"
-  echo "      deployer          builds the deployer"
-  echo "      deploylog4j       deploys a log4j configuration"
-  echo "      deploywf          deploys wildfly configuration"
   echo "      deployConf        deploys the configuration files"
   echo ""
   echo "   PROJECT optionally defines the package to build. If omitted the main"
@@ -199,8 +177,9 @@ usage() {
   echo "           the core, ancillary or experimental targets below:"
   echo ""
   echo "   Top level deployable or runnable projects"
-  echo "     wfmodules    Build rw and ro full set of bedework wildfly modules"
-  echo "     bwcalclient  Target is for the bedework client implementation"
+  echo ""
+  echo "     bwcal        Build and deploy full bedework calendar"
+  echo "     bwcalq       Just redeploy bedework calendar ear(s)"
   echo "     bwcli        Target is for the bedework cli implementation"
   echo "     bwxml        Target is for the Bedework XML schemas build"
   echo "     carddav      Target is for the CardDAV build"
@@ -213,7 +192,9 @@ usage() {
   echo ""
   echo "   Core sub-projects: required for the above"
   echo "                      Do not need to be explicitly built"
+  echo "     wfmodules    Build rw and ro full set of bedework wildfly modules"
   echo "     access       Target is for the access classes"
+  echo "     bwcalclient  Target is for the bedework client implementation"
   echo "     bwcaleng     Target is for the bedework cal engine implementation"
   echo "     bwcalcommon  Target is for the bedework calendar common classes"
   echo "     bwcalsockets Target is for the bedework calsockets classes"
@@ -518,6 +499,12 @@ setDirectory() {
 	  return
 	fi
 
+	if [ "$bwcal" != "" ] ; then
+	  setDir $QUICKSTART_HOME/bw-deploy
+      bwcal=
+	  return
+	fi
+
 	if [ "$bwlogs" != "" ] ; then
 	  setDir $QUICKSTART_HOME/bw-logs
       bwlogs=
@@ -698,11 +685,6 @@ do
       mvnProfile="-P $1"
       shift
       ;;
-    -dc)
-      shift
-      deployConfig="$1"
-      shift
-      ;;
     -bwjmxconf)
       shift
       BWJMXCONFIG="$1"
@@ -715,17 +697,6 @@ do
       ;;
     -offline)
       offline="-Dorg.bedework.offline.build=yes"
-      shift
-      ;;
-    -wildfly)
-      bwc="wildfly"
-      appserver="-Dorg.bedework.target.appserver=wildfly"
-      deployConfig=./bedework/config/wildfly.deploy.properties
-      shift
-      ;;
-    -appserver)
-      shift
-      appserver="-Dorg.bedework.target.appserver=$1"
       shift
       ;;
 # ----------------------- Log level
@@ -763,21 +734,6 @@ do
       pkgdefault=
       shift
       ;;
-    deployer)
-	  deployer="yes"
-      pkgdefault=
-      shift
-      ;;
-    deploylog4j)
-	  deploylog4j="yes"
-      pkgdefault=
-      shift
-      ;;
-    deploywf)
-	  deploywf="yes"
-      pkgdefault=
-      shift
-      ;;
   deployConf)
     deployConf="yes"
       pkgdefault=
@@ -793,21 +749,6 @@ do
       pkgdefault=
       shift
       ;;
-  deployData)
-    deployData="yes"
-      pkgdefault=
-      shift
-      ;;
-  dirstart)
-      echo "The dirstart target is no longer supported"
-      echo "Use the dirstart script instead."
-      exit 1
-      ;;
-  saveData)
-    saveData="yes"
-      pkgdefault=
-      shift
-      ;;
 # ------------------------Projects
     access)
       access="yes"
@@ -815,6 +756,19 @@ do
       bwxml="yes"
       bwutil="yes"
       bwutillog="yes"
+      pkgdefault=
+      shift
+      ;;
+    bwcal)
+      bwcal="yes"
+
+      bwcalclient="yes"
+      pkgdefault=
+      shift
+      ;;
+    bwcalq)
+      bwcal="yes"
+
       pkgdefault=
       shift
       ;;
@@ -831,6 +785,7 @@ do
 
       access="yes"
       jsforj="yes"
+      bwcalclient="yes"
       bwcalcommon="yes"
       bwcaleng="yes"
       bwxml="yes"

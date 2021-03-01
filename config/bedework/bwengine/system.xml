@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<system-properties xmlns="http://bedework.org/ns/" type="org.bedework.calsvc.jmx.SystemPropertiesImpl">
+<system-properties xmlns="http://bedework.org/ns/" type="org.bedework.common.jmx.SystemPropertiesImpl">
   <admingroupsClass>org.bedework.calsvc.directory.AdminGroupsDbImpl</admingroupsClass>
   <autoKillMinutes>0</autoKillMinutes>
   <cacheUrlPrefix>http://localhost:7070</cacheUrlPrefix>

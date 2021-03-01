@@ -89,7 +89,7 @@ The bwengine/synch settings are configured to use a jvm system property to locat
 ```
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<synch xmlns="http://bedework.org/ns/" type="org.bedework.calsvc.jmx.SynchConfigImpl">
+<synch xmlns="http://bedework.org/ns/" type="org.bedework.common.jmx.SynchConfigImpl">
   <connectorId>localBedework</connectorId>
   <managerUri>http://localhost:8080/synch/manager</managerUri>
   <wsdlUri>http://localhost:8080/wsdls/synch/wssvc.wsdl</wsdlUri>

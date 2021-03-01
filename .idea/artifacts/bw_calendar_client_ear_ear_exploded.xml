@@ -13,20 +13,18 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear/target/bw-cal-3.14-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="directory" name="bw-calendar-client-cal-3.14-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-client-caladmin-3.14-SNAPSHOT.war" />
-      <element id="archive" name="bw-calendar-client-calauth-3.14-SNAPSHOT.war">
-        <element id="module-output" name="bw-calendar-client-calauth" />
-      </element>
-      <element id="directory" name="bw-calendar-client-feeder-3.14-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-client-submit-3.14-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-client-ucal-3.14-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-engine-notifyws-3.14-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-engine-pubcaldav-3.14-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-engine-publicws-3.14-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-engine-synchws-3.14-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-engine-ucaldav-3.14-SNAPSHOT.war" />
-      <element id="directory" name="bw-calendar-engine-userws-3.14-SNAPSHOT.war" />
+      <element id="library" level="project" name="Maven: org.bedework.bwwebcl:bw-calendar-client-cal:war:3.14-SNAPSHOT" />
+      <element id="library" level="project" name="Maven: org.bedework.bwwebcl:bw-calendar-client-caladmin:war:3.14-SNAPSHOT" />
+      <element id="library" level="project" name="Maven: org.bedework.bwwebcl:bw-calendar-client-calauth:war:3.14-SNAPSHOT" />
+      <element id="library" level="project" name="Maven: org.bedework.bwwebcl:bw-calendar-client-feeder:war:3.14-SNAPSHOT" />
+      <element id="library" level="project" name="Maven: org.bedework.bwwebcl:bw-calendar-client-submit:war:3.14-SNAPSHOT" />
+      <element id="library" level="project" name="Maven: org.bedework.bwwebcl:bw-calendar-client-ucal:war:3.14-SNAPSHOT" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-notifyws:war:3.14-SNAPSHOT" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-pubcaldav:war:3.14-SNAPSHOT" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-publicws:war:3.14-SNAPSHOT" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-synchws:war:3.14-SNAPSHOT" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-ucaldav:war:3.14-SNAPSHOT" />
+      <element id="library" level="project" name="Maven: org.bedework.caleng:bw-calendar-engine-userws:war:3.14-SNAPSHOT" />
       <element id="directory" name="lib">
         <element id="archive" name="bw-calendar-client-appcommon-3.14-SNAPSHOT.jar">
           <element id="module-output" name="bw-calendar-client-appcommon" />
@@ -43,7 +41,6 @@
         <element id="library" level="project" name="Maven: org.apache.commons:commons-collections4:4.1" />
         <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3.3" />
         <element id="library" level="project" name="Maven: commons-io:commons-io:2.2" />
-        <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.3.2" />
         <element id="library" level="project" name="Maven: commons-validator:commons-validator:1.3.0" />
         <element id="library" level="project" name="Maven: dnsjava:dnsjava:2.1.1" />
         <element id="library" level="project" name="Maven: com.google.collections:google-collections:1.0" />
@@ -51,7 +48,6 @@
         <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
         <element id="library" level="project" name="Maven: xalan:xalan:2.7.1" />
         <element id="library" level="project" name="Maven: xalan:serializer:2.7.1" />
-        <element id="library" level="project" name="Maven: commons-lang:commons-lang:${commons-lang.version}" />
       </element>
     </root>
   </artifact>
