@@ -106,6 +106,7 @@
         <module name="bw-xml-calws-soap" />
         <module name="bw-util-misc" />
         <module name="bw-note-shared" />
+        <module name="bw-timezone-server-web" />
         <module name="bw-util-json" />
         <module name="bwwebcl-appcommon" />
         <module name="bw-util-args" />
@@ -325,6 +326,7 @@
       <module name="bw-timezone-server-ear" target="11" />
       <module name="bw-timezone-server-tzconvert" target="11" />
       <module name="bw-timezone-server-war" target="11" />
+      <module name="bw-timezone-server-web" target="11" />
       <module name="bw-util" target="11" />
       <module name="bw-util-args" target="11" />
       <module name="bw-util-bw-deploy" target="1.8" />
@@ -340,6 +342,7 @@
       <module name="bw-util-elasticsearch" target="11" />
       <module name="bw-util-hibernate" target="11" />
       <module name="bw-util-http" target="11" />
+      <module name="bw-util-httpmodule" target="11" />
       <module name="bw-util-index" target="11" />
       <module name="bw-util-indexing" target="11" />
       <module name="bw-util-jms" target="11" />
