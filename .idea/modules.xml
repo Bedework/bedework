@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-api/bw-calendar-api.iml" filepath="$PROJECT_DIR$/../bw-calendar-common/bw-calendar-api/bw-calendar-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-api-ro/bw-calendar-api-ro.iml" filepath="$PROJECT_DIR$/../bw-calendar-common/bw-calendar-api-ro/bw-calendar-api-ro.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-admin/bw-calendar-client-admin.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-admin/bw-calendar-client-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon/bw-calendar-client-appcommon.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon/bw-calendar-client-appcommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-strutsmodule/bw-calendar-client-strutsmodule.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-strutsmodule/bw-calendar-client-strutsmodule.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util/bw-calendar-client-util.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util/bw-calendar-client-util.iml" />

@@ -33,6 +33,7 @@
         <module name="bw-synch-ear" />
         <module name="sched-assist-api" />
         <module name="bw-synch-web" />
+        <module name="bw-calendar-client-admin" />
         <module name="bw-carddav-client" />
         <module name="bw-calendar-xsl" />
         <module name="bw-timezone-server-common" />
@@ -187,6 +188,7 @@
       <module name="bw-calendar-api" target="11" />
       <module name="bw-calendar-api-ro" target="11" />
       <module name="bw-calendar-client" target="11" />
+      <module name="bw-calendar-client-admin" target="11" />
       <module name="bw-calendar-client-appcommon" target="11" />
       <module name="bw-calendar-client-bedework-common" target="1.8" />
       <module name="bw-calendar-client-bwcommon" target="1.8" />
