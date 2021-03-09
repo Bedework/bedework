@@ -93,6 +93,7 @@
         <module name="bw-util-jms" />
         <module name="bw-self-registration-war" />
         <module name="bw-xml-exchangews" />
+        <module name="bw-calendar-client-rw" />
         <module name="bw-xml-carddav" />
         <module name="bwwebcl-webcommon" />
         <module name="bw-calendar-userws" />
@@ -197,6 +198,7 @@
       <module name="bw-calendar-client-calauth" target="11" />
       <module name="bw-calendar-client-ear" target="11" />
       <module name="bw-calendar-client-feeder" target="11" />
+      <module name="bw-calendar-client-rw" target="11" />
       <module name="bw-calendar-client-strutsmodule" target="11" />
       <module name="bw-calendar-client-submit" target="11" />
       <module name="bw-calendar-client-ucal" target="11" />
