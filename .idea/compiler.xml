@@ -82,6 +82,7 @@
         <module name="bw-util-jolokia" />
         <module name="bw-carddav-userweb-war" />
         <module name="bw-xml-synchws" />
+        <module name="bw-calendar-client-web-admin" />
         <module name="bw-xml-catdav" />
         <module name="bw-webclient-ucal" />
         <module name="bw-evreg-common" />
@@ -203,6 +204,7 @@
       <module name="bw-calendar-client-submit" target="11" />
       <module name="bw-calendar-client-ucal" target="11" />
       <module name="bw-calendar-client-util" target="11" />
+      <module name="bw-calendar-client-web-admin" target="11" />
       <module name="bw-calendar-client-webcommon" target="11" />
       <module name="bw-calendar-common" target="11" />
       <module name="bw-calendar-config" target="11" />

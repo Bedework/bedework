@@ -23,6 +23,8 @@
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-web-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-web-admin/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-webcommon" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-webcommon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-annotations/src/main/java" charset="UTF-8" />
