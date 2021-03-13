@@ -153,6 +153,7 @@
         <module name="sched-assist-war" />
         <module name="bw-webclient-caladmin" />
         <module name="bw-carddav-tools" />
+        <module name="bw-calendar-client-web-rw" />
         <module name="bw-note-bwconnector" />
         <module name="sched-assist-spi-caldav" />
         <module name="sched-assist-spi-caldav-integrationtest" />
@@ -205,6 +206,7 @@
       <module name="bw-calendar-client-ucal" target="11" />
       <module name="bw-calendar-client-util" target="11" />
       <module name="bw-calendar-client-web-admin" target="11" />
+      <module name="bw-calendar-client-web-rw" target="11" />
       <module name="bw-calendar-client-webcommon" target="11" />
       <module name="bw-calendar-common" target="11" />
       <module name="bw-calendar-config" target="11" />
