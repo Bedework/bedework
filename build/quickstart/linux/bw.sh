@@ -5,7 +5,7 @@
 # within the svn repository.
 #
 
-saveddir=`pwd`
+saveddir=$(pwd)
 
 trap 'cd $saveddir' 0
 trap "exit 2" 1 2 3 15
@@ -240,7 +240,7 @@ errorUsage() {
 }
 
 setDir() {
-  echoExec cd $1
+  echoExec cd "$1"
 }
 
 # ----------------------------------------------------------------------------
@@ -258,9 +258,9 @@ actionUpdateall() {
       echo "*********************************************************************"
       echo "Updating project $QUICKSTART_HOME/$project"
       echo "*********************************************************************"
-      setDir $project
+      setDir "$project"
       git pull
-      setDir $QUICKSTART_HOME
+      setDir "$QUICKSTART_HOME"
     fi
   done
 
@@ -281,9 +281,9 @@ actionCleanall() {
       echo "*********************************************************************"
       echo "Cleaning project $QUICKSTART_HOME/$project"
       echo "*********************************************************************"
-      setDir $project
-      mvnExec $mvn_quiet $mvnProfile clean
-      setDir $QUICKSTART_HOME
+      setDir "$project"
+      mvnExec $mvn_quiet "$mvnProfile" clean
+      setDir "$QUICKSTART_HOME"
     fi
   done
 
@@ -299,49 +299,49 @@ setDirectory() {
 
 #     Special targets
     if [ "$deployer" != "" ] ; then
-      setDir $QUICKSTART_HOME
+      setDir "$QUICKSTART_HOME"
       specialTarget=deployer
       deployer=
       return
     fi
 
     if [ "$deploylog4j" != "" ] ; then
-      setDir $QUICKSTART_HOME
+      setDir "$QUICKSTART_HOME"
       specialTarget=deploylog4j
       deploylog4j=
       return
     fi
 
     if [ "$deploywf" != "" ] ; then
-      setDir $QUICKSTART_HOME
+      setDir "$QUICKSTART_HOME"
       specialTarget=deploywf
       deploywf=
       return
     fi
 
   if [ "$deployConf" != "" ] ; then
-    setDir $QUICKSTART_HOME
+    setDir "$QUICKSTART_HOME"
     specialTarget=deployConf
     deployConf=
     return
   fi
 
   if [ "$deployWebcache" != "" ] ; then
-    setDir $QUICKSTART_HOME
+    setDir "$QUICKSTART_HOME"
     specialTarget=deployWebcache
     deployWebcache=
     return
   fi
 
   if [ "$deployData" != "" ] ; then
-    setDir $QUICKSTART_HOME
+    setDir "$QUICKSTART_HOME"
     specialTarget=deployData
     deployData=
     return
   fi
 
   if [ "$saveData" != "" ] ; then
-    setDir $QUICKSTART_HOME
+    setDir "$QUICKSTART_HOME"
     specialTarget=saveData
       saveData=
     return
@@ -350,121 +350,145 @@ setDirectory() {
 #     projects
 
 	if [ "$xsl" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-calendar-xsl
+	  setDir "$QUICKSTART_HOME"/bw-calendar-xsl
       xsl=
 	  return
 	fi
 
 	if [ "$bwutildeploy" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-util-deploy
+	  setDir "$QUICKSTART_HOME"/bw-util-deploy
       bwutildeploy=
 	  return
 	fi
 
 	if [ "$bwutillog" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-util-logging
+	  setDir "$QUICKSTART_HOME"/bw-util-logging
       bwutillog=
 	  return
 	fi
 
+	if [ "$module_bwutillog" != "" ] ; then
+	  setDir "$QUICKSTART_HOME"/bw-wfmodules/bw-wfmodules-logging
+      module_bwutillog=
+	  return
+	fi
+
 	if [ "$bwutil" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-util
+	  setDir "$QUICKSTART_HOME"/bw-util
       bwutil=
 	  return
 	fi
 
+	if [ "$module_bwutil" != "" ] ; then
+	  setDir "$QUICKSTART_HOME"/bw-wfmodules/bw-wfmodules-util
+      module_bwutil=
+	  return
+	fi
+
 	if [ "$bwutilconf" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-util-conf
+	  setDir "$QUICKSTART_HOME"/bw-util-conf
       bwutilconf=
 	  return
 	fi
 
+	if [ "$module_bwutilconf" != "" ] ; then
+	  setDir "$QUICKSTART_HOME"/bw-wfmodules/bw-wfmodules-util-conf
+      module_bwutilconf=
+	  return
+	fi
+
 	if [ "$bwutilnetwork" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-util-network
+	  setDir "$QUICKSTART_HOME"/bw-util-network
       bwutilnetwork=
 	  return
 	fi
 
+	if [ "$module_bwutilnetwork" != "" ] ; then
+	  setDir "$QUICKSTART_HOME"/bw-wfmodules/bw-wfmodules-util-network
+      module_bwutilnetwork=
+	  return
+	fi
+
 	if [ "$bwutilsecurity" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-util-security
+	  setDir "$QUICKSTART_HOME"/bw-util-security
       bwutilsecurity=
 	  return
 	fi
 
 	if [ "$bwutiltz" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-util-tz
+	  setDir "$QUICKSTART_HOME"/bw-util-tz
       bwutiltz=
 	  return
 	fi
 
 	if [ "$bwutilindex" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-util-index
+	  setDir "$QUICKSTART_HOME"/bw-util-index
       bwutilindex=
 	  return
 	fi
 
 	if [ "$bwutilhib" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-util-hibernate
+	  setDir "$QUICKSTART_HOME"/bw-util-hibernate
       bwutilhib=
 	  return
 	fi
 
 	if [ "$bwxml" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-xml
+	  setDir "$QUICKSTART_HOME"/bw-xml
       bwxml=
 	  return
 	fi
 
 	if [ "$bwutil2" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-util2
+	  setDir "$QUICKSTART_HOME"/bw-util2
       bwutil2=
 	  return
 	fi
 
 	if [ "$jsforj" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-jsforj
+	  setDir "$QUICKSTART_HOME"/bw-jsforj
       jsforj=
 	  return
 	fi
 
 	if [ "$access" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-access
+	  setDir "$QUICKSTART_HOME"/bw-access
       access=
 	  return
 	fi
 
 	if [ "$bwnotifier" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-notifier
+	  setDir "$QUICKSTART_HOME"/bw-notifier
       bwnotifier=
 	  return
 	fi
 
 	if [ "$eventreg" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-event-registration
+	  setDir "$QUICKSTART_HOME"/bw-event-registration
       eventreg=
 	  return
 	fi
 
 	if [ "$webdav" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-webdav
+	  setDir "$QUICKSTART_HOME"/bw-webdav
       webdav=
 	  return
 	fi
 
 	if [ "$dotWellKnown" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-dotwell-known
+	  setDir "$QUICKSTART_HOME"/bw-dotwell-known
       dotWellKnown=
 	  return
 	fi
 
 	if [ "$caldav" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-caldav
+	  setDir "$QUICKSTART_HOME"/bw-caldav
       caldav=
 	  return
 	fi
 
 	if [ "$caldavTest" != "" ] ; then
-	  setDir $QUICKSTART_HOME/caldavTest
+	  setDir "$QUICKSTART_HOME"/caldavTest
       caldavTest=
 	  return
 	fi
@@ -476,109 +500,109 @@ setDirectory() {
 	fi
 
 	if [ "$bwcalcommon" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-calendar-common
+	  setDir "$QUICKSTART_HOME"/bw-calendar-common
       bwcalcommon=
 	  return
 	fi
 
 	if [ "$bwcaleng" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-calendar-engine
+	  setDir "$QUICKSTART_HOME"/bw-calendar-engine
       bwcaleng=
 	  return
 	fi
 
 	if [ "$wfmodules" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-wfmodules
+	  setDir "$QUICKSTART_HOME"/bw-wfmodules
       wfmodules=
 	  return
 	fi
 
 	if [ "$bwcalclient" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-calendar-client
+	  setDir "$QUICKSTART_HOME"/bw-calendar-client
       bwcalclient=
 	  return
 	fi
 
 	if [ "$bwcal" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-deploy
+	  setDir "$QUICKSTART_HOME"/bw-deploy
       bwcal=
 	  return
 	fi
 
 	if [ "$bwlogs" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-logs
+	  setDir "$QUICKSTART_HOME"/bw-logs
       bwlogs=
 	  return
 	fi
 
 	if [ "$bwcli" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-cli
+	  setDir "$QUICKSTART_HOME"/bw-cli
       bwcli=
 	  return
 	fi
 
 	if [ "$bwcliutil" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-cliutil
+	  setDir "$QUICKSTART_HOME"/bw-cliutil
       bwcliutil=
 	  return
 	fi
 
 	if [ "$catsvr" != "" ] ; then
-	  setDir $QUICKSTART_HOME/catsvr
+	  setDir "$QUICKSTART_HOME"/catsvr
       catsvr=
 	  return
 	fi
 
 	if [ "$client" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bwclient
+	  setDir "$QUICKSTART_HOME"/bwclient
       client=
 	  return
 	fi
 
 	if [ "$bwcalsockets" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-calsockets
+	  setDir "$QUICKSTART_HOME"/bw-calsockets
     bwcalsockets=
 	  return
 	fi
 
 	if [ "$bedework" != "" ] ; then
-	  setDir $QUICKSTART_HOME
+	  setDir "$QUICKSTART_HOME"
       bedework=
 	  return
 	fi
 
 	if [ "$naming" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bwnaming
+	  setDir "$QUICKSTART_HOME"/bwnaming
       naming=
 	  return
 	fi
 
 	if [ "$exchgGateway" != "" ] ; then
-	  setDir $QUICKSTART_HOME/exchgGateway
+	  setDir "$QUICKSTART_HOME"/exchgGateway
       exchgGateway=
 	  return
 	fi
 
 	if [ "$selfreg" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-self-registration
+	  setDir "$QUICKSTART_HOME"/bw-self-registration
       selfreg=
 	  return
 	fi
 
   if [ "$synch" != "" ] ; then
-    setDir $QUICKSTART_HOME/bw-synch
+    setDir "$QUICKSTART_HOME"/bw-synch
       synch=
     return
   fi
 
 	if [ "$testsuite" != "" ] ; then
-	  setDir $QUICKSTART_HOME/testsuite
+	  setDir "$QUICKSTART_HOME"/testsuite
       testsuite=
 	  return
 	fi
 
 	if [ "$tzsvr" != "" ] ; then
-	  setDir $QUICKSTART_HOME/bw-timezone-server
+	  setDir "$QUICKSTART_HOME"/bw-timezone-server
       tzsvr=
 	  return
 	fi
@@ -588,11 +612,11 @@ setDirectory() {
 	exit 0;
 }
 
-if [ -z "$JAVA_HOME" -o ! -d "$JAVA_HOME" ] ; then
+if [ -z "$JAVA_HOME" ] || [ ! -d "$JAVA_HOME" ] ; then
   errorUsage "JAVA_HOME is not defined correctly for bedework."
 fi
 
-version=$($JAVA_HOME/bin/java -version 2>&1 | sed -E -n 's/.* version "([^.-]*).*/\1/p')
+version=$("$JAVA_HOME"/bin/java -version 2>&1 | sed -E -n 's/.* version "([^.-]*).*/\1/p')
 if [[ "$version" -lt "11" ]]; then
   echo
   echo "************************************************"
@@ -888,7 +912,6 @@ do
       bwutilnetwork="yes"
       bwutilsecurity="yes"
       bwutiltz="yes"
-      bwutillog="yes"
 
       pkgdefault=
       shift
@@ -1005,6 +1028,13 @@ do
       pkgdefault=
       shift
       ;;
+    module_bwutil)
+      module_bwutil="yes"
+      bwutil="yes"
+
+      pkgdefault=
+      shift
+      ;;
     bwutilConf)
       bwutilconf="yes"
       bwutil="yes"
@@ -1013,7 +1043,26 @@ do
       pkgdefault=
       shift
       ;;
+    module_bwutilConf)
+      module_bwutilconf="yes"
+      bwutilconf="yes"
+      bwutil="yes"
+      bwutillog="yes"
+
+      pkgdefault=
+      shift
+      ;;
     bwutilNetwork)
+      bwutilnetwork="yes"
+      bwutil="yes"
+      bwutilconf="yes"
+      bwutillog="yes"
+
+      pkgdefault=
+      shift
+      ;;
+    module_bwutilNetwork)
+      module_bwutilnetwork="yes"
       bwutilnetwork="yes"
       bwutil="yes"
       bwutilconf="yes"
@@ -1067,6 +1116,13 @@ do
       shift
       ;;
     bwutillog)
+      bwutillog="yes"
+
+      pkgdefault=
+      shift
+      ;;
+    module_bwutillog)
+      module_bwutillog="yes"
       bwutillog="yes"
 
       pkgdefault=
@@ -1220,7 +1276,7 @@ do
     # echo "Special target - command is $javacmd $specialTarget"
     $javacmd $specialTarget
   else
-    if ! mvnExec $mvncmd ; then
+    if ! mvnExec "$mvncmd" ; then
       echo "Maven build unsuccessful"
       exit 1
     fi
