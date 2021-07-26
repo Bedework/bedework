@@ -17,7 +17,7 @@
     <maven.source.plugin.version>2.1.2</maven.source.plugin.version>
 
     <!-- Bedework Versions -->
-    <bw-util-deploy.version>4.0.26</bw-util-deploy.version>
+    <bw-util-deploy.version>4.1.0</bw-util-deploy.version>
   </properties>
 
   <organization>
@@ -49,9 +49,9 @@
     <developer>
       <name>Mike Douglass</name>
       <organization>
-        Spherical Cow Group
+        Bedework Commercial Services
       </organization>
-      <organizationUrl>http://sphericalcowgroup.com/</organizationUrl>
+      <organizationUrl>https://bedework.com/</organizationUrl>
     </developer>
     <developer>
       <name>Arlen Johnson</name>

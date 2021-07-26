@@ -89,6 +89,15 @@
         <suffix value=".yyyy-MM-dd"/>
         <append value="true"/>
       </periodic-rotating-file-handler>
+      <periodic-rotating-file-handler name="ERRORS" autoflush="true">
+        <level name="ERROR"/>
+        <formatter>
+          <named-formatter name="PATTERN"/>
+        </formatter>
+        <file relative-to="jboss.server.log.dir" path="errors.log"/>
+        <suffix value=".yyyy-MM-dd"/>
+        <append value="true"/>
+      </periodic-rotating-file-handler>
       <periodic-rotating-file-handler name="SYSEVENTS" autoflush="true">
         <formatter>
           <named-formatter name="PATTERN"/>
@@ -233,6 +242,9 @@
       <logger category="org.bedework.calsvc.Calendars">
         <level name="INFO"/>
       </logger>
+      <logger category="org.bedework.calsvc.CalSvc.SvcSimpleFilterParser">
+        <level name="INFO"/>
+      </logger>
       <logger category="org.bedework.util.servlet.filters.ConfiguredXSLTFilter">
         <level name="INFO"/>
       </logger>
@@ -269,6 +281,7 @@
         <handlers>
           <handler name="CONSOLE"/>
           <handler name="FILE"/>
+          <handler name="ERRORS"/>
         </handlers>
       </root-logger>
       <formatter name="PATTERN">

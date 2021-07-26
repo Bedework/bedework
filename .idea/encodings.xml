@@ -18,8 +18,6 @@
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-rw/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-rw/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-strutsmodule/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-strutsmodule/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util/src/main/resources" charset="UTF-8" />
@@ -62,8 +60,6 @@
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-impl" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-impl-ro/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-impl-ro/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-impl/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-indexer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-indexer/src/main/java" charset="UTF-8" />
@@ -100,6 +96,13 @@
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-tools/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-user-war" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-userweb-war" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-category/bw-category-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-category/bw-category-ical/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-category/bw-category-impl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-category/bw-category-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-category/bw-category-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-category/bw-category-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-category/bw-category-web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cli" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cli/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cli/src/main/resources" charset="UTF-8" />
@@ -219,8 +222,6 @@
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-dav/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-http" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-http/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-httpmodule/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-httpmodule/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet-filters" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet-filters/src/main/java" charset="UTF-8" />
@@ -252,17 +253,13 @@
     <file url="file://$PROJECT_DIR$/../bw-util2/bw-util2-vcard/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webdav" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webdav/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-apache-jdkim-library/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-apache-jdkim-library/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-digester/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-digester/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j-vcard/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j-vcard/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-jasig-cas/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-jasig-cas/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-rw/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org-jasig-cas/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org-jasig-cas/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfmodules-rw/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/wfmodulesutil/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/wfmodulesutil/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-appleServer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-bwlicense" charset="UTF-8" />

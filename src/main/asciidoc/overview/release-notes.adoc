@@ -86,6 +86,11 @@ The properties in question are all those that were in basicSystem.xml, which use
 
 *JsCalendar* largely supported.
 
+*Timezone server*
+  * switch to h2 from leveldb which had too many undesirable dependencies.
+  * Move some config out of the zoneinfo directory into the specified data directory. Changed that path to be effectively one level up.
+  * Bug fixes for problems encountered when updating the data.
+
 *Refactoring* as part of using wildfly modules.
   * Move Args class from util conf package to util package.
 

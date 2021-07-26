@@ -415,6 +415,12 @@ setDirectory() {
 	  return
 	fi
 
+	if [ "$module_bwutilsecurity" != "" ] ; then
+	  setDir "$QUICKSTART_HOME"/bw-wfmodules/bw-wfmodules-util-security
+    module_bwutilsecurity=
+	  return
+	fi
+
 	if [ "$bwutiltz" != "" ] ; then
 	  setDir "$QUICKSTART_HOME"/bw-util-tz
       bwutiltz=
@@ -511,12 +517,6 @@ setDirectory() {
 	  return
 	fi
 
-	if [ "$wfmodules" != "" ] ; then
-	  setDir "$QUICKSTART_HOME"/bw-wfmodules
-      wfmodules=
-	  return
-	fi
-
 	if [ "$bwcalclient" != "" ] ; then
 	  setDir "$QUICKSTART_HOME"/bw-calendar-client
       bwcalclient=
@@ -595,6 +595,12 @@ setDirectory() {
     return
   fi
 
+	if [ "$module_synch" != "" ] ; then
+	  setDir "$QUICKSTART_HOME"/bw-wfmodules/bw-wfmodules-synch
+    module_synch=
+	  return
+	fi
+
 	if [ "$testsuite" != "" ] ; then
 	  setDir "$QUICKSTART_HOME"/testsuite
       testsuite=
@@ -604,6 +610,18 @@ setDirectory() {
 	if [ "$tzsvr" != "" ] ; then
 	  setDir "$QUICKSTART_HOME"/bw-timezone-server
       tzsvr=
+	  return
+	fi
+
+	if [ "$module_tzsvr" != "" ] ; then
+	  setDir "$QUICKSTART_HOME"/bw-wfmodules/bw-wfmodules-timezone-server
+    module_tzsvr=
+	  return
+	fi
+
+	if [ "$wfmodules" != "" ] ; then
+	  setDir "$QUICKSTART_HOME"/bw-wfmodules
+      wfmodules=
 	  return
 	fi
 
@@ -807,15 +825,23 @@ do
     wfmodules)
       wfmodules="yes"
 
+      cmdutil="yes"
+#     deployConf="yes"
+#     dotWellKnown="yes"
+#     deployWebcache="yes"
       access="yes"
-      jsforj="yes"
+      bwcal="yes"
       bwcalclient="yes"
       bwcalcommon="yes"
       bwcaleng="yes"
-      bwxml="yes"
-      caldav="yes"
+      bwcalsockets="yes"
+      bwcli="yes"
+      bwcliutil="yes"
+      bwlogs="yes"
+      bwnotifier="yes"
       bwutil="yes"
       bwutilconf="yes"
+      bwutildeploy="yes"
       bwutilhib="yes"
       bwutilindex="yes"
       bwutillog="yes"
@@ -823,10 +849,26 @@ do
       bwutilsecurity="yes"
       bwutiltz="yes"
       bwutil2="yes"
+      bwxml="yes"
+      caldav="yes"
+      caldavTest="yes"
+      carddav="yes"
+      catsvr="yes"
+#     client="yes"
+      eventreg="yes"
+#     exchgGateway="yes"
+      jsforj="yes"
+#     naming="yes"
+      selfreg="yes"
+      synch="yes"
+#     testsuite="yes"
+      tzsvr="yes"
       webdav="yes"
+      xsl="yes"
       pkgdefault=
       shift
       ;;
+
     bwcalcommon)
       bwcalcommon="yes"
 
@@ -1046,8 +1088,6 @@ do
     module_bwutilConf)
       module_bwutilconf="yes"
       bwutilconf="yes"
-      bwutil="yes"
-      bwutillog="yes"
 
       pkgdefault=
       shift
@@ -1064,9 +1104,6 @@ do
     module_bwutilNetwork)
       module_bwutilnetwork="yes"
       bwutilnetwork="yes"
-      bwutil="yes"
-      bwutilconf="yes"
-      bwutillog="yes"
 
       pkgdefault=
       shift
@@ -1076,6 +1113,13 @@ do
       bwutil="yes"
       bwutilconf="yes"
       bwutillog="yes"
+
+      pkgdefault=
+      shift
+      ;;
+    module_bwutilSecurity)
+      module_bwutilsecurity="yes"
+      bwutilsecurity="yes"
 
       pkgdefault=
       shift
@@ -1184,6 +1228,13 @@ do
       pkgdefault=
       shift
       ;;
+    module_synch)
+      module_synch="yes"
+      synch="yes"
+
+      pkgdefault=
+      shift
+      ;;
     testsuite)
       testsuite="yes"
 
@@ -1202,6 +1253,13 @@ do
       bwutilnetwork="yes"
       bwutiltz="yes"
       bwutil2="yes"
+      pkgdefault=
+      shift
+      ;;
+    module_tzsvr)
+      module_tzsvr="yes"
+      tzsvr="yes"
+
       pkgdefault=
       shift
       ;;
