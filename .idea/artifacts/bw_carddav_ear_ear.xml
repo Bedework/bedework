@@ -3,8 +3,10 @@
     <output-path>$PROJECT_DIR$/../bw-carddav/bw-carddav-ear/target</output-path>
     <properties id="maven-jee-properties">
       <options>
+        <exploded>false</exploded>
         <module>bw-carddav-ear</module>
         <packaging>ear</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
     <root id="archive" name="bw-carddav-4.0.11-SNAPSHOT.ear">
