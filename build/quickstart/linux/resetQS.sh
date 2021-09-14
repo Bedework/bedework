@@ -115,7 +115,8 @@ installData() {
 
   rm elasticsearch.zip
 
-  rm -rf $es_data_dir/nodes
+  rm -rf $es_data_dir
+  mkdir $es_data_dir
   cp -r nodes $es_data_dir/
 
   # ------------------------------------- directory data
