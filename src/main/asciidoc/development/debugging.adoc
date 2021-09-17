@@ -1,0 +1,17 @@
+[[Debugging-the-quickstart]]
+=== Debugging the quickstart
+
+Need to write a bunch of stuff here - I use intellij.
+
+=== Tracing database interactions
+Add the following to the wildfly logging configuration to see generated SQL and the values of the parameters:
+
+[source,xml]
+----
+  <logger category="org.hibernate.SQL">
+      <level name="DEBUG"/>
+  </logger>
+  <logger category="org.hibernate.type.descriptor.sql">
+      <level name="TRACE"/>
+  </logger>
+----

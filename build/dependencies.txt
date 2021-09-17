@@ -48,36 +48,36 @@ bw-calendar-client
 bw-calendar-xsl
 
 --------------------------------------------------------------------
-bw-xml:
+bw-xml: 4.0.11
 
-bw-util-deploy:
+bw-util-deploy: 4.1.0
 
-bw-util-logging:
+bw-util-logging: 5.0.0
 
-bw-util:
+bw-util: 4.0.31
     org.bedework:bw-util-logging:jar:4.0.6
     org.bedework:bw-xml-bwlicense:jar:4.0.10
 
-bw-util-conf:
+bw-util-conf: 4.1.4
     org.bedework:bw-util-logging:jar:4.0.5
     org.bedework:bw-util-misc:jar:4.0.28
     org.bedework:bw-util-xml:jar:4.0.28
 
-bw-util-network:
+bw-util-network: 4.1.4
     org.bedework:bw-util-config:jar:4.1.0
     org.bedework:bw-util-jmx:jar:4.1.0
     org.bedework:bw-util-logging:jar:4.0.5
     org.bedework:bw-util-misc:jar:4.0.28
     org.bedework:bw-util-xml:jar:4.0.28
 
-bw-util-security:
+bw-util-security: 4.1.4
     org.bedework:bw-util-config:jar:4.1.0
     org.bedework:bw-util-jmx:jar:4.1.0
     org.bedework:bw-util-logging:jar:4.0.5
     org.bedework:bw-util-misc:jar:4.0.28
     org.bedework:bw-util-xml:jar:4.0.27
 
-bw-logs:
+bw-logs: 1.0.4
     org.bedework:bw-util-config:jar:4.1.0
     org.bedework:bw-util-http:jar:4.1.0
     org.bedework:bw-util-jmx:jar:4.1.0
@@ -85,7 +85,7 @@ bw-logs:
     org.bedework:bw-util-misc:jar:4.0.28
     org.bedework:bw-util-xml:jar:4.0.28
 
-bw-util-tz:
+bw-util-tz: 4.1.4
     org.bedework.ical4j:ical4j:jar:3.0.13-SNAPSHOT
     org.bedework:bw-util-caching:jar:4.0.28
     org.bedework:bw-util-config:jar:4.1.0
@@ -95,7 +95,7 @@ bw-util-tz:
     org.bedework:bw-util-misc:jar:4.0.28
     org.bedework:bw-util-xml:jar:4.0.27
 
-bw-util-index:
+bw-util-index: 4.1.4
     org.bedework.ical4j:ical4j:jar:3.0.13-SNAPSHOT
     org.bedework:bw-util-caching:jar:4.0.27
     org.bedework:bw-util-config:jar:4.1.0
@@ -106,7 +106,7 @@ bw-util-index:
     org.bedework:bw-util-tz:jar:4.1.0
     org.bedework:bw-util-xml:jar:4.0.27
 
-bw-util2:
+bw-util2: 4.0.11
     org.bedework.ical4j:ical4j:jar:3.0.13-SNAPSHOT
     org.bedework:bw-ical4j-vcard:jar:1.0.6-SNAPSHOT
     org.bedework:bw-util-caching:jar:4.0.27
@@ -121,11 +121,11 @@ bw-util2:
     org.bedework:bw-xml-calws-soap:jar:4.0.10
     org.bedework:bw-xml-icalendar:jar:4.0.10
 
-bw-jsforj:
+bw-jsforj: 1.0.2
     org.bedework:bw-util-logging:jar:4.0.5
     org.bedework:bw-util-misc:jar:4.0.28
 
-bw-util-hibernate:
+bw-util-hibernate: 4.0.29
     org.bedework:bw-util-config:jar:4.1.0
     org.bedework:bw-util-jmx:jar:4.1.0
     org.bedework:bw-util-logging:jar:4.0.5
@@ -133,13 +133,13 @@ bw-util-hibernate:
     org.bedework:bw-util-xml:jar:4.0.28
     org.bedework:hibernate-core:jar:5.2.5.FinalBwPatched
 
-bw-access:
+bw-access: 4.0.10
     org.bedework:bw-util-caching:jar:4.0.28
     org.bedework:bw-util-logging:jar:4.0.5
     org.bedework:bw-util-misc:jar:4.0.28
     org.bedework:bw-util-xml:jar:4.0.28
 
-bw-webdav:
+bw-webdav: 4.0.13
     org.bedework:bw-access:jar:4.0.8
     org.bedework:bw-util-caching:jar:4.0.27
     org.bedework:bw-util-config:jar:4.1.0
@@ -149,7 +149,7 @@ bw-webdav:
     org.bedework:bw-util-servlet:jar:4.1.0
     org.bedework:bw-util-xml:jar:4.0.28
 
-bw-caldav:
+bw-caldav: 4.0.16
     org.bedework.ical4j:ical4j:jar:3.0.13-SNAPSHOT
     org.bedework:apache-jdkim-library:jar:0.4
     org.bedework:bw-access:jar:4.0.8
@@ -170,7 +170,7 @@ bw-caldav:
     org.bedework:bw-xml-icalendar:jar:4.0.10
     org.bedework:bw-xml-synchws:jar:4.0.10
 
-bw-timezone-server:
+bw-timezone-server: 4.0.12
     org.bedework.ical4j:ical4j:jar:3.0.13-SNAPSHOT
     org.bedework:bw-util-args:jar:4.0.28
     org.bedework:bw-util-caching:jar:4.0.27
@@ -187,7 +187,7 @@ bw-timezone-server:
     org.bedework:bw-xml-icalendar:jar:4.0.10
     org.bedework:bw-xml-tzsvr:jar:4.0.10
 
-bw-synch:
+bw-synch: 4.0.13
     org.bedework.ical4j:ical4j:jar:3.0.13-SNAPSHOT
     org.bedework:bw-access:jar:4.0.8
     org.bedework:bw-util-caching:jar:4.0.28
@@ -207,7 +207,7 @@ bw-synch:
     org.bedework:bw-xml-icalendar:jar:4.0.10
     org.bedework:bw-xml-synchws:jar:4.0.10
 
-<----------------------------------------------------------
+<-------------------------------------<---------
 bw-calendar-common:
     org.bedework.ical4j:ical4j:jar:3.0.13-SNAPSHOT
     org.bedework:apache-jdkim-library:jar:0.4

@@ -56,6 +56,7 @@ include::{deployer-dir}locations.adoc[]
 
 == Development
 include::{dev-dir}todo.adoc[]
+include::{dev-dir}debugging.adoc[]
 include::{dev-dir}caldavtester.adoc[]
 
 [[older-releases]]
