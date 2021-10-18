@@ -247,10 +247,9 @@ args() {
         exit
         shift
         ;;
-      -restart)
+      restart)
         shift
         restart="yes"
-        shift
         ;;
     esac
   done
@@ -341,7 +340,7 @@ installWildFly() {
   unzip galleon-$galleonVersion.zip
   rm galleon-$galleonVersion.zip
 
-  ./galleon-$galleonVersion/bin/galleon.sh install $galleonFeaturePack --dir=$JBOSS_BASE_DIR --layers=galleonLayers
+  ./galleon-$galleonVersion/bin/galleon.sh install $galleonFeaturePack --dir=$JBOSS_BASE_DIR --layers=$galleonLayers
 
   if [ ! -d "$qs/$TMP_DIR" ]; then
     mkdir -p "$qs"/$TMP_DIR
