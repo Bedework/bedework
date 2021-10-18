@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
-<server xmlns="urn:jboss:domain:14.0">
+<server xmlns="urn:jboss:domain:15.0">
   <extensions>
     <extension module="org.jboss.as.connector"/>
     <extension module="org.jboss.as.deployment-scanner"/>
@@ -146,16 +146,13 @@
       <logger category="io.netty">
         <level name="INFO"/>
       </logger>
-      <logger category="io.undertow.request">
+            <logger category="io.undertow">
         <level name="INFO"/>
       </logger>
       <logger category="javax.enterprise">
         <level name="INFO"/>
       </logger>
       <logger category="org.jboss.activemq">
-        <level name="INFO"/>
-      </logger>
-      <logger category="org.jboss.as">
         <level name="INFO"/>
       </logger>
       <logger category="org.jboss.modules">
@@ -167,6 +164,18 @@
       <logger category="org.jboss.weld">
         <level name="INFO"/>
       </logger>
+            <logger category="org.wildfly.elytron">
+                <level name="INFO"/>
+            </logger>
+            <logger category="org.wildfly.security">
+                <level name="INFO"/>
+            </logger>
+            <logger category="org.jboss.security">
+                <level name="INFO"/>
+            </logger>
+            <logger category="org.jboss.as">
+                <level name="INFO"/>
+            </logger>
       <logger category="org.xnio.nio">
         <level name="INFO"/>
       </logger>
@@ -391,7 +400,7 @@
       </concurrent>
       <default-bindings context-service="java:jboss/ee/concurrency/context/default" managed-executor-service="java:jboss/ee/concurrency/executor/default" managed-scheduled-executor-service="java:jboss/ee/concurrency/scheduler/default" managed-thread-factory="java:jboss/ee/concurrency/factory/default"/>
     </subsystem>
-    <subsystem xmlns="urn:wildfly:elytron:11.0" final-providers="combined-providers" disallowed-providers="OracleUcrypto">
+        <subsystem xmlns="urn:wildfly:elytron:12.0" final-providers="combined-providers" disallowed-providers="OracleUcrypto">
       <providers>
         <aggregate-providers name="combined-providers">
           <providers name="elytron"/>
@@ -508,6 +517,23 @@
         </mechanism-provider-filtering-sasl-server-factory>
         <provider-sasl-server-factory name="global"/>
       </sasl>
+            <tls>
+                <key-stores>
+                    <key-store name="applicationKS">
+                        <credential-reference clear-text="password"/>
+                        <implementation type="JKS"/>
+                        <file path="application.keystore" relative-to="jboss.server.config.dir"/>
+                    </key-store>
+                </key-stores>
+                <key-managers>
+                    <key-manager name="applicationKM" key-store="applicationKS" generate-self-signed-certificate-host="localhost">
+                        <credential-reference clear-text="password"/>
+                    </key-manager>
+                </key-managers>
+                <server-ssl-contexts>
+                    <server-ssl-context name="applicationSSC" key-manager="applicationKM"/>
+                </server-ssl-contexts>
+            </tls>
       <dir-contexts>
         <dir-context name="bedeworkLdapConnection" url="ldap://localhost:10389" principal="uid=admin,ou=system">
           <credential-reference clear-text="secret"/>
@@ -542,7 +568,7 @@
       <expose-expression-model/>
       <remoting-connector/>
     </subsystem>
-    <subsystem xmlns="urn:jboss:domain:messaging-activemq:11.0">
+        <subsystem xmlns="urn:jboss:domain:messaging-activemq:12.0">
       <server name="default">
                 <security elytron-domain="bedeworkSD"/>
         <journal type="NIO"/>
@@ -607,7 +633,7 @@
         <file name="bedework-content" path="${jboss.home.dir}/bedework-content" directory-listing="true"/>
       </handlers>
       <filters>
-        <response-header name="server-header" header-name="Server" header-value="WildFly/21"/>
+                <response-header name="server-header" header-name="Server" header-value="WildFly/22"/>
         <response-header name="x-powered-by-header" header-name="X-Powered-By" header-value="Undertow/9"/>
         <error-page name="404-handler" code="404" path="${jboss.home.dir}/bedework-content/Error404.html"/>
       </filters>
