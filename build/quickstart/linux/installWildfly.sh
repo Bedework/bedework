@@ -86,7 +86,7 @@ installWildFly() {
   unzip galleon-$galleonVersion.zip
   rm galleon-$galleonVersion.zip
 
-  ./galleon-$galleonVersion/bin/galleon.sh install $galleonFeaturePack --dir=$JBOSS_BASE_DIR --layers=galleonLayers
+  ./galleon-$galleonVersion/bin/galleon.sh install $galleonFeaturePack --dir=$JBOSS_BASE_DIR --layers=$galleonLayers
 
   if [ ! -d "$qs" ]; then
     echo "Quickstart directory $qs doesn't exist"; exit 1;
@@ -98,3 +98,6 @@ installWildFly() {
 
   mkdir "$qs"/$JBOSS_DATA_DIR
 }
+
+args
+installWildFly
