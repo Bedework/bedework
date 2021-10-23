@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<synch-connector xmlns="http://bedework.org/ns/" type="org.bedework.synch.cnctrs.campusGroups.CampusGroupsConnectorConfig">
+  <connectorClassName>org.bedework.synch.cnctrs.campusGroups.CampusGroupsConnector</connectorClassName>
+  <mbeanClassName>org.bedework.synch.cnctrs.campusGroups.CampusGroupsConnConf</mbeanClassName>
+  <minPoll>15</minPoll>
+  <name>campusGroups</name>
+  <readOnly>true</readOnly>
+  <trustLastmod>false</trustLastmod>
+</synch-connector>

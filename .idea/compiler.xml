@@ -434,6 +434,8 @@
       <module name="bw-wfmodules-category-web" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-annotations" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-databind" target="11" />
+      <module name="bw-wfmodules-com-fasterxml-jackson-core-databind (1)" target="11" />
+      <module name="bw-wfmodules-com-fasterxml-jackson-dataformat-yaml" target="11" />
       <module name="bw-wfmodules-com-h2database-h2" target="11" />
       <module name="bw-wfmodules-com-sun-mail" target="11" />
       <module name="bw-wfmodules-commons-beanutils" target="11" />
