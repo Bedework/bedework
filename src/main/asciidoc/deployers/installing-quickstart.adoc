@@ -122,7 +122,7 @@ In many cases it is possible to simply cd in to the appropriate directory and do
 
 [source]
 ----
-./bw deploy
+./bw bwcal
 ----
 
 will build a lot of projects eventually building the client project which deploys an ear file.
