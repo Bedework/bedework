@@ -32,6 +32,7 @@
         <module name="bw-timezone-server-war" />
         <module name="bw-xml-calws-soap-strict" />
         <module name="bw-category-impl" />
+        <module name="bw-wfmodules-jasig-cas" />
         <module name="bw-evreg-service" />
         <module name="bw-synch-ear" />
         <module name="sched-assist-api" />
@@ -53,6 +54,7 @@
         <module name="bw-evreg-war" />
         <module name="bw-carddav-common" />
         <module name="bw-util-maven-deploy-wfmodule" />
+        <module name="bw-event-registration-web" />
         <module name="wfmodulesutil" />
         <module name="bw-util2-calendar" />
         <module name="bw-calendar-client-webcommon" />
@@ -85,6 +87,7 @@
         <module name="bw-util-indexing" />
         <module name="bw-calendar-notifyws" />
         <module name="bw-carddav-user-war" />
+        <module name="bw-wf-feature-pack" />
         <module name="bw-util-jolokia" />
         <module name="bw-carddav-userweb-war" />
         <module name="bw-xml-synchws" />
@@ -296,6 +299,7 @@
       <module name="bw-event-registration-ear" target="11" />
       <module name="bw-event-registration-service" target="11" />
       <module name="bw-event-registration-war" target="11" />
+      <module name="bw-event-registration-web" target="11" />
       <module name="bw-evreg-common" target="1.7" />
       <module name="bw-evreg-ear" target="1.7" />
       <module name="bw-evreg-service" target="1.7" />
@@ -386,11 +390,13 @@
       <module name="bw-webclient-submit" target="11" />
       <module name="bw-webclient-ucal" target="11" />
       <module name="bw-webdav" target="11" />
+      <module name="bw-wf-feature-pack" target="11" />
       <module name="bw-wfmodules" target="11" />
       <module name="bw-wfmodules (1)" target="11" />
       <module name="bw-wfmodules (2)" target="11" />
       <module name="bw-wfmodules-access" target="11" />
       <module name="bw-wfmodules-apache-http" target="11" />
+      <module name="bw-wfmodules-apache-jdkim-library" target="11" />
       <module name="bw-wfmodules-caldav" target="11" />
       <module name="bw-wfmodules-caldav-server" target="11" />
       <module name="bw-wfmodules-caldav-util" target="11" />
@@ -425,6 +431,7 @@
       <module name="bw-wfmodules-calendar-engine-inoutsched" target="11" />
       <module name="bw-wfmodules-calendar-engine-interfaces" target="11" />
       <module name="bw-wfmodules-calendar-engine-tools" target="11" />
+      <module name="bw-wfmodules-carddav" target="11" />
       <module name="bw-wfmodules-category" target="11" />
       <module name="bw-wfmodules-category-common" target="11" />
       <module name="bw-wfmodules-category-ear" target="11" />
@@ -441,17 +448,29 @@
       <module name="bw-wfmodules-commons-beanutils" target="11" />
       <module name="bw-wfmodules-commons-codec" target="11" />
       <module name="bw-wfmodules-commons-collections" target="11" />
+      <module name="bw-wfmodules-commons-csv" target="11" />
       <module name="bw-wfmodules-commons-digester" target="11" />
       <module name="bw-wfmodules-commons-io" target="11" />
       <module name="bw-wfmodules-commons-lang" target="11" />
       <module name="bw-wfmodules-commons-lang3" target="11" />
       <module name="bw-wfmodules-commons-logging" target="11" />
       <module name="bw-wfmodules-elasticsearch-rest-client" target="11" />
+      <module name="bw-wfmodules-eventreg" target="11" />
       <module name="bw-wfmodules-ical4j" target="11" />
       <module name="bw-wfmodules-ical4j-vcard" target="11" />
+      <module name="bw-wfmodules-jasig-cas" target="11" />
       <module name="bw-wfmodules-jsforj" target="11" />
       <module name="bw-wfmodules-leveldb" target="11" />
       <module name="bw-wfmodules-logging" target="11" />
+      <module name="bw-wfmodules-note-bwconnector" target="11" />
+      <module name="bw-wfmodules-note-common" target="11" />
+      <module name="bw-wfmodules-note-db" target="11" />
+      <module name="bw-wfmodules-note-ear" target="11" />
+      <module name="bw-wfmodules-note-outbound" target="11" />
+      <module name="bw-wfmodules-note-servlet" target="11" />
+      <module name="bw-wfmodules-note-shared" target="11" />
+      <module name="bw-wfmodules-notifier" target="11" />
+      <module name="bw-wfmodules-org" target="11" />
       <module name="bw-wfmodules-org-apache-commons-commons-csv" target="11" />
       <module name="bw-wfmodules-org-apache-commons-commons-text" target="11" />
       <module name="bw-wfmodules-org-apache-httpcomponents-httpclient" target="11" />
@@ -461,11 +480,38 @@
       <module name="bw-wfmodules-org-apache-struts-taglib" target="11" />
       <module name="bw-wfmodules-org-elasticsearch-elasticsearch" target="11" />
       <module name="bw-wfmodules-org-elasticsearch-elasticsearch-hlclient" target="11" />
+      <module name="bw-wfmodules-org-freemarker" target="11" />
       <module name="bw-wfmodules-org-hibernate-core" target="11" />
       <module name="bw-wfmodules-org-imgscalr-lib" target="11" />
       <module name="bw-wfmodules-org-jasig-cas" target="11" />
       <module name="bw-wfmodules-org-jolokia-core" target="11" />
       <module name="bw-wfmodules-org-slf4j-slf4j-api" target="11" />
+      <module name="bw-wfmodules-selfreg" target="11" />
+      <module name="bw-wfmodules-spring" target="11" />
+      <module name="bw-wfmodules-spring-aop" target="11" />
+      <module name="bw-wfmodules-spring-beans" target="11" />
+      <module name="bw-wfmodules-spring-context" target="11" />
+      <module name="bw-wfmodules-spring-context-support" target="11" />
+      <module name="bw-wfmodules-spring-core" target="11" />
+      <module name="bw-wfmodules-spring-expression" target="11" />
+      <module name="bw-wfmodules-spring-jcl" target="11" />
+      <module name="bw-wfmodules-spring-jdbc" target="11" />
+      <module name="bw-wfmodules-spring-ldap-core" target="11" />
+      <module name="bw-wfmodules-spring-oxm" target="11" />
+      <module name="bw-wfmodules-spring-security-acl" target="11" />
+      <module name="bw-wfmodules-spring-security-config" target="11" />
+      <module name="bw-wfmodules-spring-security-core" target="11" />
+      <module name="bw-wfmodules-spring-security-ldap" target="11" />
+      <module name="bw-wfmodules-spring-security-taglibs" target="11" />
+      <module name="bw-wfmodules-spring-security-web" target="11" />
+      <module name="bw-wfmodules-spring-tx" target="11" />
+      <module name="bw-wfmodules-spring-web" target="11" />
+      <module name="bw-wfmodules-spring-webflow" target="11" />
+      <module name="bw-wfmodules-spring-webflow-spring-binding" target="11" />
+      <module name="bw-wfmodules-spring-webmvc" target="11" />
+      <module name="bw-wfmodules-spring-ws-core" target="11" />
+      <module name="bw-wfmodules-spring-ws-security" target="11" />
+      <module name="bw-wfmodules-spring-ws-xml" target="11" />
       <module name="bw-wfmodules-synch" target="11" />
       <module name="bw-wfmodules-synch-common" target="11" />
       <module name="bw-wfmodules-synch-ear" target="11" />

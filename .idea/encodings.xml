@@ -122,7 +122,8 @@
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-jsforj" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-jsforj/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-logs/src/main/java" charset="UTF-8" />
@@ -253,8 +254,11 @@
     <file url="file://$PROJECT_DIR$/../bw-util2/bw-util2-vcard/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webdav" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webdav/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org-jasig-cas/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org-jasig-cas/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wf-feature-pack/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-jasig-cas/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-jasig-cas/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfmodules-rw/src/main/java" charset="UTF-8" />
