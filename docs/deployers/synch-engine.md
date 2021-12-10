@@ -4,12 +4,18 @@ The synch engine handles the synchronization of external subscriptions with a be
 Currently such a synchronization must be carried out to a single calendar collection which only contains data from the external resource. Also only one way synchronization is supported - inbound to bedework.
 
 These subscriptions are available to personal calendar users and to public events administrators. For personal calendar users the options are limited as it is intended only to mirror the external resource.
-Initializing the database
+
+##Initializing the database - PostgreSQL
+
+```
+create database eventregdbstd with owner bw;
+```
+
+##Initializing the database - MySQL
 
 If running with mysql the built in hibernate schema export doesn't work - mysql jdbc does not support it.
 
 The schema is simple however - it can be generated via the JMX mbeans or use the examples below - to install it manually, create a database - ensure UTF-8 is enabled
-
 
 ```
 CREATE DATABASE `synchdb` DEFAULT CHARACTER SET utf8;
@@ -60,15 +66,17 @@ org.bedework.global.synch.service.location=http://localhost:8080/synchws/
 ```
 
 If you are running everything on one server then the quickstart setting above will do. Note that at the moment the synch engine can only work against a single bedework server. It can accept requests from any member of the cluster however.
-Keys
+
+##Keys
+
+This is only necessary if you expect to create subscriptions that require an id and password. Most public event subscriptions don't require this step.
 
 Generate a set of keys using the cli.
 
 
 ```
-cd bwcli/dist/temp/shellscr/bwcli/ (or wherever your binary is)
-./bwcli.sh 
-/usr/lib/jvm/java-8-oracle/bin/java -cp .:./classes:./resources:lib/bw-access-3.11.0.jar:lib/bw-annotations-3.11.0.jar:lib/bw-calfacade-3.11.0.jar:lib/bwcli-3.11.0.jar:lib/bw-ical4j-vcard-1.0.5.jar:lib/commons-collections4-4.0.jar:lib/commons-lang-2.3.jar:lib/commons-lang3-3.3.2.jar:lib/commons-logging.jar:lib/httpclient-osgi-4.3.3.jar:lib/ical4j-2.0.6.jar:lib/jackson-annotations-2.1.1.jar:lib/jackson-core-2.1.1.jar:lib/jackson-databind-2.1.1.jar:lib/jolokia-client-java-1.3.1.jar:lib/json-simple-1.1.1.jar:lib/log4j-1.2.8.jar:lib/rpiutil-3.11.0.jar org.bedework.bwcli.BwCli
+cd bw-cli/target/client/bin
+./client
 JMX id:<your id>
 Password:<your password>
 cmd:genkeys gen
@@ -80,10 +88,10 @@ Validity check succeeded
 
 ```
 
-If you are using multiple servers copy the resulting key file from <quickstart>/wildfly-10.1.0.Final/standalone/data/bedework/ on to each server.
+If you are using multiple servers copy the resulting key file from <quickstart>/<wildfly>/standalone/data/bedework/ on to each server.
 Ensure calendar server(s) can locate the synch engine.
 
-The bwengine/synch settings are configured to use a jvm system property to locate the synch engine. In file <quickstart>/wildfly-10.1.0.Final/standalone/configuration/bedework/bwengine/synch.xml you should see:
+The bwengine/synch settings are configured to use a jvm system property to locate the synch engine. In file <quickstart>/<wildfly>/standalone/configuration/bedework/bwengine/synch.xml you should see:
 
 
 ```

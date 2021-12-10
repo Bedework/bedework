@@ -68,6 +68,11 @@ This does not affect public events.
 *Moved most of the deployment into wildfly modules* This is to prepare for splitting
 the deployments into read-only web applications (public calendar, etc) from read-write (admin etc(.
 
+Note that this has led to a number of changes to the bw script. In particular to build and deploy the calendar execute
+----
+./bw bwcal
+----
+
 *New quickstart deployment method.* Opting for no sources in the install script will now mean that the required components are downloaded directly from maven central. Currently git is required for part of the install but maven will not be required in this case.
 
 The intent is to have another script which will check for the availability of later versions.

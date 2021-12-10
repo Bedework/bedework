@@ -106,7 +106,7 @@ bw-util-index: 4.1.4
     org.bedework:bw-util-tz:jar:4.1.0
     org.bedework:bw-util-xml:jar:4.0.27
 
-bw-util2: 4.0.11
+bw-util2: 4.0.12
     org.bedework.ical4j:ical4j:jar:3.0.13-SNAPSHOT
     org.bedework:bw-ical4j-vcard:jar:1.0.6-SNAPSHOT
     org.bedework:bw-util-caching:jar:4.0.27
@@ -149,7 +149,7 @@ bw-webdav: 4.0.13
     org.bedework:bw-util-servlet:jar:4.1.0
     org.bedework:bw-util-xml:jar:4.0.28
 
-bw-caldav: 4.0.16
+bw-caldav: 4.0.17
     org.bedework.ical4j:ical4j:jar:3.0.13-SNAPSHOT
     org.bedework:apache-jdkim-library:jar:0.4
     org.bedework:bw-access:jar:4.0.8
@@ -170,7 +170,7 @@ bw-caldav: 4.0.16
     org.bedework:bw-xml-icalendar:jar:4.0.10
     org.bedework:bw-xml-synchws:jar:4.0.10
 
-bw-timezone-server: 4.0.12
+bw-timezone-server: 4.0.13
     org.bedework.ical4j:ical4j:jar:3.0.13-SNAPSHOT
     org.bedework:bw-util-args:jar:4.0.28
     org.bedework:bw-util-caching:jar:4.0.27
