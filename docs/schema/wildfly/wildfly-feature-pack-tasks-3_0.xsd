@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+
+    Copyright 2016-2021 Red Hat, Inc. and/or its affiliates
+    and other contributors as indicated by the @author tags.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<xs:schema xmlns="urn:wildfly:wildfly-feature-pack-tasks:3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:wildfly:wildfly-feature-pack-tasks:3.0"
+  version="2.0">
+ <xs:element name="tasks" type="tasksType" />
+ <xs:complexType name="tasksType">
+    <xs:annotation>
+      <xs:documentation>
+        List of tasks
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="append-file" type="appendFileType" />
+      <xs:element name="copy-artifact" type="copyArtifactType" />
+      <xs:element name="copy-path" type="copyPathType" />
+      <xs:element name="delete" type="deleteType" />
+      <xs:element name="file-permissions" type="filePermissionsType" />
+      <xs:element name="line-endings" type="lineEndingsType" />
+      <xs:element name="mkdir" type="mkdirType" />
+      <xs:element name="transform" type="transformType" />
+      <xs:element name="xml-merge" type="xmlMergeType" />
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="appendFileType">
+    <xs:annotation>
+      <xs:documentation>
+        Append some content to an existing file. This task can append content at the end of the file or at a given location according to a pattern.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="line" type="lineType" />
+    </xs:choice>
+    <xs:attribute name="add-to-matching-line" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          Content to add at the end of the line that matches.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="all-matches" type="xs:boolean" use="optional" default="true">
+      <xs:annotation>
+        <xs:documentation>
+           If set to false, content is added for each match.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ignore" type="xs:boolean" use="optional" default="true">
+      <xs:annotation>
+        <xs:documentation>
+          If set to false, the task is ignored if the target file doesn't exist.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="match" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          A pattern used to match the line where the content to add is to be added after.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="src" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          A path relative to the server installation that has already been installed when this tasks executes. It contains the content to append to the `target` file.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="target" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          A file path relative to the server installation to append content to.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  
+  <xs:complexType name="lineType">
+    <xs:annotation>
+      <xs:documentation>
+        Contains a line of content.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:complexType name="copyArtifactType">
+    <xs:annotation>
+      <xs:documentation>
+        Copy a maven artifact to a server installation location. In order to retrieve the artifact version, the artifact must be declared as a maven dependency of the feature-pack.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="filter" type="filterType" />
+    </xs:choice>
+    <xs:attribute name="artifact" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Artifact maven coordinates in the form : 'groupId:artifactid[:version][:classifier][:extension]'
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="extract" type="xs:boolean" use="optional" default="false">
+      <xs:annotation>
+        <xs:documentation>
+           Extract the artifact to a directory. A set of filters can be defined in order to include and/or exclude content from the extracted artifact.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="feature-pack-version" type="xs:boolean" use="optional" default="false">
+      <xs:annotation>
+        <xs:documentation>
+           If set to true, the artifact version will be retrieved from the dependencies of the feature-pack that defines the task.xml. If false, all feature-packs in the feature-pack dependency tree are looked-up.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="optional" type="xs:boolean" use="optional" default="false">
+      <xs:annotation>
+        <xs:documentation>
+           If set to true, if the artifact is not found in the feature-pack dependency, the task is ignored
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="to-location" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Relative path within the server installation. Target file must be a directory if 'extract' is true. 
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="filterType">
+    <xs:annotation>
+      <xs:documentation>
+        A filter to include/exclude files.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="include" type="xs:boolean" use="optional" default="false">
+      <xs:annotation>
+        <xs:documentation>
+           If true, the matching files are included. If false the matching files are excluded.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="pattern" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          The pattern to match files.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="copyPathType">
+    <xs:annotation>
+      <xs:documentation>
+        Copy a path to a server installation location.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="relative-to" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          'content' is the only supported value. When set to 'content' the 'src' path must be located inside 'package_name/content'
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="replace-props" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          When copying files, the properties contained in copied files are replaced with values retrieved from the tasks properties.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="src" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Path to the file or directory to copy. If 'relative-to' is not set, the path must be located inside 'package_name/pm/wildfly'.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="target" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Relative path within the server installation to the target.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  
+  <xs:complexType name="deleteType">
+    <xs:annotation>
+      <xs:documentation>
+        Delete a path from the server installation.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="if-empty" type="xs:boolean" use="optional" default="false">
+      <xs:annotation>
+        <xs:documentation>
+           Deletion only occurs if the directory is empty, otherwise deletion is ignored. If set to true, the 'path' must be a directory. 
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="path" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Path relative to the server installation to delete. Can be a file or a directory. If the file doesn't exist, deletion is ignored.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="recursive" type="xs:boolean" use="optional" default="false">
+      <xs:annotation>
+        <xs:documentation>
+           If set to true, if the path is a directory it is deleted recursively.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  
+  <xs:complexType name="filePermissionsType">
+    <xs:annotation>
+      <xs:documentation>
+        Set the permissions on a set of files.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="permission" type="permissionType" />
+    </xs:choice>
+    <xs:attribute name="phase" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          By default this task runs in the 'PROCESSING' phase (when the package is provisioned). If set to 'FINALIZING', the tasks will be run once the server has been fully provisioned.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  
+  <xs:complexType name="permissionType">
+    <xs:annotation>
+      <xs:documentation>
+        Contains the file permission value and the set of files.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="filter" type="filterType" />
+    </xs:choice>
+    <xs:attribute name="value" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+           Linux permissions to Execute, Write and Read for USER, GROUP and OTHERS. eg: '777' to grant all permissions to all.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  
+  <xs:complexType name="lineEndingsType">
+    <xs:annotation>
+      <xs:documentation>
+        Change the end of line for a set of files.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="unix" type="unixType" />
+        <xs:element name="windows" type="windowsType" />
+    </xs:choice>
+  </xs:complexType>
+  
+  <xs:complexType name="unixType">
+    <xs:annotation>
+      <xs:documentation>
+        Change the end of line for a set of files. "\n" is used as end of line.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="filter" type="filterType" />
+    </xs:choice>
+  </xs:complexType>
+  
+  <xs:complexType name="windowsType">
+    <xs:annotation>
+      <xs:documentation>
+        Change the end of line for a set of files. "\r\n" is used as end of line.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="filter" type="filterType" />
+    </xs:choice>
+  </xs:complexType>
+  
+  <xs:complexType name="mkdirType">
+    <xs:annotation>
+      <xs:documentation>
+        Create a directory inside the server installation.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="name" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Path to the directory to create.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  
+  <xs:complexType name="transformType">
+    <xs:annotation>
+      <xs:documentation>
+        XSL transformation of XML type.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="params" type="paramsType" />
+    </xs:choice>
+    <xs:attribute name="feature-pack-properties" type="xs:boolean" use="optional" default="false">
+      <xs:annotation>
+        <xs:documentation>
+            If set to false, the properties are resolved from the merged tasks properties found in the feature-pack dependencies. If true, the tasks properties defined in the feature-pack that defines the task are used.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="output" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Relative path to the transformed XML document.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="phase" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          By default this task runs in the 'PROCESSING' phase (when the package is provisioned). If set to 'FINALIZING', the tasks will be run once the server has been fully provisioned.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="src" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Relative path to the XML document to transform.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="stylesheet" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Relative path to the stylesheet file.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  
+  <xs:complexType name="paramsType">
+    <xs:annotation>
+      <xs:documentation>
+        List of parameters to convey to the XSL transformer
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="param" type="paramType" />
+    </xs:choice>
+  </xs:complexType>
+  
+  <xs:complexType name="paramType">
+    <xs:annotation>
+      <xs:documentation>
+        An XSL transformer parameter.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="name" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+           Parameter name.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="value" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+           Parameter value.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  
+  <xs:complexType name="xmlMergeType">
+    <xs:annotation>
+      <xs:documentation>
+        Merge a set of XML files into an XML file. This tasks expects the file 'merger.xsl' to be present in 'package_name/pm/wildfly/' directory.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="filter" type="filterType" />
+    </xs:choice>
+    <xs:attribute name="basedir" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The directory inside the server installation that contains the files to merge. If not specified the server root dir is used.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="output" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          The relative path inside the server installation to the merged XML file.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+</xs:schema>
