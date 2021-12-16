@@ -177,6 +177,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bedework" target="11" />
+      <module name="bedework-parent" target="11" />
       <module name="bw-access" target="11" />
       <module name="bw-access (1)" target="11" />
       <module name="bw-addrbook-client" target="11" />

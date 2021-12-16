@@ -84,6 +84,7 @@
         <option value="$PROJECT_DIR$/../bw-deploy/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-category/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wf-feature-pack/pom.xml" />
+        <option value="$PROJECT_DIR$/../bedework-parent/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

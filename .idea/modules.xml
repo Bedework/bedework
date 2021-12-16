@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bedework.iml" filepath="$PROJECT_DIR$/bedework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bedework-parent/bedework-parent.iml" filepath="$PROJECT_DIR$/../bedework-parent/bedework-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bedework.github.io/bedework.github.io.iml" filepath="$PROJECT_DIR$/../bedework.github.io/bedework.github.io.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-access/bw-access.iml" filepath="$PROJECT_DIR$/../bw-access/bw-access.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-client/bw-addrbook-client.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-client/bw-addrbook-client.iml" />

@@ -4,6 +4,7 @@
     <mapping directory="" vcs="svn" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bedework.github.io" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bedework-parent" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-access" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldav" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldavTest" vcs="Git" />
