@@ -3,13 +3,11 @@
     <output-path>$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/target</output-path>
     <properties id="maven-jee-properties">
       <options>
-        <exploded>false</exploded>
         <module>bw-event-registration-ear</module>
         <packaging>ear</packaging>
-        <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
-    <root id="archive" name="bw-event-registration-4.0.10-SNAPSHOT.ear">
+    <root id="archive" name="bw-event-registration-5.0.0-SNAPSHOT.ear">
       <element id="artifact" artifact-name="bw-event-registration-ear:ear exploded" />
     </root>
   </artifact>
