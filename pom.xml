@@ -17,6 +17,13 @@
   <description>Quickstart scripts and resources</description>
   <url>https://github.com/Bedework/bedework</url>
 
+  <scm>
+    <connection>scm:git:git@github.com:Bedework/bedework.git</connection>
+    <developerConnection>scm:git:git@github.com:Bedework/bedework.git</developerConnection>
+    <url>https://github.com/Bedework/bedework</url>
+    <tag>HEAD</tag>
+  </scm>
+
   <build>
     <plugins>
       <plugin>

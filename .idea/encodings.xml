@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/../bedework-parent/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bedework-parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-access/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-access/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-server/src/main/java" charset="UTF-8" />
@@ -321,6 +323,8 @@
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-caching/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-directory/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-directory/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-jms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-jms/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-json/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-json/src/main/resources" charset="UTF-8" />
