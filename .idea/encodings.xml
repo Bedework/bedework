@@ -80,6 +80,8 @@
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-tools/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-xsl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-xsl/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calsockets" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-common/src/main/resources" charset="UTF-8" />
@@ -148,6 +150,8 @@
     <file url="file://$PROJECT_DIR$/../bw-deploy/bw-calendar-pubcaldav/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-deploy/bw-calendar-publicws/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-deploy/bw-calendar-publicws/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-deploy/bw-calendar-ro-ear/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-deploy/bw-calendar-ro-ear/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-deploy/bw-calendar-synchws/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-deploy/bw-calendar-synchws/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-deploy/bw-calendar-ucaldav/src/main/java" charset="UTF-8" />
@@ -168,6 +172,8 @@
     <file url="file://$PROJECT_DIR$/../bw-deploy/bw-webclient-ucal/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-deploy/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-deploy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-dotwell-known/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-dotwell-known/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/src/main/java" charset="UTF-8" />

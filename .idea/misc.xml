@@ -6,6 +6,7 @@
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-category/bw-category-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-deploy/bw-calendar-all-ear" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-deploy/bw-calendar-ro-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-notifier/bw-note-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear" />
@@ -85,6 +86,7 @@
         <option value="$PROJECT_DIR$/../bw-category/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wf-feature-pack/pom.xml" />
         <option value="$PROJECT_DIR$/../bedework-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-deploy/bw-calendar-ro-ear/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

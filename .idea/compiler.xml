@@ -131,6 +131,7 @@
         <module name="bw-util-misc" />
         <module name="bw-calendar-engine-interfaces" />
         <module name="bw-calendar-engine-core-common" />
+        <module name="bw-calendar-ro-ear" />
         <module name="bw-note-shared" />
         <module name="bw-timezone-server-web" />
         <module name="bw-util-json" />
@@ -254,6 +255,7 @@
       <module name="bw-calendar-notifyws" target="11" />
       <module name="bw-calendar-pubcaldav" target="11" />
       <module name="bw-calendar-publicws" target="11" />
+      <module name="bw-calendar-ro-ear" target="11" />
       <module name="bw-calendar-synchws" target="11" />
       <module name="bw-calendar-sysevents-common" target="11" />
       <module name="bw-calendar-sysevents-msgs" target="11" />
