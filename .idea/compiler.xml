@@ -170,6 +170,7 @@
         <module name="bw-calendar-engine-core" />
         <module name="bw-caldavTest" />
         <module name="bw-util-jmx" />
+        <module name="bw-wfmodules-calendar-rw-ear" />
         <module name="bw-util-dav" />
         <module name="bw-evreg-ear" />
         <module name="bw-calendar-api-ro" />
@@ -414,6 +415,7 @@
       <module name="bw-wfmodules-caldav" target="11" />
       <module name="bw-wfmodules-caldav-server" target="11" />
       <module name="bw-wfmodules-caldav-util" target="11" />
+      <module name="bw-wfmodules-calendar" target="11" />
       <module name="bw-wfmodules-calendar-client" target="11" />
       <module name="bw-wfmodules-calendar-client-admin" target="11" />
       <module name="bw-wfmodules-calendar-client-appcommon" target="11" />
@@ -445,6 +447,8 @@
       <module name="bw-wfmodules-calendar-engine-inoutsched" target="11" />
       <module name="bw-wfmodules-calendar-engine-interfaces" target="11" />
       <module name="bw-wfmodules-calendar-engine-tools" target="11" />
+      <module name="bw-wfmodules-calendar-ro-ear" target="11" />
+      <module name="bw-wfmodules-calendar-rw-ear" target="11" />
       <module name="bw-wfmodules-carddav" target="11" />
       <module name="bw-wfmodules-category" target="11" />
       <module name="bw-wfmodules-category-common" target="11" />
