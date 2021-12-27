@@ -158,6 +158,7 @@
         <module name="bw-calendar-synchws" />
         <module name="bw-dotwell-known" />
         <module name="bw-util-config-http" />
+        <module name="bw-timezone-server-data" />
         <module name="bw-util-caching" />
         <module name="bw-note-outbound" />
         <module name="bw-util-directory" />
@@ -170,7 +171,6 @@
         <module name="bw-calendar-engine-core" />
         <module name="bw-caldavTest" />
         <module name="bw-util-jmx" />
-        <module name="bw-wfmodules-calendar-rw-ear" />
         <module name="bw-util-dav" />
         <module name="bw-evreg-ear" />
         <module name="bw-calendar-api-ro" />
@@ -354,6 +354,7 @@
       <module name="bw-synch-web" target="11" />
       <module name="bw-timezone-server" target="11" />
       <module name="bw-timezone-server-common" target="11" />
+      <module name="bw-timezone-server-data" target="11" />
       <module name="bw-timezone-server-ear" target="11" />
       <module name="bw-timezone-server-tzconvert" target="11" />
       <module name="bw-timezone-server-war" target="11" />

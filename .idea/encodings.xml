@@ -265,6 +265,8 @@
     <file url="file://$PROJECT_DIR$/../bw-timezone-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-data/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-ear/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-ear/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/src/main/java" charset="UTF-8" />

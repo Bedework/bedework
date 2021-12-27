@@ -112,6 +112,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch-web/bw-synch-web.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch-web/bw-synch-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-common/bw-timezone-server-common.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-common/bw-timezone-server-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-data/bw-timezone-server-data.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-data/bw-timezone-server-data.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-ear/bw-timezone-server-ear.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-ear/bw-timezone-server-ear.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/bw-timezone-server-tzconvert.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-tzconvert/bw-timezone-server-tzconvert.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-war/bw-timezone-server-war.iml" />
