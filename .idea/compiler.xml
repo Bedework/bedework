@@ -458,6 +458,7 @@
       <module name="bw-wfmodules-category-impl" target="11" />
       <module name="bw-wfmodules-category-service" target="11" />
       <module name="bw-wfmodules-category-web" target="11" />
+      <module name="bw-wfmodules-cli" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-annotations" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-databind" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-databind (1)" target="11" />
@@ -481,6 +482,7 @@
       <module name="bw-wfmodules-jsforj" target="11" />
       <module name="bw-wfmodules-leveldb" target="11" />
       <module name="bw-wfmodules-logging" target="11" />
+      <module name="bw-wfmodules-logs" target="11" />
       <module name="bw-wfmodules-note-bwconnector" target="11" />
       <module name="bw-wfmodules-note-common" target="11" />
       <module name="bw-wfmodules-note-db" target="11" />
@@ -542,7 +544,9 @@
       <module name="bw-wfmodules-timezone-server-tzconvert" target="11" />
       <module name="bw-wfmodules-timezone-server-web" target="11" />
       <module name="bw-wfmodules-util" target="11" />
+      <module name="bw-wfmodules-util-args" target="11" />
       <module name="bw-wfmodules-util-caching" target="11" />
+      <module name="bw-wfmodules-util-cli" target="11" />
       <module name="bw-wfmodules-util-conf" target="11" />
       <module name="bw-wfmodules-util-config" target="11" />
       <module name="bw-wfmodules-util-config-http" target="11" />
@@ -555,6 +559,7 @@
       <module name="bw-wfmodules-util-indexing-elasticsearch" target="11" />
       <module name="bw-wfmodules-util-jms" target="11" />
       <module name="bw-wfmodules-util-jmx" target="11" />
+      <module name="bw-wfmodules-util-jolokia" target="11" />
       <module name="bw-wfmodules-util-json" target="11" />
       <module name="bw-wfmodules-util-misc" target="11" />
       <module name="bw-wfmodules-util-network" target="11" />
