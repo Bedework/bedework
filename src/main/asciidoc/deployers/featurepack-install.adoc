@@ -1,0 +1,56 @@
+[[featurepack-install]]
+=== Install bedework as a wildfly feature
+(Not yet released)
+
+==== Note: Security
+
+When installing bedework on wildfly steps must be taken to ensure that services that should be hidden are not exposed on the network.
+
+Do NOT expose the elasticsearch and database ports by - for example - opening up all ports to the network.
+
+The best approach is to disable all ports and only open up those necessary. Bedework only uses the standard web ports. Additionally, even for the web ports (80, 8080 etc) it is best to pass traffic through haproxy or apache web server and only allow known contexts (/cal, /caladmin etc).
+
+==== Galleon, wildfly and bedework
+Wildfly can be installed by using the galleon installer, which allows the installation of tailored instances of wildfly.
+
+Additionally extra features can be installed using the same aproach. Bedework now can be installed in this way with a choice of features.
+
+The steps are (described in detail below)
+
+* Install jdk 11
+
+* Install and configure elastic search link:elasticsearch.adoc
+
+* If installing for postgres install the database and create an id/pw for access.
+
+* install wildfly with bedework as a feature
+
+* Start wildfly
+
+* Set the administrator id/password
+
+* restart wildfly (so the new id/pw is used)
+
+* For postgres initialise the database
+
+* reindex.
+
+==== Install wildfly and bedework
+Bedework is installed as a feature pack which has a dependency on wildfly. The galleon tool supports layers which effectively define a particular flavor of the feature.
+
+.Table Bedework supported layers
+|===
+| Layer | Function
+
+| bw-tzserver
+| Deploy the timezone service
+
+| bw-calendar-ro
+| Deploy the readonly calendar system (public events web service and feeder) along with the timezone service
+
+| bw-calendar-h2
+| Deploy the full calendar system (readonly, admin and submission tools) using the supplied h2 database along with the timezone service
+|===
+
+Note that the h2 versions are only suitable for demonstration purposes. The postgres versions should be installed for production.
+
