@@ -65,6 +65,7 @@
         <module name="sched-assist-portlet" />
         <module name="bw-util-deployment" />
         <module name="bw-calsockets-web" />
+        <module name="bw-wfmodules-cli-app" />
         <module name="bw-carddav-dumpres" />
         <module name="bw-carddav-server" />
         <module name="bw-calendar-ucaldav" />
@@ -459,6 +460,7 @@
       <module name="bw-wfmodules-category-service" target="11" />
       <module name="bw-wfmodules-category-web" target="11" />
       <module name="bw-wfmodules-cli" target="11" />
+      <module name="bw-wfmodules-cli-app" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-annotations" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-databind" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-databind (1)" target="11" />
