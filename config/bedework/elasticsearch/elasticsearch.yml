@@ -15,6 +15,8 @@
 # Disable auto creation of indexes
 action.auto_create_index: ".security*,.monitoring*,.watches,.triggered_watches,.watcher-history*,.ml*"
 
+xpack.security.enabled: true
+
 # Limit to inline only
 script.allowed_types: inline
 #

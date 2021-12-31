@@ -14,6 +14,7 @@
         <module name="bw-category-ear" />
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
+        <module name="bw-wfmodules-postgresql" />
         <module name="bw-webclient-calauth" />
         <module name="bw-util-http" />
         <module name="bw-note-common" />
@@ -65,7 +66,6 @@
         <module name="sched-assist-portlet" />
         <module name="bw-util-deployment" />
         <module name="bw-calsockets-web" />
-        <module name="bw-wfmodules-cli-app" />
         <module name="bw-carddav-dumpres" />
         <module name="bw-carddav-server" />
         <module name="bw-calendar-ucaldav" />
@@ -509,6 +509,7 @@
       <module name="bw-wfmodules-org-jasig-cas" target="11" />
       <module name="bw-wfmodules-org-jolokia-core" target="11" />
       <module name="bw-wfmodules-org-slf4j-slf4j-api" target="11" />
+      <module name="bw-wfmodules-postgresql" target="11" />
       <module name="bw-wfmodules-selfreg" target="11" />
       <module name="bw-wfmodules-spring" target="11" />
       <module name="bw-wfmodules-spring-aop" target="11" />
