@@ -1,4 +1,4 @@
-[[elasticsearch]]
+[[elasticsearch, Install and configure Elasticsearch]]
 === Elasticsearch
 Bedework uses ElasticSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as a local application, useful for development - or as an external service - which will be required for clustering.
 
