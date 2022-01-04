@@ -38,36 +38,44 @@ The steps are (described in detail below)
 ==== Install wildfly and bedework
 Bedework is installed as a feature pack which has a dependency on wildfly. The galleon tool supports layers which effectively define a particular flavor of the feature.
 
+Many bedework layers have multiple versions for supported databases. For each the appropriate driver will be installed and datasources will be configured. The database is indicated by the suffix "-xx" where xx is:
+
+.Bedework supported database configurations
+|===
+| Suffix | Database | Notes
+
+| h2
+| h2
+| Used for quickstart and demo purposes only
+
+| pg
+| postgresql
+| Postgresql 9 drivers are installed and datasources are configured.
+
+|===
+
 .Bedework supported layers
 |===
 | Layer | Function
 
-| bw-all-h2
-| Deploy all bedework components using the supplied h2 databases. Wildfly datasources will be created for h2.
-
-| bw-all-pg
-| Deploy all bedework components for postgresql. Wildfly datasources will be created for postgresql.
+| bw-all-xx
+| Deploy all bedework components for the indicated database.
 
 | bw-calendar-ro
-| Deploy the readonly calendar system (public events web service and feeder) along with the timezone service
+| Deploy the readonly calendar system (public events web service and feeder) along with the timezone service. No database drivers or datasources are configured.
 
-| bw-calendar-h2
-| Deploy the full calendar system (readonly, admin and submission tools) using the supplied h2 database along with the timezone service. A wildfly datasource will be created for h2.
+| bw-calendar-xx
+| Deploy the full calendar system (readonly, admin and submission tools) for the indicated database along with the timezone service.
 
-| bw-calendar-pg
-| Deploy the full calendar system (readonly, admin and submission tools) for a postgresql database along with the timezone service. A wildfly datasource will be created for postgresql.
+| bw-carddav-xx
+| Deploy the carddav gateway server for the indicated database along with the timezone service.
 
-| bw-synch-h2
-| Deploy the full synch engine using the supplied h2 database along with the timezone service. A wildfly datasource will be created for h2.
-
-| bw-synch-pg
-| Deploy the full synch engine for a postgresql database along with the timezone service. A wildfly datasource will be created for postgresql.
+| bw-synch-xx
+| Deploy the full synch engine for the indicated database along with the timezone service.
 
 | bw-tzserver
 | Deploy the timezone service
 |===
 
-Note that the h2 versions are only suitable for demonstration purposes. The postgresql versions should be installed for production.
-
-Also note that, while different database layers can be mixed, it's not clear what will result from selecting the same application for different databases, e.g. bw-calendar-h2 AND bw-calendar-pg.
+Note that, while different database layers can be mixed, it's not clear what will result from selecting the same application for different databases, e.g. bw-calendar-h2 AND bw-calendar-pg.
 
