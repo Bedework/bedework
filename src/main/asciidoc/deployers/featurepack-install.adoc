@@ -54,6 +54,11 @@ Many bedework layers have multiple versions for supported databases. For each th
 
 |===
 
+Following is a table showing all defined layers. Many are flagged as dependencies of others so, for example, bw-calendar-pg will include bw-calendar-ro.
+
+The bw-demo* levels provide a version for demonstration purposes.
+The bw-prod* levels provide a more production ready version which will probably still require configuration changes but should be close.
+
 .Bedework supported layers
 |===
 | Layer | Function
