@@ -14,7 +14,6 @@
         <module name="bw-category-ear" />
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
-        <module name="bw-wfmodules-postgresql" />
         <module name="bw-webclient-calauth" />
         <module name="bw-util-http" />
         <module name="bw-note-common" />
@@ -195,6 +194,7 @@
       <module name="bw-access" target="11" />
       <module name="bw-access (1)" target="11" />
       <module name="bw-addrbook-client" target="11" />
+      <module name="bw-apacheds" target="11" />
       <module name="bw-caldav" target="11" />
       <module name="bw-caldav-server" target="11" />
       <module name="bw-caldav-util" target="11" />

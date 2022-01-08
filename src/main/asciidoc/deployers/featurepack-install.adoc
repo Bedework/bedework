@@ -27,7 +27,7 @@ The steps are (described in detail below)
 
 * Start wildfly
 
-* Set the administrator id/password
+* Set a management id/password for the cli
 
 * restart wildfly (so the new id/pw is used)
 
@@ -54,17 +54,25 @@ Many bedework layers have multiple versions for supported databases. For each th
 
 |===
 
-Following is a table showing all defined layers. Many are flagged as dependencies of others so, for example, bw-calendar-pg will include bw-calendar-ro.
+Following are tables showing all defined layers. Many are flagged as dependencies of others so, for example, bw-calendar-pg will include bw-calendar-ro.
 
-The bw-demo* levels provide a version for demonstration purposes.
 The bw-prod* levels provide a more production ready version which will probably still require configuration changes but should be close.
 
-.Bedework supported layers
+.Top level layers
 |===
 | Layer | Function
 
-| bw-all-xx
-| Deploy all bedework components for the indicated database.
+| bw-demo-xx
+| Deploy all bedework components for the indicated database as a demo system.
+
+The system will include apacheds as an ldap server with a preconfigured set of accounts - all with the password "bedework".
+|===
+
+Thd next set of layers are used to install specific bedework apps. These could be used to install a specific subset of applications.
+
+.Specific app layers
+|===
+| Layer | Function
 
 | bw-calendar-ro
 | Deploy the readonly calendar system (public events web service and feeder) along with the timezone service. No database drivers or datasources are configured.
@@ -75,11 +83,53 @@ The bw-prod* levels provide a more production ready version which will probably 
 | bw-carddav-xx
 | Deploy the carddav gateway server for the indicated database along with the timezone service.
 
+| bw-eventreg-xx
+| Deploy the event registration service for the indicated database
+
+| bw-notify-h2
+| Deploy the notification service for the indicated database
+
+| bw-selfreg-h2
+| Deploy the self registration service for the indicated database
+
 | bw-synch-xx
 | Deploy the full synch engine for the indicated database along with the timezone service.
 
 | bw-tzserver
 | Deploy the timezone service
+|===
+
+The next layers are used to install certain functions and may be useful with some of the application layers.
+
+.Subsidiary layers
+|===
+| Layer | Function
+
+| bw-auth-apacheds
+| Configure wildfly to handle ldap authentication using a deployed apacheds ldap server. This is used for the demo system and testing.
+
+| bw-auth-ldap
+| Configure wildfly to handle ldap authentication. This is the same configuration used for apacheds. It WILL need editing to connect to other ldap servers but should provide a good starting point.
+
+| bw-auth-props
+| Authenticate using the wildfly property files. Not used much.
+|===
+
+The remainder are dependencies of the other layers..
+
+.Lower level layers
+|===
+| Layer | Function
+
+| bw-calendar-rw
+| Configuration needed by all calendar app levels.
+
+| bw-common
+| Configuration needed by all levels.
+
+| postgresql-driver
+| Used by other layers that use postgresql
+
 |===
 
 Note that, while different database layers can be mixed, it's not clear what will result from selecting the same application for different databases, e.g. bw-calendar-h2 AND bw-calendar-pg.
