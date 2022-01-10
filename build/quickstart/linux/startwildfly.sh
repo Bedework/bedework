@@ -50,7 +50,7 @@ testmode=""
 profiler=""
 oomdump=""
 
-debugGC=false
+debugGc=false
 
 exprfilters=INFO
 
@@ -186,6 +186,9 @@ HAWT_OPTS="-Dhawtio.authenticationEnabled=true -Dhawtio.realm=other -Dhawtio.rol
 
 if [ "$debugGc" = "true" ] ; then
   # Java 8 export JAVA_OPTS="$JAVA_OPTS -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -Xloggc:$JBOSS_SERVER_DIR/log/jvm.log -verbose:gc "
+  touch $JBOSS_SERVER_DIR/log/loggc.log
+  touch $JBOSS_SERVER_DIR/log/jvm.log
+
   export JAVA_OPTS="$JAVA_OPTS -Xlog:gc*:file=$JBOSS_SERVER_DIR/log/loggc.log -verbose:gc -Xloggc:$JBOSS_SERVER_DIR/log/jvm.log "
 fi
  
