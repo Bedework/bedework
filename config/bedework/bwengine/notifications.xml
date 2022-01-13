@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
-<notification-properties xmlns="http://bedework.org/ns/" type="org.bedework.common.jmx.NotificationPropertiesImpl">
-  <notificationDirHref>/user/notify-user/Notifications/</notificationDirHref>
-  <notifierId>localBedework</notifierId>
-  <notifierToken>abcd</notifierToken>
-  <notifierURI>http://localhost:8080/notify/</notifierURI>
-  <outboundEnabled>true</outboundEnabled>
-</notification-properties>

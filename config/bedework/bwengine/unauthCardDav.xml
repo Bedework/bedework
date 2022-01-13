@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
-<carddav-info xmlns="http://bedework.org/ns/" type="org.bedework.common.jmx.CardDavInfoImpl">
-  <auth>false</auth>
-  <url>http://localhost:8080/pubcarddav</url>
-  <cutypeMapping>individual:/directory/users/,group:/directory/groups/,room:/directory/locations,*:/directory/</cutypeMapping>
-</carddav-info>

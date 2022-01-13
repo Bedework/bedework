@@ -7,10 +7,9 @@
     <version>4.0.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.bedework</groupId>
   <artifactId>bedework</artifactId>
   <version>4.0.0-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>pom</packaging>
   <name>Bedework</name>
 
   <description>Quickstart scripts and resources</description>
@@ -65,55 +64,4 @@
       </plugin>
     </plugins>
   </build>
-
-  <profiles>
-    <profile>
-      <id>Not feature pack build</id>
-
-      <activation>
-        <property>
-          <name>!bw-wildfly-feature-pack-build</name>
-        </property>
-      </activation>
-
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.bedework</groupId>
-            <artifactId>bw-util-maven-deploy</artifactId>
-            <configuration>
-              <warName>bedework</warName>
-              <baseDirPath>${project.basedir}/../..</baseDirPath>
-              <propsPath>${org.bedework.deployment.properties}</propsPath>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-
-    <profile>
-      <id>Feature pack build</id>
-
-      <activation>
-        <property>
-          <name>bw-wildfly-feature-pack-build</name>
-        </property>
-      </activation>
-
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.bedework</groupId>
-            <artifactId>bw-util-maven-deploy</artifactId>
-
-            <configuration>
-              <warName>bedework</warName>
-              <baseDirPath>${org.bedework.feature-build.deployment.basedir}</baseDirPath>
-              <propsPath>${org.bedework.feature-build.deployment.properties}</propsPath>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 </project>

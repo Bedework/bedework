@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
-<synch xmlns="http://bedework.org/ns/" type="org.bedework.common.jmx.SynchConfigImpl">
-  <connectorId>localBedework</connectorId>
-  <managerUri>http://localhost:8080/synch/manager</managerUri>
-  <wsdlUri>http://localhost:8080/xmlspecs/wsdls/synchws/wssvc.wsdl</wsdlUri>
-</synch>

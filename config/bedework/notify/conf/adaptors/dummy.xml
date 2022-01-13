@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
-<notify-adaptor xmlns="http://bedework.org/ns/" type="org.bedework.notifier.outbound.dummy.DummyAdaptorConfig">
-  <adaptorClassName>org.bedework.notifier.outbound.dummy.DummyAdaptor</adaptorClassName>
-  <maxInstances>1</maxInstances>
-  <mbeanClassName>org.bedework.notifier.outbound.dummy.DummyConf</mbeanClassName>
-  <name>dummy</name>
-  <type>dummy</type>
-</notify-adaptor>

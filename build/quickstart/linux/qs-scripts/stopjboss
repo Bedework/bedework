@@ -1,3 +1,3 @@
 #! /bin/bash
 
-. ./bedework/build/quickstart/linux/stopjboss.sh
+./wildfly/bin/bwstopwildfly.sh "$@"

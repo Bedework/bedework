@@ -1,3 +1,3 @@
 #! /bin/bash
 
-. ./bedework/build/quickstart/linux/starth2.sh
+./wildfly/bin/bwstarth2.sh "$@"
