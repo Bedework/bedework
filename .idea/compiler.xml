@@ -9,6 +9,7 @@
         <module name="bw-self-registration-ear" />
         <module name="bw-self-registration-web" />
         <module name="bw-sometime-database" />
+        <module name="bw-util-opensearch" />
         <module name="bw-category-web" />
         <module name="bw-xml-xrd" />
         <module name="bw-category-ear" />
@@ -73,7 +74,6 @@
         <module name="bw-note-servlet" />
         <module name="bw-synch-shared" />
         <module name="bw-calutil" />
-        <module name="bedework" />
         <module name="bw-dav-tester" />
         <module name="bw-category-war" />
         <module name="bw-category-common" />
@@ -141,7 +141,6 @@
         <module name="bw-event-registration-service" />
         <module name="bw-jsforj" />
         <module name="sched-assist-spi" />
-        <module name="bw-util-elasticsearch" />
         <module name="bw-calendar-client-bedework-common" />
         <module name="bw-synch-war" />
         <module name="bw-calendar-all-ear" />
@@ -387,6 +386,7 @@
       <module name="bw-util-maven-deploy-wfmodule" target="11" />
       <module name="bw-util-misc" target="11" />
       <module name="bw-util-network" target="11" />
+      <module name="bw-util-opensearch" target="11" />
       <module name="bw-util-options" target="11" />
       <module name="bw-util-security" target="11" />
       <module name="bw-util-servlet" target="11" />
@@ -501,13 +501,13 @@
       <module name="bw-wfmodules-org-apache-jdkim-library" target="11" />
       <module name="bw-wfmodules-org-apache-struts-core" target="11" />
       <module name="bw-wfmodules-org-apache-struts-taglib" target="11" />
-      <module name="bw-wfmodules-org-elasticsearch-elasticsearch" target="11" />
-      <module name="bw-wfmodules-org-elasticsearch-elasticsearch-hlclient" target="11" />
       <module name="bw-wfmodules-org-freemarker" target="11" />
       <module name="bw-wfmodules-org-hibernate-core" target="11" />
       <module name="bw-wfmodules-org-imgscalr-lib" target="11" />
       <module name="bw-wfmodules-org-jasig-cas" target="11" />
       <module name="bw-wfmodules-org-jolokia-core" target="11" />
+      <module name="bw-wfmodules-org-opensearch-opensearch" target="11" />
+      <module name="bw-wfmodules-org-opensearch-opensearch-hlclient" target="11" />
       <module name="bw-wfmodules-org-slf4j-slf4j-api" target="11" />
       <module name="bw-wfmodules-postgresql" target="11" />
       <module name="bw-wfmodules-selfreg" target="11" />
@@ -559,7 +559,7 @@
       <module name="bw-wfmodules-util-http" target="11" />
       <module name="bw-wfmodules-util-index" target="11" />
       <module name="bw-wfmodules-util-indexing" target="11" />
-      <module name="bw-wfmodules-util-indexing-elasticsearch" target="11" />
+      <module name="bw-wfmodules-util-indexing-opensearch" target="11" />
       <module name="bw-wfmodules-util-jms" target="11" />
       <module name="bw-wfmodules-util-jmx" target="11" />
       <module name="bw-wfmodules-util-jolokia" target="11" />

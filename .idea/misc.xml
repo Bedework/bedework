@@ -104,6 +104,7 @@
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-mail/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-common/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-msgs/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-util-index/bw-util-elasticsearch/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-network/bw-util-httpmodule/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-strutsmodule/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-category/bw-wfmodules-category-ical/pom.xml" />

@@ -17,7 +17,7 @@ JBOSS_CONFIG="standalone"
 JBOSS_SERVER_DIR="$BASE_DIR/$quickstart/$JBOSS_VERSION/$JBOSS_CONFIG"
 JBOSS_DATA_DIR="$JBOSS_SERVER_DIR/data"
 bedework_data_dir="$JBOSS_DATA_DIR/bedework"
-es_data_dir="$bedework_data_dir/elasticsearch"
+search_data_dir="$bedework_data_dir/opensearch"
 
 TMP_DIR="$JBOSS_SERVER_DIR/tmp"
 
@@ -60,19 +60,19 @@ rm -rf h2/
 cd $BASE_DIR
 ./starth2
 
-# ------------------------------------- ES data
+# ------------------------------------- OpenSearch data
 
 cd $TMP_DIR/
-rm elasticsearch.zip
-rm -rf elasticsearch
-cp $resources/data/elasticsearch.zip .
+rm opensearch.zip
+rm -rf opensearch
+cp $resources/data/opensearch.zip .
 
-unzip elasticsearch.zip
+unzip opensearch.zip
 
-rm elasticsearch.zip
+rm opensearch.zip
 
-rm -rf $es_data_dir/elasticsearch
-cp -r elasticsearch $es_data_dir/
+rm -rf $search_data_dir/opensearch
+cp -r opensearch $search_data_dir/
 
 # ------------------------------------- directory data
 

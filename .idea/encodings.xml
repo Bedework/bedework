@@ -305,6 +305,8 @@
     <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-elasticsearch/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-indexing/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-indexing/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-opensearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-opensearch/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-index/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-index/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-logging/src/main/java" charset="UTF-8" />
@@ -521,10 +523,6 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-apache-struts-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-apache-struts-taglib/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-apache-struts-taglib/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-elasticsearch-elasticsearch-hlclient/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-elasticsearch-elasticsearch-hlclient/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-elasticsearch-elasticsearch/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-elasticsearch-elasticsearch/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-freemarker/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-freemarker/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-hibernate-core/src/main/java" charset="UTF-8" />
@@ -535,6 +533,10 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-jasig-cas/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-jolokia-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-jolokia-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-opensearch-opensearch-hlclient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-opensearch-opensearch-hlclient/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-opensearch-opensearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-opensearch-opensearch/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-postgresql/src/main/java" charset="UTF-8" />
@@ -621,8 +623,8 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util-conf/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util-hibernate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util-hibernate/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util-index/bw-wfmodules-util-indexing-elasticsearch/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util-index/bw-wfmodules-util-indexing-elasticsearch/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util-index/bw-wfmodules-util-indexing-opensearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util-index/bw-wfmodules-util-indexing-opensearch/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util-index/bw-wfmodules-util-indexing/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util-index/bw-wfmodules-util-indexing/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util-index/src/main/java" charset="UTF-8" />

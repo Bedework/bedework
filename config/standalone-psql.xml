@@ -220,7 +220,7 @@
       <logger category="org.apache.commons.beanutils">
         <level name="INFO"/>
       </logger>
-      <logger category="org.elasticsearch">
+      <logger category="org.opensearch">
         <level name="INFO"/>
       </logger>
       <logger category="org.bedework.access.EvaluatedAccessCache">
