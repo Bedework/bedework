@@ -164,6 +164,7 @@
         <module name="bw-calendar-sysevents-common" />
         <module name="bw-util-servlet-filters" />
         <module name="bw-note-war" />
+        <module name="bw-wf-calendar-subsystem" />
         <module name="bw-caldav-server" />
         <module name="bw-calendar-annotations" />
         <module name="bw-util-logging" />
@@ -407,6 +408,7 @@
       <module name="bw-webclient-submit" target="11" />
       <module name="bw-webclient-ucal" target="11" />
       <module name="bw-webdav" target="11" />
+      <module name="bw-wf-calendar-subsystem" target="11" />
       <module name="bw-wf-feature-pack" target="11" />
       <module name="bw-wfmodules" target="11" />
       <module name="bw-wfmodules (1)" target="11" />
