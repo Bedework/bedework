@@ -1,0 +1,4053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.7.1">
+<title>Bedework Enterprise Calendar System</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="./coderay-asciidoctor.css">
+</head>
+<body class="standard toc2 toc-left">
+<div id="header">
+<h1>Bedework Enterprise Calendar System</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_introducing_bedework">Introducing Bedework</a></li>
+<li><a href="#overview">1. Overview</a>
+<ul class="sectlevel2">
+<li><a href="#features-of-Bedework">1.1. Features of Bedework</a></li>
+<li><a href="#release-notes">1.2. Release Notes</a>
+<ul class="sectlevel3">
+<li><a href="#_release_3_13_1">1.2.2. Release 3.13.1:</a></li>
+<li><a href="#_release_3_13_0">1.2.3. Release 3.13.0:</a></li>
+<li><a href="#_release_3_12_7">1.2.4. Release 3.12.7:</a></li>
+<li><a href="#_release_3_12_6">1.2.5. Release 3.12.6:</a></li>
+<li><a href="#_release_3_12_5">1.2.6. Release 3.12.5:</a></li>
+<li><a href="#_release_3_12_4">1.2.7. Release 3.12.4:</a></li>
+<li><a href="#_release_3_12_3">1.2.8. Release 3.12.3:</a></li>
+<li><a href="#_release_3_12_2">1.2.9. Release 3.12.2:</a></li>
+<li><a href="#_release_3_12_1">1.2.10. Release 3.12.1:</a></li>
+<li><a href="#_release_3_12_0">1.2.11. Release 3.12.0:</a></li>
+<li><a href="#_release_3_11_2">1.2.12. Release 3.11.2:</a></li>
+<li><a href="#_release_3_11_1">1.2.13. Release 3.11.1:</a></li>
+</ul>
+</li>
+<li><a href="#system-overview">1.3. System Overview</a>
+<ul class="sectlevel3">
+<li><a href="#_calendar_architecture">1.3.1. Calendar Architecture</a></li>
+</ul>
+</li>
+<li><a href="#history-background">1.4. Bedework History and Background</a></li>
+<li><a href="#calendar-standards-interoperability">1.5. Calendaring Standards &amp; Interoperability</a></li>
+<li><a href="#technologies">1.6. Underlying technologies</a></li>
+</ul>
+</li>
+<li><a href="#_public_administrator_features">2. Public Administrator Features</a>
+<ul class="sectlevel2">
+<li><a href="#public-events-registration">2.1. Public Events Registration</a>
+<ul class="sectlevel3">
+<li><a href="#_displaying_the_current_status">2.1.1. Displaying the current status</a></li>
+<li><a href="#_custom_fields">2.1.2. Custom Fields</a></li>
+<li><a href="#_data_elements">2.1.3. Data elements</a></li>
+</ul>
+</li>
+<li><a href="#_subscribing_to_a_feed_for_public_calendars">2.2. Subscribing to a feed for public calendars.</a>
+<ul class="sectlevel3">
+<li><a href="#_note">2.2.1. Note:</a></li>
+<li><a href="#_creating_a_public_subscription">2.2.2. Creating a public subscription</a></li>
+<li><a href="#_mapping_locations">2.2.3. Mapping Locations</a></li>
+<li><a href="#_mapping_categories">2.2.4. Mapping categories</a></li>
+<li><a href="#_examples">2.2.5. Examples</a></li>
+</ul>
+</li>
+<li><a href="#auth-users">2.3. Public events authorised users</a>
+<ul class="sectlevel3">
+<li><a href="#_creating_a_user">2.3.1. Creating a user</a></li>
+<li><a href="#_updating_a_user">2.3.2. Updating a user</a></li>
+<li><a href="#_updating_group_membership">2.3.3. Updating group membership.</a></li>
+<li><a href="#_a_problem_to_be_resolved_later">2.3.4. A problem to be resolved later:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_deployers">3. Deployers</a>
+<ul class="sectlevel2">
+<li><a href="#installing-the-quickstart">3.1. Installing the quickstart (3.12.x onwards)</a>
+<ul class="sectlevel3">
+<li><a href="#_which_version">3.1.1. Which version</a></li>
+<li><a href="#_apacheds">3.1.2. Apacheds</a></li>
+<li><a href="#_elasticsearch">3.1.3. ElasticSearch</a></li>
+<li><a href="#_maven">3.1.4. Maven</a></li>
+<li><a href="#default-maven-profiles">3.1.5. Default Maven Profiles</a></li>
+<li><a href="#_security">3.1.6. Security</a></li>
+<li><a href="#_building">3.1.7. Building</a></li>
+<li><a href="#_deploying">3.1.8. Deploying</a></li>
+</ul>
+</li>
+<li><a href="#configuring-wildfly">3.2. Configuring wildfly</a>
+<ul class="sectlevel3">
+<li><a href="#_adding_an_admin_account">3.2.1. Adding an admin account</a></li>
+</ul>
+</li>
+<li><a href="#_setting_up_databases">Setting up databases</a>
+<ul class="sectlevel3">
+<li><a href="#_postgresql">postgresql</a></li>
+<li><a href="#_mysql">MySQL</a></li>
+</ul>
+</li>
+<li><a href="#elasticsearch">3.3. Elasticsearch</a>
+<ul class="sectlevel3">
+<li><a href="#_disabling_public_events_registration">3.3.1. Disabling Public Events Registration</a></li>
+<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">3.3.2. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
+<li><a href="#_notifications_from_eventreg">3.3.3. Notifications from EventReg</a></li>
+</ul>
+</li>
+<li><a href="#_initializing_the_database">3.4. Initializing the database</a>
+<ul class="sectlevel3">
+<li><a href="#_rebuild_bw_xml">3.4.1. (Re)build bw-xml</a></li>
+<li><a href="#_validating_locations">3.4.2. Validating locations.</a></li>
+<li><a href="#_searching_for_public_locations">3.4.3. Searching for public locations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_development">4. Development</a>
+<ul class="sectlevel2">
+<li><a href="#todo-list">4.1. Todo list</a>
+<ul class="sectlevel3">
+<li><a href="#_imminent_changes">4.1.1. Imminent changes</a></li>
+<li><a href="#_future_changes">4.1.2. Future changes</a></li>
+</ul>
+</li>
+<li><a href="#running-caldav-tester">4.2. Running the caldav tester</a>
+<ul class="sectlevel3">
+<li><a href="#_setup">4.2.1. Setup</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#older-releases">5. Older Bedework Versions (3.10 and Prior)</a>
+<ul class="sectlevel3">
+<li><a href="#_3_10_4">3.10.4</a></li>
+<li><a href="#_3_10_3">3.10.3</a></li>
+<li><a href="#_bedework_3_10_2">Bedework 3.10.2</a></li>
+<li><a href="#_3_10">3.10</a></li>
+<li><a href="#_3_8_0_13">3.8.0.13</a></li>
+<li><a href="#_3_8_0_11">3.8.0.11</a></li>
+<li><a href="#_3_8">3.8</a></li>
+<li><a href="#_3_7">3.7</a></li>
+<li><a href="#_3_6">3.6</a></li>
+<li><a href="#_3_6_release_candidate_1">3.6 release candidate 1</a></li>
+<li><a href="#_3_5">3.5</a></li>
+<li><a href="#_3_5_release_candidate_2">3.5 release candidate 2</a></li>
+<li><a href="#_3_5_release_candidate_1">3.5 release candidate 1</a></li>
+<li><a href="#_3_5_preview_release">3.5 preview release</a></li>
+<li><a href="#_3_4_1_1">3.4.1.1</a></li>
+<li><a href="#_3_4_1">3.4.1</a></li>
+<li><a href="#_3_4">3.4</a></li>
+<li><a href="#_3_3_1">3.3.1</a></li>
+<li><a href="#_3_3_1_preview_release">3.3.1 preview release</a></li>
+<li><a href="#_3_3">3.3</a></li>
+<li><a href="#_3_3_release_candidate">3.3 release candidate</a></li>
+<li><a href="#_3_3_preview_release">3.3 preview release</a></li>
+<li><a href="#_3_2">3.2</a></li>
+<li><a href="#_3_1">3.1</a></li>
+<li><a href="#_3_1_release_candidate_4">3.1 release candidate 4</a></li>
+<li><a href="#_3_1_release_candidate_3">3.1 release candidate 3</a></li>
+<li><a href="#_3_1_release_candidate_2">3.1 release candidate 2</a></li>
+<li><a href="#_3_1_release_candidate_1">3.1 release candidate 1</a></li>
+<li><a href="#_3_1pre">3.1pre</a></li>
+<li><a href="#_3_1pre_2">3.1pre</a></li>
+<li><a href="#_3_1pre_3">3.1pre</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Bedework system supports both personal and group calendaring and scheduling and public events.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introducing_bedework">Introducing Bedework</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bedework is an open-source enterprise calendar system that supports public, personal, and group calendaring.  It is designed to conform to current calendaring standards with a goal of attaining strong interoperability between other calendaring systems and clients.   Bedework is built with an emphasis on higher education, though it is used by many commercial enterprises.</p>
+</div>
+<div class="paragraph">
+<p>You may choose to deploy Bedework for public events calendaring, personal calendaring and scheduling, or both.  Bedework is suitable for embedding in other applications or in portals and has been deployed across a wide range of environments.</p>
+</div>
+<div class="paragraph">
+<p>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/nYZoufGfV6c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview">1. Overview</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="features-of-Bedework">1.1. Features of Bedework</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Java: Written completely in Java, Bedework is system independent.  This version compiles and runs in Java 11.</p>
+</li>
+<li>
+<p>Standards based and interoperable: Interoperability with other calendar systems and clients by way of standards compliance is a fundamental design goal of the Bedework system. The following standards are supported:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>iCalendar support (rfc5545)</p>
+</li>
+<li>
+<p>iTIP (rfc2446)</p>
+</li>
+<li>
+<p>CalDAV (rfc4791)CalDAV scheduling (draft)</p>
+</li>
+<li>
+<p>CardDAV v.4</p>
+</li>
+<li>
+<p>VPoll (draft)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>CalDAV server : a full CalDAV server is a core feature of Bedework. It can be used with any CalDAV capable client and has been shown to work with Mozilla Lightning, Apple&#8217;s iCal, Evolution, and others.</p>
+</li>
+<li>
+<p>CardDAV server : Bedework provides a CardDAV server providing personal and public contact stores for use in the personal client. A stand-alone JavaScript address book application is included with the personal web client suitable for deployment in other web applications such as email web clients.</p>
+</li>
+<li>
+<p>Web clients :The Bedework web clients provide access to public events in guest mode and to public and personal events in authenticated mode. All web clients are easily skinned allowing a high degree of customization.</p>
+</li>
+<li>
+<p>Public calendar suites: Public events are displayed using "calendar suites" allowing multiple organizations to maintain their own public views of events with whatever degree of visibility is appropriate.  A Bedework public calendaring installation may have one or many calendar suites.   A calendar suite provides a customized view of events, custom theming, and control over how events are tagged by event administrators.</p>
+</li>
+<li>
+<p>Public calendar feeds and embeddable JavaScript widgets, supporting ical, jcal, xcal, json, and XML.</p>
+</li>
+<li>
+<p>Personal calendars: Bedework provides a web client for personal and group calendaring including scheduling.  Using CalDAV desktop clients, users can see a fully synchronized view of their personal and subscribed events between their desktop client and the web client.</p>
+</li>
+<li>
+<p>Administrative client for public events: Public event entry and maintenance is carried out through the administrative web client.  The system supports three roles: Super Users control global system settings including user and calendar maintenance and the setup of  calendar suites.  Calendar Suite Owners can modify the settings of their calendar suite, and Event Administrators can add and edit events for the administrative groups to which they belong.</p>
+</li>
+<li>
+<p>Public event community submission: Bedework provides a web client for submitting events to a public queue allowing members of your community who are not event administrators to suggest public events.</p>
+</li>
+<li>
+<p>Public events registration: Bedework supports registration for public events with waitlisting, registrant caps, and notifications.  Custom registration fields can be built and reused for any registerable event.</p>
+</li>
+<li>
+<p>Account Self-registration: This client allows users to register for a Bedework calendar account to register for events or other features.</p>
+</li>
+<li>
+<p>Highly customizable look and feel and standards based: The web clients are themed using CSS and a theme settings file, or by deeper manipulation of XSLT. Designers can theme Bedework for multiple clients and uses, without involving your programming staff. Bedework comes with skins for producing the web clients, data feeds, and displays suitable for handheld devices. Bedework provides a widget builder that makes it easy to embed dynamic event listings on static web sites.</p>
+</li>
+<li>
+<p>Database independence - Hibernate : The core of the calendar uses Hibernate for all database transactions giving support of many database systems and enterprise level performance and reliability. A number of caching schemes are implemented for Hibernate including clustered systems giving further options for improving availability.</p>
+</li>
+<li>
+<p>Sharing : Full CalDAV access control is available allowing the sharing of calendars and calendar entities based on authentication status and identity.</p>
+</li>
+<li>
+<p>Scheduling :  Bedework supports scheduling of meetings including invitations and their responses. Caldav scheduling (still in draft) is supported. Freebusy is supported and the busy time is displayed as attendee lists are built.  Access control allows users to determine who may attempt to schedule meetings with them.</p>
+</li>
+<li>
+<p>Import and export : Events can be imported and exported in iCalendar (RFC2445) format. This provides an option for populating the calendar from external sources.  A dump/restore utility provides a means to backup and restore xml data files.</p>
+</li>
+<li>
+<p>Calendar subscriptions : Users may subscribe to calendars to which they have access, including public and personal calendars. iCalendar data feeds are available from the public web client.</p>
+</li>
+<li>
+<p>Multiple calendars : The core system supports multiple calendars for users and for public events.</p>
+</li>
+<li>
+<p>Tagging &amp; Filtering :  Events and folders can be tagged by any number of categories and event views, feeds, and widgets can be filtered by these.</p>
+</li>
+<li>
+<p>Internationalization : Bedework supports full internationalization, including multilingual content (though multilingual content creation is not yet exposed in the web UI).</p>
+</li>
+<li>
+<p>Data feeds: Bedework produces RSS, Javascript (e.g. json), iCalendar, and XML feeds.  Custom feeds can be developed by writing an XSL skin. Feeds can be filtered by category or creator, and a feed and widget builder is available to help end users and developers design public feeds and embeddable event widgets.</p>
+</li>
+<li>
+<p>Portal support : Bedework has been shown to work as a JSR168 portlet in Jetspeed, uPortal and Liferay using the portal-struts bridge.</p>
+</li>
+<li>
+<p>Timezone support : Full timezone support is implemented. There is a set of system defined timezones based upon externally available sets of timezone definitions. In addition users are able to store their own timezone definitions.</p>
+</li>
+<li>
+<p>Recurring events : Extensive recurring event support is available via CalDAV and the web clients.</p>
+</li>
+<li>
+<p>Event references : Users may add public event references to their personal calendars. Event references can be annotated by the user.</p>
+</li>
+<li>
+<p>Pluggable group support : Bedework uses a pluggable class implementation to determine group membership for authenticated users allowing organizations to implement a class which uses an external directory. The default class uses internal tables to maintain group membership. Different implementations can be used for administrative and personal use allowing the separation of any given users roles.</p>
+</li>
+<li>
+<p>Container authentication :  There is no authentication code in Bedework.  Rather, Bedework behaves as a standard servlet, and all authentication is carried out through external mechanisms. Standard container authentication (via Tomcat or Jboss) and filter based Yale CAS authentication are used in production.  The quickstart comes packaged with the Apache DS server against which the quickstart deployment of Bedework authenticates.  This server can be used in production, though many deployers opt to authenticate against their organization&#8217;s existing directory.</p>
+</li>
+<li>
+<p>Support for other calendar systems and clients : It is possible to access an entire calendar with a single url. This can be used to subscribe to a Bedework calendar from Google or Outlook. Bedework can also take advantage of the richness of CalDAV capable desktop clients such as Apple&#8217;s iCal and Mozilla Lightning.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes">1.2. Release Notes</h3>
+<div class="sect3">
+<h4 id="_release_3_13_1">1.2.1. Release 3.13.1:</h4>
+<div class="paragraph">
+<p>There was long standing a bug in category handling for updates. An attempt
+was made to preserve default categories for calsuites when an event is
+updated. For example if an event is suggested and accepted the
+accepting calsuite has its default category added to the event.</p>
+</div>
+<div class="paragraph">
+<p>This code was being applied to collections which made it impossible to
+turn off a default category added to, e.g. an alias, by mistake.</p>
+</div>
+<div class="paragraph">
+<p>This release also introduces a new authenticated public context. This
+is intended to be used for departmental calendars for example. There were
+a number of changes needed to make this work but most of the work will
+come in setting up the calendar collections and aliases. Documentation
+and examples will follow later as always.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Drop the explicit reference to maven profile bedework-3 in the bw script. Fix that script to allow -P &lt;profile&gt; and use that in the install script to use bedework-3<br>
+This allows us to specify a default profile that differs from the bedework-3 profile.</p>
+</li>
+<li>
+<p>Additionally - add support for a .bw file in the user home which allows setting of the profile. See <a href="#default-maven-profiles">Default Maven Profiles</a></p>
+</li>
+<li>
+<p>Wildfly galleon installer 4.0.3.Final stopped working soon after the last release. Updating to a later version and hoping this won&#8217;t break.</p>
+</li>
+<li>
+<p>Updated google maps url generation to use location combinedValues property</p>
+</li>
+<li>
+<p>If the location map url is "NO-LINK" (without quotes) then no link will be generated.</p>
+</li>
+<li>
+<p>Remove BasicHttpClient. This necessitated some config changes -</p>
+<div class="ulist">
+<ul>
+<li>
+<p>authCardDav.xml and unauthCardDav.xml in bwengine now have a url rather than host, port and context.</p>
+</li>
+<li>
+<p>notify/notify-config.xml changed - removed host, port, context. Added URI</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Web client changes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Change how we select the mode of working -</p>
+</li>
+<li>
+<p>Config for user and submission clients require new entry - &lt;readWrite&gt;true&lt;/readWrite&gt;</p>
+</li>
+<li>
+<p>Add a new authenticated public client. This should allow limited read-only access to views of the data. Users will be added to admin groups to control the access.</p>
+</li>
+<li>
+<p>Removed bwapptype parameter from web.xml files. Value is duplicated in client configs.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Bug fixes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>User TermsFilterBuilder for collections. Was generating partially working query</p>
+</li>
+<li>
+<p>change "|" to " or " in xsl - was not encoded - broke some pages</p>
+</li>
+<li>
+<p>Problem related to timestamp handling was causing ES version errors.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_13_0">1.2.2. Release 3.13.0:</h4>
+<div class="paragraph">
+<p>This release mostly consists of upgrades to almost the latest ElasticSearch (always a moving target), the currently latest wildfly and to Java 11 the current LTS release.</p>
+</div>
+<div class="paragraph">
+<p>Installing the quickstart requires that you first install docker if you wish to have a quickstart image of elasticsearch installed.</p>
+</div>
+<div class="paragraph">
+<p>There have additionally been some minor changes in configuration and the addition of a tool feature to help in calendar suite creation.</p>
+</div>
+<div class="paragraph">
+<p>Beyond that there is very little functional change since the last release. However, note that the move to the latest ES required a complete rewrite of the query and indexing modules.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Upgrade to ES 7.2.0</p>
+</li>
+<li>
+<p>Upgrade to wildfly 17.0.1.Final</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use galleon to install - allows updates</p>
+</li>
+<li>
+<p>Don&#8217;t use wildfly modules for deployed ear dependencies.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Require java 11.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Many changes to build. Much of the XML support is removed from java core.</p>
+</li>
+<li>
+<p>Updates to maven plugin versions</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Minor changes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add an error log handler</p>
+</li>
+<li>
+<p>Reduce noise in logs</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Remove bogus elements from config files</p>
+</li>
+<li>
+<p>Remove ldap group member so we don&#8217;t get annoying error messages</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Add auth user update to cli tools</p>
+</li>
+<li>
+<p>Fix NPE when editing auth user that doesn&#8217;t exist</p>
+</li>
+<li>
+<p>Some fixes for travis build</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_12_7">1.2.3. Release 3.12.7:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Fixes to install script</p>
+</li>
+<li>
+<p>Library updates</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Update http version to avoid security issues</p>
+</li>
+<li>
+<p>Add missing dependencies to eventreg</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Add tzsvr data to quickstart</p>
+</li>
+<li>
+<p>Changes to tz conversion - still broken</p>
+</li>
+<li>
+<p>XSL fixes - missing approots</p>
+</li>
+<li>
+<p>Client</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Remove empty x-properties on event update</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Log processing</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Was missing log prefix in parser</p>
+</li>
+<li>
+<p>Add more checks for same task</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Deployment</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use deployment base</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sync</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use last-modified if etag not present</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Watch for null x-properties in event list. Can be caused by deleting them in db.</p>
+</li>
+<li>
+<p>Indexing</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Don&#8217;t index x-properties - can be large</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_12_6">1.2.4. Release 3.12.6:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Library updates</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Update servlet api version</p>
+</li>
+<li>
+<p>Update jackson version to avoid security issues</p>
+</li>
+<li>
+<p>Update http client version to avoid security issues</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Log analysis</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Updates to generated figures and some analysis of access logs</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sync process</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Update category prop updater to fix NPE</p>
+</li>
+<li>
+<p>Add callback method to fetch location by combined value. Use it when updating or adding an event.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Indexing</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix location mapping - was missing combined field.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Install</p>
+<div class="ulist">
+<ul>
+<li>
+<p>bwcli wasn&#8217;t being built by install script</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Restores</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Restores were failing because the fake event property calpath code was getting an NPE - no principal. Fixed it so principal isn&#8217;t needed. Caused cascading updates up the stack. Dropped the principal object where possible. Generally only need the href.</p>
+</li>
+<li>
+<p>Resource content handling was broken in restore. Should just set the byte value and create the blob when we have a session</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Client</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add action to clear any principals notifications</p>
+</li>
+<li>
+<p>Fix feeder main/listEvents action - now works</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Others</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Svci pars wasn&#8217;t handling the readonly flag properly. Worked for unauth but wasn&#8217;t turning on readonly for authenticated methods.</p>
+</li>
+<li>
+<p>Drop loader-repository elements from (some) jboss-app.xml</p>
+</li>
+<li>
+<p>Better error messages when building index docs and in AccessUtil</p>
+</li>
+<li>
+<p>Watch for null home in CalSuites</p>
+</li>
+<li>
+<p>Response: Add method to set Response status from a response</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_12_5">1.2.5. Release 3.12.5:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Logging</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add a bunch of jsonIgnore to the Logged interface to stop the fields turning up in json.</p>
+</li>
+<li>
+<p>Fix error methods. Use exception message as first param.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Client</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Cache default filters for ro client. Use calsuite as key</p>
+</li>
+<li>
+<p>Cache user collections in session. Use calsuite group as key</p>
+</li>
+<li>
+<p>NoopAction extended MainAction. Should not as it retrieves a lot of unused data.</p>
+</li>
+<li>
+<p>Make session timeout for /cal and /soedept configurable and default to 5</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Don&#8217;t store collection in BwCollectionFilter. Was never used. Just store path as entity</p>
+</li>
+<li>
+<p>Fix FlushMap in utils. Current fetched value was not discarded.</p>
+</li>
+<li>
+<p>Fix bw script - was missing some of the newer modules</p>
+</li>
+<li>
+<p>BwLastMod:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add JsonIgnore to getDbEntity or we get a loop.</p>
+</li>
+<li>
+<p>Set the db entity when we clone or we get an NPE</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_12_4">1.2.6. Release 3.12.4:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Fixed a few bugs.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>BwResourceContent bug below</p>
+</li>
+<li>
+<p>Suppress a request-out log message unlesss really on way out</p>
+</li>
+<li>
+<p>Index wrapper type for calsuite - not calsuite itself</p>
+</li>
+<li>
+<p>Try to force refresh after adding calsuite</p>
+</li>
+<li>
+<p>HttpUtil POST produced Accept rather than Content-type</p>
+</li>
+<li>
+<p>Bad forward in add calsuite produced bogus error message</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Updated log analyzer so results are easier to read.</p>
+</li>
+<li>
+<p>Factor deployment modules out of bw-util into new bw-util-deploy</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_12_3">1.2.7. Release 3.12.3:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Added new cli command to analyze log data.</p>
+</li>
+<li>
+<p>Add new REQUEST-OUT log message for analyzer</p>
+</li>
+<li>
+<p>A number of bug fixes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Touch collection on update of acls - was not getting indexed</p>
+</li>
+<li>
+<p>Calling wrong indexer to update resource content</p>
+</li>
+<li>
+<p>Wasn&#8217;t saving entity in response from indexer</p>
+</li>
+<li>
+<p>Add cache to SvcSimpleFilterParser so we don&#8217;t repeatedly attempt to fetch children of collections.</p>
+</li>
+<li>
+<p>Should be returning an empty array when the event is not found</p>
+</li>
+<li>
+<p>Was calling wrong method to fetch location for update</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Note: A bug was discovered almost immediately. The commit is at <a href="https://github.com/Bedework/bw-calendar-engine/commit/c83e77e3f5ceb990029b84ca7440af83fdc4e568" class="bare">https://github.com/Bedework/bw-calendar-engine/commit/c83e77e3f5ceb990029b84ca7440af83fdc4e568</a> and a patch:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Index: bw-calendar-engine-facade/src/main/java/org/bedework/calfacade/BwResourceContent.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+&lt;+&gt;UTF-8
+===================================================================
+--- bw-calendar-engine-facade/src/main/java/org/bedework/calfacade/BwResourceContent.java	(revision b248db13b030a73828d7b8c9428dda9ebf262a0c)
++++ bw-calendar-engine-facade/src/main/java/org/bedework/calfacade/BwResourceContent.java	(revision c83e77e3f5ceb990029b84ca7440af83fdc4e568)
+@@ -187,14 +187,11 @@
+       while((len = str.read(buffer)) != -1) {
+         b64out.write(buffer, 0, len);
+       }
++      b64out.close();
+
+       return new String(baos.toByteArray());
+     } catch (final Throwable t) {
+       throw new CalFacadeException(t);
+-    } finally {
+-      try {
+-        b64out.close();
+-      } catch (Throwable t) {}
+     }
+   }</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_12_2">1.2.8. Release 3.12.2:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Added new cli command to allow refresh of tz data.</p>
+</li>
+<li>
+<p>Widespread changes to remove references to log4j. All localized in one source file (and a few poms for runnable code).</p>
+</li>
+<li>
+<p>Use asciidoctor to generate this document.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_12_1">1.2.9. Release 3.12.1:</h4>
+<div class="sect4">
+<h5 id="_searching_for_contactslocations">Searching for contacts/locations</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>In the admin and event submissions clients replaced simple drop down with a search interface. Requires back end support for the search )a restful style with json response).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_es_only_read_only_clients">ES only read-only clients.</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Implement an ES only read-only interface. The public client can be built without any hibernate support as it doesn&#8217;t interact with the database. This required at least:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Minor API changes</p>
+</li>
+<li>
+<p>Indexing of more entities - principals, calendar suites, preferences, filters.</p>
+</li>
+<li>
+<p>New core interface implementation which only handles the read only methods.</p>
+</li>
+<li>
+<p>Refactored the core to remove a callback. Also to spilt off the read only code.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_split_out_es_indexes">Split out ES indexes</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Significant change to indexing to try to resolve the contacts issue and prepare for upgrade.</p>
+</li>
+<li>
+<p>ES v7 will allow only one type per index. To prepare the index was split into many. Requires a doctype parameter to be added to most calls, significant changes to the (re)indexing process and other associated changes.</p>
+</li>
+<li>
+<p>Almost all calendar engine classes were affected in some way - mostly relatively minor.</p>
+</li>
+<li>
+<p>Configuration changes: no longer have a public/user calendar name. The location of the mappings is a directory - not a file and there are multiple mapping files under directories named with the lowercased doctype name.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_es_only_read_only_interface_for_caldav_read_only_methods">Use ES only read-only interface for CalDAV read-only methods.</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>The hope is this will provide a significant performance improvement for those methods.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_other_changes">Other changes.</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Merged pull request from viqueen. Deal with DAV security issue.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_12_0">1.2.10. Release 3.12.0:</h4>
+<div class="sect4">
+<h5 id="_move_to_githubmaven">Move to github/maven</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>A number of modules have been replaced with their github/maven equivalents from the 4.x branches. Other than changes for the build process these modules are functionally equivalent. This change was initiated to make some module classes available for externally built plugin modules. The 3.x modules and their 4.x replacements are:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>rpiutil &#8594; bw-util</p>
+</li>
+<li>
+<p>bwaccess &#8594; bw-access</p>
+</li>
+<li>
+<p>webdav &#8594; bw-webdav</p>
+</li>
+<li>
+<p>caldav &#8594; bw-caldav (bwcaldav is the bedework implementation of the interface)</p>
+</li>
+<li>
+<p>bwxml &#8594; bw-xml</p>
+</li>
+<li>
+<p>eventreg &#8594; bw-event-registration</p>
+</li>
+<li>
+<p>selfreg &#8594; bw-self-registration</p>
+</li>
+<li>
+<p>synch &#8594; bw-synch</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Related changes were to build the runnable post-deploy app in bw-util-bw-deploy and run that. Some configuration properties had to be changed to align.</p>
+</li>
+<li>
+<p>Having done the above the master on github for the calendar engineand client is now the current 3.x dev version, there is a 4.x branch for future development and release branches will be created as necessary.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_related_to_mavengithub_switch">Related to maven/github switch</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>The urls for wsdls is changed. e.g. /wsdls/synch/wssvc.wsdl becomes /xmlspecs/wsdls/synchws/wssvc.wsdl. This necessitates changes to configurations:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>synch/../orgSyncV2.xml</p>
+</li>
+<li>
+<p>synch/../localBedework.xml</p>
+</li>
+<li>
+<p>bwengine/synch.xml</p>
+</li>
+<li>
+<p>bwengine/system.xml</p>
+</li>
+<li>
+<p>eventreg.xml</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Yet more refactoring was needed. Turns out we had an unbuildable set of modules with bw-xml depending on bw-util for the deployment. Broke out the 2 modules with a dependency on bw-xml as bw-util2</p>
+</li>
+<li>
+<p>Moved all the xsl into it&#8217;s own module - bw-calendar-xsl. Thi salso needs changes to configs - all xsl url paths are now prefixed with /approots - the context at which the xsl is deployed. Look for elements appRoots and browserResourceRoots in the configs</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_scheduling">Scheduling</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Fixes to scheduling code to try to ensure pending inbox events get deleted</p>
+</li>
+<li>
+<p>Updates to iSchedule client for later version of httplient. Moved some code out of caldav tester into common utils</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_notifications">Notifications</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix the listeners so they close down without exceptions</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_websockets">Websockets</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Add code to support websockets for a new experimental streaming protocol (a CalConnect initiative)</p>
+</li>
+<li>
+<p>Many changes to build process - wewbsockets applications cannot be inside an ear file. Now possible to deploy as a standalone war. Websockets endpoint is now a separate module.</p>
+</li>
+<li>
+<p>Websockets moduleacts as a proxy to caldav.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_other">Other</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Delay getting a change table entry when realiasing. Was intefering with a test in update.</p>
+</li>
+<li>
+<p>Getting deadlocks when deleting tombstoned events. Change the colpath so they disapppear but need a purge process to finally remove them.</p>
+</li>
+<li>
+<p>Tasks collections were not getting created with correct type - nor were they returning a supported component type.</p>
+</li>
+<li>
+<p>Some fixes to the selfreg feature and additions to the cli to drive it.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_11_2">1.2.11. Release 3.11.2:</h4>
+<div class="sect4">
+<h5 id="_indexing">Indexing</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Add a reindex operation which reindexes all the data in place. Used when ES schema changes.</p>
+</li>
+<li>
+<p>Add an indexstats operation to get counts for a named index</p>
+</li>
+<li>
+<p>Add a setProdAlias operation. Rebuild index no longer automatically makes new index prod. This also allows us to back off the index.</p>
+</li>
+<li>
+<p>Extra operations added to cli to reindex and change indexes</p>
+</li>
+<li>
+<p>Fix update of UpdateInfo in ES index. Was doing a string concat rather than an increment.</p>
+</li>
+<li>
+<p>Index individual location fields so they can be searched</p>
+</li>
+<li>
+<p>Add a fetch single event method to the indexer</p>
+</li>
+<li>
+<p>Synch around event cache accesses</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_notifications_2">Notifications</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Add a preference to allow suppression of notifications for a user. This shoudl be applied to public-user to avoid a lot of overhead</p>
+</li>
+<li>
+<p>Change logging is now modified. Messages are now logged to audit.org.bedework.chgnote. Requires a change to standalone.xml or the equivalent</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_sync_and_orgsync">Sync and orgSync:</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Add orgSync connector to sync engine</p>
+</li>
+<li>
+<p>Fully index location sub-fields - add a set of keys for mapping locations</p>
+</li>
+<li>
+<p>New indexer methods to enable searching for particular location keys</p>
+</li>
+<li>
+<p>Allow specification of a mapping key in subscription and in x-property</p>
+</li>
+<li>
+<p>Updates x-calendar xsd for mapping key as param</p>
+</li>
+<li>
+<p>Changes to admin client to allow specification of orgSync</p>
+</li>
+<li>
+<p>Upgrade to httpClient to handle orgSync certs</p>
+</li>
+<li>
+<p>Add further parameters to OrgSync subscription -updated admin client to support</p>
+</li>
+<li>
+<p>Unsubscribe before deleting content to avoid race.</p>
+</li>
+<li>
+<p>Get persisted event on fetch for update</p>
+</li>
+<li>
+<p>Allow for pw without id in subscription - it&#8217;s the key in OrgSync</p>
+</li>
+<li>
+<p>Implement setting category on add and update from containing collection.</p>
+</li>
+<li>
+<p>Update was setting datestamps before checking for no changes - was propagated to db entity preventing further updates.</p>
+</li>
+<li>
+<p>Do a better job of setting content-type and encoding for SOAP interactions.</p>
+</li>
+<li>
+<p>Add array of keys to location entity for use by synch process.</p>
+</li>
+<li>
+<p>Fix handling of locations in Synch engine. Add the locKey parameter to the location. It gets propagated to the x-prop for use later.</p>
+</li>
+<li>
+<p>Refresh rate wasn&#8217;t getting through. Fixed</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_public_events_admin">Public events admin</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Try to mitigate errors caused when a validation error occurs on publish. Indexed and db version did not match.</p>
+</li>
+<li>
+<p>Added missing retry action in event submit.</p>
+</li>
+<li>
+<p>Fixed race condition when selecting a group in admin client</p>
+</li>
+<li>
+<p>Fix the eventsPending page. POST was losing the filter</p>
+</li>
+<li>
+<p>Calsuite specific approvers</p>
+</li>
+<li>
+<p>Avoid ConcurrentModificationException in admin client</p>
+</li>
+<li>
+<p>Changes for eventreg</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add some commands to cli</p>
+</li>
+<li>
+<p>Use wildfly modules</p>
+</li>
+<li>
+<p>More HttpUtil methods for use in eventreg and sync</p>
+</li>
+<li>
+<p>Fix web.xml and post-deploy for wildfly</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Use of deleted flag</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Index the flag</p>
+</li>
+<li>
+<p>Changes to allow DeleteEventAction to just set the flag</p>
+</li>
+<li>
+<p>Searching can filter on deleted flag</p>
+</li>
+<li>
+<p>Add mark deleted button to form</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Add tool command to set authuser roles</p>
+</li>
+<li>
+<p>Add tool command to add/remove approver for calsuite</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_clients">Clients</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix errors caused by entry into showEventMore with a new session</p>
+</li>
+<li>
+<p>Switch public client to use href in urls instead of calPath + guid + recurrenceId</p>
+</li>
+<li>
+<p>Last date in header was the same as the first date</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_other_2">Other</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Removed the principal path elements from the basic config. Changing them is always a bad idea so they may as well be fixed.</p>
+</li>
+<li>
+<p>Use wildfly modules where possible - ensure we get consistent SOAP behavior</p>
+</li>
+<li>
+<p>Further changes for httpclient. Fix to timezones</p>
+</li>
+<li>
+<p>Logging changes to try to reduce output</p>
+</li>
+<li>
+<p>Try to spot ConnectionResetByPeer errors and leave quietly</p>
+</li>
+<li>
+<p>Try to make less noise when a hung session is shut down</p>
+</li>
+<li>
+<p>Avoid tzsvr startup errors - and db should be static</p>
+</li>
+<li>
+<p>Allow setting of session timeout in deploy properties</p>
+</li>
+<li>
+<p>Drop deprecated jboss config</p>
+</li>
+<li>
+<p>Allow setting of soap address in post deploy</p>
+</li>
+<li>
+<p>Try to fix some issues with JMX which surfaced when testing eventreg</p>
+</li>
+<li>
+<p>Add an Events method to calculate instances for recurring event</p>
+</li>
+<li>
+<p>Fix carddav logging</p>
+</li>
+<li>
+<p>Add flag to ifInfo to indicate a dontKill server process. Stops
+autokill killing off some of the long running system jobs.</p>
+</li>
+<li>
+<p>Fixes to get carddav working again. Most of them backported to 3.11.1</p>
+</li>
+<li>
+<p>Fixes to get vpoll working again. Broke as a result of ical4j upgrade.</p>
+</li>
+<li>
+<p>Add event dumping to the new (incomplete) dump format.</p>
+</li>
+<li>
+<p>Try another approach to stop exceptions when a new user turns up</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_3_11_1">1.2.12. Release 3.11.1:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Change the schema and filter to allow searches on x-properties.</p>
+</li>
+<li>
+<p>Backported carddav changes from 3.11.2</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="system-overview">1.3. System Overview</h3>
+<div class="paragraph">
+<p>Bedework System Architecture</p>
+</div>
+<div class="paragraph">
+<p>Bedework has a central server architecture and is modular and extensible.  It consists of the following components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bedework core calendar engine</p>
+</li>
+<li>
+<p>Public events web client, called a “Calendar Suite”, for display of public events</p>
+</li>
+<li>
+<p>Public events cached feeds and widget builder, supporting ical, json, and XML and for producing embeddable JavaScript widgets for use on other websites.</p>
+</li>
+<li>
+<p>Public events administration web client for entering public events, moderating pending events from the submissions client, and configuring calendar suites</p>
+</li>
+<li>
+<p>Public events submission web client for authenticated members of your community to suggest public events – these become pending events in the admin client</p>
+</li>
+<li>
+<p>Personal and group calendaring web client with a subscription model to Bedework  public calendars, user calendars, and external calendar feeds</p>
+</li>
+<li>
+<p>CalDAV server for integration with CalDAV capable desktop (and web) clients such as Apple&#8217;s iCal or Mozilla Lightning</p>
+</li>
+<li>
+<p>CardDAV server that supports contacts for scheduling in the personal client.</p>
+</li>
+<li>
+<p>A JavaScript-only CardDAV address book web client is available for use with the CardDAV server. The address book comes with the Bedework personal web client, and is suitable for use with other web applications (e.g. webmail).</p>
+</li>
+<li>
+<p>TimeZone server for support of timezone information.</p>
+</li>
+<li>
+<p>Dump/Restore command-line utilities for database backup, initialization, and upgrades.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_calendar_architecture">1.3.1. Calendar Architecture</h4>
+<div class="paragraph">
+<p>The Bedework system is divided into two main spaces: the public events space, and the personal and group calendaring space which are kept separate by design. Public events are stored below a public calendar root folder and personal calendars are below a user calendar root folder.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./resources/bw-basic-arch.png" alt="Basic Architecture">
+</div>
+</div>
+<div class="paragraph">
+<p>Personal calendar users (and other clients) can subscribe to public events, but users may only add public events using the Administrative and Community Submissions web clients. For more information about Bedework&#8217;s public and personal event calendaring models, see Public Events Calendaring and Personal &amp; Group Calendaring.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="history-background">1.4. Bedework History and Background</h3>
+<div class="paragraph">
+<p>Bedework was established in March 2005 in succession to UW Calendar. In December 2006 Bedework received the Andrew W. Mellon Foundation&#8217;s Technology Collaboration (MATC) Award. Since then the project has prospered, and in early 2009, Bedework became an incubator project of Jasig (<a href="http://www.jasig.org/" class="bare">http://www.jasig.org/</a>) now a part of the Apereo Foundation (<a href="http://www.apereo.org" class="bare">http://www.apereo.org</a>).</p>
+</div>
+<div class="paragraph">
+<p>Bedework is in use by institutions large and small, educational, governmental, commercial, and non-profit.</p>
+</div>
+<div class="paragraph">
+<p>Bedework is named after the Venerable Bede, a highly influential monk and scholar from the area of Northumbria in Britain who in 725AD wrote the treatise, "On the Reckoning of Time".  Bede is pronounced like “bead”, Bedework is pronounced “bead work”.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="calendar-standards-interoperability">1.5. Calendaring Standards &amp; Interoperability</h3>
+<div class="paragraph">
+<p>The Bedework implementation team participates in the standards process as a member of <a href="http://www.calconnect.org/">CalConnect, the Calendaring and Scheduling Consortium</a>, which is "focused on the interoperable exchange of calendaring and scheduling information between dissimilar programs, platforms, and technologies."</p>
+</div>
+<div class="paragraph">
+<p>Interoperability with other calendar systems and clients by way of standards compliance is an important design goal of the Bedework system.</p>
+</div>
+<div class="paragraph">
+<p>Bedework is designed to conform to existing calendar standards. For more information about calendaring and calendaring standards, please visit <a href="https://devguide.calconnect.org/Appendix/Standards/">the CalConnect Devguide</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="technologies">1.6. Underlying technologies</h3>
+<div class="paragraph">
+<p>The following lists some of the core technologies used by the Bedework platform:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Apache Struts MVC</p>
+</li>
+<li>
+<p>CalDAV</p>
+</li>
+<li>
+<p>Cascading Style Sheets (CSS)</p>
+</li>
+<li>
+<p>iCAL: RFC 5545</p>
+</li>
+<li>
+<p>iCal4j</p>
+</li>
+<li>
+<p>Java Servlet API</p>
+</li>
+<li>
+<p>Java Server Pages (JSP)</p>
+</li>
+<li>
+<p>JavaScript (including jcal, jQuery, jQueryUI, Bootstrap, and others)</p>
+</li>
+<li>
+<p>Portlet API: JSR-168</p>
+</li>
+<li>
+<p>XHTML</p>
+</li>
+<li>
+<p>XML</p>
+</li>
+<li>
+<p>XPath</p>
+</li>
+<li>
+<p>XSLT</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See also <a href=":standards.html">Calendaring Standards</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_public_administrator_features">2. Public Administrator Features</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="public-events-registration">2.1. Public Events Registration</h3>
+<div class="paragraph">
+<p>Bedework supports a public events registration system that allows authenticated users to register for events. Users may view and modify their registrations, such as unregistering or changing the number of tickets they&#8217;ve requested. When registration is full, users may choose to be placed on a waiting list. Users on waiting lists will automatically be moved up in the queue if space becomes available.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./resources/eventRegRegistered.png" alt="Registered Event">
+</div>
+</div>
+<div class="paragraph">
+<p>With the form elements as shown below, administrators can specify how many users may register, how many tickets each registrant may request, and set the opening and closing dates of registration. Administrators can view and modify a registration list and download CSV files of their registrations on-demand.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./resources/eventRegAdminForm.png)" alt="Register Event Form">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_displaying_the_current_status">2.1.1. Displaying the current status</h4>
+<div class="paragraph">
+<p>Clicking on the "View registrations" button will take you to a screen showing the current registrations for the event. This screen also allows the administrator to hold some tickets and to update or remove registrations.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_custom_fields">2.1.2. Custom Fields</h4>
+<div class="paragraph">
+<p>Administrators may add custom field elements for use during registration. These custom fields are displayed to the user when they register for the event. These fields can be used to obtain extra information from the user as they register, for example dietary restrictions.</p>
+</div>
+<div class="paragraph">
+<p>Currently the results are only visible in the downloaded registrations.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_data_elements">2.1.3. Data elements</h4>
+<div class="paragraph">
+<p>Data about the event is maintained in x-properties attached to the event and provides the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Booking window start and end</p>
+</li>
+<li>
+<p>Number of tickets</p>
+</li>
+<li>
+<p>Max number of tickets per person</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_subscribing_to_a_feed_for_public_calendars">2.2. Subscribing to a feed for public calendars.</h3>
+<div class="paragraph">
+<p>You probably want the incoming events to all be flagged with a specific category or categories. This can be useful for filtering.It makes it easier to include the calendar collections imported by the sync engine. Before carrying out the following steps ensure these categories are created.</p>
+</div>
+<div class="paragraph">
+<p>For public events there are a few more options available when subscribing.</p>
+</div>
+<div class="paragraph">
+<p><strong>Process Locations and Contacts:</strong> This causes locations and contacts to be moved into x-properties <strong>"X-BEDEWORK-LOCATION"</strong> and <strong>"X-BEDEWORK-CONTACT"</strong>. The receiving end (bedework) may carry out further actions to validate the location or contact and as a result may set a preexisting location or contact in the event. The x-property is always available for display but this process allows the system to validate the location/contact.</p>
+</div>
+<div class="paragraph">
+<p><strong>Process categories:</strong> This does the same for categories.</p>
+</div>
+<div class="sect3">
+<h4 id="_note">2.2.1. Note:</h4>
+<div class="paragraph">
+<p>If you don&#8217;t select those options then categories and locations will be created in bedework. This is probably not what is wanted as these are uncurated.</p>
+</div>
+<div class="paragraph">
+<p>By setting the <strong>Process&#8230;&#8203;.</strong> flag you ensure that such locations and categories don&#8217;t end up in the database.</p>
+</div>
+<div class="paragraph">
+<p><strong>Suppress deletion of events?</strong> This means that if events disappear from the feed they will stay in the database. This effectively turns the feed into a change feed adn can significantly reduce the size of the data. It does mean that events that MUST be deleted will require help from an administrator with sufficient privileges.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_creating_a_public_subscription">2.2.2. Creating a public subscription</h4>
+<div class="paragraph">
+<p>As a super user</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Switch to the System tab and select "Manage calendars and folders".</p>
+</li>
+<li>
+<p>Open up "public" and click the "+" on the cals folder.</p>
+</li>
+<li>
+<p>Set the name - e.g "Athletics"</p>
+</li>
+<li>
+<p>Check off categories for filtering</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on "show/hide categories used for filtering"</p>
+</li>
+<li>
+<p>Scroll down and select a previously created category or categories</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Check off any categories you want applied on input -</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on "show/hide categories for auto-tagging on input"</p>
+</li>
+<li>
+<p>Scroll down and select a previously created category or categories</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Mark as a subscription</p>
+</li>
+<li>
+<p>Set the URL in the URl field</p>
+</li>
+<li>
+<p>Set an id/password if necessary</p>
+</li>
+<li>
+<p>Select the "Process Locations and Contacts" and "Process Categories" checkboxes if desired (probably so)</p>
+</li>
+<li>
+<p>Set the location key field name for mapping locations</p>
+</li>
+<li>
+<p>Set the refresh rate in minutes</p>
+</li>
+<li>
+<p>Save</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mapping_locations">2.2.3. Mapping Locations</h4>
+<div class="paragraph">
+<p>Locations created and stored within bedework are broken out into a number of fields. Out of these the following are used to create a combined address value which is used for export and import mapping:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Street address</p>
+</li>
+<li>
+<p>Room</p>
+</li>
+<li>
+<p>City</p>
+</li>
+<li>
+<p>State</p>
+</li>
+<li>
+<p>zip/postcode</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These values are separated by a comma and a space. Missing values are skipped.</p>
+</div>
+<div class="paragraph">
+<p>The update process matches the value of the supplied LOCATION property against that combined value.</p>
+</div>
+<div class="paragraph">
+<p>If there is an EXACT match then the bedework location will be attached to the syncronized event. Otherwise the location will be left in the x-property. Feeds and the front end display will normally display the x-location as the location for the event.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mapping_categories">2.2.4. Mapping categories</h4>
+<div class="paragraph">
+<p>An equivalent process takes place with categories though the mapping is much simpler. Categories only have a single value. An exact match in the imported event will cause the bedework category to be applied.</p>
+</div>
+<div class="paragraph">
+<p>The use of bedework categories is important for much of the front-end filtering of events as this is driven primarily by categories.</p>
+</div>
+<div class="paragraph">
+<p>As an example if we have the alias structure<br>
+<code>performances/comedy</code><br>
+and comedy is tagged with the category <strong>comedy</strong> and performances with the category <strong>performances</strong> then the imported event needs both categories.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_examples">2.2.5. Examples</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="auth-users">2.3. Public events authorised users</h3>
+<div class="paragraph">
+<p>These are users with rights to create events, perhaps publish them and possibly have access to calendar suite setup.</p>
+</div>
+<div class="sect3">
+<h4 id="_creating_a_user">2.3.1. Creating a user</h4>
+<div class="paragraph">
+<p>Go to the "Users" tab and click on "Manage Admin Roles".</p>
+</div>
+<div class="paragraph">
+<p>If the user does not appear in the list then type the account into the box labeled "Edit admin roles by userid" and hit enter.</p>
+</div>
+<div class="paragraph">
+<p>All users should have the "Public Events" flag set.</p>
+</div>
+<div class="paragraph">
+<p>Users who may create but not publish should have the "Content Admin" flag set.</p>
+</div>
+<div class="paragraph">
+<p>Users who may create and publish will also have the "Approver" flag set.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_updating_a_user">2.3.2. Updating a user</h4>
+<div class="paragraph">
+<p>Go to the same location, "Users" &#8594; "Manage Admin Roles", locate the user in the list and click on the "edit" link.</p>
+</div>
+<div class="paragraph">
+<p>Flags may be set or unset from there.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_updating_group_membership">2.3.3. Updating group membership.</h4>
+<div class="paragraph">
+<p>Until the user is added to a group or groups they cannot create events. Each calendar suite will have one or more groups associated with it. Typically there is an admin group associated directly with the suite and a submission group which is a member of the admin group.</p>
+</div>
+<div class="paragraph">
+<p>Approvers are typically added to the admin group and event creators get added to the submission group.</p>
+</div>
+<div class="paragraph">
+<p>To add a user or group click on "Users" then "Manage Admin Groups".</p>
+</div>
+<div class="paragraph">
+<p>Find the group to update and click on the "membership" link.</p>
+</div>
+<div class="paragraph">
+<p>To add a user enter their account in the "Add member" box, ensure "User" is selected then press the "Add" button.</p>
+</div>
+<div class="paragraph">
+<p>To add a group ensure "Group" is selected.</p>
+</div>
+<div class="paragraph">
+<p>To remove a group member, click on the trash icon next to the account.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_a_problem_to_be_resolved_later">2.3.4. A problem to be resolved later:</h4>
+<div class="paragraph">
+<p>Note that the rights of the users are attached to their auth user entry. So a user is always an approver whatever groups they are in.</p>
+</div>
+<div class="paragraph">
+<p>There is no provision for a user being an approver in one group and an event creator in another. At some point we may move the rights to the associated groups so that approval rights will come about because of group membership.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deployers">3. Deployers</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="installing-the-quickstart">3.1. Installing the quickstart (3.12.x onwards)</h3>
+<div class="paragraph">
+<p>The current quickstart is installed by executing a script which will create the quickstart directory and then download, clone and build. In the event of a failure part way through, the script may be restarted with the <strong>restart</strong> parameter.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+This requires git 2.x or greater. The clones use a tag rather than branch and this does not work for older gits.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The latest script may be downloaded from <a href="https://github.com/Bedework/bedework/raw/master/build/quickstart/linux/installQS.sh">github</a>. Alternatively clone the <a href="https://github.com/Bedework/bedework.git">bedework repo</a> and use the script at <strong>bedework/build/quickstart/linux/installQS.sh</strong></p>
+</div>
+<div class="paragraph">
+<p>Specific versions of the script are at:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.13.1/build/quickstart/linux/installQS.sh">3.13.1</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.13.0/build/quickstart/linux/installQS.sh">3.13.0</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.12.7/build/quickstart/linux/installQS.sh">3.12.7</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.12.6/build/quickstart/linux/installQS.sh">3.12.6</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.12.5/build/quickstart/linux/installQS.sh">3.12.5</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.12.3/build/quickstart/linux/installQS.sh">3.12.3</a></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_which_version">3.1.1. Which version</h4>
+<div class="paragraph">
+<p>The script will ask you if you want the development or latest version.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_apacheds">3.1.2. Apacheds</h4>
+<div class="paragraph">
+<p>The script will install apacheds. This will install a directory with some initial ids in place for testing. Ultimately you&#8217;ll want to use your own directory service.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_elasticsearch">3.1.3. ElasticSearch</h4>
+<div class="paragraph">
+<p>You need a running elasticsearch - release 7.2. The quickstart install will optionally install a docker image and customize it for the quickstart.</p>
+</div>
+<div class="paragraph">
+<p>This requires you to have docker and docker-compose installed first.</p>
+</div>
+<div class="paragraph">
+<p>The elasticsearch instructions related to installing a docker image can be found at <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html" class="bare">https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html</a></p>
+</div>
+<div class="paragraph">
+<p>After the install is complete there will be 2 scripts startES.sh and stopES.sh which will start and stop the docker image.</p>
+</div>
+<div class="paragraph">
+<p>If you want to install your own copy and configure it there is an elasticsearch.yml configuration file in bedework/conf/bedework/elasticsearch. Use this to replace the config in the downloaded ES.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_maven">3.1.4. Maven</h4>
+<div class="paragraph">
+<p>This is a maven project and as usual you need to set up your maven profile in ~/.m2/settings.xml. The script will display a possible settings.xml file with the paths filled in.</p>
+</div>
+<div class="paragraph">
+<p>If you want to merge in the profile to an existing settings.xml ensure you also merge in the <strong>pluginGroups</strong> section.</p>
+</div>
+<div class="paragraph">
+<p>The profile does not need to be active by default if you have other profiles. The build process will specify the bedework-qs profile.</p>
+</div>
+<div class="paragraph">
+<p>Below is the contents of an example settings.xml file. This file must be set up before allowing the script to continue on to the builds otherwise they will fail during deployment.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;settings</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://maven.apache.org/SETTINGS/1.0.0</span><span class="delimiter">&quot;</span></span>
+          <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
+          <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://maven.apache.org/SETTINGS/1.0.0</span>
+                         <span class="content">http://maven.apache.org/xsd/settings-1.0.0.xsd</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;pluginGroups&gt;</span>
+    <span class="tag">&lt;pluginGroup&gt;</span>org.bedework<span class="tag">&lt;/pluginGroup&gt;</span>
+  <span class="tag">&lt;/pluginGroups&gt;</span>
+
+  <span class="tag">&lt;profiles&gt;</span>
+    <span class="tag">&lt;profile&gt;</span>
+      <span class="tag">&lt;id&gt;</span>bedework-3<span class="tag">&lt;/id&gt;</span>
+      <span class="tag">&lt;activation&gt;</span>
+        <span class="tag">&lt;activeByDefault&gt;</span>false<span class="tag">&lt;/activeByDefault&gt;</span>
+      <span class="tag">&lt;/activation&gt;</span>
+      <span class="tag">&lt;properties&gt;</span>
+        <span class="tag">&lt;org.bedework.deployment.basedir&gt;</span>$qs<span class="tag">&lt;/org.bedework.deployment.basedir&gt;</span>
+        <span class="tag">&lt;org.bedework.deployment.properties&gt;</span>$qs/bedework/config/wildfly.deploy.properties<span class="tag">&lt;/org.bedework.deployment.properties&gt;</span>
+      <span class="tag">&lt;/properties&gt;</span>
+    <span class="tag">&lt;/profile&gt;</span>
+  <span class="tag">&lt;/profiles&gt;</span>
+<span class="tag">&lt;/settings&gt;</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="default-maven-profiles">3.1.5. Default Maven Profiles</h4>
+<div class="paragraph">
+<p>Note there appears to be a bug in the use of <strong><strong>activeByDefault</strong></strong>.
+Explicitly specifying a profile with the maven -P parameter is supposed
+to deactivate a profile marked as activeByDefault. This is not (always?)
+happening.</p>
+</div>
+<div class="paragraph">
+<p>If you only have profile marking by default should be fine. To ensure
+only one profile (or the expected profiles) are active cd into the project
+and try</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>mvn -P bedework-3 help:active-profiles</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To alleviate some of the issues of having multiple profiles for bedework
+builds the bw script now sources a .bw file in the home directory
+which can set some defaults. At the moment the only default is the
+profile. An example .bw file is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>#
+# Defaults for bw script
+#
+echo "Setting defaults from .bw"
+bw_mvnProfile="-P bedework_dev"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note the setting needs to include the -P.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_security">3.1.6. Security</h4>
+<div class="paragraph">
+<p>During the install an id and password will be set up so that the install process can reindex the data. These will allow use of the cli and the hawtio console.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_building">3.1.7. Building</h4>
+<div class="paragraph">
+<p>In many cases it is possible to simply cd in to the appropriate directory and do a mvn install with the bedework-3 profile. However there is a <strong>bw</strong> script which - while taking longer - does build all projects a module depends upon. This avoids the need to work out the dependency orderings of the independent projects. Thus</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>./bw deploy</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>will build a lot of projects eventually building the client project which deploys an ear file.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_deploying">3.1.8. Deploying</h4>
+<div class="paragraph">
+<p>As part of the bedework project there is a maven plugin which uses a properties file to handle post-build deployment issues. Essentially the ear or war as built acts as a template for the deployer.</p>
+</div>
+<div class="paragraph">
+<p>The deployment process may involve inserting filters for CAS, adding property values to web.xml files, cloning entire wars for calendar suites etc.</p>
+</div>
+<div class="paragraph">
+<p>The file <strong>bedework/config/wildfly.deploy.properties</strong> is the quickstart version of that file.</p>
+</div>
+<div class="paragraph">
+<p>When developing your own service the first thing to do is create a repository with your files and copy the above file into that repository. Then set the <strong>org.bedework.deployment.properties</strong> value in your maven settings.xml to point to that file.</p>
+</div>
+<div class="paragraph">
+<p>DO NOT change the <strong>org.bedework.deployment.basedir</strong> property - unless you move the quickstart. This property is used to locate the wildfly instance.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="configuring-wildfly">3.2. Configuring wildfly</h3>
+<div class="sect3">
+<h4 id="_adding_an_admin_account">3.2.1. Adding an admin account</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>cd wildfly
+./bin/add-user.sh
+
+   What type of user do you wish to add?
+    a) Management User (mgmt-users.properties)
+    b) Application User (application-users.properties)
+   (a): b
+
+   Enter the details of the new user to add.
+   Using realm 'ApplicationRealm' as discovered from the existing property files.
+   Username : hawtio-admin
+   Password recommendations are listed below. To modify these restrictions edit the add-user.properties configuration file.
+    - The password should not be one of the following restricted values {root, admin, administrator}
+    - The password should contain at least 8 characters, 1 alphabetic character(s), 1 digit(s), 1 non-alphanumeric symbol(s)
+    - The password should be different from the username
+   Password :
+   Re-enter Password :
+   What groups do you want this user to belong to? (Please enter a comma separated list, or leave blank for none)[  ]: admin
+   About to add user 'hawtio-admin' for realm 'ApplicationRealm'
+   Is this correct yes/no? yes
+   Added user 'hawtio-admin' to file '/Users/xxx/dev/eap/wildfly-8.1.0.Final/standalone/configuration/application-users.properties'
+   Added user 'hawtio-admin' to file '/Users/xxx/dev/eap/wildfly-8.1.0.Final/domain/configuration/application-users.properties'
+   Added user 'hawtio-admin' with groups admin to file '/Users/xxx/dev/eap/wildfly-8.1.0.Final/standalone/configuration/application-roles.properties'
+   Added user 'hawtio-admin' with groups admin to file '/Users/xxx/dev/eap/wildfly-8.1.0.Final/domain/configuration/application-roles.properties'
+   Is this new user going to be used for one AS process to connect to another AS process?
+   e.g. for a slave host controller connecting to the master or for a Remoting connection for server to server EJB calls.
+   yes/no? no</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setting_up_databases">Setting up databases</h3>
+<div class="paragraph">
+<p>The quickstart is configured to use h2 for demonstration only. For production you will need to switch to something like postgresql or mysql.</p>
+</div>
+<div class="sect3">
+<h4 id="_postgresql">postgresql</h4>
+<div class="paragraph">
+<p>We&#8217;ll describe the process for the main calendar engine. The others are very similar.</p>
+</div>
+<div class="paragraph">
+<p>All bedework and wildfly configuration files are in standalone/configuration/ - we&#8217;ll just refer to the relative path.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Name: caldb (you can change that if you wish)</p>
+</li>
+<li>
+<p>Configuration: bedework/bwcore/dbconfig.xml</p>
+</li>
+<li>
+<p>datasource: CalendarDS</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="_configure_postgresql">Configure postgresql</h5>
+<div class="paragraph">
+<p>You&#8217;ll probably need to configure postgres to allow your chosen role access to the server and databases.</p>
+</div>
+<div class="paragraph">
+<p>Depending on how you&#8217;re running the system you may need to modify postgresql.conf and pg_haba.conf - both located by default in the daat directory.</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;re running postgres on a separate system you may need to change the listen_addresses value and port:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>listen_addresses = 'localhost'     # what IP address(es) to listen on;
+                                   # comma-separated list of addresses;
+                                   # defaults to 'localhost'; use '*' for all
+                                   # (change requires restart)
+port = 5432                        # (change requires restart)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Change "localhost" to "*" or a list of addresses.</p>
+</div>
+<div class="paragraph">
+<p>5432 is the default port.</p>
+</div>
+<div class="paragraph">
+<p>To allow your account access you will need to add a line or lines to pg_hba.conf near the end something like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>host    all             bedework        10.0.0.1/32        md5</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This can be made more restrictive by naming the db.</p>
+</div>
+<div class="paragraph">
+<p>Create a database with a known id/password. Ensure it is accessible from the host you are running bedework on.</p>
+</div>
+<div class="paragraph">
+<p>The psql commands are something like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>create role bedework with login password 'xxxxxxxxx';
+create database caldb owner bedework;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set the hibernate dialect in the config file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;hibernateProperty&gt;</span>hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect<span class="tag">&lt;/hibernateProperty&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In standalone.xml replace the datasource definition with something like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;datasource</span> <span class="attribute-name">jta</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">true</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">jndi-name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">java:/CalendarDS</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">pool-name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CalendarDS</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">enabled</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">true</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">use-ccm</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">false</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+       <span class="tag">&lt;connection-url&gt;</span>jdbc:postgresql://localhost:5432/caldb<span class="tag">&lt;/connection-url&gt;</span>
+       <span class="tag">&lt;driver&gt;</span>postgresql<span class="tag">&lt;/driver&gt;</span>
+       <span class="tag">&lt;pool&gt;</span>
+         <span class="tag">&lt;min-pool-size&gt;</span>1<span class="tag">&lt;/min-pool-size&gt;</span>
+         <span class="tag">&lt;max-pool-size&gt;</span>50<span class="tag">&lt;/max-pool-size&gt;</span>
+         <span class="tag">&lt;prefill&gt;</span>true<span class="tag">&lt;/prefill&gt;</span>
+      <span class="tag">&lt;/pool&gt;</span>
+       <span class="tag">&lt;security&gt;</span>
+         <span class="tag">&lt;user-name&gt;</span>xxxxx<span class="tag">&lt;/user-name&gt;</span>
+         <span class="tag">&lt;password&gt;</span>xxxxx<span class="tag">&lt;/password&gt;</span>
+       <span class="tag">&lt;/security&gt;</span>
+       <span class="tag">&lt;timeout&gt;</span>
+        <span class="tag">&lt;idle-timeout-minutes&gt;</span>15<span class="tag">&lt;/idle-timeout-minutes&gt;</span>
+       <span class="tag">&lt;/timeout&gt;</span>
+        <span class="tag">&lt;validation&gt;</span>
+          <span class="tag">&lt;validate-on-match&gt;</span>true<span class="tag">&lt;/validate-on-match&gt;</span>
+          <span class="tag">&lt;valid-connection-checker</span> <span class="attribute-name">class-name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/valid-connection-checker&gt;</span>
+
+          <span class="tag">&lt;exception-sorter</span> <span class="attribute-name">class-name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLExceptionSorter</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/exception-sorter&gt;</span>
+       <span class="tag">&lt;/validation&gt;</span>
+       <span class="tag">&lt;statement&gt;</span>
+         <span class="tag">&lt;share-prepared-statements&gt;</span>false<span class="tag">&lt;/share-prepared-statements&gt;</span>
+       <span class="tag">&lt;/statement&gt;</span>
+     <span class="tag">&lt;/datasource&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ensure you also have the driver loaded - for example the drivers section which usually follows the datasources shoudllook somethign like:</p>
+</div>
+<div class="paragraph">
+<p>You need to install the postgres driver - you&#8217;re either missing the driver declaration - something like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;drivers&gt;</span>
+    ...
+    <span class="tag">&lt;driver</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">postgresql</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">module</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.postgresql</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    ...
+<span class="tag">&lt;/drivers&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ensure the jdbc driver is installed in the modules directory - something like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>wildfly/modules/org/postgresql/main/module.xml
+wildfly/modules/org/postgresql/main/postgresql-8.4-701.jdbc4.jar</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Module.xml for this example contains</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version='1.0' encoding='UTF-8'?&gt;</span>
+
+<span class="tag">&lt;module</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:jboss:module:1.1</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.postgresql</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;resources&gt;</span>
+        <span class="tag">&lt;resource-root</span> <span class="attribute-name">path</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">postgresql-8.4-701.jdbc4.jar</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/resources&gt;</span>
+
+    <span class="tag">&lt;dependencies&gt;</span>
+        <span class="tag">&lt;module</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">javax.api</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+        <span class="tag">&lt;module</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">javax.transaction.api</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/dependencies&gt;</span>
+<span class="tag">&lt;/module&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Modify it appropriately for different versions.</p>
+</div>
+<div class="paragraph">
+<p>Start wildfly and allow it to fully deploy. There will be many errors relating to the calendar database.</p>
+</div>
+<div class="paragraph">
+<p>Delete the file <strong><strong>wildfly/standalone/data/bedework/dumprestore/schema.sql</strong></strong></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_use_the_cli_to_install_the_schema">Use the cli to install the schema.</h5>
+<div class="paragraph">
+<p>To run the cli you need the id and password you created when configuring wildfly. This id and password can also be used to access the hawtio console.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>cd bw-cli/target/client/bin
+./client -id admin-id -pw admin-pw
+calschema export</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This should install the schema. It will also create a file which can be manually installed if need be - use the psql client application</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>psql caldb &lt; wildfly/standalone/data/bedework/dumprestore/schema.sql</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next you need to add some basic data. For this you need the full path to the initial data in wildfly/standalone/data/bedework/dumprestore/initbedework.xml</p>
+</div>
+<div class="paragraph">
+<p>In the cli enter the command</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>restoreCal "/full/path/to/initbedework.xml"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The quotes are required. Some activity should ensue.</p>
+</div>
+<div class="paragraph">
+<p>Reindex the data - again use the cli</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>rebuildidx</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>wait for it to terminate - then enter</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>listidx</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The alias <strong><strong>bwuser</strong></strong> should be pointing at the index before the last one just created.</p>
+</div>
+<div class="paragraph">
+<p>In the cli</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>makeidxprod index-name</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>replacing <strong><strong>index-name</strong></strong> with that last name - no quotes.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mysql">MySQL</h4>
+<div class="paragraph">
+<p>TBD</p>
+</div>
+<div class="paragraph">
+<p>Set the hibernate dialect in the config file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;hibernateProperty&gt;</span>hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect<span class="tag">&lt;/hibernateProperty&gt;</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="elasticsearch">3.3. Elasticsearch</h3>
+<div class="paragraph">
+<p>Bedework uses ElasticSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as an embedded engine - as it arrives in the quickstart - or as an external service - which will be required for clustering.</p>
+</div>
+<div class="paragraph">
+<p>Currently elasticSearch is completely unsecured. For testing and debugging it is possible to enable the http interface but this may expose your index. DO NOT run in production with the ES http interface open. In embedded mode the only access should be through the api.</p>
+</div>
+<div class="paragraph">
+<p>Later versions of ES do appear to offer the ability to secure ES. This may be an option when we upgrade.</p>
+</div>
+<div class="paragraph">
+<p>In non-embedded mode you can run ES on the same server or preferably a different server. ES - depending on the amount of data and types of search - can use a lot of memory for caching of filters. See the ES site for full instructions on running a non-embedded version.</p>
+</div>
+<div class="paragraph">
+<p>In general this is an easy process - ES offers various installation formats of all their versions including the very old 15.2 we are running currently.</p>
+</div>
+<div class="paragraph">
+<p>Both embedded and non-embedded require a small number of changes to the configuration. These are already in place for the embedded version and are available in the quickstart in</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>bedework/config/bedework/elasticsearch/config/elasticsearch.yml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the mappings and settings do not need to be installed. They are used when creating a new index.</p>
+</div>
+<div class="paragraph">
+<p>The changes made are</p>
+</div>
+<div class="paragraph">
+<p><strong>action.auto_create_index: false</strong></p>
+</div>
+<div class="paragraph">
+<p>Prevent ES from creating indexes implicitly. This can cause issues when reindexing.</p>
+</div>
+<div class="paragraph">
+<p>Uncomment the following</p>
+</div>
+<div class="paragraph">
+<p><strong>node.max_local_storage_nodes: 1</strong>
+[[configure-events-registration]
+=== Enabling and Disabling Public Events Registration
+==== Enabling Public Events Registration</p>
+</div>
+<div class="paragraph">
+<p>The public events registration system is enabled by default if you have installed Bedework with the data available in the quickstart.</p>
+</div>
+<div class="sect3">
+<h4 id="_disabling_public_events_registration">3.3.1. Disabling Public Events Registration</h4>
+<div class="paragraph">
+<p>If you wish to disable the public events registration system remove the "Eventreg admin token" from the System Preferences in the jmx console:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Log into the Bedework jmx console, e.g. <a href="http://localhost:8080/hawtio" class="bare">http://localhost:8080/hawtio</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click "org.bedework.bwengine" in the left menu, then "service=System" in the right menu</p>
+</li>
+<li>
+<p>Remove the value in the EventRegAdminToken field</p>
+</li>
+<li>
+<p>Click "Apply Changes"</p>
+</li>
+<li>
+<p>Invoke "saveConfig" to save your changes.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">3.3.2. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
+<div class="paragraph">
+<p>First ensure that the CalWs interface is available. This is the SOAP service that the event registration service uses o communicate with bedework. In system.xml make sure the &lt;calSoapWsURI&gt; element is present and has the same value as the soap:address element in pubcalws-soap/wssvc.wsdl (this requires better explanation - it&#8217;s a file deployed in the bw-xml ear)</p>
+</div>
+<div class="paragraph">
+<p>If you have upgraded from an older release, you may not have the data required for event registration in your system yet.  Follow these steps to turn on the event registration system:  (Please note: the process outlined below is only set up for the default quickstart and postgresql configs at the moment.)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Start up jboss and apacheDS</p>
+</li>
+<li>
+<p>Log into the JMX-Console shipped with Bedework&#8217;s JBoss, e.g. <a href="http://localhost:8080/hawtio" class="bare">http://localhost:8080/hawtio</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click "org.bedework.eventreg" in the left menu, then "service=Eventreg" in the right menu</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If no database exists:</p>
+</li>
+<li>
+<p>Set “create” and “export” attributes to "True"</p>
+</li>
+<li>
+<p>Click "Apply changes" button (at the bottom of the list of attribute values)</p>
+</li>
+<li>
+<p>Find the "schema" operation in the lower list, and click the “Invoke” button to export schema and create database</p>
+</li>
+<li>
+<p>You should see a successful result; click "Back to MBean" button to return to "service=Eventreg"</p>
+</li>
+<li>
+<p>Point at needed systems:</p>
+</li>
+<li>
+<p>Set the WsdlUri attribute value to: <a href="http://localhost:8080/wsdls/pubcalws-soap/wssvc.wsdl" class="bare">http://localhost:8080/wsdls/pubcalws-soap/wssvc.wsdl</a></p>
+</li>
+<li>
+<p>Set the TzsUri attribute value to:  <a href="http://localhost:8080/tzsvr" class="bare">http://localhost:8080/tzsvr</a></p>
+</li>
+<li>
+<p>Click "Apply changes" button</p>
+</li>
+<li>
+<p>Admin token:</p>
+</li>
+<li>
+<p>If no admin token exists, click “generateAdminToken”</p>
+</li>
+<li>
+<p>You should see a successful result; click "Back to MBean" button to return to "service=Eventreg"</p>
+</li>
+<li>
+<p>You should see a string such as "c0e93685-93cd-4bee-bed2-9996b89be28c" in the EventRegAdminToken attribute value.</p>
+</li>
+<li>
+<p>Copy the EventRegAdminToken value (for use in the next step)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click "org.bedework.bwengine" in the left menu, then "service=System" in the right menu</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Paste the value into the EventRegAdminToken field</p>
+</li>
+<li>
+<p>Click "Apply Changes" button</p>
+</li>
+<li>
+<p>Invoke the "saveConfig" operation to save your changes.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Test:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add a new public event.  You should be able to select the checkbox "Users may register for this event", and make the event registerable.</p>
+</li>
+<li>
+<p>Visit the event in public client&#8201;&#8212;&#8201;you should be able to register for it.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_notifications_from_eventreg">3.3.3. Notifications from EventReg</h4>
+<div class="paragraph">
+<p>The event registration service will send notifications to the calendar engine when changes take place that might require notifying users. The event registration service calls the calendar engine notification web service (not to be confused with the notification engine). This web service allows the core engine to add notifications to the accounts of subscribed users. It is the job of the notification engine to forward those via email or some other service.</p>
+</div>
+<div class="paragraph">
+<p>To configure notifications from eventreg you need to set the BwId, BwToken and BwUri properties in "service=Eventreg"and the NotifierId and NotifierToken values in  "org.bedework.bwengine" &#8594; "notifications"</p>
+</div>
+<div class="paragraph">
+<p>[[deploying-sync-engine]
+=== Deploying the sync engine
+The synch engine handles the synchronization of external subscriptions with a bedework calendar - for example a Google web calendar or an ical feed from a department.</p>
+</div>
+<div class="paragraph">
+<p>Currently such a synchronization must be carried out to a single calendar collection which only contains data from the external resource. Also only one way synchronization is supported - inbound to bedework.</p>
+</div>
+<div class="paragraph">
+<p>These subscriptions are available to personal calendar users and to public events administrators. For personal calendar users the options are limited as it is intended only to mirror the external resource.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_initializing_the_database">3.4. Initializing the database</h3>
+<div class="paragraph">
+<p>If running with mysql the built in hibernate schema export doesn&#8217;t work - mysql jdbc does not support it.</p>
+</div>
+<div class="paragraph">
+<p>The schema is simple however - it can be generated via the JMX mbeans or use the examples below - to install it manually, create a database - ensure UTF-8 is enabled</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>CREATE DATABASE `synchdb` DEFAULT CHARACTER SET utf8;
+grant all on synchDb.* to '&lt;id&gt;'@'%' identified by '&lt;pw&gt;';</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and then create the single table:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>CREATE TABLE `bwsynch_subs` (
+  `bwsyn_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `bwsyn_seq` int(11) NOT NULL,
+  `bwsyn_subid` varchar(250) NOT NULL,
+  `bwsyn_owner` varchar(500) NOT NULL,
+  `bwsyn_lrefresh` varchar(20) DEFAULT NULL,
+  `bwsyn_errorct` int(11) DEFAULT NULL,
+  `bwsyn_missing` char(1) NOT NULL,
+  `bwsyn_connectorid_a` varchar(100) DEFAULT NULL,
+  `bwsyn_conn_props_a` varchar(3000) DEFAULT NULL,
+  `bwsyn_connectorid_b` varchar(100) DEFAULT NULL,
+  `bwsyn_conn_props_b` varchar(3000) DEFAULT NULL,
+  `bwsyn_props` varchar(3000) DEFAULT NULL,
+  `bwsyn_dir` varchar(25) NOT NULL,
+  `bwsyn_mstr` varchar(25) NOT NULL,
+  PRIMARY KEY (`bwsyn_id`),
+  UNIQUE KEY `UK_qptomm2syatpqumsl1udwk7be` (`bwsyn_subid`),
+  KEY `bwsynidx_subid` (`bwsyn_subid`),
+  KEY `bwsynidx_subowner` (`bwsyn_owner`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_rebuild_bw_xml">3.4.1. (Re)build bw-xml</h4>
+<div class="paragraph">
+<p>The synch engine uses an extension of CalWS to communicate with bedework. It requires that the wsdl file contain the location of bedework. This is configured into the deploy.properties file - only one change for the synch engine should be necessary. Set the location of (one of) your application servers in the following.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code># ------------------------------------------------------------------------
+#       wsdls; ear bw-xml
+# These go together - first name the wsdl directories and files...
+org.bedework.app.bw-xml.bwwsdls.wsdl.synch=wssvc.wsdl
+
+# then provide the global properties
+org.bedework.global.synch.service.location=http://localhost:8080/synchws/</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are running everything on one server then the quickstart setting above will do. Note that at the moment the synch engine can only work against a single bedework server. It can accept requests from any member of the cluster however.
+Keys</p>
+</div>
+<div class="paragraph">
+<p>Generate a set of keys using the cli.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>cd bwcli/dist/temp/shellscr/bwcli/ (or wherever your binary is)
+./bwcli.sh
+/usr/lib/jvm/java-8-oracle/bin/java -cp .:./classes:./resources:lib/bw-access-3.11.0.jar:lib/bw-annotations-3.11.0.jar:lib/bw-calfacade-3.11.0.jar:lib/bwcli-3.11.0.jar:lib/bw-ical4j-vcard-1.0.5.jar:lib/commons-collections4-4.0.jar:lib/commons-lang-2.3.jar:lib/commons-lang3-3.3.2.jar:lib/commons-logging.jar:lib/httpclient-osgi-4.3.3.jar:lib/ical4j-2.0.6.jar:lib/jackson-annotations-2.1.1.jar:lib/jackson-core-2.1.1.jar:lib/jackson-databind-2.1.1.jar:lib/jolokia-client-java-1.3.1.jar:lib/json-simple-1.1.1.jar:lib/log4j-1.2.8.jar:lib/rpiutil-3.11.0.jar org.bedework.bwcli.BwCli
+JMX id:&lt;your id&gt;
+Password:&lt;your password&gt;
+cmd:genkeys gen
+test with----&gt;A variable of array type holds a reference to an object.
+encrypts to--&gt;BaUPfgTjzZxxbbW+lJACxmdo56tldkgfnr7LERkRTVyLQJh0kVt+GJZgJA1k9Wm+ojvpJCYFl34ybTy0vX2PM8Tu0+UsMKeV3HDi24NW6cH+C+QQ6XATLtskiBPhUQufpHBIKCke08PNh24xCoIk9+hllLgQQNCgVB1JQnQA0ak=
+decrypts to--&gt;A variable of array type holds a reference to an object.
+
+Validity check succeeded</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are using multiple servers copy the resulting key file from &lt;quickstart&gt;/wildfly/standalone/data/bedework/ on to each server.
+Ensure calendar server(s) can locate the synch engine.</p>
+</div>
+<div class="paragraph">
+<p>The bwengine/synch settings are configured to use a jvm system property to locate the synch engine. In file &lt;quickstart&gt;/wildfly/standalone/configuration/bedework/bwengine/synch.xml you should see:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+
+<span class="tag">&lt;synch</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://bedework.org/ns/</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.bedework.calsvc.jmx.SynchConfigImpl</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;connectorId&gt;</span>localBedework<span class="tag">&lt;/connectorId&gt;</span>
+  <span class="tag">&lt;managerUri&gt;</span>http://localhost:8080/synch/manager<span class="tag">&lt;/managerUri&gt;</span>
+  <span class="tag">&lt;wsdlUri&gt;</span>http://localhost:8080/wsdls/synch/wssvc.wsdl<span class="tag">&lt;/wsdlUri&gt;</span>
+<span class="tag">&lt;/synch&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are using multiple servers change the host in &lt;managerUri&gt; to refer to your sync server.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_validating_locations">3.4.2. Validating locations.</h4>
+<div class="paragraph">
+<p>When an event arrives at the receiving end with an "X-BEDEWORK-LOCATION" property if the String value of the x-property is &#8230;&#8203;
+=== Locations in bedework</p>
+</div>
+<div class="paragraph">
+<p>These are stored internally as location entities. They are created withthe admin client for public events or as a result of specifying or receiving locations for user clients.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_searching_for_public_locations">3.4.3. Searching for public locations</h4>
+<div class="paragraph">
+<p>There is a web service endpoint which can be used to search for public locations. It takes a filter expression as a parameter and will return &lt;a limited?&gt; number</p>
+</div>
+<div class="paragraph">
+<p>A search takes the form:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>&lt;scheme-host-port&gt;/locations/all?[params]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The params are
+  * fexpr=expression
+  * ?</p>
+</div>
+<div class="paragraph">
+<p>The expression is a valid filter expression. Of particular interest are the following</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>loc_all=a-string</p>
+</li>
+<li>
+<p>geo?</p>
+</li>
+<li>
+<p>?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>http://localhost:8080/cal/location/all.gdo?fexpr=loc_all=%27some%27</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_development">4. Development</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="todo-list">4.1. Todo list</h3>
+<div class="paragraph">
+<p>This is a (moderately) sorted list of features/changes etc for bedework. Could be a set of tickets but this is easier to read.</p>
+</div>
+<div class="sect3">
+<h4 id="_imminent_changes">4.1.1. Imminent changes</h4>
+<div class="paragraph">
+<p>Intend to get round to these ones Any Time Now(tm)
+  * Filter x-properties in public clients/feeds - list of x-props to retain.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_future_changes">4.1.2. Future changes</h4>
+<div class="paragraph">
+<p>These are longer term. Will pick away at these as time allows.</p>
+</div>
+<div class="sect4">
+<h5 id="_api_changes">Api changes</h5>
+<div class="paragraph">
+<p>Change the api to use response objects throughout. No exceptions. Allows for a better networked api.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_notifications_3">Notifications</h5>
+<div class="paragraph">
+<p>Need to be indexed in ES so that finding a notification for an entity is efficient (need to merge multiple notifications for same entity)
+Change notifications for public events is probably not working correctly. We should be using the creator - or the owner of the alias - all public events have the same owner (public-user) and change notifications seem to be ending up in that bucket.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_limit_interactions_with_db_for_updates">Limit interactions with db for updates.</h5>
+<div class="paragraph">
+<p>For this we would do all interactions with ES and connect to and update db only as needed. Use sequence numbers to ensure db and index correctness. Benefits are shorter db interactions - only at point we update. Less complexity in web clients - no need to have conversations stretching across multiple requests. This can build on the work of the previous item. The web client code is already structured ro assume that it will do an explicit update of entities which should facilitate the change.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_move_business_logic_out_of_webapps_into_core">Move business logic out of webapps into core</h5>
+<div class="paragraph">
+<p>Move as much as possible out of the current webapps module into the core APi implementation - this potentially allows a more RESTful style of client - possibly using the new jmap style interface being developed.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_categories">Categories</h5>
+<div class="paragraph">
+<p>Use a larger category scheme as the basis for categories. Use SKOS based representation so that they are RDF friendly. Will allow for sub-categorization by event submitters.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_locations">Locations</h5>
+<div class="paragraph">
+<p>Allow for use of external location sources such as geonames. Will allow good locations on external events.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_searching_improvements">Searching improvements</h5>
+<div class="paragraph">
+<p>Search for events near a geo-location (requires locations to have geo)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_caching">Caching</h5>
+<div class="paragraph">
+<p>Implement caching of feeder data as a built in feature of the quickstart.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_deployment_of_ears">Deployment of ears</h5>
+<div class="paragraph">
+<p>Finish off the deployment process - it&#8217;s THAT close (is there an emoticon for 2 fingers very close together?) to allowing deployers to just replace the ears from prebuilt ears on the site. No builds required - server can detect an update is available.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_deployment_of_wildfly_modules">Deployment of wildfly modules</h5>
+<div class="paragraph">
+<p>If all - or many - required dependencies are deployed as wildfly modules it should reduce the size of the deployment and allow for even quicker startup.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_networked_client_api">Networked client api</h5>
+<div class="paragraph">
+<p>Subset of svci but can be used for web client interactions.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_groups">Groups</h5>
+<div class="paragraph">
+<p>Directory interface to directly interact with grouper for user and admin groups. Allow consumer only approach for external management of groups. Use extra ldap attributes to allow admin groups to be maintained in ldap.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_index_logs_in_es">Index logs in ES</h5>
+<div class="paragraph">
+<p>Use kibana to get metrics etc</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_timezones">Timezones</h5>
+<div class="paragraph">
+<p>Update UI to provide a search - possibly based on map. Use tzdist geo feature (being developed)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_general_work_needed">General work needed</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Upgrade ES to latest - changes the query structure</p>
+</li>
+<li>
+<p>Upgrade all libraries to latest</p>
+</li>
+<li>
+<p>Preprocess the xsl to build the deployable language specific versions.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="running-caldav-tester">4.2. Running the caldav tester</h3>
+<div class="paragraph">
+<p>The tester started as an Apple developed project to test CalDAV servers. It has since been taken over by CalConnect adn is in the process of being modified to make the tests more universally applicable.</p>
+</div>
+<div class="sect3">
+<h4 id="_setup">4.2.1. Setup</h4>
+<div class="paragraph">
+<p>To run some basic tests there is a script bw-caldavTest/src/main/resources/calconnect-tester/testbw/bw-QuickLook-CalDAV.sh</p>
+</div>
+<div class="paragraph">
+<p>This script sets up the tester which needs to be cloned from the repository.</p>
+</div>
+<div class="paragraph">
+<p>Running the tester requires that a number of users be provisioned in a particular state.</p>
+</div>
+<div class="paragraph">
+<p>The quickstart data comes with users user01-user04. Each is setup with</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>cn: 01,test</p>
+</li>
+<li>
+<p>objectclass: inetOrgPerson</p>
+</li>
+<li>
+<p>objectclass: organizationalPerson</p>
+</li>
+<li>
+<p>objectclass: person</p>
+</li>
+<li>
+<p>objectclass: top</p>
+</li>
+<li>
+<p>sn: user</p>
+</li>
+<li>
+<p>givenname: 01</p>
+</li>
+<li>
+<p>mail: <a href="mailto:user01@mysite.org">user01@mysite.org</a></p>
+</li>
+<li>
+<p>uid: user01</p>
+</li>
+<li>
+<p>password: bedework</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>(Replace 01 with 02-04 for the rest)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="older-releases">5. Older Bedework Versions (3.10 and Prior)</h2>
+<div class="sectionbody">
+<div class="sect3">
+<h4 id="_3_10_4">3.10.4</h4>
+<div class="paragraph">
+<p><em>December 14, 2016</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Significant web client performance improvements</p>
+</li>
+<li>
+<p>Fixes to sharing</p>
+</li>
+<li>
+<p>Enhancements to the notification system</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_10_3">3.10.3</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Core engine</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Flag all entities as indexed</p>
+</li>
+<li>
+<p>Fix hibernate query which pulled in too many objects</p>
+</li>
+<li>
+<p>Fix bug in ES query which missed a number of recurrences</p>
+</li>
+<li>
+<p>Fixes to synch report</p>
+</li>
+<li>
+<p>Fixes to sharing</p>
+</li>
+<li>
+<p>Work on notifications</p>
+</li>
+<li>
+<p>Allow disable of ldap group check</p>
+</li>
+<li>
+<p>Add code to stop autokill killing the indexer</p>
+</li>
+<li>
+<p>Better cleanup of http connections</p>
+</li>
+<li>
+<p>Fix up timestamps in ical</p>
+</li>
+<li>
+<p>Dumprestore sets status of process</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Caldav</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Better handling of error conditions</p>
+</li>
+<li>
+<p>Better error responses</p>
+</li>
+<li>
+<p>Fixes to content type</p>
+</li>
+<li>
+<p>Eventreg</p>
+</li>
+<li>
+<p>Fixes for eventreg id</p>
+</li>
+<li>
+<p>Use activemq to queue actions so they don&#8217;t get lost on  restart</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Webapps</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Some fixes to the grid view</p>
+</li>
+<li>
+<p>Remove a synchronized to reduce a bottleneck</p>
+</li>
+<li>
+<p>Try refactor and recode calendar collection cloning for navigation</p>
+</li>
+<li>
+<p>Fix copy of event</p>
+</li>
+<li>
+<p>More cleanup of http connections</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Util</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Allow deployer to work with war files</p>
+</li>
+<li>
+<p>Add jms classes extracted from sysevents module</p>
+</li>
+<li>
+<p>Add jolokia module to allow  a client to interact with jmx</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Webdav</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Minor propstat fix</p>
+</li>
+<li>
+<p>Better error responses</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_bedework_3_10_2">Bedework 3.10.2</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Performance Improvements</p>
+<div class="ulist">
+<ul>
+<li>
+<p>numerous updates to correct for bottlenecks and other performance issues allowing for significant load and large-scale deployments</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>External Subscriptions</p>
+<div class="ulist">
+<ul>
+<li>
+<p>significant improvements to external subscription handling</p>
+</li>
+<li>
+<p>better handling of contacts and categories for public calendaring</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Workflow (public calendaring)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>new author and approver roles allow for moderated publishing of events by administrative groups</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Cross-Suite Suggestions (public calendaring)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>new suggestion mechanism allows different calendar suites to suggest and accept (or reject) events across teams</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Event Registration (public calendaring)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>significant improvements to event registration features</p>
+</li>
+<li>
+<p>addition of custom fields to any registration form and a form builder for constructing and managing custom forms (extra text inputs, checkboxes, radio buttons, and select boxes)</p>
+</li>
+<li>
+<p>email notifications (see Notifications)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Notifications (public calendaring)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In public calendaring, administrative users now receive notifications of actionable items (workflow approval requests, suggestions from other groups, and responses to each)</p>
+</li>
+<li>
+<p>In event registration, the notification engine is used to communicate with registrants concerning registration, waitlisting, and event cancellation</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Self Registration</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Allows users to register with the calendaring system so that they may register for public events</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Web Client Improvements</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Improvements to the public administration client</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Locations can be broken into locations and sub-locations (i.e. buildings and rooms)</p>
+</li>
+<li>
+<p>Rooms can be added on-the-fly during event creation</p>
+</li>
+<li>
+<p>Improved location and contact look-up during event creation</p>
+</li>
+<li>
+<p>Numerous other stylistic and usability enhancements in the administrative client</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Improvements to the public web client</p>
+<div class="ulist">
+<ul>
+<li>
+<p>improvements to accessibility compliance</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Bug fixes</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_10">3.10</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>A largely-revamped public client, which features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Responsive design - the public client will display reasonably on almost any screen size.</p>
+</li>
+<li>
+<p>More powerful and flexible left-hand navigation - in just a few clicks, site visitors can ask for the "Arts events and Films taking place on West Campus"</p>
+</li>
+<li>
+<p>Event filtering by string. – ex., “Arts events and Films on West Campus that include 'Sherlock'".</p>
+</li>
+<li>
+<p>An endless stream of events - All events that match the criteria are presented, starting with today&#8217;s events (or any other date specified), and advancing into the future.   An initial group of events are displayed on the page, and as the visitor scrolls towards the bottom of the page, the next group is presented.</p>
+</li>
+<li>
+<p>Improved performance with fewer page reloads - most operations, such as adding or removing a filter, are done "in-page" (using Ajax calls).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Enhancements to indexing</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bedework 3.10 has a new search engine – ElasticSearch.  In the Bedework context, ElasticSearch, provides better remote management of indexes,   better scalability options, and much simpler configuration than Solr. ElasticSearch is used by, among others,  Wikimedia, Foursquare Etsy, and GitHub.</p>
+</li>
+<li>
+<p>Improved performance and scalability by directing most queries to an ElasticSearch index rather than directly to the database engine</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>More real-time site configuration</p>
+<div class="ulist">
+<ul>
+<li>
+<p>All configuration settings are now set through the JMX console, eliminating the need for rebuilds to reconfigure</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>An improved Quickstart</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A smaller (~40%) Quickstart - no-longer-used code (such as webcache) and unused JBoss components have been removed</p>
+</li>
+<li>
+<p>Better Quickstart documentation</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_8_0_13">3.8.0.13</h4>
+<div class="paragraph">
+<p><em>April 17, 2012</em><br>
+  * Administrative client:
+      <strong> Support for image uploads and auto-generation of                 thumbnails during event creation and editing
+      </strong> "Manage events" page now uses date range and date                 navigation to list events
+      <strong> The event description field now tracks the number of characters used     while the user types.
+      </strong> Pending event topical areas are auto-selected (when                 possible) based on the selections made in the                 submissions client
+      <strong> Pending event "preferred" and "all" listings are                 correctly selected when first editing a pending event
+      </strong> "Preferred" and "all" listings now sorted
+      <strong> Auto-focus first available field code updated to be                 more generally useful (based on work done by Eric                 Wittman
+      </strong> Bug fix: pending event titles are correctly escaped on                 publish</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Public events client:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bug fix: correct ids on nodes of the calendar explorer                 menu (new feature in 3.8)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Submissions client:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Removed Confirmed/Tentative/Cancelled radio buttons</p>
+</li>
+<li>
+<p>Correctly associate selected topical areas between                 submissions client and admin client (where possible)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Bedework servers / utils:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Configure Tomcat to fully support UTF-8 URLs</p>
+</li>
+<li>
+<p>Bug fixes to dump/restore utilities</p>
+</li>
+<li>
+<p>Bug fix: for long standing bug in date/time util.</p>
+</li>
+<li>
+<p>Bug fix:  missing tz and locale update</p>
+</li>
+<li>
+<p>Bug fix: tombstone related bug in methods called by                 indexer</p>
+</li>
+<li>
+<p>Bug fix: correct check for duplicate collection name</p>
+</li>
+<li>
+<p>Bug fix: various DST, timezone fixes, support for UTC,                 etc.</p>
+</li>
+<li>
+<p>Bug fix: blob caching fixes</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_8_0_11">3.8.0.11</h4>
+<div class="paragraph">
+<p><em>February 27, 2012</em><br>
+  * Fix issue preventing display of events on a DST boundary.
+  * Fix iSchedule so it works again.
+  * Fix change set so that added/deleted attendees get notified.
+  * Storing of resources/attachments was broken. Required upgrade to     hibernate 3.6
+  * Added some quota support because we can now store resources.
+  * Added some missing datasource files.
+  * Watch out for and fix bad PARTSTAT.
+  * Don&#8217;t email freebusy requests.
+  * SOAP namespace change.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_8">3.8</h4>
+<div class="paragraph">
+<p><em>January 30, 2012</em><br>
+  * Synchronization Engine, providing more efficient synchronization of external data. read-only .ics subscriptions/feeds into Bedework are supported in this release.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>CalWS-SOAP, a SOAP protocol for calendaring being developed by OASIS and CalConnect. Bedework 3.8 uses CalWS-SOAP for communication between the synchronization engine and Bedework.</p>
+</li>
+<li>
+<p>WebDAV Synch, which is a draft RFC extension to WebDAV/CalDAV (<a href="https://tools.ietf.org/html/rfc6578" class="bare">https://tools.ietf.org/html/rfc6578</a>), providing a more efficient method for client synchronization. WebDAV synch is currently supported by iCal - the Apple desktop calendaring client, and also by aCal - an Android CalDAV client (<a href="http://andrew.mcmillan.net.nz/projects/aCal" class="bare">http://andrew.mcmillan.net.nz/projects/aCal</a>).</p>
+</li>
+<li>
+<p>New UI Feature - a theme setting that produces an explorer view of the calendars for navigation</p>
+</li>
+<li>
+<p>Quickstart has a smaller footprint</p>
+</li>
+<li>
+<p>New, simplified theme (using the new calendar explorer menu) providing easier integration with an organization&#8217;s web design.</p>
+</li>
+<li>
+<p>Hypersonic (HSQL) is now packaged with the Quickstart instead of Derby. Derby never met our expectations that it could be deployed as the production DBMS for Bedework, and the advantages of HSQL, including Quickstart support for the Scheduling Assistant,  are compelling.</p>
+</li>
+<li>
+<p>Structural changes to projects.</p>
+</li>
+<li>
+<p>All references to Bedework documentation are updated in the web clients to point to the Bedework website and latest documentation wiki. Previously, some references were to the older, deprecated bedework.org site, which created some confusion in previous releases.</p>
+</li>
+<li>
+<p>Various bugfixes</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_7">3.7</h4>
+<div class="paragraph">
+<p><em>March 10, 2011</em><br>
+  * The Bedework personal client has been simplified, and presents  new displays for FreeBusy, and for scheduling and managing meetings.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bedework 3.7 uses CardDAV for managing contacts, and provides a   new, standalone address book web client  as well as a significantly   improved and enhanced CardDAV V4 server.</p>
+</li>
+<li>
+<p>Improved internationalization - the web clients are distributed  with language strings in Spanish (all clients) and German (public and  personal clients).  The Spanish translations are the result of a  collaboration between the Universidad Pública de Navarra  and their  Pamplona colleagues  at Universidad de Navarra, and the German  translation is the contribution of Werner Frerichs of the University of  Kiel.</p>
+</li>
+<li>
+<p>Personal  calendaring client UI has been upgraded,  with particular attention to Scheduling and Free/Busy</p>
+</li>
+<li>
+<p>Improved environmentals  - Reduced memory footprint  in the  quickstart; logging overhead  has been decreased</p>
+</li>
+<li>
+<p>Public and private calendar display names can now be changed,  providing a means to safely modify the labeling of calendars over time  as well as stronger internationalization.</p>
+</li>
+<li>
+<p>Addressbook enhancements, including a CardDAV V4 server, support  for groups,  and  a stand-alone address book web client appropriate for  deployment within multiple applications</p>
+</li>
+<li>
+<p>An initial version of the CalWS restful web service API is available in the system shipped with the quickstart.
+See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20Web%20Services%20Protocol%20for%20Calendaring.pdf" class="bare">http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20Web%20Services%20Protocol%20for%20Calendaring.pdf</a></p>
+</li>
+<li>
+<p>Bug fixes to all servers and clients</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_6">3.6</h4>
+<div class="paragraph">
+<p><em>February 3, 2010</em>
+  * Core Bedework services packaged in JBoss
+  * Spanish translation of public calendaring themes shipped       with quickstart
+  * Bug fixes and final enhancements
+  * See <a href="http://www.bedework.org/trac/bedework/milestone/Bedework%203.6">Bedework 3.6 Milestone page</a> for information about post-release bug fixes.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_6_release_candidate_1">3.6 release candidate 1</h4>
+<div class="paragraph">
+<p><em>January 9, 2010</em><br>
+  * Public calendaring
+  <strong> New default public theme based on Duke/Yale           themes
+  </strong> Feed URL and Widget Builder for generating rss, json,           xml, and ical feeds as well as embeddable javascript           widgets
+  <strong> A "feeder" application that serves as a common source           for public data feeds and widgets
+  </strong> A web cache application for storing and serving the           feeds and widgets
+  <strong> Internationalized and modularized themes
+  </strong> New mobile theme for iPhones and other           smartphones</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>System notifications now built on JMS (ApacheMQ) allowing         more modular design of the services</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Indexing reworked as outboard process</p>
+</li>
+<li>
+<p>Scheduling reworked as outboard process</p>
+</li>
+<li>
+<p>Logging of system notifications</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Performance improvements</p>
+<div class="ulist">
+<ul>
+<li>
+<p>in CalDAV</p>
+</li>
+<li>
+<p>event retrieval (system wide)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Other Enhancements</p>
+<div class="ulist">
+<ul>
+<li>
+<p>improved ical subscriptions, user and public           clients</p>
+</li>
+<li>
+<p>UI support of deleting collections</p>
+</li>
+<li>
+<p>improvements to scheduling in the user client</p>
+</li>
+<li>
+<p>subscription coloring in the user client</p>
+</li>
+<li>
+<p>general bugfixes</p>
+</li>
+<li>
+<p>improvements to documentation</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_5">3.5</h4>
+<div class="paragraph">
+<p><em>July 17, 2009</em><br>
+  * Bug fixes and final enhancements
+  * See href="http://www.bedework.org/trac/bedework/milestone/Bedework%203.5[Bedework 3.5 Milestone page] for information about post-release bug fixes.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_5_release_candidate_2">3.5 release candidate 2</h4>
+<div class="paragraph">
+<p><em>June 3, 2009</em><br>
+  * Bug fixes and final enhancements
+  * Further support for draft 0.7 of CalDAV scheduling
+  * Improved personal client user interface</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_5_release_candidate_1">3.5 release candidate 1</h4>
+<div class="paragraph">
+<p><em>May 19, 2009</em><br>
+  * Performance improvements
+  <strong> reduce JVM memory usage
+  </strong> decrease database system load</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Large-scale restructuring of data and administrative UI       to map to new conceptual model of the single calendar       pool</p>
+</li>
+<li>
+<p>public events submissions client enhanced with added       workflow in the admin client for pending events, including       email notification when an event is published</p>
+</li>
+<li>
+<p>admin client: cross-tagging of events by administrative       groups (currently locate events by searching)</p>
+</li>
+<li>
+<p>Support for draft 0.7 of CalDAV scheduling</p>
+</li>
+<li>
+<p>Stronger support for xproperties</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_5_preview_release">3.5 preview release</h4>
+<div class="paragraph">
+<p><em>January 29, 2009</em><br>
+  * Public events optimized for a single calendar pool model</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>simplifies public events calendaring</p>
+</li>
+<li>
+<p>filtering can be applied to all collections allowing for fine-grained control over subscriptions from within the user interfaces; no longer necessary to filter in the xslt of public client</p>
+</li>
+<li>
+<p>administrative users tag events by topical area based on subscriptions within each calendar suite. The system then assigns appropriate categories to events.</p>
+</li>
+<li>
+<p>administrative users can tag events with as many topical areas as appropriate</p>
+</li>
+<li>
+<p>categories are maintained by superusers</p>
+</li>
+<li>
+<p>categories can be set on all collections</p>
+</li>
+<li>
+<p>adding a user to a calendar suite group will allow the user to administer the calendar suite</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Subscriptions greatly improved</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>all subscriptions are reimplimented as calendar           aliases</p>
+</li>
+<li>
+<p>subscriptions now appear in caldav clients such as           Mozilla Lightning or Apple&#8217;s iCal</p>
+</li>
+<li>
+<p>users can apply filters to aliases allowing for           fine-grained control over subscriptions in the user           client</p>
+</li>
+<li>
+<p>subscriptions to external ical feeds available in           public and personal clients</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Apache DS ldap directory ships with quickstart</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>used for user accounts, authentication, and the new           CardDAV server</p>
+</li>
+<li>
+<p>quickstart more closely resembles a production           system</p>
+<div class="ulist">
+<ul>
+<li>
+<p>CardDAV server first release</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>address book widget used in personal client queries           attendees for meetings</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Timezone server in use</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>provides standardized timezone service</p>
+<div class="ulist">
+<ul>
+<li>
+<p>CalDAV improvements</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Support for draft 6 of CalDAV scheduling</p>
+</li>
+<li>
+<p>Support for storing resources (e.g. files,           attachments) within the folder hierarchy</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_4_1_1">3.4.1.1</h4>
+<div class="paragraph">
+<p><em>June 3, 2008</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Support for RFC-2445 x-properties</p>
+</li>
+<li>
+<p>Inclusion of image URL for public events</p>
+</li>
+<li>
+<p>Improvements to public event submission web client</p>
+</li>
+<li>
+<p>Improvements to CalDAV and WebDAV</p>
+</li>
+<li>
+<p>Improvements to dump/restore</p>
+</li>
+<li>
+<p>Improvements to access control</p>
+</li>
+<li>
+<p>Better support for driving public events client with categories</p>
+</li>
+<li>
+<p>Fixes to scheduling - better support for COUNTER</p>
+</li>
+<li>
+<p>Support deletion of non-empty calendars via CalDAV</p>
+</li>
+<li>
+<p>Performance improvements to Lucene indexing</p>
+</li>
+<li>
+<p>Bug fix for null parameters in x-props (thanks to Roberto Polli)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_4_1">3.4.1</h4>
+<div class="paragraph">
+<p><em>March 18, 2008</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>CalDAV: many improvements; greatly enhanced interoperability with <a href="http://www.jasig.org/trac/bedework/wiki/BedeworkUserHelp/Lightning">Mozilla       Lightning</a> and Apple&#8217;s iCal; support for subscriptions to web calendars through the CalDAV server, allowing Bedework to expose user subscriptions to desktop clients; improved support for CalDAV filters</p>
+</li>
+<li>
+<p>Addition of Public Events Submission web client (beta) which allows non-admin users to suggest public events. (<a href="http://www.jasig.org/trac/bedework/wiki/DeployDocs/SubmissionACLs">configuration       details</a>)</p>
+</li>
+<li>
+<p>Much better support for RSS and Javascript feeds       including the addition of category filters and date       ranges</p>
+</li>
+<li>
+<p>Rudimentary interface for adding named CalDAV filters that can be used with the public web client providing powerful filtering features</p>
+</li>
+<li>
+<p>Improvements to scheduling</p>
+</li>
+<li>
+<p>Improvements to recurring event support</p>
+</li>
+<li>
+<p>Improvements to freebusy</p>
+</li>
+<li>
+<p>Improvemenst to locale support</p>
+</li>
+<li>
+<p>Improvements to Lucene searching</p>
+</li>
+<li>
+<p>Improvements to access control</p>
+</li>
+<li>
+<p>Better handling of tasks</p>
+</li>
+<li>
+<p>Better timezone handling</p>
+</li>
+<li>
+<p>Numerous UI improvements including updated web template       for mobile devices and an improved administrative interface</p>
+</li>
+<li>
+<p>Bugfix to set all character encoding to utf-8 (thanks to       Martin Blom)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_4">3.4</h4>
+<div class="paragraph">
+<p><em>September 14, 2007</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Better standards support: A much more complete       implementation of the calendaring standards RFC2445, RFC2446,       RFC791 (CalDAV) and the CalDAV scheduling draft       standard.</p>
+</li>
+<li>
+<p>A reasonably complete implementation of iTIP scheduling,       such as simple (non-recurring) iTIP scheduling, display of       attendee FreeBusy information, sending invitations, update of       attendee status, canceling meetings. There is some support of       recurring meetings and modifications to instances partially       works.</p>
+</li>
+<li>
+<p>Portal support: A number of changes to make the user       interface more portal friendly.</p>
+</li>
+<li>
+<p>CalDAV: Changes/fixes have been implemented to improve       interoperability with Apple&#8217;s iCal, and there is significant       support now for CalDAV scheduling.</p>
+</li>
+<li>
+<p>UI improvements to access control and recurring       events.</p>
+</li>
+<li>
+<p>Initial support for FREEBUSY URL and calendar       subscription URL.</p>
+</li>
+<li>
+<p>Apache Ant: Upgrade to 1.7 to make apt task available for further development.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_3_1">3.3.1</h4>
+<div class="paragraph">
+<p><em>April 25, 2007</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Access fixes. Note this requires a change to the /public       folder. Previously read + write-content was sufficient for       administrative privileges. Now it must be read +       write-content + bind (may also want unbind to allow       deletions)</p>
+</li>
+<li>
+<p>A number of bugfixes to CalDAV support.</p>
+</li>
+<li>
+<p>Implemented some missing CalDAV features.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>attachments now work,</p>
+</li>
+<li>
+<p>copy/move/rename partially works.</p>
+</li>
+<li>
+<p>Freebusy information can be stored</p>
+</li>
+<li>
+<p>Tasks (todos)</p>
+</li>
+<li>
+<p>Search filters</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Bug fixes for recurring events</p>
+</li>
+<li>
+<p>Timezones shared correctly</p>
+</li>
+<li>
+<p>Oracle now builds and deploys without alterations to       generated schema.</p>
+</li>
+<li>
+<p>Fixed up restore so that it can handle UWcal 2.3.2       data</p>
+</li>
+<li>
+<p>12/24 mode works correctly</p>
+</li>
+<li>
+<p>One-shot free and busy url works allow users to publicize       their busy time.</p>
+</li>
+<li>
+<p>Scheduling is now close to completion and largely usable.       Some of the more esoteric features still require work, e.g.       instances of recurring meetings, COUNTER is untested.</p>
+</li>
+<li>
+<p>UI supports all access control features.</p>
+</li>
+<li>
+<p>Import and export of calendars completed</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_3_1_preview_release">3.3.1 preview release</h4>
+<div class="paragraph">
+<p><em>February 23, 2007</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>CalDAV - Fixes to problems uncovered in the       interoperability testing at CalConnect.</p>
+</li>
+<li>
+<p>Recurring events - Fixes to some bugs, especially in the       sharing of these events.</p>
+</li>
+<li>
+<p>Timezones - Fixes to problems sharing events with       'private' timezones, such as those added via CalDAV or       imported as ics.</p>
+</li>
+<li>
+<p>Access control - Fixed some bugs in setting ACLs. The UI       has been updated to enable all features of access       control.</p>
+</li>
+<li>
+<p>Scheduling - Implemented additional functionality.       Scheduling is still incomplete but more features are exposed       in 3.3.1 to allow further testing. We have successfully sent       an invitation, posted a response, and observed the resulting       event in the calendar. Scheduling support is "fragile" but       progressing rapidly.</p>
+</li>
+<li>
+<p>Bedework 3.3.1 is much more Oracle-friendly than previous       versions. Based on work done by Julian Ball at Queens, and       Chris Mann at Maryland, we have significantly overhauled the       XML schema, with the intent of eliminating or at least       drastically reducing the modifications Oracle users would       have to make.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_3">3.3</h4>
+<div class="paragraph">
+<p><em>January 24, 2007</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Java 1.5 and Tomcat 5.5 as implementation       requirements</p>
+</li>
+<li>
+<p>Lucene searching has been implemented for all       clients</p>
+</li>
+<li>
+<p>Categories have been reinstated</p>
+</li>
+<li>
+<p>Many changes to CalDAV to better support various       clients.</p>
+</li>
+<li>
+<p>Significant progress supporting <a href="http://openconnector.org/">OpenConnector</a></p>
+</li>
+<li>
+<p>Support for recipients and attendees</p>
+</li>
+<li>
+<p>iCal import and export of multiple events / whole       calendars</p>
+</li>
+<li>
+<p>Improved timezone displays / support</p>
+</li>
+<li>
+<p>Support for floating time values</p>
+</li>
+<li>
+<p>Support for storing UTC time values</p>
+</li>
+<li>
+<p>Recurring event support</p>
+</li>
+<li>
+<p>Human readable text fields now stored with language       information to facilitate internationalization</p>
+</li>
+<li>
+<p>Scheduling (meeting requests, replies etc) are now mostly       implemented</p>
+</li>
+<li>
+<p>Significant improvements to the web user interfaces,       XHTML user clients &amp; dojo based widgets</p>
+</li>
+<li>
+<p>Bug fixes (e.g. access control) and housekeeping (e.g.       all tables given consistent names)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_3_release_candidate">3.3 release candidate</h4>
+<div class="paragraph">
+<p><em>December 15, 2006</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A subset of the 3.3 release, above</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_3_preview_release">3.3 preview release</h4>
+<div class="paragraph">
+<p><em>November 22, 2006</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lucene searching added</p>
+</li>
+<li>
+<p>Recurring and annotated event support rewritten</p>
+</li>
+<li>
+<p>Added a String table to facilitate       internationalization</p>
+</li>
+<li>
+<p>Category support resuscitated, categories attached to       calendars - implement changes to event categories</p>
+</li>
+<li>
+<p>Java 5 language features to facilitate development</p>
+</li>
+<li>
+<p>Fixes to access control and improved ui support</p>
+</li>
+<li>
+<p>Added back-end support for todos</p>
+</li>
+<li>
+<p>Support for scheduling operations</p>
+</li>
+<li>
+<p>CalDAV improvements</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_2">3.2</h4>
+<div class="paragraph">
+<p><em>August 15, 2006</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SVN Restructuring complete</p>
+</li>
+<li>
+<p>CalDAV improvements</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1">3.1</h4>
+<div class="paragraph">
+<p><em>August 1, 2006</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Restructuring of system into multiple SVN projects</p>
+</li>
+<li>
+<p>Working personal calendars released</p>
+</li>
+<li>
+<p>Freebusy aggregator added</p>
+</li>
+<li>
+<p>CalDAV server restructured to allow use as a proxy</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1_release_candidate_4">3.1 release candidate 4</h4>
+<div class="paragraph">
+<p><em>June 22, 2006</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Restructuring of stylesheet directories to better support       calendar suites</p>
+</li>
+<li>
+<p>Initial release of jsr-168 compliant portlet for use       within uPortal</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1_release_candidate_3">3.1 release candidate 3</h4>
+<div class="paragraph">
+<p><em>June 19, 2006</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Further interface updates and bug fixes</p>
+</li>
+<li>
+<p>Calendar Suites (departmental calendars) updated and       highlighted</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1_release_candidate_2">3.1 release candidate 2</h4>
+<div class="paragraph">
+<p><em>June 12, 2006</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bug fixes</p>
+</li>
+<li>
+<p>Upgrade to struts 1.2.9</p>
+</li>
+<li>
+<p>Introduction of Calendar Suites:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the Bedework system can now be defined as a           collection of "calendar suites" which allows for the           implementation of departmental calendars.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1_release_candidate_1">3.1 release candidate 1</h4>
+<div class="paragraph">
+<p><em>May 19, 2006</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dump/restore and schema:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Now zipped up with shell script for running           stand-alone</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Caldav fixes to bring up to draft 12</p>
+</li>
+<li>
+<p>Prototype free/busy aggregator</p>
+</li>
+<li>
+<p>Personal Client:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>sharing of events (as well as calendars and           free-busy)</p>
+</li>
+<li>
+<p>bug fixes and interface updates</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Admin and Public Clients:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>brought up-to-date with all changes</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1pre">3.1pre</h4>
+<div class="paragraph">
+<p><em>May 5, 2006</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Personal Client:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Preferences management in place</p>
+</li>
+<li>
+<p>Can select destination calendar when importing an           event or adding an event reference</p>
+</li>
+<li>
+<p>Updates to access control</p>
+</li>
+<li>
+<p>Schema changes</p>
+</li>
+<li>
+<p>Graphical updates (also to public client)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1pre_2">3.1pre</h4>
+<div class="paragraph">
+<p><em>April 21, 2006</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Personal Client:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Full calendar management in place</p>
+</li>
+<li>
+<p>Free/Busy display</p>
+</li>
+<li>
+<p>Basic sharing of calendars and free/busy</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1pre_3">3.1pre</h4>
+<div class="paragraph">
+<p><em>April 14, 2006</em><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Personal Client: Fixed up personal client so basic       functionality is restored. Client has been given a graphical       overhaul.</p>
+</li>
+<li>
+<p>Free/Busy: Preliminary work on free/busy</p>
+</li>
+<li>
+<p>Lucene full text searching: Added classes to support       Lucene indexing
+:sectnums:</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2022-01-21 17:08:04 EST
+</div>
+</div>
+</body>
+</html>
