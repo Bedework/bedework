@@ -6,7 +6,7 @@
 
 When installing bedework on wildfly steps must be taken to ensure that services that should be hidden are not exposed on the network.
 
-Do NOT expose the elasticsearch and database ports by - for example - opening up all ports to the network.
+Do NOT expose the OpenSearch and database ports by - for example - opening up all ports to the network.
 
 The best approach is to disable all ports and only open up those necessary. Bedework only uses the standard web ports. Additionally, even for the web ports (80, 8080 etc) it is best to pass traffic through haproxy or apache web server and only allow known contexts (/cal, /caladmin etc).
 
@@ -19,11 +19,13 @@ The steps are (described in detail below)
 
 * Install jdk 11
 
-*  <<elasticsearch,Install and configure elastic search>>
-
 * If installing for postgres install the database and create an id/pw for access.
 
-* install wildfly with bedework as a feature
+* Download galleon
+
+* Run galleon to deploy wildfly with a bedework service
+
+*  <<opensearch,Install and configure OpenSearch>>
 
 * Start wildfly
 

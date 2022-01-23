@@ -1,6 +1,6 @@
 [[reindex]]
 === Reindexing
-Elasticsearch (ES) is used for indexing and searching the data. Nearly all complex queries take place against ES. The public facing web client and feeds use ES exclusively - there are no database interactions. CalDAV read-only methods (e.g. GET, PROPFIND, etc) also interact only with ES.
+Opensearch is used for indexing and searching the data. Nearly all complex queries take place against OpenSearch. The public facing web client and feeds use ES exclusively - there are no database interactions. CalDAV read-only methods (e.g. GET, PROPFIND, etc) also interact only with ES.
 
 The database is used only as a transactional store and only the admin clients and CalDAV write methods (PUT, POST etc) use the database. Changes made to the database result in updates to the index which in some cases can take up to a second to appear.
 

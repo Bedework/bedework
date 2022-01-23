@@ -4,7 +4,7 @@
 It is possible to deploy bedework in a number of configurations. There are the following major components to consider:
 
     * Database
-    * ElasticSearch
+    * OpenSearch
     * Calendar servers
     * Sync Engine
     * Event registration
@@ -16,11 +16,11 @@ It might still be helpful to run the server behind a load balancer such as hapro
 
 All of the rest can be run on a single server but it will need a generous amount of memory and multiple processors for any significant load.
 
-Running the database and ElasticSearch on a separate instance helps spread the load. For greater reliability both could be run as clustered services and your organization may already provide database support you can use.
+Running the database and OpenSearch on a separate instance helps spread the load. For greater reliability both could be run as clustered services and your organization may already provide database support you can use.
 
-It should be possible to use hosted solutions for both database and ElasticSearch.
+It should be possible to use hosted solutions for both database and OpenSearch.
 
-Multiple calendar servers can be run to provide greater reliability and to handle higher loads. Bedework is not currently configured to handle session migration etc. If you do run multiple servers you MUST have a single database and ElasticSearch service they both use.
+Multiple calendar servers can be run to provide greater reliability and to handle higher loads. Bedework is not currently configured to handle session migration etc. If you do run multiple servers you MUST have a single database and OpenSearch service they both use.
 
 It's probably easiest to deploy the calendar server by simply installing the quickstart then removing any deployed modules not required. A later release will allow more choices over what gets deployed.
 

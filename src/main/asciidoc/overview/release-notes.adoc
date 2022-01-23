@@ -1,14 +1,24 @@
 [[release-notes]]
 === Release Notes
 
-==== Dev (3.14-SNAPSHOT):
+==== Dev (4.0.0-SNAPSHOT):
+[NOTE]
+====
+This release switches from ElasticSearch to OpenSearch due to the licensing issues with ElasticSearch after version 7.10. This will require a reindex of the data but that would be required anyway as we have made too big a jump between versions for an automatic index update to work.
+
+There's an Amazon perspective on this at https://aws.amazon.com/blogs/opensource/stepping-up-for-a-truly-open-source-elasticsearch/
+
+This has some links to other articles and a search will reveal many others.
+
+While there are reservations about an Amazon supported version it appears to be in their best interests to truly support open source, so - at least for the time being - we have access to a supported Apache 2 licensed search engine.
+====
 
 [NOTE]
 ====
 A significant - but long-standing - bug was discovered. Override attachments were not being stored as the table and schema entries were missing. Updating will require adding the table to the database (or recreating the data from the XML dump).
 
-Additionally, ensure the elasticsearch schema is up to date
-(wildfly/standalone/configuration/bedework/elasticsearch) and reindex
+Additionally, ensure the OpenSearch schema is up to date
+(wildfly/standalone/configuration/bedework/opensearch) and reindex
 after the system is updated.
 
 See below for details.
@@ -45,7 +55,7 @@ ALTER TABLE ONLY bw_eventann_attachments
     ADD CONSTRAINT bw_eannattach_eid_fk FOREIGN KEY (eventid) REFERENCES bw_event_annotations(eventid);
 ----
 
-Ensure all configurations are up to date, especially the elasticsearch schema then reindex the data.
+Ensure all configurations are up to date, especially the OpenSearch schema then reindex the data.
 
 ===== Other Bug Fixes
 
@@ -57,11 +67,11 @@ Ensure all configurations are up to date, especially the elasticsearch schema th
 
 This does not affect public events.
 
-*Core* RDATE only recurring events were not being inxexed correctly - instances didn't show up.
+*Core* RDATE only recurring events were not being indexed correctly - instances didn't show up.
 
 *WebClient* Filter out Inbox from result
 *WebClient* Events were being moved incorrectly (from Inbox) causing indexing issues.
-*WebClient* Fixed the timeview - events near the enf=d of the day appeared in the next days cell.
+*WebClient* Fixed the timeview - events near the end of the day appeared in the next days cell.
 
 ===== Updates
 
@@ -73,9 +83,7 @@ Note that this has led to a number of changes to the bw script. In particular to
 ./bw bwcal
 ----
 
-*New quickstart deployment method.* Opting for no sources in the install script will now mean that the required components are downloaded directly from maven central. Currently git is required for part of the install but maven will not be required in this case.
-
-The intent is to have another script which will check for the availability of later versions.
+*New quickstart deployment method.* The quickstart will only be required for development purposes - or for reference to the source. Maven and git are no longer required to install wildfly but are required for the quickstart download.
 
 *Make basic config options constants* A number of path elements - e.g. the name of the user root collection - are in basic system properties - then flagged with "do not change".
 
@@ -85,7 +93,7 @@ This does not prevent sites setting the display name to something else.
 
 The properties in question are all those that were in basicSystem.xml, which used to populate BasicSystemProperties.
 
-*Updated to wildfly 22* appears to have better memory handling.
+*Updated to wildfly 25.0.1.FINAL* appears to have better memory handling.
 
 *Updated ical4j* brought it close to the Ben Fortuna version.
 
@@ -177,7 +185,7 @@ and examples will follow later as always.
 ==== Release 3.13.0:
 This release mostly consists of upgrades to almost the latest ElasticSearch (always a moving target), the currently latest wildfly and to Java 11 the current LTS release.
 
-Installing the quickstart requires that you first install docker if you wish to have a quickstart image of elasticsearch installed.
+Installing the quickstart requires that you first install docker if you wish to have a quickstart image of OpenSearch installed.
 
 There have additionally been some minor changes in configuration and the addition of a tool feature to help in calendar suite creation.
 

@@ -1,0 +1,84 @@
+[[opensearch, Install and configure OpenSearch]]
+=== OpenSearch
+Bedework uses OpenSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as a local application, useful for development - or as an external service - which will be required for clustering.
+
+It is safer to NOT run in production with the OpenSearch interfaces open to the outside. OpenSearch now has various configuration options available. Bedework supports basic user authentication. Currently you can run unauthenticated but OpenSearch will generate a lot of warnings in the log.
+
+You can run OpenSearch on the same server but preferably it should be running on a different server. OpenSearch - depending on the amount of data and types of search - can use a lot of memory for caching of filters. See the OpenSearch site for full instructions on running and installing.
+
+In general this is an easy process - OpenSearch offers various installation formats of all their versions.
+
+Bedework requires a small number of changes to the configuration. These are available in the deployed wildfly at
+
+[source]
+----
+wildfly/standalone/configuration/bedework/opensearch/config/opensearch.yml
+----
+
+The changes made are
+
+[source]
+----
+action.auto_create_index: "-bw*,+*"
+
+# Limit to inline only
+script.allowed_types: inline
+----
+
+Prevent OpenSearch from creating bedework indexes implicitly. This can cause issues when reindexing.
+
+[source]
+----
+cluster.name: bedework-2019
+...
+node.name: bw2019-1
+...
+cluster.initial_master_nodes: ["bw2019-1"]
+----
+
+Use specific names for the cluster and nodes.
+
+[[installing]]
+==== Installing OpenSearch
+There are a number of options available. The deployed wildfly demo server has a script to deploy a docker image of OpenSearch.
+First ensure docker is installed on your system and running then execute:
+
+wildfly/bin/bwinstallosch.sh
+
+To run the image:
+
+wildfly/bin/bwstartosch.sh
+
+will start a container with volumes bound to
+
+ * wildfly/standalone/configuration/bedework/opensearch/config
+ * wildfly/standalone/data/bedework/opensearch/data
+ * wildfly/standalone/log
+
+This is only suitable in that form for demonstration but may provide the basis for a production service.
+
+For more information see https://opensearch.org/docs
+
+If you're looking to install as a production service you need to install OpenSearch as a service. There are instructions at the OpenSearch site fo installing on various platforms.
+
+After installing and starting the service you will need to restore and reindex the data. For instructions see <<reindex>>.
+
+==== Installing a runnable OpenSearch
+If you wish to install OpenSearch as a runnable service there are instructions on running a minimal version without any security.
+You will need to copy the configuration and possibly the data from the deployed demo wildfly.
+
+In your <home>/.bw file add
+
+.................
+#
+# OpenSearch options
+#
+bwOschdatadir="<somewhere>/<opensearch>/data/"
+.................
+
+Then you can use the restore script to restore the data and indexes:
+
+.................
+.wildfly/bin/bwresetQS.sh
+.................
+

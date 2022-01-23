@@ -1,4 +1,8 @@
 [[installing-the-quickstart]]
+For versions 4.0.0 onwards it is not necessary to install a quickstart. You can install a qyuickstart if you wish to do development or have convenient access to the sources.
+
+If you are only interested in having a runnable version for demonstration or production then see the instructions at <<featurepack-install>>
+
 === Installing the quickstart (3.12.x onwards)
 
 The current quickstart is installed by executing a script which will create the quickstart directory and then download, clone and build. In the event of a failure part way through, the script may be restarted with the **restart** parameter.
@@ -25,18 +29,16 @@ You probably want latest. The dev version is obviously for development adn can b
 ==== Apacheds
 The script will install apacheds. This will install a directory with some initial ids in place for testing. Ultimately you'll want to use your own directory service.
 
-==== ElasticSearch
-You need a running elasticsearch - release 7.2. The quickstart install will optionally install a docker image and customize it for the quickstart.
+==== OpenSearch
+You need a running OpenSearch - currently release 1.2.3 The glleon install will provide a script to install a docker image and customize it for the quickstart.
 
 This requires you to have docker and docker-compose installed first.
 
-The elasticsearch instructions related to installing a docker image can be found at https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
+The instructions related to installing a docker image can be found at https://opensearch.org/docs
 
-After the install is complete there will be 2 scripts startES.sh and stopES.sh which will start and stop the docker image.
+After the install is complete use the 2 scripts bwstartosch.sh and bwstoposch.sh to start and stop the docker image.
 
-In reality - installing ES is relatively simple. It may be easier to install the appropriate service for your system. Downloads can be found at https://www.elastic.co/downloads/past-releases/elasticsearch-7-2-0
-
-If you want to install your own copy and configure it there is an elasticsearch.yml configuration file in bedework/conf/bedework/elasticsearch. Use this to replace the config in the downloaded ES.
+If you want to install your own copy and configure it the configuration directory is wildfly/standalone/configuration/bedework/opensearch/config. Use this to replace the config in the downloaded OpenSearch.
 
 ==== Maven
 Maven is required if you want to install the sources. If not you can skip this section.

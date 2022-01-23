@@ -63,3 +63,8 @@ include::{dev-dir}caldavtester.adoc[]
 [[older-releases]]
 == Older Bedework Versions (3.10 and Prior)
 include::{older-dir}releases.adoc[]
+
+== Previous versions of this document
+link:./3.13.2.html[3.13.2]
+
+link:./3.13.1.html[3.13.1]

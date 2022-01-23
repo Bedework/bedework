@@ -5,16 +5,6 @@
 .................
 sudo apt-get update
 .................
-. Install maven if you want to do builds.
-+
-.................
-sudo apt install maven
-.................
-. Install git
-+
-.................
-sudo apt install git
-.................
 . Ensure java 11 jdk installed
 +
 .................
@@ -23,9 +13,23 @@ sudo update-alternatives --config java
 .................
 +
 The last command should state there are no alternatives but if another has been installed pick the appropriate version.
+. Install wildfly with bedework using galleon
++
+If you are not wanting to install the quickstart for builds and development then install a wildfly service by following the instructions at <<featurepack-install>>.
+and disregard the remaining instructiosn below.
+. Install maven if you want to do builds.
++
+.................
+sudo apt install maven
+.................
+. Install git if you want to install the quickstart
++
+.................
+sudo apt install git
+.................
 . Set up maven
 +
-If you are doing builds set up the maven profile which must be named "bedework-3"
+If you are doing builds of versions before 4.0.0 then set up the maven profile which must be named "bedework-3"
 +
 .................
 mkdir ~/.m2
@@ -80,11 +84,9 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"
 +
 We create a directory in which to install bedework, download an install script and execute the script.
 +
-There are options to install elasticsearch as a docker image but we'll provide elasticsearch instructions later.
-+
 .................
-mkdir bw-3.13.2
-wget https://github.com/Bedework/bedework/raw/bedework-3.13.2/build/quickstart/linux/installQS.sh
+mkdir bw-4.0.0
+wget https://github.com/Bedework/bedework/raw/bedework-4.0.0/build/quickstart/linux/installQS.sh
 chmod +x installQS.sh
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ./installQS.sh
@@ -94,18 +96,18 @@ and answer the questions presented to you. If you need to restart - probably eas
 +
 Some time will pass. You'll be asked to provide an id and password for wildfly admin. I suggest hawtadmin and a password of your own choosing. More time will pass...
 
-. Install ElasticSearch 7.2.0
+. Install OpenSearch 1.2.3
 +
-See <<elasticsearch>> for instructions on installing and (re)indexing.
+The eployed wildfly has scripts to install a docker image and start and stop it. See <<opensearch>> for instructions on installing and (re)indexing.
 You'll need to start the system before reindexing.
 
 . Start the system
 +
 .................
 cd <into quickstart>
-./starth2
-./dirstart
-./startjboss
+./wildfly/bin/bwstarth2.sh
+./wildfly/bin/bwdirstart.sh
+./wildfly/bin/bwstartwildfly.sh
 .................
 +
 If you need to reindex there will certainly be some errors at startup.
@@ -114,7 +116,7 @@ If you need to reindex there will certainly be some errors at startup.
 Use the installed script to run the reindexer
 .................
 cd <into quickstart>
-./bw-cli/target/client/bin/client -id hawtadmin -pw mypw
+./wildfly/bin/bw-cli.sh -id hawtadmin -pw mypw
 help
 listidx
 rebuildidx
