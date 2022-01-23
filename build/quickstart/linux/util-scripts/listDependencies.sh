@@ -3,13 +3,13 @@
 listThem () {
   echo "$1:"
   cd $1
-  mvn dependency:resolve > /dev/null
+  mvn -Pbedework-dev dependency:resolve > /dev/null
 
 # List all
 # mvn -o dependency:list | grep ":.*:.*:.*" | cut -d] -f2- | sed 's/:[a-z]*$//g' | sort -u
 
   # Bedework only
-  mvn -o dependency:list | grep "org\.bedework.*:.*:.*:.*" | cut -d] -f2- | sed 's/:[a-z]*$//g' | sort -u
+  mvn -Pbedework-dev -o dependency:list | grep "org\.bedework.*:.*:.*:.*" | cut -d] -f2- | sed 's/:[a-z]*$//g' | sort -u
   cd ..
 }
 
@@ -42,4 +42,7 @@ listThem bw-calendar-common
 listThem bw-calendar-engine
 listThem bw-calendar-client
 listThem bw-calendar-xsl
+listThem bw-wfmodules
+listThem bw-wf-feature-pack
+listThem bw-deploy
 

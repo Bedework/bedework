@@ -1,40 +1,19 @@
 #! /bin/bash
 
-cd /Users/mike/.m2/repository/org/bedework/hibernate-core/5.2.5.FinalBwPatched/
+base=/Volumes/Data2b/hibernate/hibernate-orm-sv/hibernate-core
+cd $base/target
+cp generated-pom.xml libs/hibernate-core-5.2.5.FinalBwPatched.pom
 
-gpg2 --output hibernate-core-5.2.5.FinalBwPatched.jar.asc --detach-sig hibernate-core-5.2.5.FinalBwPatched.jar
+cd libs
 
-gpg2 --output hibernate-core-5.2.5.FinalBwPatched-sources.jar.asc --detach-sig hibernate-core-5.2.5.FinalBwPatched-sources.jar
-
-gpg2 --output hibernate-core-5.2.5.FinalBwPatched.pom.asc --detach-sig hibernate-core-5.2.5.FinalBwPatched.pom
-
-mvn deploy:deploy-file \
-      -Pbedework-dev \
-      -DpomFile="/Users/mike/bedework/quickstart-dev/bedework/tmp/.m2/repository/org/bedework/hibernate-core/5.2.5.FinalBwPatched/hibernate-core-5.2.5.FinalBwPatched.pom" \
-      -Dfile="/Users/mike/bedework/quickstart-dev/bedework/tmp/.m2/repository/org/bedework/hibernate-core/5.2.5.FinalBwPatched/hibernate-core-5.2.5.FinalBwPatched.jar" \
-      -DrepositoryId="ossrh" \
-      -Durl="https://oss.sonatype.org/service/local/staging/deploy/maven2/"
-
-mvn deploy:deploy-file \
-      -Pbedework-dev \
-      -DgroupId="org.bedework" \
-      -DartifactId="hibernate-core" \
-      -Dversion="5.2.5.FinalBwPatched" \
-      -Dpackaging=java-source \
-      -DgeneratePom=false \
-      -Dfile="/Users/mike/bedework/quickstart-dev/bedework/tmp/.m2/repository/org/bedework/hibernate-core/5.2.5.FinalBwPatched/hibernate-core-5.2.5.FinalBwPatched-sources.jar" \
-      -DrepositoryId="ossrh" \
-      -Durl="https://oss.sonatype.org/service/local/staging/deploy/maven2/"
-
-
-mvn deploy:deploy-file \
+mvn gpg:sign-and-deploy-file \
       -Pbedework-dev \
       -DgroupId="org.bedework" \
       -DartifactId="hibernate-core" \
       -Dversion="5.2.5.FinalBwPatched" \
       -DgeneratePom=false \
-      -Dfile="hibernate-core-5.2.5.FinalBwPatched-sources.jar.asc" \
+      -Dfile="hibernate-core-5.2.5.FinalBwPatched.jar" \
+      -Dsources="hibernate-core-5.2.5.FinalBwPatched-sources.jar" \
+      -Djavadoc="hibernate-core-5.2.5.FinalBwPatched-javadoc.jar" \
       -DrepositoryId="ossrh" \
       -Durl="https://oss.sonatype.org/service/local/staging/deploy/maven2/"
-
-
