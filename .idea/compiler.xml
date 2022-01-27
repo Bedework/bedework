@@ -9,6 +9,7 @@
         <module name="bw-self-registration-ear" />
         <module name="bw-self-registration-web" />
         <module name="bw-sometime-database" />
+        <module name="bw-calendar-all" />
         <module name="bw-util-opensearch" />
         <module name="bw-category-web" />
         <module name="bw-xml-xrd" />
@@ -111,6 +112,7 @@
         <module name="bw-calendar-client-util" />
         <module name="bw-note-ear" />
         <module name="bw-util-jms" />
+        <module name="bw-calendar-ro" />
         <module name="bw-self-registration-war" />
         <module name="bw-xml-exchangews" />
         <module name="bw-calendar-client-rw" />
@@ -131,7 +133,6 @@
         <module name="bw-calendar-engine-interfaces" />
         <module name="bw-calendar-engine-core-common" />
         <module name="bw-util-misc" />
-        <module name="bw-calendar-ro-ear" />
         <module name="bw-note-shared" />
         <module name="bw-timezone-server-web" />
         <module name="bw-util-json" />
@@ -143,7 +144,6 @@
         <module name="bw-jsforj" />
         <module name="bw-calendar-client-bedework-common" />
         <module name="bw-synch-war" />
-        <module name="bw-calendar-all-ear" />
         <module name="bw-sched-assist-ear" />
         <module name="bw-selfreg-common" />
         <module name="bw-logs" />
@@ -157,7 +157,6 @@
         <module name="bw-calendar-synchws" />
         <module name="bw-util-config-http" />
         <module name="bw-dotwell-known" />
-        <module name="bw-timezone-server-data" />
         <module name="bw-util-caching" />
         <module name="bw-note-outbound" />
         <module name="bw-util-directory" />
@@ -175,7 +174,6 @@
         <module name="bw-evreg-ear" />
         <module name="bw-calendar-api-ro" />
         <module name="sched-assist-spi-relationships" />
-        <module name="bw-calendar-data-h2" />
         <module name="bw-webclient-feeder" />
         <module name="bw-calsockets-war" />
         <module name="bw-event-registration-common" />
@@ -200,7 +198,7 @@
       <module name="bw-caldav-server" target="11" />
       <module name="bw-caldav-util" target="11" />
       <module name="bw-caldavTest" target="11" />
-      <module name="bw-calendar-all-ear" target="11" />
+      <module name="bw-calendar-all" target="11" />
       <module name="bw-calendar-annotations" target="11" />
       <module name="bw-calendar-api" target="11" />
       <module name="bw-calendar-api-ro" target="11" />
@@ -261,7 +259,7 @@
       <module name="bw-calendar-notifyws" target="11" />
       <module name="bw-calendar-pubcaldav" target="11" />
       <module name="bw-calendar-publicws" target="11" />
-      <module name="bw-calendar-ro-ear" target="11" />
+      <module name="bw-calendar-ro" target="11" />
       <module name="bw-calendar-synchws" target="11" />
       <module name="bw-calendar-sysevents-common" target="11" />
       <module name="bw-calendar-sysevents-msgs" target="11" />

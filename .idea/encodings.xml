@@ -58,16 +58,16 @@
     <file url="file://$PROJECT_DIR$/../bw-calendar-data/bw-calendar-data-h2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-data/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-data/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-all-ear/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-all-ear/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-all/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-all/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-notifyws/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-notifyws/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-pubcaldav/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-pubcaldav/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-publicws/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-publicws/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-ro-ear/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-ro-ear/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-ro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-ro/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-synchws/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-synchws/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-ucaldav/src/main/java" charset="UTF-8" />
