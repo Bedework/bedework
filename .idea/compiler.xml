@@ -20,9 +20,9 @@
         <module name="bw-note-common" />
         <module name="sched-assist-war (1)" />
         <module name="bw-webdav" />
-        <module name="bw-addrbook-client" />
         <module name="bw-calendar-client-appcommon" />
         <module name="bw-calendar-engine-dumprestore" />
+        <module name="bw-addrbook-client" />
         <module name="bw-selfreg-war" />
         <module name="bw-xml-vcard" />
         <module name="bw-xml-dav" />
@@ -33,8 +33,8 @@
         <module name="bw-util2-vcard" />
         <module name="bw-calsockets-common" />
         <module name="bw-timezone-server-war" />
-        <module name="bw-xml-calws-soap-strict" />
         <module name="bw-category-impl" />
+        <module name="bw-xml-calws-soap-strict" />
         <module name="bw-wfmodules-jasig-cas" />
         <module name="bw-evreg-service" />
         <module name="bw-synch-ear" />
@@ -48,8 +48,8 @@
         <module name="bw-util-servlet" />
         <module name="bw-util-maven-deploy" />
         <module name="bw-util-hibernate" />
-        <module name="bw-carddav-public-war" />
         <module name="bw-xml-appleServer" />
+        <module name="bw-carddav-public-war" />
         <module name="bw-synch-common" />
         <module name="bw-calendar-publicws" />
         <module name="bw-event-registration-ear" />
@@ -82,8 +82,8 @@
         <module name="bw-caldav-util" />
         <module name="sched-assist-web" />
         <module name="bw-calendar-engine-impl" />
-        <module name="bw-util-config" />
         <module name="bw-calendar-engine-caldav" />
+        <module name="bw-util-config" />
         <module name="bw-util-xml" />
         <module name="bw-util-xmltools" />
         <module name="bw-calendar-pubcaldav" />
@@ -98,13 +98,13 @@
         <module name="bw-calendar-mail" />
         <module name="bw-util-jolokia" />
         <module name="bw-carddav-userweb-war" />
+        <module name="bw-category-ical" />
         <module name="bw-xml-synchws" />
         <module name="bw-calendar-client-web-admin" />
-        <module name="bw-category-ical" />
         <module name="bw-xml-catdav" />
         <module name="bw-webclient-ucal" />
-        <module name="bw-evreg-common" />
         <module name="bw-xml-caldav" />
+        <module name="bw-evreg-common" />
         <module name="bw-calendar-api" />
         <module name="bw-xml-bwlicense" />
         <module name="bw-calendar-client-bwcommon" />
@@ -126,11 +126,11 @@
         <module name="bw-note-db" />
         <module name="bw-calendar-config" />
         <module name="bw-selfreg-ear" />
-        <module name="bw-xml-calws-soap" />
         <module name="bw-calendar-engine-tools" />
-        <module name="bw-util-misc" />
+        <module name="bw-xml-calws-soap" />
         <module name="bw-calendar-engine-interfaces" />
         <module name="bw-calendar-engine-core-common" />
+        <module name="bw-util-misc" />
         <module name="bw-calendar-ro-ear" />
         <module name="bw-note-shared" />
         <module name="bw-timezone-server-web" />
@@ -139,14 +139,14 @@
         <module name="bw-util-args" />
         <module name="bw-timezone-server-ear" />
         <module name="bw-event-registration-service" />
-        <module name="bw-jsforj" />
         <module name="sched-assist-spi" />
+        <module name="bw-jsforj" />
         <module name="bw-calendar-client-bedework-common" />
         <module name="bw-synch-war" />
         <module name="bw-calendar-all-ear" />
         <module name="bw-sched-assist-ear" />
-        <module name="bw-logs" />
         <module name="bw-selfreg-common" />
+        <module name="bw-logs" />
         <module name="bw-calsockets-pubwar" />
         <module name="bw-xml-war" />
         <module name="bw-xml-tzsvr" />
@@ -155,26 +155,27 @@
         <module name="bw-calendar-engine-chgnote" />
         <module name="sched-assist-mock" />
         <module name="bw-calendar-synchws" />
-        <module name="bw-dotwell-known" />
         <module name="bw-util-config-http" />
+        <module name="bw-dotwell-known" />
         <module name="bw-timezone-server-data" />
         <module name="bw-util-caching" />
         <module name="bw-note-outbound" />
         <module name="bw-util-directory" />
         <module name="bw-calendar-sysevents-common" />
-        <module name="bw-util-servlet-filters" />
         <module name="bw-note-war" />
+        <module name="bw-util-servlet-filters" />
         <module name="bw-wf-calendar-subsystem" />
         <module name="bw-caldav-server" />
         <module name="bw-calendar-annotations" />
         <module name="bw-util-logging" />
         <module name="bw-calendar-engine-core" />
-        <module name="bw-caldavTest" />
         <module name="bw-util-jmx" />
+        <module name="bw-caldavTest" />
         <module name="bw-util-dav" />
         <module name="bw-evreg-ear" />
         <module name="bw-calendar-api-ro" />
         <module name="sched-assist-spi-relationships" />
+        <module name="bw-calendar-data-h2" />
         <module name="bw-webclient-feeder" />
         <module name="bw-calsockets-war" />
         <module name="bw-event-registration-common" />
@@ -183,8 +184,8 @@
         <module name="bw-carddav-tools" />
         <module name="bw-calendar-client-web-rw" />
         <module name="bw-calendar-sysevents-msgs" />
-        <module name="bw-note-bwconnector" />
         <module name="sched-assist-spi-caldav" />
+        <module name="bw-note-bwconnector" />
         <module name="sched-assist-spi-caldav-integrationtest" />
       </profile>
     </annotationProcessing>
@@ -224,6 +225,9 @@
       <module name="bw-calendar-common" target="11" />
       <module name="bw-calendar-config" target="11" />
       <module name="bw-calendar-convert" target="11" />
+      <module name="bw-calendar-data" target="11" />
+      <module name="bw-calendar-data-h2" target="11" />
+      <module name="bw-calendar-deploy" target="11" />
       <module name="bw-calendar-engine" target="11" />
       <module name="bw-calendar-engine-annotations" target="11" />
       <module name="bw-calendar-engine-api" target="11" />
@@ -307,7 +311,6 @@
       <module name="bw-cli" target="11" />
       <module name="bw-cliutil" target="11" />
       <module name="bw-dav-tester" target="11" />
-      <module name="bw-deploy" target="11" />
       <module name="bw-deploy-maven-plugin" target="1.8" />
       <module name="bw-dotwell-known" target="11" />
       <module name="bw-event-registration" target="11" />

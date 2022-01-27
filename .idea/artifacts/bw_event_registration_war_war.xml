@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="bw-event-registration-war:war">
-    <output-path>$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war/target</output-path>
-    <root id="archive" name="bw-event-registration-war-4.0.0-SNAPSHOT.war" />
-  </artifact>
-</component>

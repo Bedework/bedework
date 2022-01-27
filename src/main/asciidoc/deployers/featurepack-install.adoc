@@ -136,3 +136,18 @@ The remainder are dependencies of the other layers..
 
 Note that, while different database layers can be mixed, it's not clear what will result from selecting the same application for different databases, e.g. bw-calendar-h2 AND bw-calendar-pg.
 
+==== Installing snapshot version
+This may notwork as snapshots can be out-of-date or inconsistent but for reference...
+
+Download and unzip galleon then run the binary and enter teh commands as shown:
+
+[source]
+----
+./galleon-4.2.8.Final/bin/galleon.sh
+maven add-repository --name=ossrh-snapshots --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
+maven resolve-feature-pack org.bedework:bw-wf-feature-pack:1.0.0-SNAPSHOT
+install org.bedework:bw-wf-feature-pack:1.0.0-SNAPSHOT --dir=wildfly-25.0.1.Final --verbose --layers=bw-demo-pg,web-console
+exit
+----
+
+The web-console layer is for the wildfly HAL console

@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-war" name="bw-carddav-user-war:war exploded">
-    <output-path>$PROJECT_DIR$/../bw-carddav/bw-carddav-user-war/target/bw-carddav-user-war-4.0.2-SNAPSHOT</output-path>
-    <root id="root" />
-  </artifact>
-</component>

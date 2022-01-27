@@ -3,14 +3,16 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="svn" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bedework.github.io" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bedework-parent" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bedework.github.io" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-access" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-apacheds" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldav" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldavTest" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-client" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-common" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-calendar-data" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-calendar-deploy" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-engine" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-xsl" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calsockets" vcs="Git" />
@@ -19,15 +21,14 @@
     <mapping directory="$PROJECT_DIR$/../bw-cli" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-cliutil" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-dav-tester" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-deploy" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-dotwell-known" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-event-registration" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-jsforj" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-logs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-notifier" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-self-registration" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-synch" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-sometime" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-synch" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-timezone-server" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-conf" vcs="Git" />
@@ -40,9 +41,9 @@
     <mapping directory="$PROJECT_DIR$/../bw-util-tz" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-webdav" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-wfmodules" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-wf-calendar-subsystem" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-wf-feature-pack" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-wfmodules" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-xml" vcs="Git" />
   </component>
 </project>

@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="bw-carddav-public-war:war">
-    <output-path>$PROJECT_DIR$/../bw-carddav/bw-carddav-public-war/target</output-path>
-    <root id="archive" name="bw-carddav-public-war-4.0.2-SNAPSHOT.war" />
-  </artifact>
-</component>

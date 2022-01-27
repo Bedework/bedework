@@ -5,8 +5,6 @@
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-category/bw-category-ear" />
-    <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-deploy/bw-calendar-all-ear" />
-    <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-deploy/bw-calendar-ro-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-notifier/bw-note-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear" />
@@ -14,32 +12,6 @@
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-synch/bw-synch-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-xml/bw-xml-ear" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/deployable/bwcal-3.11.0.ear/cal-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/deployable/bwcal-3.11.0.ear/caladmin-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/deployable/bwcal-3.11.0.ear/eventsubmit-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/deployable/bwcal-3.11.0.ear/feeder-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/deployable/bwcal-3.11.0.ear/ucal-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/deployableModified/bwcal-3.11.0.ear/cal-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/deployableModified/bwcal-3.11.0.ear/caladmin-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/deployableModified/bwcal-3.11.0.ear/eventsubmit-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/deployableModified/bwcal-3.11.0.ear/feeder-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/deployableModified/bwcal-3.11.0.ear/soedept-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/deployableModified/bwcal-3.11.0.ear/ucal-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/temp/bwcal.ear/cal-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/temp/bwcal.ear/caladmin-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/temp/bwcal.ear/eventsubmit-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/temp/bwcal.ear/feeder-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/temp/bwcal.ear/ucal-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/temp/wars/cal-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/temp/wars/caladmin-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/temp/wars/eventsubmit-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/temp/wars/feeder-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/dist/temp/wars/ucal-3.11.0.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/docs/wildfly-10.1.0.Final/standalone/deployments/bw-cal-3.12.0-SNAPSHOT.ear/bw-calendar-client-cal-3.12.0-SNAPSHOT.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/docs/wildfly-10.1.0.Final/standalone/deployments/bw-cal-3.12.0-SNAPSHOT.ear/bw-calendar-client-caladmin-3.12.0-SNAPSHOT.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/docs/wildfly-10.1.0.Final/standalone/deployments/bw-cal-3.12.0-SNAPSHOT.ear/bw-calendar-client-feeder-3.12.0-SNAPSHOT.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/docs/wildfly-10.1.0.Final/standalone/deployments/bw-cal-3.12.0-SNAPSHOT.ear/bw-calendar-client-submit-3.12.0-SNAPSHOT.war/WEB-INF/struts-config.xml" />
-    <file type="struts" url="file://$PROJECT_DIR$/../bedework-svn/docs/wildfly-10.1.0.Final/standalone/deployments/bw-cal-3.12.0-SNAPSHOT.ear/bw-calendar-client-ucal-3.12.0-SNAPSHOT.war/WEB-INF/struts-config.xml" />
     <type id="Osmorc" />
     <type id="web" />
   </component>
@@ -82,13 +54,14 @@
         <option value="$PROJECT_DIR$/../bw-sometime/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-common/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-deploy/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-category/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wf-feature-pack/pom.xml" />
         <option value="$PROJECT_DIR$/../bedework-parent/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-deploy/bw-calendar-ro-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-apacheds/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wf-calendar-subsystem/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-deploy/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-all-ear/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-data/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
