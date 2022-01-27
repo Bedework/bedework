@@ -194,6 +194,7 @@
       <module name="bw-access (1)" target="11" />
       <module name="bw-addrbook-client" target="11" />
       <module name="bw-apacheds" target="11" />
+      <module name="bw-bedeworkqs" target="11" />
       <module name="bw-caldav" target="11" />
       <module name="bw-caldav-server" target="11" />
       <module name="bw-caldav-util" target="11" />

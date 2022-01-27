@@ -62,6 +62,7 @@
         <option value="$PROJECT_DIR$/../bw-calendar-deploy/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-all-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-data/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-bedeworkqs/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
