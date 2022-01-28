@@ -44,5 +44,5 @@ listThem bw-calendar-client
 listThem bw-calendar-xsl
 listThem bw-wfmodules
 listThem bw-wf-feature-pack
-listThem bw-deploy
+listThem bw-calendar-deploy
 

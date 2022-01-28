@@ -2,9 +2,6 @@
 
 # Create a bedework quickstart
 
-# NOTE - must install modified hibernate in maven central.
-echo "must install modified hibernate in maven central."
-
 BASE_DIR=`pwd`
 scriptName="$0"
 restart=
@@ -16,13 +13,15 @@ if [ -f "$bwOptions" ]; then
   . "$bwOptions"
 fi
 
-mvnProfile=${bw_mvnProfile:-"bedework-3"}
+mvnProfile=${bw_mvnProfile:-"bedework-rel"}
 
-esDockerPull="docker pull docker.elastic.co/elasticsearch/elasticsearch:7.2.0"
-JBOSS_VERSION="22.0.0.Final"
-galleonVersion="4.2.5.Final"
-galleonFeaturePack="wildfly:22.0#$JBOSS_VERSION"
-galleonLayers="datasources-web-server,jms-activemq,webservices"
+jbossVersion=25.0.1.Final
+galleonVersion="4.2.8.Final"
+galleonFeaturePack="org.bedework:bw-wf-feature-pack:1.0.0-SNAPSHOT"
+
+bwLayerspg="bw-demo-pg,web-console"
+bwLayersh2="bw-demo-h2,web-console"
+galleonLayers="$bwLayersh2"
 
 # -------------------Package versions -----------------------------
 bwXmlVersion="4.0.10"
@@ -144,7 +143,7 @@ fi
 #  exit 1
 #fi
 
-JBOSS_BASE_DIR="wildfly-$JBOSS_VERSION"
+JBOSS_BASE_DIR="wildfly-$jbossVersion"
 
 # We create empty files in this directory to track progress
 progressDir="bwinstaller-progress"
@@ -152,17 +151,10 @@ progressDir="bwinstaller-progress"
 # Assigned below
 progressPath=
 
-wildflyConfDir="${JBOSS_BASE_DIR}/standalone/configuration"
-
-resources=$BASE_DIR/bedework/build/quickstart
-
 JBOSS_CONFIG="standalone"
 
 # These relative to $qs
 JBOSS_SERVER_DIR="$JBOSS_BASE_DIR/$JBOSS_CONFIG"
-JBOSS_DATA_DIR="$JBOSS_SERVER_DIR/data"
-bedework_data_dir="$JBOSS_DATA_DIR/bedework"
-es_data_dir="$bedework_data_dir/elasticsearch"
 
 TMP_DIR="$JBOSS_SERVER_DIR/tmp"
 
@@ -276,13 +268,11 @@ cat <<EOT >> "$qs"/profile.txt
 
   <profiles>
     <profile>
-      <id>bedework-3</id>
+      <id>bedework-local</id>
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
         <org.bedework.deployment.basedir>$qs</org.bedework.deployment.basedir>
         <org.bedework.deployment.properties>$qs/bedework/config/wildfly.deploy.properties</org.bedework.deployment.properties>
       </properties>
@@ -299,16 +289,10 @@ EOT
 
 # These are the steps in the process
 installWildfly="installWildFly"
-installES="installES"
 installScripts="installScripts"
-installDrivers="installDrivers"
 installHawtio="installHawtio"
 installSources="installSources"
-installData="installData"
-installApacheds="installApacheds"
-installModules="installModules"
 buildPackages="buildPackages"
-updateWildfly="updateWildFly"
 indexData="indexData"
 
 # Suffixed with package name
@@ -346,8 +330,6 @@ installWildFly() {
     mkdir -p "$qs"/$TMP_DIR
   fi
 
-  mkdir "$qs"/$JBOSS_DATA_DIR
-
   # Add a generic named link to the current wildfly
   cd $qs || { echo "Quickstart directory $qs doesn't exist"; exit 1; }
 
@@ -359,36 +341,6 @@ installWildFly() {
   ./wildfly/bin/add-user.sh -a -dc wildfly/standalone/configuration -g admin $adminId $adminPw
 
   markDone $installWildfly
-}
-
-# -------------------------------------------------------------------
-# -------------------------------------------------------------------
-# -------------------------------------------------------------------
-installES() {
-  echo "---------------------------------------------------------------"
-  echo "Install elasticsearch"
-
-  if stepDone $installES; then
-    echo "Already done"
-    return
-  fi
-
-  if stepSkipped $installES; then
-    echo "Skipped"
-    return
-  fi
-
-  if stepStarted $installES; then
-    echo "Remove possible partial download"
-  fi
-
-  markStarted $installES
-
-  $esDockerPull
-
-  # can be started/stopped with the startES.sh and stopES.sh scripts
-
-  markDone $installES
 }
 
 # -------------------------------------------------------------------
@@ -411,9 +363,9 @@ installScripts() {
 
   markStarted $installScripts
 
-  if [ "$version" == "dev" ] ; then
+  if [ "$version" = "dev" ] ; then
     cloneRepo bedework
-  elif [ "$prerelease" == "yes" ]; then
+  elif [ "$prerelease" = "yes" ]; then
     cloneRepo bedework
   else
     cloneRepoBranch $latestVersion bedework
@@ -422,35 +374,7 @@ installScripts() {
   chmod +x bedework/build/quickstart/linux/qs-scripts/*
   cp bedework/build/quickstart/linux/qs-scripts/* .
 
-  # Copy the config files into the appserver
-
-  cp -r bedework/config/bedework ${wildflyConfDir}
-
   markDone $installScripts
-}
-
-# -------------------------------------------------------------------
-# -------------------------------------------------------------------
-# -------------------------------------------------------------------
-installDrivers() {
-  echo "---------------------------------------------------------------"
-  echo "Install wildfly drivers"
-
-  if stepDone $installDrivers; then
-    echo "Already done"
-    return
-  fi
-
-  if stepStarted $installDrivers; then
-    echo "Remove possible partial copy"
-    unmark $installDrivers
-  fi
-
-  markStarted $installDrivers
-
-  cp -r bedework/build/quickstart/resources/wfmodules/*  ${JBOSS_BASE_DIR}/modules/
-
-  markDone $installDrivers
 }
 
 installHawtio() {
@@ -480,108 +404,6 @@ installHawtio() {
   rm -r console
 
   markDone $installHawtio
-}
-
-installData() {
-  echo "---------------------------------------------------------------"
-  echo "Install data"
-
-  if stepDone $installData; then
-    echo "Already done"
-    return
-  fi
-
-  if stepStarted $installData; then
-#    echo "Remove possible partial downloads"
-#    rm -rf wfdata
-#    rm wfdata.zip
-#    rm -r ${JBOSS_BASE_DIR}/standalone/data
-    unmark $installData
-  fi
-
-  markStarted $installData
-
-#  wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/wfdata.zip
-#  unzip wfdata.zip
-#  mkdir ${JBOSS_BASE_DIR}/standalone/data
-#  cp -r wfdata/* ${JBOSS_BASE_DIR}/standalone/data/
-#  rm -rf wfdata
-#  rm wfdata.zip
-  resources=$qs/bedework/build/quickstart
-  mkdir $qs/$bedework_data_dir
-
-  # Unpack here
-  cd $qs/$TMP_DIR/
-
-  # ------------------------------------- h2 data
-
-  rm -f h2.zip
-  cp $resources/data/h2.zip .
-  rm -rf h2/
-  unzip h2.zip
-  rm -f h2.zip
-  rm -rf $qs/$bedework_data_dir/h2
-  cp -r h2 $qs/$bedework_data_dir/
-  rm -rf h2/
-
-  # ------------------------------------- ES data
-
-  #rm -f elasticsearch.zip
-  #rm -rf elasticsearch
-  #cp $resources/data/elasticsearch.zip .
-  #unzip elasticsearch.zip
-  #rm elasticsearch.zip
-  #rm -rf $qs/$es_data_dir
-  #cp -r elasticsearch $qs/$bedework_data_dir/
-
-  # ------------------------------------- TZ data
-
-  rm -f tzsvr.zip
-  rm -rf tzsvr
-  cp $resources/data/tzsvr.zip .
-  unzip tzsvr.zip
-  rm tzsvr.zip
-  rm -rf $qs/$bedework_data_dir/tzsvr
-  cp -r tzsvr $qs/$bedework_data_dir/
-
-  cd $BASE_DIR
-
-  markDone $installData
-}
-
-installApacheds() {
-  echo "---------------------------------------------------------------"
-  echo "Install Apache DS"
-
-  if stepDone $installApacheds; then
-    echo "Already done"
-    return
-  fi
-
-  if stepSkipped $installApacheds; then
-    echo "Skipped"
-    return
-  fi
-
-  if stepStarted $installApacheds; then
-    unmark $installApacheds
-  fi
-
-  markStarted $installApacheds
-
-#  wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/apacheds.zip
-#  unzip apacheds.zip
-#  rm apacheds.zip
-
-  cd $qs
-
-  rm -f apacheds.zip
-  rm -rf apacheds-1.5.3-fixed
-  cp $resources/data/apacheds.zip .
-  unzip apacheds.zip
-  rm apacheds.zip
-
-  markDone $installApacheds
 }
 
 installDeployer() {
@@ -870,32 +692,6 @@ installSources() {
   markDone $installSources
 }
 
-installModules() {
-  echo "---------------------------------------------------------------"
-  echo "Build the packages"
-
-  if stepDone "installModules"; then
-    echo "Already done"
-    return
-  fi
-
-  if stepSkipped "installModules"; then
-    echo "Skipped"
-    return
-  fi
-
-  if stepStarted "installModules"; then
-    echo "Restarting from partial build"
-  else
-    markStarted "installModules"
-  fi
-
-  ./bw -P "$mvnProfile" bwutillog
-  ./bw -P "$mvnProfile" bwutil
-  ./bw -P "$mvnProfile" bwutilConf
-  ./bw -P "$mvnProfile" bwutilNetwork
-}
-
 # $1 - name
 buildPackage() {
   packageName=$1
@@ -986,34 +782,6 @@ buildPackages() {
   markDone $buildPackages
 }
 
-
-# -------------------------------------------------------------------
-# -------------------------------------------------------------------
-# -------------------------------------------------------------------
-updateWildFly() {
-  echo "---------------------------------------------------------------"
-  echo "update wildfly"
-
-  if stepDone $updateWildfly; then
-    echo "Already done"
-    return
-  fi
-
-  if stepStarted $updateWildfly; then
-    echo "Remove possible partial download"
-  fi
-
-  markStarted $updateWildfly
-
-  cp $qs/bedework/config/standalone.xml ${wildflyConfDir}/
-
-  mkdir $JBOSS_BASE_DIR/standalone/log
-  mkdir $JBOSS_BASE_DIR/bedework-content
-  cp $qs/bedework/content/resources/bedework.ico $JBOSS_BASE_DIR/bedework-content/favicon.ico
-  cp $qs/bedework/content/resources/Error404.html $JBOSS_BASE_DIR/bedework-content/
-
-  markDone $updateWildfly
-}
 
 indexData() {
   echo "---------------------------------------------------------------"
@@ -1123,26 +891,26 @@ fi
 
 markVersion $qs
 
-echo "Do you wish to install the sources?"
-echo "If yes a full quickstart with all sources will be installed"
-echo "and the system built from those sources. This also requires"
-echo "maven, git and a correct maven profile (one will be displayed soon)."
+echo "A full quickstart with all sources will be installed. This"
+echo "equires maven, git and a correct maven profile (one will be"
+echo "displayed soon)."
 echo ""
 
-withSources="no"
+doBuild="no"
 
+echo "Do you want a full build of all sources? Yes/No"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) withSources="yes"; break;;
-        No ) markSkipped ${installSources}; break;;
+        Yes ) doBuild="yes"; break;;
+        No ) markSkipped ${buildPackages}; break;;
     esac
 done
 
-echo "Do you wish to install and start a docker image of elasticsearch?"
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) break;;
-        No ) markSkipped ${installES}; markSkipped ${indexData}; break;;
+echo "Do you want a postgresql (pg) or h2 version (h2)"
+select ph in "pg" "h2"; do
+    case $ph in
+        pg ) galleonLayers="$bwLayerspg"; break;;
+        h2 ) galleonLayers="$bwLayersh2"; break;;
     esac
 done
 
@@ -1151,19 +919,17 @@ cd $qs
 
 qs=`pwd`
 
-if [ "$withSources" = "yes" ]; then
-  echo
-  echo "Either merge these settings (from profile.txt) into your ~/.m2/settings.xml file"
-  echo "or create that file with the content"
-  echo
-  echo "You need to do this before continuing or subsequent builds will fail."
-  echo
+echo
+echo "Either merge these settings (from profile.txt) into your ~/.m2/settings.xml file"
+echo "or create that file with the content"
+echo
+echo "You need to do this before continuing or subsequent builds will fail."
+echo
 
-  createProfile
+createProfile
 
-  echo
-  read -p "Hit enter/return to continue" ignore
-fi
+echo
+read -p "Hit enter/return to continue" ignore
 
 # -------------------------------------------------------------------
 #  Installation starts here
@@ -1171,31 +937,15 @@ fi
 
 installWildFly
 
-installES
-
 installScripts
-
-installDrivers
 
 installHawtio
 
-if [ "$withSources" = "yes" ] ; then
-  installSources
-else
-  installDeployer
-  installEars
-  installApps
-fi
-
-installData
-
-installApacheds
+installSources
 
 cd $qs
-if [ "$withSources" = "yes" ] ; then
+if [ "$doBuild" = "yes" ] ; then
   buildPackages
 fi
-
-updateWildFly
 
 indexData
