@@ -136,8 +136,33 @@ The remainder are dependencies of the other layers..
 
 Note that, while different database layers can be mixed, it's not clear what will result from selecting the same application for different databases, e.g. bw-calendar-h2 AND bw-calendar-pg.
 
+In addition to the bedework layers there are wildfly layers that might be useful.
+
+.Wildfly layers
+|===
+| Layer | Function
+
+| web-console
+| A console which gives access to the wildfly application server. See https://hal.github.io/documentation/manual/
+
+|===
+
+==== Installing examples
+These assume galleon has been installed and is runnable. For example it may be installed in the home directory and runnable as:
+
+----
+~/galleon-4.2.8.Final/bin/galleon.sh
+----
+
+In the following examples we will simple write galleon.sh
+
+.Calendar server with console
+=========
+galleon.sh install org.bedework:bw-wf-feature-pack:4.0.0 --dir=wildfly --verbose --layers=bw-calendar-pg,web-console
+=========
+
 ==== Installing snapshot version
-This may notwork as snapshots can be out-of-date or inconsistent but for reference...
+This may not work as snapshots can be out-of-date or inconsistent but for reference...
 
 Download and unzip galleon then run the binary and enter teh commands as shown:
 
