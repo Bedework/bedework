@@ -182,6 +182,7 @@
     <file url="file://$PROJECT_DIR$/../bw-dav-tester/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-dotwell-known/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-dotwell-known/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-esdata/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/src/main/java" charset="UTF-8" />
@@ -218,6 +219,8 @@
     <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-war/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-notifier/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-notifier/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-oschdata/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-oschdata/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/src/main/java" charset="UTF-8" />

@@ -65,6 +65,7 @@
         <option value="$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-all-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-data/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-bedeworkqs/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-oschdata/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -116,6 +117,5 @@
         </entry>
       </map>
     </option>
-    <option name="mySupportsUserInfoFilter" value="true" />
   </component>
 </project>

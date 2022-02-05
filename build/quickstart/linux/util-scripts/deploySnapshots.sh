@@ -12,7 +12,9 @@ deploySnapshot() {
 }
 
 deploySnapshot bedework-parent
+deploySnapshot bw-apacheds
 deploySnapshot bedework
+deploySnapshot bw-bedeworkqs
 deploySnapshot bw-xml
 deploySnapshot bw-util-deploy
 deploySnapshot bw-util-logging
@@ -38,10 +40,13 @@ deploySnapshot bw-sometime
 deploySnapshot bw-cliutil
 deploySnapshot bw-cli
 deploySnapshot bw-carddav
+deploySnapshot bw-category
 deploySnapshot bw-calendar-common
 deploySnapshot bw-calendar-engine
 deploySnapshot bw-calendar-client
 deploySnapshot bw-calendar-xsl
-deploySnapshot bw-deploy
+deploySnapshot bw-calendar-deploy
+deploySnapshot bw-calendar-data
+deploySnapshot bw-oschdata
 deploySnapshot bw-wfmodules
 deploySnapshot bw-wf-feature-pack

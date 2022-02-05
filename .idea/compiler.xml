@@ -312,6 +312,7 @@
       <module name="bw-dav-tester" target="11" />
       <module name="bw-deploy-maven-plugin" target="1.8" />
       <module name="bw-dotwell-known" target="11" />
+      <module name="bw-esdata" target="11" />
       <module name="bw-event-registration" target="11" />
       <module name="bw-event-registration-common" target="11" />
       <module name="bw-event-registration-ear" target="11" />
@@ -333,6 +334,7 @@
       <module name="bw-note-shared" target="11" />
       <module name="bw-note-war" target="11" />
       <module name="bw-notifier" target="11" />
+      <module name="bw-oschdata" target="11" />
       <module name="bw-sched-assist-ear" target="11" />
       <module name="bw-self-registration" target="11" />
       <module name="bw-self-registration-common" target="11" />
@@ -471,6 +473,7 @@
       <module name="bw-wfmodules-com-fasterxml-jackson-dataformat-yaml" target="11" />
       <module name="bw-wfmodules-com-h2database-h2" target="11" />
       <module name="bw-wfmodules-com-sun-mail" target="11" />
+      <module name="bw-wfmodules-common" target="11" />
       <module name="bw-wfmodules-commons-beanutils" target="11" />
       <module name="bw-wfmodules-commons-codec" target="11" />
       <module name="bw-wfmodules-commons-collections" target="11" />
@@ -480,6 +483,7 @@
       <module name="bw-wfmodules-commons-lang" target="11" />
       <module name="bw-wfmodules-commons-lang3" target="11" />
       <module name="bw-wfmodules-commons-logging" target="11" />
+      <module name="bw-wfmodules-digester" target="11" />
       <module name="bw-wfmodules-elasticsearch-rest-client" target="11" />
       <module name="bw-wfmodules-eventreg" target="11" />
       <module name="bw-wfmodules-ical4j" target="11" />
@@ -540,6 +544,7 @@
       <module name="bw-wfmodules-spring-ws-core" target="11" />
       <module name="bw-wfmodules-spring-ws-security" target="11" />
       <module name="bw-wfmodules-spring-ws-xml" target="11" />
+      <module name="bw-wfmodules-sun-mail" target="11" />
       <module name="bw-wfmodules-synch" target="11" />
       <module name="bw-wfmodules-synch-common" target="11" />
       <module name="bw-wfmodules-synch-ear" target="11" />

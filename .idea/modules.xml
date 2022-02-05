@@ -99,6 +99,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-shared/bw-note-shared.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-shared/bw-note-shared.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-war/bw-note-war.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-war/bw-note-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-notifier.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-notifier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-oschdata/bw-oschdata.iml" filepath="$PROJECT_DIR$/../bw-oschdata/bw-oschdata.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-sometime/bw-sched-assist-ear/bw-sched-assist-ear.iml" filepath="$PROJECT_DIR$/../bw-sometime/bw-sched-assist-ear/bw-sched-assist-ear.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/bw-self-registration-common.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/bw-self-registration-common.iml" />
@@ -219,6 +220,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-com-fasterxml-jackson-dataformat-yaml/bw-wfmodules-com-fasterxml-jackson-dataformat-yaml.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-com-fasterxml-jackson-dataformat-yaml/bw-wfmodules-com-fasterxml-jackson-dataformat-yaml.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-com-h2database-h2/bw-wfmodules-com-h2database-h2.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-com-h2database-h2/bw-wfmodules-com-h2database-h2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-com-sun-mail/bw-wfmodules-com-sun-mail.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-com-sun-mail/bw-wfmodules-com-sun-mail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-category/bw-wfmodules-category-common/bw-wfmodules-common.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-category/bw-wfmodules-category-common/bw-wfmodules-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-beanutils/bw-wfmodules-commons-beanutils.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-beanutils/bw-wfmodules-commons-beanutils.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-codec/bw-wfmodules-commons-codec.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-codec/bw-wfmodules-commons-codec.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-collections/bw-wfmodules-commons-collections.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-collections/bw-wfmodules-commons-collections.iml" />
@@ -228,6 +230,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-lang/bw-wfmodules-commons-lang.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-lang/bw-wfmodules-commons-lang.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-lang3/bw-wfmodules-commons-lang3.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-lang3/bw-wfmodules-commons-lang3.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-logging/bw-wfmodules-commons-logging.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-logging/bw-wfmodules-commons-logging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-digester/bw-wfmodules-digester.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons-digester/bw-wfmodules-digester.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-eventreg/bw-wfmodules-eventreg.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-eventreg/bw-wfmodules-eventreg.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j/bw-wfmodules-ical4j.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j/bw-wfmodules-ical4j.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j-vcard/bw-wfmodules-ical4j-vcard.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j-vcard/bw-wfmodules-ical4j-vcard.iml" />
@@ -285,6 +288,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-spring/bw-wfmodules-spring-ws-core/bw-wfmodules-spring-ws-core.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-spring/bw-wfmodules-spring-ws-core/bw-wfmodules-spring-ws-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-spring/bw-wfmodules-spring-ws-security/bw-wfmodules-spring-ws-security.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-spring/bw-wfmodules-spring-ws-security/bw-wfmodules-spring-ws-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-spring/bw-wfmodules-spring-ws-xml/bw-wfmodules-spring-ws-xml.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-spring/bw-wfmodules-spring-ws-xml/bw-wfmodules-spring-ws-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-com-sun-mail/bw-wfmodules-sun-mail.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-com-sun-mail/bw-wfmodules-sun-mail.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/bw-wfmodules-synch.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/bw-wfmodules-synch.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/bw-wfmodules-synch-common/bw-wfmodules-synch-common.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/bw-wfmodules-synch-common/bw-wfmodules-synch-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/bw-wfmodules-synch-ear/bw-wfmodules-synch-ear.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/bw-wfmodules-synch-ear/bw-wfmodules-synch-ear.iml" />
