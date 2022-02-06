@@ -14,9 +14,9 @@ deploySnapshot() {
 deploySnapshot bedework-parent
 deploySnapshot bw-apacheds
 deploySnapshot bedework
+deploySnapshot bw-util-deploy
 deploySnapshot bw-bedeworkqs
 deploySnapshot bw-xml
-deploySnapshot bw-util-deploy
 deploySnapshot bw-util-logging
 deploySnapshot bw-util
 deploySnapshot bw-util-conf
