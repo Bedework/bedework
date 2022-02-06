@@ -423,7 +423,7 @@ bw-calendar-xsl:
 Clean up with 
 (org.bedework).*(:jar:).*(\-\- module)
 
-bedework-parent: 4.0.0-SNAPSHOT
+bedework-parent: 1-SNAPSHOT
 
 bw-xml:  5.0.0-SNAPSHOT
     bedework-parent
