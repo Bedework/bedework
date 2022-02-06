@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="bw-self-registration-ear" />
+        <module name="bw-calendar-xsl-common" />
         <module name="bw-self-registration-web" />
         <module name="bw-sometime-database" />
         <module name="bw-calendar-all" />
@@ -43,7 +44,6 @@
         <module name="bw-synch-web" />
         <module name="bw-calendar-client-admin" />
         <module name="bw-carddav-client" />
-        <module name="bw-calendar-xsl" />
         <module name="bw-timezone-server-common" />
         <module name="bw-deploy-maven-plugin" />
         <module name="bw-util-servlet" />
@@ -61,12 +61,14 @@
         <module name="bw-event-registration-web" />
         <module name="bw-calendar-engine-api" />
         <module name="wfmodulesutil" />
+        <module name="bw-calendar-xsl-calfeedrsrc-MainCampus" />
         <module name="bw-util2-calendar" />
         <module name="bw-calendar-client-webcommon" />
         <module name="bw-xml-icalendar" />
         <module name="sched-assist-portlet" />
         <module name="bw-util-deployment" />
         <module name="bw-calsockets-web" />
+        <module name="bw-calendar-xsl-calrsrc-SoEDepartmental" />
         <module name="bw-carddav-dumpres" />
         <module name="bw-carddav-server" />
         <module name="bw-calendar-ucaldav" />
@@ -102,6 +104,7 @@
         <module name="bw-category-ical" />
         <module name="bw-xml-synchws" />
         <module name="bw-calendar-client-web-admin" />
+        <module name="bw-calendar-xsl-ucalrsrc" />
         <module name="bw-xml-catdav" />
         <module name="bw-webclient-ucal" />
         <module name="bw-xml-caldav" />
@@ -138,6 +141,7 @@
         <module name="bw-util-json" />
         <module name="bwwebcl-appcommon" />
         <module name="bw-util-args" />
+        <module name="bw-calendar-xsl-eventsubmitrsrc" />
         <module name="bw-timezone-server-ear" />
         <module name="bw-event-registration-service" />
         <module name="sched-assist-spi" />
@@ -148,6 +152,7 @@
         <module name="bw-selfreg-common" />
         <module name="bw-logs" />
         <module name="bw-calsockets-pubwar" />
+        <module name="bw-calendar-xsl-caladminrsrc" />
         <module name="bw-xml-war" />
         <module name="bw-xml-tzsvr" />
         <module name="bw-event-registration-war" />
@@ -155,6 +160,7 @@
         <module name="bw-calendar-engine-chgnote" />
         <module name="sched-assist-mock" />
         <module name="bw-calendar-synchws" />
+        <module name="bw-calendar-xsl-calrsrc-MainCampus" />
         <module name="bw-util-config-http" />
         <module name="bw-dotwell-known" />
         <module name="bw-util-caching" />
@@ -267,6 +273,13 @@
       <module name="bw-calendar-ucaldav" target="11" />
       <module name="bw-calendar-userws" target="11" />
       <module name="bw-calendar-xsl" target="11" />
+      <module name="bw-calendar-xsl-caladminrsrc" target="11" />
+      <module name="bw-calendar-xsl-calfeedrsrc-MainCampus" target="11" />
+      <module name="bw-calendar-xsl-calrsrc-MainCampus" target="11" />
+      <module name="bw-calendar-xsl-calrsrc-SoEDepartmental" target="11" />
+      <module name="bw-calendar-xsl-common" target="11" />
+      <module name="bw-calendar-xsl-eventsubmitrsrc" target="11" />
+      <module name="bw-calendar-xsl-ucalrsrc" target="11" />
       <module name="bw-caleng-annotations" target="1.8" />
       <module name="bw-caleng-api" target="1.8" />
       <module name="bw-caleng-caldav" target="1.8" />

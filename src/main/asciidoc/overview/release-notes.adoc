@@ -2,8 +2,7 @@
 === Release Notes
 
 ==== Dev (4.0.0-SNAPSHOT):
-[NOTE]
-====
+==== ElasticSearch replaced with OpenSearch
 This release switches from ElasticSearch to OpenSearch due to the licensing issues with ElasticSearch after version 7.10. This will require a reindex of the data but that would be required anyway as we have made too big a jump between versions for an automatic index update to work.
 
 There's an Amazon perspective on this at https://aws.amazon.com/blogs/opensource/stepping-up-for-a-truly-open-source-elasticsearch/
@@ -11,24 +10,14 @@ There's an Amazon perspective on this at https://aws.amazon.com/blogs/opensource
 This has some links to other articles and a search will reveal many others.
 
 While there are reservations about an Amazon supported version it appears to be in their best interests to truly support open source, so - at least for the time being - we have access to a supported Apache 2 licensed search engine.
-====
 
-[NOTE]
-====
+==== Missing tables in database
+*This fix is needed for attachments to work correctly.* It probably does not affect public events as attachmentsare not (much?) used.
 A significant - but long-standing - bug was discovered. Override attachments were not being stored as the table and schema entries were missing. Updating will require adding the table to the database (or recreating the data from the XML dump).
 
 Additionally, ensure the OpenSearch schema is up to date
 (wildfly/standalone/configuration/bedework/opensearch) and reindex
 after the system is updated.
-
-See below for details.
-====
-
-A further significant bug discovered soon after release of 3.13.2:
-
-    * Indexing:
-        Referenced entities - e.g. locations, were not getting restored
-          in some cases - see https://github.com/Bedework/bw-calendar-engine/commit/58df20469660d4fe4f2fcef15992147979e3717c#diff-4fb4cfb2524a3a8ea92fc90a4fc31b60
 
 **To fix attachments in postgres.**
 
@@ -57,7 +46,26 @@ ALTER TABLE ONLY bw_eventann_attachments
 
 Ensure all configurations are up to date, especially the OpenSearch schema then reindex the data.
 
+===== Changes that might need to be made
+If you deploy your own copy of bedework wars and ears theer are changes that might affect you. Most of the properties which were chanegd by the bedework deployment process have been replaced with run-time wildfly properties or by values.
+
+For example, when the xsl war was deployed a property in WEB-INF/jboss-web.xml was replaced.
+
+....
+  <context-root>${app.context}</context-root>
+....
+has been replaced with
+....
+    <context-root>/approots</context-root>
+....
+
 ===== Other Bug Fixes
+
+A further significant bug discovered soon after release of 3.13.2:
+
+*Indexing.*
+Referenced entities - e.g. locations, were not getting restored
+in some cases - see https://github.com/Bedework/bw-calendar-engine/commit/58df20469660d4fe4f2fcef15992147979e3717c#diff-4fb4cfb2524a3a8ea92fc90a4fc31b60
 
 *Further bug with recurrences.* In caldav if an override was deleted from the event it was not deleted from the system.
 
