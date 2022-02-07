@@ -69,6 +69,7 @@
         <option value="$PROJECT_DIR$/../bw-calendar-xsl/bw-calendar-xsl-calrsrc.SoEDepartmental/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-xsl/bw-calendar-xsl-eventsubmitrsrc/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-xsl/bw-calendar-xsl-ucalrsrc/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wf-core-feature-pack/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
