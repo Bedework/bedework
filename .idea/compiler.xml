@@ -77,7 +77,6 @@
         <module name="bw-synch-shared" />
         <module name="bw-calutil" />
         <module name="bw-dav-tester" />
-        <module name="bw-wf-timezone-server-feature-pack" />
         <module name="bw-category-war" />
         <module name="bw-category-common" />
         <module name="bw-util-cli" />
@@ -429,6 +428,7 @@
       <module name="bw-wf-calendar-subsystem" target="11" />
       <module name="bw-wf-core-feature-pack" target="11" />
       <module name="bw-wf-feature-pack" target="11" />
+      <module name="bw-wf-synch-feature-pack" target="11" />
       <module name="bw-wf-timezone-server-feature-pack" target="11" />
       <module name="bw-wf-xml-feature-pack" target="11" />
       <module name="bw-wfmodules" target="11" />
