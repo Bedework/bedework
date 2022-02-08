@@ -173,6 +173,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-wf-calendar-subsystem/bw-wf-calendar-subsystem.iml" filepath="$PROJECT_DIR$/../bw-wf-calendar-subsystem/bw-wf-calendar-subsystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wf-core-feature-pack/bw-wf-core-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wf-core-feature-pack/bw-wf-core-feature-pack.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wf-feature-pack/bw-wf-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wf-feature-pack/bw-wf-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-wf-timezone-server-feature-pack/bw-wf-timezone-server-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-wf-timezone-server-feature-pack/bw-wf-timezone-server-feature-pack.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-xml/bw-wf-xml-feature-pack/bw-wf-xml-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-xml/bw-wf-xml-feature-pack/bw-wf-xml-feature-pack.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-access/bw-wfmodules-access.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-access/bw-wfmodules-access.iml" />
