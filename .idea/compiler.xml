@@ -136,7 +136,6 @@
         <module name="bw-calendar-engine-interfaces" />
         <module name="bw-calendar-engine-core-common" />
         <module name="bw-util-misc" />
-        <module name="bw-wf-core-feature-pack" />
         <module name="bw-note-shared" />
         <module name="bw-timezone-server-web" />
         <module name="bw-util-json" />
@@ -429,6 +428,7 @@
       <module name="bw-wf-calendar-subsystem" target="11" />
       <module name="bw-wf-core-feature-pack" target="11" />
       <module name="bw-wf-feature-pack" target="11" />
+      <module name="bw-wf-xml-feature-pack" target="11" />
       <module name="bw-wfmodules" target="11" />
       <module name="bw-wfmodules (1)" target="11" />
       <module name="bw-wfmodules (2)" target="11" />
