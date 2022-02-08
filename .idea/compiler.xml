@@ -10,7 +10,6 @@
         <module name="bw-calendar-xsl-common" />
         <module name="bw-self-registration-web" />
         <module name="bw-sometime-database" />
-        <module name="bw-calendar-all" />
         <module name="bw-util-opensearch" />
         <module name="bw-category-web" />
         <module name="bw-xml-xrd" />
@@ -115,7 +114,6 @@
         <module name="bw-calendar-client-util" />
         <module name="bw-note-ear" />
         <module name="bw-util-jms" />
-        <module name="bw-calendar-ro" />
         <module name="bw-self-registration-war" />
         <module name="bw-xml-exchangews" />
         <module name="bw-calendar-client-rw" />
@@ -136,6 +134,7 @@
         <module name="bw-calendar-engine-interfaces" />
         <module name="bw-calendar-engine-core-common" />
         <module name="bw-util-misc" />
+        <module name="bw-webclient-demosoe" />
         <module name="bw-note-shared" />
         <module name="bw-timezone-server-web" />
         <module name="bw-util-json" />
@@ -421,6 +420,7 @@
       <module name="bw-webclient-cal" target="11" />
       <module name="bw-webclient-caladmin" target="11" />
       <module name="bw-webclient-calauth" target="11" />
+      <module name="bw-webclient-demosoe" target="11" />
       <module name="bw-webclient-feeder" target="11" />
       <module name="bw-webclient-submit" target="11" />
       <module name="bw-webclient-ucal" target="11" />
@@ -470,8 +470,8 @@
       <module name="bw-wfmodules-calendar-engine-inoutsched" target="11" />
       <module name="bw-wfmodules-calendar-engine-interfaces" target="11" />
       <module name="bw-wfmodules-calendar-engine-tools" target="11" />
-      <module name="bw-wfmodules-calendar-ro-ear" target="11" />
-      <module name="bw-wfmodules-calendar-rw-ear" target="11" />
+      <module name="bw-wfmodules-calendar-ro-war" target="11" />
+      <module name="bw-wfmodules-calendar-rw-war" target="11" />
       <module name="bw-wfmodules-carddav" target="11" />
       <module name="bw-wfmodules-category" target="11" />
       <module name="bw-wfmodules-category-common" target="11" />

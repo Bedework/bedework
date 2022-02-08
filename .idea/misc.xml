@@ -70,6 +70,7 @@
         <option value="$PROJECT_DIR$/../bw-calendar-xsl/bw-calendar-xsl-eventsubmitrsrc/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-xsl/bw-calendar-xsl-ucalrsrc/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wf-core-feature-pack/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-demosoe/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -82,6 +83,8 @@
         <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-strutsmodule/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-submit/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ucal/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-all/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-ro/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api-ro/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-mail/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-sysevents-common/pom.xml" />
