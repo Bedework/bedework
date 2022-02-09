@@ -150,6 +150,7 @@
         <module name="bw-sched-assist-ear" />
         <module name="bw-selfreg-common" />
         <module name="bw-logs" />
+        <module name="bw-wf-note-feature-pack" />
         <module name="bw-calsockets-pubwar" />
         <module name="bw-calendar-xsl-caladminrsrc" />
         <module name="bw-xml-war" />
@@ -428,6 +429,7 @@
       <module name="bw-wf-calendar-subsystem" target="11" />
       <module name="bw-wf-core-feature-pack" target="11" />
       <module name="bw-wf-feature-pack" target="11" />
+      <module name="bw-wf-note-feature-pack" target="11" />
       <module name="bw-wf-synch-feature-pack" target="11" />
       <module name="bw-wf-timezone-server-feature-pack" target="11" />
       <module name="bw-wf-xml-feature-pack" target="11" />
