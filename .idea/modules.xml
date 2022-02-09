@@ -104,6 +104,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-shared/bw-note-shared.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-shared/bw-note-shared.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-war/bw-note-war.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-war/bw-note-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-notifier.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-notifier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-opensearch-qs/bw-opensearch-qs.iml" filepath="$PROJECT_DIR$/../bw-opensearch-qs/bw-opensearch-qs.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-oschdata/bw-oschdata.iml" filepath="$PROJECT_DIR$/../bw-oschdata/bw-oschdata.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-sometime/bw-sched-assist-ear/bw-sched-assist-ear.iml" filepath="$PROJECT_DIR$/../bw-sometime/bw-sched-assist-ear/bw-sched-assist-ear.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration.iml" />

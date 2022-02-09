@@ -72,6 +72,7 @@
         <option value="$PROJECT_DIR$/../bw-wf-core-feature-pack/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-demosoe/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wf-calendar-feature-pack/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-opensearch-qs/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

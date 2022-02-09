@@ -347,6 +347,7 @@
       <module name="bw-note-shared" target="11" />
       <module name="bw-note-war" target="11" />
       <module name="bw-notifier" target="11" />
+      <module name="bw-opensearch-qs" target="11" />
       <module name="bw-oschdata" target="11" />
       <module name="bw-sched-assist-ear" target="11" />
       <module name="bw-self-registration" target="11" />
