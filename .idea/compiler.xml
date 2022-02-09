@@ -16,6 +16,7 @@
         <module name="bw-category-ear" />
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
+        <module name="bw-wf-calendar-feature-pack" />
         <module name="bw-webclient-calauth" />
         <module name="bw-util-http" />
         <module name="bw-note-common" />
@@ -68,7 +69,6 @@
         <module name="bw-util-deployment" />
         <module name="bw-calsockets-web" />
         <module name="bw-calendar-xsl-calrsrc-SoEDepartmental" />
-        <module name="bw-wf-carddav-feature-pack" />
         <module name="bw-carddav-dumpres" />
         <module name="bw-carddav-server" />
         <module name="bw-calendar-ucaldav" />
@@ -426,6 +426,7 @@
       <module name="bw-webclient-submit" target="11" />
       <module name="bw-webclient-ucal" target="11" />
       <module name="bw-webdav" target="11" />
+      <module name="bw-wf-calendar-feature-pack" target="11" />
       <module name="bw-wf-calendar-subsystem" target="11" />
       <module name="bw-wf-carddav-feature-pack" target="11" />
       <module name="bw-wf-category-feature-pack" target="11" />
