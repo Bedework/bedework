@@ -171,6 +171,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-ucal/bw-webclient-ucal.iml" filepath="$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-ucal/bw-webclient-ucal.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-webdav/bw-webdav.iml" filepath="$PROJECT_DIR$/../bw-webdav/bw-webdav.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wf-calendar-subsystem/bw-wf-calendar-subsystem.iml" filepath="$PROJECT_DIR$/../bw-wf-calendar-subsystem/bw-wf-calendar-subsystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-feature-pack/bw-wf-carddav-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-feature-pack/bw-wf-carddav-feature-pack.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-category/bw-wf-category-feature-pack/bw-wf-category-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-category/bw-wf-category-feature-pack/bw-wf-category-feature-pack.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wf-core-feature-pack/bw-wf-core-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wf-core-feature-pack/bw-wf-core-feature-pack.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-wf-event-registration-feature-pack/bw-wf-event-registration-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-wf-event-registration-feature-pack/bw-wf-event-registration-feature-pack.iml" />
