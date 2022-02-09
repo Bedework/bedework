@@ -172,6 +172,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-webdav/bw-webdav.iml" filepath="$PROJECT_DIR$/../bw-webdav/bw-webdav.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wf-calendar-subsystem/bw-wf-calendar-subsystem.iml" filepath="$PROJECT_DIR$/../bw-wf-calendar-subsystem/bw-wf-calendar-subsystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wf-core-feature-pack/bw-wf-core-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wf-core-feature-pack/bw-wf-core-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-wf-event-registration-feature-pack/bw-wf-event-registration-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-wf-event-registration-feature-pack/bw-wf-event-registration-feature-pack.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wf-feature-pack/bw-wf-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wf-feature-pack/bw-wf-feature-pack.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-wf-note-feature-pack/bw-wf-note-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-wf-note-feature-pack/bw-wf-note-feature-pack.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-wf-self-registration-feature-pack/bw-wf-self-registration-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-wf-self-registration-feature-pack/bw-wf-self-registration-feature-pack.iml" />

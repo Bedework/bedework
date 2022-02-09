@@ -69,7 +69,6 @@
         <module name="bw-calsockets-web" />
         <module name="bw-calendar-xsl-calrsrc-SoEDepartmental" />
         <module name="bw-carddav-dumpres" />
-        <module name="bw-wf-self-registration-feature-pack" />
         <module name="bw-carddav-server" />
         <module name="bw-calendar-ucaldav" />
         <module name="bw-carddav-ear" />
@@ -90,6 +89,7 @@
         <module name="bw-util-xml" />
         <module name="bw-util-xmltools" />
         <module name="bw-calendar-pubcaldav" />
+        <module name="bw-wf-event-registration-feature-pack" />
         <module name="bw-cli" />
         <module name="bw-category-service" />
         <module name="bw-xml-icalendar-strict" />
@@ -428,6 +428,7 @@
       <module name="bw-webdav" target="11" />
       <module name="bw-wf-calendar-subsystem" target="11" />
       <module name="bw-wf-core-feature-pack" target="11" />
+      <module name="bw-wf-event-registration-feature-pack" target="11" />
       <module name="bw-wf-feature-pack" target="11" />
       <module name="bw-wf-note-feature-pack" target="11" />
       <module name="bw-wf-self-registration-feature-pack" target="11" />
