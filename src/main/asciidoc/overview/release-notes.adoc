@@ -101,7 +101,7 @@ This does not prevent sites setting the display name to something else.
 
 The properties in question are all those that were in basicSystem.xml, which used to populate BasicSystemProperties.
 
-*Updated to wildfly 25.0.1.FINAL* appears to have better memory handling.
+*Updated to wildfly 26.0.1.FINAL* appears to have better memory handling.
 
 *Updated ical4j* brought it close to the Ben Fortuna version.
 
