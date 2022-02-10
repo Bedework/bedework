@@ -170,6 +170,7 @@
         <module name="bw-note-war" />
         <module name="bw-util-servlet-filters" />
         <module name="bw-wf-calendar-subsystem" />
+        <module name="bw-opensearch-GeoLite2-City" />
         <module name="bw-caldav-server" />
         <module name="bw-calendar-annotations" />
         <module name="bw-util-logging" />
@@ -347,6 +348,7 @@
       <module name="bw-note-shared" target="11" />
       <module name="bw-note-war" target="11" />
       <module name="bw-notifier" target="11" />
+      <module name="bw-opensearch-GeoLite2-City" target="11" />
       <module name="bw-opensearch-qs" target="11" />
       <module name="bw-oschdata" target="11" />
       <module name="bw-sched-assist-ear" target="11" />
