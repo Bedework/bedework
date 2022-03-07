@@ -22,20 +22,23 @@
 <li><a href="#features-of-Bedework">1.1. Features of Bedework</a></li>
 <li><a href="#release-notes">1.2. Release Notes</a>
 <ul class="sectlevel3">
-<li><a href="#_dev">1.2.1. Dev:</a></li>
-<li><a href="#_release_3_13_2">1.2.2. Release 3.13.2:</a></li>
-<li><a href="#_release_3_13_1">1.2.3. Release 3.13.1:</a></li>
-<li><a href="#_release_3_13_0">1.2.4. Release 3.13.0:</a></li>
-<li><a href="#_release_3_12_7">1.2.5. Release 3.12.7:</a></li>
-<li><a href="#_release_3_12_6">1.2.6. Release 3.12.6:</a></li>
-<li><a href="#_release_3_12_5">1.2.7. Release 3.12.5:</a></li>
-<li><a href="#_release_3_12_4">1.2.8. Release 3.12.4:</a></li>
-<li><a href="#_release_3_12_3">1.2.9. Release 3.12.3:</a></li>
-<li><a href="#_release_3_12_2">1.2.10. Release 3.12.2:</a></li>
-<li><a href="#_release_3_12_1">1.2.11. Release 3.12.1:</a></li>
-<li><a href="#_release_3_12_0">1.2.12. Release 3.12.0:</a></li>
-<li><a href="#_release_3_11_2">1.2.13. Release 3.11.2:</a></li>
-<li><a href="#_release_3_11_1">1.2.14. Release 3.11.1:</a></li>
+<li><a href="#_release_4_0_3">1.2.1. Release 4.0.3:</a></li>
+<li><a href="#_elasticsearch_replaced_with_opensearch">1.2.2. ElasticSearch replaced with OpenSearch</a></li>
+<li><a href="#_new_wildfly_galleon_feature_pack_install">1.2.3. New wildfly galleon feature pack install.</a></li>
+<li><a href="#_missing_tables_in_database">1.2.4. Missing tables in database</a></li>
+<li><a href="#_release_3_13_2">1.2.5. Release 3.13.2:</a></li>
+<li><a href="#_release_3_13_1">1.2.6. Release 3.13.1:</a></li>
+<li><a href="#_release_3_13_0">1.2.7. Release 3.13.0:</a></li>
+<li><a href="#_release_3_12_7">1.2.8. Release 3.12.7:</a></li>
+<li><a href="#_release_3_12_6">1.2.9. Release 3.12.6:</a></li>
+<li><a href="#_release_3_12_5">1.2.10. Release 3.12.5:</a></li>
+<li><a href="#_release_3_12_4">1.2.11. Release 3.12.4:</a></li>
+<li><a href="#_release_3_12_3">1.2.12. Release 3.12.3:</a></li>
+<li><a href="#_release_3_12_2">1.2.13. Release 3.12.2:</a></li>
+<li><a href="#_release_3_12_1">1.2.14. Release 3.12.1:</a></li>
+<li><a href="#_release_3_12_0">1.2.15. Release 3.12.0:</a></li>
+<li><a href="#_release_3_11_2">1.2.16. Release 3.11.2:</a></li>
+<li><a href="#_release_3_11_1">1.2.17. Release 3.11.1:</a></li>
 </ul>
 </li>
 <li><a href="#issues">1.3. Issues</a></li>
@@ -61,6 +64,7 @@
 <li><a href="#_first_create_a_category_for_the_topical_area">3.1.1. First create a category for the topical area.</a></li>
 <li><a href="#_create_a_system_alias">3.1.2. Create a system alias.</a></li>
 <li><a href="#_create_a_subscription_to_the_new_alias">3.1.3. Create a subscription to the new alias.</a></li>
+<li><a href="#_add_it_to_the_view_for_the_main_campus">3.1.4. Add it to the view for the main campus</a></li>
 </ul>
 </li>
 <li><a href="#public-events-registration">3.2. Public Events Registration</a>
@@ -89,26 +93,39 @@
 </li>
 </ul>
 </li>
-<li><a href="#_deployers">4. Deployers</a>
+<li><a href="#_system_components">4. System Components</a></li>
+<li><a href="#_bedework_sometime">5. Bedework Sometime</a></li>
+<li><a href="#_deployers">6. Deployers</a>
 <ul class="sectlevel2">
-<li><a href="#installing-bedwork">4.1. Installing bedework on Ubuntu</a></li>
-<li><a href="#installing-the-quickstart">4.2. Installing the quickstart (3.12.x onwards)</a>
+<li><a href="#featurepack-install">6.1. Install bedework as a wildfly feature</a>
 <ul class="sectlevel3">
-<li><a href="#_which_version">4.2.1. Which version</a></li>
-<li><a href="#_apacheds">4.2.2. Apacheds</a></li>
-<li><a href="#_elasticsearch">4.2.3. ElasticSearch</a></li>
-<li><a href="#_maven">4.2.4. Maven</a></li>
-<li><a href="#default-maven-profiles">4.2.5. Default Maven Profiles</a></li>
-<li><a href="#_settings_for_build_and_install">4.2.6. Settings for build and install</a></li>
-<li><a href="#_security">4.2.7. Security</a></li>
-<li><a href="#_building">4.2.8. Building</a></li>
-<li><a href="#_deploying">4.2.9. Deploying</a></li>
+<li><a href="#_note_security">6.1.1. Note: Security</a></li>
+<li><a href="#_galleon_wildfly_and_bedework">6.1.2. Galleon, wildfly and bedework</a></li>
+<li><a href="#install-demo">6.1.3. Fast-track demo version</a></li>
+<li><a href="#_more_detailed_steps">6.1.4. More detailed steps:</a></li>
+<li><a href="#wildfly-bedework-layers">6.1.5. Wildfly and bedework layers</a></li>
+<li><a href="#_installing_examples">6.1.6. Installing examples</a></li>
+<li><a href="#_installing_snapshot_version">6.1.7. Installing snapshot version</a></li>
 </ul>
 </li>
-<li><a href="#deploying-servers">4.3. Deploying servers</a></li>
-<li><a href="#configuring-wildfly">4.4. Configuring wildfly</a>
+<li><a href="#installing-bedwork">6.2. Installing bedework on Ubuntu</a></li>
+<li><a href="#_installing_the_quickstart_3_12_x_onwards">6.3. Installing the quickstart (3.12.x onwards)</a>
 <ul class="sectlevel3">
-<li><a href="#_adding_an_admin_account">4.4.1. Adding an admin account</a></li>
+<li><a href="#_which_version">6.3.1. Which version</a></li>
+<li><a href="#_apacheds">6.3.2. Apacheds</a></li>
+<li><a href="#_opensearch">6.3.3. OpenSearch</a></li>
+<li><a href="#_maven">6.3.4. Maven</a></li>
+<li><a href="#default-maven-profiles">6.3.5. Default Maven Profiles</a></li>
+<li><a href="#_settings_for_build_and_install">6.3.6. Settings for build and install</a></li>
+<li><a href="#_security">6.3.7. Security</a></li>
+<li><a href="#_building">6.3.8. Building</a></li>
+<li><a href="#_deploying">6.3.9. Deploying</a></li>
+</ul>
+</li>
+<li><a href="#deploying-servers">6.4. Deploying servers</a></li>
+<li><a href="#configuring-wildfly">6.5. Configuring wildfly</a>
+<ul class="sectlevel3">
+<li><a href="#_adding_an_admin_account">6.5.1. Adding an admin account</a></li>
 </ul>
 </li>
 <li><a href="#_setting_up_databases">Setting up databases</a>
@@ -117,61 +134,57 @@
 <li><a href="#_mysql">MySQL</a></li>
 </ul>
 </li>
-<li><a href="#elasticsearch">4.5. Elasticsearch</a>
+<li><a href="#configure-events-registration">6.6. Enabling and Disabling Public Events Registration</a>
 <ul class="sectlevel3">
-<li><a href="#installing">4.5.1. Installing ElasticSearch 7.2.0 as a service</a></li>
-<li><a href="#_installing_a_runnable_elasticsearch_7_2_0">4.5.2. Installing a runnable ElasticSearch 7.2.0</a></li>
+<li><a href="#_enabling_public_events_registration">6.6.1. Enabling Public Events Registration</a></li>
+<li><a href="#_disabling_public_events_registration">6.6.2. Disabling Public Events Registration</a></li>
+<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.6.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
+<li><a href="#_notifications_from_eventreg">6.6.4. Notifications from EventReg</a></li>
 </ul>
 </li>
-<li><a href="#configure-events-registration">4.6. Enabling and Disabling Public Events Registration</a>
+<li><a href="#_initializing_the_database">6.7. Initializing the database</a>
 <ul class="sectlevel3">
-<li><a href="#_enabling_public_events_registration">4.6.1. Enabling Public Events Registration</a></li>
-<li><a href="#_disabling_public_events_registration">4.6.2. Disabling Public Events Registration</a></li>
-<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">4.6.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
-<li><a href="#_notifications_from_eventreg">4.6.4. Notifications from EventReg</a></li>
-</ul>
-</li>
-<li><a href="#_initializing_the_database">4.7. Initializing the database</a>
-<ul class="sectlevel3">
-<li><a href="#_rebuild_bw_xml">4.7.1. (Re)build bw-xml</a></li>
-<li><a href="#_validating_locations">4.7.2. Validating locations.</a></li>
-<li><a href="#_searching_for_public_locations">4.7.3. Searching for public locations</a></li>
+<li><a href="#_rebuild_bw_xml">6.7.1. (Re)build bw-xml</a></li>
+<li><a href="#_validating_locations">6.7.2. Validating locations.</a></li>
+<li><a href="#_searching_for_public_locations">6.7.3. Searching for public locations</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#_development">5. Development</a>
+<li><a href="#_development">7. Development</a>
 <ul class="sectlevel2">
-<li><a href="#todo-list">5.1. Todo list</a>
+<li><a href="#todo-list">7.1. Todo list</a>
 <ul class="sectlevel3">
-<li><a href="#_coreevents_exceptions">5.1.1. CoreEvents exceptions</a></li>
-<li><a href="#_indexupdates_after_touch_collection">5.1.2. Index/updates after touch collection</a></li>
-<li><a href="#_filter_x_properties">5.1.3. Filter x-properties</a></li>
-<li><a href="#_api_changes">5.1.4. Api changes</a></li>
-<li><a href="#_notifications_3">5.1.5. Notifications</a></li>
-<li><a href="#_limit_interactions_with_db_for_updates">5.1.6. Limit interactions with db for updates.</a></li>
-<li><a href="#_move_business_logic_out_of_webapps_into_core">5.1.7. Move business logic out of webapps into core</a></li>
-<li><a href="#_categories">5.1.8. Categories</a></li>
-<li><a href="#_locations">5.1.9. Locations</a></li>
-<li><a href="#_searching_improvements">5.1.10. Searching improvements</a></li>
-<li><a href="#_deployment_of_ears">5.1.11. Deployment of ears</a></li>
-<li><a href="#_deployment_of_wildfly_modules">5.1.12. Deployment of wildfly modules</a></li>
-<li><a href="#_networked_client_api">5.1.13. Networked client api</a></li>
-<li><a href="#_groups">5.1.14. Groups</a></li>
-<li><a href="#_index_logs_in_es">5.1.15. Index logs in ES</a></li>
-<li><a href="#_timezones">5.1.16. Timezones</a></li>
-<li><a href="#_general_work_needed">5.1.17. General work needed</a></li>
-<li><a href="#_recurring_events">5.1.18. Recurring events</a></li>
+<li><a href="#_coreevents_exceptions">7.1.1. CoreEvents exceptions</a></li>
+<li><a href="#_indexupdates_after_touch_collection">7.1.2. Index/updates after touch collection</a></li>
+<li><a href="#_filter_x_properties">7.1.3. Filter x-properties</a></li>
+<li><a href="#_api_changes">7.1.4. Api changes</a></li>
+<li><a href="#_notifications_3">7.1.5. Notifications</a></li>
+<li><a href="#_limit_interactions_with_db_for_updates">7.1.6. Limit interactions with db for updates.</a></li>
+<li><a href="#_move_business_logic_out_of_webapps_into_core">7.1.7. Move business logic out of webapps into core</a></li>
+<li><a href="#_categories">7.1.8. Categories</a></li>
+<li><a href="#_locations">7.1.9. Locations</a></li>
+<li><a href="#_searching_improvements">7.1.10. Searching improvements</a></li>
+<li><a href="#_deployment_of_ears">7.1.11. Deployment of ears</a></li>
+<li><a href="#_deployment_of_wildfly_modules">7.1.12. Deployment of wildfly modules</a></li>
+<li><a href="#_networked_client_api">7.1.13. Networked client api</a></li>
+<li><a href="#_groups">7.1.14. Groups</a></li>
+<li><a href="#_index_logs_in_es">7.1.15. Index logs in ES</a></li>
+<li><a href="#_timezones">7.1.16. Timezones</a></li>
+<li><a href="#_general_work_needed">7.1.17. General work needed</a></li>
+<li><a href="#_recurring_events">7.1.18. Recurring events</a></li>
 </ul>
 </li>
-<li><a href="#running-caldav-tester">5.2. Running the caldav tester</a>
+<li><a href="#Debugging-the-quickstart">7.2. Debugging the quickstart</a></li>
+<li><a href="#_tracing_database_interactions">7.3. Tracing database interactions</a></li>
+<li><a href="#running-caldav-tester">7.4. Running the caldav tester</a>
 <ul class="sectlevel3">
-<li><a href="#_setup">5.2.1. Setup</a></li>
+<li><a href="#_setup">7.4.1. Setup</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#older-releases">6. Older Bedework Versions (3.10 and Prior)</a>
+<li><a href="#older-releases">8. Older Bedework Versions (3.10 and Prior)</a>
 <ul class="sectlevel3">
 <li><a href="#_3_10_4">3.10.4</a></li>
 <li><a href="#_3_10_3">3.10.3</a></li>
@@ -206,7 +219,7 @@
 <li><a href="#_3_1pre_3">3.1pre</a></li>
 </ul>
 </li>
-    <li><a href="#_previous_versions_of_this_document">Previous versions of this document</a></li>
+<li><a href="#_previous_versions_of_this_document">Previous versions of this document</a></li>
 </ul>
 </div>
 </div>
@@ -351,46 +364,51 @@
 <div class="sect2">
 <h3 id="release-notes">1.2. Release Notes</h3>
 <div class="sect3">
-<h4 id="_dev">1.2.1. Dev:</h4>
+<h4 id="_release_4_0_3">1.2.1. Release 4.0.3:</h4>
 <div class="paragraph">
-<p><strong>Admonition Block:</strong></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>A significant - but long standing - bug was discovered. Override attachments were not being stored as the table and schema entries were missing. Updating will require adding the table to the database (or recreating the data from the XML dump).</p>
+<p>This release has been a long time coming largely because it involved a significant amount of restructuring. We&#8217;ve moved away from ElasticSearch because of licence issues, and completely overhauled the deployment process.</p>
 </div>
 <div class="paragraph">
-<p>Additionally - ensure the elasticsearch schema is up to date
-(wildfly/standalone/configuration/bedework/elasticsearch) and reindex
+<p>Part of the refactoring is to split off the read-only system from the read-write components. This would allow deployment of a much lighter weight service for feeds and web-presence. This work is not yet complete.</p>
+</div>
+<div class="paragraph">
+<p>The bulk of the rest of the work is to use jboss modules to deploy all code once only and have that available for all services. This reduces memory usage and startup time.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_elasticsearch_replaced_with_opensearch">1.2.2. ElasticSearch replaced with OpenSearch</h4>
+<div class="paragraph">
+<p>This release switches from ElasticSearch to OpenSearch due to the licensing issues with ElasticSearch after version 7.10. This will require a reindex of the data but that would be required anyway as we have made too big a jump between versions for an automatic index update to work.</p>
+</div>
+<div class="paragraph">
+<p>There&#8217;s an Amazon perspective on this at <a href="https://aws.amazon.com/blogs/opensource/stepping-up-for-a-truly-open-source-elasticsearch/" class="bare">https://aws.amazon.com/blogs/opensource/stepping-up-for-a-truly-open-source-elasticsearch/</a></p>
+</div>
+<div class="paragraph">
+<p>This has some links to other articles and a search will reveal many others.</p>
+</div>
+<div class="paragraph">
+<p>While there are reservations about an Amazon supported version it appears to be in their best interests to truly support open source, so - at least for the time being - we have access to a supported Apache 2 licensed search engine.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_new_wildfly_galleon_feature_pack_install">1.2.3. New wildfly galleon feature pack install.</h4>
+<div class="paragraph">
+<p>See <a href="#featurepack-install">Install bedework as a wildfly feature</a> for the new way of installing a working system. This is significantly easier than previously.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_missing_tables_in_database">1.2.4. Missing tables in database</h4>
+<div class="paragraph">
+<p><strong>This fix is needed for attachments to work correctly.</strong> It probably does not affect public events as attachmentsare not (much?) used.
+A significant - but long-standing - bug was discovered. Override attachments were not being stored as the table and schema entries were missing. Updating will require adding the table to the database (or recreating the data from the XML dump).</p>
+</div>
+<div class="paragraph">
+<p>Additionally, ensure the OpenSearch schema is up to date
+(wildfly/standalone/configuration/bedework/opensearch) and reindex
 after the system is updated.</p>
 </div>
 <div class="paragraph">
-<p>See below for details.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>A further significant bug discovered soon after release of 3.13.2:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Indexing:
-Referenced entities - e.g. locations, were not getting restored
-  in some cases - see <a href="https://github.com/Bedework/bw-calendar-engine/commit/58df20469660d4fe4f2fcef15992147979e3717c#diff-4fb4cfb2524a3a8ea92fc90a4fc31b60" class="bare">https://github.com/Bedework/bw-calendar-engine/commit/58df20469660d4fe4f2fcef15992147979e3717c#diff-4fb4cfb2524a3a8ea92fc90a4fc31b60</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>To fix attachements in postgres.</strong></p>
+<p><strong>To fix attachments in postgres.</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -426,20 +444,113 @@ ALTER TABLE ONLY bw_eventann_attachments
 </div>
 </div>
 <div class="paragraph">
-<p>Ensure all configurations are up to date, especially the elasticsearch schema then reindex the data.</p>
+<p>Ensure all configurations are up to date, especially the OpenSearch schema then reindex the data.</p>
+</div>
+<div class="sect4">
+<h5 id="_changes_that_might_need_to_be_made">Changes that might need to be made</h5>
+<div class="paragraph">
+<p>If you deploy your own copy of bedework wars and ears theer are changes that might affect you. Most of the properties which were chanegd by the bedework deployment process have been replaced with run-time wildfly properties or by values.</p>
+</div>
+<div class="paragraph">
+<p>For example, when the xsl war was deployed a property in WEB-INF/jboss-web.xml was replaced.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  &lt;context-root&gt;${app.context}&lt;/context-root&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>has been replaced with</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    &lt;context-root&gt;/approots&lt;/context-root&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_other_bug_fixes">Other Bug Fixes</h5>
+<div class="paragraph">
+<p>A further significant bug discovered soon after release of 3.13.2:</p>
+</div>
+<div class="paragraph">
+<p><strong>Indexing.</strong>
+Referenced entities - e.g. locations, were not getting restored
+in some cases - see <a href="https://github.com/Bedework/bw-calendar-engine/commit/58df20469660d4fe4f2fcef15992147979e3717c#diff-4fb4cfb2524a3a8ea92fc90a4fc31b60" class="bare">https://github.com/Bedework/bw-calendar-engine/commit/58df20469660d4fe4f2fcef15992147979e3717c#diff-4fb4cfb2524a3a8ea92fc90a4fc31b60</a></p>
 </div>
 <div class="paragraph">
 <p><strong>Further bug with recurrences.</strong> In caldav if an override was deleted from the event it was not deleted from the system.</p>
 </div>
 <div class="paragraph">
-<p><strong>New quickstart deployment method.</strong> Opting for no sources in the install script will now mean that the required components are downloaded directly from maven central. Currently git is required for part of the install but maven will not be required in this case.</p>
+<p><strong>Scheduling bug fix</strong> Trying to invite a new bedework user to a meeting could result in an NPE</p>
 </div>
 <div class="paragraph">
-<p>The intent is to have another script which will check for the availability of later versions.</p>
+<p><strong>Category bug fix</strong> For personal events, multiple new categories in an event were not getting indexed correctly - only the last one. They were created correctly in the database - a reindex will fix any missing categories.</p>
+</div>
+<div class="paragraph">
+<p>This does not affect public events.</p>
+</div>
+<div class="paragraph">
+<p><strong>Core</strong> RDATE only recurring events were not being indexed correctly - instances didn&#8217;t show up.</p>
+</div>
+<div class="paragraph">
+<p><strong>WebClient</strong> Filter out Inbox from result
+<strong>WebClient</strong> Events were being moved incorrectly (from Inbox) causing indexing issues.
+<strong>WebClient</strong> Fixed the timeview - events near the end of the day appeared in the next days cell.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_updates">Updates</h5>
+<div class="paragraph">
+<p><strong>Moved most of the deployment into wildfly modules</strong> This is to prepare for splitting
+the deployments into read-only web applications (public calendar, etc) from read-write (admin etc).</p>
+</div>
+<div class="paragraph">
+<p>Note that this has led to a number of changes to the bw script. The
+actual web apps rarely need redeploying during development - individual
+system modules can be built and deployed on the server.</p>
+</div>
+<div class="paragraph">
+<p><strong>New quickstart deployment method.</strong> The quickstart will only be required for development purposes - or for reference to the source. Maven and git are no longer required to install wildfly but are required for the quickstart download.</p>
+</div>
+<div class="paragraph">
+<p><strong>Make basic config options constants</strong> A number of path elements - e.g. the name of the user root collection - are in basic system properties - then flagged with "do not change".</p>
+</div>
+<div class="paragraph">
+<p>These are being changed to constant strings. Changing the internal path element name is likely to be a problem and having to locate the current config in some places is also a problem.</p>
+</div>
+<div class="paragraph">
+<p>This does not prevent sites setting the display name to something else.</p>
+</div>
+<div class="paragraph">
+<p>The properties in question are all those that were in basicSystem.xml, which used to populate BasicSystemProperties.</p>
+</div>
+<div class="paragraph">
+<p><strong>Updated to wildfly 26.0.1.FINAL</strong> appears to have better memory handling.</p>
+</div>
+<div class="paragraph">
+<p><strong>Updated ical4j</strong> brought it close to the Ben Fortuna version.</p>
+</div>
+<div class="paragraph">
+<p><strong>JsCalendar</strong> largely supported.</p>
+</div>
+<div class="paragraph">
+<p><strong>Timezone server</strong>
+  * switch to h2 from leveldb which had too many undesirable dependencies.
+  * Move some config out of the zoneinfo directory into the specified data directory. Changed that path to be effectively one level up.
+  * Bug fixes for problems encountered when updating the data.</p>
+</div>
+<div class="paragraph">
+<p><strong>Refactoring</strong> as part of using wildfly modules.
+  * Move Args class from util conf package to util package.</p>
+</div>
+<div class="paragraph">
+<p><strong>Many library version updates</strong></p>
+</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_13_2">1.2.2. Release 3.13.2:</h4>
+<h4 id="_release_3_13_2">1.2.5. Release 3.13.2:</h4>
 <div class="paragraph">
 <p>Making a serious effort to get rid of ide warnings. Removing the trivia lets the important stuff stand out. Starting work on implementing new jscalendar and jscontact representations and the jmap protocol.</p>
 </div>
@@ -579,7 +690,7 @@ exception is the only way out use RuntimeException.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_13_1">1.2.3. Release 3.13.1:</h4>
+<h4 id="_release_3_13_1">1.2.6. Release 3.13.1:</h4>
 <div class="paragraph">
 <p>There was a long standing bug in category handling for updates. An attempt
 was made to preserve default categories for calsuites when an event is
@@ -667,12 +778,12 @@ This allows us to specify a default profile that differs from the bedework-3 pro
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_13_0">1.2.4. Release 3.13.0:</h4>
+<h4 id="_release_3_13_0">1.2.7. Release 3.13.0:</h4>
 <div class="paragraph">
 <p>This release mostly consists of upgrades to almost the latest ElasticSearch (always a moving target), the currently latest wildfly and to Java 11 the current LTS release.</p>
 </div>
 <div class="paragraph">
-<p>Installing the quickstart requires that you first install docker if you wish to have a quickstart image of elasticsearch installed.</p>
+<p>Installing the quickstart requires that you first install docker if you wish to have a quickstart image of OpenSearch installed.</p>
 </div>
 <div class="paragraph">
 <p>There have additionally been some minor changes in configuration and the addition of a tool feature to help in calendar suite creation.</p>
@@ -747,7 +858,7 @@ This allows us to specify a default profile that differs from the bedework-3 pro
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_7">1.2.5. Release 3.12.7:</h4>
+<h4 id="_release_3_12_7">1.2.8. Release 3.12.7:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -835,7 +946,7 @@ This allows us to specify a default profile that differs from the bedework-3 pro
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_6">1.2.6. Release 3.12.6:</h4>
+<h4 id="_release_3_12_6">1.2.9. Release 3.12.6:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -949,7 +1060,7 @@ This allows us to specify a default profile that differs from the bedework-3 pro
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_5">1.2.7. Release 3.12.5:</h4>
+<h4 id="_release_3_12_5">1.2.10. Release 3.12.5:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1010,7 +1121,7 @@ This allows us to specify a default profile that differs from the bedework-3 pro
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_4">1.2.8. Release 3.12.4:</h4>
+<h4 id="_release_3_12_4">1.2.11. Release 3.12.4:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1048,7 +1159,7 @@ This allows us to specify a default profile that differs from the bedework-3 pro
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_3">1.2.9. Release 3.12.3:</h4>
+<h4 id="_release_3_12_3">1.2.12. Release 3.12.3:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1115,7 +1226,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_2">1.2.10. Release 3.12.2:</h4>
+<h4 id="_release_3_12_2">1.2.13. Release 3.12.2:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1131,7 +1242,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_1">1.2.11. Release 3.12.1:</h4>
+<h4 id="_release_3_12_1">1.2.14. Release 3.12.1:</h4>
 <div class="sect4">
 <h5 id="_searching_for_contactslocations">Searching for contacts/locations</h5>
 <div class="ulist">
@@ -1209,7 +1320,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_0">1.2.12. Release 3.12.0:</h4>
+<h4 id="_release_3_12_0">1.2.15. Release 3.12.0:</h4>
 <div class="sect4">
 <h5 id="_move_to_githubmaven">Move to github/maven</h5>
 <div class="ulist">
@@ -1349,7 +1460,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_11_2">1.2.13. Release 3.11.2:</h4>
+<h4 id="_release_3_11_2">1.2.16. Release 3.11.2:</h4>
 <div class="sect4">
 <h5 id="_indexing">Indexing</h5>
 <div class="ulist">
@@ -1601,7 +1712,7 @@ autokill killing off some of the long running system jobs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_11_1">1.2.14. Release 3.11.1:</h4>
+<h4 id="_release_3_11_1">1.2.17. Release 3.11.1:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1777,7 +1888,7 @@ autokill killing off some of the long running system jobs.</p>
 <div class="sect2">
 <h3 id="reindex">2.1. Reindexing</h3>
 <div class="paragraph">
-<p>Elasticsearch (ES) is used for indexing and searching the data. Nearly all complex queries take place against ES. The public facing web client and feeds use ES exclusively - there are no database interactions. CalDAV read-only methods (e.g. GET, PROPFIND, etc) also interact only with ES.</p>
+<p>Opensearch is used for indexing and searching the data. Nearly all complex queries take place against OpenSearch. The public facing web client and feeds use ES exclusively - there are no database interactions. CalDAV read-only methods (e.g. GET, PROPFIND, etc) also interact only with ES.</p>
 </div>
 <div class="paragraph">
 <p>The database is used only as a transactional store and only the admin clients and CalDAV write methods (PUT, POST etc) use the database. Changes made to the database result in updates to the index which in some cases can take up to a second to appear.</p>
@@ -1866,35 +1977,113 @@ resourceContents: 10</pre>
 <p>Or categories if necessary. The normal case is to filter and categorise with the same category.</p>
 </div>
 <div class="paragraph">
-<p>Go to system/manage-categories and add any required new category or categories.</p>
+<p>Go to <strong>System</strong> &#8594; <strong>Manage-categories</strong> and add any required new category or categories.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_create_a_system_alias">3.1.2. Create a system alias.</h4>
 <div class="paragraph">
-<p>Go to system/Manage calendars &amp; folders and determine where in the hierarchy you want the topical area to appear.</p>
+<p>Go to <strong>System</strong> &#8594; <strong>Manage calendars &amp; folders</strong> and determine where in the hierarchy you want the topical area to appear. Usually under <strong>aliases</strong>.</p>
 </div>
 <div class="paragraph">
-<p>Create a new subscription, set the system name, display name and
-description and set the category or categories for auto-tagging and
-filtering and select "Subscription".</p>
+<p><strong>Create a new subscription</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>set the system name</p>
+</li>
+<li>
+<p>display name</p>
+</li>
+<li>
+<p>description</p>
+</li>
+<li>
+<p>set the category or categories for auto-tagging and filtering</p>
+</li>
+<li>
+<p>select "Subscription".</p>
+</li>
+<li>
+<p>Set the url to bwcal:///public/cals/MainCal</p>
+</li>
+<li>
+<p>ensure all other fields are blank and add the alias.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Set the url to bwcal:///public/cals/MainCal - ensure all other fields
-are blank and add the alias.</p>
-</div>
-<div class="paragraph">
-<p>Using system aliases in this way ensures consistency in categorisation.</p>
+<p>You may need to refresh the display to see the new alias in the
+Using system aliases in this way ensures consistency in categorisation.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_create_a_subscription_to_the_new_alias">3.1.3. Create a subscription to the new alias.</h4>
 <div class="paragraph">
+<p>Switch to the appropriate group then the <strong>Calendar Suite</strong> tab.</p>
+</div>
+<div class="paragraph">
 <p>If the new alias is in a folder it may already by available.</p>
 </div>
 <div class="paragraph">
-<p>Otherwise switch to the "Calendar Suite" tab.
-Select "Manage Subscriptions" and open up the top level folder (named the same as the suite)&#8230;&#8203;</p>
+<p>Otherwise</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select <strong>Manage Subscriptions</strong></p>
+</li>
+<li>
+<p>Click <strong>+</strong> on the top level folder (named the same as the suite)</p>
+</li>
+<li>
+<p>Set the names - probably the same as the alias</p>
+</li>
+<li>
+<p>Add any extra filtering - note a default category will be added for the suite so normally no action is required on categories</p>
+</li>
+<li>
+<p>Ensure the type is <strong>Public alias</strong></p>
+</li>
+<li>
+<p>Click <strong>Select a public calendar or folder</strong></p>
+</li>
+<li>
+<p>Click on the new alias</p>
+</li>
+<li>
+<p><strong>Add</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Now go to <strong>Main Menu</strong> &#8594; <strong>Add Event</strong> and ensure topical area is visible.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_add_it_to_the_view_for_the_main_campus">3.1.4. Add it to the view for the main campus</h4>
+<div class="paragraph">
+<p>The above needs to be done for the main campus calendar suite. Than</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>go to the <strong>Calendar Suite</strong> tab.</p>
+</li>
+<li>
+<p>Select <strong>Manage views</strong></p>
+</li>
+<li>
+<p>Select the appropriate view</p>
+</li>
+<li>
+<p>Add the new topical area</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Currently it appears a restart is needed for it to appear (or a long wait). I&#8217;ll try to add a flush to fix this.</p>
 </div>
 </div>
 </div>
@@ -2165,10 +2354,530 @@ and comedy is tagged with the category <strong>comedy</strong> and performances 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_deployers">4. Deployers</h2>
+<h2 id="_system_components">4. System Components</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bedework_sometime">5. Bedework Sometime</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a fork of the Apereo (formerly jasig) scheduling assistant project. It was developed at the University of Wisconsin and provides a way for students to book time with faculty.</p>
+</div>
+<div class="paragraph">
+<p>See the bw-sometime documentation at &#8230;&#8203;</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deployers">6. Deployers</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="installing-bedwork">4.1. Installing bedework on Ubuntu</h3>
+<h3 id="featurepack-install">6.1. Install bedework as a wildfly feature</h3>
+<div class="paragraph">
+<p>Version 4 only.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+This page is still being updated. The <a href="#install-demo">Fast-track demo version</a> steps are
+correct (probably) but the detailed steps beyond still require work.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_note_security">6.1.1. Note: Security</h4>
+<div class="paragraph">
+<p>When installing bedework on wildfly steps must be taken to ensure that services that should be hidden are not exposed on the network.</p>
+</div>
+<div class="paragraph">
+<p>Do NOT expose the OpenSearch and database ports by - for example - opening up all ports to the network.</p>
+</div>
+<div class="paragraph">
+<p>The best approach is to disable all ports and only open up those necessary. Bedework only uses the standard web ports. Additionally, even for the web ports (80, 8080 etc) it is best to pass traffic through haproxy or apache web server and only allow known contexts (/cal, /caladmin etc).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_galleon_wildfly_and_bedework">6.1.2. Galleon, wildfly and bedework</h4>
+<div class="paragraph">
+<p>Wildfly can be installed by using the galleon installer, which allows the installation of tailored instances of wildfly.</p>
+</div>
+<div class="paragraph">
+<p>Additionally extra features can be installed using the same approach. Bedework now can be installed in this way with a choice of features.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="install-demo">6.1.3. Fast-track demo version</h4>
+<div class="paragraph">
+<p>This will install a version of wildfly with bedework with a full set
+of demonstration clients. A demo version of opensearch and apacheds
+will also be included.</p>
+</div>
+<div class="paragraph">
+<p>These steps have been tested on a mac and on the latest LTS linux.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+If this fails and you are going to retry I suggest first
+remove the wildfly directory created when running galleon
+before retrying.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Install jdk 11</p>
+</li>
+<li>
+<p>In window 1 - Create a directory and cd into it.</p>
+</li>
+<li>
+<p>Download galleon
+<a href="https://github.com/wildfly/galleon/releases/download/4.2.8.Final/galleon-4.2.8.Final.zip" class="bare">https://github.com/wildfly/galleon/releases/download/4.2.8.Final/galleon-4.2.8.Final.zip</a>
+and unzip.</p>
+</li>
+<li>
+<p>run galleon to install - this is all one command:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>./galleon-4.2.8.Final/bin/galleon.sh \
+   install org.bedework.deploy:bw-wf-feature-pack:4.0.3 \
+   --dir=wildfly --verbose --layers=bw-demoall-h2</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In window 2 cd into the same directory and start the required services:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    export JAVA_HOME=&lt;where the jdk is installed&gt;
+    ./wildfly/bin/bwstarth2.sh
+    ./wildfly/bin/bwdirstart.sh
+    ./wildfly/bin/bwstartoschqs.sh
+    tail -f ./wildfly/opensearch/logs/bedework-2019.log</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>wait till it says something about cluster state going yellow</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Back in the first window</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>./wildfly/bin/bwstartwildfly.sh</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>and wait for the messages listing the indexes</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>bwcategory20220114t153229&lt;----bwcategory
+bwcollection20220114t153228&lt;----bwcollection
+bwcontact20220114t153232&lt;----bwcontact
+bwevent20220114t153234&lt;----bwevent
+bwfilter20220114t153233&lt;----bwfilter
+bwlocation20220114t153230&lt;----bwlocation
+bwpreferences20220114t153226&lt;----bwpreferences
+bwprincipal20220114t153223&lt;----bwprincipal
+bwresource20220114t153235&lt;----bwresource</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Browse to<br>
+<a href="http://localhost:8080/" class="bare">http://localhost:8080/</a><br>
+for the starter page</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_more_detailed_steps">6.1.4. More detailed steps:</h4>
+<div class="paragraph">
+<p>These are the steps to install a version closer to a production ready
+bedework. As noted earlier you should run bedework behind a front-end
+service such as haproxy or apache. Wildfly can deliver any associated
+static content so there is no need to move that content elsewhere.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Install jdk 11</p>
+</li>
+<li>
+<p>If installing for postgres install the database and create an id/pw for access.</p>
+</li>
+<li>
+<p>Download galleon
+<a href="https://github.com/wildfly/galleon/releases/download/4.2.8.Final/galleon-4.2.8.Final.zip" class="bare">https://github.com/wildfly/galleon/releases/download/4.2.8.Final/galleon-4.2.8.Final.zip</a>
+ and unzip.</p>
+</li>
+<li>
+<p>Run galleon to deploy wildfly with a bedework service<br>
+You will probably want to change the <strong>--layers</strong> parameter to
+select a subset of the bedework installation - see <a href="#wildfly-bedework-layers">Wildfly and bedework layers</a></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>./galleon-4.2.8.Final/bin/galleon.sh \
+   install org.bedework.deploy:bw-wf-feature-pack:4.0.3 \
+   --dir=wildfly-26.0.1.Final --verbose \
+   --layers=bw-cal-eventsubmit-pg,web-console
+
+ln -s wildfly-26.0.1.Final wildfly</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#opensearch">Install and configure OpenSearch</a></p>
+</li>
+<li>
+<p>Start wildfly</p>
+</li>
+<li>
+<p>Set a management id/password for the cli</p>
+</li>
+<li>
+<p>restart wildfly (so the new id/pw is used)</p>
+</li>
+<li>
+<p>For postgres initialise the database</p>
+</li>
+<li>
+<p>reindex.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="wildfly-bedework-layers">6.1.5. Wildfly and bedework layers</h4>
+<div class="paragraph">
+<p>Bedework is installed as a feature pack which has a dependency on wildfly. The galleon tool supports layers which effectively define a particular flavor of the feature.</p>
+</div>
+<div class="paragraph">
+<p>Many bedework layers have multiple versions for supported databases. For each the appropriate driver will be installed and datasources will be configured. The database is indicated by the suffix "-xx" where xx is:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Bedework supported database configurations</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Suffix</th>
+<th class="tableblock halign-left valign-top">Database</th>
+<th class="tableblock halign-left valign-top">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">h2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">h2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used for quickstart and demo purposes only</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">postgresql</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Postgresql 9 drivers are installed and datasources are configured.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Following are tables showing all defined layers. Many are flagged as dependencies of others so, for example, bw-calendar-pg will include bw-calendar-ro. In general the only layers to use are the top level
+layers that specify a database.</p>
+</div>
+<div class="paragraph">
+<p>The bw-prod* levels provide a more production ready version which will probably still require configuration changes but should be close.</p>
+</div>
+<div class="paragraph">
+<p>The demo systems will include apacheds as an ldap server with
+a preconfigured set of accounts - all with the password
+"bedework". Also the minimal version of OpenSearch will be
+installed. Startup scripts will be included in the wildfly/bin
+directory to start and stop each of the services.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Top level layers</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Layer</th>
+<th class="tableblock halign-left valign-top">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-demoall-xx</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deploy all bedework components for the indicated database as a demo system.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-demopublic-xx</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deploy all bedework public events components for the indicated database as a demo system.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-democaluser-xx</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deploy only bedework personal and group calendaring
+components for the indicated database as a demo system.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Thd next set of layers are used to install specific bedework apps. These could be used to install a specific subset of applications.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Specific app layers</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Layer</th>
+<th class="tableblock halign-left valign-top">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-public-ro</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deploy the readonly public events system (web clients and service and feeder) along with the timezone service. No database drivers or datasources are configured.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-public-xx</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deploy the full public events system (readonly, admin and submission tools) for the indicated database along with the timezone service.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-caluser-xx</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deploy the personal and group calendaring system
+ for the indicated database along with the timezone service.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-carddav-xx</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deploy the carddav gateway server for the indicated database along with the timezone service.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-cal-eventsubmit-xx</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deploy the bw-public-xx layer and the event submission client for the indicated database</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-eventreg-xx</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deploy the event registration service for the indicated database</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-notify-h2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deploy the notification service for the indicated database</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-selfreg-h2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deploy the self registration service for the indicated database</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-synch-xx</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deploy the full synch engine for the indicated database along with the timezone service.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-tzserver</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deploy the timezone service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The next layers are used to install libraries used by servlet filters for CAS authentication or the keycloak servlet filter for saml V2 (shibboleth).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. Servlet filter layers</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Layer</th>
+<th class="tableblock halign-left valign-top">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-keycloak-saml-filter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds the keycloak servlet filter libraries. Further configuration to the affected servlets will still be required.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-cas-filter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds the CAS filter libraries. Further configuration to the affected servlets will still be required.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The next layers are used to install certain functions and may be useful with some of the application layers.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. Subsidiary layers</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Layer</th>
+<th class="tableblock halign-left valign-top">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-auth-apacheds</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configure wildfly to handle ldap authentication using a deployed apacheds ldap server. This is used for the demo system and testing.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-auth-ldap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configure wildfly to handle ldap authentication. This is the same configuration used for apacheds. It WILL need editing to connect to other ldap servers but should provide a good starting point.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-auth-props</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Authenticate using the wildfly property files. Not used much.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The remainder are dependencies of the other layers..</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 6. Lower level layers</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Layer</th>
+<th class="tableblock halign-left valign-top">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-calendar-rw</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration needed by all calendar app levels.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration needed by all levels.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-h2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Installs an h2 driver. Used by other layers that use h2 for jdbc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bw-postgresql</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Installs a postgresql driver. Used by other layers that use postgresql for jdbc.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Note that, while different database layers can be mixed, it&#8217;s not clear what will result from selecting the same application for different databases, e.g. bw-public-h2 AND bw-public-pg.</p>
+</div>
+<div class="paragraph">
+<p>In addition to the bedework layers there are wildfly layers that might be useful.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 7. Wildfly layers</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Layer</th>
+<th class="tableblock halign-left valign-top">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">web-console</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A console which gives access to the wildfly application server. See <a href="https://hal.github.io/documentation/manual/" class="bare">https://hal.github.io/documentation/manual/</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_installing_examples">6.1.6. Installing examples</h4>
+<div class="paragraph">
+<p>These assume galleon has been installed and is runnable. For example it may be installed in the home directory and runnable as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>~/galleon-4.2.8.Final/bin/galleon.sh</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the following examples we will simply write galleon.sh</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. Calendar server with console</div>
+<div class="content">
+<div class="paragraph">
+<p>galleon.sh install org.bedework:bw-wf-feature-pack:4.0.3 --dir=wildfly --verbose --layers=bw-public-pg,web-console</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_installing_snapshot_version">6.1.7. Installing snapshot version</h4>
+<div class="paragraph">
+<p>This may not work as snapshots can be out-of-date or inconsistent but for reference&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Download and unzip galleon then run the binary and enter teh commands as shown:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>./galleon-4.2.8.Final/bin/galleon.sh
+maven add-repository --name=ossrh-snapshots --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
+maven resolve-feature-pack org.bedework:bw-wf-feature-pack:4.0.4-SNAPSHOT
+install org.bedework:bw-wf-feature-pack:4.0.4-SNAPSHOT --dir=wildfly-26.0.1.Final --verbose --layers=bw-demo-pg,web-console
+exit</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="installing-bedwork">6.2. Installing bedework on Ubuntu</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2176,22 +2885,6 @@ and comedy is tagged with the category <strong>comedy</strong> and performances 
 <div class="literalblock">
 <div class="content">
 <pre>sudo apt-get update</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Install maven if you want to do builds.</p>
-<div class="literalblock">
-<div class="content">
-<pre>sudo apt install maven</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Install git</p>
-<div class="literalblock">
-<div class="content">
-<pre>sudo apt install git</pre>
 </div>
 </div>
 </li>
@@ -2208,9 +2901,32 @@ sudo update-alternatives --config java</pre>
 </div>
 </li>
 <li>
+<p>Install wildfly with bedework using galleon</p>
+<div class="paragraph">
+<p>If you are not wanting to install the quickstart for builds and development then install a wildfly service by following the instructions at <a href="#featurepack-install">Install bedework as a wildfly feature</a>.
+and disregard the remaining instructiosn below.</p>
+</div>
+</li>
+<li>
+<p>Install maven if you want to do builds.</p>
+<div class="literalblock">
+<div class="content">
+<pre>sudo apt install maven</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Install git if you want to install the quickstart</p>
+<div class="literalblock">
+<div class="content">
+<pre>sudo apt install git</pre>
+</div>
+</div>
+</li>
+<li>
 <p>Set up maven</p>
 <div class="paragraph">
-<p>If you are doing builds set up the maven profile which must be named "bedework-3"</p>
+<p>If you are doing builds of versions before 4.0.0 then set up the maven profile which must be named "bedework-3"</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -2276,13 +2992,10 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"</pre>
 <div class="paragraph">
 <p>We create a directory in which to install bedework, download an install script and execute the script.</p>
 </div>
-<div class="paragraph">
-<p>There are options to install elasticsearch as a docker image but we&#8217;ll provide elasticsearch instructions later.</p>
-</div>
 <div class="literalblock">
 <div class="content">
-<pre>mkdir bw-3.13.2
-wget https://github.com/Bedework/bedework/raw/bedework-3.13.2/build/quickstart/linux/installQS.sh
+<pre>mkdir bw-4.0.0
+wget https://github.com/Bedework/bedework/raw/bedework-4.0.0/build/quickstart/linux/installQS.sh
 chmod +x installQS.sh
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ./installQS.sh</pre>
@@ -2296,9 +3009,9 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 </div>
 </li>
 <li>
-<p>Install ElasticSearch 7.2.0</p>
+<p>Install OpenSearch 1.2.3</p>
 <div class="paragraph">
-<p>See <a href="#elasticsearch">Elasticsearch</a> for instructions on installing and (re)indexing.
+<p>The eployed wildfly has scripts to install a docker image and start and stop it. See <a href="#opensearch">[opensearch]</a> for instructions on installing and (re)indexing.
 You&#8217;ll need to start the system before reindexing.</p>
 </div>
 </li>
@@ -2307,9 +3020,9 @@ You&#8217;ll need to start the system before reindexing.</p>
 <div class="literalblock">
 <div class="content">
 <pre>cd &lt;into quickstart&gt;
-./starth2
-./dirstart
-./startjboss</pre>
+./wildfly/bin/bwstarth2.sh
+./wildfly/bin/bwdirstart.sh
+./wildfly/bin/bwstartwildfly.sh</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2327,7 +3040,7 @@ You&#8217;ll need to start the system before reindexing.</p>
 <div class="literalblock">
 <div class="content">
 <pre>cd &lt;into quickstart&gt;
-./bw-cli/target/client/bin/client -id hawtadmin -pw mypw
+./wildfly/bin/bw-cli.sh -id hawtadmin -pw mypw
 help
 listidx
 rebuildidx
@@ -2336,9 +3049,15 @@ makeidxprod all
 q</pre>
 </div>
 </div>
+<div id="installing-the-quickstart" class="paragraph">
+<p>For versions 4.0.0 onwards it is not necessary to install a quickstart. You can install a qyuickstart if you wish to do development or have convenient access to the sources.</p>
+</div>
+<div class="paragraph">
+<p>If you are only interested in having a runnable version for demonstration or production then see the instructions at <a href="#featurepack-install">Install bedework as a wildfly feature</a></p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="installing-the-quickstart">4.2. Installing the quickstart (3.12.x onwards)</h3>
+<h3 id="_installing_the_quickstart_3_12_x_onwards">6.3. Installing the quickstart (3.12.x onwards)</h3>
 <div class="paragraph">
 <p>The current quickstart is installed by executing a script which will create the quickstart directory and then download, clone and build. In the event of a failure part way through, the script may be restarted with the <strong>restart</strong> parameter.</p>
 </div>
@@ -2386,7 +3105,7 @@ This requires git 2.x or greater. The clones use a tag rather than branch and th
 </ul>
 </div>
 <div class="sect3">
-<h4 id="_which_version">4.2.1. Which version</h4>
+<h4 id="_which_version">6.3.1. Which version</h4>
 <div class="paragraph">
 <p>The script will ask you if you want the latest, developmentor pre-release version.</p>
 </div>
@@ -2395,34 +3114,31 @@ This requires git 2.x or greater. The clones use a tag rather than branch and th
 </div>
 </div>
 <div class="sect3">
-<h4 id="_apacheds">4.2.2. Apacheds</h4>
+<h4 id="_apacheds">6.3.2. Apacheds</h4>
 <div class="paragraph">
 <p>The script will install apacheds. This will install a directory with some initial ids in place for testing. Ultimately you&#8217;ll want to use your own directory service.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_elasticsearch">4.2.3. ElasticSearch</h4>
+<h4 id="_opensearch">6.3.3. OpenSearch</h4>
 <div class="paragraph">
-<p>You need a running elasticsearch - release 7.2. The quickstart install will optionally install a docker image and customize it for the quickstart.</p>
+<p>You need a running OpenSearch - currently release 1.2.3 The glleon install will provide a script to install a docker image and customize it for the quickstart.</p>
 </div>
 <div class="paragraph">
 <p>This requires you to have docker and docker-compose installed first.</p>
 </div>
 <div class="paragraph">
-<p>The elasticsearch instructions related to installing a docker image can be found at <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html" class="bare">https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html</a></p>
+<p>The instructions related to installing a docker image can be found at <a href="https://opensearch.org/docs" class="bare">https://opensearch.org/docs</a></p>
 </div>
 <div class="paragraph">
-<p>After the install is complete there will be 2 scripts startES.sh and stopES.sh which will start and stop the docker image.</p>
+<p>After the install is complete use the 2 scripts bwstartosch.sh and bwstoposch.sh to start and stop the docker image.</p>
 </div>
 <div class="paragraph">
-<p>In reality - installing ES is relatively simple. It may be easier to install the appropriate service for your system. Downloads can be found at <a href="https://www.elastic.co/downloads/past-releases/elasticsearch-7-2-0" class="bare">https://www.elastic.co/downloads/past-releases/elasticsearch-7-2-0</a></p>
-</div>
-<div class="paragraph">
-<p>If you want to install your own copy and configure it there is an elasticsearch.yml configuration file in bedework/conf/bedework/elasticsearch. Use this to replace the config in the downloaded ES.</p>
+<p>If you want to install your own copy and configure it the configuration directory is wildfly/standalone/configuration/bedework/opensearch/config. Use this to replace the config in the downloaded OpenSearch.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_maven">4.2.4. Maven</h4>
+<h4 id="_maven">6.3.4. Maven</h4>
 <div class="paragraph">
 <p>Maven is required if you want to install the sources. If not you can skip this section.</p>
 </div>
@@ -2465,7 +3181,7 @@ This requires git 2.x or greater. The clones use a tag rather than branch and th
 </div>
 </div>
 <div class="sect3">
-<h4 id="default-maven-profiles">4.2.5. Default Maven Profiles</h4>
+<h4 id="default-maven-profiles">6.3.5. Default Maven Profiles</h4>
 <div class="paragraph">
 <p>Note there appears to be a bug in the use of <strong><strong>activeByDefault</strong></strong>.
 Explicitly specifying a profile with the maven -P parameter is supposed
@@ -2484,7 +3200,7 @@ and try</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_settings_for_build_and_install">4.2.6. Settings for build and install</h4>
+<h4 id="_settings_for_build_and_install">6.3.6. Settings for build and install</h4>
 <div class="paragraph">
 <p>The bw and install scripts now source a .bw file in the home directory
 which can set some defaults.</p>
@@ -2515,19 +3231,19 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_security">4.2.7. Security</h4>
+<h4 id="_security">6.3.7. Security</h4>
 <div class="paragraph">
 <p>During the install an id and password will be set up so that the install process can reindex the data. These will allow use of the cli and the hawtio console.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_building">4.2.8. Building</h4>
+<h4 id="_building">6.3.8. Building</h4>
 <div class="paragraph">
 <p>In many cases it is possible to simply cd in to the appropriate directory and do a mvn install with the bedework-3 profile. However there is a <strong>bw</strong> script which - while taking longer - does build all projects a module depends upon. This avoids the need to work out the dependency orderings of the independent projects. Thus</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>./bw deploy</code></pre>
+<pre class="CodeRay highlight"><code>./bw bwcal</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2535,7 +3251,7 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_deploying">4.2.9. Deploying</h4>
+<h4 id="_deploying">6.3.9. Deploying</h4>
 <div class="paragraph">
 <p>As part of the bedework project there is a maven plugin which uses a properties file to handle post-build deployment issues. Essentially the ear or war as built acts as a template for the deployer.</p>
 </div>
@@ -2554,7 +3270,7 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deploying-servers">4.3. Deploying servers</h3>
+<h3 id="deploying-servers">6.4. Deploying servers</h3>
 <div class="paragraph">
 <p>It is possible to deploy bedework in a number of configurations. There are the following major components to consider:</p>
 </div>
@@ -2564,7 +3280,7 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"</code></pre>
 <p>Database</p>
 </li>
 <li>
-<p>ElasticSearch</p>
+<p>OpenSearch</p>
 </li>
 <li>
 <p>Calendar servers</p>
@@ -2590,13 +3306,13 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"</code></pre>
 <p>All of the rest can be run on a single server but it will need a generous amount of memory and multiple processors for any significant load.</p>
 </div>
 <div class="paragraph">
-<p>Running the database and ElasticSearch on a separate instance helps spread the load. For greater reliability both could be run as clustered services and your organization may already provide database support you can use.</p>
+<p>Running the database and OpenSearch on a separate instance helps spread the load. For greater reliability both could be run as clustered services and your organization may already provide database support you can use.</p>
 </div>
 <div class="paragraph">
-<p>It should be possible to use hosted solutions for both database and ElasticSearch.</p>
+<p>It should be possible to use hosted solutions for both database and OpenSearch.</p>
 </div>
 <div class="paragraph">
-<p>Multiple calendar servers can be run to provide greater reliability and to handle higher loads. Bedework is not currently configured to handle session migration etc. If you do run multiple servers you MUST have a single database and ElasticSearch service they both use.</p>
+<p>Multiple calendar servers can be run to provide greater reliability and to handle higher loads. Bedework is not currently configured to handle session migration etc. If you do run multiple servers you MUST have a single database and OpenSearch service they both use.</p>
 </div>
 <div class="paragraph">
 <p>It&#8217;s probably easiest to deploy the calendar server by simply installing the quickstart then removing any deployed modules not required. A later release will allow more choices over what gets deployed.</p>
@@ -2609,9 +3325,9 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="configuring-wildfly">4.4. Configuring wildfly</h3>
+<h3 id="configuring-wildfly">6.5. Configuring wildfly</h3>
 <div class="sect3">
-<h4 id="_adding_an_admin_account">4.4.1. Adding an admin account</h4>
+<h4 id="_adding_an_admin_account">6.5.1. Adding an admin account</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code>cd &lt;quickstart-dir&gt;
@@ -2892,136 +3608,21 @@ calschema export</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;hibernateProperty&gt;</span>hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect<span class="tag">&lt;/hibernateProperty&gt;</span></code></pre>
 </div>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="elasticsearch">4.5. Elasticsearch</h3>
 <div class="paragraph">
-<p>Bedework uses ElasticSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as a local application, useful for development - or as an external service - which will be required for clustering.</p>
-</div>
-<div class="paragraph">
-<p>ElasticSearch is generally run completely unsecured. DO NOT run in production with the ES interfaces open to the outside.</p>
-</div>
-<div class="paragraph">
-<p>You can run ES on the same server but preferably it should be running on a different server. ES - depending on the amount of data and types of search - can use a lot of memory for caching of filters. See the ES site for full instructions on running and installing.</p>
-</div>
-<div class="paragraph">
-<p>In general this is an easy process - ES offers various installation formats of all their versions.</p>
-</div>
-<div class="paragraph">
-<p>Bedework requires a small number of changes to the configuration. These are available in the quickstart in</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>bedework/config/bedework/elasticsearch/elasticsearch.yml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The changes made are</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>action.auto_create_index: ".security*,.monitoring*,.watches,.triggered_watches,.watcher-history*,.ml*"*
-
-# Limit to inline only
-script.allowed_types: inline</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Prevent ES from creating indexes implicitly. This can cause issues when reindexing.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>cluster.name: bedework-2019
-...
-node.name: bw2019-1
-...
-cluster.initial_master_nodes: ["bw2019-1"]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Use specific names for the cluster and nodes.</p>
-</div>
-<div class="sect3">
-<h4 id="installing">4.5.1. Installing ElasticSearch 7.2.0 as a service</h4>
-<div class="paragraph">
-<p>There are a number of options available.</p>
-</div>
-<div class="paragraph">
-<p>Look here for downloadable copies <a href="https://www.elastic.co/downloads/past-releases/elasticsearch-7-2-0" class="bare">https://www.elastic.co/downloads/past-releases/elasticsearch-7-2-0</a></p>
-</div>
-<div class="paragraph">
-<p>Some instructions are here: <a href="https://linuxize.com/post/how-to-install-elasticsearch-on-ubuntu-18-04/" class="bare">https://linuxize.com/post/how-to-install-elasticsearch-on-ubuntu-18-04/</a></p>
-</div>
-<div class="paragraph">
-<p>If you&#8217;re looking to install as a production service you need to install elasticsearch as a service. The instructions here are for installing as a service on Ubuntu.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-amd64.deb
-sudo dpkg -i elasticsearch-7.2.0-amd64.deb
-sudo systemctl enable elasticsearch.service</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Copy the Ubuntu service configuration out of the bedework quickstart to replace the elasticsearch config.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>sudo cp bw-3.13.2/quickstart-3.13.2/bedework/config/bedework/elasticsearch/ubuntu-svc-elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
-sudo systemctl start elasticsearch.service</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>After installing and starting the service you will need to restore and reindex the data. For instructions see <a href="#reindex">Reindexing</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_installing_a_runnable_elasticsearch_7_2_0">4.5.2. Installing a runnable ElasticSearch 7.2.0</h4>
-<div class="paragraph">
-<p>If you just want to try out bedework it may be easier to install elasticsearch as a runnable module.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>cd &lt;somewhere&gt;
-wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-darwin-x86_64.tar.gz
-gunzip elasticsearch-7.2.0-darwin-x86_64.tar.gz
-tar xf elasticsearch-7.2.0-darwin-x86_64.tar
-cp &lt;path-to&gt;/quickstart-3.13.2/bedework/config/bedework/elasticsearch/elasticsearch.yml elasticsearch-7.2.0/config/</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In your &lt;home&gt;/.bw file add</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>#
-# ES options
-#
-bwESdatadir="&lt;somewhere&gt;/elasticsearch-7.2.0/data/"</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Then you can use the restore script to restore the data and indexes:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>cd &lt;path-to&gt;/quickstart-3.13.2/
-./resetQS.sh</pre>
-</div>
+<p>Unresolved directive in index.adoc - include::deployers/elasticsearch.adoc[]</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-events-registration">4.6. Enabling and Disabling Public Events Registration</h3>
+<h3 id="configure-events-registration">6.6. Enabling and Disabling Public Events Registration</h3>
 <div class="sect3">
-<h4 id="_enabling_public_events_registration">4.6.1. Enabling Public Events Registration</h4>
+<h4 id="_enabling_public_events_registration">6.6.1. Enabling Public Events Registration</h4>
 <div class="paragraph">
 <p>The public events registration system is enabled by default if you have installed Bedework with the data available in the quickstart.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_disabling_public_events_registration">4.6.2. Disabling Public Events Registration</h4>
+<h4 id="_disabling_public_events_registration">6.6.2. Disabling Public Events Registration</h4>
 <div class="paragraph">
 <p>If you wish to disable the public events registration system remove the "Eventreg admin token" from the System Preferences in the jmx console:</p>
 </div>
@@ -3050,7 +3651,7 @@ bwESdatadir="&lt;somewhere&gt;/elasticsearch-7.2.0/data/"</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">4.6.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
+<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.6.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
 <div class="paragraph">
 <p>First ensure that the CalWs interface is available. This is the SOAP service that the event registration service uses o communicate with bedework. In system.xml make sure the &lt;calSoapWsURI&gt; element is present and has the same value as the soap:address element in pubcalws-soap/wssvc.wsdl (this requires better explanation - it&#8217;s a file deployed in the bw-xml ear)</p>
 </div>
@@ -3151,7 +3752,7 @@ bwESdatadir="&lt;somewhere&gt;/elasticsearch-7.2.0/data/"</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_notifications_from_eventreg">4.6.4. Notifications from EventReg</h4>
+<h4 id="_notifications_from_eventreg">6.6.4. Notifications from EventReg</h4>
 <div class="paragraph">
 <p>The event registration service will send notifications to the calendar engine when changes take place that might require notifying users. The event registration service calls the calendar engine notification web service (not to be confused with the notification engine). This web service allows the core engine to add notifications to the accounts of subscribed users. It is the job of the notification engine to forward those via email or some other service.</p>
 </div>
@@ -3172,7 +3773,7 @@ The synch engine handles the synchronization of external subscriptions with a be
 </div>
 </div>
 <div class="sect2">
-<h3 id="_initializing_the_database">4.7. Initializing the database</h3>
+<h3 id="_initializing_the_database">6.7. Initializing the database</h3>
 <div class="paragraph">
 <p>If running with mysql the built in hibernate schema export doesn&#8217;t work - mysql jdbc does not support it.</p>
 </div>
@@ -3213,7 +3814,7 @@ grant all on synchDb.* to '&lt;id&gt;'@'%' identified by '&lt;pw&gt;';</code></p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_rebuild_bw_xml">4.7.1. (Re)build bw-xml</h4>
+<h4 id="_rebuild_bw_xml">6.7.1. (Re)build bw-xml</h4>
 <div class="paragraph">
 <p>The synch engine uses an extension of CalWS to communicate with bedework. It requires that the wsdl file contain the location of bedework. This is configured into the deploy.properties file - only one change for the synch engine should be necessary. Set the location of (one of) your application servers in the following.</p>
 </div>
@@ -3273,7 +3874,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_validating_locations">4.7.2. Validating locations.</h4>
+<h4 id="_validating_locations">6.7.2. Validating locations.</h4>
 <div class="paragraph">
 <p>When an event arrives at the receiving end with an "X-BEDEWORK-LOCATION" property if the String value of the x-property is &#8230;&#8203;
 === Locations in bedework</p>
@@ -3283,7 +3884,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_searching_for_public_locations">4.7.3. Searching for public locations</h4>
+<h4 id="_searching_for_public_locations">6.7.3. Searching for public locations</h4>
 <div class="paragraph">
 <p>There is a web service endpoint which can be used to search for public locations. It takes a filter expression as a parameter and will return &lt;a limited?&gt; number</p>
 </div>
@@ -3329,15 +3930,15 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_development">5. Development</h2>
+<h2 id="_development">7. Development</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="todo-list">5.1. Todo list</h3>
+<h3 id="todo-list">7.1. Todo list</h3>
 <div class="paragraph">
 <p>This is a (moderately) sorted list of features/changes etc for bedework. Could be a set of tickets but this is easier to read.</p>
 </div>
 <div class="sect3">
-<h4 id="_coreevents_exceptions">5.1.1. CoreEvents exceptions</h4>
+<h4 id="_coreevents_exceptions">7.1.1. CoreEvents exceptions</h4>
 <div class="paragraph">
 <p>Don&#8217;t do this:</p>
 </div>
@@ -3355,7 +3956,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_indexupdates_after_touch_collection">5.1.2. Index/updates after touch collection</h4>
+<h4 id="_indexupdates_after_touch_collection">7.1.2. Index/updates after touch collection</h4>
 <div class="paragraph">
 <p>The lastmod db update is not versioned as we get a lot and it causes frequent stale state exceptions.</p>
 </div>
@@ -3367,19 +3968,19 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_filter_x_properties">5.1.3. Filter x-properties</h4>
+<h4 id="_filter_x_properties">7.1.3. Filter x-properties</h4>
 <div class="paragraph">
 <p>Filter x-properties in public clients/feeds - list of x-props to retain.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_api_changes">5.1.4. Api changes</h4>
+<h4 id="_api_changes">7.1.4. Api changes</h4>
 <div class="paragraph">
 <p>Change the api to use response objects throughout. No exceptions. Allows for a better networked api.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_notifications_3">5.1.5. Notifications</h4>
+<h4 id="_notifications_3">7.1.5. Notifications</h4>
 <div class="paragraph">
 <p>Need to be indexed in ES so that finding a notification for an entity is efficient (need to merge multiple notifications for same entity)</p>
 </div>
@@ -3388,31 +3989,31 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_limit_interactions_with_db_for_updates">5.1.6. Limit interactions with db for updates.</h4>
+<h4 id="_limit_interactions_with_db_for_updates">7.1.6. Limit interactions with db for updates.</h4>
 <div class="paragraph">
 <p>For this we would do all interactions with ES and connect to and update db only as needed. Use sequence numbers to ensure db and index correctness. Benefits are shorter db interactions - only at point we update. Less complexity in web clients - no need to have conversations stretching across multiple requests. This can build on the work of the previous item. The web client code is already structured ro assume that it will do an explicit update of entities which should facilitate the change.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_move_business_logic_out_of_webapps_into_core">5.1.7. Move business logic out of webapps into core</h4>
+<h4 id="_move_business_logic_out_of_webapps_into_core">7.1.7. Move business logic out of webapps into core</h4>
 <div class="paragraph">
 <p>Move as much as possible out of the current webapps module into the core APi implementation - this potentially allows a more RESTful style of client - possibly using the new jmap style interface being developed.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_categories">5.1.8. Categories</h4>
+<h4 id="_categories">7.1.8. Categories</h4>
 <div class="paragraph">
 <p>Use a larger category scheme as the basis for categories. Use SKOS based representation so that they are RDF friendly. Will allow for sub-categorization by event submitters.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_locations">5.1.9. Locations</h4>
+<h4 id="_locations">7.1.9. Locations</h4>
 <div class="paragraph">
 <p>Allow for use of external location sources such as geonames. Will allow good locations on external events.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_searching_improvements">5.1.10. Searching improvements</h4>
+<h4 id="_searching_improvements">7.1.10. Searching improvements</h4>
 <div class="paragraph">
 <p>Search for events near a geo-location (requires locations to have geo)</p>
 </div>
@@ -3424,43 +4025,43 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_deployment_of_ears">5.1.11. Deployment of ears</h4>
+<h4 id="_deployment_of_ears">7.1.11. Deployment of ears</h4>
 <div class="paragraph">
 <p>Finish off the deployment process - it&#8217;s THAT close (is there an emoticon for 2 fingers very close together?) to allowing deployers to just replace the ears from prebuilt ears on the site. No builds required - server can detect an update is available.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_deployment_of_wildfly_modules">5.1.12. Deployment of wildfly modules</h4>
+<h4 id="_deployment_of_wildfly_modules">7.1.12. Deployment of wildfly modules</h4>
 <div class="paragraph">
 <p>If all - or many - required dependencies are deployed as wildfly modules it should reduce the size of the deployment and allow for even quicker startup.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_networked_client_api">5.1.13. Networked client api</h4>
+<h4 id="_networked_client_api">7.1.13. Networked client api</h4>
 <div class="paragraph">
 <p>Subset of svci but can be used for web client interactions.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_groups">5.1.14. Groups</h4>
+<h4 id="_groups">7.1.14. Groups</h4>
 <div class="paragraph">
 <p>Directory interface to directly interact with grouper for user and admin groups. Allow consumer only approach for external management of groups. Use extra ldap attributes to allow admin groups to be maintained in ldap.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_index_logs_in_es">5.1.15. Index logs in ES</h4>
+<h4 id="_index_logs_in_es">7.1.15. Index logs in ES</h4>
 <div class="paragraph">
 <p>Use kibana to get metrics etc</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_timezones">5.1.16. Timezones</h4>
+<h4 id="_timezones">7.1.16. Timezones</h4>
 <div class="paragraph">
 <p>Update UI to provide a search - possibly based on map. Use tzdist geo feature (being developed)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_general_work_needed">5.1.17. General work needed</h4>
+<h4 id="_general_work_needed">7.1.17. General work needed</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3476,7 +4077,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_recurring_events">5.1.18. Recurring events</h4>
+<h4 id="_recurring_events">7.1.18. Recurring events</h4>
 <div class="paragraph">
 <p>Currently I&#8217;m indexing all of the instances we allow - that can be many.
 The ideal would be not to index any instances but only the master and
@@ -3530,12 +4131,34 @@ every instance then deliver the matching instances in the batch.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="running-caldav-tester">5.2. Running the caldav tester</h3>
+<h3 id="Debugging-the-quickstart">7.2. Debugging the quickstart</h3>
+<div class="paragraph">
+<p>Need to write a bunch of stuff here - I use intellij.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tracing_database_interactions">7.3. Tracing database interactions</h3>
+<div class="paragraph">
+<p>Add the following to the wildfly logging configuration to see generated SQL and the values of the parameters:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;logger</span> <span class="attribute-name">category</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.hibernate.SQL</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+      <span class="tag">&lt;level</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">DEBUG</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;/logger&gt;</span>
+  <span class="tag">&lt;logger</span> <span class="attribute-name">category</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.hibernate.type.descriptor.sql</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+      <span class="tag">&lt;level</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">TRACE</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;/logger&gt;</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="running-caldav-tester">7.4. Running the caldav tester</h3>
 <div class="paragraph">
 <p>The tester started as an Apple developed project to test CalDAV servers. It has since been taken over by CalConnect adn is in the process of being modified to make the tests more universally applicable.</p>
 </div>
 <div class="sect3">
-<h4 id="_setup">5.2.1. Setup</h4>
+<h4 id="_setup">7.4.1. Setup</h4>
 <div class="paragraph">
 <p>To run some basic tests there is a script bw-caldavTest/src/main/resources/calconnect-tester/testbw/bw-QuickLook-CalDAV.sh</p>
 </div>
@@ -3590,7 +4213,7 @@ every instance then deliver the matching instances in the batch.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="older-releases">6. Older Bedework Versions (3.10 and Prior)</h2>
+<h2 id="older-releases">8. Older Bedework Versions (3.10 and Prior)</h2>
 <div class="sectionbody">
 <div class="sect3">
 <h4 id="_3_10_4">3.10.4</h4>
@@ -4861,18 +5484,21 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </div>
 </div>
 </div>
-    <div class="sect1">
-        <h2 id="_previous_versions_of_this_document">Previous versions of this document</h2>
-        <div class="sectionbody">
-            <div class="paragraph">
-                <p><a href="3.13.1.html">3.13.1</a></p>
-            </div>
-        </div>
-    </div>
+<div class="sect1">
+<h2 id="_previous_versions_of_this_document">Previous versions of this document</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="./3.13.2.html">3.13.2</a></p>
+</div>
+<div class="paragraph">
+<p><a href="./3.13.1.html">3.13.1</a></p>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-10 12:14:25 EDT
+Last updated 2022-01-21 23:29:18 EST
 </div>
 </div>
 </body>
