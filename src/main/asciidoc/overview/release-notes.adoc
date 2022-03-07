@@ -1,7 +1,13 @@
 [[release-notes]]
 === Release Notes
 
-==== Dev (4.0.0-SNAPSHOT):
+==== Release 4.0.3:
+This release has been a long time coming largely because it involved a significant amount of restructuring. We've moved away from ElasticSearch because of licence issues, and completely overhauled the deployment process.
+
+Part of the refactoring is to split off the read-only system from the read-write components. This would allow deployment of a much lighter weight service for feeds and web-presence. This work is not yet complete.
+
+The bulk of the rest of the work is to use jboss modules to deploy all code once only and have that available for all services. This reduces memory usage and startup time.
+
 ==== ElasticSearch replaced with OpenSearch
 This release switches from ElasticSearch to OpenSearch due to the licensing issues with ElasticSearch after version 7.10. This will require a reindex of the data but that would be required anyway as we have made too big a jump between versions for an automatic index update to work.
 
@@ -10,6 +16,9 @@ There's an Amazon perspective on this at https://aws.amazon.com/blogs/opensource
 This has some links to other articles and a search will reveal many others.
 
 While there are reservations about an Amazon supported version it appears to be in their best interests to truly support open source, so - at least for the time being - we have access to a supported Apache 2 licensed search engine.
+
+==== New wildfly galleon feature pack install.
+See <<featurepack-install>> for the new way of installing a working system. This is significantly easier than previously.
 
 ==== Missing tables in database
 *This fix is needed for attachments to work correctly.* It probably does not affect public events as attachmentsare not (much?) used.
@@ -84,12 +93,11 @@ This does not affect public events.
 ===== Updates
 
 *Moved most of the deployment into wildfly modules* This is to prepare for splitting
-the deployments into read-only web applications (public calendar, etc) from read-write (admin etc(.
+the deployments into read-only web applications (public calendar, etc) from read-write (admin etc).
 
-Note that this has led to a number of changes to the bw script. In particular to build and deploy the calendar execute
-----
-./bw bwcal
-----
+Note that this has led to a number of changes to the bw script. The
+actual web apps rarely need redeploying during development - individual
+system modules can be built and deployed on the server.
 
 *New quickstart deployment method.* The quickstart will only be required for development purposes - or for reference to the source. Maven and git are no longer required to install wildfly but are required for the quickstart download.
 

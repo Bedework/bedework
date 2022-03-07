@@ -1,6 +1,9 @@
 [[featurepack-install]]
 === Install bedework as a wildfly feature
-(Not yet released)
+Version 4 only.
+
+NOTE: This page is still being updated. The <<install-demo>> steps are
+correct (probably) but the detailed steps beyond still require work.
 
 ==== Note: Security
 
@@ -13,19 +16,95 @@ The best approach is to disable all ports and only open up those necessary. Bede
 ==== Galleon, wildfly and bedework
 Wildfly can be installed by using the galleon installer, which allows the installation of tailored instances of wildfly.
 
-Additionally extra features can be installed using the same aproach. Bedework now can be installed in this way with a choice of features.
+Additionally extra features can be installed using the same approach. Bedework now can be installed in this way with a choice of features.
 
-The steps are (described in detail below)
+[[install-demo]]
+==== Fast-track demo version
+This will install a version of wildfly with bedework with a full set
+of demonstration clients. A demo version of opensearch and apacheds
+will also be included.
+
+These steps have been tested on a mac and on the latest LTS linux.
+
+NOTE: If this fails and you are going to retry I suggest first
+remove the wildfly directory created when running galleon
+before retrying.
+
+* Install jdk 11
+
+* In window 1 - Create a directory and cd into it.
+
+* Download galleon
+https://github.com/wildfly/galleon/releases/download/4.2.8.Final/galleon-4.2.8.Final.zip
+and unzip.
+
+* run galleon to install - this is all one command:
+----
+./galleon-4.2.8.Final/bin/galleon.sh \
+   install org.bedework.deploy:bw-wf-feature-pack:4.0.3 \
+   --dir=wildfly --verbose --layers=bw-demoall-h2
+----
+
+* In window 2 cd into the same directory and start the required services:
+----
+    export JAVA_HOME=<where the jdk is installed>
+    ./wildfly/bin/bwstarth2.sh
+    ./wildfly/bin/bwdirstart.sh
+    ./wildfly/bin/bwstartoschqs.sh
+    tail -f ./wildfly/opensearch/logs/bedework-2019.log
+----
+
+ wait till it says something about cluster state going yellow
+
+* Back in the first window
+----
+./wildfly/bin/bwstartwildfly.sh
+----
+ and wait for the messages listing the indexes
+
+----
+bwcategory20220114t153229<----bwcategory
+bwcollection20220114t153228<----bwcollection
+bwcontact20220114t153232<----bwcontact
+bwevent20220114t153234<----bwevent
+bwfilter20220114t153233<----bwfilter
+bwlocation20220114t153230<----bwlocation
+bwpreferences20220114t153226<----bwpreferences
+bwprincipal20220114t153223<----bwprincipal
+bwresource20220114t153235<----bwresource
+----
+
+* Browse to +
+http://localhost:8080/ +
+for the starter page
+
+==== More detailed steps:
+These are the steps to install a version closer to a production ready
+bedework. As noted earlier you should run bedework behind a front-end
+service such as haproxy or apache. Wildfly can deliver any associated
+static content so there is no need to move that content elsewhere.
 
 * Install jdk 11
 
 * If installing for postgres install the database and create an id/pw for access.
 
 * Download galleon
+ https://github.com/wildfly/galleon/releases/download/4.2.8.Final/galleon-4.2.8.Final.zip
+  and unzip.
 
-* Run galleon to deploy wildfly with a bedework service
+* Run galleon to deploy wildfly with a bedework service +
+You will probably want to change the *--layers* parameter to
+select a subset of the bedework installation - see <<wildfly-bedework-layers>>
+----
+./galleon-4.2.8.Final/bin/galleon.sh \
+   install org.bedework.deploy:bw-wf-feature-pack:4.0.3 \
+   --dir=wildfly-26.0.1.Final --verbose \
+   --layers=bw-cal-eventsubmit-pg,web-console
 
-*  <<opensearch,Install and configure OpenSearch>>
+ln -s wildfly-26.0.1.Final wildfly
+----
+
+* <<opensearch,Install and configure OpenSearch>>
 
 * Start wildfly
 
@@ -37,7 +116,8 @@ The steps are (described in detail below)
 
 * reindex.
 
-==== Install wildfly and bedework
+[[wildfly-bedework-layers]]
+==== Wildfly and bedework layers
 Bedework is installed as a feature pack which has a dependency on wildfly. The galleon tool supports layers which effectively define a particular flavor of the feature.
 
 Many bedework layers have multiple versions for supported databases. For each the appropriate driver will be installed and datasources will be configured. The database is indicated by the suffix "-xx" where xx is:
@@ -56,18 +136,30 @@ Many bedework layers have multiple versions for supported databases. For each th
 
 |===
 
-Following are tables showing all defined layers. Many are flagged as dependencies of others so, for example, bw-calendar-pg will include bw-calendar-ro.
+Following are tables showing all defined layers. Many are flagged as dependencies of others so, for example, bw-calendar-pg will include bw-calendar-ro. In general the only layers to use are the top level
+layers that specify a database.
 
 The bw-prod* levels provide a more production ready version which will probably still require configuration changes but should be close.
+
+The demo systems will include apacheds as an ldap server with
+a preconfigured set of accounts - all with the password
+"bedework". Also the minimal version of OpenSearch will be
+installed. Startup scripts will be included in the wildfly/bin
+directory to start and stop each of the services.
 
 .Top level layers
 |===
 | Layer | Function
 
-| bw-demo-xx
+| bw-demoall-xx
 | Deploy all bedework components for the indicated database as a demo system.
 
-The system will include apacheds as an ldap server with a preconfigured set of accounts - all with the password "bedework".
+| bw-demopublic-xx
+| Deploy all bedework public events components for the indicated database as a demo system.
+
+| bw-democaluser-xx
+| Deploy only bedework personal and group calendaring
+components for the indicated database as a demo system.
 |===
 
 Thd next set of layers are used to install specific bedework apps. These could be used to install a specific subset of applications.
@@ -76,14 +168,21 @@ Thd next set of layers are used to install specific bedework apps. These could b
 |===
 | Layer | Function
 
-| bw-calendar-ro
-| Deploy the readonly calendar system (public events web service and feeder) along with the timezone service. No database drivers or datasources are configured.
+| bw-public-ro
+| Deploy the readonly public events system (web clients and service and feeder) along with the timezone service. No database drivers or datasources are configured.
 
-| bw-calendar-xx
-| Deploy the full calendar system (readonly, admin and submission tools) for the indicated database along with the timezone service.
+| bw-public-xx
+| Deploy the full public events system (readonly, admin and submission tools) for the indicated database along with the timezone service.
+
+| bw-caluser-xx
+| Deploy the personal and group calendaring system
+ for the indicated database along with the timezone service.
 
 | bw-carddav-xx
 | Deploy the carddav gateway server for the indicated database along with the timezone service.
+
+| bw-cal-eventsubmit-xx
+| Deploy the bw-public-xx layer and the event submission client for the indicated database
 
 | bw-eventreg-xx
 | Deploy the event registration service for the indicated database
@@ -99,6 +198,19 @@ Thd next set of layers are used to install specific bedework apps. These could b
 
 | bw-tzserver
 | Deploy the timezone service
+|===
+
+The next layers are used to install libraries used by servlet filters for CAS authentication or the keycloak servlet filter for saml V2 (shibboleth).
+
+.Servlet filter layers
+|===
+| Layer | Function
+
+| bw-keycloak-saml-filter
+| Adds the keycloak servlet filter libraries. Further configuration to the affected servlets will still be required.
+
+| bw-cas-filter
+| Adds the CAS filter libraries. Further configuration to the affected servlets will still be required.
 |===
 
 The next layers are used to install certain functions and may be useful with some of the application layers.
@@ -129,12 +241,15 @@ The remainder are dependencies of the other layers..
 | bw-common
 | Configuration needed by all levels.
 
-| postgresql-driver
-| Used by other layers that use postgresql
+| bw-h2
+| Installs an h2 driver. Used by other layers that use h2 for jdbc.
+
+| bw-postgresql
+| Installs a postgresql driver. Used by other layers that use postgresql for jdbc.
 
 |===
 
-Note that, while different database layers can be mixed, it's not clear what will result from selecting the same application for different databases, e.g. bw-calendar-h2 AND bw-calendar-pg.
+Note that, while different database layers can be mixed, it's not clear what will result from selecting the same application for different databases, e.g. bw-public-h2 AND bw-public-pg.
 
 In addition to the bedework layers there are wildfly layers that might be useful.
 
@@ -154,11 +269,11 @@ These assume galleon has been installed and is runnable. For example it may be i
 ~/galleon-4.2.8.Final/bin/galleon.sh
 ----
 
-In the following examples we will simple write galleon.sh
+In the following examples we will simply write galleon.sh
 
 .Calendar server with console
 =========
-galleon.sh install org.bedework:bw-wf-feature-pack:4.0.0 --dir=wildfly --verbose --layers=bw-calendar-pg,web-console
+galleon.sh install org.bedework:bw-wf-feature-pack:4.0.3 --dir=wildfly --verbose --layers=bw-public-pg,web-console
 =========
 
 ==== Installing snapshot version
@@ -170,9 +285,7 @@ Download and unzip galleon then run the binary and enter teh commands as shown:
 ----
 ./galleon-4.2.8.Final/bin/galleon.sh
 maven add-repository --name=ossrh-snapshots --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
-maven resolve-feature-pack org.bedework:bw-wf-feature-pack:1.0.0-SNAPSHOT
-install org.bedework:bw-wf-feature-pack:1.0.0-SNAPSHOT --dir=wildfly-25.0.1.Final --verbose --layers=bw-demo-pg,web-console
+maven resolve-feature-pack org.bedework:bw-wf-feature-pack:4.0.4-SNAPSHOT
+install org.bedework:bw-wf-feature-pack:4.0.4-SNAPSHOT --dir=wildfly-26.0.1.Final --verbose --layers=bw-demo-pg,web-console
 exit
 ----
-
-The web-console layer is for the wildfly HAL console

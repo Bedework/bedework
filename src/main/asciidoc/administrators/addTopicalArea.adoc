@@ -3,24 +3,49 @@
 ==== First create a category for the topical area.
 Or categories if necessary. The normal case is to filter and categorise with the same category.
 
-Go to system/manage-categories and add any required new category or categories.
+Go to *System* -> *Manage-categories* and add any required new category or categories.
 
 ==== Create a system alias.
-Go to system/Manage calendars & folders and determine where in the hierarchy you want the topical area to appear.
+Go to *System* -> *Manage calendars & folders* and determine where in the hierarchy you want the topical area to appear. Usually under *aliases*.
 
-Create a new subscription, set the system name, display name and
-description and set the category or categories for auto-tagging and
-filtering and select "Subscription".
+*Create a new subscription*
 
-Set the url to bwcal:///public/cals/MainCal - ensure all other fields
-are blank and add the alias.
+ * set the system name
+ * display name
+ * description
+ * set the category or categories for auto-tagging and filtering
+ * select "Subscription".
+ * Set the url to bwcal:///public/cals/MainCal
+ * ensure all other fields are blank and add the alias.
 
+You may need to refresh the display to see the new alias in the
 Using system aliases in this way ensures consistency in categorisation.
 
 ==== Create a subscription to the new alias.
+Switch to the appropriate group then the *Calendar Suite* tab.
+
 If the new alias is in a folder it may already by available.
 
-Otherwise switch to the "Calendar Suite" tab.
-Select "Manage Subscriptions" and open up the top level folder (named the same as the suite)...
+Otherwise
 
+* Select *Manage Subscriptions*
+* Click *+* on the top level folder (named the same as the suite)
+* Set the names - probably the same as the alias
+* Add any extra filtering - note a default category will be added for the suite so normally no action is required on categories
+* Ensure the type is *Public alias*
+* Click *Select a public calendar or folder*
+* Click on the new alias
+* *Add*
+
+Now go to *Main Menu* -> *Add Event* and ensure topical area is visible.
+
+==== Add it to the view for the main campus
+The above needs to be done for the main campus calendar suite. Than
+
+* go to the *Calendar Suite* tab.
+* Select *Manage views*
+* Select the appropriate view
+* Add the new topical area
+
+Currently it appears a restart is needed for it to appear (or a long wait). I'll try to add a flush to fix this.
 
