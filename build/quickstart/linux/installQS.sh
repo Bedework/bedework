@@ -5,7 +5,7 @@
 BASE_DIR=`pwd`
 scriptName="$0"
 restart=
-latestVersion="3.13.2"
+latestVersion="4.0.3"
 
 bwOptions=$HOME/.bw
 
@@ -24,96 +24,56 @@ bwLayersh2="bw-demo-h2,web-console"
 galleonLayers="$bwLayersh2"
 
 # -------------------Package versions -----------------------------
-bwXmlVersion="4.0.10"
-bwUtilLoggingVersion="4.0.5"
-bwUtilVersion="4.0.27"
-bwUtilConfVersion="4.1.0"
-bwUtilNetworkVersion="4.1.0"
-bwUtilSecurityVersion="4.1.0"
-bwUtilTzVersion="4.1.0"
-bwUtilIndexVersion="4.1.0"
-bwUtil2Version="4.0.6"
-bwUtilDeployVersion="4.0.27"
-bwUtilHibernateVersion="4.0.23"
-bwAccessVersion="4.0.8"
-bwWebdavVersion="4.0.9"
-bwCaldavVersion="4.0.9"
-bwTimezoneServerVersion="4.0.7"
-bwSynchVersion="4.0.8"
-bwSelfRegistrationVersion="4.0.10"
-bwEventRegistrationVersion="4.0.9"
-bwNotifierVersion="4.0.10"
-bwLogsVersion="1.0.0"
-bwCliutilVersion="4.1.0"
-bwJsforJVersion="1.0.0"
-bwCliVersion="4.0.9"
-bwCarddavVersion="4.0.10"
+bwAccessVersion="5.0.0"
 
-bwCalendarEngineVersion="3.13.2"
-bwCalendarClientVersion="3.13.2"
-bwCalendarXslVersion="3.13.2"
+bwBedeworkVersion="4.0.0"
+
+bwCaldavVersion="5.0.0"
+bwCalendarClientVersion="4.0.2"
+bwCalendarCommonVersion="4.0.0"
+bwCalendarDeployVersion="4.0.1"
+bwCalendarEngineVersion="4.0.0"
+bwCalendarXslVersion="4.0.0"
+bwCarddavVersion="5.0.0"
+bwCategoryVersion="4.0.0"
+bwCliVersion="5.0.0"
+bwCliutilVersion="5.0.0"
+
+bwEventRegistrationVersion="5.0.1"
+
+bwJsforJVersion="1.1.0"
+
+bwLogsVersion="1.1.1"
+
+bwNotifierVersion="5.0.0"
+
+bwQuickstartVersion="4.0.1"
+
+bwSelfRegistrationVersion="5.0.0"
+bwSometimeVersion="2.0.0"
+bwSynchVersion="5.0.0"
+
+bwTimezoneServerVersion="5.0.0"
+
+bwUtilLoggingVersion="5.2.0"
+bwUtilVersion="5.2.0"
+bwUtilConfVersion="5.0.2"
+bwUtilDeployVersion="5.0.2"
+bwUtilHibernateVersion="5.0.2"
+bwUtilIndexVersion="5.0.0"
+bwUtilNetworkVersion="5.0.1"
+bwUtilTzVersion="5.0.0"
+bwUtilSecurityVersion="5.0.0"
+bwUtil2Version="5.0.0"
+
+bwWebdavVersion="5.0.0"
+bwWfmodulesVersion="1.0.4"
+bwWildflyFeaturePackVersion="4.0.3"
+
+bwXmlVersion="5.0.1"
 
 # -------------------Ear locations -----------------------------
 mvnrepo="https://repo1.maven.org/maven2/org/bedework/"
-
-deployerName="deployer"
-deployerDownload="bw-util-deployment-$bwUtilDeployVersion-bin.zip"
-deployerRepoPath="${mvnrepo}bw-util-deployment/$bwUtilDeployVersion/"
-
-# Deployed names
-bedeworkPrefix="bedework"
-bedeworkName="bedework-$latestVersion.war"
-bedeworkDownload="bedework-$latestVersion.war"
-bedeworkRepoPath="${mvnrepo}bedework/$latestVersion/"
-
-calPrefix="bw-cal"
-calName="bw-cal-$bwCalendarClientVersion.ear"
-calDownload="bw-calendar-client-ear-$bwCalendarClientVersion.ear"
-calRepoPath="${mvnrepo}bwwebcl/bw-calendar-client-ear/$bwCalendarClientVersion/"
-
-xslPrefix="bw-calendar-xsl"
-xslName="bw-calendar-xsl-$bwCalendarXslVersion.war"
-xslDownload="bw-calendar-xsl-$bwCalendarXslVersion.war"
-xslRepoPath="${mvnrepo}bwxsl/bw-calendar-xsl/$bwCalendarXslVersion/"
-
-carddavPrefix="bw-carddav"
-carddavName="bw-carddav-$bwCarddavVersion.ear"
-carddavDownload="bw-carddav-ear-$bwCarddavVersion.ear"
-carddavRepoPath="${mvnrepo}bw-carddav-ear/$bwCarddavVersion/"
-
-eventregPrefix="bw-event-registration"
-eventregName="bw-event-registration-$bwEventRegistrationVersion.ear"
-eventregDownload="bw-event-registration-ear-$bwEventRegistrationVersion.ear"
-eventregRepoPath="${mvnrepo}evreg/bw-event-registration-ear/$bwEventRegistrationVersion/"
-
-notifierPrefix="bw-notifier"
-notifierName="bw-notifier-$bwNotifierVersion.ear"
-notifierDownload="bw-note-ear-$bwNotifierVersion.ear"
-notifierRepoPath="${mvnrepo}notifier/bw-note-ear/$bwNotifierVersion/"
-
-selfregPrefix="bw-self-registration"
-selfregName="bw-self-registration-$bwSelfRegistrationVersion.ear"
-selfregDownload="bw-self-registration-ear-$bwSelfRegistrationVersion.ear"
-selfregRepoPath="${mvnrepo}selfreg/bw-self-registration-ear/$bwSelfRegistrationVersion/"
-
-synchPrefix="bw-synch"
-synchName="bw-synch-$bwSynchVersion.ear"
-synchDownload="bw-synch-ear-$bwSynchVersion.ear"
-synchRepoPath="${mvnrepo}bw-synch/bw-synch-ear/$bwSynchVersion/"
-
-tzPrefix="bw-timezone-server"
-tzName="bw-timezone-server-$bwTimezoneServerVersion.ear"
-tzDownload="bw-timezone-server-ear-$bwTimezoneServerVersion.ear"
-tzRepoPath="${mvnrepo}bw-tzsvr/bw-timezone-server-ear/$bwTimezoneServerVersion/"
-
-xmlPrefix="bw-xml"
-xmlName="bw-xml-$bwXmlVersion.ear"
-xmlDownload="bw-xml-ear-$bwXmlVersion.ear"
-xmlRepoPath="${mvnrepo}bw-xml-ear/$bwXmlVersion/"
-
-cliName="bw-cli"
-cliDownload="bw-cli-$bwCliVersion-bin.zip"
-cliRepoPath="${mvnrepo}bw-cli/$bwCliVersion/"
 
 trap 'cd $BASE_DIR' 0
 trap "exit 2" 1 2 3 15
@@ -290,7 +250,6 @@ EOT
 # These are the steps in the process
 installWildfly="installWildFly"
 installScripts="installScripts"
-installHawtio="installHawtio"
 installSources="installSources"
 buildPackages="buildPackages"
 indexData="indexData"
@@ -377,162 +336,6 @@ installScripts() {
   markDone $installScripts
 }
 
-installHawtio() {
-  echo "---------------------------------------------------------------"
-  echo "Install hawtio JMX console"
-
-  if stepDone $installHawtio; then
-    echo "Already done"
-    return
-  fi
-
-  if stepStarted $installHawtio; then
-    echo "Remove possible partial downloads"
-    rm console.zip
-    rm -r console
-    rm -r ${JBOSS_BASE_DIR}/standalone/deployments/hawtio.war*
-    unmark $installHawtio
-  fi
-
-  markStarted $installHawtio
-
-  wget https://github.com/Bedework/bedework-qsdata/releases/download/release-3.12.0/console.zip
-  unzip console.zip
-  cp console/hawtio.war ${JBOSS_BASE_DIR}/standalone/deployments/
-  touch ${JBOSS_BASE_DIR}/standalone/deployments/hawtio.war.dodeploy
-  rm console.zip
-  rm -r console
-
-  markDone $installHawtio
-}
-
-installDeployer() {
-  deployerDir="$qs/deployer/"
-
-  installApp $deployerName $deployerDownload $deployerRepoPath
-}
-
-# $1 - deployable package name prefix
-# $2 - deployable full package name
-# $3 - download file name
-# $4 - repo url to download file name
-# $5 - --war or --ear (--ear is default)
-deploy() {
-  echo "---------------------------------------------------------------"
-  echo "Deploy $1"
-
-  if stepDone $1; then
-    echo "Already done"
-    return
-  fi
-
-  cd $qs/$TMP_DIR/
-
-  if stepStarted $1; then
-    echo "Remove possible partial downloads"
-    rm -r $1
-    unmark $1
-  fi
-
-  markStarted $1
-
-  # clean up - just in case
-  rm -rf deployin
-  rm -rf deployout
-
-  # Create a directory to download the released ear - download and unzip
-
-  mkdir deployin
-  mkdir deployout
-  cd deployin
-  mkdir $2
-  cd $2
-  wget ${4}${3}
-
-  unzip $3
-  rm -r $3
-
-  cd ../..
-
-  deployCmd="$deployerDir/target/deployer/bin/deployer --in deployin/ --props $deployProps --out deployout --baseDir $qs ${5:-"--ear"} $1"
-
-  #cp -r $1 $qs/${JBOSS_BASE_DIR}/standalone/deployments/
-  #touch $qs/${JBOSS_BASE_DIR}/standalone/deployments/$1.dodeploy
-
-  $deployCmd
-
-  rm -r deployin
-  rm -r deployout
-
-  cd $BASE_DIR
-
-  markDone $1
-}
-
-installEars() {
-  deployProps=${bw_deployProps:-"${qs}/bedework/config/wildfly.deploy.properties"}
-
-  deploy $xmlPrefix $xmlName $xmlDownload $xmlRepoPath
-
-  deploy $bedeworkPrefix $bedeworkName $bedeworkDownload $bedeworkRepoPath --war
-
-  deploy $calPrefix $calName $calDownload $calRepoPath
-
-  deploy $xslPrefix $xslName $xslDownload $xslRepoPath --war
-
-  deploy $carddavPrefix $carddavName $carddavDownload $carddavRepoPath
-
-  deploy $eventregPrefix $eventregName $eventregDownload $eventregRepoPath
-
-  deploy $notifierPrefix $notifierName $notifierDownload $notifierRepoPath
-
-  deploy $selfregPrefix $selfregName $selfregDownload $selfregRepoPath
-
-  deploy $synchPrefix $synchName $synchDownload $synchRepoPath
-
-  deploy $tzPrefix $tzName $tzDownload $tzRepoPath
-}
-
-# $1 - directory name for expansion
-# $2 - download file name
-# $3 - repo url to download file name
-installApp() {
-  echo "---------------------------------------------------------------"
-  echo "Deploy $1"
-
-  if stepDone $1; then
-    echo "Already done"
-    return
-  fi
-
-  cd $qs/$TMP_DIR/
-
-  if stepStarted $1; then
-    echo "Remove possible partial downloads"
-    rm -r $1
-    unmark $1
-  fi
-
-  markStarted $1
-
-  mkdir $1
-  cd $1
-  wget ${3}${2}
-
-  unzip $2
-  rm -r $2
-  cd ..
-
-  mv $1 $qs
-
-  cd $BASE_DIR
-
-  markDone $1
-}
-
-installApps() {
-  installApp $cliName $cliDownload $cliRepoPath
-}
 
 # $1 - name
 cloneRepo() {
@@ -631,10 +434,13 @@ installSources() {
     cloneRepo bw-caldav
     cloneRepo bw-caldavTest
     cloneRepo bw-calendar-client
+    cloneRepo bw-calendar-common
+    cloneRepo bw-calendar-deploy
     cloneRepo bw-calendar-engine
     cloneRepo bw-calendar-xsl
     cloneRepo bw-calsockets
     cloneRepo bw-carddav
+    cloneRepo bw-category
     cloneRepo bw-cliutil
     cloneRepo bw-cli
     cloneRepo bw-dotwell-known
@@ -642,6 +448,7 @@ installSources() {
     cloneRepo bw-jsforj
     cloneRepo bw-logs
     cloneRepo bw-notifier
+    cloneRepo bw-quickstart
     cloneRepo bw-self-registration
     cloneRepo bw-synch
     cloneRepo bw-timezone-server
@@ -656,9 +463,39 @@ installSources() {
     cloneRepo bw-util-tz
     cloneRepo bw-util2
     cloneRepo bw-webdav
+    cloneRepo bw-wfmodules
+    cloneRepo bw-wildfly-galleon-feature-packs
     cloneRepo bw-xml
   else
-    cloneRepoBranch $bwXmlVersion bw-xml
+    cloneRepoBranch $bwAccessVersion bw-access
+    cloneRepoBranch $bwCaldavVersion bw-caldav
+    cloneRepoBranch $bwCalendarClientVersion bw-calendar-client
+    cloneRepoBranch $bwCalendarCommonVersion bw-calendar-common
+    cloneRepoBranch $bwCalendarDeployVersion bw-calendar-deploy
+    cloneRepoBranch $bwCalendarEngineVersion bw-calendar-engine
+    cloneRepoBranch $bwCalendarXslVersion bw-calendar-xsl
+    cloneRepoBranch $bwCarddavVersion bw-carddav
+    cloneRepoBranch $bwCategoryVersion bw-category
+    cloneRepoBranch $bwCliutilVersion bw-cliutil
+    cloneRepoBranch $bwCliVersion bw-cli
+
+    cloneRepo bw-dotwell-known
+
+    cloneRepoBranch $bwEventRegistrationVersion bw-event-registration
+
+    cloneRepoBranch $bwJsforJVersion bw-jsforj
+
+    cloneRepoBranch $bwLogsVersion bw-logs
+
+    cloneRepoBranch $bwNotifierVersion bw-notifier
+
+    cloneRepoBranch $bwQuickstartVersion bw-quickstart
+
+    cloneRepoBranch $bwSelfRegistrationVersion bw-self-registration
+    cloneRepoBranch $bwSynchVersion bw-synch
+
+    cloneRepoBranch $bwTimezoneServerVersion bw-timezone-server
+
     cloneRepoBranch $bwUtilVersion bw-util
     cloneRepoBranch $bwUtilConfVersion bw-util-conf
     cloneRepoBranch $bwUtilDeployVersion bw-util-deploy
@@ -669,24 +506,13 @@ installSources() {
     cloneRepoBranch $bwUtilSecurityVersion bw-util-security
     cloneRepoBranch $bwUtilTzVersion bw-util-tz
     cloneRepoBranch $bwUtil2Version bw-util2
-    cloneRepoBranch $bwJsforJVersion bw-jsforj
-    cloneRepoBranch $bwAccessVersion bw-access
+
     cloneRepoBranch $bwWebdavVersion bw-webdav
-    cloneRepoBranch $bwCaldavVersion bw-caldav
-    cloneRepoBranch $bwTimezoneServerVersion bw-timezone-server
-    cloneRepoBranch $bwSynchVersion bw-synch
-    cloneRepoBranch $bwSelfRegistrationVersion bw-self-registration
-    cloneRepoBranch $bwEventRegistrationVersion bw-event-registration
-    cloneRepoBranch $bwNotifierVersion bw-notifier
-    cloneRepoBranch $bwLogsVersion bw-logs
-    cloneRepoBranch $bwCliutilVersion bw-cliutil
-    cloneRepoBranch $bwCliVersion bw-cli
-    cloneRepoBranch $bwCarddavVersion bw-carddav
-    cloneRepoBranch $bwCalendarEngineVersion bw-calendar-engine
-    cloneRepoBranch $bwCalendarClientVersion bw-calendar-client
-    cloneRepoBranch $bwCalendarXslVersion bw-calendar-xsl
+    cloneRepoBranch $bwWfmodulesVersion bw-wfmodules
+    cloneRepoBranch $bwWildflyFeaturePackVersion bw-wildfly-galleon-feature-packs
+
+    cloneRepoBranch $bwXmlVersion bw-xml
     #cloneRepo bw-calsockets
-    cloneRepo bw-dotwell-known
   fi
 
   markDone $installSources
@@ -806,8 +632,8 @@ indexData() {
   cd $qs
 
   ./starth2
-  ./startES
-  ./startjboss
+  ./startosch
+  ./startwildfly
 
   # We should have a test to see if it's up - just wait 30 secs
   sleep 30s
@@ -938,8 +764,6 @@ read -p "Hit enter/return to continue" ignore
 installWildFly
 
 installScripts
-
-installHawtio
 
 installSources
 
