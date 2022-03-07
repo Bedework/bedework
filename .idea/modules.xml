@@ -7,8 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bedework.github.io/bedework.github.io.iml" filepath="$PROJECT_DIR$/../bedework.github.io/bedework.github.io.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-access/bw-access.iml" filepath="$PROJECT_DIR$/../bw-access/bw-access.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-client/bw-addrbook-client.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-carddav-client/bw-addrbook-client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-apacheds/bw-apacheds.iml" filepath="$PROJECT_DIR$/../bw-apacheds/bw-apacheds.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-bedeworkqs/bw-bedeworkqs.iml" filepath="$PROJECT_DIR$/../bw-bedeworkqs/bw-bedeworkqs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-quickstart/bw-apacheds/bw-apacheds.iml" filepath="$PROJECT_DIR$/../bw-quickstart/bw-apacheds/bw-apacheds.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-caldav/bw-caldav.iml" filepath="$PROJECT_DIR$/../bw-caldav/bw-caldav.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-server/bw-caldav-server.iml" filepath="$PROJECT_DIR$/../bw-caldav/bw-caldav-server/bw-caldav-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-util/bw-caldav-util.iml" filepath="$PROJECT_DIR$/../bw-caldav/bw-caldav-util/bw-caldav-util.iml" />
@@ -27,8 +26,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-common.iml" filepath="$PROJECT_DIR$/../bw-calendar-common/bw-calendar-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-config/bw-calendar-config.iml" filepath="$PROJECT_DIR$/../bw-calendar-common/bw-calendar-config/bw-calendar-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-common/bw-calendar-convert/bw-calendar-convert.iml" filepath="$PROJECT_DIR$/../bw-calendar-common/bw-calendar-convert/bw-calendar-convert.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-data/bw-calendar-data.iml" filepath="$PROJECT_DIR$/../bw-calendar-data/bw-calendar-data.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-data/bw-calendar-data-h2/bw-calendar-data-h2.iml" filepath="$PROJECT_DIR$/../bw-calendar-data/bw-calendar-data-h2/bw-calendar-data-h2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-quickstart/bw-calendar-data-h2/bw-calendar-data-h2.iml" filepath="$PROJECT_DIR$/../bw-quickstart/bw-calendar-data-h2/bw-calendar-data-h2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-deploy.iml" filepath="$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-deploy.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api/bw-calendar-engine-api.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api/bw-calendar-engine-api.iml" />
@@ -104,9 +102,11 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-shared/bw-note-shared.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-shared/bw-note-shared.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-note-war/bw-note-war.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-note-war/bw-note-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-notifier.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-notifier.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-opensearch-qs/bw-opensearch-GeoLite2-City/bw-opensearch-GeoLite2-City.iml" filepath="$PROJECT_DIR$/../bw-opensearch-qs/bw-opensearch-GeoLite2-City/bw-opensearch-GeoLite2-City.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-opensearch-qs/bw-opensearch-qs.iml" filepath="$PROJECT_DIR$/../bw-opensearch-qs/bw-opensearch-qs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-oschdata/bw-oschdata.iml" filepath="$PROJECT_DIR$/../bw-oschdata/bw-oschdata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-quickstart/bw-opensearch-GeoLite2-City/bw-opensearch-GeoLite2-City.iml" filepath="$PROJECT_DIR$/../bw-quickstart/bw-opensearch-GeoLite2-City/bw-opensearch-GeoLite2-City.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-quickstart/bw-opensearch-qs/bw-opensearch-qs.iml" filepath="$PROJECT_DIR$/../bw-quickstart/bw-opensearch-qs/bw-opensearch-qs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-quickstart/bw-oschdata/bw-oschdata.iml" filepath="$PROJECT_DIR$/../bw-quickstart/bw-oschdata/bw-oschdata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-quickstart/bw-qsbedework/bw-qsbedework.iml" filepath="$PROJECT_DIR$/../bw-quickstart/bw-qsbedework/bw-qsbedework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-quickstart/bw-quickstart.iml" filepath="$PROJECT_DIR$/../bw-quickstart/bw-quickstart.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-sometime/bw-sched-assist-ear/bw-sched-assist-ear.iml" filepath="$PROJECT_DIR$/../bw-sometime/bw-sched-assist-ear/bw-sched-assist-ear.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/bw-self-registration-common.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/bw-self-registration-common.iml" />
@@ -116,6 +116,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-sometime/bw-sometime.iml" filepath="$PROJECT_DIR$/../bw-sometime/bw-sometime.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-sometime/bw-sometime-database/bw-sometime-database.iml" filepath="$PROJECT_DIR$/../bw-sometime/bw-sometime-database/bw-sometime-database.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-sometime/bw-sometime-doc/bw-sometime-doc.iml" filepath="$PROJECT_DIR$/../bw-sometime/bw-sometime-doc/bw-sometime-doc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-struts-core/bw-struts-core.iml" filepath="$PROJECT_DIR$/../bw-struts-core/bw-struts-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch-common/bw-synch-common.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch-common/bw-synch-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch-ear/bw-synch-ear.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch-ear/bw-synch-ear.iml" />
@@ -172,18 +173,20 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-submit/bw-webclient-submit.iml" filepath="$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-submit/bw-webclient-submit.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-ucal/bw-webclient-ucal.iml" filepath="$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-ucal/bw-webclient-ucal.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-webdav/bw-webdav.iml" filepath="$PROJECT_DIR$/../bw-webdav/bw-webdav.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-wf-calendar-feature-pack/bw-wf-calendar-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wf-calendar-feature-pack/bw-wf-calendar-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-calendar-feature-pack/bw-wf-calendar-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-calendar-feature-pack/bw-wf-calendar-feature-pack.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wf-calendar-subsystem/bw-wf-calendar-subsystem.iml" filepath="$PROJECT_DIR$/../bw-wf-calendar-subsystem/bw-wf-calendar-subsystem.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-carddav/bw-wf-carddav-feature-pack/bw-wf-carddav-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-carddav/bw-wf-carddav-feature-pack/bw-wf-carddav-feature-pack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-category/bw-wf-category-feature-pack/bw-wf-category-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-category/bw-wf-category-feature-pack/bw-wf-category-feature-pack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-wf-core-feature-pack/bw-wf-core-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wf-core-feature-pack/bw-wf-core-feature-pack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-event-registration/bw-wf-event-registration-feature-pack/bw-wf-event-registration-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-event-registration/bw-wf-event-registration-feature-pack/bw-wf-event-registration-feature-pack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-wf-feature-pack/bw-wf-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wf-feature-pack/bw-wf-feature-pack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-notifier/bw-wf-note-feature-pack/bw-wf-note-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-notifier/bw-wf-note-feature-pack/bw-wf-note-feature-pack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-self-registration/bw-wf-self-registration-feature-pack/bw-wf-self-registration-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-self-registration/bw-wf-self-registration-feature-pack/bw-wf-self-registration-feature-pack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-wf-synch-feature-pack/bw-wf-synch-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-wf-synch-feature-pack/bw-wf-synch-feature-pack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-timezone-server/bw-wf-timezone-server-feature-pack/bw-wf-timezone-server-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-timezone-server/bw-wf-timezone-server-feature-pack/bw-wf-timezone-server-feature-pack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-xml/bw-wf-xml-feature-pack/bw-wf-xml-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-xml/bw-wf-xml-feature-pack/bw-wf-xml-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-carddav-feature-pack/bw-wf-carddav-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-carddav-feature-pack/bw-wf-carddav-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-cas-filter-feature-pack/bw-wf-cas-filter-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-cas-filter-feature-pack/bw-wf-cas-filter-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-category-feature-pack/bw-wf-category-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-category-feature-pack/bw-wf-category-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-core-feature-pack/bw-wf-core-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-core-feature-pack/bw-wf-core-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-event-registration-feature-pack/bw-wf-event-registration-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-event-registration-feature-pack/bw-wf-event-registration-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-feature-pack/bw-wf-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-feature-pack/bw-wf-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-keycloak-saml-filter-feature-pack/bw-wf-keycloak-saml-filter-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-keycloak-saml-filter-feature-pack/bw-wf-keycloak-saml-filter-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-note-feature-pack/bw-wf-note-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-note-feature-pack/bw-wf-note-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-self-registration-feature-pack/bw-wf-self-registration-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-self-registration-feature-pack/bw-wf-self-registration-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-synch-feature-pack/bw-wf-synch-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-synch-feature-pack/bw-wf-synch-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-timezone-server-feature-pack/bw-wf-timezone-server-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-timezone-server-feature-pack/bw-wf-timezone-server-feature-pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-xml-feature-pack/bw-wf-xml-feature-pack.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-xml-feature-pack/bw-wf-xml-feature-pack.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-access/bw-wfmodules-access.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-access/bw-wfmodules-access.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-apache-http/bw-wfmodules-apache-http.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-apache-http/bw-wfmodules-apache-http.iml" />
@@ -252,7 +255,6 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-eventreg/bw-wfmodules-eventreg.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-eventreg/bw-wfmodules-eventreg.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j/bw-wfmodules-ical4j.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j/bw-wfmodules-ical4j.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j-vcard/bw-wfmodules-ical4j-vcard.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j-vcard/bw-wfmodules-ical4j-vcard.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-jasig-cas/bw-wfmodules-jasig-cas.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-jasig-cas/bw-wfmodules-jasig-cas.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-jsforj/bw-wfmodules-jsforj.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-jsforj/bw-wfmodules-jsforj.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-logging/bw-wfmodules-logging.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-logging/bw-wfmodules-logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-logs/bw-wfmodules-logs.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-logs/bw-wfmodules-logs.iml" />
@@ -347,6 +349,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util2/bw-wfmodules-util2-vcard/bw-wfmodules-util2-vcard.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util2/bw-wfmodules-util2-vcard/bw-wfmodules-util2-vcard.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-webdav/bw-wfmodules-webdav.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-webdav/bw-wfmodules-webdav.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-xml/bw-wfmodules-xml.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-xml/bw-wfmodules-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wildfly-galleon-feature-packs.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wildfly-galleon-feature-packs.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-xml/bw-xml.iml" filepath="$PROJECT_DIR$/../bw-xml/bw-xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-xml/bw-xml-appleServer/bw-xml-appleServer.iml" filepath="$PROJECT_DIR$/../bw-xml/bw-xml-appleServer/bw-xml-appleServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-xml/bw-xml-bwlicense/bw-xml-bwlicense.iml" filepath="$PROJECT_DIR$/../bw-xml/bw-xml-bwlicense/bw-xml-bwlicense.iml" />

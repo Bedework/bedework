@@ -16,7 +16,6 @@
         <module name="bw-category-ear" />
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
-        <module name="bw-wf-calendar-feature-pack" />
         <module name="bw-webclient-calauth" />
         <module name="bw-util-http" />
         <module name="bw-note-common" />
@@ -37,7 +36,6 @@
         <module name="bw-timezone-server-war" />
         <module name="bw-category-impl" />
         <module name="bw-xml-calws-soap-strict" />
-        <module name="bw-wfmodules-jasig-cas" />
         <module name="bw-evreg-service" />
         <module name="bw-synch-ear" />
         <module name="sched-assist-api" />
@@ -94,10 +92,10 @@
         <module name="bw-category-service" />
         <module name="bw-xml-icalendar-strict" />
         <module name="bw-calendar-facade" />
+        <module name="bw-struts-core" />
         <module name="bw-util-indexing" />
         <module name="bw-calendar-notifyws" />
         <module name="bw-carddav-user-war" />
-        <module name="bw-wf-feature-pack" />
         <module name="bw-calendar-mail" />
         <module name="bw-util-jolokia" />
         <module name="bw-carddav-userweb-war" />
@@ -170,7 +168,6 @@
         <module name="bw-note-war" />
         <module name="bw-util-servlet-filters" />
         <module name="bw-wf-calendar-subsystem" />
-        <module name="bw-opensearch-GeoLite2-City" />
         <module name="bw-caldav-server" />
         <module name="bw-calendar-annotations" />
         <module name="bw-util-logging" />
@@ -349,8 +346,13 @@
       <module name="bw-note-war" target="11" />
       <module name="bw-notifier" target="11" />
       <module name="bw-opensearch-GeoLite2-City" target="11" />
+      <module name="bw-opensearch-GeoLite2-City (2)" target="11" />
       <module name="bw-opensearch-qs" target="11" />
+      <module name="bw-opensearch-qs (1)" target="11" />
+      <module name="bw-opensearch-qs (2)" target="11" />
       <module name="bw-oschdata" target="11" />
+      <module name="bw-qsbedework" target="11" />
+      <module name="bw-quickstart" target="11" />
       <module name="bw-sched-assist-ear" target="11" />
       <module name="bw-self-registration" target="11" />
       <module name="bw-self-registration-common" target="11" />
@@ -367,6 +369,7 @@
       <module name="bw-sometime" target="11" />
       <module name="bw-sometime-database" target="11" />
       <module name="bw-sometime-doc" target="11" />
+      <module name="bw-struts-core" target="11" />
       <module name="bw-synch" target="11" />
       <module name="bw-synch-common" target="11" />
       <module name="bw-synch-ear" target="11" />
@@ -432,10 +435,12 @@
       <module name="bw-wf-calendar-feature-pack" target="11" />
       <module name="bw-wf-calendar-subsystem" target="11" />
       <module name="bw-wf-carddav-feature-pack" target="11" />
+      <module name="bw-wf-cas-filter-feature-pack" target="11" />
       <module name="bw-wf-category-feature-pack" target="11" />
       <module name="bw-wf-core-feature-pack" target="11" />
       <module name="bw-wf-event-registration-feature-pack" target="11" />
       <module name="bw-wf-feature-pack" target="11" />
+      <module name="bw-wf-keycloak-saml-filter-feature-pack" target="11" />
       <module name="bw-wf-note-feature-pack" target="11" />
       <module name="bw-wf-self-registration-feature-pack" target="11" />
       <module name="bw-wf-synch-feature-pack" target="11" />
@@ -614,6 +619,7 @@
       <module name="bw-wfmodules-wfmodules-ro" target="11" />
       <module name="bw-wfmodules-wfmodules-rw" target="11" />
       <module name="bw-wfmodules-xml" target="11" />
+      <module name="bw-wildfly-galleon-feature-packs" target="11" />
       <module name="bw-xml" target="11" />
       <module name="bw-xml-appleServer" target="11" />
       <module name="bw-xml-bwlicense" target="11" />

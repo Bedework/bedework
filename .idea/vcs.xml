@@ -6,13 +6,10 @@
     <mapping directory="$PROJECT_DIR$/../bedework-parent" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bedework.github.io" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-access" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-apacheds" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-bedeworkqs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldav" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldavTest" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-client" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-common" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-calendar-data" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-deploy" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-engine" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-xsl" vcs="Git" />
@@ -27,8 +24,7 @@
     <mapping directory="$PROJECT_DIR$/../bw-jsforj" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-logs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-notifier" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-opensearch-qs" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-oschdata" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-quickstart" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-self-registration" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-sometime" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-synch" vcs="Git" />
@@ -44,11 +40,8 @@
     <mapping directory="$PROJECT_DIR$/../bw-util-tz" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-webdav" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-wf-calendar-subsystem" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-wf-calendar-feature-pack" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-wf-core-feature-pack" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-wf-feature-pack" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-wfmodules" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-xml" vcs="Git" />
   </component>
 </project>

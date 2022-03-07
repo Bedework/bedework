@@ -42,6 +42,7 @@ listThem bw-calendar-common
 listThem bw-calendar-engine
 listThem bw-calendar-client
 listThem bw-calendar-xsl
+listThem bw-categories
 listThem bw-wfmodules
 listThem bw-wf-feature-pack
 listThem bw-calendar-deploy

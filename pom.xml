@@ -4,11 +4,11 @@
   <parent>
     <groupId>org.bedework</groupId>
     <artifactId>bedework-parent</artifactId>
-    <version>1-SNAPSHOT</version>
+    <version>21</version>
   </parent>
 
   <artifactId>bedework</artifactId>
-  <version>4.0.0-SNAPSHOT</version>
+  <version>4.0.0</version>
   <packaging>pom</packaging>
   <name>Bedework</name>
 

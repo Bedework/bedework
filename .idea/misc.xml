@@ -59,20 +59,19 @@
         <option value="$PROJECT_DIR$/../bw-category/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wf-feature-pack/pom.xml" />
         <option value="$PROJECT_DIR$/../bedework-parent/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-apacheds/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wf-calendar-subsystem/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-deploy/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-all-ear/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-calendar-data/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-bedeworkqs/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-oschdata/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-xsl/bw-calendar-xsl-calrsrc.SoEDepartmental/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-xsl/bw-calendar-xsl-eventsubmitrsrc/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-xsl/bw-calendar-xsl-ucalrsrc/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-wf-core-feature-pack/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-demosoe/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-wf-calendar-feature-pack/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-opensearch-qs/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-synch-feature-pack/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-carddav-feature-pack/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-quickstart/bw-calendar-data-h2/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-struts-core/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -85,6 +84,7 @@
         <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-strutsmodule/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-submit/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ucal/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-data/bw-calendar-data-h2/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-all/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-ro/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-api-ro/pom.xml" />
@@ -98,6 +98,7 @@
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-elasticsearch-rest-client/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-leveldb/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-notifier/bw-wfmodules-note-bwconnector/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-jasig-cas/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfmodules-ro/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfmodules-rw/pom.xml" />
       </set>
