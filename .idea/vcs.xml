@@ -39,6 +39,7 @@
     <mapping directory="$PROJECT_DIR$/../bw-util-security" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-tz" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-webcache" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-webdav" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-wfmodules" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs" vcs="Git" />

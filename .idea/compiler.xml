@@ -16,6 +16,7 @@
         <module name="bw-category-ear" />
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
+        <module name="struts-taglib" />
         <module name="bw-webclient-calauth" />
         <module name="bw-util-http" />
         <module name="bw-note-common" />
@@ -46,6 +47,7 @@
         <module name="bw-deploy-maven-plugin" />
         <module name="bw-util-servlet" />
         <module name="bw-util-maven-deploy" />
+        <module name="bw-webcache-war" />
         <module name="bw-util-hibernate" />
         <module name="bw-xml-appleServer" />
         <module name="bw-carddav-public-war" />
@@ -56,6 +58,7 @@
         <module name="bw-evreg-war" />
         <module name="bw-carddav-common" />
         <module name="bw-util-maven-deploy-wfmodule" />
+        <module name="bw-webcache-common" />
         <module name="bw-event-registration-web" />
         <module name="bw-calendar-engine-api" />
         <module name="wfmodulesutil" />
@@ -159,6 +162,7 @@
         <module name="sched-assist-mock" />
         <module name="bw-calendar-synchws" />
         <module name="bw-calendar-xsl-calrsrc-MainCampus" />
+        <module name="bw-webcache-web" />
         <module name="bw-util-config-http" />
         <module name="bw-dotwell-known" />
         <module name="bw-util-caching" />
@@ -179,6 +183,8 @@
         <module name="bw-calendar-api-ro" />
         <module name="sched-assist-spi-relationships" />
         <module name="bw-webclient-feeder" />
+        <module name="bw-calendar-client-taglib" />
+        <module name="bw-wfmodules-webcache" />
         <module name="bw-calsockets-war" />
         <module name="bw-event-registration-common" />
         <module name="sched-assist-war" />
@@ -220,6 +226,7 @@
       <module name="bw-calendar-client-rw" target="11" />
       <module name="bw-calendar-client-strutsmodule" target="11" />
       <module name="bw-calendar-client-submit" target="11" />
+      <module name="bw-calendar-client-taglib" target="11" />
       <module name="bw-calendar-client-ucal" target="11" />
       <module name="bw-calendar-client-util" target="11" />
       <module name="bw-calendar-client-web-admin" target="11" />
@@ -424,6 +431,10 @@
       <module name="bw-util2" target="11" />
       <module name="bw-util2-calendar" target="11" />
       <module name="bw-util2-vcard" target="11" />
+      <module name="bw-webcache" target="11" />
+      <module name="bw-webcache-common" target="11" />
+      <module name="bw-webcache-war" target="11" />
+      <module name="bw-webcache-web" target="11" />
       <module name="bw-webclient-cal" target="11" />
       <module name="bw-webclient-caladmin" target="11" />
       <module name="bw-webclient-calauth" target="11" />
@@ -461,6 +472,7 @@
       <module name="bw-wfmodules-calendar-client-appcommon" target="11" />
       <module name="bw-wfmodules-calendar-client-rw" target="11" />
       <module name="bw-wfmodules-calendar-client-strutsmodule" target="11" />
+      <module name="bw-wfmodules-calendar-client-taglib" target="11" />
       <module name="bw-wfmodules-calendar-client-util" target="11" />
       <module name="bw-wfmodules-calendar-client-web-admin" target="11" />
       <module name="bw-wfmodules-calendar-client-web-ro" target="11" />
@@ -615,6 +627,7 @@
       <module name="bw-wfmodules-util2" target="11" />
       <module name="bw-wfmodules-util2-calendar" target="11" />
       <module name="bw-wfmodules-util2-vcard" target="11" />
+      <module name="bw-wfmodules-webcache" target="11" />
       <module name="bw-wfmodules-webdav" target="11" />
       <module name="bw-wfmodules-wfmodules-ro" target="11" />
       <module name="bw-wfmodules-wfmodules-rw" target="11" />
@@ -655,6 +668,7 @@
       <module name="sched-assist-war" target="11" />
       <module name="sched-assist-war (1)" target="11" />
       <module name="sched-assist-web" target="11" />
+      <module name="struts-taglib" target="1.4" />
       <module name="wfmodulesutil" target="11" />
     </bytecodeTargetLevel>
   </component>

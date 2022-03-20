@@ -19,6 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-admin/bw-calendar-client-admin.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-admin/bw-calendar-client-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon/bw-calendar-client-appcommon.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-appcommon/bw-calendar-client-appcommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-rw/bw-calendar-client-rw.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-rw/bw-calendar-client-rw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-taglib/bw-calendar-client-taglib.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-taglib/bw-calendar-client-taglib.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util/bw-calendar-client-util.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-util/bw-calendar-client-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-web-admin/bw-calendar-client-web-admin.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-web-admin/bw-calendar-client-web-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-web-rw/bw-calendar-client-web-rw.iml" filepath="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-web-rw/bw-calendar-client-web-rw.iml" />
@@ -165,6 +166,10 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-util2/bw-util2.iml" filepath="$PROJECT_DIR$/../bw-util2/bw-util2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util2/bw-util2-calendar/bw-util2-calendar.iml" filepath="$PROJECT_DIR$/../bw-util2/bw-util2-calendar/bw-util2-calendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-util2/bw-util2-vcard/bw-util2-vcard.iml" filepath="$PROJECT_DIR$/../bw-util2/bw-util2-vcard/bw-util2-vcard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-webcache/bw-webcache.iml" filepath="$PROJECT_DIR$/../bw-webcache/bw-webcache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-webcache/bw-webcache-common/bw-webcache-common.iml" filepath="$PROJECT_DIR$/../bw-webcache/bw-webcache-common/bw-webcache-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-webcache/bw-webcache-war/bw-webcache-war.iml" filepath="$PROJECT_DIR$/../bw-webcache/bw-webcache-war/bw-webcache-war.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-webcache/bw-webcache-web/bw-webcache-web.iml" filepath="$PROJECT_DIR$/../bw-webcache/bw-webcache-web/bw-webcache-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-cal/bw-webclient-cal.iml" filepath="$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-cal/bw-webclient-cal.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-caladmin/bw-webclient-caladmin.iml" filepath="$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-caladmin/bw-webclient-caladmin.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-calauth/bw-webclient-calauth.iml" filepath="$PROJECT_DIR$/../bw-calendar-deploy/bw-webclient-calauth/bw-webclient-calauth.iml" />
@@ -199,6 +204,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-admin/bw-wfmodules-calendar-client-admin.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-admin/bw-wfmodules-calendar-client-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-appcommon/bw-wfmodules-calendar-client-appcommon.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-appcommon/bw-wfmodules-calendar-client-appcommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-rw/bw-wfmodules-calendar-client-rw.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-rw/bw-wfmodules-calendar-client-rw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-taglib/bw-wfmodules-calendar-client-taglib.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-taglib/bw-wfmodules-calendar-client-taglib.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-util/bw-wfmodules-calendar-client-util.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-util/bw-wfmodules-calendar-client-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-web-admin/bw-wfmodules-calendar-client-web-admin.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-web-admin/bw-wfmodules-calendar-client-web-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-web-ro/bw-wfmodules-calendar-client-web-ro.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-web-ro/bw-wfmodules-calendar-client-web-ro.iml" />
@@ -347,6 +353,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util2/bw-wfmodules-util2.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util2/bw-wfmodules-util2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util2/bw-wfmodules-util2-calendar/bw-wfmodules-util2-calendar.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util2/bw-wfmodules-util2-calendar/bw-wfmodules-util2-calendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util2/bw-wfmodules-util2-vcard/bw-wfmodules-util2-vcard.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util2/bw-wfmodules-util2-vcard/bw-wfmodules-util2-vcard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-webcache/bw-wfmodules-webcache.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-webcache/bw-wfmodules-webcache.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-webdav/bw-wfmodules-webdav.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-webdav/bw-wfmodules-webdav.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-xml/bw-wfmodules-xml.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-xml/bw-wfmodules-xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wildfly-galleon-feature-packs.iml" filepath="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wildfly-galleon-feature-packs.iml" />
@@ -379,6 +386,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-sometime/sched-assist-war/sched-assist-war.iml" filepath="$PROJECT_DIR$/../bw-sometime/sched-assist-war/sched-assist-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-sometime/sched-assist-web/sched-assist-war (1).iml" filepath="$PROJECT_DIR$/../bw-sometime/sched-assist-web/sched-assist-war (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-sometime/sched-assist-web/sched-assist-web.iml" filepath="$PROJECT_DIR$/../bw-sometime/sched-assist-web/sched-assist-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-struts-taglib/struts-taglib.iml" filepath="$PROJECT_DIR$/../bw-struts-taglib/struts-taglib.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/wfmodulesutil/wfmodulesutil.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/wfmodulesutil/wfmodulesutil.iml" />
     </modules>
   </component>

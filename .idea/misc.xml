@@ -72,6 +72,8 @@
         <option value="$PROJECT_DIR$/../bw-quickstart/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-quickstart/bw-calendar-data-h2/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-struts-core/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-struts-taglib/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-webcache/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
