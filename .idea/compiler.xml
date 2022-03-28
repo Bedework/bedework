@@ -184,7 +184,6 @@
         <module name="sched-assist-spi-relationships" />
         <module name="bw-webclient-feeder" />
         <module name="bw-calendar-client-taglib" />
-        <module name="bw-wfmodules-webcache" />
         <module name="bw-calsockets-war" />
         <module name="bw-event-registration-common" />
         <module name="sched-assist-war" />
