@@ -552,6 +552,7 @@
       <module name="bw-wfmodules-org-apache-jdkim-library" target="11" />
       <module name="bw-wfmodules-org-apache-struts-core" target="11" />
       <module name="bw-wfmodules-org-apache-struts-taglib" target="11" />
+      <module name="bw-wfmodules-org-apache-struts2-core" target="11" />
       <module name="bw-wfmodules-org-freemarker" target="11" />
       <module name="bw-wfmodules-org-hibernate-core" target="11" />
       <module name="bw-wfmodules-org-imgscalr-lib" target="11" />
