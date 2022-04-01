@@ -15,27 +15,6 @@ if [ -f "$bwOptions" ]; then
   . "$bwOptions"
 fi
 
-if [ -z "$JAVA_HOME" -o ! -d "$JAVA_HOME" ] ; then
-  echo "JAVA_HOME is not defined correctly for bedework."
-  exit 1
-fi
-
-# Figure out where java is for version checks
-if [ "x$JAVA" = "x" ]; then
-    if [ "x$JAVA_HOME" != "x" ]; then
-	JAVA="$JAVA_HOME/bin/java"
-    else
-	JAVA="java"
-    fi
-fi
-
-# Check our java version
-version=$($JAVA -version 2>&1 | sed -E -n 's/.* version "([^.-]*).*/\1/p')
-if [[ "$version" -lt "11" ]]; then
-  echo "Java 11 or greater is required for bedework"
-  exit 1
-fi
-
 JBOSS_VERSION="wildfly"
 
 if [ ! -d "$JBOSS_VERSION" ]; then
@@ -43,9 +22,15 @@ if [ ! -d "$JBOSS_VERSION" ]; then
   exit 1
 fi
 
-resources=$BASE_DIR/bedework/build/quickstart
+h2calresources=$BASE_DIR/bw-quickstart/bw-calendar-data-h2/src/main/resources
+h2cardresources=$BASE_DIR/bw-wildfly-galleon-feature-packs/bw-wf-carddav-feature-pack/src/main/resources/packages/data.carddav-h2/pm/wildfly/resources/h2
+h2evregresources=$BASE_DIR/bw-wildfly-galleon-feature-packs/bw-wf-event-registration-feature-pack/src/main/resources/packages/data.eventreg-h2/pm/wildfly/resources/h2
+h2noteresources=$BASE_DIR/bw-wildfly-galleon-feature-packs/bw-wf-note-feature-pack/src/main/resources/packages/data.notify-h2/pm/wildfly/resources/h2
+h2selfregresources=$BASE_DIR/bw-wildfly-galleon-feature-packs/bw-wf-self-registration-feature-pack/src/main/resources/packages/data.selfreg-h2/pm/wildfly/resources/h2
+h2synchresources=$BASE_DIR/bw-wildfly-galleon-feature-packs/bw-wf-synch-feature-pack/src/main/resources/packages/data.synch-h2/pm/wildfly/resources/h2
 
 JBOSS_CONFIG="standalone"
+JBOSS_BIN=JBOSS_VERSION/bin
 JBOSS_SERVER_DIR="$BASE_DIR/$JBOSS_VERSION/$JBOSS_CONFIG"
 JBOSS_DATA_DIR="$JBOSS_SERVER_DIR/data"
 bedework_data_dir="$JBOSS_DATA_DIR/bedework"
@@ -62,13 +47,13 @@ fi
 # Ensure nothing running
 
 echo -n "Shutting down h2:  "
-./stoph2
+$JBOSS_BIN/bwstoph2.sh
 
 echo -n "Shutting down apacheds:  "
-./dirstop
+$JBOSS_BIN/bwdirstop.sh
 
-echo -n "Shutting down elastic search:  "
-./stopES
+echo -n "Shutting down opensearch:  "
+$JBOSS_BIN/bwstoposchqs.sh
 
 # -------------------------------------------------------------------
 # Each step is a function
@@ -83,28 +68,16 @@ installData() {
 
   # ------------------------------------- h2 data
 
-  cd $BASE_DIR
+  rm -f $bedework_data_dir/h2/*
 
-  cd $TMP_DIR/
+  cp -r $h2calresources $bedework_data_dir/h2/
+  cp -r $h2cardresources $bedework_data_dir/h2/
+  cp -r $h2evregresources $bedework_data_dir/h2/
+  cp -r $h2noteresources $bedework_data_dir/h2/
+  cp -r $h2selfregresources $bedework_data_dir/h2/
+  cp -r $h2synchresources $bedework_data_dir/h2/
 
-  rm -f h2.zip
-
-  cp $resources/data/h2.zip .
-
-  rm -rf h2/
-
-  unzip h2.zip
-
-  rm -f h2.zip
-
-  rm -rf $bedework_data_dir/h2
-
-  cp -r h2 $bedework_data_dir/
-  rm -rf h2/
-
-  cd $BASE_DIR
-
-  # ------------------------------------- ES data
+  # ------------------------------------- opensearch data
 
   cd $TMP_DIR/
   rm elasticsearch.zip
