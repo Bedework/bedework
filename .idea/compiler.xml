@@ -91,6 +91,7 @@
         <module name="bw-util-xml" />
         <module name="bw-util-xmltools" />
         <module name="bw-calendar-pubcaldav" />
+        <module name="bw-calendar-client-struts" />
         <module name="bw-cli" />
         <module name="bw-category-service" />
         <module name="bw-xml-icalendar-strict" />
@@ -223,6 +224,7 @@
       <module name="bw-calendar-client-ear" target="11" />
       <module name="bw-calendar-client-feeder" target="11" />
       <module name="bw-calendar-client-rw" target="11" />
+      <module name="bw-calendar-client-struts" target="11" />
       <module name="bw-calendar-client-strutsmodule" target="11" />
       <module name="bw-calendar-client-submit" target="11" />
       <module name="bw-calendar-client-taglib" target="11" />
@@ -470,6 +472,7 @@
       <module name="bw-wfmodules-calendar-client-admin" target="11" />
       <module name="bw-wfmodules-calendar-client-appcommon" target="11" />
       <module name="bw-wfmodules-calendar-client-rw" target="11" />
+      <module name="bw-wfmodules-calendar-client-struts" target="11" />
       <module name="bw-wfmodules-calendar-client-strutsmodule" target="11" />
       <module name="bw-wfmodules-calendar-client-taglib" target="11" />
       <module name="bw-wfmodules-calendar-client-util" target="11" />
