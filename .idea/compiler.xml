@@ -91,7 +91,6 @@
         <module name="bw-util-xml" />
         <module name="bw-util-xmltools" />
         <module name="bw-calendar-pubcaldav" />
-        <module name="bw-calendar-client-struts" />
         <module name="bw-cli" />
         <module name="bw-category-service" />
         <module name="bw-xml-icalendar-strict" />
@@ -184,7 +183,6 @@
         <module name="bw-calendar-api-ro" />
         <module name="sched-assist-spi-relationships" />
         <module name="bw-webclient-feeder" />
-        <module name="bw-calendar-client-taglib" />
         <module name="bw-calsockets-war" />
         <module name="bw-event-registration-common" />
         <module name="sched-assist-war" />
