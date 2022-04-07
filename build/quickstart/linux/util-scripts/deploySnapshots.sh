@@ -1,5 +1,7 @@
 #! /bin/bash
 
+set -e
+
 DIRNAME=`dirname "$0"`
 base=$DIRNAME/../../../../../
 
@@ -34,7 +36,7 @@ deploySnapshot bw-synch
 deploySnapshot bw-self-registration
 deploySnapshot bw-event-registration
 deploySnapshot bw-notifier
-deploySnapshot bw-sometime
+# deploySnapshot bw-sometime
 deploySnapshot bw-cliutil
 deploySnapshot bw-cli
 deploySnapshot bw-carddav
@@ -44,6 +46,7 @@ deploySnapshot bw-calendar-engine
 deploySnapshot bw-calendar-client
 deploySnapshot bw-calendar-xsl
 deploySnapshot bw-calendar-deploy
+deploySnapshot bw-webcache
 deploySnapshot bw-wfmodules
 deploySnapshot bw-quickstart
 deploySnapshot bw-wildfly-galleon-feature-packs
