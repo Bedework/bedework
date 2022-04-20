@@ -150,6 +150,7 @@
         <module name="bw-jsforj" />
         <module name="bw-calendar-client-bedework-common" />
         <module name="bw-synch-war" />
+        <module name="bw-calendar-client-struts2" />
         <module name="bw-sched-assist-ear" />
         <module name="bw-selfreg-common" />
         <module name="bw-logs" />
@@ -225,6 +226,7 @@
       <module name="bw-calendar-client-feeder" target="11" />
       <module name="bw-calendar-client-rw" target="11" />
       <module name="bw-calendar-client-struts" target="11" />
+      <module name="bw-calendar-client-struts2" target="11" />
       <module name="bw-calendar-client-strutsmodule" target="11" />
       <module name="bw-calendar-client-submit" target="11" />
       <module name="bw-calendar-client-taglib" target="11" />
