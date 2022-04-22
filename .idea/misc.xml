@@ -74,6 +74,7 @@
         <option value="$PROJECT_DIR$/../bw-struts-core/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-struts-taglib/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-webcache/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

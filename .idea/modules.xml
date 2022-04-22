@@ -207,6 +207,7 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-appcommon/bw-wfmodules-calendar-client-appcommon.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-appcommon/bw-wfmodules-calendar-client-appcommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-rw/bw-wfmodules-calendar-client-rw.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-rw/bw-wfmodules-calendar-client-rw.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-struts/bw-wfmodules-calendar-client-struts.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-struts/bw-wfmodules-calendar-client-struts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-struts2/bw-wfmodules-calendar-client-struts2.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-struts2/bw-wfmodules-calendar-client-struts2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-taglib/bw-wfmodules-calendar-client-taglib.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-taglib/bw-wfmodules-calendar-client-taglib.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-util/bw-wfmodules-calendar-client-util.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-util/bw-wfmodules-calendar-client-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-web-admin/bw-wfmodules-calendar-client-web-admin.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-client/bw-wfmodules-calendar-client-web-admin/bw-wfmodules-calendar-client-web-admin.iml" />
@@ -390,6 +391,41 @@
       <module fileurl="file://$PROJECT_DIR$/../bw-sometime/sched-assist-web/sched-assist-war (1).iml" filepath="$PROJECT_DIR$/../bw-sometime/sched-assist-web/sched-assist-war (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-sometime/sched-assist-web/sched-assist-web.iml" filepath="$PROJECT_DIR$/../bw-sometime/sched-assist-web/sched-assist-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-struts-taglib/struts-taglib.iml" filepath="$PROJECT_DIR$/../bw-struts-taglib/struts-taglib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/apps/struts2-apps.iml" filepath="$PROJECT_DIR$/../struts/apps/struts2-apps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/assembly/struts2-assembly.iml" filepath="$PROJECT_DIR$/../struts/assembly/struts2-assembly.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/bean-validation/struts2-bean-validation-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/bean-validation/struts2-bean-validation-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/bom/struts2-bom.iml" filepath="$PROJECT_DIR$/../struts/bom/struts2-bom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/cdi/struts2-cdi-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/cdi/struts2-cdi-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/config-browser/struts2-config-browser-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/config-browser/struts2-config-browser-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/convention/struts2-convention-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/convention/struts2-convention-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/core/struts2-core.iml" filepath="$PROJECT_DIR$/../struts/core/struts2-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/dwr/struts2-dwr-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/dwr/struts2-dwr-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/embeddedjsp/struts2-embeddedjsp-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/embeddedjsp/struts2-embeddedjsp-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/gxp/struts2-gxp-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/gxp/struts2-gxp-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/jasperreports/struts2-jasperreports-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/jasperreports/struts2-jasperreports-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/javatemplates/struts2-javatemplates-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/javatemplates/struts2-javatemplates-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/jfreechart/struts2-jfreechart-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/jfreechart/struts2-jfreechart-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/json/struts2-json-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/json/struts2-json-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/junit/struts2-junit-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/junit/struts2-junit-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/bundles/admin/struts2-osgi-admin-bundle.iml" filepath="$PROJECT_DIR$/../struts/bundles/admin/struts2-osgi-admin-bundle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/bundles/struts2-osgi-bundles.iml" filepath="$PROJECT_DIR$/../struts/bundles/struts2-osgi-bundles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/bundles/demo/struts2-osgi-demo-bundle.iml" filepath="$PROJECT_DIR$/../struts/bundles/demo/struts2-osgi-demo-bundle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/osgi/struts2-osgi-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/osgi/struts2-osgi-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/oval/struts2-oval-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/oval/struts2-oval-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/struts2-parent.iml" filepath="$PROJECT_DIR$/../struts/struts2-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/pell-multipart/struts2-pell-multipart-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/pell-multipart/struts2-pell-multipart-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/plexus/struts2-plexus-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/plexus/struts2-plexus-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/struts2-plugins.iml" filepath="$PROJECT_DIR$/../struts/plugins/struts2-plugins.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/portlet/struts2-portlet-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/portlet/struts2-portlet-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/portlet-tiles/struts2-portlet-tiles-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/portlet-tiles/struts2-portlet-tiles-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/rest/struts2-rest-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/rest/struts2-rest-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/apps/rest-showcase/struts2-rest-showcase.iml" filepath="$PROJECT_DIR$/../struts/apps/rest-showcase/struts2-rest-showcase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/apps/showcase/struts2-showcase.iml" filepath="$PROJECT_DIR$/../struts/apps/showcase/struts2-showcase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/sitegraph/struts2-sitegraph-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/sitegraph/struts2-sitegraph-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/sitemesh/struts2-sitemesh-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/sitemesh/struts2-sitemesh-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/spring/struts2-spring-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/spring/struts2-spring-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/testng/struts2-testng-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/testng/struts2-testng-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../struts/plugins/tiles/struts2-tiles-plugin.iml" filepath="$PROJECT_DIR$/../struts/plugins/tiles/struts2-tiles-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/wfmodulesutil/wfmodulesutil.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/wfmodulesutil/wfmodulesutil.iml" />
     </modules>
   </component>
