@@ -61,7 +61,6 @@
         <module name="bw-calendar-engine-caldav" />
         <module name="struts2-spring-plugin" />
         <module name="bw-util-xmltools" />
-        <module name="bw-calendar-client-struts" />
         <module name="struts2-oval-plugin" />
         <module name="bw-cli" />
         <module name="bw-struts-core" />
