@@ -220,6 +220,8 @@
     <file url="file://$PROJECT_DIR$/../bw-jsforj" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-jsforj/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-jsforj/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-json/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-json/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-logs/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-logs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-notifier/bw-note-bwconnector/src/main/java" charset="UTF-8" />
@@ -256,6 +258,8 @@
     <file url="file://$PROJECT_DIR$/../bw-quickstart/bw-qsbedework/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-quickstart/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-quickstart/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-schemaorgforj/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-schemaorgforj/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/src/main/java" charset="UTF-8" />
@@ -569,6 +573,8 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-jsforj/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-jsforj/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-json/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-json/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-logging/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-logging/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-logs/src/main/java" charset="UTF-8" />
@@ -669,6 +675,8 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-spring/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-schemaorgforj/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-schemaorgforj/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-selfreg/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-selfreg/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/bw-wfmodules-synch-common/src/main/java" charset="UTF-8" />

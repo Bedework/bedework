@@ -90,6 +90,7 @@
         <module name="bw-timezone-server-web" />
         <module name="bw-timezone-server-ear" />
         <module name="sched-assist-spi" />
+        <module name="bw-json" />
         <module name="bw-calendar-client-bedework-common" />
         <module name="bw-calendar-client-struts2" />
         <module name="bw-selfreg-common" />
@@ -169,6 +170,7 @@
         <module name="bw-carddav-userweb-war" />
         <module name="bw-xml-synchws" />
         <module name="bw-calendar-client-web-admin" />
+        <module name="bw-schemaorgforj" />
         <module name="bw-xml-catdav" />
         <module name="bw-evreg-common" />
         <module name="bw-calendar-api" />
@@ -240,24 +242,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="bedework" target="11" />
-      <module name="bedework-parent" target="11" />
-      <module name="bw-access" target="11" />
       <module name="bw-access (1)" target="11" />
-      <module name="bw-addrbook-client" target="11" />
-      <module name="bw-apacheds" target="11" />
       <module name="bw-bedeworkqs" target="11" />
-      <module name="bw-caldav" target="11" />
-      <module name="bw-caldav-server" target="11" />
-      <module name="bw-caldav-util" target="11" />
-      <module name="bw-caldavTest" target="11" />
       <module name="bw-calendar-all" target="11" />
-      <module name="bw-calendar-annotations" target="11" />
-      <module name="bw-calendar-api" target="11" />
-      <module name="bw-calendar-api-ro" target="11" />
-      <module name="bw-calendar-client" target="11" />
-      <module name="bw-calendar-client-admin" target="11" />
-      <module name="bw-calendar-client-appcommon" target="11" />
       <module name="bw-calendar-client-bedework-common" target="1.8" />
       <module name="bw-calendar-client-bwcommon" target="1.8" />
       <module name="bw-calendar-client-cal" target="11" />
@@ -265,40 +252,17 @@
       <module name="bw-calendar-client-calauth" target="11" />
       <module name="bw-calendar-client-ear" target="11" />
       <module name="bw-calendar-client-feeder" target="11" />
-      <module name="bw-calendar-client-rw" target="11" />
       <module name="bw-calendar-client-struts" target="11" />
-      <module name="bw-calendar-client-struts2" target="11" />
       <module name="bw-calendar-client-strutsmodule" target="11" />
       <module name="bw-calendar-client-submit" target="11" />
-      <module name="bw-calendar-client-taglib" target="11" />
       <module name="bw-calendar-client-ucal" target="11" />
-      <module name="bw-calendar-client-util" target="11" />
-      <module name="bw-calendar-client-web-admin" target="11" />
-      <module name="bw-calendar-client-web-rw" target="11" />
-      <module name="bw-calendar-client-webcommon" target="11" />
-      <module name="bw-calendar-common" target="11" />
-      <module name="bw-calendar-config" target="11" />
-      <module name="bw-calendar-convert" target="11" />
       <module name="bw-calendar-data" target="11" />
-      <module name="bw-calendar-data-h2" target="11" />
-      <module name="bw-calendar-deploy" target="11" />
-      <module name="bw-calendar-engine" target="11" />
       <module name="bw-calendar-engine-annotations" target="11" />
-      <module name="bw-calendar-engine-api" target="11" />
       <module name="bw-calendar-engine-api-ro" target="11" />
-      <module name="bw-calendar-engine-caldav" target="11" />
-      <module name="bw-calendar-engine-chgnote" target="11" />
       <module name="bw-calendar-engine-convert" target="11" />
-      <module name="bw-calendar-engine-core" target="11" />
-      <module name="bw-calendar-engine-core-common" target="11" />
-      <module name="bw-calendar-engine-dumprestore" target="11" />
       <module name="bw-calendar-engine-facade" target="11" />
       <module name="bw-calendar-engine-ical" target="11" />
-      <module name="bw-calendar-engine-impl" target="11" />
       <module name="bw-calendar-engine-impl-ro" target="11" />
-      <module name="bw-calendar-engine-indexer" target="11" />
-      <module name="bw-calendar-engine-inoutsched" target="11" />
-      <module name="bw-calendar-engine-interfaces" target="11" />
       <module name="bw-calendar-engine-mail" target="11" />
       <module name="bw-calendar-engine-notifyws" target="11" />
       <module name="bw-calendar-engine-pubcaldav" target="11" />
@@ -307,28 +271,9 @@
       <module name="bw-calendar-engine-sysevents" target="1.8" />
       <module name="bw-calendar-engine-sysevents-common" target="11" />
       <module name="bw-calendar-engine-sysevents-msgs" target="11" />
-      <module name="bw-calendar-engine-tools" target="11" />
       <module name="bw-calendar-engine-ucaldav" target="11" />
       <module name="bw-calendar-engine-userws" target="11" />
-      <module name="bw-calendar-facade" target="11" />
-      <module name="bw-calendar-mail" target="11" />
-      <module name="bw-calendar-notifyws" target="11" />
-      <module name="bw-calendar-pubcaldav" target="11" />
-      <module name="bw-calendar-publicws" target="11" />
       <module name="bw-calendar-ro" target="11" />
-      <module name="bw-calendar-synchws" target="11" />
-      <module name="bw-calendar-sysevents-common" target="11" />
-      <module name="bw-calendar-sysevents-msgs" target="11" />
-      <module name="bw-calendar-ucaldav" target="11" />
-      <module name="bw-calendar-userws" target="11" />
-      <module name="bw-calendar-xsl" target="11" />
-      <module name="bw-calendar-xsl-caladminrsrc" target="11" />
-      <module name="bw-calendar-xsl-calfeedrsrc-MainCampus" target="11" />
-      <module name="bw-calendar-xsl-calrsrc-MainCampus" target="11" />
-      <module name="bw-calendar-xsl-calrsrc-SoEDepartmental" target="11" />
-      <module name="bw-calendar-xsl-common" target="11" />
-      <module name="bw-calendar-xsl-eventsubmitrsrc" target="11" />
-      <module name="bw-calendar-xsl-ucalrsrc" target="11" />
       <module name="bw-caleng-annotations" target="1.8" />
       <module name="bw-caleng-api" target="1.8" />
       <module name="bw-caleng-caldav" target="1.8" />
@@ -343,418 +288,60 @@
       <module name="bw-caleng-inoutsched" target="1.8" />
       <module name="bw-caleng-interfaces" target="1.8" />
       <module name="bw-caleng-sysevents" target="1.8" />
-      <module name="bw-calsockets" target="11" />
-      <module name="bw-calsockets-common" target="11" />
       <module name="bw-calsockets-ear" target="1.8" />
-      <module name="bw-calsockets-pubwar" target="11" />
-      <module name="bw-calsockets-war" target="11" />
       <module name="bw-calsockets-war (1)" target="1.8" />
-      <module name="bw-calsockets-web" target="11" />
       <module name="bw-calutil" target="1.8" />
-      <module name="bw-carddav" target="11" />
       <module name="bw-carddav-client" target="1.8" />
-      <module name="bw-carddav-common" target="11" />
-      <module name="bw-carddav-dumpres" target="11" />
-      <module name="bw-carddav-ear" target="11" />
-      <module name="bw-carddav-public-war" target="11" />
-      <module name="bw-carddav-server" target="11" />
-      <module name="bw-carddav-tools" target="11" />
-      <module name="bw-carddav-user-war" target="11" />
-      <module name="bw-carddav-userweb-war" target="11" />
-      <module name="bw-category" target="11" />
-      <module name="bw-category-common" target="11" />
-      <module name="bw-category-ear" target="11" />
-      <module name="bw-category-ical" target="11" />
-      <module name="bw-category-impl" target="11" />
-      <module name="bw-category-service" target="11" />
-      <module name="bw-category-war" target="11" />
-      <module name="bw-category-web" target="11" />
-      <module name="bw-cli" target="11" />
-      <module name="bw-cliutil" target="11" />
-      <module name="bw-dav-tester" target="11" />
       <module name="bw-deploy-maven-plugin" target="1.8" />
-      <module name="bw-dotwell-known" target="11" />
       <module name="bw-esdata" target="11" />
-      <module name="bw-event-registration" target="11" />
-      <module name="bw-event-registration-common" target="11" />
-      <module name="bw-event-registration-ear" target="11" />
-      <module name="bw-event-registration-service" target="11" />
-      <module name="bw-event-registration-war" target="11" />
-      <module name="bw-event-registration-web" target="11" />
       <module name="bw-evreg-common" target="1.7" />
       <module name="bw-evreg-ear" target="1.7" />
       <module name="bw-evreg-service" target="1.7" />
       <module name="bw-evreg-war" target="1.7" />
-      <module name="bw-jsforj" target="11" />
-      <module name="bw-logs" target="11" />
-      <module name="bw-note-bwconnector" target="11" />
-      <module name="bw-note-common" target="11" />
-      <module name="bw-note-db" target="11" />
-      <module name="bw-note-ear" target="11" />
-      <module name="bw-note-outbound" target="11" />
-      <module name="bw-note-servlet" target="11" />
-      <module name="bw-note-shared" target="11" />
-      <module name="bw-note-war" target="11" />
-      <module name="bw-notifier" target="11" />
-      <module name="bw-opensearch-GeoLite2-City" target="11" />
       <module name="bw-opensearch-GeoLite2-City (2)" target="11" />
-      <module name="bw-opensearch-qs" target="11" />
       <module name="bw-opensearch-qs (1)" target="11" />
       <module name="bw-opensearch-qs (2)" target="11" />
-      <module name="bw-oschdata" target="11" />
-      <module name="bw-qsbedework" target="11" />
-      <module name="bw-quickstart" target="11" />
-      <module name="bw-sched-assist-ear" target="11" />
-      <module name="bw-self-registration" target="11" />
-      <module name="bw-self-registration-common" target="11" />
-      <module name="bw-self-registration-ear" target="11" />
       <module name="bw-self-registration-ear (1)" target="1.8" />
-      <module name="bw-self-registration-war" target="11" />
       <module name="bw-self-registration-war (1)" target="1.8" />
-      <module name="bw-self-registration-web" target="11" />
       <module name="bw-selfreg" target="1.8" />
       <module name="bw-selfreg-common" target="1.7" />
       <module name="bw-selfreg-ear" target="1.7" />
       <module name="bw-selfreg-war" target="1.7" />
       <module name="bw-selfregistration-web" target="1.8" />
-      <module name="bw-sometime" target="11" />
-      <module name="bw-sometime-database" target="11" />
-      <module name="bw-sometime-doc" target="11" />
-      <module name="bw-struts-core" target="11" />
-      <module name="bw-synch" target="11" />
-      <module name="bw-synch-common" target="11" />
-      <module name="bw-synch-ear" target="11" />
-      <module name="bw-synch-shared" target="11" />
-      <module name="bw-synch-war" target="11" />
-      <module name="bw-synch-web" target="11" />
-      <module name="bw-timezone-server" target="11" />
-      <module name="bw-timezone-server-common" target="11" />
-      <module name="bw-timezone-server-data" target="11" />
-      <module name="bw-timezone-server-ear" target="11" />
-      <module name="bw-timezone-server-tzconvert" target="11" />
-      <module name="bw-timezone-server-war" target="11" />
-      <module name="bw-timezone-server-web" target="11" />
-      <module name="bw-util" target="11" />
-      <module name="bw-util-args" target="11" />
       <module name="bw-util-bw-deploy" target="1.8" />
-      <module name="bw-util-caching" target="11" />
-      <module name="bw-util-cli" target="11" />
-      <module name="bw-util-conf" target="11" />
-      <module name="bw-util-config" target="11" />
-      <module name="bw-util-config-http" target="11" />
-      <module name="bw-util-dav" target="11" />
-      <module name="bw-util-deploy" target="11" />
-      <module name="bw-util-deployment" target="11" />
-      <module name="bw-util-directory" target="11" />
       <module name="bw-util-elasticsearch" target="11" />
-      <module name="bw-util-hibernate" target="11" />
-      <module name="bw-util-http" target="11" />
       <module name="bw-util-httpmodule" target="11" />
-      <module name="bw-util-index" target="11" />
-      <module name="bw-util-indexing" target="11" />
-      <module name="bw-util-jms" target="11" />
-      <module name="bw-util-jmx" target="11" />
-      <module name="bw-util-jolokia" target="11" />
-      <module name="bw-util-json" target="11" />
-      <module name="bw-util-logging" target="11" />
-      <module name="bw-util-maven-deploy" target="11" />
-      <module name="bw-util-maven-deploy-wfmodule" target="11" />
-      <module name="bw-util-misc" target="11" />
-      <module name="bw-util-network" target="11" />
-      <module name="bw-util-opensearch" target="11" />
-      <module name="bw-util-options" target="11" />
-      <module name="bw-util-security" target="11" />
-      <module name="bw-util-servlet" target="11" />
-      <module name="bw-util-servlet-filters" target="11" />
       <module name="bw-util-struts" target="11" />
       <module name="bw-util-timezones" target="11" />
-      <module name="bw-util-tz" target="11" />
-      <module name="bw-util-xml" target="11" />
       <module name="bw-util-xmltidy" target="11" />
-      <module name="bw-util-xmltools" target="11" />
-      <module name="bw-util2" target="11" />
-      <module name="bw-util2-calendar" target="11" />
-      <module name="bw-util2-vcard" target="11" />
-      <module name="bw-webcache" target="11" />
-      <module name="bw-webcache-common" target="11" />
-      <module name="bw-webcache-war" target="11" />
-      <module name="bw-webcache-web" target="11" />
-      <module name="bw-webclient-cal" target="11" />
-      <module name="bw-webclient-caladmin" target="11" />
-      <module name="bw-webclient-calauth" target="11" />
-      <module name="bw-webclient-demosoe" target="11" />
-      <module name="bw-webclient-feeder" target="11" />
-      <module name="bw-webclient-submit" target="11" />
-      <module name="bw-webclient-ucal" target="11" />
-      <module name="bw-webdav" target="11" />
-      <module name="bw-wf-calendar-feature-pack" target="11" />
-      <module name="bw-wf-calendar-subsystem" target="11" />
-      <module name="bw-wf-carddav-feature-pack" target="11" />
-      <module name="bw-wf-cas-filter-feature-pack" target="11" />
-      <module name="bw-wf-category-feature-pack" target="11" />
-      <module name="bw-wf-core-feature-pack" target="11" />
-      <module name="bw-wf-event-registration-feature-pack" target="11" />
-      <module name="bw-wf-feature-pack" target="11" />
-      <module name="bw-wf-keycloak-saml-filter-feature-pack" target="11" />
-      <module name="bw-wf-note-feature-pack" target="11" />
-      <module name="bw-wf-self-registration-feature-pack" target="11" />
-      <module name="bw-wf-synch-feature-pack" target="11" />
-      <module name="bw-wf-timezone-server-feature-pack" target="11" />
-      <module name="bw-wf-xml-feature-pack" target="11" />
-      <module name="bw-wfmodules" target="11" />
       <module name="bw-wfmodules (1)" target="11" />
       <module name="bw-wfmodules (2)" target="11" />
-      <module name="bw-wfmodules-access" target="11" />
-      <module name="bw-wfmodules-apache-http" target="11" />
-      <module name="bw-wfmodules-apache-jdkim-library" target="11" />
-      <module name="bw-wfmodules-caldav" target="11" />
-      <module name="bw-wfmodules-caldav-server" target="11" />
-      <module name="bw-wfmodules-caldav-util" target="11" />
-      <module name="bw-wfmodules-calendar" target="11" />
-      <module name="bw-wfmodules-calendar-client" target="11" />
-      <module name="bw-wfmodules-calendar-client-admin" target="11" />
-      <module name="bw-wfmodules-calendar-client-appcommon" target="11" />
-      <module name="bw-wfmodules-calendar-client-rw" target="11" />
-      <module name="bw-wfmodules-calendar-client-struts" target="11" />
-      <module name="bw-wfmodules-calendar-client-struts2" target="11" />
       <module name="bw-wfmodules-calendar-client-strutsmodule" target="11" />
-      <module name="bw-wfmodules-calendar-client-taglib" target="11" />
-      <module name="bw-wfmodules-calendar-client-util" target="11" />
-      <module name="bw-wfmodules-calendar-client-web-admin" target="11" />
-      <module name="bw-wfmodules-calendar-client-web-ro" target="11" />
-      <module name="bw-wfmodules-calendar-client-web-rw" target="11" />
-      <module name="bw-wfmodules-calendar-common" target="11" />
-      <module name="bw-wfmodules-calendar-common-annotations" target="11" />
-      <module name="bw-wfmodules-calendar-common-api-ro" target="11" />
-      <module name="bw-wfmodules-calendar-common-api-rw" target="11" />
-      <module name="bw-wfmodules-calendar-common-config" target="11" />
-      <module name="bw-wfmodules-calendar-common-convert" target="11" />
-      <module name="bw-wfmodules-calendar-common-facade" target="11" />
-      <module name="bw-wfmodules-calendar-common-mail" target="11" />
-      <module name="bw-wfmodules-calendar-common-sysevents-common" target="11" />
-      <module name="bw-wfmodules-calendar-common-sysevents-msgs" target="11" />
-      <module name="bw-wfmodules-calendar-engine" target="11" />
-      <module name="bw-wfmodules-calendar-engine-api" target="11" />
-      <module name="bw-wfmodules-calendar-engine-caldav" target="11" />
-      <module name="bw-wfmodules-calendar-engine-chgnote" target="11" />
-      <module name="bw-wfmodules-calendar-engine-core-ro" target="11" />
-      <module name="bw-wfmodules-calendar-engine-core-rw" target="11" />
-      <module name="bw-wfmodules-calendar-engine-dumprestore" target="11" />
-      <module name="bw-wfmodules-calendar-engine-impl" target="11" />
-      <module name="bw-wfmodules-calendar-engine-indexer" target="11" />
-      <module name="bw-wfmodules-calendar-engine-inoutsched" target="11" />
-      <module name="bw-wfmodules-calendar-engine-interfaces" target="11" />
-      <module name="bw-wfmodules-calendar-engine-tools" target="11" />
-      <module name="bw-wfmodules-calendar-ro-war" target="11" />
-      <module name="bw-wfmodules-calendar-rw-war" target="11" />
-      <module name="bw-wfmodules-carddav" target="11" />
-      <module name="bw-wfmodules-category" target="11" />
       <module name="bw-wfmodules-category-common" target="11" />
-      <module name="bw-wfmodules-category-ear" target="11" />
       <module name="bw-wfmodules-category-ical" target="11" />
-      <module name="bw-wfmodules-category-impl" target="11" />
-      <module name="bw-wfmodules-category-service" target="11" />
-      <module name="bw-wfmodules-category-web" target="11" />
-      <module name="bw-wfmodules-cli" target="11" />
-      <module name="bw-wfmodules-cli-app" target="11" />
-      <module name="bw-wfmodules-com-fasterxml-jackson-core-annotations" target="11" />
-      <module name="bw-wfmodules-com-fasterxml-jackson-core-databind" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-databind (1)" target="11" />
-      <module name="bw-wfmodules-com-fasterxml-jackson-dataformat-yaml" target="11" />
-      <module name="bw-wfmodules-com-h2database-h2" target="11" />
       <module name="bw-wfmodules-com-sun-mail" target="11" />
-      <module name="bw-wfmodules-common" target="11" />
-      <module name="bw-wfmodules-commons-beanutils" target="11" />
-      <module name="bw-wfmodules-commons-codec" target="11" />
-      <module name="bw-wfmodules-commons-collections" target="11" />
-      <module name="bw-wfmodules-commons-csv" target="11" />
       <module name="bw-wfmodules-commons-digester" target="11" />
-      <module name="bw-wfmodules-commons-io" target="11" />
-      <module name="bw-wfmodules-commons-lang" target="11" />
-      <module name="bw-wfmodules-commons-lang3" target="11" />
-      <module name="bw-wfmodules-commons-logging" target="11" />
-      <module name="bw-wfmodules-digester" target="11" />
       <module name="bw-wfmodules-elasticsearch-rest-client" target="11" />
-      <module name="bw-wfmodules-eventreg" target="11" />
-      <module name="bw-wfmodules-ical4j" target="11" />
-      <module name="bw-wfmodules-ical4j-vcard" target="11" />
       <module name="bw-wfmodules-jasig-cas" target="11" />
-      <module name="bw-wfmodules-jsforj" target="11" />
       <module name="bw-wfmodules-leveldb" target="11" />
-      <module name="bw-wfmodules-logging" target="11" />
-      <module name="bw-wfmodules-logs" target="11" />
       <module name="bw-wfmodules-note-bwconnector" target="11" />
-      <module name="bw-wfmodules-note-common" target="11" />
-      <module name="bw-wfmodules-note-db" target="11" />
-      <module name="bw-wfmodules-note-ear" target="11" />
-      <module name="bw-wfmodules-note-outbound" target="11" />
-      <module name="bw-wfmodules-note-servlet" target="11" />
-      <module name="bw-wfmodules-note-shared" target="11" />
-      <module name="bw-wfmodules-notifier" target="11" />
-      <module name="bw-wfmodules-org" target="11" />
       <module name="bw-wfmodules-org-apache-commons-commons-csv" target="11" />
-      <module name="bw-wfmodules-org-apache-commons-commons-text" target="11" />
-      <module name="bw-wfmodules-org-apache-httpcomponents-httpclient" target="11" />
-      <module name="bw-wfmodules-org-apache-httpcomponents-httpcore" target="11" />
       <module name="bw-wfmodules-org-apache-jdkim-library" target="11" />
-      <module name="bw-wfmodules-org-apache-struts-core" target="11" />
       <module name="bw-wfmodules-org-apache-struts-taglib" target="11" />
-      <module name="bw-wfmodules-org-apache-struts2-core" target="11" />
-      <module name="bw-wfmodules-org-freemarker" target="11" />
-      <module name="bw-wfmodules-org-hibernate-core" target="11" />
-      <module name="bw-wfmodules-org-imgscalr-lib" target="11" />
       <module name="bw-wfmodules-org-jasig-cas" target="11" />
-      <module name="bw-wfmodules-org-jolokia-core" target="11" />
-      <module name="bw-wfmodules-org-opensearch-opensearch" target="11" />
-      <module name="bw-wfmodules-org-opensearch-opensearch-hlclient" target="11" />
-      <module name="bw-wfmodules-org-slf4j-slf4j-api" target="11" />
-      <module name="bw-wfmodules-postgresql" target="11" />
-      <module name="bw-wfmodules-selfreg" target="11" />
-      <module name="bw-wfmodules-spring" target="11" />
-      <module name="bw-wfmodules-spring-aop" target="11" />
-      <module name="bw-wfmodules-spring-beans" target="11" />
-      <module name="bw-wfmodules-spring-context" target="11" />
-      <module name="bw-wfmodules-spring-context-support" target="11" />
-      <module name="bw-wfmodules-spring-core" target="11" />
-      <module name="bw-wfmodules-spring-expression" target="11" />
-      <module name="bw-wfmodules-spring-jcl" target="11" />
-      <module name="bw-wfmodules-spring-jdbc" target="11" />
-      <module name="bw-wfmodules-spring-ldap-core" target="11" />
-      <module name="bw-wfmodules-spring-oxm" target="11" />
-      <module name="bw-wfmodules-spring-security-acl" target="11" />
-      <module name="bw-wfmodules-spring-security-config" target="11" />
-      <module name="bw-wfmodules-spring-security-core" target="11" />
-      <module name="bw-wfmodules-spring-security-ldap" target="11" />
-      <module name="bw-wfmodules-spring-security-taglibs" target="11" />
-      <module name="bw-wfmodules-spring-security-web" target="11" />
-      <module name="bw-wfmodules-spring-tx" target="11" />
-      <module name="bw-wfmodules-spring-web" target="11" />
-      <module name="bw-wfmodules-spring-webflow" target="11" />
-      <module name="bw-wfmodules-spring-webflow-spring-binding" target="11" />
-      <module name="bw-wfmodules-spring-webmvc" target="11" />
-      <module name="bw-wfmodules-spring-ws-core" target="11" />
-      <module name="bw-wfmodules-spring-ws-security" target="11" />
-      <module name="bw-wfmodules-spring-ws-xml" target="11" />
-      <module name="bw-wfmodules-sun-mail" target="11" />
-      <module name="bw-wfmodules-synch" target="11" />
-      <module name="bw-wfmodules-synch-common" target="11" />
-      <module name="bw-wfmodules-synch-ear" target="11" />
-      <module name="bw-wfmodules-synch-shared" target="11" />
-      <module name="bw-wfmodules-synch-web" target="11" />
-      <module name="bw-wfmodules-timezone-server" target="11" />
-      <module name="bw-wfmodules-timezone-server-common" target="11" />
-      <module name="bw-wfmodules-timezone-server-ear" target="11" />
-      <module name="bw-wfmodules-timezone-server-tzconvert" target="11" />
-      <module name="bw-wfmodules-timezone-server-web" target="11" />
-      <module name="bw-wfmodules-util" target="11" />
-      <module name="bw-wfmodules-util-args" target="11" />
-      <module name="bw-wfmodules-util-caching" target="11" />
-      <module name="bw-wfmodules-util-cli" target="11" />
-      <module name="bw-wfmodules-util-conf" target="11" />
-      <module name="bw-wfmodules-util-config" target="11" />
-      <module name="bw-wfmodules-util-config-http" target="11" />
-      <module name="bw-wfmodules-util-dav" target="11" />
-      <module name="bw-wfmodules-util-directory" target="11" />
-      <module name="bw-wfmodules-util-hibernate" target="11" />
-      <module name="bw-wfmodules-util-http" target="11" />
-      <module name="bw-wfmodules-util-index" target="11" />
-      <module name="bw-wfmodules-util-indexing" target="11" />
-      <module name="bw-wfmodules-util-indexing-opensearch" target="11" />
-      <module name="bw-wfmodules-util-jms" target="11" />
-      <module name="bw-wfmodules-util-jmx" target="11" />
-      <module name="bw-wfmodules-util-jolokia" target="11" />
-      <module name="bw-wfmodules-util-json" target="11" />
-      <module name="bw-wfmodules-util-misc" target="11" />
-      <module name="bw-wfmodules-util-network" target="11" />
-      <module name="bw-wfmodules-util-security" target="11" />
-      <module name="bw-wfmodules-util-servlet" target="11" />
-      <module name="bw-wfmodules-util-servlet-filters" target="11" />
-      <module name="bw-wfmodules-util-tz" target="11" />
-      <module name="bw-wfmodules-util-xml" target="11" />
-      <module name="bw-wfmodules-util2" target="11" />
-      <module name="bw-wfmodules-util2-calendar" target="11" />
-      <module name="bw-wfmodules-util2-vcard" target="11" />
-      <module name="bw-wfmodules-webcache" target="11" />
-      <module name="bw-wfmodules-webdav" target="11" />
       <module name="bw-wfmodules-wfmodules-ro" target="11" />
       <module name="bw-wfmodules-wfmodules-rw" target="11" />
-      <module name="bw-wfmodules-xml" target="11" />
-      <module name="bw-wildfly-galleon-feature-packs" target="11" />
-      <module name="bw-xml" target="11" />
-      <module name="bw-xml-appleServer" target="11" />
-      <module name="bw-xml-bwlicense" target="11" />
-      <module name="bw-xml-caldav" target="11" />
-      <module name="bw-xml-calws-soap" target="11" />
-      <module name="bw-xml-calws-soap-strict" target="11" />
-      <module name="bw-xml-carddav" target="11" />
-      <module name="bw-xml-catdav" target="11" />
-      <module name="bw-xml-category" target="11" />
-      <module name="bw-xml-dav" target="11" />
-      <module name="bw-xml-ear" target="11" />
-      <module name="bw-xml-exchangews" target="11" />
-      <module name="bw-xml-icalendar" target="11" />
-      <module name="bw-xml-icalendar-strict" target="11" />
-      <module name="bw-xml-synchws" target="11" />
-      <module name="bw-xml-tzsvr" target="11" />
-      <module name="bw-xml-vcard" target="11" />
-      <module name="bw-xml-war" target="11" />
-      <module name="bw-xml-xrd" target="11" />
       <module name="bwsysev-common" target="1.8" />
       <module name="bwsysev-monitor" target="1.8" />
       <module name="bwsysev-msgs" target="1.8" />
       <module name="bwwebcl-appcommon" target="1.7" />
       <module name="bwwebcl-ucalws" target="1.8" />
       <module name="bwwebcl-webcommon" target="1.7" />
-      <module name="sched-assist-api" target="11" />
-      <module name="sched-assist-mock" target="11" />
-      <module name="sched-assist-portlet" target="11" />
-      <module name="sched-assist-spi" target="11" />
-      <module name="sched-assist-spi-caldav" target="11" />
-      <module name="sched-assist-spi-caldav-integrationtest" target="11" />
-      <module name="sched-assist-spi-relationships" target="11" />
-      <module name="sched-assist-war" target="11" />
       <module name="sched-assist-war (1)" target="11" />
-      <module name="sched-assist-web" target="11" />
-      <module name="struts-taglib" target="1.4" />
-      <module name="struts2-apps" target="1.7" />
-      <module name="struts2-assembly" target="1.7" />
       <module name="struts2-async-plugin" target="1.8" />
-      <module name="struts2-bean-validation-plugin" target="1.7" />
-      <module name="struts2-bom" target="1.5" />
-      <module name="struts2-cdi-plugin" target="1.7" />
-      <module name="struts2-config-browser-plugin" target="1.7" />
-      <module name="struts2-convention-plugin" target="1.7" />
-      <module name="struts2-core" target="1.7" />
-      <module name="struts2-dwr-plugin" target="1.7" />
-      <module name="struts2-embeddedjsp-plugin" target="1.7" />
-      <module name="struts2-gxp-plugin" target="1.7" />
-      <module name="struts2-jasperreports-plugin" target="1.7" />
-      <module name="struts2-javatemplates-plugin" target="1.7" />
-      <module name="struts2-jfreechart-plugin" target="1.7" />
-      <module name="struts2-json-plugin" target="1.7" />
-      <module name="struts2-junit-plugin" target="1.7" />
-      <module name="struts2-osgi-admin-bundle" target="1.7" />
-      <module name="struts2-osgi-bundles" target="1.7" />
-      <module name="struts2-osgi-demo-bundle" target="1.7" />
-      <module name="struts2-osgi-plugin" target="1.7" />
-      <module name="struts2-oval-plugin" target="1.7" />
-      <module name="struts2-parent" target="1.7" />
-      <module name="struts2-pell-multipart-plugin" target="1.7" />
-      <module name="struts2-plexus-plugin" target="1.7" />
-      <module name="struts2-plugins" target="1.7" />
       <module name="struts2-portlet-mocks-plugin" target="1.8" />
-      <module name="struts2-portlet-plugin" target="1.7" />
-      <module name="struts2-portlet-tiles-plugin" target="1.7" />
-      <module name="struts2-rest-plugin" target="1.7" />
-      <module name="struts2-rest-showcase" target="1.7" />
-      <module name="struts2-showcase" target="1.7" />
-      <module name="struts2-sitegraph-plugin" target="1.7" />
-      <module name="struts2-sitemesh-plugin" target="1.7" />
-      <module name="struts2-spring-plugin" target="1.7" />
-      <module name="struts2-testng-plugin" target="1.7" />
-      <module name="struts2-tiles-plugin" target="1.7" />
       <module name="struts2-velocity-plugin" target="1.8" />
-      <module name="wfmodulesutil" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -818,7 +405,7 @@
       <module name="bw-xml-vcard" options="" />
       <module name="bw-xml-war" options="" />
       <module name="bw-xml-xrd" options="" />
-      <module name="struts2-core" options="-Auri=/struts-tags -AtlibVersion=2.3 -AjspVersion=2.0 -AshortName=s &quot;-AdisplayName=Struts Tags&quot; -AoutFile=$PROJECT_DIR$/../struts/core/target/classes/META-INF/struts-tags.tld &quot;-Adescription=\&quot;To make it easier to access dynamic data;&#10;                                    the Apache Struts framework includes a library of custom tags.&#10;                                    The tags interact with the framework's validation and&#10;                                    internationalization features;&#10;                                    to ensure that input is correct and output is localized.&#10;                                    The Struts Tags can be used with JSP FreeMarker or Velocity.\&quot;&quot; -AoutTemplatesDir=$PROJECT_DIR$/../struts/core/src/site/resources/tags" />
+      <module name="struts2-core" options="-Auri=/struts-tags -AtlibVersion=2.3 -AjspVersion=2.0 -AshortName=s &quot;-AdisplayName=Struts Tags&quot; -AoutFile=/Users/mike/bedework/quickstart-dev/struts/core/target/classes/META-INF/struts-tags.tld &quot;-Adescription=\&quot;To make it easier to access dynamic data;&#10;                                    the Apache Struts framework includes a library of custom tags.&#10;                                    The tags interact with the framework's validation and&#10;                                    internationalization features;&#10;                                    to ensure that input is correct and output is localized.&#10;                                    The Struts Tags can be used with JSP FreeMarker or Velocity.\&quot;&quot; -AoutTemplatesDir=/Users/mike/bedework/quickstart-dev/struts/core/src/site/resources/tags" />
     </option>
   </component>
 </project>

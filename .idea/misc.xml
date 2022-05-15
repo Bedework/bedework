@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-calendar-client/bw-calendar-client-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-all" />
@@ -75,6 +76,9 @@
         <option value="$PROJECT_DIR$/../bw-struts-taglib/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-webcache/pom.xml" />
         <option value="$PROJECT_DIR$/../struts/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-schemaorgforj/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-json/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-json/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -112,7 +116,7 @@
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/../bin" />
   </component>
   <component name="SvnBranchConfigurationManager">
@@ -134,11 +138,6 @@
           </value>
         </entry>
       </map>
-    </option>
-  </component>
-  <component name="SwUserDefinedSpecifications">
-    <option name="specTypeByUrl">
-      <map />
     </option>
   </component>
 </project>
