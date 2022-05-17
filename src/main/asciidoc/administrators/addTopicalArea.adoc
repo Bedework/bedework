@@ -18,13 +18,14 @@ Go to *System* -> *Manage calendars & folders* and determine where in the hierar
  * Set the url to bwcal:///public/cals/MainCal
  * ensure all other fields are blank and add the alias.
 
-You may need to refresh the display to see the new alias in the
+You may need to refresh the display to see the new alias.
+
 Using system aliases in this way ensures consistency in categorisation.
 
 ==== Create a subscription to the new alias.
 Switch to the appropriate group then the *Calendar Suite* tab.
 
-If the new alias is in a folder it may already by available.
+If the new alias is in a folder it may already be available.
 
 Otherwise
 
@@ -37,15 +38,15 @@ Otherwise
 * Click on the new alias
 * *Add*
 
-Now go to *Main Menu* -> *Add Event* and ensure topical area is visible.
+Now go to *Main Menu* -> *Add Event* and ensure the topical area is visible.
 
 ==== Add it to the view for the main campus
-The above needs to be done for the main campus calendar suite. Than
+The above needs to be done for the main campus calendar suite. Then
 
 * go to the *Calendar Suite* tab.
 * Select *Manage views*
 * Select the appropriate view
 * Add the new topical area
 
-Currently it appears a restart is needed for it to appear (or a long wait). I'll try to add a flush to fix this.
+Currently, it appears a restart is needed for it to appear (or a long wait). I'll try to add a flush to fix this.
 
