@@ -297,7 +297,6 @@
     <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-struts-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-struts-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-common/src/main/java" charset="UTF-8" />
@@ -851,8 +850,6 @@
     <file url="file://$PROJECT_DIR$/../struts/bundles/demo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../struts/bundles/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../struts/bundles/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../struts/core/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../struts/core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../struts/plugins/async/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../struts/plugins/async/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../struts/plugins/bean-validation/src/main/java" charset="UTF-8" />

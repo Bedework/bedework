@@ -11,7 +11,6 @@
         <module name="bw-category-ear" />
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
-        <module name="struts-taglib" />
         <module name="bw-webclient-calauth" />
         <module name="bw-util-http" />
         <module name="bw-note-common" />
@@ -63,7 +62,6 @@
         <module name="bw-util-xmltools" />
         <module name="struts2-oval-plugin" />
         <module name="bw-cli" />
-        <module name="bw-struts-core" />
         <module name="bw-calendar-notifyws" />
         <module name="bw-calendar-mail" />
         <module name="bw-util-jolokia" />
@@ -226,20 +224,6 @@
         <module name="bw-note-bwconnector" />
         <module name="sched-assist-spi-caldav-integrationtest" />
       </profile>
-      <profile name="Annotation profile for Struts 2" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <option name="description" value="&quot;To make it easier to access dynamic data;&#10;                                    the Apache Struts framework includes a library of custom tags.&#10;                                    The tags interact with the framework's validation and&#10;                                    internationalization features;&#10;                                    to ensure that input is correct and output is localized.&#10;                                    The Struts Tags can be used with JSP FreeMarker or Velocity.&quot;" />
-        <option name="displayName" value="Struts Tags" />
-        <option name="jspVersion" value="2.0" />
-        <option name="outFile" value="$PROJECT_DIR$/../struts/core/target/classes/META-INF/struts-tags.tld" />
-        <option name="outTemplatesDir" value="$PROJECT_DIR$/../struts/core/src/site/resources/tags" />
-        <option name="shortName" value="s" />
-        <option name="tlibVersion" value="2.3" />
-        <option name="uri" value="/struts-tags" />
-        <module name="struts2-core" />
-      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bw-access (1)" target="11" />
@@ -308,6 +292,7 @@
       <module name="bw-selfreg-ear" target="1.7" />
       <module name="bw-selfreg-war" target="1.7" />
       <module name="bw-selfregistration-web" target="1.8" />
+      <module name="bw-struts-core" target="11" />
       <module name="bw-util-bw-deploy" target="1.8" />
       <module name="bw-util-elasticsearch" target="11" />
       <module name="bw-util-httpmodule" target="11" />
@@ -316,18 +301,17 @@
       <module name="bw-util-xmltidy" target="11" />
       <module name="bw-wfmodules (1)" target="11" />
       <module name="bw-wfmodules (2)" target="11" />
+      <module name="bw-wfmodules-calendar-client-struts" target="11" />
       <module name="bw-wfmodules-calendar-client-strutsmodule" target="11" />
-      <module name="bw-wfmodules-category-common" target="11" />
       <module name="bw-wfmodules-category-ical" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-databind (1)" target="11" />
-      <module name="bw-wfmodules-com-sun-mail" target="11" />
-      <module name="bw-wfmodules-commons-digester" target="11" />
       <module name="bw-wfmodules-elasticsearch-rest-client" target="11" />
       <module name="bw-wfmodules-jasig-cas" target="11" />
       <module name="bw-wfmodules-leveldb" target="11" />
       <module name="bw-wfmodules-note-bwconnector" target="11" />
       <module name="bw-wfmodules-org-apache-commons-commons-csv" target="11" />
       <module name="bw-wfmodules-org-apache-jdkim-library" target="11" />
+      <module name="bw-wfmodules-org-apache-struts-core" target="11" />
       <module name="bw-wfmodules-org-apache-struts-taglib" target="11" />
       <module name="bw-wfmodules-org-jasig-cas" target="11" />
       <module name="bw-wfmodules-wfmodules-ro" target="11" />
@@ -339,7 +323,9 @@
       <module name="bwwebcl-ucalws" target="1.8" />
       <module name="bwwebcl-webcommon" target="1.7" />
       <module name="sched-assist-war (1)" target="11" />
+      <module name="struts-taglib" target="1.4" />
       <module name="struts2-async-plugin" target="1.8" />
+      <module name="struts2-core" target="1.7" />
       <module name="struts2-portlet-mocks-plugin" target="1.8" />
       <module name="struts2-velocity-plugin" target="1.8" />
     </bytecodeTargetLevel>
@@ -405,7 +391,7 @@
       <module name="bw-xml-vcard" options="" />
       <module name="bw-xml-war" options="" />
       <module name="bw-xml-xrd" options="" />
-      <module name="struts2-core" options="-Auri=/struts-tags -AtlibVersion=2.3 -AjspVersion=2.0 -AshortName=s &quot;-AdisplayName=Struts Tags&quot; -AoutFile=/Users/mike/bedework/quickstart-dev/struts/core/target/classes/META-INF/struts-tags.tld &quot;-Adescription=\&quot;To make it easier to access dynamic data;&#10;                                    the Apache Struts framework includes a library of custom tags.&#10;                                    The tags interact with the framework's validation and&#10;                                    internationalization features;&#10;                                    to ensure that input is correct and output is localized.&#10;                                    The Struts Tags can be used with JSP FreeMarker or Velocity.\&quot;&quot; -AoutTemplatesDir=/Users/mike/bedework/quickstart-dev/struts/core/src/site/resources/tags" />
+      <module name="struts2-core" options="-Auri=/struts-tags -AtlibVersion=2.3 -AjspVersion=2.0 -AshortName=s &quot;-AdisplayName=Struts Tags&quot; -AoutFile=$PROJECT_DIR$/../struts/core/target/classes/META-INF/struts-tags.tld &quot;-Adescription=\&quot;To make it easier to access dynamic data;&#10;                                    the Apache Struts framework includes a library of custom tags.&#10;                                    The tags interact with the framework's validation and&#10;                                    internationalization features;&#10;                                    to ensure that input is correct and output is localized.&#10;                                    The Struts Tags can be used with JSP FreeMarker or Velocity.\&quot;&quot; -AoutTemplatesDir=$PROJECT_DIR$/../struts/core/src/site/resources/tags" />
     </option>
   </component>
 </project>

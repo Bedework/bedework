@@ -46,6 +46,5 @@
     <mapping directory="$PROJECT_DIR$/../bw-wfmodules" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-xml" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../struts" vcs="Git" />
   </component>
 </project>
