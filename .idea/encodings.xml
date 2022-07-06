@@ -419,9 +419,11 @@
     <file url="file://$PROJECT_DIR$/../bw-webdav/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webdav/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wf-calendar-feature-pack/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wf-calendar-subsystem/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wf-calendar-subsystem/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wf-core-feature-pack/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wf-extensions/bw-wf-calendar-subsystem/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wf-extensions/bw-wf-calendar-subsystem/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wf-extensions/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wf-extensions/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wf-feature-pack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-access/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-access/src/main/resources" charset="UTF-8" />
@@ -501,6 +503,10 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-inoutsched/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-interfaces/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-interfaces/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-ro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-ro/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-rw/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-rw/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-tools/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-tools/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/src/main/java" charset="UTF-8" />
@@ -754,6 +760,12 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-webcache/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-webdav/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-webdav/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfextensions/bw-wfmodules-wfextensions-calendar/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfextensions/bw-wfmodules-wfextensions-calendar/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfextensions/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfextensions/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfextensions/untitled/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfextensions/untitled/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfmodules-ro/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfmodules-rw/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-xml/src/main/java" charset="UTF-8" />

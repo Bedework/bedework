@@ -1,6 +1,8 @@
 [[release-notes]]
 === Release Notes
 
+Specific changes to xsl and javascript can be found at <<xsl-changes>>
+
 ==== Release 4.0.3:
 This release has been a long time coming largely because it involved a significant amount of restructuring. We've moved away from ElasticSearch because of licence issues, and completely overhauled the deployment process.
 
@@ -21,10 +23,10 @@ While there are reservations about an Amazon supported version it appears to be 
 See <<featurepack-install>> for the new way of installing a working system. This is significantly easier than previously.
 
 ==== Missing tables in database
-*This fix is needed for attachments to work correctly.* It probably does not affect public events as attachmentsare not (much?) used.
+*This fix is needed for attachments to work correctly.* It probably does not affect public events as attachments are not (much?) used.
 A significant - but long-standing - bug was discovered. Override attachments were not being stored as the table and schema entries were missing. Updating will require adding the table to the database (or recreating the data from the XML dump).
 
-Additionally, ensure the OpenSearch schema is up to date
+Additionally, ensure the OpenSearch schema is updated
 (wildfly/standalone/configuration/bedework/opensearch) and reindex
 after the system is updated.
 
@@ -56,7 +58,7 @@ ALTER TABLE ONLY bw_eventann_attachments
 Ensure all configurations are up to date, especially the OpenSearch schema then reindex the data.
 
 ===== Changes that might need to be made
-If you deploy your own copy of bedework wars and ears theer are changes that might affect you. Most of the properties which were chanegd by the bedework deployment process have been replaced with run-time wildfly properties or by values.
+If you deploy your own copy of bedework wars and ears there are changes that might affect you. Most of the properties which were changed by the bedework deployment process have been replaced with run-time wildfly properties or by values.
 
 For example, when the xsl war was deployed a property in WEB-INF/jboss-web.xml was replaced.
 

@@ -24,6 +24,7 @@
         <module name="bw-calsockets-common" />
         <module name="bw-timezone-server-war" />
         <module name="bw-category-impl" />
+        <module name="bw-wfmodules-calendar-engine-rw" />
         <module name="bw-evreg-service" />
         <module name="bw-synch-ear" />
         <module name="sched-assist-api" />
@@ -328,6 +329,7 @@
       <module name="struts2-core" target="1.7" />
       <module name="struts2-portlet-mocks-plugin" target="1.8" />
       <module name="struts2-velocity-plugin" target="1.8" />
+      <module name="untitled" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

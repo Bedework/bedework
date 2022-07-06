@@ -1,0 +1,66 @@
+[[xsl-changes]]
+
+These are changes made to the xsl and associated javascript. These  changes often need to be carried over to a site when upgrading.
+
+Not all changes will be flagged here - only those that should be carried over.
+==== Dev version
+
+*bedeworkEventForm.js*
+
+Changed
+----
+  if (formObj["xYaleRecurrenceInfo"] && trim(formObj["xYaleRecurrenceInfo"].value) != '') {
+    bwXProps.update('X-YALE-RECURRENCEINFO',[],trim(formObj["xYaleRecurrenceInfo"].value),true);
+  } else {
+    bwXProps.remove('X-YALE-RECURRENCEINFO');
+  }
+----
+to
+----
+  if (formObj["xRecurrenceInfo"] && trim(formObj["xRecurrenceInfo"].value) != '') {
+    bwXProps.update('X-BW-RECURRENCEINFO',[],trim(formObj["xRecurrenceInfo"].value),true);
+  } else {
+    bwXProps.remove('X-BW-RECURRENCEINFO');
+  }
+----
+that is the x-prop and field name changed. (This mat cause some issues for old data)
+
+*addEventFrom.xsl*
+
+Calcel button needs to be a submit
+
+----
+        <input name="cancelled" type="submit" value="{$bwStr-FoEl-Cancel}" onclick="location.href={$setup}"/>
+----
+
+*eventsForm.xsl, eventForm.xsl, addEventForm.xsl*
+
+Added guid and recurrenceid as hidden fields to allow checking that we are editing the same event. Multiple browser tabs can cause issues
+
+Added this
+----
+    <!-- Output guid and recurrenceid for a validity check -->
+    <input type="hidden" name="guid">
+      <xsl:attribute name="value"><xsl:value-of select="$guid"/></xsl:attribute>
+    </input>
+    <input type="hidden" name="recurrenceId">
+      <xsl:attribute name="value"><xsl:value-of select="$recurrenceId"/></xsl:attribute>
+    </input>
+----
+
+*timezones.xsl*
+
+Removed code to update timezones - don't do it that way now we have a tz server.
+
+*eventsForm.xsl*
+
+As a result of upgradign struts image uploads are handled a little differently. Need to change
+
+----
+              <input type="file" name="eventImageUpload" id="eventImageUpload" size="45"/>
+----
+to
+----
+              <input type="file" name="imageUpload" id="eventImageUpload" size="45"/>
+----
+i.e. *name* parameter changed.

@@ -60,7 +60,6 @@
         <option value="$PROJECT_DIR$/../bw-category/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wf-feature-pack/pom.xml" />
         <option value="$PROJECT_DIR$/../bedework-parent/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-wf-calendar-subsystem/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-deploy/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-deploy/bw-calendar-all-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-xsl/bw-calendar-xsl-calrsrc.SoEDepartmental/pom.xml" />
@@ -77,6 +76,7 @@
         <option value="$PROJECT_DIR$/../bw-schemaorgforj/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-json/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-json/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wf-extensions/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
