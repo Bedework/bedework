@@ -24,7 +24,6 @@
         <module name="bw-calsockets-common" />
         <module name="bw-timezone-server-war" />
         <module name="bw-category-impl" />
-        <module name="bw-wfmodules-calendar-engine-rw" />
         <module name="bw-evreg-service" />
         <module name="bw-synch-ear" />
         <module name="sched-assist-api" />
@@ -104,6 +103,7 @@
         <module name="bw-calendar-sysevents-common" />
         <module name="bw-note-war" />
         <module name="bw-calendar-engine-core" />
+        <module name="bw-hawtio" />
         <module name="bw-util-jmx" />
         <module name="bw-util-dav" />
         <module name="struts2-testng-plugin" />
@@ -187,6 +187,7 @@
         <module name="struts2-jfreechart-plugin" />
         <module name="bw-xml-calws-soap" />
         <module name="bw-util-misc" />
+        <module name="cc-extract" />
         <module name="bw-util-json" />
         <module name="bwwebcl-appcommon" />
         <module name="bw-util-args" />

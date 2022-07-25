@@ -77,6 +77,7 @@
         <option value="$PROJECT_DIR$/../bw-json/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-json/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wf-extensions/pom.xml" />
+        <option value="$PROJECT_DIR$/../cc-extract/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -2,7 +2,7 @@
 === OpenSearch
 Bedework uses OpenSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as a local application, useful for development - or as an external service - which will be required for clustering.
 
-It is safer to NOT run in production with the OpenSearch interfaces open to the outside. OpenSearch now has various configuration options available. Bedework supports basic user authentication. Currently you can run unauthenticated but OpenSearch will generate a lot of warnings in the log.
+It is safer to NOT run in production with the OpenSearch interfaces open to the outside. OpenSearch now has various configuration options available. Bedework supports basic user authentication. Currently, you can run unauthenticated but OpenSearch will generate a lot of warnings in the log.
 
 You can run OpenSearch on the same server but preferably it should be running on a different server. OpenSearch - depending on the amount of data and types of search - can use a lot of memory for caching of filters. See the OpenSearch site for full instructions on running and installing.
 
@@ -60,6 +60,11 @@ This is only suitable in that form for demonstration but may provide the basis f
 For more information see https://opensearch.org/docs
 
 If you're looking to install as a production service you need to install OpenSearch as a service. There are instructions at the OpenSearch site fo installing on various platforms.
+
+The 2.1.0 release is available at:
+----
+https://artifacts.opensearch.org/releases/bundle/opensearch/2.1.0/opensearch-2.1.0-linux-x64.tar.gz
+----
 
 After installing and starting the service you will need to restore and reindex the data. For instructions see <<reindex>>.
 

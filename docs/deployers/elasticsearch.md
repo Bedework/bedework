@@ -1,7 +1,7 @@
 # OpenSearch 
 Bedework uses OpenSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as an embedded engine - as it arrives in the quickstart - or as an external service - which will be required for clustering.
 
-Currently eOpenSearch is completely unsecured. For testing and debugging it is possible to enable the http interface but this may expose your index. DO NOT run in production with the ES http interface open. In embedded mode the only access should be through the api.
+Currently OpenSearch is completely unsecured. For testing and debugging it is possible to enable the http interface but this may expose your index. DO NOT run in production with the ES http interface open. In embedded mode the only access should be through the api.
 
 Later versions of ES do appear to offer the ability to secure ES. This may be an option when we upgrade.
 
