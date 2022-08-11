@@ -363,6 +363,9 @@
 </div>
 <div class="sect2">
 <h3 id="release-notes">1.2. Release Notes</h3>
+<div class="paragraph">
+<p>Specific changes to xsl and javascript can be found at <a href="#xsl-changes">[xsl-changes]</a></p>
+</div>
 <div class="sect3">
 <h4 id="_release_4_0_3">1.2.1. Release 4.0.3:</h4>
 <div class="paragraph">
@@ -399,11 +402,11 @@
 <div class="sect3">
 <h4 id="_missing_tables_in_database">1.2.4. Missing tables in database</h4>
 <div class="paragraph">
-<p><strong>This fix is needed for attachments to work correctly.</strong> It probably does not affect public events as attachmentsare not (much?) used.
+<p><strong>This fix is needed for attachments to work correctly.</strong> It probably does not affect public events as attachments are not (much?) used.
 A significant - but long-standing - bug was discovered. Override attachments were not being stored as the table and schema entries were missing. Updating will require adding the table to the database (or recreating the data from the XML dump).</p>
 </div>
 <div class="paragraph">
-<p>Additionally, ensure the OpenSearch schema is up to date
+<p>Additionally, ensure the OpenSearch schema is updated
 (wildfly/standalone/configuration/bedework/opensearch) and reindex
 after the system is updated.</p>
 </div>
@@ -449,7 +452,7 @@ ALTER TABLE ONLY bw_eventann_attachments
 <div class="sect4">
 <h5 id="_changes_that_might_need_to_be_made">Changes that might need to be made</h5>
 <div class="paragraph">
-<p>If you deploy your own copy of bedework wars and ears theer are changes that might affect you. Most of the properties which were chanegd by the bedework deployment process have been replaced with run-time wildfly properties or by values.</p>
+<p>If you deploy your own copy of bedework wars and ears there are changes that might affect you. Most of the properties which were changed by the bedework deployment process have been replaced with run-time wildfly properties or by values.</p>
 </div>
 <div class="paragraph">
 <p>For example, when the xsl war was deployed a property in WEB-INF/jboss-web.xml was replaced.</p>
@@ -2402,7 +2405,17 @@ correct (probably) but the detailed steps beyond still require work.
 <p>Do NOT expose the OpenSearch and database ports by - for example - opening up all ports to the network.</p>
 </div>
 <div class="paragraph">
-<p>The best approach is to disable all ports and only open up those necessary. Bedework only uses the standard web ports. Additionally, even for the web ports (80, 8080 etc) it is best to pass traffic through haproxy or apache web server and only allow known contexts (/cal, /caladmin etc).</p>
+<p>The demo version provides a copy of the minimal opensearch system. This comes with explicit warnings:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Please know what you are doing when using this artifact. It contains no security features and is designed to be used only when embedded with another solution or service.
+
+End users are not suggested to use this. Use at your own risk.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The best approach is to disable all ports and only open up those necessary. Bedework only uses the ports 8080, 8081 (and 9990 for the wildfly HAL console). Additionally, even for those ports it is best to pass traffic through haproxy or apache web server and only allow known contexts (/cal, /caladmin etc) and redirect all unknown traffic to "/cal".</p>
 </div>
 </div>
 <div class="sect3">
@@ -2865,14 +2878,14 @@ components for the indicated database as a demo system.</p></td>
 <p>This may not work as snapshots can be out-of-date or inconsistent but for reference&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<p>Download and unzip galleon then run the binary and enter teh commands as shown:</p>
+<p>Download and unzip galleon then run the binary and enter the commands as shown:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code>./galleon-4.2.8.Final/bin/galleon.sh
 maven add-repository --name=ossrh-snapshots --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
-maven resolve-feature-pack org.bedework:bw-wf-feature-pack:4.0.4-SNAPSHOT
-install org.bedework:bw-wf-feature-pack:4.0.4-SNAPSHOT --dir=wildfly-26.0.1.Final --verbose --layers=bw-demo-pg,web-console
+maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.0.4-SNAPSHOT
+install org.bedework.deploy:bw-wf-feature-pack:4.0.4-SNAPSHOT --dir=wildfly-26.0.1.Final --verbose --layers=bw-demo-pg,web-console
 exit</code></pre>
 </div>
 </div>

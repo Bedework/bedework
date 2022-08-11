@@ -11,7 +11,14 @@ When installing bedework on wildfly steps must be taken to ensure that services 
 
 Do NOT expose the OpenSearch and database ports by - for example - opening up all ports to the network.
 
-The best approach is to disable all ports and only open up those necessary. Bedework only uses the standard web ports. Additionally, even for the web ports (80, 8080 etc) it is best to pass traffic through haproxy or apache web server and only allow known contexts (/cal, /caladmin etc).
+The demo version provides a copy of the minimal opensearch system. This comes with explicit warnings:
+----
+Please know what you are doing when using this artifact. It contains no security features and is designed to be used only when embedded with another solution or service.
+
+End users are not suggested to use this. Use at your own risk.
+----
+
+The best approach is to disable all ports and only open up those necessary. Bedework only uses the ports 8080, 8081 (and 9990 for the wildfly HAL console). Additionally, even for those ports it is best to pass traffic through haproxy or apache web server and only allow known contexts (/cal, /caladmin etc) and redirect all unknown traffic to "/cal".
 
 ==== Galleon, wildfly and bedework
 Wildfly can be installed by using the galleon installer, which allows the installation of tailored instances of wildfly.
@@ -279,13 +286,13 @@ galleon.sh install org.bedework:bw-wf-feature-pack:4.0.3 --dir=wildfly --verbose
 ==== Installing snapshot version
 This may not work as snapshots can be out-of-date or inconsistent but for reference...
 
-Download and unzip galleon then run the binary and enter teh commands as shown:
+Download and unzip galleon then run the binary and enter the commands as shown:
 
 [source]
 ----
 ./galleon-4.2.8.Final/bin/galleon.sh
 maven add-repository --name=ossrh-snapshots --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
-maven resolve-feature-pack org.bedework:bw-wf-feature-pack:4.0.4-SNAPSHOT
-install org.bedework:bw-wf-feature-pack:4.0.4-SNAPSHOT --dir=wildfly-26.0.1.Final --verbose --layers=bw-demo-pg,web-console
+maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.0.4-SNAPSHOT
+install org.bedework.deploy:bw-wf-feature-pack:4.0.4-SNAPSHOT --dir=wildfly-26.0.1.Final --verbose --layers=bw-demo-pg,web-console
 exit
 ----
