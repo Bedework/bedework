@@ -62,6 +62,33 @@
           <preserveDirectories>true</preserveDirectories>
         </configuration>
       </plugin>
+
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+
+        <executions>
+          <execution>
+            <id>copy-generated-index.html</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.basedir}/docs/</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${project.build.directory}/generated-docs</directory>
+                  <filtering>false</filtering>
+                  <includes>
+                    <include>index.html</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
     </plugins>
   </build>
 </project>

@@ -47,6 +47,7 @@ deploySnapshot bw-calendar-client
 deploySnapshot bw-calendar-xsl
 deploySnapshot bw-calendar-deploy
 deploySnapshot bw-webcache
+deploySnapshot bw-wf-extensions
 deploySnapshot bw-wfmodules
 deploySnapshot bw-quickstart
 deploySnapshot bw-wildfly-galleon-feature-packs
