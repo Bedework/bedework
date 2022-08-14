@@ -99,7 +99,6 @@
         <module name="bw-calendar-engine-chgnote" />
         <module name="struts2-rest-showcase" />
         <module name="sched-assist-mock" />
-        <module name="bw-util-config-http" />
         <module name="bw-calendar-sysevents-common" />
         <module name="bw-note-war" />
         <module name="bw-calendar-engine-core" />
@@ -296,6 +295,7 @@
       <module name="bw-selfregistration-web" target="1.8" />
       <module name="bw-struts-core" target="11" />
       <module name="bw-util-bw-deploy" target="1.8" />
+      <module name="bw-util-config-http" target="11" />
       <module name="bw-util-elasticsearch" target="11" />
       <module name="bw-util-httpmodule" target="11" />
       <module name="bw-util-struts" target="11" />
