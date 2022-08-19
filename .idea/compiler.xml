@@ -303,6 +303,7 @@
       <module name="bw-util-xmltidy" target="11" />
       <module name="bw-wfmodules (1)" target="11" />
       <module name="bw-wfmodules (2)" target="11" />
+      <module name="bw-wfmodules-apache-http" target="11" />
       <module name="bw-wfmodules-calendar-client-struts" target="11" />
       <module name="bw-wfmodules-calendar-client-strutsmodule" target="11" />
       <module name="bw-wfmodules-category-ical" target="11" />
