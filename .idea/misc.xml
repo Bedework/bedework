@@ -72,7 +72,6 @@
         <option value="$PROJECT_DIR$/../bw-quickstart/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-quickstart/bw-calendar-data-h2/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-webcache/pom.xml" />
-        <option value="$PROJECT_DIR$/../struts/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-schemaorgforj/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-json/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-json/pom.xml" />
@@ -112,7 +111,34 @@
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-jasig-cas/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfmodules-ro/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfmodules-rw/pom.xml" />
-        <option value="$PROJECT_DIR$/../struts/core/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/apps/rest-showcase/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/apps/showcase/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/bundles/admin/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/bundles/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/bean-validation/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/cdi/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/config-browser/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/convention/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/dwr/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/embeddedjsp/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/gxp/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/jasperreports/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/javatemplates/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/jfreechart/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/json/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/junit/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/osgi/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/oval/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/pell-multipart/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/plexus/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/portlet-tiles/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/portlet/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/rest/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/sitegraph/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/sitemesh/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/spring/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/testng/pom.xml" />
+        <option value="$PROJECT_DIR$/../struts/plugins/tiles/pom.xml" />
       </set>
     </option>
   </component>
