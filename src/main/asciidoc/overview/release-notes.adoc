@@ -3,6 +3,18 @@
 
 Specific changes to xsl and javascript can be found at <<xsl-changes>>
 
+==== Dev - To Be Release 4.0.4:
+===== Change summary
+These are changes that will mean some config or stylesheet
+change when upgrading. More details may be seen below.
+
+  * Move submissions root into system properties from event submit config
+  * Remove all setting of newColPath from event form.
+  * Added flag to mark collection as primary. Must be set on "/public/cals/MainCal"
+
+===== Significant changes to setting destination calendar collection
+Up to now there has been a UI field to set the calendar collection e.g. "/public/cals/MainCal" for events. This has been completely removed. It's unnecessary and caused toomany problems.
+
 ==== Release 4.0.3:
 This release has been a long time coming largely because it involved a significant amount of restructuring. We've moved away from ElasticSearch because of licence issues, and completely overhauled the deployment process.
 
