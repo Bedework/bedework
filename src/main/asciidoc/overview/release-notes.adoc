@@ -13,7 +13,21 @@ change when upgrading. More details may be seen below.
   * Added flag to mark collection as primary. Must be set on "/public/cals/MainCal"
 
 ===== Significant changes to setting destination calendar collection
-Up to now there has been a UI field to set the calendar collection e.g. "/public/cals/MainCal" for events. This has been completely removed. It's unnecessary and caused toomany problems.
+Up to now, for public events, there has been a UI field to set the calendar collection e.g. "/public/cals/MainCal". This has been completely removed. It's unnecessary and caused too many problems.
+
+==== Workflow changes
+This has been completely reworked. Making approval of events part
+of the update caused problems and in any case the actual process of
+approving or publishing events was wrong. Rather than doing a move
+the calendar collection path was being updated. It didn't work for
+recurring event overrides - probably for a number of releases.
+
+There is now a separate button and action for approval or publishing.
+
+Additionally, it was discovered that movign an event was broken for
+overrides. This was fixed.
+
+Much of the flow between pages has been updated
 
 ==== Release 4.0.3:
 This release has been a long time coming largely because it involved a significant amount of restructuring. We've moved away from ElasticSearch because of licence issues, and completely overhauled the deployment process.
