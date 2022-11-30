@@ -24,7 +24,7 @@ Specific versions of the script are at:
 ==== Which version
 The script will ask you if you want the latest, developmentor pre-release version.
 
-You probably want latest. The dev version is obviously for development adn can be very unstable. The pre-release version is ther only for testing of the install script.
+You probably want latest. The dev version is obviously for development and can be very unstable. The pre-release version is ther only for testing of the install script.
 
 ==== Apacheds
 The script will install apacheds. This will install a directory with some initial ids in place for testing. Ultimately you'll want to use your own directory service.

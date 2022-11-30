@@ -1,6 +1,34 @@
 === Subscribing to a feed for public calendars.
+==== Data format
+The simplest data format is standard RFC5545 ics. For greater efficiency the
+service providing the data should set the Last-Modified header field
+when the data changes. This will allow the synch engine to skip a
+download for unchanged data.
 
-You probably want the incoming events to all be flagged with a specific category or categories. This can be useful for filtering.It makes it easier to include the calendar collections imported by the sync engine. Before carrying out the following steps ensure these categories are created.
+*Date/time format:* Times *should* beprovided as local times with a
+timezone - for example
+----
+DTSTART;TZID=America/New_York:20230330T200000
+----
+
+Note that while the standard specifies that a VTIMEZONE component is
+required for all referenced timezones, this can be ignored. Bedework
+will use its own set of timezone definitions.
+
+*UID:* This *must* be unique and unchanging for each event. It is the
+primary key to an event - and all its instances if recurring.
+
+*Images:* Images can be added to the feed and this will allow their
+display on the main web interface. Specify and x-property as belkow:
+----
+X-BEDEWORK-IMAGE;ALTREP=A title:https://example.edu/sites/default/files/images/fall2022_fun.png
+----
+
+*Categories:* You probably want the incoming events to all be flagged
+with a specific category or categories. This can be useful for
+filtering.It makes it easier to include the calendar collections
+imported by the sync engine. Before carrying out the following
+steps ensure these categories are created.
 
 For public events there are a few more options available when subscribing.
 
@@ -8,12 +36,14 @@ For public events there are a few more options available when subscribing.
 
 *Process categories:* This does the same for categories.
 
-==== Note:
-If you don't select those options then categories and locations will be created in bedework. This is probably not what is wanted as these are uncurated.
+[NOTE]
+====
+If you don't select those options then categories, contacts and locations will be created in bedework. This is probably not what is wanted as these are uncurated.
 
 By setting the *Process....* flag you ensure that such locations and categories don't end up in the database.
+====
 
-*Suppress deletion of events?* This means that if events disappear from the feed they will stay in the database. This effectively turns the feed into a change feed adn can significantly reduce the size of the data. It does mean that events that MUST be deleted will require help from an administrator with sufficient privileges.
+*Suppress deletion of events?* This means that if events disappear from the feed they will stay in the database. This effectively turns the feed into a change feed and can significantly reduce the size of the data. It does mean that events that MUST be deleted will require help from an administrator with sufficient privileges.
  
 ==== Creating a public subscription
 
@@ -49,10 +79,19 @@ These values are separated by a comma and a space. Missing values are skipped.
 
 The update process matches the value of the supplied LOCATION property against that combined value.
 
-If there is an EXACT match then the bedework location will be attached to the syncronized event. Otherwise the location will be left in the x-property. Feeds and the front end display will normally display the x-location as the location for the event.
+If there is an EXACT match then the bedework location will be attached to the syncronized event. Otherwise, the location will be left in an "X-BEDEWORK-LOCATION"
+x-property. Feeds and the front end display will normally display the x-property as the location for the event.
+
+==== Mapping contacts
+Contacts are relatively simple and have a single value.
+If this value matches exactly a defined bedework contact
+it will be set as the contact value. In all cases an
+x-property "X-BEDEWORK-CONTACT" will be created
 
 ==== Mapping categories
-An equivalent process takes place with categories though the mapping is much simpler. Categories only have a single value. An exact match in the imported event will cause the bedework category to be applied.
+An equivalent process takes place with categories though again, the mapping is much simpler. Categories only have a single value. An exact match in the imported event will cause the bedework category to be applied.
+
+Incoming categories will be placed in "X-BEDEWORK-CATEGORIES" properties.
 
 The use of bedework categories is important for much of the front-end filtering of events as this is driven primarily by categories.
 
