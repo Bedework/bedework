@@ -24,10 +24,19 @@ recurring event overrides - probably for a number of releases.
 
 There is now a separate button and action for approval or publishing.
 
-Additionally, it was discovered that movign an event was broken for
+Additionally, it was discovered that moving an event was broken for
 overrides. This was fixed.
 
-Much of the flow between pages has been updated
+Much of the flow between pages has been updated.
+
+[NOTE]
+====
+These changes require an update to all calendar collections if you are
+upgrading. As a superuser go to System->Manage calendars & folders,
+open up the cals folder and select MainCal. Set the "Primary Collection"
+checkbox and save.
+====
+
 
 ==== Release 4.0.3:
 This release has been a long time coming largely because it involved a significant amount of restructuring. We've moved away from ElasticSearch because of licence issues, and completely overhauled the deployment process.
