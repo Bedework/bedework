@@ -29,6 +29,32 @@ overrides. This was fixed.
 
 Much of the flow between pages has been updated.
 
+==== sharethis removed
+Sharethis - while offering some possibly useful features - definitely has some privacy issues.
+We ran into this because firefox blocks sharethis at high privacy settings.
+
+This article: https://www.privacyinternational.org/case-study/4403/tracking-service-sharethis-be-profiled provides some interesting info.
+
+Additionally, I tried a single event display with sharethis enabled. The results were:
+
+----
+18 requests to bedework server - only 2 of which are uncached
+
+12 requests to sharethis - 6 of which are uncached - including a png so what are they hiding in that image?
+
+2 for google analytics
+
+The requests to the bedework server take a total of 700ms. The total load takes 2.23 seconds - most in sharethis.
+
+The google calls take 5ms
+
+sharethis takes twice as long as the actual load of the event. With sharethis the minimum load time is about 1.5sec
+----
+
+It probably varies over time but still...
+
+So for performance and privacy purposes I would suggest sites consider removing sharethis. It has been removed from the xsl.
+
 [NOTE]
 ====
 These changes require an update to all calendar collections if you are
