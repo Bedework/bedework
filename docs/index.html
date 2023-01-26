@@ -24,23 +24,24 @@
 <ul class="sectlevel3">
 <li><a href="#_dev_to_be_release_4_0_4">1.2.1. Dev - To Be Release 4.0.4:</a></li>
 <li><a href="#_workflow_changes">1.2.2. Workflow changes</a></li>
-<li><a href="#_release_4_0_3">1.2.3. Release 4.0.3:</a></li>
-<li><a href="#_elasticsearch_replaced_with_opensearch">1.2.4. ElasticSearch replaced with OpenSearch</a></li>
-<li><a href="#_new_wildfly_galleon_feature_pack_install">1.2.5. New wildfly galleon feature pack install.</a></li>
-<li><a href="#_missing_tables_in_database">1.2.6. Missing tables in database</a></li>
-<li><a href="#_release_3_13_2">1.2.7. Release 3.13.2:</a></li>
-<li><a href="#_release_3_13_1">1.2.8. Release 3.13.1:</a></li>
-<li><a href="#_release_3_13_0">1.2.9. Release 3.13.0:</a></li>
-<li><a href="#_release_3_12_7">1.2.10. Release 3.12.7:</a></li>
-<li><a href="#_release_3_12_6">1.2.11. Release 3.12.6:</a></li>
-<li><a href="#_release_3_12_5">1.2.12. Release 3.12.5:</a></li>
-<li><a href="#_release_3_12_4">1.2.13. Release 3.12.4:</a></li>
-<li><a href="#_release_3_12_3">1.2.14. Release 3.12.3:</a></li>
-<li><a href="#_release_3_12_2">1.2.15. Release 3.12.2:</a></li>
-<li><a href="#_release_3_12_1">1.2.16. Release 3.12.1:</a></li>
-<li><a href="#_release_3_12_0">1.2.17. Release 3.12.0:</a></li>
-<li><a href="#_release_3_11_2">1.2.18. Release 3.11.2:</a></li>
-<li><a href="#_release_3_11_1">1.2.19. Release 3.11.1:</a></li>
+<li><a href="#_sharethis_removed">1.2.3. sharethis removed</a></li>
+<li><a href="#_release_4_0_3">1.2.4. Release 4.0.3:</a></li>
+<li><a href="#_elasticsearch_replaced_with_opensearch">1.2.5. ElasticSearch replaced with OpenSearch</a></li>
+<li><a href="#_new_wildfly_galleon_feature_pack_install">1.2.6. New wildfly galleon feature pack install.</a></li>
+<li><a href="#_missing_tables_in_database">1.2.7. Missing tables in database</a></li>
+<li><a href="#_release_3_13_2">1.2.8. Release 3.13.2:</a></li>
+<li><a href="#_release_3_13_1">1.2.9. Release 3.13.1:</a></li>
+<li><a href="#_release_3_13_0">1.2.10. Release 3.13.0:</a></li>
+<li><a href="#_release_3_12_7">1.2.11. Release 3.12.7:</a></li>
+<li><a href="#_release_3_12_6">1.2.12. Release 3.12.6:</a></li>
+<li><a href="#_release_3_12_5">1.2.13. Release 3.12.5:</a></li>
+<li><a href="#_release_3_12_4">1.2.14. Release 3.12.4:</a></li>
+<li><a href="#_release_3_12_3">1.2.15. Release 3.12.3:</a></li>
+<li><a href="#_release_3_12_2">1.2.16. Release 3.12.2:</a></li>
+<li><a href="#_release_3_12_1">1.2.17. Release 3.12.1:</a></li>
+<li><a href="#_release_3_12_0">1.2.18. Release 3.12.0:</a></li>
+<li><a href="#_release_3_11_2">1.2.19. Release 3.11.2:</a></li>
+<li><a href="#_release_3_11_1">1.2.20. Release 3.11.1:</a></li>
 </ul>
 </li>
 <li><a href="#issues">1.3. Issues</a></li>
@@ -411,15 +412,66 @@ recurring event overrides - probably for a number of releases.</p>
 <p>There is now a separate button and action for approval or publishing.</p>
 </div>
 <div class="paragraph">
-<p>Additionally, it was discovered that movign an event was broken for
+<p>Additionally, it was discovered that moving an event was broken for
 overrides. This was fixed.</p>
 </div>
 <div class="paragraph">
-<p>Much of the flow between pages has been updated</p>
+<p>Much of the flow between pages has been updated.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_4_0_3">1.2.3. Release 4.0.3:</h4>
+<h4 id="_sharethis_removed">1.2.3. sharethis removed</h4>
+<div class="paragraph">
+<p>Sharethis - while offering some possibly useful features - definitely has some privacy issues.
+We ran into this because firefox blocks sharethis at high privacy settings.</p>
+</div>
+<div class="paragraph">
+<p>This article: <a href="https://www.privacyinternational.org/case-study/4403/tracking-service-sharethis-be-profiled" class="bare">https://www.privacyinternational.org/case-study/4403/tracking-service-sharethis-be-profiled</a> provides some interesting info.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, I tried a single event display with sharethis enabled. The results were:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>18 requests to bedework server - only 2 of which are uncached
+
+12 requests to sharethis - 6 of which are uncached - including a png so what are they hiding in that image?
+
+2 for google analytics
+
+The requests to the bedework server take a total of 700ms. The total load takes 2.23 seconds - most in sharethis.
+
+The google calls take 5ms
+
+sharethis takes twice as long as the actual load of the event. With sharethis the minimum load time is about 1.5sec</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It probably varies over time but still&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>So for performance and privacy purposes I would suggest sites consider removing sharethis. It has been removed from the xsl.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>These changes require an update to all calendar collections if you are
+upgrading. As a superuser go to System&#8594;Manage calendars &amp; folders,
+open up the cals folder and select MainCal. Set the "Primary Collection"
+checkbox and save.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_release_4_0_3">1.2.4. Release 4.0.3:</h4>
 <div class="paragraph">
 <p>This release has been a long time coming largely because it involved a significant amount of restructuring. We&#8217;ve moved away from ElasticSearch because of licence issues, and completely overhauled the deployment process.</p>
 </div>
@@ -431,7 +483,7 @@ overrides. This was fixed.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_elasticsearch_replaced_with_opensearch">1.2.4. ElasticSearch replaced with OpenSearch</h4>
+<h4 id="_elasticsearch_replaced_with_opensearch">1.2.5. ElasticSearch replaced with OpenSearch</h4>
 <div class="paragraph">
 <p>This release switches from ElasticSearch to OpenSearch due to the licensing issues with ElasticSearch after version 7.10. This will require a reindex of the data but that would be required anyway as we have made too big a jump between versions for an automatic index update to work.</p>
 </div>
@@ -446,13 +498,13 @@ overrides. This was fixed.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_new_wildfly_galleon_feature_pack_install">1.2.5. New wildfly galleon feature pack install.</h4>
+<h4 id="_new_wildfly_galleon_feature_pack_install">1.2.6. New wildfly galleon feature pack install.</h4>
 <div class="paragraph">
 <p>See <a href="#featurepack-install">Install bedework as a wildfly feature</a> for the new way of installing a working system. This is significantly easier than previously.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_missing_tables_in_database">1.2.6. Missing tables in database</h4>
+<h4 id="_missing_tables_in_database">1.2.7. Missing tables in database</h4>
 <div class="paragraph">
 <p><strong>This fix is needed for attachments to work correctly.</strong> It probably does not affect public events as attachments are not (much?) used.
 A significant - but long-standing - bug was discovered. Override attachments were not being stored as the table and schema entries were missing. Updating will require adding the table to the database (or recreating the data from the XML dump).</p>
@@ -605,7 +657,7 @@ system modules can be built and deployed on the server.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_13_2">1.2.7. Release 3.13.2:</h4>
+<h4 id="_release_3_13_2">1.2.8. Release 3.13.2:</h4>
 <div class="paragraph">
 <p>Making a serious effort to get rid of ide warnings. Removing the trivia lets the important stuff stand out. Starting work on implementing new jscalendar and jscontact representations and the jmap protocol.</p>
 </div>
@@ -745,7 +797,7 @@ exception is the only way out use RuntimeException.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_13_1">1.2.8. Release 3.13.1:</h4>
+<h4 id="_release_3_13_1">1.2.9. Release 3.13.1:</h4>
 <div class="paragraph">
 <p>There was a long standing bug in category handling for updates. An attempt
 was made to preserve default categories for calsuites when an event is
@@ -833,7 +885,7 @@ This allows us to specify a default profile that differs from the bedework-3 pro
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_13_0">1.2.9. Release 3.13.0:</h4>
+<h4 id="_release_3_13_0">1.2.10. Release 3.13.0:</h4>
 <div class="paragraph">
 <p>This release mostly consists of upgrades to almost the latest ElasticSearch (always a moving target), the currently latest wildfly and to Java 11 the current LTS release.</p>
 </div>
@@ -913,7 +965,7 @@ This allows us to specify a default profile that differs from the bedework-3 pro
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_7">1.2.10. Release 3.12.7:</h4>
+<h4 id="_release_3_12_7">1.2.11. Release 3.12.7:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1001,7 +1053,7 @@ This allows us to specify a default profile that differs from the bedework-3 pro
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_6">1.2.11. Release 3.12.6:</h4>
+<h4 id="_release_3_12_6">1.2.12. Release 3.12.6:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1115,7 +1167,7 @@ This allows us to specify a default profile that differs from the bedework-3 pro
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_5">1.2.12. Release 3.12.5:</h4>
+<h4 id="_release_3_12_5">1.2.13. Release 3.12.5:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1176,7 +1228,7 @@ This allows us to specify a default profile that differs from the bedework-3 pro
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_4">1.2.13. Release 3.12.4:</h4>
+<h4 id="_release_3_12_4">1.2.14. Release 3.12.4:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1214,7 +1266,7 @@ This allows us to specify a default profile that differs from the bedework-3 pro
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_3">1.2.14. Release 3.12.3:</h4>
+<h4 id="_release_3_12_3">1.2.15. Release 3.12.3:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1281,7 +1333,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_2">1.2.15. Release 3.12.2:</h4>
+<h4 id="_release_3_12_2">1.2.16. Release 3.12.2:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1297,7 +1349,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_1">1.2.16. Release 3.12.1:</h4>
+<h4 id="_release_3_12_1">1.2.17. Release 3.12.1:</h4>
 <div class="sect4">
 <h5 id="_searching_for_contactslocations">Searching for contacts/locations</h5>
 <div class="ulist">
@@ -1375,7 +1427,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_12_0">1.2.17. Release 3.12.0:</h4>
+<h4 id="_release_3_12_0">1.2.18. Release 3.12.0:</h4>
 <div class="sect4">
 <h5 id="_move_to_githubmaven">Move to github/maven</h5>
 <div class="ulist">
@@ -1515,7 +1567,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_11_2">1.2.18. Release 3.11.2:</h4>
+<h4 id="_release_3_11_2">1.2.19. Release 3.11.2:</h4>
 <div class="sect4">
 <h5 id="_indexing">Indexing</h5>
 <div class="ulist">
@@ -1767,7 +1819,7 @@ autokill killing off some of the long running system jobs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_3_11_1">1.2.19. Release 3.11.1:</h4>
+<h4 id="_release_3_11_1">1.2.20. Release 3.11.1:</h4>
 <div class="ulist">
 <ul>
 <li>
