@@ -65,6 +65,7 @@
 
       <plugin>
         <artifactId>maven-resources-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
 
         <executions>
           <execution>
