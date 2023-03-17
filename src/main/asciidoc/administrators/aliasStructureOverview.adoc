@@ -1,0 +1,38 @@
+[[Alias-structure-overview]]
+=== Alias Structure Overview
+
+The "system" tab provides access to the calendars and folders
+view. This looks like a file system structure with a hierarchy
+of folders (or collections) rooted under the folder "public".
+
+There will be at least the following at the next level:
+
+* *aliases* holds a number of system aliases or folders.
+Aliases will generally reference the main calendar collection
+with the url "bwcal:///public/cals/MainCal".
+
+
+* *cals* contains the public calendar collections. If your
+system has no incoming feeds then only the single collection
+"MainCal" may be present. MainCal contains all the public
+events created with the admin client.
+
+* *unbrowsable* is used to hide special calendar collections
+used for the workflow feature and the submission client.
+
+==== System aliases/subscriptions
+These normally have one or more categories applied for
+input and output - usually the same category. The categories
+are applied when <<topical-areas>> are applied when adding
+or updating events.
+
+When an alias/subscription is selected in the public client
+(or referenced by a virtual path in feed urls) then the
+category is used as a filter.
+
+[[topical-areas]]
+==== Topical Areas
+Calendar suites may have subscriptions to the system aliases.
+Typically, those subscriptions have the same name as the
+system alias. This added level of indirection helps to ensure
+consistency in the categorisation.

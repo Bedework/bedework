@@ -62,11 +62,11 @@
 </li>
 <li><a href="#_public_administrator_features">3. Public Administrator Features</a>
 <ul class="sectlevel2">
-<li><a href="#_adding_a_topical_area">3.1. Adding a topical area.</a>
+<li><a href="#Add-topical-area">3.1. Adding a topical area.</a>
 <ul class="sectlevel3">
 <li><a href="#_first_create_a_category_for_the_topical_area">3.1.1. First create a category for the topical area.</a></li>
 <li><a href="#_create_a_system_alias">3.1.2. Create a system alias.</a></li>
-<li><a href="#_create_a_subscription_to_the_new_alias">3.1.3. Create a subscription to the new alias.</a></li>
+<li><a href="#_create_a_calendar_suite_subscription_to_the_new_alias">3.1.3. Create a calendar suite subscription to the new alias.</a></li>
 <li><a href="#_add_it_to_the_view_for_the_main_campus">3.1.4. Add it to the view for the main campus</a></li>
 </ul>
 </li>
@@ -138,19 +138,25 @@
 <li><a href="#_mysql">MySQL</a></li>
 </ul>
 </li>
-<li><a href="#configure-events-registration">6.6. Enabling and Disabling Public Events Registration</a>
+<li><a href="#opensearch">6.6. OpenSearch</a>
 <ul class="sectlevel3">
-<li><a href="#_enabling_public_events_registration">6.6.1. Enabling Public Events Registration</a></li>
-<li><a href="#_disabling_public_events_registration">6.6.2. Disabling Public Events Registration</a></li>
-<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.6.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
-<li><a href="#_notifications_from_eventreg">6.6.4. Notifications from EventReg</a></li>
+<li><a href="#installing">6.6.1. Installing OpenSearch</a></li>
+<li><a href="#_installing_a_runnable_opensearch">6.6.2. Installing a runnable OpenSearch</a></li>
 </ul>
 </li>
-<li><a href="#_initializing_the_database">6.7. Initializing the database</a>
+<li><a href="#configure-events-registration">6.7. Enabling and Disabling Public Events Registration</a>
 <ul class="sectlevel3">
-<li><a href="#_rebuild_bw_xml">6.7.1. (Re)build bw-xml</a></li>
-<li><a href="#_validating_locations">6.7.2. Validating locations.</a></li>
-<li><a href="#_searching_for_public_locations">6.7.3. Searching for public locations</a></li>
+<li><a href="#_enabling_public_events_registration">6.7.1. Enabling Public Events Registration</a></li>
+<li><a href="#_disabling_public_events_registration">6.7.2. Disabling Public Events Registration</a></li>
+<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.7.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
+<li><a href="#_notifications_from_eventreg">6.7.4. Notifications from EventReg</a></li>
+</ul>
+</li>
+<li><a href="#_initializing_the_database">6.8. Initializing the database</a>
+<ul class="sectlevel3">
+<li><a href="#_rebuild_bw_xml">6.8.1. (Re)build bw-xml</a></li>
+<li><a href="#_validating_locations">6.8.2. Validating locations.</a></li>
+<li><a href="#_searching_for_public_locations">6.8.3. Searching for public locations</a></li>
 </ul>
 </li>
 </ul>
@@ -189,7 +195,7 @@
 </ul>
 </li>
 <li><a href="#older-releases">8. Older Bedework Versions (3.10 and Prior)</a>
-<ul class="sectlevel3">
+<ul class="sectlevel2">
 <li><a href="#_3_10_4">3.10.4</a></li>
 <li><a href="#_3_10_3">3.10.3</a></li>
 <li><a href="#_bedework_3_10_2">Bedework 3.10.2</a></li>
@@ -198,8 +204,11 @@
 <li><a href="#_3_8_0_11">3.8.0.11</a></li>
 <li><a href="#_3_8">3.8</a></li>
 <li><a href="#_3_7">3.7</a></li>
-<li><a href="#_3_6">3.6</a></li>
+<li><a href="#_3_6">3.6</a>
+<ul class="sectlevel3">
 <li><a href="#_3_6_release_candidate_1">3.6 release candidate 1</a></li>
+</ul>
+</li>
 <li><a href="#_3_5">3.5</a></li>
 <li><a href="#_3_5_release_candidate_2">3.5 release candidate 2</a></li>
 <li><a href="#_3_5_release_candidate_1">3.5 release candidate 1</a></li>
@@ -2077,7 +2086,7 @@ resourceContents: 10</pre>
 <h2 id="_public_administrator_features">3. Public Administrator Features</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_adding_a_topical_area">3.1. Adding a topical area.</h3>
+<h3 id="Add-topical-area">3.1. Adding a topical area.</h3>
 <div class="sect3">
 <h4 id="_first_create_a_category_for_the_topical_area">3.1.1. First create a category for the topical area.</h4>
 <div class="paragraph">
@@ -2093,10 +2102,48 @@ resourceContents: 10</pre>
 <p>Go to <strong>System</strong> &#8594; <strong>Manage calendars &amp; folders</strong> and determine where in the hierarchy you want the topical area to appear. Usually under <strong>aliases</strong>.</p>
 </div>
 <div class="paragraph">
-<p><strong>Create a new subscription</strong></p>
+<p>If you want to group aliases together first create a folder then
+create the aliases inside that folder</p>
+</div>
+<div class="paragraph">
+<p><strong>Create a new system folder</strong></p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p>Click the "+" on the folder in which you want to create the new subscription/alias</p>
+</li>
+<li>
+<p>set the system name</p>
+</li>
+<li>
+<p>display name</p>
+</li>
+<li>
+<p>description</p>
+</li>
+<li>
+<p>set the category or categories for auto-tagging and filtering</p>
+</li>
+<li>
+<p>select "Subscription".</p>
+</li>
+<li>
+<p>Set the url to bwcal:///public/cals/MainCal</p>
+</li>
+<li>
+<p>ensure all other fields are blank and add the alias.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Create a new system subscription</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click the "+" on the folder in which you want to create the new subscription/alias</p>
+</li>
 <li>
 <p>set the system name</p>
 </li>
@@ -2128,7 +2175,7 @@ resourceContents: 10</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_create_a_subscription_to_the_new_alias">3.1.3. Create a subscription to the new alias.</h4>
+<h4 id="_create_a_calendar_suite_subscription_to_the_new_alias">3.1.3. Create a calendar suite subscription to the new alias.</h4>
 <div class="paragraph">
 <p>Switch to the appropriate group then the <strong>Calendar Suite</strong> tab.</p>
 </div>
@@ -3191,7 +3238,7 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 <li>
 <p>Install OpenSearch 1.2.3</p>
 <div class="paragraph">
-<p>The eployed wildfly has scripts to install a docker image and start and stop it. See <a href="#opensearch">[opensearch]</a> for instructions on installing and (re)indexing.
+<p>The eployed wildfly has scripts to install a docker image and start and stop it. See <a href="#opensearch">Install and configure OpenSearch</a> for instructions on installing and (re)indexing.
 You&#8217;ll need to start the system before reindexing.</p>
 </div>
 </li>
@@ -3788,21 +3835,145 @@ calschema export</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;hibernateProperty&gt;</span>hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect<span class="tag">&lt;/hibernateProperty&gt;</span></code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="opensearch">6.6. OpenSearch</h3>
 <div class="paragraph">
-<p>Unresolved directive in index.adoc - include::deployers/elasticsearch.adoc[]</p>
+<p>Bedework uses OpenSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as a local application, useful for development - or as an external service - which will be required for clustering.</p>
+</div>
+<div class="paragraph">
+<p>It is safer to NOT run in production with the OpenSearch interfaces open to the outside. OpenSearch now has various configuration options available. Bedework supports basic user authentication. Currently, you can run unauthenticated but OpenSearch will generate a lot of warnings in the log.</p>
+</div>
+<div class="paragraph">
+<p>You can run OpenSearch on the same server but preferably it should be running on a different server. OpenSearch - depending on the amount of data and types of search - can use a lot of memory for caching of filters. See the OpenSearch site for full instructions on running and installing.</p>
+</div>
+<div class="paragraph">
+<p>In general this is an easy process - OpenSearch offers various installation formats of all their versions.</p>
+</div>
+<div class="paragraph">
+<p>Bedework requires a small number of changes to the configuration. These are available in the deployed wildfly at</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>wildfly/standalone/configuration/bedework/opensearch/config/opensearch.yml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The changes made are</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>action.auto_create_index: "-bw*,+*"
+
+# Limit to inline only
+script.allowed_types: inline</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Prevent OpenSearch from creating bedework indexes implicitly. This can cause issues when reindexing.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>cluster.name: bedework-2019
+...
+node.name: bw2019-1
+...
+cluster.initial_master_nodes: ["bw2019-1"]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use specific names for the cluster and nodes.</p>
+</div>
+<div class="sect3">
+<h4 id="installing">6.6.1. Installing OpenSearch</h4>
+<div class="paragraph">
+<p>There are a number of options available. The deployed wildfly demo server has a script to deploy a docker image of OpenSearch.
+First ensure docker is installed on your system and running then execute:</p>
+</div>
+<div class="paragraph">
+<p>wildfly/bin/bwinstallosch.sh</p>
+</div>
+<div class="paragraph">
+<p>To run the image:</p>
+</div>
+<div class="paragraph">
+<p>wildfly/bin/bwstartosch.sh</p>
+</div>
+<div class="paragraph">
+<p>will start a container with volumes bound to</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>wildfly/standalone/configuration/bedework/opensearch/config</p>
+</li>
+<li>
+<p>wildfly/standalone/data/bedework/opensearch/data</p>
+</li>
+<li>
+<p>wildfly/standalone/log</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This is only suitable in that form for demonstration but may provide the basis for a production service.</p>
+</div>
+<div class="paragraph">
+<p>For more information see <a href="https://opensearch.org/docs" class="bare">https://opensearch.org/docs</a></p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;re looking to install as a production service you need to install OpenSearch as a service. There are instructions at the OpenSearch site fo installing on various platforms.</p>
+</div>
+<div class="paragraph">
+<p>The 2.1.0 release is available at:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>https://artifacts.opensearch.org/releases/bundle/opensearch/2.1.0/opensearch-2.1.0-linux-x64.tar.gz</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After installing and starting the service you will need to restore and reindex the data. For instructions see <a href="#reindex">Reindexing</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_installing_a_runnable_opensearch">6.6.2. Installing a runnable OpenSearch</h4>
+<div class="paragraph">
+<p>If you wish to install OpenSearch as a runnable service there are instructions on running a minimal version without any security.
+You will need to copy the configuration and possibly the data from the deployed demo wildfly.</p>
+</div>
+<div class="paragraph">
+<p>In your &lt;home&gt;/.bw file add</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>#
+# OpenSearch options
+#
+bwOschdatadir="&lt;somewhere&gt;/&lt;opensearch&gt;/data/"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can use the restore script to restore the data and indexes:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>.wildfly/bin/bwresetQS.sh</pre>
+</div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-events-registration">6.6. Enabling and Disabling Public Events Registration</h3>
+<h3 id="configure-events-registration">6.7. Enabling and Disabling Public Events Registration</h3>
 <div class="sect3">
-<h4 id="_enabling_public_events_registration">6.6.1. Enabling Public Events Registration</h4>
+<h4 id="_enabling_public_events_registration">6.7.1. Enabling Public Events Registration</h4>
 <div class="paragraph">
 <p>The public events registration system is enabled by default if you have installed Bedework with the data available in the quickstart.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_disabling_public_events_registration">6.6.2. Disabling Public Events Registration</h4>
+<h4 id="_disabling_public_events_registration">6.7.2. Disabling Public Events Registration</h4>
 <div class="paragraph">
 <p>If you wish to disable the public events registration system remove the "Eventreg admin token" from the System Preferences in the jmx console:</p>
 </div>
@@ -3831,7 +4002,7 @@ calschema export</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.6.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
+<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.7.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
 <div class="paragraph">
 <p>First ensure that the CalWs interface is available. This is the SOAP service that the event registration service uses o communicate with bedework. In system.xml make sure the &lt;calSoapWsURI&gt; element is present and has the same value as the soap:address element in pubcalws-soap/wssvc.wsdl (this requires better explanation - it&#8217;s a file deployed in the bw-xml ear)</p>
 </div>
@@ -3932,7 +4103,7 @@ calschema export</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_notifications_from_eventreg">6.6.4. Notifications from EventReg</h4>
+<h4 id="_notifications_from_eventreg">6.7.4. Notifications from EventReg</h4>
 <div class="paragraph">
 <p>The event registration service will send notifications to the calendar engine when changes take place that might require notifying users. The event registration service calls the calendar engine notification web service (not to be confused with the notification engine). This web service allows the core engine to add notifications to the accounts of subscribed users. It is the job of the notification engine to forward those via email or some other service.</p>
 </div>
@@ -3953,7 +4124,7 @@ The synch engine handles the synchronization of external subscriptions with a be
 </div>
 </div>
 <div class="sect2">
-<h3 id="_initializing_the_database">6.7. Initializing the database</h3>
+<h3 id="_initializing_the_database">6.8. Initializing the database</h3>
 <div class="paragraph">
 <p>If running with mysql the built in hibernate schema export doesn&#8217;t work - mysql jdbc does not support it.</p>
 </div>
@@ -3994,7 +4165,7 @@ grant all on synchDb.* to '&lt;id&gt;'@'%' identified by '&lt;pw&gt;';</code></p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_rebuild_bw_xml">6.7.1. (Re)build bw-xml</h4>
+<h4 id="_rebuild_bw_xml">6.8.1. (Re)build bw-xml</h4>
 <div class="paragraph">
 <p>The synch engine uses an extension of CalWS to communicate with bedework. It requires that the wsdl file contain the location of bedework. This is configured into the deploy.properties file - only one change for the synch engine should be necessary. Set the location of (one of) your application servers in the following.</p>
 </div>
@@ -4054,7 +4225,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_validating_locations">6.7.2. Validating locations.</h4>
+<h4 id="_validating_locations">6.8.2. Validating locations.</h4>
 <div class="paragraph">
 <p>When an event arrives at the receiving end with an "X-BEDEWORK-LOCATION" property if the String value of the x-property is &#8230;&#8203;
 === Locations in bedework</p>
@@ -4064,7 +4235,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_searching_for_public_locations">6.7.3. Searching for public locations</h4>
+<h4 id="_searching_for_public_locations">6.8.3. Searching for public locations</h4>
 <div class="paragraph">
 <p>There is a web service endpoint which can be used to search for public locations. It takes a filter expression as a parameter and will return &lt;a limited?&gt; number</p>
 </div>
@@ -4395,8 +4566,8 @@ every instance then deliver the matching instances in the batch.</p>
 <div class="sect1">
 <h2 id="older-releases">8. Older Bedework Versions (3.10 and Prior)</h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="_3_10_4">3.10.4</h4>
+<div class="sect2">
+<h3 id="_3_10_4">3.10.4</h3>
 <div class="paragraph">
 <p><em>December 14, 2016</em></p>
 </div>
@@ -4414,8 +4585,8 @@ every instance then deliver the matching instances in the batch.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_10_3">3.10.3</h4>
+<div class="sect2">
+<h3 id="_3_10_3">3.10.3</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -4537,8 +4708,8 @@ every instance then deliver the matching instances in the batch.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_bedework_3_10_2">Bedework 3.10.2</h4>
+<div class="sect2">
+<h3 id="_bedework_3_10_2">Bedework 3.10.2</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -4665,8 +4836,8 @@ every instance then deliver the matching instances in the batch.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_10">3.10</h4>
+<div class="sect2">
+<h3 id="_3_10">3.10</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -4730,8 +4901,8 @@ every instance then deliver the matching instances in the batch.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_8_0_13">3.8.0.13</h4>
+<div class="sect2">
+<h3 id="_3_8_0_13">3.8.0.13</h3>
 <div class="paragraph">
 <p><em>April 17, 2012</em><br>
   * Administrative client:
@@ -4803,8 +4974,8 @@ every instance then deliver the matching instances in the batch.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_8_0_11">3.8.0.11</h4>
+<div class="sect2">
+<h3 id="_3_8_0_11">3.8.0.11</h3>
 <div class="paragraph">
 <p><em>February 27, 2012</em><br>
   * Fix issue preventing display of events on a DST boundary.
@@ -4818,8 +4989,8 @@ every instance then deliver the matching instances in the batch.</p>
   * SOAP namespace change.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_8">3.8</h4>
+<div class="sect2">
+<h3 id="_3_8">3.8</h3>
 <div class="paragraph">
 <p><em>January 30, 2012</em><br>
   * Synchronization Engine, providing more efficient synchronization of external data. read-only .ics subscriptions/feeds into Bedework are supported in this release.</p>
@@ -4856,8 +5027,8 @@ every instance then deliver the matching instances in the batch.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_7">3.7</h4>
+<div class="sect2">
+<h3 id="_3_7">3.7</h3>
 <div class="paragraph">
 <p><em>March 10, 2011</em><br>
   * The Bedework personal client has been simplified, and presents  new displays for FreeBusy, and for scheduling and managing meetings.</p>
@@ -4892,15 +5063,14 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_6">3.6</h4>
+<div class="sect2">
+<h3 id="_3_6">3.6</h3>
 <div class="paragraph">
 <p><em>February 3, 2010</em>
   * Core Bedework services packaged in JBoss
   * Spanish translation of public calendaring themes shipped       with quickstart
   * Bug fixes and final enhancements
   * See <a href="http://www.bedework.org/trac/bedework/milestone/Bedework%203.6">Bedework 3.6 Milestone page</a> for information about post-release bug fixes.</p>
-</div>
 </div>
 <div class="sect3">
 <h4 id="_3_6_release_candidate_1">3.6 release candidate 1</h4>
@@ -4973,16 +5143,17 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_5">3.5</h4>
+</div>
+<div class="sect2">
+<h3 id="_3_5">3.5</h3>
 <div class="paragraph">
 <p><em>July 17, 2009</em><br>
   * Bug fixes and final enhancements
   * See href="http://www.bedework.org/trac/bedework/milestone/Bedework%203.5[Bedework 3.5 Milestone page] for information about post-release bug fixes.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_5_release_candidate_2">3.5 release candidate 2</h4>
+<div class="sect2">
+<h3 id="_3_5_release_candidate_2">3.5 release candidate 2</h3>
 <div class="paragraph">
 <p><em>June 3, 2009</em><br>
   * Bug fixes and final enhancements
@@ -4990,8 +5161,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
   * Improved personal client user interface</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_5_release_candidate_1">3.5 release candidate 1</h4>
+<div class="sect2">
+<h3 id="_3_5_release_candidate_1">3.5 release candidate 1</h3>
 <div class="paragraph">
 <p><em>May 19, 2009</em><br>
   * Performance improvements
@@ -5018,8 +5189,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_5_preview_release">3.5 preview release</h4>
+<div class="sect2">
+<h3 id="_3_5_preview_release">3.5 preview release</h3>
 <div class="paragraph">
 <p><em>January 29, 2009</em><br>
   * Public events optimized for a single calendar pool model</p>
@@ -5115,8 +5286,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_4_1_1">3.4.1.1</h4>
+<div class="sect2">
+<h3 id="_3_4_1_1">3.4.1.1</h3>
 <div class="paragraph">
 <p><em>June 3, 2008</em><br></p>
 </div>
@@ -5158,8 +5329,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_4_1">3.4.1</h4>
+<div class="sect2">
+<h3 id="_3_4_1">3.4.1</h3>
 <div class="paragraph">
 <p><em>March 18, 2008</em><br></p>
 </div>
@@ -5210,8 +5381,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_4">3.4</h4>
+<div class="sect2">
+<h3 id="_3_4">3.4</h3>
 <div class="paragraph">
 <p><em>September 14, 2007</em><br></p>
 </div>
@@ -5241,8 +5412,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_3_1">3.3.1</h4>
+<div class="sect2">
+<h3 id="_3_3_1">3.3.1</h3>
 <div class="paragraph">
 <p><em>April 25, 2007</em><br></p>
 </div>
@@ -5306,8 +5477,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_3_1_preview_release">3.3.1 preview release</h4>
+<div class="sect2">
+<h3 id="_3_3_1_preview_release">3.3.1 preview release</h3>
 <div class="paragraph">
 <p><em>February 23, 2007</em><br></p>
 </div>
@@ -5334,8 +5505,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_3">3.3</h4>
+<div class="sect2">
+<h3 id="_3_3">3.3</h3>
 <div class="paragraph">
 <p><em>January 24, 2007</em><br></p>
 </div>
@@ -5389,8 +5560,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_3_release_candidate">3.3 release candidate</h4>
+<div class="sect2">
+<h3 id="_3_3_release_candidate">3.3 release candidate</h3>
 <div class="paragraph">
 <p><em>December 15, 2006</em><br></p>
 </div>
@@ -5402,8 +5573,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_3_preview_release">3.3 preview release</h4>
+<div class="sect2">
+<h3 id="_3_3_preview_release">3.3 preview release</h3>
 <div class="paragraph">
 <p><em>November 22, 2006</em><br></p>
 </div>
@@ -5439,8 +5610,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_2">3.2</h4>
+<div class="sect2">
+<h3 id="_3_2">3.2</h3>
 <div class="paragraph">
 <p><em>August 15, 2006</em><br></p>
 </div>
@@ -5455,8 +5626,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_1">3.1</h4>
+<div class="sect2">
+<h3 id="_3_1">3.1</h3>
 <div class="paragraph">
 <p><em>August 1, 2006</em><br></p>
 </div>
@@ -5477,8 +5648,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_1_release_candidate_4">3.1 release candidate 4</h4>
+<div class="sect2">
+<h3 id="_3_1_release_candidate_4">3.1 release candidate 4</h3>
 <div class="paragraph">
 <p><em>June 22, 2006</em><br></p>
 </div>
@@ -5493,8 +5664,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_1_release_candidate_3">3.1 release candidate 3</h4>
+<div class="sect2">
+<h3 id="_3_1_release_candidate_3">3.1 release candidate 3</h3>
 <div class="paragraph">
 <p><em>June 19, 2006</em><br></p>
 </div>
@@ -5509,8 +5680,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_1_release_candidate_2">3.1 release candidate 2</h4>
+<div class="sect2">
+<h3 id="_3_1_release_candidate_2">3.1 release candidate 2</h3>
 <div class="paragraph">
 <p><em>June 12, 2006</em><br></p>
 </div>
@@ -5535,8 +5706,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_1_release_candidate_1">3.1 release candidate 1</h4>
+<div class="sect2">
+<h3 id="_3_1_release_candidate_1">3.1 release candidate 1</h3>
 <div class="paragraph">
 <p><em>May 19, 2006</em><br></p>
 </div>
@@ -5584,8 +5755,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_1pre">3.1pre</h4>
+<div class="sect2">
+<h3 id="_3_1pre">3.1pre</h3>
 <div class="paragraph">
 <p><em>May 5, 2006</em><br></p>
 </div>
@@ -5616,8 +5787,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_1pre_2">3.1pre</h4>
+<div class="sect2">
+<h3 id="_3_1pre_2">3.1pre</h3>
 <div class="paragraph">
 <p><em>April 21, 2006</em><br></p>
 </div>
@@ -5642,8 +5813,8 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_1pre_3">3.1pre</h4>
+<div class="sect2">
+<h3 id="_3_1pre_3">3.1pre</h3>
 <div class="paragraph">
 <p><em>April 14, 2006</em><br></p>
 </div>
@@ -5678,7 +5849,7 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-01-21 23:29:18 EST
+Last updated 2023-03-16 22:55:25 EDT
 </div>
 </div>
 </body>

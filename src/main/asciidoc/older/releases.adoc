@@ -1,13 +1,13 @@
 :sectnums!:
 
-==== 3.10.4
+=== 3.10.4
 _December 14, 2016_
 
   * Significant web client performance improvements
   * Fixes to sharing
   * Enhancements to the notification system
 
-==== 3.10.3
+=== 3.10.3
 
   * Core engine
       ** Flag all entities as indexed
@@ -46,7 +46,7 @@ _December 14, 2016_
   ** Minor propstat fix
   ** Better error responses
 
-==== Bedework 3.10.2
+=== Bedework 3.10.2
 
   * Performance Improvements
     ** numerous updates to correct for bottlenecks and other performance issues allowing for significant load and large-scale deployments
@@ -77,7 +77,7 @@ _December 14, 2016_
         *** improvements to accessibility compliance
     * Bug fixes
   
-==== 3.10
+=== 3.10
 
   * A largely-revamped public client, which features:
       ** Responsive design - the public client will display reasonably on almost any screen size.
@@ -97,7 +97,7 @@ _December 14, 2016_
       ** A smaller (~40%) Quickstart - no-longer-used code (such as webcache) and unused JBoss components have been removed
       ** Better Quickstart documentation
 
-==== 3.8.0.13
+=== 3.8.0.13
 _April 17, 2012_ +
   * Administrative client:
       ** Support for image uploads and auto-generation of                 thumbnails during event creation and editing
@@ -126,7 +126,7 @@ _April 17, 2012_ +
       ** Bug fix: various DST, timezone fixes, support for UTC,                 etc.
       ** Bug fix: blob caching fixes
 
-==== 3.8.0.11
+=== 3.8.0.11
 _February 27, 2012_ +
   * Fix issue preventing display of events on a DST boundary.
   * Fix iSchedule so it works again.
@@ -138,7 +138,7 @@ _February 27, 2012_ +
   * Don't email freebusy requests.
   * SOAP namespace change.
 
-==== 3.8
+=== 3.8
 _January 30, 2012_ +
   * Synchronization Engine, providing more efficient synchronization of external data. read-only .ics subscriptions/feeds into Bedework are supported in this release.
 
@@ -160,7 +160,7 @@ _January 30, 2012_ +
 
   * Various bugfixes
 
-==== 3.7
+=== 3.7
 _March 10, 2011_ +
   * The Bedework personal client has been simplified, and presents  new displays for FreeBusy, and for scheduling and managing meetings.
 
@@ -181,7 +181,7 @@ See: http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20Web%20Ser
 
   * Bug fixes to all servers and clients
 
-==== 3.6
+=== 3.6
 _February 3, 2010_
   * Core Bedework services packaged in JBoss
   * Spanish translation of public calendaring themes shipped       with quickstart
@@ -216,18 +216,18 @@ _January 9, 2010_ +
   ** general bugfixes
   ** improvements to documentation
 
-==== 3.5
+=== 3.5
 _July 17, 2009_ +
   * Bug fixes and final enhancements
   * See href="http://www.bedework.org/trac/bedework/milestone/Bedework%203.5[Bedework 3.5 Milestone page] for information about post-release bug fixes.
 
-==== 3.5 release candidate 2
+=== 3.5 release candidate 2
 _June 3, 2009_ +
   * Bug fixes and final enhancements
   * Further support for draft 0.7 of CalDAV scheduling
   * Improved personal client user interface
 
-==== 3.5 release candidate 1
+=== 3.5 release candidate 1
 _May 19, 2009_ +
   * Performance improvements
   ** reduce JVM memory usage
@@ -239,7 +239,7 @@ _May 19, 2009_ +
   * Support for draft 0.7 of CalDAV scheduling
   * Stronger support for xproperties
 
-==== 3.5 preview release
+=== 3.5 preview release
 _January 29, 2009_ +
   * Public events optimized for a single calendar pool model
 
@@ -271,7 +271,7 @@ _January 29, 2009_ +
   ** Support for draft 6 of CalDAV scheduling
   ** Support for storing resources (e.g. files,           attachments) within the folder hierarchy
 
-==== 3.4.1.1
+=== 3.4.1.1
 _June 3, 2008_ +
 
   * Support for RFC-2445 x-properties
@@ -286,7 +286,7 @@ _June 3, 2008_ +
   * Performance improvements to Lucene indexing
   * Bug fix for null parameters in x-props (thanks to Roberto Polli)
 
-==== 3.4.1
+=== 3.4.1
 _March 18, 2008_ +
 
   * CalDAV: many improvements; greatly enhanced interoperability with http://www.jasig.org/trac/bedework/wiki/BedeworkUserHelp/Lightning[Mozilla       Lightning] and Apple's iCal; support for subscriptions to web calendars through the CalDAV server, allowing Bedework to expose user subscriptions to desktop clients; improved support for CalDAV filters
@@ -304,7 +304,7 @@ _March 18, 2008_ +
   * Numerous UI improvements including updated web template       for mobile devices and an improved administrative interface
   * Bugfix to set all character encoding to utf-8 (thanks to       Martin Blom)
 
-==== 3.4
+=== 3.4
 _September 14, 2007_ +
 
   * Better standards support: A much more complete       implementation of the calendaring standards RFC2445, RFC2446,       RFC791 (CalDAV) and the CalDAV scheduling draft       standard.
@@ -315,7 +315,7 @@ _September 14, 2007_ +
   * Initial support for FREEBUSY URL and calendar       subscription URL.
   * Apache Ant: Upgrade to 1.7 to make apt task available for further development.
 
-==== 3.3.1
+=== 3.3.1
 _April 25, 2007_ +
 
   * Access fixes. Note this requires a change to the /public       folder. Previously read + write-content was sufficient for       administrative privileges. Now it must be read +       write-content + bind (may also want unbind to allow       deletions)
@@ -337,7 +337,7 @@ _April 25, 2007_ +
   * UI supports all access control features.
   * Import and export of calendars completed
 
-==== 3.3.1 preview release
+=== 3.3.1 preview release
 _February 23, 2007_ +
 
   * CalDAV - Fixes to problems uncovered in the       interoperability testing at CalConnect.
@@ -347,7 +347,7 @@ _February 23, 2007_ +
   * Scheduling - Implemented additional functionality.       Scheduling is still incomplete but more features are exposed       in 3.3.1 to allow further testing. We have successfully sent       an invitation, posted a response, and observed the resulting       event in the calendar. Scheduling support is "fragile" but       progressing rapidly.
   * Bedework 3.3.1 is much more Oracle-friendly than previous       versions. Based on work done by Julian Ball at Queens, and       Chris Mann at Maryland, we have significantly overhauled the       XML schema, with the intent of eliminating or at least       drastically reducing the modifications Oracle users would       have to make.
 
-==== 3.3
+=== 3.3
 _January 24, 2007_ +
 
   * Java 1.5 and Tomcat 5.5 as implementation       requirements
@@ -366,12 +366,12 @@ _January 24, 2007_ +
   * Significant improvements to the web user interfaces,       XHTML user clients &amp; dojo based widgets
   * Bug fixes (e.g. access control) and housekeeping (e.g.       all tables given consistent names)
 
-==== 3.3 release candidate
+=== 3.3 release candidate
 _December 15, 2006_ +
 
   * A subset of the 3.3 release, above
 
-==== 3.3 preview release
+=== 3.3 preview release
 _November 22, 2006_ +
 
   * Lucene searching added
@@ -384,13 +384,13 @@ _November 22, 2006_ +
   * Support for scheduling operations
   * CalDAV improvements
 
-==== 3.2
+=== 3.2
 _August 15, 2006_ +
 
   * SVN Restructuring complete
   * CalDAV improvements
 
-==== 3.1
+=== 3.1
 _August 1, 2006_ +
 
   * Restructuring of system into multiple SVN projects
@@ -398,19 +398,19 @@ _August 1, 2006_ +
   * Freebusy aggregator added
   * CalDAV server restructured to allow use as a proxy
 
-==== 3.1 release candidate 4
+=== 3.1 release candidate 4
 _June 22, 2006_ +
 
   * Restructuring of stylesheet directories to better support       calendar suites
   * Initial release of jsr-168 compliant portlet for use       within uPortal
 
-==== 3.1 release candidate 3
+=== 3.1 release candidate 3
 _June 19, 2006_ +
 
   * Further interface updates and bug fixes
   * Calendar Suites (departmental calendars) updated and       highlighted
 
-==== 3.1 release candidate 2
+=== 3.1 release candidate 2
 _June 12, 2006_ +
 
   * Bug fixes
@@ -418,7 +418,7 @@ _June 12, 2006_ +
   * Introduction of Calendar Suites:
     ** the Bedework system can now be defined as a           collection of "calendar suites" which allows for the           implementation of departmental calendars.
 
-==== 3.1 release candidate 1
+=== 3.1 release candidate 1
 _May 19, 2006_ +
 
   * Dump/restore and schema:
@@ -432,7 +432,7 @@ _May 19, 2006_ +
   * Admin and Public Clients:
     ** brought up-to-date with all changes
 
-==== 3.1pre
+=== 3.1pre
 _May 5, 2006_ +
 
   * Personal Client:
@@ -442,7 +442,7 @@ _May 5, 2006_ +
   ** Schema changes
   ** Graphical updates (also to public client)
 
-==== 3.1pre
+=== 3.1pre
 _April 21, 2006_ +
 
   * Personal Client:
@@ -450,7 +450,7 @@ _April 21, 2006_ +
   ** Free/Busy display
   ** Basic sharing of calendars and free/busy
 
-==== 3.1pre
+=== 3.1pre
 _April 14, 2006_ +
 
   * Personal Client: Fixed up personal client so basic       functionality is restored. Client has been given a graphical       overhaul.
