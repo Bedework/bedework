@@ -14,7 +14,7 @@ All bedework and wildfly configuration files are in standalone/configuration/ - 
 ===== Configure postgresql
 You'll probably need to configure postgres to allow your chosen role access to the server and databases.
 
-Depending on how you're running the system you may need to modify postgresql.conf and pg_haba.conf - both located by default in the daat directory.
+Depending on how you're running the system you may need to modify postgresql.conf and pg_haba.conf - both located by default in the data directory.
 
 If you're running postgres on a separate system you may need to change the listen_addresses value and port:
 
