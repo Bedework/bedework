@@ -1,0 +1,16 @@
+[[Errors]]
+=== Errors that may occur
+
+==== Indexer errors
+The following error might be seen when attempting to make changes to any indexed object:
+----
+AuthorizationException(403, 'cluster_block_exception', 'blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];')
+----
+
+The indexes have been made read-only - this can happen if, for example, the file system becomes full.
+
+The indexes may be unlocked by doing the following
+
+----
+curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
+----
