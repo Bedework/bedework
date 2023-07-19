@@ -137,6 +137,10 @@ Many bedework layers have multiple versions for supported databases. For each th
 | h2
 | Used for quickstart and demo purposes only
 
+| mysql
+| mysql (and probably mariadb)
+| Mysql 8 drivers are installed and datasources are configured.
+
 | pg
 | postgresql
 | Postgresql 9 drivers are installed and datasources are configured.
