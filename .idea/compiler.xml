@@ -73,7 +73,6 @@
         <module name="bw-carddav-server" />
         <module name="bw-calendar-ucaldav" />
         <module name="bw-carddav-ear" />
-        <module name="bw-xml-ear" />
         <module name="bw-note-servlet" />
         <module name="bw-synch-shared" />
         <module name="bw-calutil" />
@@ -293,6 +292,7 @@
       <module name="bw-wfmodules-synch-ear" target="11" />
       <module name="bw-wfmodules-wfmodules-ro" target="11" />
       <module name="bw-wfmodules-wfmodules-rw" target="11" />
+      <module name="bw-xml-ear" target="11" />
       <module name="bwsysev-common" target="1.8" />
       <module name="bwsysev-monitor" target="1.8" />
       <module name="bwsysev-msgs" target="1.8" />
