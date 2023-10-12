@@ -1,0 +1,31 @@
+[[keycloak-saml]]
+=== Configure keycloak saml
+
+Saml seems to need a certificate for signing. A self-signed cert will do.
+
+==== Create a self-signed cert.
+
+----
+# Generate private key
+openssl genrsa -des3 -out domain.key 2048
+
+# -des3 generates an encypted key - can remove.
+# Will ask for pass phrase if -des3 specified
+
+# create a certificate signing request (CSR).
+openssl req -key domain.key -new -out domain.csr
+
+# Provide info required
+# common name should be the exact Fully Qualified Domain Name (FQDN) of the service
+
+# Create a self-Signed certificate
+openssl x509 -signkey domain.key -in domain.csr -req -days 365000 -out domain.crt
+
+# Create PKCS12 keystore from private key and public certificate.
+openssl pkcs12 -export -name domaincert -in domain.crt -inkey domain.key -out domain.p12
+# password is required or the next step fails
+
+# Import into wildfly application.keystore
+# Assumes path below is valid
+keytool -importkeystore -destkeystore wildfly/standalone/configuration/application.keystore -srckeystore domain.p12 -srcstoretype pkcs12 -alias domaincert
+----

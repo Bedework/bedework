@@ -218,7 +218,7 @@ The next layers are used to install libraries used by servlet filters for CAS au
 | Layer | Function
 
 | bw-keycloak-saml-filter
-| Adds the keycloak servlet filter libraries. Further configuration to the affected servlets will still be required.
+| Adds the keycloak servlet filter libraries. Further configuration to the affected servlets will still be required. See <<keycloak-saml>>
 
 | bw-cas-filter
 | Adds the CAS filter libraries. Further configuration to the affected servlets will still be required.
