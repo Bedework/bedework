@@ -143,31 +143,36 @@
 <li><a href="#_adding_an_admin_account">6.5.1. Adding an admin account</a></li>
 </ul>
 </li>
+<li><a href="#keycloak-saml">6.6. Configure keycloak saml</a>
+<ul class="sectlevel3">
+<li><a href="#_create_a_self_signed_cert">6.6.1. Create a self-signed cert.</a></li>
+</ul>
+</li>
 <li><a href="#_setting_up_databases">Setting up databases</a>
 <ul class="sectlevel3">
 <li><a href="#_postgresql">postgresql</a></li>
 <li><a href="#_mysql">MySQL</a></li>
 </ul>
 </li>
-<li><a href="#opensearch">6.6. OpenSearch</a>
+<li><a href="#opensearch">6.7. OpenSearch</a>
 <ul class="sectlevel3">
-<li><a href="#installing">6.6.1. Installing OpenSearch</a></li>
-<li><a href="#_installing_a_runnable_opensearch">6.6.2. Installing a runnable OpenSearch</a></li>
+<li><a href="#installing">6.7.1. Installing OpenSearch</a></li>
+<li><a href="#_installing_a_runnable_opensearch">6.7.2. Installing a runnable OpenSearch</a></li>
 </ul>
 </li>
-<li><a href="#configure-events-registration">6.7. Enabling and Disabling Public Events Registration</a>
+<li><a href="#configure-events-registration">6.8. Enabling and Disabling Public Events Registration</a>
 <ul class="sectlevel3">
-<li><a href="#_enabling_public_events_registration">6.7.1. Enabling Public Events Registration</a></li>
-<li><a href="#_disabling_public_events_registration">6.7.2. Disabling Public Events Registration</a></li>
-<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.7.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
-<li><a href="#_notifications_from_eventreg">6.7.4. Notifications from EventReg</a></li>
+<li><a href="#_enabling_public_events_registration">6.8.1. Enabling Public Events Registration</a></li>
+<li><a href="#_disabling_public_events_registration">6.8.2. Disabling Public Events Registration</a></li>
+<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.8.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
+<li><a href="#_notifications_from_eventreg">6.8.4. Notifications from EventReg</a></li>
 </ul>
 </li>
-<li><a href="#_initializing_the_database">6.8. Initializing the database</a>
+<li><a href="#_initializing_the_database">6.9. Initializing the database</a>
 <ul class="sectlevel3">
-<li><a href="#_rebuild_bw_xml">6.8.1. (Re)build bw-xml</a></li>
-<li><a href="#_validating_locations">6.8.2. Validating locations.</a></li>
-<li><a href="#_searching_for_public_locations">6.8.3. Searching for public locations</a></li>
+<li><a href="#_rebuild_bw_xml">6.9.1. (Re)build bw-xml</a></li>
+<li><a href="#_validating_locations">6.9.2. Validating locations.</a></li>
+<li><a href="#_searching_for_public_locations">6.9.3. Searching for public locations</a></li>
 </ul>
 </li>
 </ul>
@@ -2928,6 +2933,11 @@ ln -s wildfly-26.0.1.Final wildfly</pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Used for quickstart and demo purposes only</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mysql</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mysql (and probably mariadb)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mysql 8 drivers are installed and datasources are configured.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">pg</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">postgresql</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Postgresql 9 drivers are installed and datasources are configured.</p></td>
@@ -3053,7 +3063,7 @@ components for the indicated database as a demo system.</p></td>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bw-keycloak-saml-filter</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Adds the keycloak servlet filter libraries. Further configuration to the affected servlets will still be required.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds the keycloak servlet filter libraries. Further configuration to the affected servlets will still be required. See <a href="#keycloak-saml">Configure keycloak saml</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bw-cas-filter</p></td>
@@ -3678,6 +3688,41 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"</code></pre>
 </div>
 </div>
 <div class="sect2">
+<h3 id="keycloak-saml">6.6. Configure keycloak saml</h3>
+<div class="paragraph">
+<p>Saml seems to need a certificate for signing. A self-signed cert will do.</p>
+</div>
+<div class="sect3">
+<h4 id="_create_a_self_signed_cert">6.6.1. Create a self-signed cert.</h4>
+<div class="listingblock">
+<div class="content">
+<pre># Generate private key
+openssl genrsa -des3 -out domain.key 2048
+
+# -des3 generates an encypted key - can remove.
+# Will ask for pass phrase if -des3 specified
+
+# create a certificate signing request (CSR).
+openssl req -key domain.key -new -out domain.csr
+
+# Provide info required
+# common name should be the exact Fully Qualified Domain Name (FQDN) of the service
+
+# Create a self-Signed certificate
+openssl x509 -signkey domain.key -in domain.csr -req -days 365000 -out domain.crt
+
+# Create PKCS12 keystore from private key and public certificate.
+openssl pkcs12 -export -name domaincert -in domain.crt -inkey domain.key -out domain.p12
+# password is required or the next step fails
+
+# Import into wildfly application.keystore
+# Assumes path below is valid
+keytool -importkeystore -destkeystore wildfly/standalone/configuration/application.keystore -srckeystore domain.p12 -srcstoretype pkcs12 -alias domaincert</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_setting_up_databases">Setting up databases</h3>
 <div class="paragraph">
 <p>The quickstart is configured to use h2 for demonstration only. For production you will need to switch to something like postgresql or mysql.</p>
@@ -3750,6 +3795,16 @@ port = 5432                        # (change requires restart)</code></pre>
 <div class="content">
 <pre class="CodeRay highlight"><code>create role bedework with login password 'xxxxxxxxx';
 create database caldb owner bedework;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Some or all of the following seems to be required. Note it also seems to be important to connect to the database first:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>\c caldb
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO bw;
+grant all privileges on database caldbwalsh to bw;</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3927,7 +3982,7 @@ calschema export</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="opensearch">6.6. OpenSearch</h3>
+<h3 id="opensearch">6.7. OpenSearch</h3>
 <div class="paragraph">
 <p>Bedework uses OpenSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as a local application, useful for development - or as an external service - which will be required for clustering.</p>
 </div>
@@ -3975,7 +4030,7 @@ cluster.initial_master_nodes: ["bw2019-1"]</code></pre>
 <p>Use specific names for the cluster and nodes.</p>
 </div>
 <div class="sect3">
-<h4 id="installing">6.6.1. Installing OpenSearch</h4>
+<h4 id="installing">6.7.1. Installing OpenSearch</h4>
 <div class="paragraph">
 <p>There are a number of options available. The deployed wildfly demo server has a script to deploy a docker image of OpenSearch.
 First ensure docker is installed on your system and running then execute:</p>
@@ -4027,7 +4082,7 @@ First ensure docker is installed on your system and running then execute:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_installing_a_runnable_opensearch">6.6.2. Installing a runnable OpenSearch</h4>
+<h4 id="_installing_a_runnable_opensearch">6.7.2. Installing a runnable OpenSearch</h4>
 <div class="paragraph">
 <p>If you wish to install OpenSearch as a runnable service there are instructions on running a minimal version without any security.
 You will need to copy the configuration and possibly the data from the deployed demo wildfly.</p>
@@ -4054,15 +4109,15 @@ bwOschdatadir="&lt;somewhere&gt;/&lt;opensearch&gt;/data/"</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-events-registration">6.7. Enabling and Disabling Public Events Registration</h3>
+<h3 id="configure-events-registration">6.8. Enabling and Disabling Public Events Registration</h3>
 <div class="sect3">
-<h4 id="_enabling_public_events_registration">6.7.1. Enabling Public Events Registration</h4>
+<h4 id="_enabling_public_events_registration">6.8.1. Enabling Public Events Registration</h4>
 <div class="paragraph">
 <p>The public events registration system is enabled by default if you have installed Bedework with the data available in the quickstart.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_disabling_public_events_registration">6.7.2. Disabling Public Events Registration</h4>
+<h4 id="_disabling_public_events_registration">6.8.2. Disabling Public Events Registration</h4>
 <div class="paragraph">
 <p>If you wish to disable the public events registration system remove the "Eventreg admin token" from the System Preferences in the jmx console:</p>
 </div>
@@ -4091,7 +4146,7 @@ bwOschdatadir="&lt;somewhere&gt;/&lt;opensearch&gt;/data/"</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.7.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
+<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.8.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
 <div class="paragraph">
 <p>First ensure that the CalWs interface is available. This is the SOAP service that the event registration service uses o communicate with bedework. In system.xml make sure the &lt;calSoapWsURI&gt; element is present and has the same value as the soap:address element in pubcalws-soap/wssvc.wsdl (this requires better explanation - it&#8217;s a file deployed in the bw-xml ear)</p>
 </div>
@@ -4192,7 +4247,7 @@ bwOschdatadir="&lt;somewhere&gt;/&lt;opensearch&gt;/data/"</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_notifications_from_eventreg">6.7.4. Notifications from EventReg</h4>
+<h4 id="_notifications_from_eventreg">6.8.4. Notifications from EventReg</h4>
 <div class="paragraph">
 <p>The event registration service will send notifications to the calendar engine when changes take place that might require notifying users. The event registration service calls the calendar engine notification web service (not to be confused with the notification engine). This web service allows the core engine to add notifications to the accounts of subscribed users. It is the job of the notification engine to forward those via email or some other service.</p>
 </div>
@@ -4213,7 +4268,7 @@ The synch engine handles the synchronization of external subscriptions with a be
 </div>
 </div>
 <div class="sect2">
-<h3 id="_initializing_the_database">6.8. Initializing the database</h3>
+<h3 id="_initializing_the_database">6.9. Initializing the database</h3>
 <div class="paragraph">
 <p>If running with mysql the built in hibernate schema export doesn&#8217;t work - mysql jdbc does not support it.</p>
 </div>
@@ -4254,7 +4309,7 @@ grant all on synchDb.* to '&lt;id&gt;'@'%' identified by '&lt;pw&gt;';</code></p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_rebuild_bw_xml">6.8.1. (Re)build bw-xml</h4>
+<h4 id="_rebuild_bw_xml">6.9.1. (Re)build bw-xml</h4>
 <div class="paragraph">
 <p>The synch engine uses an extension of CalWS to communicate with bedework. It requires that the wsdl file contain the location of bedework. This is configured into the deploy.properties file - only one change for the synch engine should be necessary. Set the location of (one of) your application servers in the following.</p>
 </div>
@@ -4314,7 +4369,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_validating_locations">6.8.2. Validating locations.</h4>
+<h4 id="_validating_locations">6.9.2. Validating locations.</h4>
 <div class="paragraph">
 <p>When an event arrives at the receiving end with an "X-BEDEWORK-LOCATION" property if the String value of the x-property is &#8230;&#8203;
 === Locations in bedework</p>
@@ -4324,7 +4379,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_searching_for_public_locations">6.8.3. Searching for public locations</h4>
+<h4 id="_searching_for_public_locations">6.9.3. Searching for public locations</h4>
 <div class="paragraph">
 <p>There is a web service endpoint which can be used to search for public locations. It takes a filter expression as a parameter and will return &lt;a limited?&gt; number</p>
 </div>
@@ -5938,7 +5993,7 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-06-26 22:45:01 EDT
+Last updated 2023-09-09 22:37:24 EDT
 </div>
 </div>
 </body>

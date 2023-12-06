@@ -101,8 +101,8 @@
         <module name="bw-util-jolokia" />
         <module name="bw-carddav-userweb-war" />
         <module name="bw-category-ical" />
-        <module name="bw-xml-synchws" />
         <module name="bw-calendar-client-web-admin" />
+        <module name="bw-xml-synchws" />
         <module name="bw-calendar-xsl-ucalrsrc" />
         <module name="bw-schemaorgforj" />
         <module name="bw-xml-catdav" />
@@ -284,6 +284,9 @@
       <module name="bw-wfmodules-elasticsearch-rest-client" target="11" />
       <module name="bw-wfmodules-jasig-cas" target="11" />
       <module name="bw-wfmodules-leveldb" target="11" />
+      <module name="bw-wfmodules-logging" target="11" />
+      <module name="bw-wfmodules-logging (1)" target="11" />
+      <module name="bw-wfmodules-logging (2)" target="11" />
       <module name="bw-wfmodules-note-bwconnector" target="11" />
       <module name="bw-wfmodules-org-apache-commons-commons-csv" target="11" />
       <module name="bw-wfmodules-org-apache-jdkim-library" target="11" />
@@ -291,9 +294,12 @@
       <module name="bw-wfmodules-org-apache-struts-taglib" target="11" />
       <module name="bw-wfmodules-org-jasig-cas" target="11" />
       <module name="bw-wfmodules-synch-ear" target="11" />
+      <module name="bw-wfmodules-util-config-http" target="11" />
       <module name="bw-wfmodules-wfmodules-ro" target="11" />
       <module name="bw-wfmodules-wfmodules-rw" target="11" />
       <module name="bw-xml-ear" target="11" />
+      <module name="bw-xml-synchws (1) (org.bedework.bw-synch)" target="11" />
+      <module name="bw-xml-synchws (2) (org.bedework)" target="11" />
       <module name="bwsysev-common" target="1.8" />
       <module name="bwsysev-monitor" target="1.8" />
       <module name="bwsysev-msgs" target="1.8" />

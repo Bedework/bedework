@@ -41,6 +41,8 @@ deploySnapshot bw-cliutil
 deploySnapshot bw-cli
 deploySnapshot bw-carddav
 deploySnapshot bw-category
+deploySnapshot bw-json
+deploySnapshot bw-schemaorgforj
 deploySnapshot bw-calendar-common
 deploySnapshot bw-calendar-engine
 deploySnapshot bw-calendar-client
