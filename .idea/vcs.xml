@@ -5,7 +5,6 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bedework-parent" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bedework.github.io" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-xml" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-access" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldav" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldavTest" vcs="Git" />
@@ -29,7 +28,6 @@
     <mapping directory="$PROJECT_DIR$/../bw-quickstart" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-schemaorgforj" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-self-registration" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-sometime" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-synch" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-timezone-server" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util" vcs="Git" />
@@ -47,5 +45,6 @@
     <mapping directory="$PROJECT_DIR$/../bw-wf-extensions" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-wfmodules" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-xml" vcs="Git" />
   </component>
 </project>
