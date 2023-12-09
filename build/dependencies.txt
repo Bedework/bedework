@@ -25,17 +25,21 @@ bw-bedeworkqs
 bw-wf-core-feature-pack: 4.0.0-SNAPSHOT
 
 bw-xml
-bw-util
 
+bw-util -> bw-util-logging, bw-util, bw-xml-licences, commons-text, jackson-annotations, jackson-core, jackson-databind, jms-api
 
-bw-util-conf
-bw-util-network
-bw-util-security
-bw-util-tz
-bw-util-index
+bw-util-conf -> bw-util-logging, bw-util
 
+bw-util-network -> bw-util-conf, bw-util-logging, bw-util, httpclient, httpcore, jackson-databind, javax.servlet.api
 
-bw-util2
+bw-util-security -> bw-util-logging, bw-util, bw-util-conf, commons-codec
+
+bw-util-tz -> bw-util-logging, bw-util, bw-util-network, ical4j, commons-lang3, javax.mail, jackson-annotations, jackson-core, jackson-databind, javax.servlet.api
+
+bw-util-index -> bw-util-logging, bw-util, bw-util-conf, bw-util-tz, jackson-databind, opensearch, opensearch-rest-high-level-client, snakeyaml
+
+bw-util2 -> bw-xml*, bw-util, bw-util-tz, ical4j, ical4j-vcard, jackson-core, jackson-databind, jaxb-api
+
 bw-util-hibernate
 bw-access
 bw-webdav
