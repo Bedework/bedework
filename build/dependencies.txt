@@ -19,9 +19,12 @@ bw-dotwell-known
 --------------------------------------------------------------------
 Order of release - i.e. order of dependencies
 
-bw-util-logging
+bw-util-logging => log4j-api, jackson-annotations
+
 bw-util-deploy
+
 bw-bedeworkqs
+
 bw-wf-core-feature-pack: 4.0.0-SNAPSHOT
 
 bw-xml
@@ -40,17 +43,25 @@ bw-util-index -> bw-util-logging, bw-util, bw-util-conf, bw-util-tz, jackson-dat
 
 bw-util2 -> bw-xml*, bw-util, bw-util-tz, ical4j, ical4j-vcard, jackson-core, jackson-databind, jaxb-api
 
-bw-util-hibernate
-bw-access
-bw-webdav
-bw-caldav
-bw-timezone-server
-bw-synch
+bw-util-hibernate -> bw-util-logging, bw-util, bw-util-conf, bw-util-tz, hibernate-core, hibernate-ehcache, javassist, javax.servlet.api
+
+bw-access -> bw-util-logging, bw-util
+
+bw-webdav -> bw-access, bw-util-logging, bw-util, bw-util-network, javax.servlet.api, jaxws-api
+
+bw-caldav -> bw-access, bw-util-logging, bw-util, bw-util-conf, bw-util2, bw-webdav, bw-xml, ical4j, ical4j-vcard, apache-jdkim-library, jaxb-api, javax.xml-soap-api, javax.servlet.api
+
+bw-timezone-server -> bw-util-logging, bw-util, bw-util-conf, bw-util-tz, bw-util2, bw-xml, ical4, httpclient, httpcore, jackson-annotations, jackson-core, jackson-databind, jaxb-api, javax.servlet.api
+
+bw-synch -> bw-access, bw-util-logging, bw-util, bw-util-conf, bw-util-hibernate, bw-util-network, bw-util-security, bw-util-tz, bw-util2, bw-xml, hibernate-core, httpclient, httpcore, ical4j, jaxb-api, jaxws-api, javax.servlet.api, javax.xml.soap.api
+
 bw-self-registration
+
 bw-event-registration
 bw-notifier
 bw-cli
 bw-carddav
+bw-calendar-common
 bw-calendar-engine
 bw-calendar-client
 bw-calendar-xsl

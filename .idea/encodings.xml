@@ -198,8 +198,6 @@
     <file url="file://$PROJECT_DIR$/../bw-cliutil/bw-util-jolokia/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cliutil/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cliutil/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-dav-tester/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-dav-tester/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-dotwell-known/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-dotwell-known/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-esdata/src/main/java" charset="UTF-8" />
@@ -217,8 +215,6 @@
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-wf-event-registration-feature-pack/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-jsforj" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-jsforj/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-jsforj/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-json/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-json/src/main/resources" charset="UTF-8" />
@@ -273,29 +269,13 @@
     <file url="file://$PROJECT_DIR$/../bw-self-registration/bw-wf-self-registration-feature-pack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-self-registration/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/bw-sched-assist-ear/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/bw-sched-assist-ear/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/bw-sometime-database/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/bw-sometime-database/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/bw-sometime-doc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/bw-sometime-doc/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-api/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-mock/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-mock/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-portlet/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-portlet/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi-caldav-integrationtest/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi-caldav-integrationtest/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi-caldav/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi-caldav/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi-relationships/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi-relationships/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-war/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-war/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/src/main/resources" charset="UTF-8" />
@@ -662,6 +642,10 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-jolokia-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-log4j12/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-log4j12/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-nop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-nop/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-postgresql/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-postgresql/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-spring/bw-wfmodules-spring-aop/src/main/java" charset="UTF-8" />
@@ -844,6 +828,8 @@
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-xml-feature-pack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml-icalendar/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-xml-icalendar/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml/bw-wf-xml-feature-pack/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml/bw-wf-xml-feature-pack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-appleServer/src/main/java" charset="UTF-8" />

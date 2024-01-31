@@ -9,7 +9,6 @@
         <module name="bw-self-registration-ear" />
         <module name="bw-calendar-xsl-common" />
         <module name="bw-self-registration-web" />
-        <module name="bw-sometime-database" />
         <module name="bw-util-opensearch" />
         <module name="bw-category-web" />
         <module name="bw-xml-xrd" />
@@ -39,7 +38,6 @@
         <module name="bw-xml-calws-soap-strict" />
         <module name="bw-evreg-service" />
         <module name="bw-synch-ear" />
-        <module name="sched-assist-api" />
         <module name="bw-synch-web" />
         <module name="bw-calendar-client-admin" />
         <module name="bw-carddav-client" />
@@ -66,7 +64,6 @@
         <module name="bw-util2-calendar" />
         <module name="bw-calendar-client-webcommon" />
         <module name="bw-xml-icalendar" />
-        <module name="sched-assist-portlet" />
         <module name="bw-util-deployment" />
         <module name="bw-calsockets-web" />
         <module name="bw-calendar-xsl-calrsrc-SoEDepartmental" />
@@ -77,13 +74,11 @@
         <module name="bw-note-servlet" />
         <module name="bw-synch-shared" />
         <module name="bw-calutil" />
-        <module name="bw-dav-tester" />
         <module name="bw-category-war" />
         <module name="bw-category-common" />
         <module name="bw-util-cli" />
         <module name="bw-calendar-convert" />
         <module name="bw-caldav-util" />
-        <module name="sched-assist-web" />
         <module name="bw-calendar-engine-impl" />
         <module name="bw-calendar-engine-caldav" />
         <module name="bw-util-config" />
@@ -113,7 +108,6 @@
         <module name="bw-xml-bwlicense" />
         <module name="bw-calendar-client-bwcommon" />
         <module name="bw-calendar-client-util" />
-        <module name="bw-note-ear" />
         <module name="bw-util-jms" />
         <module name="bw-self-registration-war" />
         <module name="bw-xml-exchangews" />
@@ -145,13 +139,10 @@
         <module name="bw-calendar-xsl-eventsubmitrsrc" />
         <module name="bw-timezone-server-ear" />
         <module name="bw-event-registration-service" />
-        <module name="sched-assist-spi" />
         <module name="bw-json" />
-        <module name="bw-jsforj" />
         <module name="bw-calendar-client-bedework-common" />
         <module name="bw-synch-war" />
         <module name="bw-calendar-client-struts2" />
-        <module name="bw-sched-assist-ear" />
         <module name="bw-selfreg-common" />
         <module name="bw-logs" />
         <module name="bw-calsockets-pubwar" />
@@ -159,9 +150,7 @@
         <module name="bw-xml-war" />
         <module name="bw-xml-tzsvr" />
         <module name="bw-event-registration-war" />
-        <module name="bw-sometime-doc" />
         <module name="bw-calendar-engine-chgnote" />
-        <module name="sched-assist-mock" />
         <module name="bw-calendar-synchws" />
         <module name="bw-webcache-web" />
         <module name="bw-calendar-xsl-calrsrc-MainCampus" />
@@ -183,19 +172,15 @@
         <module name="bw-util-dav" />
         <module name="bw-evreg-ear" />
         <module name="bw-calendar-api-ro" />
-        <module name="sched-assist-spi-relationships" />
         <module name="bw-webclient-feeder" />
         <module name="bw-calendar-client-taglib" />
         <module name="bw-calsockets-war" />
         <module name="bw-event-registration-common" />
-        <module name="sched-assist-war" />
         <module name="bw-webclient-caladmin" />
         <module name="bw-carddav-tools" />
         <module name="bw-calendar-client-web-rw" />
         <module name="bw-calendar-sysevents-msgs" />
-        <module name="sched-assist-spi-caldav" />
         <module name="bw-note-bwconnector" />
-        <module name="sched-assist-spi-caldav-integrationtest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -249,15 +234,19 @@
       <module name="bw-calsockets-war (1)" target="1.8" />
       <module name="bw-calutil" target="1.8" />
       <module name="bw-carddav-client" target="1.8" />
+      <module name="bw-dav-tester" target="11" />
       <module name="bw-deploy-maven-plugin" target="1.8" />
       <module name="bw-esdata" target="11" />
       <module name="bw-evreg-common" target="1.7" />
       <module name="bw-evreg-ear" target="1.7" />
       <module name="bw-evreg-service" target="1.7" />
       <module name="bw-evreg-war" target="1.7" />
+      <module name="bw-jsforj" target="11" />
+      <module name="bw-note-ear" target="11" />
       <module name="bw-opensearch-GeoLite2-City (2)" target="11" />
       <module name="bw-opensearch-qs (1)" target="11" />
       <module name="bw-opensearch-qs (2)" target="11" />
+      <module name="bw-sched-assist-ear" target="11" />
       <module name="bw-self-registration-ear (1)" target="1.8" />
       <module name="bw-self-registration-war (1)" target="1.8" />
       <module name="bw-selfreg" target="1.8" />
@@ -265,6 +254,9 @@
       <module name="bw-selfreg-ear" target="1.7" />
       <module name="bw-selfreg-war" target="1.7" />
       <module name="bw-selfregistration-web" target="1.8" />
+      <module name="bw-sometime" target="11" />
+      <module name="bw-sometime-database" target="11" />
+      <module name="bw-sometime-doc" target="11" />
       <module name="bw-struts-core" target="11" />
       <module name="bw-synch" target="11" />
       <module name="bw-util-bw-deploy" target="1.8" />
@@ -288,16 +280,37 @@
       <module name="bw-wfmodules-logging (1)" target="11" />
       <module name="bw-wfmodules-logging (2)" target="11" />
       <module name="bw-wfmodules-note-bwconnector" target="11" />
+      <module name="bw-wfmodules-note-ear" target="11" />
       <module name="bw-wfmodules-org-apache-commons-commons-csv" target="11" />
       <module name="bw-wfmodules-org-apache-jdkim-library" target="11" />
       <module name="bw-wfmodules-org-apache-struts-core" target="11" />
       <module name="bw-wfmodules-org-apache-struts-taglib" target="11" />
       <module name="bw-wfmodules-org-jasig-cas" target="11" />
+      <module name="bw-wfmodules-org-slf4j-slf4j-api" target="11" />
+      <module name="bw-wfmodules-org-slf4j-slf4j-log4j12" target="11" />
+      <module name="bw-wfmodules-org-slf4j-slf4j-nop" target="11" />
+      <module name="bw-wfmodules-spring-context-support" target="11" />
+      <module name="bw-wfmodules-spring-jdbc" target="11" />
+      <module name="bw-wfmodules-spring-ldap-core" target="11" />
+      <module name="bw-wfmodules-spring-oxm" target="11" />
+      <module name="bw-wfmodules-spring-security-acl" target="11" />
+      <module name="bw-wfmodules-spring-security-config" target="11" />
+      <module name="bw-wfmodules-spring-security-core" target="11" />
+      <module name="bw-wfmodules-spring-security-ldap" target="11" />
+      <module name="bw-wfmodules-spring-security-taglibs" target="11" />
+      <module name="bw-wfmodules-spring-security-web" target="11" />
+      <module name="bw-wfmodules-spring-tx" target="11" />
+      <module name="bw-wfmodules-spring-webflow" target="11" />
+      <module name="bw-wfmodules-spring-webflow-spring-binding" target="11" />
+      <module name="bw-wfmodules-spring-ws-core" target="11" />
+      <module name="bw-wfmodules-spring-ws-security" target="11" />
+      <module name="bw-wfmodules-spring-ws-xml" target="11" />
       <module name="bw-wfmodules-synch-ear" target="11" />
       <module name="bw-wfmodules-util-config-http" target="11" />
       <module name="bw-wfmodules-wfmodules-ro" target="11" />
       <module name="bw-wfmodules-wfmodules-rw" target="11" />
       <module name="bw-xml-ear" target="11" />
+      <module name="bw-xml-icalendar (1)" target="11" />
       <module name="bw-xml-synchws (1) (org.bedework.bw-synch)" target="11" />
       <module name="bw-xml-synchws (2) (org.bedework)" target="11" />
       <module name="bwsysev-common" target="1.8" />
@@ -306,7 +319,16 @@
       <module name="bwwebcl-appcommon" target="1.7" />
       <module name="bwwebcl-ucalws" target="1.8" />
       <module name="bwwebcl-webcommon" target="1.7" />
+      <module name="sched-assist-api" target="11" />
+      <module name="sched-assist-mock" target="11" />
+      <module name="sched-assist-portlet" target="11" />
+      <module name="sched-assist-spi" target="11" />
+      <module name="sched-assist-spi-caldav" target="11" />
+      <module name="sched-assist-spi-caldav-integrationtest" target="11" />
+      <module name="sched-assist-spi-relationships" target="11" />
+      <module name="sched-assist-war" target="11" />
       <module name="sched-assist-war (1)" target="11" />
+      <module name="sched-assist-web" target="11" />
       <module name="struts-taglib" target="1.4" />
       <module name="struts2-apps" target="1.7" />
       <module name="struts2-assembly" target="1.7" />

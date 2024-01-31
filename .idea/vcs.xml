@@ -5,6 +5,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bedework-parent" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bedework.github.io" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tmp/sv/bw-xml" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-access" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldav" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldavTest" vcs="Git" />
@@ -18,10 +19,8 @@
     <mapping directory="$PROJECT_DIR$/../bw-category" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-cli" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-cliutil" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-dav-tester" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-dotwell-known" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-event-registration" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-jsforj" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-json" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-logs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-notifier" vcs="Git" />
