@@ -136,7 +136,6 @@
         <module name="bwwebcl-appcommon" />
         <module name="bw-util-args" />
         <module name="bw-calendar-xsl-eventsubmitrsrc" />
-        <module name="bw-timezone-server-ear" />
         <module name="bw-event-registration-service" />
         <module name="bw-json" />
         <module name="bw-calendar-client-bedework-common" />
@@ -259,6 +258,7 @@
       <module name="bw-sometime-doc" target="11" />
       <module name="bw-struts-core" target="11" />
       <module name="bw-synch" target="11" />
+      <module name="bw-timezone-server-ear" target="11" />
       <module name="bw-util-bw-deploy" target="1.8" />
       <module name="bw-util-config-http" target="11" />
       <module name="bw-util-elasticsearch" target="11" />
@@ -306,6 +306,7 @@
       <module name="bw-wfmodules-spring-ws-security" target="11" />
       <module name="bw-wfmodules-spring-ws-xml" target="11" />
       <module name="bw-wfmodules-synch-ear" target="11" />
+      <module name="bw-wfmodules-timezone-server-ear" target="17" />
       <module name="bw-wfmodules-util-config-http" target="11" />
       <module name="bw-wfmodules-wfmodules-ro" target="11" />
       <module name="bw-wfmodules-wfmodules-rw" target="11" />
