@@ -6,7 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bw-self-registration-ear" />
         <module name="bw-calendar-xsl-common" />
         <module name="bw-self-registration-web" />
         <module name="bw-util-opensearch" />
@@ -247,6 +246,7 @@
       <module name="bw-opensearch-qs (1)" target="11" />
       <module name="bw-opensearch-qs (2)" target="11" />
       <module name="bw-sched-assist-ear" target="11" />
+      <module name="bw-self-registration-ear" target="11" />
       <module name="bw-self-registration-ear (1)" target="1.8" />
       <module name="bw-self-registration-war (1)" target="1.8" />
       <module name="bw-selfreg" target="1.8" />
