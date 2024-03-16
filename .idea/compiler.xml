@@ -90,6 +90,7 @@
         <module name="bw-calendar-facade" />
         <module name="bw-calendar-notifyws" />
         <module name="bw-util-indexing" />
+        <module name="bw-timezone-server-xml" />
         <module name="bw-carddav-user-war" />
         <module name="bw-calendar-mail" />
         <module name="bw-util-jolokia" />
