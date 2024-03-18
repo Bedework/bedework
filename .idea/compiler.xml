@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="bw-calendar-xsl-common" />
+        <module name="bw-icalendar-xml" />
         <module name="bw-self-registration-web" />
         <module name="bw-util-opensearch" />
         <module name="bw-category-web" />
@@ -59,6 +60,7 @@
         <module name="bw-event-registration-web" />
         <module name="bw-calendar-engine-api" />
         <module name="wfmodulesutil" />
+        <module name="bw-calws-soap-xml" />
         <module name="bw-calendar-xsl-calfeedrsrc-MainCampus" />
         <module name="bw-util2-calendar" />
         <module name="bw-calendar-client-webcommon" />
@@ -147,7 +149,6 @@
         <module name="bw-calsockets-pubwar" />
         <module name="bw-calendar-xsl-caladminrsrc" />
         <module name="bw-xml-war" />
-        <module name="bw-xml-tzsvr" />
         <module name="bw-event-registration-war" />
         <module name="bw-calendar-engine-chgnote" />
         <module name="bw-calendar-synchws" />
@@ -315,6 +316,7 @@
       <module name="bw-xml-icalendar (1)" target="11" />
       <module name="bw-xml-synchws (1) (org.bedework.bw-synch)" target="11" />
       <module name="bw-xml-synchws (2) (org.bedework)" target="11" />
+      <module name="bw-xml-tzsvr" target="17" />
       <module name="bwsysev-common" target="1.8" />
       <module name="bwsysev-monitor" target="1.8" />
       <module name="bwsysev-msgs" target="1.8" />

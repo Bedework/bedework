@@ -76,6 +76,7 @@
         <option value="$PROJECT_DIR$/../bw-wf-extensions/pom.xml" />
         <option value="$PROJECT_DIR$/../cc-extract/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-xml-icalendar/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-icalendar-xml/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
