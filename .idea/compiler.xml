@@ -47,7 +47,6 @@
         <module name="bw-util-maven-deploy" />
         <module name="bw-webcache-war" />
         <module name="bw-util-hibernate" />
-        <module name="bw-xml-appleServer" />
         <module name="bw-carddav-public-war" />
         <module name="bw-synch-common" />
         <module name="bw-calendar-publicws" />
@@ -64,7 +63,6 @@
         <module name="bw-calendar-xsl-calfeedrsrc-MainCampus" />
         <module name="bw-util2-calendar" />
         <module name="bw-calendar-client-webcommon" />
-        <module name="bw-xml-icalendar" />
         <module name="bw-util-deployment" />
         <module name="bw-calsockets-web" />
         <module name="bw-calendar-xsl-calrsrc-SoEDepartmental" />
@@ -96,6 +94,7 @@
         <module name="bw-carddav-user-war" />
         <module name="bw-calendar-mail" />
         <module name="bw-util-jolokia" />
+        <module name="bw-caldav-xml" />
         <module name="bw-carddav-userweb-war" />
         <module name="bw-category-ical" />
         <module name="bw-calendar-client-web-admin" />
@@ -104,17 +103,15 @@
         <module name="bw-schemaorgforj" />
         <module name="bw-xml-catdav" />
         <module name="bw-webclient-ucal" />
-        <module name="bw-xml-caldav" />
         <module name="bw-evreg-common" />
         <module name="bw-calendar-api" />
-        <module name="bw-xml-bwlicense" />
         <module name="bw-calendar-client-bwcommon" />
         <module name="bw-calendar-client-util" />
         <module name="bw-util-jms" />
         <module name="bw-self-registration-war" />
-        <module name="bw-xml-exchangews" />
         <module name="bw-calendar-client-rw" />
         <module name="bw-calendar-engine-inoutsched" />
+        <module name="bw-exchange-xml" />
         <module name="bw-xml-carddav" />
         <module name="bwwebcl-webcommon" />
         <module name="bw-calendar-userws" />
@@ -127,7 +124,6 @@
         <module name="bw-calendar-config" />
         <module name="bw-selfreg-ear" />
         <module name="bw-calendar-engine-tools" />
-        <module name="bw-xml-calws-soap" />
         <module name="bw-calendar-engine-interfaces" />
         <module name="bw-calendar-engine-core-common" />
         <module name="bw-util-misc" />
@@ -146,6 +142,7 @@
         <module name="bw-calendar-client-struts2" />
         <module name="bw-selfreg-common" />
         <module name="bw-logs" />
+        <module name="bw-synch-ws-xml" />
         <module name="bw-calsockets-pubwar" />
         <module name="bw-calendar-xsl-caladminrsrc" />
         <module name="bw-xml-war" />
@@ -268,6 +265,7 @@
       <module name="bw-util-struts" target="11" />
       <module name="bw-util-timezones" target="11" />
       <module name="bw-util-xmltidy" target="11" />
+      <module name="bw-wf-xml-feature-pack" target="17" />
       <module name="bw-wfmodules (1)" target="11" />
       <module name="bw-wfmodules (2)" target="11" />
       <module name="bw-wfmodules-apache-http" target="11" />
@@ -312,7 +310,14 @@
       <module name="bw-wfmodules-util-config-http" target="11" />
       <module name="bw-wfmodules-wfmodules-ro" target="11" />
       <module name="bw-wfmodules-wfmodules-rw" target="11" />
+      <module name="bw-wfmodules-xml" target="17" />
+      <module name="bw-xml-appleServer" target="17" />
+      <module name="bw-xml-bwlicense" target="17" />
+      <module name="bw-xml-caldav" target="17" />
+      <module name="bw-xml-calws-soap" target="17" />
       <module name="bw-xml-ear" target="11" />
+      <module name="bw-xml-exchangews" target="17" />
+      <module name="bw-xml-icalendar" target="17" />
       <module name="bw-xml-icalendar (1)" target="11" />
       <module name="bw-xml-synchws (1) (org.bedework.bw-synch)" target="11" />
       <module name="bw-xml-synchws (2) (org.bedework)" target="11" />

@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/../bedework-parent/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tmp/sv/bw-wfmodules-xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tmp/sv/bw-wfmodules-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-access/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-access/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-apacheds/src/main/java" charset="UTF-8" />
@@ -13,6 +15,8 @@
     <file url="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-util" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-util/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldav/bw-calws-soap-xml/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldav/bw-calws-soap-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldav/src/main/java" charset="UTF-8" />
@@ -217,6 +221,8 @@
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-wf-event-registration-feature-pack/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-exchangews-xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-exchangews-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-icalendar-xml/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-icalendar-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-jsforj/src/main/resources" charset="UTF-8" />
@@ -298,6 +304,8 @@
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-ws-xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-ws-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-xml/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-synch-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-wf-synch-feature-pack/src/main/java" charset="UTF-8" />
@@ -425,6 +433,10 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-caldav/bw-wfmodules-caldav-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-caldav/bw-wfmodules-caldav-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-caldav/bw-wfmodules-caldav-util/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-caldav/bw-wfmodules-caldav-xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-caldav/bw-wfmodules-caldav-xml/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-caldav/bw-wfmodules-calws-soap-xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-caldav/bw-wfmodules-calws-soap-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-caldav/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-caldav/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar-client-struts/src/main/java" charset="UTF-8" />
@@ -572,6 +584,8 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-eventreg/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-eventreg/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-exchangews-xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-exchangews-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-hawtio/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-hawtio/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-ical4j-vcard/src/main/java" charset="UTF-8" />
@@ -722,6 +736,8 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/bw-wfmodules-synch-shared/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/bw-wfmodules-synch-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/bw-wfmodules-synch-web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/bw-wfmodules-synch-ws-xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/bw-wfmodules-synch-ws-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-synch/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-timezone-server/bw-wfmodules-timezone-server-common/src/main/java" charset="UTF-8" />
@@ -804,14 +820,14 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfextensions/untitled/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfmodules-ro/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-wfmodules-rw/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-xml/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/wfmodulesutil/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/wfmodulesutil/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-calendar-feature-pack/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-calendar-feature-pack/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-calws-xml-feature-pack/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-calws-xml-feature-pack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-carddav-feature-pack/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-carddav-feature-pack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-cas-filter-feature-pack/src/main/java" charset="UTF-8" />
@@ -832,6 +848,8 @@
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-self-registration-feature-pack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-synch-feature-pack/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-synch-feature-pack/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-synch-xml-feature-pack/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-synch-xml-feature-pack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-timezone-server-feature-pack/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-timezone-server-feature-pack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-xml-feature-pack/src/main/java" charset="UTF-8" />

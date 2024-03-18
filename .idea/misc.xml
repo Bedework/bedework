@@ -77,6 +77,7 @@
         <option value="$PROJECT_DIR$/../cc-extract/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-xml-icalendar/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-icalendar-xml/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-exchangews-xml/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -91,7 +92,13 @@
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-nop/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-timezone-server/bw-wfmodules-timezone-server-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util/bw-wfmodules-util-network/bw-wfmodules-util-config-http/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-xml-icalendar/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-appleServer/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-bwlicense/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-caldav/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-calws-soap/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-icalendar/pom.xml" />
       </set>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
