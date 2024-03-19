@@ -11,7 +11,6 @@
         <module name="bw-self-registration-web" />
         <module name="bw-util-opensearch" />
         <module name="bw-category-web" />
-        <module name="bw-xml-xrd" />
         <module name="bw-category-ear" />
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
@@ -25,8 +24,6 @@
         <module name="bw-calendar-engine-dumprestore" />
         <module name="bw-addrbook-client" />
         <module name="bw-selfreg-war" />
-        <module name="bw-xml-vcard" />
-        <module name="bw-xml-dav" />
         <module name="bw-util-tz" />
         <module name="bw-timezone-server-tzconvert" />
         <module name="bw-self-registration-common" />
@@ -35,7 +32,6 @@
         <module name="bw-calsockets-common" />
         <module name="bw-timezone-server-war" />
         <module name="bw-category-impl" />
-        <module name="bw-xml-calws-soap-strict" />
         <module name="bw-evreg-service" />
         <module name="bw-synch-ear" />
         <module name="bw-synch-web" />
@@ -86,7 +82,6 @@
         <module name="bw-calendar-pubcaldav" />
         <module name="bw-cli" />
         <module name="bw-category-service" />
-        <module name="bw-xml-icalendar-strict" />
         <module name="bw-calendar-facade" />
         <module name="bw-calendar-notifyws" />
         <module name="bw-util-indexing" />
@@ -98,10 +93,8 @@
         <module name="bw-carddav-userweb-war" />
         <module name="bw-category-ical" />
         <module name="bw-calendar-client-web-admin" />
-        <module name="bw-xml-synchws" />
         <module name="bw-calendar-xsl-ucalrsrc" />
         <module name="bw-schemaorgforj" />
-        <module name="bw-xml-catdav" />
         <module name="bw-webclient-ucal" />
         <module name="bw-evreg-common" />
         <module name="bw-calendar-api" />
@@ -112,12 +105,10 @@
         <module name="bw-calendar-client-rw" />
         <module name="bw-calendar-engine-inoutsched" />
         <module name="bw-exchange-xml" />
-        <module name="bw-xml-carddav" />
         <module name="bwwebcl-webcommon" />
         <module name="bw-calendar-userws" />
         <module name="bw-access" />
         <module name="bw-util-security" />
-        <module name="bw-xml-category" />
         <module name="bw-webclient-cal" />
         <module name="bw-webclient-submit" />
         <module name="bw-note-db" />
@@ -145,7 +136,6 @@
         <module name="bw-synch-ws-xml" />
         <module name="bw-calsockets-pubwar" />
         <module name="bw-calendar-xsl-caladminrsrc" />
-        <module name="bw-xml-war" />
         <module name="bw-event-registration-war" />
         <module name="bw-calendar-engine-chgnote" />
         <module name="bw-calendar-synchws" />
@@ -311,17 +301,28 @@
       <module name="bw-wfmodules-wfmodules-ro" target="11" />
       <module name="bw-wfmodules-wfmodules-rw" target="11" />
       <module name="bw-wfmodules-xml" target="17" />
+      <module name="bw-xml" target="17" />
       <module name="bw-xml-appleServer" target="17" />
       <module name="bw-xml-bwlicense" target="17" />
       <module name="bw-xml-caldav" target="17" />
       <module name="bw-xml-calws-soap" target="17" />
+      <module name="bw-xml-calws-soap-strict" target="17" />
+      <module name="bw-xml-carddav" target="17" />
+      <module name="bw-xml-catdav" target="17" />
+      <module name="bw-xml-category" target="17" />
+      <module name="bw-xml-dav" target="17" />
       <module name="bw-xml-ear" target="11" />
       <module name="bw-xml-exchangews" target="17" />
       <module name="bw-xml-icalendar" target="17" />
       <module name="bw-xml-icalendar (1)" target="11" />
+      <module name="bw-xml-icalendar-strict" target="17" />
+      <module name="bw-xml-synchws" target="17" />
       <module name="bw-xml-synchws (1) (org.bedework.bw-synch)" target="11" />
       <module name="bw-xml-synchws (2) (org.bedework)" target="11" />
       <module name="bw-xml-tzsvr" target="17" />
+      <module name="bw-xml-vcard" target="17" />
+      <module name="bw-xml-war" target="17" />
+      <module name="bw-xml-xrd" target="17" />
       <module name="bwsysev-common" target="1.8" />
       <module name="bwsysev-monitor" target="1.8" />
       <module name="bwsysev-msgs" target="1.8" />

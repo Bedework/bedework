@@ -97,8 +97,19 @@
         <option value="$PROJECT_DIR$/../bw-xml/bw-xml-appleServer/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-xml/bw-xml-bwlicense/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-xml/bw-xml-caldav/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-calws-soap-strict/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-xml/bw-xml-calws-soap/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-carddav/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-catdav/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-category/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-dav/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-icalendar-strict/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-xml/bw-xml-icalendar/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-synchws/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-vcard/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-war/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-xrd/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-xml/pom.xml" />
       </set>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
