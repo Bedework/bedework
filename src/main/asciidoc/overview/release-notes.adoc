@@ -3,17 +3,52 @@
 
 Specific changes to xsl and javascript can be found at <<xsl-changes>>
 
-==== Dev - To Be Release 4.0.4:
+==== Dev - To Be Release 4.1.1:
+
+==== Release 4.1.0:
 ===== Change summary
-These are changes that will mean some config or stylesheet
+There are changes that will mean some config or stylesheet
 change when upgrading. More details may be seen below.
 
   * Move submissions root into system properties from event submit config
   * Remove all setting of newColPath from event form.
   * Added flag to mark collection as primary. Must be set on "/public/cals/MainCal"
+  * Replaced struts-1 with struts-2. Considered moving from struts altogether, but it's a considerable amount of work. May yet do so.
+  * Upgraded to opensearch 2.1.0
+  * Upgraded to wildfly 26.1.3.Final
+
+==== Some bug fixes
+  * Don't fail with an exception if synch server unavailable.
++
+The exception was causing calendar modifications to fail if the synch engine was unavailable.
+
+  * Recurrence date was being created incorrectly - missing tzid.
++
+Deleting of instances would fail because of a recurrence id mismatch
+  * Add calls to close scroll contexts. Waiting for timeout causes problems.
++
+Under moderate load we'd run out of scroll contexts. Meant searches would fail with a exception.
+  * Fix path in nested queries
++
+Prevented filtering on x-property values.
+  * Fix restore of BwGeo - stored as BigDecimal value
++
+location coordinates were not available.
+  * Fix a recurrence instance bug in which invalid recurrenceids would be allowed.
++
+Shows up when the url to fetch an instance is edited. Made it appear instances were not being deleted.
+  * When deleting set all the timestamps - not just lastmod
+  * Fix regexp that collapsed multiple line endings to 1.
+  * Move of event wasn't moving overrides
++
+When recurring events with overrides were approved we lost all the overrrides.
+  * Add information to the view data so that we can sort on the displayed field rather than the path.
++
+Items in the left hand navigation were sometimes out of order.
+  * If we get hit by multiple requests and 1 gets service unavailable (times out waiting) the session object gets cleared and other requests will fail with no session. Avoid a big trace and just emit a warning.
 
 ===== Significant changes to setting destination calendar collection
-Up to now, for public events, there has been a UI field to set the calendar collection e.g. "/public/cals/MainCal". This has been completely removed. It's unnecessary and caused too many problems.
+Up to now, when adding public events there has been a UI field to set the calendar collection e.g. "/public/cals/MainCal". This has been completely removed. It's unnecessary and caused too many problems.
 
 ==== Workflow changes
 This has been completely reworked. Making approval of events part

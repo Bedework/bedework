@@ -2,6 +2,14 @@
 
 # Create a bedework quickstart
 
+echo " "
+echo " "
+echo "***************** Currently out of date"
+echo "Use the feature pack install. See https://bedework.github.io/bedework/#featurepack-install"
+echo " "
+echo " "
+exit 1
+
 BASE_DIR=`pwd`
 scriptName="$0"
 restart=

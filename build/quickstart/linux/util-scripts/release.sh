@@ -2,7 +2,7 @@
 
 set -x
 
-# Run from the quickstart directory with params:
+# Run from the parent directory with params:
 # 1 - name of module
 # 2 - release version
 # 3 - next snapshot version

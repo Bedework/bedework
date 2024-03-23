@@ -15,6 +15,7 @@
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
         <module name="bw-wf-undertow-handlers" />
+        <module name="bw-exchangews-xml" />
         <module name="bw-webclient-calauth" />
         <module name="bw-util-http" />
         <module name="bw-note-common" />
@@ -104,7 +105,6 @@
         <module name="bw-self-registration-war" />
         <module name="bw-calendar-client-rw" />
         <module name="bw-calendar-engine-inoutsched" />
-        <module name="bw-exchange-xml" />
         <module name="bwwebcl-webcommon" />
         <module name="bw-calendar-userws" />
         <module name="bw-access" />
