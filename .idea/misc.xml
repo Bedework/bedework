@@ -14,14 +14,12 @@
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-sometime/bw-sched-assist-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-synch/bw-synch-ear" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-ear" />
-    <file type="javaeeApplication" url="file://$PROJECT_DIR$/../bw-xml/bw-xml-ear" />
     <type id="Osmorc" />
     <type id="web" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/../bw-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-access/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-webdav/pom.xml" />
@@ -75,15 +73,13 @@
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-json/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wf-extensions/pom.xml" />
         <option value="$PROJECT_DIR$/../cc-extract/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml-icalendar/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-icalendar-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-exchangews-xml/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-calws-soap-xml/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calws-soap/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/../bw-caldav/bw-calws-soap-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-dav-tester/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-synch/bw-synch-xml/pom.xml" />
@@ -96,23 +92,6 @@
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-timezone-server/bw-wfmodules-timezone-server-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util/bw-wfmodules-util-network/bw-wfmodules-util-config-http/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-xml/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml-icalendar/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-appleServer/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-bwlicense/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-caldav/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-calws-soap-strict/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-calws-soap/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-carddav/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-catdav/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-category/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-dav/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-icalendar-strict/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-icalendar/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-synchws/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-vcard/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-war/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/bw-xml-xrd/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-xml/pom.xml" />
       </set>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />

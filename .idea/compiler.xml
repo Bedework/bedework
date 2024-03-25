@@ -56,7 +56,6 @@
         <module name="bw-event-registration-web" />
         <module name="bw-calendar-engine-api" />
         <module name="wfmodulesutil" />
-        <module name="bw-calws-soap-xml" />
         <module name="bw-calendar-xsl-calfeedrsrc-MainCampus" />
         <module name="bw-util2-calendar" />
         <module name="bw-calendar-client-webcommon" />
@@ -220,6 +219,7 @@
       <module name="bw-calsockets-ear" target="1.8" />
       <module name="bw-calsockets-war (1)" target="1.8" />
       <module name="bw-calutil" target="1.8" />
+      <module name="bw-calws-soap-xml" target="17" />
       <module name="bw-carddav-client" target="1.8" />
       <module name="bw-dav-tester" target="11" />
       <module name="bw-deploy-maven-plugin" target="1.8" />
@@ -301,28 +301,6 @@
       <module name="bw-wfmodules-wfmodules-ro" target="11" />
       <module name="bw-wfmodules-wfmodules-rw" target="11" />
       <module name="bw-wfmodules-xml" target="17" />
-      <module name="bw-xml" target="17" />
-      <module name="bw-xml-appleServer" target="17" />
-      <module name="bw-xml-bwlicense" target="17" />
-      <module name="bw-xml-caldav" target="17" />
-      <module name="bw-xml-calws-soap" target="17" />
-      <module name="bw-xml-calws-soap-strict" target="17" />
-      <module name="bw-xml-carddav" target="17" />
-      <module name="bw-xml-catdav" target="17" />
-      <module name="bw-xml-category" target="17" />
-      <module name="bw-xml-dav" target="17" />
-      <module name="bw-xml-ear" target="11" />
-      <module name="bw-xml-exchangews" target="17" />
-      <module name="bw-xml-icalendar" target="17" />
-      <module name="bw-xml-icalendar (1)" target="11" />
-      <module name="bw-xml-icalendar-strict" target="17" />
-      <module name="bw-xml-synchws" target="17" />
-      <module name="bw-xml-synchws (1) (org.bedework.bw-synch)" target="11" />
-      <module name="bw-xml-synchws (2) (org.bedework)" target="11" />
-      <module name="bw-xml-tzsvr" target="17" />
-      <module name="bw-xml-vcard" target="17" />
-      <module name="bw-xml-war" target="17" />
-      <module name="bw-xml-xrd" target="17" />
       <module name="bwsysev-common" target="1.8" />
       <module name="bwsysev-monitor" target="1.8" />
       <module name="bwsysev-msgs" target="1.8" />
@@ -425,23 +403,6 @@
       <module name="bw-calendar-ucaldav" options="" />
       <module name="bw-calendar-userws" options="" />
       <module name="bw-util-logging" options="" />
-      <module name="bw-xml-appleServer" options="" />
-      <module name="bw-xml-bwlicense" options="" />
-      <module name="bw-xml-caldav" options="" />
-      <module name="bw-xml-calws-soap" options="" />
-      <module name="bw-xml-calws-soap-strict" options="" />
-      <module name="bw-xml-carddav" options="" />
-      <module name="bw-xml-catdav" options="" />
-      <module name="bw-xml-category" options="" />
-      <module name="bw-xml-dav" options="" />
-      <module name="bw-xml-exchangews" options="" />
-      <module name="bw-xml-icalendar" options="" />
-      <module name="bw-xml-icalendar-strict" options="" />
-      <module name="bw-xml-synchws" options="" />
-      <module name="bw-xml-tzsvr" options="" />
-      <module name="bw-xml-vcard" options="" />
-      <module name="bw-xml-war" options="" />
-      <module name="bw-xml-xrd" options="" />
       <module name="struts2-core" options="-Auri=/struts-tags -AtlibVersion=2.3 -AjspVersion=2.0 -AshortName=s &quot;-AdisplayName=Struts Tags&quot; -AoutFile=$PROJECT_DIR$/../struts/core/target/classes/META-INF/struts-tags.tld &quot;-Adescription=\&quot;To make it easier to access dynamic data;&#10;                                    the Apache Struts framework includes a library of custom tags.&#10;                                    The tags interact with the framework's validation and&#10;                                    internationalization features;&#10;                                    to ensure that input is correct and output is localized.&#10;                                    The Struts Tags can be used with JSP FreeMarker or Velocity.\&quot;&quot; -AoutTemplatesDir=$PROJECT_DIR$/../struts/core/src/site/resources/tags" />
     </option>
   </component>

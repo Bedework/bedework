@@ -17,8 +17,6 @@
     <file url="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-util/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-xml/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldav/bw-caldav-xml/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-caldav/bw-calws-soap-xml/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-caldav/bw-calws-soap-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldav/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldav/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-caldavTest/src/main/java" charset="UTF-8" />
@@ -157,8 +155,8 @@
     <file url="file://$PROJECT_DIR$/../bw-calsockets/bw-calsockets-web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calsockets/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calsockets/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calws-soap-xml/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calws-soap-xml/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calws-soap/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calws-soap/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-carddav/bw-carddav-common/src/main/java" charset="UTF-8" />
@@ -521,6 +519,8 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-rw-war/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calws-soap-xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calws-soap-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-carddav/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-carddav/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-category/bw-wfmodules-category-common/src/main/java" charset="UTF-8" />
@@ -858,50 +858,6 @@
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-xml-feature-pack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml-icalendar/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml-icalendar/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-wf-xml-feature-pack/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-wf-xml-feature-pack/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-appleServer/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-appleServer/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-bwlicense/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-bwlicense/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-caldav/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-caldav/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-calws-soap-strict/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-calws-soap-strict/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-calws-soap/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-calws-soap/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-carddav/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-carddav/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-catdav/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-catdav/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-category/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-category/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-dav/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-dav/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-ear/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-ear/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-exchangews/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-exchangews/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-icalendar" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-icalendar-strict/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-icalendar-strict/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-icalendar/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-icalendar/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-synchws/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-synchws/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-tzsvr" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-tzsvr/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-tzsvr/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-vcard/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-vcard/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-war/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-war/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-xrd/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/bw-xml-xrd/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-xml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../cc-extract/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../cc-extract/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../struts/apps/src/main/java" charset="UTF-8" />
