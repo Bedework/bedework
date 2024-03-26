@@ -56,6 +56,7 @@
         <module name="bw-event-registration-web" />
         <module name="bw-calendar-engine-api" />
         <module name="wfmodulesutil" />
+        <module name="bw-calws-soap-xml" />
         <module name="bw-calendar-xsl-calfeedrsrc-MainCampus" />
         <module name="bw-util2-calendar" />
         <module name="bw-calendar-client-webcommon" />
@@ -219,7 +220,6 @@
       <module name="bw-calsockets-ear" target="1.8" />
       <module name="bw-calsockets-war (1)" target="1.8" />
       <module name="bw-calutil" target="1.8" />
-      <module name="bw-calws-soap-xml" target="17" />
       <module name="bw-carddav-client" target="1.8" />
       <module name="bw-dav-tester" target="11" />
       <module name="bw-deploy-maven-plugin" target="1.8" />
