@@ -3,8 +3,8 @@
   <component name="AdditionalModuleElements">
     <content url="file://$MODULE_DIR$" dumb="true">
       <excludeFolder url="file://$MODULE_DIR$/tmp/.m2" />
-      <excludeFolder url="file://$MODULE_DIR$/tmp/test-install" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/sv" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/test-install" />
     </content>
   </component>
 </module>
