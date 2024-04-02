@@ -1,6 +1,8 @@
 [setting-up-databases]
 === Setting up databases
-The quickstart is configured to use h2 for demonstration only. For production you will need to switch to something like postgresql or mysql. 
+The quickstart is configured to use h2 for demonstration only. For production, you will need to switch to something like postgresql or mysql.
+
+Below there is some help on configuring th edatabase. Additionally, there is some information on reconfiguring wildfly. A better approach is to install a configuration specifically for the desired database using galleon. In that case any information on wildfly configuration can be skipped.
 
 ==== postgresql
 We'll describe the process for the main calendar engine. The others are very similar.

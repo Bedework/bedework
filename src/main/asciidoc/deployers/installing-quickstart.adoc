@@ -1,5 +1,5 @@
 [[installing-the-quickstart]]
-For versions 4.0.0 onwards it is not necessary to install a quickstart. You can install a qyuickstart if you wish to do development or have convenient access to the sources.
+For versions 4.0.0 onwards it is not necessary to install a quickstart. You can install a quickstart if you wish to do development or have convenient access to the sources.
 
 If you are only interested in having a runnable version for demonstration or production then see the instructions at <<featurepack-install>>
 

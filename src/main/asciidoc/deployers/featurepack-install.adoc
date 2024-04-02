@@ -18,7 +18,7 @@ Please know what you are doing when using this artifact. It contains no security
 End users are not suggested to use this. Use at your own risk.
 ----
 
-The best approach is to disable all ports and only open up those necessary. Bedework only uses the ports 8080, 8081 (and 9990 for the wildfly HAL console). Additionally, even for those ports it is best to pass traffic through haproxy or apache web server and only allow known contexts (/cal, /caladmin etc) and redirect all unknown traffic to "/cal".
+The best approach is to disable all ports and only open up those necessary. Bedework only uses the ports 8080, 8081 (and 9990 for the wildfly HAL console). Additionally, even for those ports it is best to pass traffic through haproxy or apache web server and only allow known contexts (/cal, /caladmin etc.) and redirect all unknown traffic to "/cal".
 
 ==== Galleon, wildfly and bedework
 Wildfly can be installed by using the galleon installer, which allows the installation of tailored instances of wildfly.
@@ -33,23 +33,23 @@ will also be included.
 
 These steps have been tested on a mac and on the latest LTS linux.
 
-NOTE: If this fails and you are going to retry I suggest first
+NOTE: If this fails, and you are going to retry I suggest first
 remove the wildfly directory created when running galleon
 before retrying.
 
-* Install jdk 11
+* Install jdk 17
 
 * In window 1 - Create a directory and cd into it.
 
 * Download galleon
-https://github.com/wildfly/galleon/releases/download/4.2.8.Final/galleon-4.2.8.Final.zip
+wget https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip
 and unzip.
 
 * run galleon to install - this is all one command:
 ----
-./galleon-4.2.8.Final/bin/galleon.sh \
-   install org.bedework.deploy:bw-wf-feature-pack:4.0.3 \
-   --dir=wildfly --verbose --layers=bw-demoall-h2
+./galleon-5.2.2.Final/bin/galleon.sh \
+   install org.bedework.deploy:bw-wf-feature-pack:4.1.0
+   --dir=wildfly --verbose --layers=bw-demoall-h2,web-console
 ----
 
 * In window 2 cd into the same directory and start the required services:
@@ -91,22 +91,22 @@ bedework. As noted earlier you should run bedework behind a front-end
 service such as haproxy or apache. Wildfly can deliver any associated
 static content so there is no need to move that content elsewhere.
 
-* Install jdk 11
+* Install jdk 17
 
 * If installing for postgres install the database and create an id/pw for access.
 
 * Download galleon
- https://github.com/wildfly/galleon/releases/download/4.2.8.Final/galleon-4.2.8.Final.zip
+wget https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip
+and unzip.
   and unzip.
 
 * Run galleon to deploy wildfly with a bedework service +
 You will probably want to change the *--layers* parameter to
 select a subset of the bedework installation - see <<wildfly-bedework-layers>>
 ----
-./galleon-4.2.8.Final/bin/galleon.sh \
-   install org.bedework.deploy:bw-wf-feature-pack:4.0.3 \
-   --dir=wildfly-26.0.1.Final --verbose \
-   --layers=bw-cal-eventsubmit-pg,web-console
+./galleon-5.2.2.Final/bin/galleon.sh \
+   install org.bedework.deploy:bw-wf-feature-pack:4.1.0
+   --dir=wildfly-26.0.1-Final --verbose --layers=bw-cal-eventsubmit-pg,web-console
 
 ln -s wildfly-26.0.1.Final wildfly
 ----

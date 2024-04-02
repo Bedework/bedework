@@ -14,7 +14,7 @@ The load balancer is only required if more than one calendar server is running. 
 
 It might still be helpful to run the server behind a load balancer such as haproxy to restrict traffic to known services and allow filtering of bad ip addresses. Apache http server is an alternative.
 
-All of the rest can be run on a single server but it will need a generous amount of memory and multiple processors for any significant load.
+All of the rest can be run on a single server, but it will need a generous amount of memory and multiple processors for any significant load.
 
 Running the database and OpenSearch on a separate instance helps spread the load. For greater reliability both could be run as clustered services and your organization may already provide database support you can use.
 
@@ -22,8 +22,6 @@ It should be possible to use hosted solutions for both database and OpenSearch.
 
 Multiple calendar servers can be run to provide greater reliability and to handle higher loads. Bedework is not currently configured to handle session migration etc. If you do run multiple servers you MUST have a single database and OpenSearch service they both use.
 
-It's probably easiest to deploy the calendar server by simply installing the quickstart then removing any deployed modules not required. A later release will allow more choices over what gets deployed.
-
 The sync engine and the event registration modules currently need to run on a single server. This is mostly because there is no mechanism to allocate outstanding sync requests between multiple servers.
 
-Note that the calendar server does not use the database for the public events web presence or feeds. This woudl allow some different configurations - for example a single smaller server for public events administration and a number of front end servers for web presence and feeds.
+Note that the calendar server does not use the database for the public events web presence or feeds. This would allow some different configurations - for example a single smaller server for public events administration and a number of front end servers for web presence and feeds.

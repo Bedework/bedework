@@ -4,7 +4,7 @@ Bedework uses OpenSearch as the indexer engine. As objects are created destroyed
 
 It is safer to NOT run in production with the OpenSearch interfaces open to the outside. OpenSearch now has various configuration options available. Bedework supports basic user authentication. Currently, you can run unauthenticated but OpenSearch will generate a lot of warnings in the log.
 
-You can run OpenSearch on the same server but preferably it should be running on a different server. OpenSearch - depending on the amount of data and types of search - can use a lot of memory for caching of filters. See the OpenSearch site for full instructions on running and installing.
+You can run OpenSearch on the same server, but preferably it should be running on a different server. OpenSearch - depending on the amount of data and types of search - can use a lot of memory for caching of filters. See the OpenSearch site for full instructions on running and installing.
 
 In general this is an easy process - OpenSearch offers various installation formats of all their versions.
 

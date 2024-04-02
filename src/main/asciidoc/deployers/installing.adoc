@@ -5,10 +5,10 @@
 .................
 sudo apt-get update
 .................
-. Ensure java 11 jdk installed
+. Ensure java 17 jdk installed
 +
 .................
-sudo apt-get install openjdk-11-jdk-headless
+sudo apt-get install openjdk-17-jdk-headless
 sudo update-alternatives --config java
 .................
 +
@@ -16,7 +16,7 @@ The last command should state there are no alternatives but if another has been 
 . Install wildfly with bedework using galleon
 +
 If you are not wanting to install the quickstart for builds and development then install a wildfly service by following the instructions at <<featurepack-install>>.
-and disregard the remaining instructiosn below.
+and disregard the remaining instructions below.
 . Install maven if you want to do builds.
 +
 .................
@@ -37,7 +37,7 @@ emacs ~/.m2/settings.xml
 .................
 +
 and paste in a modified form of the following (change the paths
-"/home/mike/bw-3.13.2/" to correspond to the directory you're about
+"/home/mike/bedework/" to correspond to the directory you're about
 to create)
 +
 .................
@@ -56,10 +56,10 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <org.bedework.deployment.basedir>/home/mike/bw-3.13.2/quickstart-dev</org.bedework.deployment.basedir>
-        <org.bedework.deployment.properties>/home/mike/bw-3.13.2/quickstart-dev/bedework/config/wildfly.deploy.properties</org.bedework.deployment.properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <org.bedework.deployment.basedir>/home/mike/bedework/quickstart-dev</org.bedework.deployment.basedir>
+        <org.bedework.deployment.properties>/home/mike/bedework/quickstart-dev/bedework/config/wildfly.deploy.properties</org.bedework.deployment.properties>
       </properties>
     </profile>
   </profiles>
@@ -67,7 +67,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
 .................
 . Provide a bw settings file.
 +
-If necessary create a *.bw* file in your home directory and add properties to it. Currently the only proeprties allow setting the profile for the *.bw* script used to build and the location of the deployment proeprties used to configure your deployed modules.
+If necessary create a *.bw* file in your home directory and add properties to it. Currently, the only properties allow setting the profile for the *.bw* script used to build and the location of the deployment proeprties used to configure your deployed modules.
 +
 An example file is
 +
@@ -88,7 +88,7 @@ We create a directory in which to install bedework, download an install script a
 mkdir bw-4.0.0
 wget https://github.com/Bedework/bedework/raw/bedework-4.0.0/build/quickstart/linux/installQS.sh
 chmod +x installQS.sh
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 ./installQS.sh
 .................
 +
