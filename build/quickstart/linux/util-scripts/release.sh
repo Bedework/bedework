@@ -41,8 +41,8 @@ fi
 
 # 11 onwards
 version=$($JAVA_HOME/bin/java -version 2>&1 | sed -E -n 's/.* version "([^.-]*).*/\1/p')
-if [[ "$version" -lt "11" ]]; then
-  echo "Java 11 or greater is required"
+if [[ "$version" -lt "17" ]]; then
+  echo "Java 17 or greater is required"
   exit 1
 fi
 
@@ -74,13 +74,13 @@ git push || exit 1
 
 
 echo "====== Now rebuild"
-mvn -Pbedework-rel,bedework-local,release clean deploy || exit 1
+mvn -Pbedework-dev,bedework-local,release clean deploy || exit 1
 
 echo "====== Now cd back to $DIRNAME"
 cd $DIRNAME || exit 1
 
 echo "================================================================="
 echo "================================================================="
-echo "+++++++++ Successfuly released version $releaseVersion of $moduleName"
+echo "+++++++++ Successfully released version $releaseVersion of $moduleName"
 echo "================================================================="
 echo "================================================================="
