@@ -399,7 +399,19 @@
 </div>
 <div class="sect3">
 <h4 id="_dev_to_be_release_4_1_1">1.2.1. Dev - To Be Release 4.1.1:</h4>
-
+<div class="sect4">
+<h5 id="_upcoming_changes">Upcoming changes</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Cross the jakarta boundary. Will mean upgrading wildfly.</p>
+</li>
+<li>
+<p>Move client side operations into a high level client intended to usable via web actions or a cli.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_release_4_1_0">1.2.2. Release 4.1.0:</h4>
@@ -411,6 +423,9 @@ change when upgrading. More details may be seen below.</p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p>Moved to jdk17.</p>
+</li>
 <li>
 <p>Move submissions root into system properties from event submit config</p>
 </li>
@@ -428,6 +443,9 @@ change when upgrading. More details may be seen below.</p>
 </li>
 <li>
 <p>Upgraded to wildfly 26.1.3.Final</p>
+</li>
+<li>
+<p>Removed the bw-xml module and moved most if the content into existing or new modules. Affects config as wsdls are now on a different path.</p>
 </li>
 </ul>
 </div>
@@ -493,6 +511,9 @@ change when upgrading. More details may be seen below.</p>
 </li>
 <li>
 <p>If we get hit by multiple requests and 1 gets service unavailable (times out waiting) the session object gets cleared and other requests will fail with no session. Avoid a big trace and just emit a warning.</p>
+</li>
+<li>
+<p>Look out for attempts to update different events on different browser tabs.</p>
 </li>
 </ul>
 </div>
@@ -2800,7 +2821,7 @@ End users are not suggested to use this. Use at your own risk.</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The best approach is to disable all ports and only open up those necessary. Bedework only uses the ports 8080, 8081 (and 9990 for the wildfly HAL console). Additionally, even for those ports it is best to pass traffic through haproxy or apache web server and only allow known contexts (/cal, /caladmin etc) and redirect all unknown traffic to "/cal".</p>
+<p>The best approach is to disable all ports and only open up those necessary. Bedework only uses the ports 8080, 8081 (and 9990 for the wildfly HAL console). Additionally, even for those ports it is best to pass traffic through haproxy or apache web server and only allow known contexts (/cal, /caladmin etc.) and redirect all unknown traffic to "/cal".</p>
 </div>
 </div>
 <div class="sect3">
@@ -2829,7 +2850,7 @@ will also be included.</p>
 <div class="title">Note</div>
 </td>
 <td class="content">
-If this fails and you are going to retry I suggest first
+If this fails, and you are going to retry I suggest first
 remove the wildfly directory created when running galleon
 before retrying.
 </td>
@@ -2839,14 +2860,14 @@ before retrying.
 <div class="ulist">
 <ul>
 <li>
-<p>Install jdk 11</p>
+<p>Install jdk 17</p>
 </li>
 <li>
 <p>In window 1 - Create a directory and cd into it.</p>
 </li>
 <li>
 <p>Download galleon
-<a href="https://github.com/wildfly/galleon/releases/download/4.2.8.Final/galleon-4.2.8.Final.zip" class="bare">https://github.com/wildfly/galleon/releases/download/4.2.8.Final/galleon-4.2.8.Final.zip</a>
+wget <a href="https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip" class="bare">https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip</a>
 and unzip.</p>
 </li>
 <li>
@@ -2856,9 +2877,9 @@ and unzip.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>./galleon-4.2.8.Final/bin/galleon.sh \
-   install org.bedework.deploy:bw-wf-feature-pack:4.0.3 \
-   --dir=wildfly --verbose --layers=bw-demoall-h2</pre>
+<pre>./galleon-5.2.2.Final/bin/galleon.sh \
+   install org.bedework.deploy:bw-wf-feature-pack:4.1.0
+   --dir=wildfly --verbose --layers=bw-demoall-h2,web-console</pre>
 </div>
 </div>
 <div class="ulist">
@@ -2933,15 +2954,16 @@ static content so there is no need to move that content elsewhere.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Install jdk 11</p>
+<p>Install jdk 17</p>
 </li>
 <li>
 <p>If installing for postgres install the database and create an id/pw for access.</p>
 </li>
 <li>
 <p>Download galleon
-<a href="https://github.com/wildfly/galleon/releases/download/4.2.8.Final/galleon-4.2.8.Final.zip" class="bare">https://github.com/wildfly/galleon/releases/download/4.2.8.Final/galleon-4.2.8.Final.zip</a>
- and unzip.</p>
+wget <a href="https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip" class="bare">https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip</a>
+and unzip.
+  and unzip.</p>
 </li>
 <li>
 <p>Run galleon to deploy wildfly with a bedework service<br>
@@ -2952,10 +2974,9 @@ select a subset of the bedework installation - see <a href="#wildfly-bedework-la
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>./galleon-4.2.8.Final/bin/galleon.sh \
-   install org.bedework.deploy:bw-wf-feature-pack:4.0.3 \
-   --dir=wildfly-26.0.1.Final --verbose \
-   --layers=bw-cal-eventsubmit-pg,web-console
+<pre>./galleon-5.2.2.Final/bin/galleon.sh \
+   install org.bedework.deploy:bw-wf-feature-pack:4.1.0
+   --dir=wildfly-26.0.1-Final --verbose --layers=bw-cal-eventsubmit-pg,web-console
 
 ln -s wildfly-26.0.1.Final wildfly</pre>
 </div>
@@ -3294,10 +3315,10 @@ exit</code></pre>
 </div>
 </li>
 <li>
-<p>Ensure java 11 jdk installed</p>
+<p>Ensure java 17 jdk installed</p>
 <div class="literalblock">
 <div class="content">
-<pre>sudo apt-get install openjdk-11-jdk-headless
+<pre>sudo apt-get install openjdk-17-jdk-headless
 sudo update-alternatives --config java</pre>
 </div>
 </div>
@@ -3309,7 +3330,7 @@ sudo update-alternatives --config java</pre>
 <p>Install wildfly with bedework using galleon</p>
 <div class="paragraph">
 <p>If you are not wanting to install the quickstart for builds and development then install a wildfly service by following the instructions at <a href="#featurepack-install">Install bedework as a wildfly feature</a>.
-and disregard the remaining instructiosn below.</p>
+and disregard the remaining instructions below.</p>
 </div>
 </li>
 <li>
@@ -3341,7 +3362,7 @@ emacs ~/.m2/settings.xml</pre>
 </div>
 <div class="paragraph">
 <p>and paste in a modified form of the following (change the paths
-"/home/mike/bw-3.13.2/" to correspond to the directory you&#8217;re about
+"/home/mike/bedework/" to correspond to the directory you&#8217;re about
 to create)</p>
 </div>
 <div class="literalblock">
@@ -3361,10 +3382,10 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
         &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
       &lt;/activation&gt;
       &lt;properties&gt;
-        &lt;maven.compiler.source&gt;11&lt;/maven.compiler.source&gt;
-        &lt;maven.compiler.target&gt;11&lt;/maven.compiler.target&gt;
-        &lt;org.bedework.deployment.basedir&gt;/home/mike/bw-3.13.2/quickstart-dev&lt;/org.bedework.deployment.basedir&gt;
-        &lt;org.bedework.deployment.properties&gt;/home/mike/bw-3.13.2/quickstart-dev/bedework/config/wildfly.deploy.properties&lt;/org.bedework.deployment.properties&gt;
+        &lt;maven.compiler.source&gt;17&lt;/maven.compiler.source&gt;
+        &lt;maven.compiler.target&gt;17&lt;/maven.compiler.target&gt;
+        &lt;org.bedework.deployment.basedir&gt;/home/mike/bedework/quickstart-dev&lt;/org.bedework.deployment.basedir&gt;
+        &lt;org.bedework.deployment.properties&gt;/home/mike/bedework/quickstart-dev/bedework/config/wildfly.deploy.properties&lt;/org.bedework.deployment.properties&gt;
       &lt;/properties&gt;
     &lt;/profile&gt;
   &lt;/profiles&gt;
@@ -3375,7 +3396,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
 <li>
 <p>Provide a bw settings file.</p>
 <div class="paragraph">
-<p>If necessary create a <strong>.bw</strong> file in your home directory and add properties to it. Currently the only proeprties allow setting the profile for the <strong>.bw</strong> script used to build and the location of the deployment proeprties used to configure your deployed modules.</p>
+<p>If necessary create a <strong>.bw</strong> file in your home directory and add properties to it. Currently, the only properties allow setting the profile for the <strong>.bw</strong> script used to build and the location of the deployment proeprties used to configure your deployed modules.</p>
 </div>
 <div class="paragraph">
 <p>An example file is</p>
@@ -3402,7 +3423,7 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"</pre>
 <pre>mkdir bw-4.0.0
 wget https://github.com/Bedework/bedework/raw/bedework-4.0.0/build/quickstart/linux/installQS.sh
 chmod +x installQS.sh
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 ./installQS.sh</pre>
 </div>
 </div>
@@ -3455,7 +3476,7 @@ q</pre>
 </div>
 </div>
 <div id="installing-the-quickstart" class="paragraph">
-<p>For versions 4.0.0 onwards it is not necessary to install a quickstart. You can install a qyuickstart if you wish to do development or have convenient access to the sources.</p>
+<p>For versions 4.0.0 onwards it is not necessary to install a quickstart. You can install a quickstart if you wish to do development or have convenient access to the sources.</p>
 </div>
 <div class="paragraph">
 <p>If you are only interested in having a runnable version for demonstration or production then see the instructions at <a href="#featurepack-install">Install bedework as a wildfly feature</a></p>
@@ -3708,7 +3729,7 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"</code></pre>
 <p>It might still be helpful to run the server behind a load balancer such as haproxy to restrict traffic to known services and allow filtering of bad ip addresses. Apache http server is an alternative.</p>
 </div>
 <div class="paragraph">
-<p>All of the rest can be run on a single server but it will need a generous amount of memory and multiple processors for any significant load.</p>
+<p>All of the rest can be run on a single server, but it will need a generous amount of memory and multiple processors for any significant load.</p>
 </div>
 <div class="paragraph">
 <p>Running the database and OpenSearch on a separate instance helps spread the load. For greater reliability both could be run as clustered services and your organization may already provide database support you can use.</p>
@@ -3720,13 +3741,10 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"</code></pre>
 <p>Multiple calendar servers can be run to provide greater reliability and to handle higher loads. Bedework is not currently configured to handle session migration etc. If you do run multiple servers you MUST have a single database and OpenSearch service they both use.</p>
 </div>
 <div class="paragraph">
-<p>It&#8217;s probably easiest to deploy the calendar server by simply installing the quickstart then removing any deployed modules not required. A later release will allow more choices over what gets deployed.</p>
-</div>
-<div class="paragraph">
 <p>The sync engine and the event registration modules currently need to run on a single server. This is mostly because there is no mechanism to allocate outstanding sync requests between multiple servers.</p>
 </div>
 <div class="paragraph">
-<p>Note that the calendar server does not use the database for the public events web presence or feeds. This woudl allow some different configurations - for example a single smaller server for public events administration and a number of front end servers for web presence and feeds.</p>
+<p>Note that the calendar server does not use the database for the public events web presence or feeds. This would allow some different configurations - for example a single smaller server for public events administration and a number of front end servers for web presence and feeds.</p>
 </div>
 </div>
 <div class="sect2">
@@ -3804,7 +3822,10 @@ keytool -importkeystore -destkeystore wildfly/standalone/configuration/applicati
 <div class="sect2">
 <h3 id="_setting_up_databases">Setting up databases</h3>
 <div class="paragraph">
-<p>The quickstart is configured to use h2 for demonstration only. For production you will need to switch to something like postgresql or mysql.</p>
+<p>The quickstart is configured to use h2 for demonstration only. For production, you will need to switch to something like postgresql or mysql.</p>
+</div>
+<div class="paragraph">
+<p>Below there is some help on configuring th edatabase. Additionally, there is some information on reconfiguring wildfly. A better approach is to install a configuration specifically for the desired database using galleon. In that case any information on wildfly configuration can be skipped.</p>
 </div>
 <div class="sect3">
 <h4 id="_postgresql">postgresql</h4>
@@ -4069,7 +4090,7 @@ calschema export</code></pre>
 <p>It is safer to NOT run in production with the OpenSearch interfaces open to the outside. OpenSearch now has various configuration options available. Bedework supports basic user authentication. Currently, you can run unauthenticated but OpenSearch will generate a lot of warnings in the log.</p>
 </div>
 <div class="paragraph">
-<p>You can run OpenSearch on the same server but preferably it should be running on a different server. OpenSearch - depending on the amount of data and types of search - can use a lot of memory for caching of filters. See the OpenSearch site for full instructions on running and installing.</p>
+<p>You can run OpenSearch on the same server, but preferably it should be running on a different server. OpenSearch - depending on the amount of data and types of search - can use a lot of memory for caching of filters. See the OpenSearch site for full instructions on running and installing.</p>
 </div>
 <div class="paragraph">
 <p>In general this is an easy process - OpenSearch offers various installation formats of all their versions.</p>
