@@ -10,13 +10,14 @@ Specific changes to xsl and javascript can be found at <<xsl-changes>>
     * Move client side operations into a high level client intended to usable via web actions or a cli.
 
 ===== Change summary
-    * When read-only and getting special calendar return a fake for missing calendar. Caused errors when we were missing the polls calendar for example.
-    * Various other VPOLL changes
-    * Fix handling of UNTIL element in recurrences when converting to/from xml
-    * More changes to detect and prevent multi-tab use in event add/update
-    * Cannot have a static variable for the session factory in util-hibernate. Opted to remove and let callers manage that. Prevented synch, notify and others working.
-    * Single event retrieval wasn't excluding tombstoned entities.
-    * Retrieval of 'special' xprops didn't eliminate tab delimiter when no params were present.
+* When read-only and getting special calendar return a fake for missing calendar. Caused errors when we were missing the polls calendar for example.
+* Various other VPOLL changes
+* Fix handling of UNTIL element in recurrences when converting to/from xml
+* More changes to detect and prevent multi-tab use in event add/update
+* Cannot have a static variable for the session factory in util-hibernate. Opted to remove and let callers manage that. Prevented synch, notify and others working.
+* Single event retrieval wasn't excluding tombstoned entities.
+* Retrieval of 'special' xprops didn't eliminate tab delimiter when no params were present.
+* Add refresh feature to synch engine with new button on the admin screen. Will cause an immediate resynch of the subscription. Useful when fixing bugs in the data or the receiving end.
 
 ==== Release 4.1.0:
 ===== Change summary
