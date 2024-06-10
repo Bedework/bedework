@@ -127,7 +127,6 @@ bw-util-index: 5.0.0-SNAPSHOT
     bw-util-logging
     bw-util-network
     bw-util-tz
-    ical4j
 
 bw-util2: 5.0.0-SNAPSHOT
     bedework-parent
