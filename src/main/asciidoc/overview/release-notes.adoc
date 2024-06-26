@@ -6,11 +6,13 @@ Specific changes to xsl and javascript can be found at <<xsl-changes>>
 ==== Dev - To Be Release 4.1.1:
 ===== Upcoming changes
 
-    * Cross the jakarta boundary. Will mean upgrading wildfly.
-    * Move client side operations into a high level client intended to usable via web actions or a cli.
+* Cross the jakarta boundary. Will mean upgrading wildfly.
+* Move client side operations into a high level client intended to usable via web actions or a cli.
+* Work on removing struts
+* Create migration tool to rewrite or modify database to allow new simplified schema and allow removal of hibernate as a dependency.
 
 ===== Change summary
-* When read-only and getting special calendar return a fake for missing calendar. Caused errors when we were missing the polls calendar for example.
+* When read-only and getting special calendar, return a fake for missing calendar. Caused errors when we were missing the polls calendar for example.
 * Various other VPOLL changes
 * Fix handling of UNTIL element in recurrences when converting to/from xml
 * More changes to detect and prevent multi-tab use in event add/update

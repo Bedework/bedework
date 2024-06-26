@@ -76,6 +76,7 @@
         <option value="$PROJECT_DIR$/../bw-icalendar-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-exchangews-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calws-soap/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-web/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

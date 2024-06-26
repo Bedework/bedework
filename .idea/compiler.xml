@@ -9,6 +9,7 @@
         <module name="bw-calendar-xsl-common" />
         <module name="bw-icalendar-xml" />
         <module name="bw-self-registration-web" />
+        <module name="bw-web" />
         <module name="bw-util-opensearch" />
         <module name="bw-category-web" />
         <module name="bw-category-ear" />

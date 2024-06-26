@@ -1,7 +1,7 @@
 === Subscribing to a feed for public calendars.
 ==== Data format
 The simplest data format is standard RFC5545 ics. For greater efficiency the
-service providing the data should set the Last-Modified header field
+service providing the data should set the Last-Modified or Etag header field
 when the data changes. This will allow the synch engine to skip a
 download for unchanged data.
 
@@ -19,7 +19,7 @@ will use its own set of timezone definitions.
 primary key to an event - and all its instances if recurring.
 
 *Images:* Images can be added to the feed and this will allow their
-display on the main web interface. Specify and x-property as belkow:
+display on the main web interface. Specify an x-property as below:
 ----
 X-BEDEWORK-IMAGE;ALTREP=A title:https://example.edu/sites/default/files/images/fall2022_fun.png
 ----
@@ -98,6 +98,9 @@ The use of bedework categories is important for much of the front-end filtering 
 As an example if we have the alias structure +
 `performances/comedy` +
 and comedy is tagged with the category *comedy* and performances with the category *performances* then the imported event needs both categories.
+
+==== Recurring events
+These present some new issues for the feed.
 
 ==== Examples
 

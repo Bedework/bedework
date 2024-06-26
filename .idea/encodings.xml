@@ -410,6 +410,8 @@
     <file url="file://$PROJECT_DIR$/../bw-util2/bw-util2-vcard/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webcache/bw-webcache-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webcache/bw-webcache-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webcache/bw-webcache-war/src/main/java" charset="UTF-8" />
