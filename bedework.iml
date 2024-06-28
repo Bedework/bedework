@@ -5,6 +5,8 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp/.m2" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/sv" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/test-install" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/tst" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly" />
     </content>
   </component>
 </module>
