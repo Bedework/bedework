@@ -21,7 +21,7 @@ Specific changes to xsl and javascript can be found at <<xsl-changes>>
 * Retrieval of 'special' xprops didn't eliminate tab delimiter when no params were present.
 * Add refresh feature to synch engine with new button on the admin screen. Will cause an immediate resynch of the subscription. Useful when fixing bugs in the data or the receiving end.
 
-==== Release 4.1.0:
+==== Release 4.1.0 (2024/04/04):
 ===== Change summary
 There are changes that will mean some config or stylesheet
 change when upgrading. More details may be seen below.
@@ -118,7 +118,7 @@ checkbox and save.
 ====
 
 
-==== Release 4.0.3:
+==== Release 4.0.3 (2022/06/03):
 This release has been a long time coming largely because it involved a significant amount of restructuring. We've moved away from ElasticSearch because of licence issues, and completely overhauled the deployment process.
 
 Part of the refactoring is to split off the read-only system from the read-write components. This would allow deployment of a much lighter weight service for feeds and web-presence. This work is not yet complete.
