@@ -201,6 +201,14 @@
     <file url="file://$PROJECT_DIR$/../bw-category/bw-category-web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-category/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-category/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cli/bw-cli-bwcmd/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cli/bw-cli-bwcmd/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cli/bw-cli-jmx/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cli/bw-cli-jmx/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cli/bw-cli-shell/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cli/bw-cli-shell/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cli/bw-cli-toolcmd/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-cli/bw-cli-toolcmd/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cli/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cli/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cliutil/bw-util-cli/src/main/java" charset="UTF-8" />

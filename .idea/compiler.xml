@@ -51,6 +51,7 @@
         <module name="bw-event-registration-ear" />
         <module name="bw-util-options" />
         <module name="bw-evreg-war" />
+        <module name="bw-cli-jmx" />
         <module name="bw-carddav-common" />
         <module name="bw-util-maven-deploy-wfmodule" />
         <module name="bw-webcache-common" />
@@ -64,6 +65,7 @@
         <module name="bw-util-deployment" />
         <module name="bw-calsockets-web" />
         <module name="bw-calendar-xsl-calrsrc-SoEDepartmental" />
+        <module name="bw-cli-toolcmd" />
         <module name="bw-carddav-dumpres" />
         <module name="bw-carddav-server" />
         <module name="bw-calendar-ucaldav" />
@@ -82,13 +84,11 @@
         <module name="bw-util-xml" />
         <module name="bw-util-xmltools" />
         <module name="bw-calendar-pubcaldav" />
-        <module name="bw-cli" />
         <module name="bw-category-service" />
         <module name="bw-calendar-facade" />
         <module name="bw-calendar-notifyws" />
         <module name="bw-util-indexing" />
         <module name="bw-timezone-server-xml" />
-        <module name="bw-calendar-highlevel-client" />
         <module name="bw-carddav-user-war" />
         <module name="bw-calendar-mail" />
         <module name="bw-util-jolokia" />
@@ -111,6 +111,7 @@
         <module name="bw-calendar-userws" />
         <module name="bw-access" />
         <module name="bw-util-security" />
+        <module name="bw-cli-shell" />
         <module name="bw-webclient-cal" />
         <module name="bw-webclient-submit" />
         <module name="bw-note-db" />
@@ -151,6 +152,7 @@
         <module name="bw-note-war" />
         <module name="bw-util-servlet-filters" />
         <module name="bw-wf-calendar-subsystem" />
+        <module name="bw-cli-bwcmd" />
         <module name="bw-caldav-server" />
         <module name="bw-calendar-annotations" />
         <module name="bw-util-logging" />
