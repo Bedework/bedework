@@ -23,11 +23,11 @@
 <li><a href="#release-notes">1.2. Release Notes</a>
 <ul class="sectlevel3">
 <li><a href="#_dev_to_be_release_4_1_1">1.2.1. Dev - To Be Release 4.1.1:</a></li>
-<li><a href="#_release_4_1_0">1.2.2. Release 4.1.0:</a></li>
+<li><a href="#_release_4_1_0_20240404">1.2.2. Release 4.1.0 (2024/04/04):</a></li>
 <li><a href="#_some_bug_fixes">1.2.3. Some bug fixes</a></li>
 <li><a href="#_workflow_changes">1.2.4. Workflow changes</a></li>
 <li><a href="#_sharethis_removed">1.2.5. sharethis removed</a></li>
-<li><a href="#_release_4_0_3">1.2.6. Release 4.0.3:</a></li>
+<li><a href="#_release_4_0_3_20220603">1.2.6. Release 4.0.3 (2022/06/03):</a></li>
 <li><a href="#_elasticsearch_replaced_with_opensearch">1.2.7. ElasticSearch replaced with OpenSearch</a></li>
 <li><a href="#_new_wildfly_galleon_feature_pack_install">1.2.8. New wildfly galleon feature pack install.</a></li>
 <li><a href="#_missing_tables_in_database">1.2.9. Missing tables in database</a></li>
@@ -97,7 +97,8 @@
 <li><a href="#_mapping_locations">3.4.3. Mapping Locations</a></li>
 <li><a href="#_mapping_contacts">3.4.4. Mapping contacts</a></li>
 <li><a href="#_mapping_categories">3.4.5. Mapping categories</a></li>
-<li><a href="#_examples">3.4.6. Examples</a></li>
+<li><a href="#_recurring_events">3.4.6. Recurring events</a></li>
+<li><a href="#_examples">3.4.7. Examples</a></li>
 </ul>
 </li>
 <li><a href="#auth-users">3.5. Public events authorised users</a>
@@ -200,7 +201,7 @@
 <li><a href="#_index_logs_in_es">7.1.15. Index logs in ES</a></li>
 <li><a href="#_timezones">7.1.16. Timezones</a></li>
 <li><a href="#_general_work_needed">7.1.17. General work needed</a></li>
-<li><a href="#_recurring_events">7.1.18. Recurring events</a></li>
+<li><a href="#_recurring_events_2">7.1.18. Recurring events</a></li>
 </ul>
 </li>
 <li><a href="#Debugging-the-quickstart">7.2. Debugging the quickstart</a></li>
@@ -409,14 +410,51 @@
 <li>
 <p>Move client side operations into a high level client intended to usable via web actions or a cli.</p>
 </li>
+<li>
+<p>Work on removing struts</p>
+</li>
+<li>
+<p>Create migration tool to rewrite or modify database to allow new simplified schema and allow removal of hibernate as a dependency.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_change_summary">Change summary</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>When read-only and getting special calendar, return a fake for missing calendar. Caused errors when we were missing the polls calendar for example.</p>
+</li>
+<li>
+<p>Various other VPOLL changes</p>
+</li>
+<li>
+<p>Fix handling of UNTIL element in recurrences when converting to/from xml</p>
+</li>
+<li>
+<p>More changes to detect and prevent multi-tab use in event add/update</p>
+</li>
+<li>
+<p>Cannot have a static variable for the session factory in util-hibernate. Opted to remove and let callers manage that. Prevented synch, notify and others working.</p>
+</li>
+<li>
+<p>Single event retrieval wasn&#8217;t excluding tombstoned entities.</p>
+</li>
+<li>
+<p>Retrieval of 'special' xprops didn&#8217;t eliminate tab delimiter when no params were present.</p>
+</li>
+<li>
+<p>Add refresh feature to synch engine with new button on the admin screen. Will cause an immediate resynch of the subscription. Useful when fixing bugs in the data or the receiving end.</p>
+</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_4_1_0">1.2.2. Release 4.1.0:</h4>
+<h4 id="_release_4_1_0_20240404">1.2.2. Release 4.1.0 (2024/04/04):</h4>
 <div class="sect4">
-<h5 id="_change_summary">Change summary</h5>
+<h5 id="_change_summary_2">Change summary</h5>
 <div class="paragraph">
 <p>There are changes that will mean some config or stylesheet
 change when upgrading. More details may be seen below.</p>
@@ -596,7 +634,7 @@ checkbox and save.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_release_4_0_3">1.2.6. Release 4.0.3:</h4>
+<h4 id="_release_4_0_3_20220603">1.2.6. Release 4.0.3 (2022/06/03):</h4>
 <div class="paragraph">
 <p>This release has been a long time coming largely because it involved a significant amount of restructuring. We&#8217;ve moved away from ElasticSearch because of licence issues, and completely overhauled the deployment process.</p>
 </div>
@@ -2496,7 +2534,7 @@ create the aliases inside that folder</p>
 <h4 id="_data_format">3.4.1. Data format</h4>
 <div class="paragraph">
 <p>The simplest data format is standard RFC5545 ics. For greater efficiency the
-service providing the data should set the Last-Modified header field
+service providing the data should set the Last-Modified or Etag header field
 when the data changes. This will allow the synch engine to skip a
 download for unchanged data.</p>
 </div>
@@ -2520,7 +2558,7 @@ primary key to an event - and all its instances if recurring.</p>
 </div>
 <div class="paragraph">
 <p><strong>Images:</strong> Images can be added to the feed and this will allow their
-display on the main web interface. Specify and x-property as belkow:</p>
+display on the main web interface. Specify an x-property as below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2692,7 +2730,13 @@ and comedy is tagged with the category <strong>comedy</strong> and performances 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_examples">3.4.6. Examples</h4>
+<h4 id="_recurring_events">3.4.6. Recurring events</h4>
+<div class="paragraph">
+<p>These present some new issues for the feed.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_examples">3.4.7. Examples</h4>
 
 </div>
 </div>
@@ -4672,7 +4716,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_recurring_events">7.1.18. Recurring events</h4>
+<h4 id="_recurring_events_2">7.1.18. Recurring events</h4>
 <div class="paragraph">
 <p>Currently I&#8217;m indexing all of the instances we allow - that can be many.
 The ideal would be not to index any instances but only the master and
