@@ -17,6 +17,7 @@
         <module name="bw-wfmodules-org-jasig-cas" />
         <module name="bw-wf-undertow-handlers" />
         <module name="bw-exchangews-xml" />
+        <module name="bw-webtest" />
         <module name="bw-webclient-calauth" />
         <module name="bw-util-http" />
         <module name="bw-note-common" />

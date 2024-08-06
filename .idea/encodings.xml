@@ -325,6 +325,10 @@
     <file url="file://$PROJECT_DIR$/../bw-synch/bw-wf-synch-feature-pack/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-synch/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-testsuite/bw-webtest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-testsuite/bw-webtest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-testsuite/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-testsuite/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-common/src/main/resources" charset="UTF-8" />
@@ -432,6 +436,8 @@
     <file url="file://$PROJECT_DIR$/../bw-webcache/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webdav/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-webdav/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-webtest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-webtest/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wf-calendar-feature-pack/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wf-core-feature-pack/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wf-extensions/bw-wf-calendar-subsystem/src/main/java" charset="UTF-8" />

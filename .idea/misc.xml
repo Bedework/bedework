@@ -77,6 +77,8 @@
         <option value="$PROJECT_DIR$/../bw-exchangews-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calws-soap/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-webtest/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-testsuite/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -85,6 +87,7 @@
         <option value="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-synch/bw-synch-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-ear/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-webtest/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-caldav/bw-wfmodules-calws-soap-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-logging/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-notifier/bw-wfmodules-note-ear/pom.xml" />
