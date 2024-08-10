@@ -1,0 +1,7 @@
+[[Workflow]]
+=== Workflow Support
+
+Workflow support is enabled by a system property: ...
+
+==== Approver users
+An approver user is an admin user with approval rights. These may be explicitly added to the user as an *approver* role (see ...).
