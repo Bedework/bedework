@@ -2,16 +2,20 @@
 === Public events authorised users
 These are users with rights to create events, perhaps publish them and possibly have access to calendar suite setup.
 
+A user must have one or more roles and be the member of at least one group to have any administrative capabilities.
+
+See <<workflow>> for details on how some of these roles are used.
+
 ==== Creating a user
 Go to the "Users" tab and click on "Manage Admin Roles".
 
 If the user does not appear in the list then type the account into the box labeled "Edit admin roles by userid" and hit enter.
 
-All users should have the "Public Events" flag set.
+All users with the ability to create events must have the "Public Events" flag set.
 
-Users who may create but not publish should have the "Content Admin" flag set.
+The "Content Admin" flag does nothing at present - ignore.
 
-Users who may create and publish will also have the "Approver" flag set.
+Users who may create and publish must have the "Approver" flag set.
 
 ==== Updating a user
 Go to the same location, "Users" -> "Manage Admin Roles", locate the user in the list and click on the "edit" link.
@@ -19,7 +23,7 @@ Go to the same location, "Users" -> "Manage Admin Roles", locate the user in the
 Flags may be set or unset from there.
 
 ==== Updating group membership.
-Until the user is added to a group or groups they cannot create events. Each calendar suite will have one or more groups associated with it. Typically there is an admin group associated directly with the suite and a submission group which is a member of the admin group.
+Until the user is added to a group or groups they cannot create events. Each calendar suite will have one or more groups associated with it. Typically, there is an admin group associated directly with the suite and a submission group which is a member of the admin group.
 
 Approvers are typically added to the admin group and event creators get added to the submission group.
 

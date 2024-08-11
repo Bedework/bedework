@@ -36,11 +36,12 @@ include::{admin-dir}reindex.adoc[]
 include::{admin-dir}errors.adoc[]
 
 == Public Administrator Features
+include::{admin-dir}authusers.adoc[]
+include::{admin-dir}workflow.adoc[]
 include::{admin-dir}aliasStructureOverview.adoc[]
 include::{admin-dir}addTopicalArea.adoc[]
 include::{admin-dir}eventRegistration.adoc[]
 include::{admin-dir}subscriptions.adoc[]
-include::{admin-dir}authusers.adoc[]
 
 == System Components
 include::{sometime-dir}sometime.adoc[]

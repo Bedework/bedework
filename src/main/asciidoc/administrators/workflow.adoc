@@ -1,4 +1,4 @@
-[[Workflow]]
+[[workflow]]
 === Workflow Support
 
 Workflow support is enabled by a system property: ...
