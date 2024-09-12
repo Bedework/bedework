@@ -49,6 +49,7 @@ deploySnapshot bw-calendar-client
 deploySnapshot bw-calendar-xsl
 deploySnapshot bw-calendar-deploy
 deploySnapshot bw-webcache
+deploySnapshot bw-testsuite
 deploySnapshot bw-wf-extensions
 deploySnapshot bw-quickstart
 deploySnapshot bw-wfmodules

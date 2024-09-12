@@ -15,7 +15,7 @@ If you wish to disable the public events registration system remove the "Eventre
 
 #### Enabling Public Events Registration (possibly after upgrade from a previous release)
 
-First ensure that the CalWs interface is available. This is the SOAP service that the event registration service uses o communicate with bedework. In system.xml make sure the <calSoapWsURI> element is present and has the same value as the soap:address element in pubcalws-soap/wssvc.wsdl (this requires better explanation - it's a file deployed in the bw-xml ear)
+First ensure that the CalWs interface is available. This is the SOAP service that the event registration service uses o communicate with bedework. In system.xml make sure the <calSoapWsURI> element is present and has the same value as the soap:address element in pubcalws-soap/wsdls/wssvc.wsdl (this requires better explanation - it's a file deployed in the bw-xml ear)
 
 If you have upgraded from an older release, you may not have the data required for event registration in your system yet.  Follow these steps to turn on the event registration system:  (Please note: the process outlined below is only set up for the default quickstart and postgresql configs at the moment.) 
 

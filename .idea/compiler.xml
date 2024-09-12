@@ -154,6 +154,7 @@
         <module name="bw-util-servlet-filters" />
         <module name="bw-wf-calendar-subsystem" />
         <module name="bw-cli-bwcmd" />
+        <module name="bw-event-registration-web-common" />
         <module name="bw-caldav-server" />
         <module name="bw-calendar-annotations" />
         <module name="bw-util-logging" />
