@@ -56,7 +56,7 @@ Some or all of the following seems to be required. Note it also seems to be impo
 ----
 \c caldb
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO bw;
-grant all privileges on database caldbwalsh to bw;
+grant all privileges on database caldb to bw;
 ----
 
 Set the hibernate dialect in the config file:
