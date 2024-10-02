@@ -31,18 +31,23 @@ This will install a version of wildfly with bedework with a full set
 of demonstration clients. A demo version of opensearch and apacheds
 will also be included.
 
-These steps have been tested on a mac and on the latest LTS linux.
+These steps have been tested on a mac and on the latest LTS linux. Any examples are for Ubuntu.
 
 NOTE: If this fails, and you are going to retry I suggest first
 remove the wildfly directory created when running galleon
 before retrying.
 
 * Install jdk 17
+----
+apt install openjdk-17-jdk
+----
 
 * In window 1 - Create a directory and cd into it.
 
 * Download galleon
+----
 wget https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip
+----
 and unzip.
 
 * run galleon to install - this is all one command:

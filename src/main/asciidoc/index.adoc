@@ -49,7 +49,6 @@ include::{sometime-dir}sometime.adoc[]
 == Deployers
 include::{deployer-dir}featurepack-install.adoc[]
 include::{deployer-dir}installing.adoc[]
-include::{deployer-dir}installing-quickstart.adoc[]
 include::{deployer-dir}deploying-servers.adoc[]
 include::{deployer-dir}configure-wildfly.adoc[]
 include::{deployer-dir}keycloak-saml.adoc[]
