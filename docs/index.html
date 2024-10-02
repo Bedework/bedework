@@ -132,28 +132,15 @@
 </ul>
 </li>
 <li><a href="#installing-bedwork">6.2. Installing bedework on Ubuntu</a></li>
-<li><a href="#_installing_the_quickstart_3_12_x_onwards">6.3. Installing the quickstart (3.12.x onwards)</a>
+<li><a href="#deploying-servers">6.3. Deploying servers</a></li>
+<li><a href="#configuring-wildfly">6.4. Configuring wildfly</a>
 <ul class="sectlevel3">
-<li><a href="#_which_version">6.3.1. Which version</a></li>
-<li><a href="#_apacheds">6.3.2. Apacheds</a></li>
-<li><a href="#_opensearch">6.3.3. OpenSearch</a></li>
-<li><a href="#_maven">6.3.4. Maven</a></li>
-<li><a href="#default-maven-profiles">6.3.5. Default Maven Profiles</a></li>
-<li><a href="#_settings_for_build_and_install">6.3.6. Settings for build and install</a></li>
-<li><a href="#_security">6.3.7. Security</a></li>
-<li><a href="#_building">6.3.8. Building</a></li>
-<li><a href="#_deploying">6.3.9. Deploying</a></li>
+<li><a href="#_adding_an_admin_account">6.4.1. Adding an admin account</a></li>
 </ul>
 </li>
-<li><a href="#deploying-servers">6.4. Deploying servers</a></li>
-<li><a href="#configuring-wildfly">6.5. Configuring wildfly</a>
+<li><a href="#keycloak-saml">6.5. Configure keycloak saml</a>
 <ul class="sectlevel3">
-<li><a href="#_adding_an_admin_account">6.5.1. Adding an admin account</a></li>
-</ul>
-</li>
-<li><a href="#keycloak-saml">6.6. Configure keycloak saml</a>
-<ul class="sectlevel3">
-<li><a href="#_create_a_self_signed_cert">6.6.1. Create a self-signed cert.</a></li>
+<li><a href="#_create_a_self_signed_cert">6.5.1. Create a self-signed cert.</a></li>
 </ul>
 </li>
 <li><a href="#_setting_up_databases">Setting up databases</a>
@@ -162,25 +149,25 @@
 <li><a href="#_mysql">MySQL</a></li>
 </ul>
 </li>
-<li><a href="#opensearch">6.7. OpenSearch</a>
+<li><a href="#opensearch">6.6. OpenSearch</a>
 <ul class="sectlevel3">
-<li><a href="#installing">6.7.1. Installing OpenSearch</a></li>
-<li><a href="#_installing_a_runnable_opensearch">6.7.2. Installing a runnable OpenSearch</a></li>
+<li><a href="#installing">6.6.1. Installing OpenSearch</a></li>
+<li><a href="#_installing_a_runnable_opensearch">6.6.2. Installing a runnable OpenSearch</a></li>
 </ul>
 </li>
-<li><a href="#configure-events-registration">6.8. Enabling and Disabling Public Events Registration</a>
+<li><a href="#configure-events-registration">6.7. Enabling and Disabling Public Events Registration</a>
 <ul class="sectlevel3">
-<li><a href="#_enabling_public_events_registration">6.8.1. Enabling Public Events Registration</a></li>
-<li><a href="#_disabling_public_events_registration">6.8.2. Disabling Public Events Registration</a></li>
-<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.8.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
-<li><a href="#_notifications_from_eventreg">6.8.4. Notifications from EventReg</a></li>
+<li><a href="#_enabling_public_events_registration">6.7.1. Enabling Public Events Registration</a></li>
+<li><a href="#_disabling_public_events_registration">6.7.2. Disabling Public Events Registration</a></li>
+<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.7.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
+<li><a href="#_notifications_from_eventreg">6.7.4. Notifications from EventReg</a></li>
 </ul>
 </li>
-<li><a href="#_initializing_the_database">6.9. Initializing the database</a>
+<li><a href="#_initializing_the_database">6.8. Initializing the database</a>
 <ul class="sectlevel3">
-<li><a href="#_rebuild_bw_xml">6.9.1. (Re)build bw-xml</a></li>
-<li><a href="#_validating_locations">6.9.2. Validating locations.</a></li>
-<li><a href="#_searching_for_public_locations">6.9.3. Searching for public locations</a></li>
+<li><a href="#_rebuild_bw_xml">6.8.1. (Re)build bw-xml</a></li>
+<li><a href="#_validating_locations">6.8.2. Validating locations.</a></li>
+<li><a href="#_searching_for_public_locations">6.8.3. Searching for public locations</a></li>
 </ul>
 </li>
 </ul>
@@ -2908,7 +2895,7 @@ of demonstration clients. A demo version of opensearch and apacheds
 will also be included.</p>
 </div>
 <div class="paragraph">
-<p>These steps have been tested on a mac and on the latest LTS linux.</p>
+<p>These steps have been tested on a mac and on the latest LTS linux. Any examples are for Ubuntu.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2929,14 +2916,33 @@ before retrying.
 <li>
 <p>Install jdk 17</p>
 </li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>apt install openjdk-17-jdk</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>In window 1 - Create a directory and cd into it.</p>
 </li>
 <li>
-<p>Download galleon
-wget <a href="https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip" class="bare">https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip</a>
-and unzip.</p>
+<p>Download galleon</p>
 </li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>wget https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and unzip.</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>run galleon to install - this is all one command:</p>
 </li>
@@ -3542,228 +3548,9 @@ makeidxprod all
 q</pre>
 </div>
 </div>
-<div id="installing-the-quickstart" class="paragraph">
-<p>For versions 4.0.0 onwards it is not necessary to install a quickstart. You can install a quickstart if you wish to do development or have convenient access to the sources.</p>
-</div>
-<div class="paragraph">
-<p>If you are only interested in having a runnable version for demonstration or production then see the instructions at <a href="#featurepack-install">Install bedework as a wildfly feature</a></p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="_installing_the_quickstart_3_12_x_onwards">6.3. Installing the quickstart (3.12.x onwards)</h3>
-<div class="paragraph">
-<p>The current quickstart is installed by executing a script which will create the quickstart directory and then download, clone and build. In the event of a failure part way through, the script may be restarted with the <strong>restart</strong> parameter.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-This requires git 2.x or greater. The clones use a tag rather than branch and this does not work for older gits.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The latest script may be downloaded from <a href="https://github.com/Bedework/bedework/raw/master/build/quickstart/linux/installQS.sh">github</a>. Alternatively clone the <a href="https://github.com/Bedework/bedework.git">bedework repo</a> and use the script at <strong>bedework/build/quickstart/linux/installQS.sh</strong></p>
-</div>
-<div class="paragraph">
-<p>Specific versions of the script are at:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.13.2/build/quickstart/linux/installQS.sh">3.13.2</a></p>
-</li>
-<li>
-<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.13.1/build/quickstart/linux/installQS.sh">3.13.1</a></p>
-</li>
-<li>
-<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.13.0/build/quickstart/linux/installQS.sh">3.13.0</a></p>
-</li>
-<li>
-<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.12.7/build/quickstart/linux/installQS.sh">3.12.7</a></p>
-</li>
-<li>
-<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.12.6/build/quickstart/linux/installQS.sh">3.12.6</a></p>
-</li>
-<li>
-<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.12.5/build/quickstart/linux/installQS.sh">3.12.5</a></p>
-</li>
-<li>
-<p><a href="https://github.com/Bedework/bedework/raw/bedework-3.12.3/build/quickstart/linux/installQS.sh">3.12.3</a></p>
-</li>
-</ul>
-</div>
-<div class="sect3">
-<h4 id="_which_version">6.3.1. Which version</h4>
-<div class="paragraph">
-<p>The script will ask you if you want the latest, developmentor pre-release version.</p>
-</div>
-<div class="paragraph">
-<p>You probably want latest. The dev version is obviously for development and can be very unstable. The pre-release version is ther only for testing of the install script.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_apacheds">6.3.2. Apacheds</h4>
-<div class="paragraph">
-<p>The script will install apacheds. This will install a directory with some initial ids in place for testing. Ultimately you&#8217;ll want to use your own directory service.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_opensearch">6.3.3. OpenSearch</h4>
-<div class="paragraph">
-<p>You need a running OpenSearch - currently release 1.2.3 The glleon install will provide a script to install a docker image and customize it for the quickstart.</p>
-</div>
-<div class="paragraph">
-<p>This requires you to have docker and docker-compose installed first.</p>
-</div>
-<div class="paragraph">
-<p>The instructions related to installing a docker image can be found at <a href="https://opensearch.org/docs" class="bare">https://opensearch.org/docs</a></p>
-</div>
-<div class="paragraph">
-<p>After the install is complete use the 2 scripts bwstartosch.sh and bwstoposch.sh to start and stop the docker image.</p>
-</div>
-<div class="paragraph">
-<p>If you want to install your own copy and configure it the configuration directory is wildfly/standalone/configuration/bedework/opensearch/config. Use this to replace the config in the downloaded OpenSearch.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_maven">6.3.4. Maven</h4>
-<div class="paragraph">
-<p>Maven is required if you want to install the sources. If not you can skip this section.</p>
-</div>
-<div class="paragraph">
-<p>This is a maven project and as usual you need to set up your maven profile in ~/.m2/settings.xml. The script will display a possible settings.xml file with the paths filled in.</p>
-</div>
-<div class="paragraph">
-<p>If you want to merge in the profile to an existing settings.xml ensure you also merge in the <strong>pluginGroups</strong> section.</p>
-</div>
-<div class="paragraph">
-<p>The profile does not need to be active by default if you have other profiles. The build process will specify the bedework-qs profile.</p>
-</div>
-<div class="paragraph">
-<p>Below is the contents of an example settings.xml file. This file must be set up before allowing the script to continue on to the builds otherwise they will fail during deployment.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;settings</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://maven.apache.org/SETTINGS/1.0.0</span><span class="delimiter">&quot;</span></span>
-          <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span>
-          <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://maven.apache.org/SETTINGS/1.0.0</span>
-                         <span class="content">http://maven.apache.org/xsd/settings-1.0.0.xsd</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-  <span class="tag">&lt;pluginGroups&gt;</span>
-    <span class="tag">&lt;pluginGroup&gt;</span>org.bedework<span class="tag">&lt;/pluginGroup&gt;</span>
-  <span class="tag">&lt;/pluginGroups&gt;</span>
-
-  <span class="tag">&lt;profiles&gt;</span>
-    <span class="tag">&lt;profile&gt;</span>
-      <span class="tag">&lt;id&gt;</span>bedework-3<span class="tag">&lt;/id&gt;</span>
-      <span class="tag">&lt;activation&gt;</span>
-        <span class="tag">&lt;activeByDefault&gt;</span>false<span class="tag">&lt;/activeByDefault&gt;</span>
-      <span class="tag">&lt;/activation&gt;</span>
-      <span class="tag">&lt;properties&gt;</span>
-        <span class="tag">&lt;org.bedework.deployment.basedir&gt;</span>$qs<span class="tag">&lt;/org.bedework.deployment.basedir&gt;</span>
-        <span class="tag">&lt;org.bedework.deployment.properties&gt;</span>$qs/bedework/config/wildfly.deploy.properties<span class="tag">&lt;/org.bedework.deployment.properties&gt;</span>
-      <span class="tag">&lt;/properties&gt;</span>
-    <span class="tag">&lt;/profile&gt;</span>
-  <span class="tag">&lt;/profiles&gt;</span>
-<span class="tag">&lt;/settings&gt;</span></code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="default-maven-profiles">6.3.5. Default Maven Profiles</h4>
-<div class="paragraph">
-<p>Note there appears to be a bug in the use of <strong><strong>activeByDefault</strong></strong>.
-Explicitly specifying a profile with the maven -P parameter is supposed
-to deactivate a profile marked as activeByDefault. This is not (always?)
-happening.</p>
-</div>
-<div class="paragraph">
-<p>If you only have profile marking by default should be fine. To ensure
-only one profile (or the expected profiles) are active cd into the project
-and try</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>mvn -P bedework-3 help:active-profiles</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_settings_for_build_and_install">6.3.6. Settings for build and install</h4>
-<div class="paragraph">
-<p>The bw and install scripts now source a .bw file in the home directory
-which can set some defaults.</p>
-</div>
-<div class="paragraph">
-<p>To alleviate some of the issues of having multiple maven profiles for bedework
-builds set the profile here with the <strong>bw-mvnProfile</strong> property. Note the setting needs to include the -P.</p>
-</div>
-<div class="paragraph">
-<p>When building with maven the profile provides the location of the deployment properties. For the quickstart this is located in the bedework module at <strong>bedework/config/wildfly.deploy.properties</strong>.</p>
-</div>
-<div class="paragraph">
-<p>When using the nobuild option you need to take a copy of that file and modify it according to the needs of your installation. Update the <strong>.bw</strong> file property <strong>bw_deployProps</strong> to define the location of the modified property file.</p>
-</div>
-<div class="paragraph">
-<p>An example .bw file is:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>#
-# Defaults for bw script
-#
-echo "Setting defaults from .bw"
-bw_mvnProfile="-P bedework_dev"
-
-bw_deployProps="/home/myhome/bwstuff/myprops.properties"</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_security">6.3.7. Security</h4>
-<div class="paragraph">
-<p>During the install an id and password will be set up so that the install process can reindex the data. These will allow use of the cli and the hawtio console.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_building">6.3.8. Building</h4>
-<div class="paragraph">
-<p>In many cases it is possible to simply cd in to the appropriate directory and do a mvn install with the bedework-3 profile. However there is a <strong>bw</strong> script which - while taking longer - does build all projects a module depends upon. This avoids the need to work out the dependency orderings of the independent projects. Thus</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>./bw bwcal</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>will build a lot of projects eventually building the client project which deploys an ear file.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_deploying">6.3.9. Deploying</h4>
-<div class="paragraph">
-<p>As part of the bedework project there is a maven plugin which uses a properties file to handle post-build deployment issues. Essentially the ear or war as built acts as a template for the deployer.</p>
-</div>
-<div class="paragraph">
-<p>The deployment process may involve inserting filters for CAS, adding property values to web.xml files, cloning entire wars for calendar suites etc.</p>
-</div>
-<div class="paragraph">
-<p>The file <strong>bedework/config/wildfly.deploy.properties</strong> is the quickstart version of that file.</p>
-</div>
-<div class="paragraph">
-<p>When developing your own service the first thing to do is create a repository with your files and copy the above file into that repository. Then set the <strong>org.bedework.deployment.properties</strong> value in your maven settings.xml to point to that file.</p>
-</div>
-<div class="paragraph">
-<p>DO NOT change the <strong>org.bedework.deployment.basedir</strong> property - unless you move the quickstart. This property is used to locate the wildfly instance.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="deploying-servers">6.4. Deploying servers</h3>
+<h3 id="deploying-servers">6.3. Deploying servers</h3>
 <div class="paragraph">
 <p>It is possible to deploy bedework in a number of configurations. There are the following major components to consider:</p>
 </div>
@@ -3815,9 +3602,9 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="configuring-wildfly">6.5. Configuring wildfly</h3>
+<h3 id="configuring-wildfly">6.4. Configuring wildfly</h3>
 <div class="sect3">
-<h4 id="_adding_an_admin_account">6.5.1. Adding an admin account</h4>
+<h4 id="_adding_an_admin_account">6.4.1. Adding an admin account</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code>cd &lt;quickstart-dir&gt;
@@ -3852,12 +3639,12 @@ bw_deployProps="/home/myhome/bwstuff/myprops.properties"</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="keycloak-saml">6.6. Configure keycloak saml</h3>
+<h3 id="keycloak-saml">6.5. Configure keycloak saml</h3>
 <div class="paragraph">
 <p>Saml seems to need a certificate for signing. A self-signed cert will do.</p>
 </div>
 <div class="sect3">
-<h4 id="_create_a_self_signed_cert">6.6.1. Create a self-signed cert.</h4>
+<h4 id="_create_a_self_signed_cert">6.5.1. Create a self-signed cert.</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Generate private key
@@ -4149,7 +3936,7 @@ calschema export</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="opensearch">6.7. OpenSearch</h3>
+<h3 id="opensearch">6.6. OpenSearch</h3>
 <div class="paragraph">
 <p>Bedework uses OpenSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as a local application, useful for development - or as an external service - which will be required for clustering.</p>
 </div>
@@ -4197,7 +3984,7 @@ cluster.initial_master_nodes: ["bw2019-1"]</code></pre>
 <p>Use specific names for the cluster and nodes.</p>
 </div>
 <div class="sect3">
-<h4 id="installing">6.7.1. Installing OpenSearch</h4>
+<h4 id="installing">6.6.1. Installing OpenSearch</h4>
 <div class="paragraph">
 <p>There are a number of options available. The deployed wildfly demo server has a script to deploy a docker image of OpenSearch.
 First ensure docker is installed on your system and running then execute:</p>
@@ -4249,7 +4036,7 @@ First ensure docker is installed on your system and running then execute:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_installing_a_runnable_opensearch">6.7.2. Installing a runnable OpenSearch</h4>
+<h4 id="_installing_a_runnable_opensearch">6.6.2. Installing a runnable OpenSearch</h4>
 <div class="paragraph">
 <p>If you wish to install OpenSearch as a runnable service there are instructions on running a minimal version without any security.
 You will need to copy the configuration and possibly the data from the deployed demo wildfly.</p>
@@ -4276,15 +4063,15 @@ bwOschdatadir="&lt;somewhere&gt;/&lt;opensearch&gt;/data/"</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-events-registration">6.8. Enabling and Disabling Public Events Registration</h3>
+<h3 id="configure-events-registration">6.7. Enabling and Disabling Public Events Registration</h3>
 <div class="sect3">
-<h4 id="_enabling_public_events_registration">6.8.1. Enabling Public Events Registration</h4>
+<h4 id="_enabling_public_events_registration">6.7.1. Enabling Public Events Registration</h4>
 <div class="paragraph">
 <p>The public events registration system is enabled by default if you have installed Bedework with the data available in the quickstart.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_disabling_public_events_registration">6.8.2. Disabling Public Events Registration</h4>
+<h4 id="_disabling_public_events_registration">6.7.2. Disabling Public Events Registration</h4>
 <div class="paragraph">
 <p>If you wish to disable the public events registration system remove the "Eventreg admin token" from the System Preferences in the jmx console:</p>
 </div>
@@ -4313,7 +4100,7 @@ bwOschdatadir="&lt;somewhere&gt;/&lt;opensearch&gt;/data/"</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.8.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
+<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.7.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
 <div class="paragraph">
 <p>First ensure that the CalWs interface is available. This is the SOAP service that the event registration service uses o communicate with bedework. In system.xml make sure the &lt;calSoapWsURI&gt; element is present and has the same value as the soap:address element in pubcalws-soap/wssvc.wsdl (this requires better explanation - it&#8217;s a file deployed in the bw-xml ear)</p>
 </div>
@@ -4414,7 +4201,7 @@ bwOschdatadir="&lt;somewhere&gt;/&lt;opensearch&gt;/data/"</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_notifications_from_eventreg">6.8.4. Notifications from EventReg</h4>
+<h4 id="_notifications_from_eventreg">6.7.4. Notifications from EventReg</h4>
 <div class="paragraph">
 <p>The event registration service will send notifications to the calendar engine when changes take place that might require notifying users. The event registration service calls the calendar engine notification web service (not to be confused with the notification engine). This web service allows the core engine to add notifications to the accounts of subscribed users. It is the job of the notification engine to forward those via email or some other service.</p>
 </div>
@@ -4435,7 +4222,7 @@ The synch engine handles the synchronization of external subscriptions with a be
 </div>
 </div>
 <div class="sect2">
-<h3 id="_initializing_the_database">6.9. Initializing the database</h3>
+<h3 id="_initializing_the_database">6.8. Initializing the database</h3>
 <div class="paragraph">
 <p>If running with mysql the built in hibernate schema export doesn&#8217;t work - mysql jdbc does not support it.</p>
 </div>
@@ -4476,7 +4263,7 @@ grant all on synchDb.* to '&lt;id&gt;'@'%' identified by '&lt;pw&gt;';</code></p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_rebuild_bw_xml">6.9.1. (Re)build bw-xml</h4>
+<h4 id="_rebuild_bw_xml">6.8.1. (Re)build bw-xml</h4>
 <div class="paragraph">
 <p>The synch engine uses an extension of CalWS to communicate with bedework. It requires that the wsdl file contain the location of bedework. This is configured into the deploy.properties file - only one change for the synch engine should be necessary. Set the location of (one of) your application servers in the following.</p>
 </div>
@@ -4536,7 +4323,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_validating_locations">6.9.2. Validating locations.</h4>
+<h4 id="_validating_locations">6.8.2. Validating locations.</h4>
 <div class="paragraph">
 <p>When an event arrives at the receiving end with an "X-BEDEWORK-LOCATION" property if the String value of the x-property is &#8230;&#8203;
 === Locations in bedework</p>
@@ -4546,7 +4333,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_searching_for_public_locations">6.9.3. Searching for public locations</h4>
+<h4 id="_searching_for_public_locations">6.8.3. Searching for public locations</h4>
 <div class="paragraph">
 <p>There is a web service endpoint which can be used to search for public locations. It takes a filter expression as a parameter and will return &lt;a limited?&gt; number</p>
 </div>
@@ -6160,7 +5947,7 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-08-10 14:40:58 EDT
+Last updated 2024-10-02 12:28:36 EDT
 </div>
 </div>
 </body>
