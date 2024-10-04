@@ -1,5 +1,5 @@
-[[opensearch, Install and configure OpenSearch]]
-=== OpenSearch
+[[installing-opensearch]]
+=== Install and configure OpenSearch
 Bedework uses OpenSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as a local application, useful for development - or as an external service - which will be required for clustering.
 
 It is safer to NOT run in production with the OpenSearch interfaces open to the outside. OpenSearch now has various configuration options available. Bedework supports basic user authentication. Currently, you can run unauthenticated but OpenSearch will generate a lot of warnings in the log.

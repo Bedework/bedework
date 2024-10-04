@@ -143,31 +143,31 @@
 <li><a href="#_create_a_self_signed_cert">6.5.1. Create a self-signed cert.</a></li>
 </ul>
 </li>
-<li><a href="#_setting_up_databases">Setting up databases</a>
+<li><a href="#setting-up-databases">6.6. Setting up databases</a>
 <ul class="sectlevel3">
-<li><a href="#_postgresql">postgresql</a></li>
-<li><a href="#_mysql">MySQL</a></li>
+<li><a href="#_postgresql">6.6.1. postgresql</a></li>
+<li><a href="#_mysql">6.6.2. MySQL</a></li>
 </ul>
 </li>
-<li><a href="#opensearch">6.6. OpenSearch</a>
+<li><a href="#installing-opensearch">6.7. Install and configure OpenSearch</a>
 <ul class="sectlevel3">
-<li><a href="#installing">6.6.1. Installing OpenSearch</a></li>
-<li><a href="#_installing_a_runnable_opensearch">6.6.2. Installing a runnable OpenSearch</a></li>
+<li><a href="#installing">6.7.1. Installing OpenSearch</a></li>
+<li><a href="#_installing_a_runnable_opensearch">6.7.2. Installing a runnable OpenSearch</a></li>
 </ul>
 </li>
-<li><a href="#configure-events-registration">6.7. Enabling and Disabling Public Events Registration</a>
+<li><a href="#configure-events-registration">6.8. Enabling and Disabling Public Events Registration</a>
 <ul class="sectlevel3">
-<li><a href="#_enabling_public_events_registration">6.7.1. Enabling Public Events Registration</a></li>
-<li><a href="#_disabling_public_events_registration">6.7.2. Disabling Public Events Registration</a></li>
-<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.7.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
-<li><a href="#_notifications_from_eventreg">6.7.4. Notifications from EventReg</a></li>
+<li><a href="#_enabling_public_events_registration">6.8.1. Enabling Public Events Registration</a></li>
+<li><a href="#_disabling_public_events_registration">6.8.2. Disabling Public Events Registration</a></li>
+<li><a href="#_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.8.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</a></li>
+<li><a href="#_notifications_from_eventreg">6.8.4. Notifications from EventReg</a></li>
 </ul>
 </li>
-<li><a href="#_initializing_the_database">6.8. Initializing the database</a>
+<li><a href="#_initializing_the_database">6.9. Initializing the database</a>
 <ul class="sectlevel3">
-<li><a href="#_rebuild_bw_xml">6.8.1. (Re)build bw-xml</a></li>
-<li><a href="#_validating_locations">6.8.2. Validating locations.</a></li>
-<li><a href="#_searching_for_public_locations">6.8.3. Searching for public locations</a></li>
+<li><a href="#_rebuild_bw_xml">6.9.1. (Re)build bw-xml</a></li>
+<li><a href="#_validating_locations">6.9.2. Validating locations.</a></li>
+<li><a href="#_searching_for_public_locations">6.9.3. Searching for public locations</a></li>
 </ul>
 </li>
 </ul>
@@ -203,6 +203,7 @@
 <li><a href="#_setup">7.4.1. Setup</a></li>
 </ul>
 </li>
+<li><a href="#building-bedwork">7.5. Building bedework</a></li>
 </ul>
 </li>
 <li><a href="#older-releases">8. Older Bedework Versions (3.10 and Prior)</a>
@@ -2944,15 +2945,39 @@ before retrying.
 <div class="ulist">
 <ul>
 <li>
-<p>run galleon to install - this is all one command:</p>
+<p>run galleon to install:</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>./galleon-5.2.2.Final/bin/galleon.sh \
-   install org.bedework.deploy:bw-wf-feature-pack:4.1.0
+<pre>./galleon-5.2.2.Final/bin/galleon.sh</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first time, if you want to install snapshot versions, you need to set up repositories and resolve for the required version</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>maven add-repository --name=ossrh --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
+maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.1.1-SNAPSHOT</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>then install</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>install org.bedework.deploy:bw-wf-feature-pack:4.1.0
    --dir=wildfly --verbose --layers=bw-demoall-h2,web-console</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>exit</pre>
 </div>
 </div>
 <div class="ulist">
@@ -3407,86 +3432,6 @@ and disregard the remaining instructions below.</p>
 </div>
 </li>
 <li>
-<p>Install maven if you want to do builds.</p>
-<div class="literalblock">
-<div class="content">
-<pre>sudo apt install maven</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Install git if you want to install the quickstart</p>
-<div class="literalblock">
-<div class="content">
-<pre>sudo apt install git</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Set up maven</p>
-<div class="paragraph">
-<p>If you are doing builds of versions before 4.0.0 then set up the maven profile which must be named "bedework-3"</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>mkdir ~/.m2
-emacs ~/.m2/settings.xml</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>and paste in a modified form of the following (change the paths
-"/home/mike/bedework/" to correspond to the directory you&#8217;re about
-to create)</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                         http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
-&lt;pluginGroups&gt;
-&lt;pluginGroup&gt;org.bedework&lt;/pluginGroup&gt;
-&lt;/pluginGroups&gt;
-
-  &lt;profiles&gt;
-    &lt;profile&gt;
-      &lt;id&gt;bedework-3&lt;/id&gt;
-      &lt;activation&gt;
-        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
-      &lt;/activation&gt;
-      &lt;properties&gt;
-        &lt;maven.compiler.source&gt;17&lt;/maven.compiler.source&gt;
-        &lt;maven.compiler.target&gt;17&lt;/maven.compiler.target&gt;
-        &lt;org.bedework.deployment.basedir&gt;/home/mike/bedework/quickstart-dev&lt;/org.bedework.deployment.basedir&gt;
-        &lt;org.bedework.deployment.properties&gt;/home/mike/bedework/quickstart-dev/bedework/config/wildfly.deploy.properties&lt;/org.bedework.deployment.properties&gt;
-      &lt;/properties&gt;
-    &lt;/profile&gt;
-  &lt;/profiles&gt;
-&lt;/settings&gt;</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Provide a bw settings file.</p>
-<div class="paragraph">
-<p>If necessary create a <strong>.bw</strong> file in your home directory and add properties to it. Currently, the only properties allow setting the profile for the <strong>.bw</strong> script used to build and the location of the deployment proeprties used to configure your deployed modules.</p>
-</div>
-<div class="paragraph">
-<p>An example file is</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>#
-# Defaults for bw script
-#
-echo "Setting defaults from .bw"
-bw_mvnProfile="-P bedework_dev"
-
-bw_deployProps="/home/myhome/bwstuff/myprops.properties"</pre>
-</div>
-</div>
-</li>
-<li>
 <p>Install the quickstart</p>
 <div class="paragraph">
 <p>We create a directory in which to install bedework, download an install script and execute the script.</p>
@@ -3510,7 +3455,7 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 <li>
 <p>Install OpenSearch 1.2.3</p>
 <div class="paragraph">
-<p>The eployed wildfly has scripts to install a docker image and start and stop it. See <a href="#opensearch">Install and configure OpenSearch</a> for instructions on installing and (re)indexing.
+<p>The deployed wildfly has scripts to install a docker image and start and stop it. See <a href="#installing-opensearch">Install and configure OpenSearch</a> for instructions on installing and (re)indexing.
 You&#8217;ll need to start the system before reindexing.</p>
 </div>
 </li>
@@ -3674,15 +3619,15 @@ keytool -importkeystore -destkeystore wildfly/standalone/configuration/applicati
 </div>
 </div>
 <div class="sect2">
-<h3 id="_setting_up_databases">Setting up databases</h3>
+<h3 id="setting-up-databases">6.6. Setting up databases</h3>
 <div class="paragraph">
 <p>The quickstart is configured to use h2 for demonstration only. For production, you will need to switch to something like postgresql or mysql.</p>
 </div>
 <div class="paragraph">
-<p>Below there is some help on configuring th edatabase. Additionally, there is some information on reconfiguring wildfly. A better approach is to install a configuration specifically for the desired database using galleon. In that case any information on wildfly configuration can be skipped.</p>
+<p>Below there is some help on configuring the database. Additionally, there is some information on reconfiguring wildfly. A better approach is to install a configuration specifically for the desired database using galleon. In that case any information on wildfly configuration can be skipped.</p>
 </div>
 <div class="sect3">
-<h4 id="_postgresql">postgresql</h4>
+<h4 id="_postgresql">6.6.1. postgresql</h4>
 <div class="paragraph">
 <p>We&#8217;ll describe the process for the main calendar engine. The others are very similar.</p>
 </div>
@@ -3747,8 +3692,8 @@ port = 5432                        # (change requires restart)</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>create role bedework with login password 'xxxxxxxxx';
-create database caldb owner bedework;</code></pre>
+<pre class="CodeRay highlight"><code>create role bw with login password 'xxxxxxxxx';
+create database caldb owner bw;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3757,132 +3702,70 @@ create database caldb owner bedework;</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre>\c caldb
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO bedework;
-grant all privileges on database caldb to bedework;</pre>
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO bw;
+grant all privileges on database caldb to bw;</pre>
 </div>
-</div>
-<div class="paragraph">
-<p>Set the hibernate dialect in the config file:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;hibernateProperty&gt;</span>hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect<span class="tag">&lt;/hibernateProperty&gt;</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In standalone.xml replace the datasource definition with something like:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;datasource</span> <span class="attribute-name">jta</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">true</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">jndi-name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">java:/CalendarDS</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">pool-name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">CalendarDS</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">enabled</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">true</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">use-ccm</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">false</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-       <span class="tag">&lt;connection-url&gt;</span>jdbc:postgresql://localhost:5432/caldb<span class="tag">&lt;/connection-url&gt;</span>
-       <span class="tag">&lt;driver&gt;</span>postgresql<span class="tag">&lt;/driver&gt;</span>
-       <span class="tag">&lt;pool&gt;</span>
-         <span class="tag">&lt;min-pool-size&gt;</span>1<span class="tag">&lt;/min-pool-size&gt;</span>
-         <span class="tag">&lt;max-pool-size&gt;</span>50<span class="tag">&lt;/max-pool-size&gt;</span>
-         <span class="tag">&lt;prefill&gt;</span>true<span class="tag">&lt;/prefill&gt;</span>
-      <span class="tag">&lt;/pool&gt;</span>
-       <span class="tag">&lt;security&gt;</span>
-         <span class="tag">&lt;user-name&gt;</span>xxxxx<span class="tag">&lt;/user-name&gt;</span>
-         <span class="tag">&lt;password&gt;</span>xxxxx<span class="tag">&lt;/password&gt;</span>
-       <span class="tag">&lt;/security&gt;</span>
-       <span class="tag">&lt;timeout&gt;</span>
-        <span class="tag">&lt;idle-timeout-minutes&gt;</span>15<span class="tag">&lt;/idle-timeout-minutes&gt;</span>
-       <span class="tag">&lt;/timeout&gt;</span>
-        <span class="tag">&lt;validation&gt;</span>
-          <span class="tag">&lt;validate-on-match&gt;</span>true<span class="tag">&lt;/validate-on-match&gt;</span>
-          <span class="tag">&lt;valid-connection-checker</span> <span class="attribute-name">class-name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/valid-connection-checker&gt;</span>
-
-          <span class="tag">&lt;exception-sorter</span> <span class="attribute-name">class-name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLExceptionSorter</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/exception-sorter&gt;</span>
-       <span class="tag">&lt;/validation&gt;</span>
-       <span class="tag">&lt;statement&gt;</span>
-         <span class="tag">&lt;share-prepared-statements&gt;</span>false<span class="tag">&lt;/share-prepared-statements&gt;</span>
-       <span class="tag">&lt;/statement&gt;</span>
-     <span class="tag">&lt;/datasource&gt;</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Ensure you also have the driver loaded - for example the drivers section which usually follows the datasources shoudllook somethign like:</p>
-</div>
-<div class="paragraph">
-<p>You need to install the postgres driver - you&#8217;re either missing the driver declaration - something like:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;drivers&gt;</span>
-    ...
-    <span class="tag">&lt;driver</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">postgresql</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">module</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.postgresql</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-    ...
-<span class="tag">&lt;/drivers&gt;</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Ensure the jdbc driver is installed in the modules directory - something like:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>wildfly/modules/org/postgresql/main/module.xml
-wildfly/modules/org/postgresql/main/postgresql-8.4-701.jdbc4.jar</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Module.xml for this example contains</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version='1.0' encoding='UTF-8'?&gt;</span>
-
-<span class="tag">&lt;module</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">urn:jboss:module:1.1</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.postgresql</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-    <span class="tag">&lt;resources&gt;</span>
-        <span class="tag">&lt;resource-root</span> <span class="attribute-name">path</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">postgresql-8.4-701.jdbc4.jar</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-    <span class="tag">&lt;/resources&gt;</span>
-
-    <span class="tag">&lt;dependencies&gt;</span>
-        <span class="tag">&lt;module</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">javax.api</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-        <span class="tag">&lt;module</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">javax.transaction.api</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-    <span class="tag">&lt;/dependencies&gt;</span>
-<span class="tag">&lt;/module&gt;</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Modify it appropriately for different versions.</p>
-</div>
-<div class="paragraph">
-<p>Start wildfly and allow it to fully deploy. There will be many errors relating to the calendar database.</p>
-</div>
-<div class="paragraph">
-<p>Delete the file <strong><strong>wildfly/standalone/data/bedework/dumprestore/schema.sql</strong></strong></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_use_the_cli_to_install_the_schema">Use the cli to install the schema.</h5>
+<h5 id="_check_configurations">Check configurations</h5>
 <div class="paragraph">
-<p>To run the cli you need the id and password you created when configuring wildfly. This id and password can also be used to access the hawtio console.</p>
+<p>You MUST install the postgres version for this to work. Most of the configuration is already done for you. You will need to provide the id and password.</p>
+</div>
+<div class="paragraph">
+<p>Configuration overrides are found in</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>cd bw-cli/target/client/bin
-./client -id admin-id -pw admin-pw
-calschema export</code></pre>
+<pre>&lt;wildfly&gt;/bin/bwcommon.conf</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This should install the schema. It will also create a file which can be manually installed if need be - use the psql client application</p>
+<p>For example: replace</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>psql caldb &lt; wildfly/standalone/data/bedework/dumprestore/schema.sql</code></pre>
+<pre>#JAVA_OPTS="$JAVA_OPTS -Dorg.bedework.site.db.id.calendar=sa
+#JAVA_OPTS="$JAVA_OPTS -Dorg.bedework.site.db.pw.calendar=sa</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Next you need to add some basic data. For this you need the full path to the initial data in wildfly/standalone/data/bedework/dumprestore/initbedework.xml</p>
+<p>with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>JAVA_OPTS="$JAVA_OPTS -Dorg.bedework.site.db.id.calendar=bw
+#JAVA_OPTS="$JAVA_OPTS -Dorg.bedework.site.db.pw.calendar=xxxx</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use the psql client application to install the initial schema and data.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>psql caldb &lt; &lt;path-to-wildfly&gt;/standalone/data/bedework/postgresql/caldb.sql</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note this file sets the owner to 'bw'. If you want a different owner then edit the file first.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_install_opensearch">Install opensearch</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_start_wildfly">Start wildfly</h5>
+<div class="paragraph">
+<p>There will be a number of erros because of the lack of data</p>
 </div>
 <div class="paragraph">
 <p>In the cli enter the command</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>restoreCal "/full/path/to/initbedework.xml"</code></pre>
+<pre class="CodeRay highlight"><code>./wildfly/bin/bwcli.sh jmxUrl http://localhost:8080/jolokia -id &lt;id&gt; -pw &lt;pw&gt;
+restoreCal "/full/path/to/initbedework.xml"</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3921,7 +3804,7 @@ calschema export</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mysql">MySQL</h4>
+<h4 id="_mysql">6.6.2. MySQL</h4>
 <div class="paragraph">
 <p>TBD</p>
 </div>
@@ -3936,7 +3819,7 @@ calschema export</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="opensearch">6.6. OpenSearch</h3>
+<h3 id="installing-opensearch">6.7. Install and configure OpenSearch</h3>
 <div class="paragraph">
 <p>Bedework uses OpenSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as a local application, useful for development - or as an external service - which will be required for clustering.</p>
 </div>
@@ -3984,7 +3867,7 @@ cluster.initial_master_nodes: ["bw2019-1"]</code></pre>
 <p>Use specific names for the cluster and nodes.</p>
 </div>
 <div class="sect3">
-<h4 id="installing">6.6.1. Installing OpenSearch</h4>
+<h4 id="installing">6.7.1. Installing OpenSearch</h4>
 <div class="paragraph">
 <p>There are a number of options available. The deployed wildfly demo server has a script to deploy a docker image of OpenSearch.
 First ensure docker is installed on your system and running then execute:</p>
@@ -4036,7 +3919,7 @@ First ensure docker is installed on your system and running then execute:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_installing_a_runnable_opensearch">6.6.2. Installing a runnable OpenSearch</h4>
+<h4 id="_installing_a_runnable_opensearch">6.7.2. Installing a runnable OpenSearch</h4>
 <div class="paragraph">
 <p>If you wish to install OpenSearch as a runnable service there are instructions on running a minimal version without any security.
 You will need to copy the configuration and possibly the data from the deployed demo wildfly.</p>
@@ -4063,15 +3946,15 @@ bwOschdatadir="&lt;somewhere&gt;/&lt;opensearch&gt;/data/"</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="configure-events-registration">6.7. Enabling and Disabling Public Events Registration</h3>
+<h3 id="configure-events-registration">6.8. Enabling and Disabling Public Events Registration</h3>
 <div class="sect3">
-<h4 id="_enabling_public_events_registration">6.7.1. Enabling Public Events Registration</h4>
+<h4 id="_enabling_public_events_registration">6.8.1. Enabling Public Events Registration</h4>
 <div class="paragraph">
 <p>The public events registration system is enabled by default if you have installed Bedework with the data available in the quickstart.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_disabling_public_events_registration">6.7.2. Disabling Public Events Registration</h4>
+<h4 id="_disabling_public_events_registration">6.8.2. Disabling Public Events Registration</h4>
 <div class="paragraph">
 <p>If you wish to disable the public events registration system remove the "Eventreg admin token" from the System Preferences in the jmx console:</p>
 </div>
@@ -4100,7 +3983,7 @@ bwOschdatadir="&lt;somewhere&gt;/&lt;opensearch&gt;/data/"</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.7.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
+<h4 id="_enabling_public_events_registration_possibly_after_upgrade_from_a_previous_release">6.8.3. Enabling Public Events Registration (possibly after upgrade from a previous release)</h4>
 <div class="paragraph">
 <p>First ensure that the CalWs interface is available. This is the SOAP service that the event registration service uses o communicate with bedework. In system.xml make sure the &lt;calSoapWsURI&gt; element is present and has the same value as the soap:address element in pubcalws-soap/wssvc.wsdl (this requires better explanation - it&#8217;s a file deployed in the bw-xml ear)</p>
 </div>
@@ -4201,7 +4084,7 @@ bwOschdatadir="&lt;somewhere&gt;/&lt;opensearch&gt;/data/"</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_notifications_from_eventreg">6.7.4. Notifications from EventReg</h4>
+<h4 id="_notifications_from_eventreg">6.8.4. Notifications from EventReg</h4>
 <div class="paragraph">
 <p>The event registration service will send notifications to the calendar engine when changes take place that might require notifying users. The event registration service calls the calendar engine notification web service (not to be confused with the notification engine). This web service allows the core engine to add notifications to the accounts of subscribed users. It is the job of the notification engine to forward those via email or some other service.</p>
 </div>
@@ -4222,7 +4105,7 @@ The synch engine handles the synchronization of external subscriptions with a be
 </div>
 </div>
 <div class="sect2">
-<h3 id="_initializing_the_database">6.8. Initializing the database</h3>
+<h3 id="_initializing_the_database">6.9. Initializing the database</h3>
 <div class="paragraph">
 <p>If running with mysql the built in hibernate schema export doesn&#8217;t work - mysql jdbc does not support it.</p>
 </div>
@@ -4263,7 +4146,7 @@ grant all on synchDb.* to '&lt;id&gt;'@'%' identified by '&lt;pw&gt;';</code></p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_rebuild_bw_xml">6.8.1. (Re)build bw-xml</h4>
+<h4 id="_rebuild_bw_xml">6.9.1. (Re)build bw-xml</h4>
 <div class="paragraph">
 <p>The synch engine uses an extension of CalWS to communicate with bedework. It requires that the wsdl file contain the location of bedework. This is configured into the deploy.properties file - only one change for the synch engine should be necessary. Set the location of (one of) your application servers in the following.</p>
 </div>
@@ -4323,7 +4206,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_validating_locations">6.8.2. Validating locations.</h4>
+<h4 id="_validating_locations">6.9.2. Validating locations.</h4>
 <div class="paragraph">
 <p>When an event arrives at the receiving end with an "X-BEDEWORK-LOCATION" property if the String value of the x-property is &#8230;&#8203;
 === Locations in bedework</p>
@@ -4333,7 +4216,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_searching_for_public_locations">6.8.3. Searching for public locations</h4>
+<h4 id="_searching_for_public_locations">6.9.3. Searching for public locations</h4>
 <div class="paragraph">
 <p>There is a web service endpoint which can be used to search for public locations. It takes a filter expression as a parameter and will return &lt;a limited?&gt; number</p>
 </div>
@@ -4657,6 +4540,133 @@ every instance then deliver the matching instances in the batch.</p>
 <div class="paragraph">
 <p>(Replace 01 with 02-04 for the rest)</p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="building-bedwork">7.5. Building bedework</h3>
+<div class="paragraph">
+<p>Any examples tend to be ubuntu but bedework can be built on any system that supports java17.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure java 17 jdk is installed</p>
+<div class="literalblock">
+<div class="content">
+<pre>sudo apt-get install openjdk-17-jdk-headless
+sudo update-alternatives --config java</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The last command should state there are no alternatives but if another has been installed pick the appropriate version.</p>
+</div>
+</li>
+<li>
+<p>Install maven</p>
+</li>
+</ol>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo apt install maven</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install git</p>
+<div class="literalblock">
+<div class="content">
+<pre>sudo apt install git</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Set up maven</p>
+<div class="paragraph">
+<p>If you are doing builds of versions before 4.0.0 then set up the maven profile which must be named "bedework-3"</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>mkdir ~/.m2
+emacs ~/.m2/settings.xml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and paste in a modified form of the following (change the paths
+"/home/mike/bedework/" to correspond to the directory you&#8217;re about
+to create)</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                         http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
+&lt;pluginGroups&gt;
+&lt;pluginGroup&gt;org.bedework&lt;/pluginGroup&gt;
+&lt;/pluginGroups&gt;
+
+  &lt;profiles&gt;
+    &lt;profile&gt;
+      &lt;id&gt;bedework-3&lt;/id&gt;
+      &lt;activation&gt;
+        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
+      &lt;/activation&gt;
+      &lt;properties&gt;
+        &lt;maven.compiler.source&gt;17&lt;/maven.compiler.source&gt;
+        &lt;maven.compiler.target&gt;17&lt;/maven.compiler.target&gt;
+        &lt;org.bedework.deployment.basedir&gt;/home/mike/bedework/quickstart-dev&lt;/org.bedework.deployment.basedir&gt;
+        &lt;org.bedework.deployment.properties&gt;/home/mike/bedework/quickstart-dev/bedework/config/wildfly.deploy.properties&lt;/org.bedework.deployment.properties&gt;
+      &lt;/properties&gt;
+    &lt;/profile&gt;
+  &lt;/profiles&gt;
+&lt;/settings&gt;</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Provide a bw settings file.</p>
+<div class="paragraph">
+<p>If necessary create a <strong>.bw</strong> file in your home directory and add properties to it. Currently, the only properties allow setting the profile for the <strong>.bw</strong> script used to build and the location of the deployment proeprties used to configure your deployed modules.</p>
+</div>
+<div class="paragraph">
+<p>An example file is</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>#
+# Defaults for bw script
+#
+echo "Setting defaults from .bw"
+bw_mvnProfile="-P bedework_dev"
+
+bw_deployProps="/home/myhome/bwstuff/myprops.properties"</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a directory in which to place sources and wildfly.</p>
+<div class="paragraph">
+<p>Much of the build assumes a directory in which we have each of the bedework projects and a working wildfly deployment. We&#8217;ll refer to this directory as &lt;bw&gt;.</p>
+</div>
+</li>
+<li>
+<p>Cd into &lt;bw&gt; and install wildfly</p>
+<div class="paragraph">
+<p>Follow the instructions in <a href="#installing-bedwork">Installing bedework on Ubuntu</a>. Choose a version which runs your db of choice and installs a copy of opensearch.</p>
+</div>
+<div class="paragraph">
+<p>If you want to use postgres as your db you need to install that yourself. See <a href="#setting-up-databases">Setting up databases</a></p>
+</div>
+</li>
+<li>
+<p>Create wildfly symlink</p>
+<div class="paragraph">
+<p>This provides a consistent name for the server.</p>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -5947,7 +5957,7 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-02 12:28:36 EDT
+Last updated 2024-10-02 13:33:56 EDT
 </div>
 </div>
 </body>

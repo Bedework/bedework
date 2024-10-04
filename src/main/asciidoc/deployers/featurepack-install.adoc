@@ -50,13 +50,25 @@ wget https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.
 ----
 and unzip.
 
-* run galleon to install - this is all one command:
+* run galleon to install:
 ----
-./galleon-5.2.2.Final/bin/galleon.sh \
-   install org.bedework.deploy:bw-wf-feature-pack:4.1.0
+./galleon-5.2.2.Final/bin/galleon.sh
+----
+The first time, if you want to install snapshot versions, you need to set up repositories and resolve for the required version
+----
+maven add-repository --name=ossrh --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
+maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.1.1-SNAPSHOT
+----
+then install
+----
+install org.bedework.deploy:bw-wf-feature-pack:4.1.0
    --dir=wildfly --verbose --layers=bw-demoall-h2,web-console
 ----
 
+Finally
+----
+exit
+----
 * In window 2 cd into the same directory and start the required services:
 ----
     export JAVA_HOME=<where the jdk is installed>

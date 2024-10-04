@@ -1,8 +1,8 @@
-[setting-up-databases]
+[[setting-up-databases]]
 === Setting up databases
 The quickstart is configured to use h2 for demonstration only. For production, you will need to switch to something like postgresql or mysql.
 
-Below there is some help on configuring th edatabase. Additionally, there is some information on reconfiguring wildfly. A better approach is to install a configuration specifically for the desired database using galleon. In that case any information on wildfly configuration can be skipped.
+Below there is some help on configuring the database. Additionally, there is some information on reconfiguring wildfly. A better approach is to install a configuration specifically for the desired database using galleon. In that case any information on wildfly configuration can be skipped.
 
 ==== postgresql
 We'll describe the process for the main calendar engine. The others are very similar.
@@ -48,123 +48,56 @@ The psql commands are something like:
 
 [source]
 ----
-create role bedework with login password 'xxxxxxxxx';
-create database caldb owner bedework;
+create role bw with login password 'xxxxxxxxx';
+create database caldb owner bw;
 ----
 
 Some or all of the following seems to be required. Note it also seems to be important to connect to the database first:
 ----
 \c caldb
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO bedework;
-grant all privileges on database caldb to bedework;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO bw;
+grant all privileges on database caldb to bw;
 ----
 
-Set the hibernate dialect in the config file:
-[source,xml]
-----
-    <hibernateProperty>hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect</hibernateProperty>
-----
+===== Check configurations
+You MUST install the postgres version for this to work. Most of the configuration is already done for you. You will need to provide the id and password.
 
-In standalone.xml replace the datasource definition with something like:
-
-[source,xml]
+Configuration overrides are found in
 ----
-    <datasource jta="true" jndi-name="java:/CalendarDS" pool-name="CalendarDS" enabled="true" use-ccm="false">
-       <connection-url>jdbc:postgresql://localhost:5432/caldb</connection-url>
-       <driver>postgresql</driver>
-       <pool>
-         <min-pool-size>1</min-pool-size>
-         <max-pool-size>50</max-pool-size>
-         <prefill>true</prefill>
-      </pool>
-       <security>
-         <user-name>xxxxx</user-name>
-         <password>xxxxx</password>
-       </security>
-       <timeout>
-        <idle-timeout-minutes>15</idle-timeout-minutes>
-       </timeout>
-        <validation>
-          <validate-on-match>true</validate-on-match>
-          <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker"></valid-connection-checker>
-
-          <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLExceptionSorter"></exception-sorter>
-       </validation>
-       <statement>
-         <share-prepared-statements>false</share-prepared-statements>
-       </statement>
-     </datasource>
+<wildfly>/bin/bwcommon.conf
 ----
 
-Ensure you also have the driver loaded - for example the drivers section which usually follows the datasources shoudllook somethign like:
-
-You need to install the postgres driver - you're either missing the driver declaration - something like:
-
-[source,xml]
+For example: replace
 ----
-<drivers>
-    ...
-    <driver name="postgresql" module="org.postgresql"/>
-    ...
-</drivers>
+#JAVA_OPTS="$JAVA_OPTS -Dorg.bedework.site.db.id.calendar=sa
+#JAVA_OPTS="$JAVA_OPTS -Dorg.bedework.site.db.pw.calendar=sa
 ----
 
-Ensure the jdbc driver is installed in the modules directory - something like:
+with
+
+----
+JAVA_OPTS="$JAVA_OPTS -Dorg.bedework.site.db.id.calendar=bw
+#JAVA_OPTS="$JAVA_OPTS -Dorg.bedework.site.db.pw.calendar=xxxx
+----
+
+Use the psql client application to install the initial schema and data.
 
 [source]
 ----
-wildfly/modules/org/postgresql/main/module.xml
-wildfly/modules/org/postgresql/main/postgresql-8.4-701.jdbc4.jar
+psql caldb < <path-to-wildfly>/standalone/data/bedework/postgresql/caldb.sql
 ----
 
-Module.xml for this example contains
+Note this file sets the owner to 'bw'. If you want a different owner then edit the file first.
 
-[source,xml]
-----
-<?xml version='1.0' encoding='UTF-8'?>
-
-<module xmlns="urn:jboss:module:1.1" name="org.postgresql">
-    <resources>
-        <resource-root path="postgresql-8.4-701.jdbc4.jar"/>
-    </resources>
-
-    <dependencies>
-        <module name="javax.api"/>
-        <module name="javax.transaction.api"/>
-    </dependencies>
-</module>
-----
-
-Modify it appropriately for different versions.
-
-Start wildfly and allow it to fully deploy. There will be many errors relating to the calendar database.
-
-Delete the file ***wildfly/standalone/data/bedework/dumprestore/schema.sql***
-
-===== Use the cli to install the schema.
-
-To run the cli you need the id and password you created when configuring wildfly. This id and password can also be used to access the hawtio console.
-
-[source]
-----
-cd bw-cli/target/client/bin
-./client -id admin-id -pw admin-pw
-calschema export
-----
-
-This should install the schema. It will also create a file which can be manually installed if need be - use the psql client application
-
-[source]
-----
-psql caldb < wildfly/standalone/data/bedework/dumprestore/schema.sql
-----
-
-Next you need to add some basic data. For this you need the full path to the initial data in wildfly/standalone/data/bedework/dumprestore/initbedework.xml
+===== Install opensearch
+===== Start wildfly
+There will be a number of erros because of the lack of data
 
 In the cli enter the command
 
 [source]
 ----
+./wildfly/bin/bwcli.sh jmxUrl http://localhost:8080/jolokia -id <id> -pw <pw>
 restoreCal "/full/path/to/initbedework.xml"
 ----
 The quotes are required. Some activity should ensue.
