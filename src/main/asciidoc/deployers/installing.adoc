@@ -13,27 +13,17 @@ sudo update-alternatives --config java
 .................
 +
 The last command should state there are no alternatives but if another has been installed pick the appropriate version.
-
+. Create a directory in which to install.
++
+We'll refer to this directory as <bw>
++
+----
+mkdir <bw>
+cd <bw>
+----
 . Install wildfly with bedework using galleon
 +
-If you are not wanting to install the quickstart for builds and development then install a wildfly service by following the instructions at <<featurepack-install>>.
-and disregard the remaining instructions below.
-
-. Install the quickstart
-+
-We create a directory in which to install bedework, download an install script and execute the script.
-+
-.................
-mkdir bw-4.0.0
-wget https://github.com/Bedework/bedework/raw/bedework-4.0.0/build/quickstart/linux/installQS.sh
-chmod +x installQS.sh
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-./installQS.sh
-.................
-+
-and answer the questions presented to you. If you need to restart - probably easier to delete and recreate the directory.
-+
-Some time will pass. You'll be asked to provide an id and password for wildfly admin. I suggest hawtadmin and a password of your own choosing. More time will pass...
+Follow the instructions at <<featurepack-install>>.
 
 . Install OpenSearch 1.2.3
 +
@@ -52,14 +42,13 @@ cd <into quickstart>
 If you need to reindex there will certainly be some errors at startup.
 . Reindex
 +
-Use the installed script to run the reindexer
+Use the cli to run the reindexer
 .................
-cd <into quickstart>
-./wildfly/bin/bw-cli.sh -id hawtadmin -pw mypw
+./wildfly/bin/bwcli.sh jmxUrl http://localhost:8080/jolokia -id hawtadmin -pw mypw
 help
-listidx
-rebuildidx
-listidx
-makeidxprod all
-q
+idx list
+idx rebuild
+idx list
+idx makeprod all
+exit
 .................
