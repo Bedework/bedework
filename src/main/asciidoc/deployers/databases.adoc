@@ -89,6 +89,29 @@ psql caldb < <path-to-wildfly>/standalone/data/bedework/postgresql/caldb.sql
 
 Note this file sets the owner to 'bw'. If you want a different owner then edit the file first.
 
+===== Do the same for other databases.
+If you are running the notifier do the same for that database:
+
+----
+psql
+create database notifydb owner bw;
+grant all privileges on database notifydb to bw;
+\q
+psql notifydb < /opt/bedework/wildfly/docs/schema/postgresql/notifyschema-pg.sql
+----
+and update bwcommon.conf.
+
+----
+psql
+create database synchdb owner bw;
+grant all privileges on database synchdb to bw;
+\q
+psql notifydb < /opt/bedework/wildfly/docs/schema/postgresql/synchschema-pg.sql
+----
+
+Similarly for the synch engine:
+
+
 ===== Install opensearch
 ===== Start wildfly
 There will be a number of erros because of the lack of data
