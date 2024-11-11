@@ -1,8 +1,29 @@
 == Introducing Bedework
 
-Bedework is an open-source enterprise calendar system that supports public, personal, and group calendaring.  It is designed to conform to current calendaring standards with a goal of attaining strong interoperability between other calendaring systems and clients.   Bedework is built with an emphasis on higher education, though it is used by many commercial enterprises. 
+Bedework is an open-source enterprise calendar system that supports public, personal, and group calendaring.  It is designed to conform to current calendaring standards with a goal of attaining strong interoperability between other calendaring systems and clients. Bedework is built with an emphasis on higher education, though it is used by many commercial enterprises.
 
 You may choose to deploy Bedework for public events calendaring, personal calendaring and scheduling, or both.  Bedework is suitable for embedding in other applications or in portals and has been deployed across a wide range of environments.
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nYZoufGfV6c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+++++
+<div class="iframe-container">
+  <iframe src="https://www.youtube.com/embed/nYZoufGfV6c" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<!-- CSS to make the iframe responsive -->
+<style>
+.iframe-container {
+overflow: hidden;
+padding-top: 100%;
+position: relative;
+}
+.iframe-container iframe {
+ border: 0;
+ height: 100%;
+ left: 0;
+ position: absolute;
+ top: 0;
+ width: 100%;
+}
+</style>
+++++

@@ -307,18 +307,18 @@ _March 18, 2008_ +
 === 3.4
 _September 14, 2007_ +
 
-  * Better standards support: A much more complete       implementation of the calendaring standards RFC2445, RFC2446,       RFC791 (CalDAV) and the CalDAV scheduling draft       standard.
-  * A reasonably complete implementation of iTIP scheduling,       such as simple (non-recurring) iTIP scheduling, display of       attendee FreeBusy information, sending invitations, update of       attendee status, canceling meetings. There is some support of       recurring meetings and modifications to instances partially       works.
-  * Portal support: A number of changes to make the user       interface more portal friendly.
-  * CalDAV: Changes/fixes have been implemented to improve       interoperability with Apple's iCal, and there is significant       support now for CalDAV scheduling.
-  * UI improvements to access control and recurring       events.
-  * Initial support for FREEBUSY URL and calendar       subscription URL.
+  * Better standards support: A much more complete implementation of the calendaring standards RFC2445, RFC2446, RFC791 (CalDAV) and the CalDAV scheduling draft       standard.
+  * A reasonably complete implementation of iTIP scheduling, such as simple (non-recurring) iTIP scheduling, display of attendee FreeBusy information, sending invitations, update of       attendee status, canceling meetings. There is some support of       recurring meetings and modifications to instances partially       works.
+  * Portal support: A number of changes to make the user interface more portal friendly.
+  * CalDAV: Changes/fixes have been implemented to improve interoperability with Apple's iCal, and there is significant support now for CalDAV scheduling.
+  * UI improvements to access control and recurring events.
+  * Initial support for FREEBUSY URL and calendar subscription URL.
   * Apache Ant: Upgrade to 1.7 to make apt task available for further development.
 
 === 3.3.1
 _April 25, 2007_ +
 
-  * Access fixes. Note this requires a change to the /public       folder. Previously read + write-content was sufficient for       administrative privileges. Now it must be read +       write-content + bind (may also want unbind to allow       deletions)
+  * Access fixes. Note this requires a change to the /public       folder. Previously read + write-content was sufficient for administrative privileges. Now it must be read +       write-content + bind (may also want unbind to allow       deletions)
   * A number of bugfixes to CalDAV support.
   * Implemented some missing CalDAV features.
   ** attachments now work,

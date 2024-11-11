@@ -260,14 +260,31 @@
 <h2 id="_introducing_bedework">Introducing Bedework</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Bedework is an open-source enterprise calendar system that supports public, personal, and group calendaring.  It is designed to conform to current calendaring standards with a goal of attaining strong interoperability between other calendaring systems and clients.   Bedework is built with an emphasis on higher education, though it is used by many commercial enterprises.</p>
+<p>Bedework is an open-source enterprise calendar system that supports public, personal, and group calendaring.  It is designed to conform to current calendaring standards with a goal of attaining strong interoperability between other calendaring systems and clients. Bedework is built with an emphasis on higher education, though it is used by many commercial enterprises.</p>
 </div>
 <div class="paragraph">
 <p>You may choose to deploy Bedework for public events calendaring, personal calendaring and scheduling, or both.  Bedework is suitable for embedding in other applications or in portals and has been deployed across a wide range of environments.</p>
 </div>
-<div class="paragraph">
-<p>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/nYZoufGfV6c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;</p>
+<div class="iframe-container">
+  <iframe src="https://www.youtube.com/embed/nYZoufGfV6c" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
+
+<!-- CSS to make the iframe responsive -->
+<style>
+.iframe-container {
+overflow: hidden;
+padding-top: 100%;
+position: relative;
+}
+.iframe-container iframe {
+ border: 0;
+ height: 100%;
+ left: 0;
+ position: absolute;
+ top: 0;
+ width: 100%;
+}
+</style>
 </div>
 </div>
 <div class="sect1">
@@ -291,7 +308,10 @@
 <p>iTIP (rfc2446)</p>
 </li>
 <li>
-<p>CalDAV (rfc4791)CalDAV scheduling (draft)</p>
+<p>CalDAV (rfc4791)</p>
+</li>
+<li>
+<p>CalDAV scheduling (rfc6638)</p>
 </li>
 <li>
 <p>CardDAV v.4</p>
@@ -345,7 +365,7 @@
 <p>Scheduling :  Bedework supports scheduling of meetings including invitations and their responses. Caldav scheduling (still in draft) is supported. Freebusy is supported and the busy time is displayed as attendee lists are built.  Access control allows users to determine who may attempt to schedule meetings with them.</p>
 </li>
 <li>
-<p>Import and export : Events can be imported and exported in iCalendar (RFC2445) format. This provides an option for populating the calendar from external sources.  A dump/restore utility provides a means to backup and restore xml data files.</p>
+<p>Import and export : Events can be imported and exported in iCalendar (RFC5545) format. This provides an option for populating the calendar from external sources.  A dump/restore utility provides a means to backup and restore xml data files.</p>
 </li>
 <li>
 <p>Calendar subscriptions : Users may subscribe to calendars to which they have access, including public and personal calendars. iCalendar data feeds are available from the public web client.</p>
@@ -363,9 +383,6 @@
 <p>Data feeds: Bedework produces RSS, Javascript (e.g. json), iCalendar, and XML feeds.  Custom feeds can be developed by writing an XSL skin. Feeds can be filtered by category or creator, and a feed and widget builder is available to help end users and developers design public feeds and embeddable event widgets.</p>
 </li>
 <li>
-<p>Portal support : Bedework has been shown to work as a JSR168 portlet in Jetspeed, uPortal and Liferay using the portal-struts bridge.</p>
-</li>
-<li>
 <p>Timezone support : Full timezone support is implemented. There is a set of system defined timezones based upon externally available sets of timezone definitions. In addition users are able to store their own timezone definitions.</p>
 </li>
 <li>
@@ -378,7 +395,7 @@
 <p>Pluggable group support : Bedework uses a pluggable class implementation to determine group membership for authenticated users allowing organizations to implement a class which uses an external directory. The default class uses internal tables to maintain group membership. Different implementations can be used for administrative and personal use allowing the separation of any given users roles.</p>
 </li>
 <li>
-<p>Container authentication :  There is no authentication code in Bedework.  Rather, Bedework behaves as a standard servlet, and all authentication is carried out through external mechanisms. Standard container authentication (via Tomcat or Jboss) and filter based Yale CAS authentication are used in production.  The quickstart comes packaged with the Apache DS server against which the quickstart deployment of Bedework authenticates.  This server can be used in production, though many deployers opt to authenticate against their organization&#8217;s existing directory.</p>
+<p>Container authentication :  There is no authentication code in Bedework. Rather, Bedework behaves as a standard servlet, and all authentication is carried out through external mechanisms. Standard container authentication (via Tomcat or Jboss) and filter based Yale CAS authentication are used in production.  The quickstart comes packaged with the Apache DS server against which the quickstart deployment of Bedework authenticates.  This server can be used in production, though many deployers opt to authenticate against their organization&#8217;s existing directory.</p>
 </li>
 <li>
 <p>Support for other calendar systems and clients : It is possible to access an entire calendar with a single url. This can be used to subscribe to a Bedework calendar from Google or Outlook. Bedework can also take advantage of the richness of CalDAV capable desktop clients such as Apple&#8217;s iCal and Mozilla Lightning.</p>
@@ -5544,22 +5561,22 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 <div class="ulist">
 <ul>
 <li>
-<p>Better standards support: A much more complete       implementation of the calendaring standards RFC2445, RFC2446,       RFC791 (CalDAV) and the CalDAV scheduling draft       standard.</p>
+<p>Better standards support: A much more complete implementation of the calendaring standards RFC2445, RFC2446, RFC791 (CalDAV) and the CalDAV scheduling draft       standard.</p>
 </li>
 <li>
-<p>A reasonably complete implementation of iTIP scheduling,       such as simple (non-recurring) iTIP scheduling, display of       attendee FreeBusy information, sending invitations, update of       attendee status, canceling meetings. There is some support of       recurring meetings and modifications to instances partially       works.</p>
+<p>A reasonably complete implementation of iTIP scheduling, such as simple (non-recurring) iTIP scheduling, display of attendee FreeBusy information, sending invitations, update of       attendee status, canceling meetings. There is some support of       recurring meetings and modifications to instances partially       works.</p>
 </li>
 <li>
-<p>Portal support: A number of changes to make the user       interface more portal friendly.</p>
+<p>Portal support: A number of changes to make the user interface more portal friendly.</p>
 </li>
 <li>
-<p>CalDAV: Changes/fixes have been implemented to improve       interoperability with Apple&#8217;s iCal, and there is significant       support now for CalDAV scheduling.</p>
+<p>CalDAV: Changes/fixes have been implemented to improve interoperability with Apple&#8217;s iCal, and there is significant support now for CalDAV scheduling.</p>
 </li>
 <li>
-<p>UI improvements to access control and recurring       events.</p>
+<p>UI improvements to access control and recurring events.</p>
 </li>
 <li>
-<p>Initial support for FREEBUSY URL and calendar       subscription URL.</p>
+<p>Initial support for FREEBUSY URL and calendar subscription URL.</p>
 </li>
 <li>
 <p>Apache Ant: Upgrade to 1.7 to make apt task available for further development.</p>
@@ -5575,7 +5592,7 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 <div class="ulist">
 <ul>
 <li>
-<p>Access fixes. Note this requires a change to the /public       folder. Previously read + write-content was sufficient for       administrative privileges. Now it must be read +       write-content + bind (may also want unbind to allow       deletions)</p>
+<p>Access fixes. Note this requires a change to the /public       folder. Previously read + write-content was sufficient for administrative privileges. Now it must be read +       write-content + bind (may also want unbind to allow       deletions)</p>
 </li>
 <li>
 <p>A number of bugfixes to CalDAV support.</p>
