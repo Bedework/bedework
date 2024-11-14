@@ -5,7 +5,7 @@
 
   * Standards based and interoperable: Interoperability with other calendar systems and clients by way of standards compliance is a fundamental design goal of the Bedework system. The following standards are supported:
     ** iCalendar support (rfc5545)
-    ** iTIP (rfc2446)
+    ** iTIP (rfc5546)
     ** CalDAV (rfc4791)
     ** CalDAV scheduling (rfc6638)
     ** CardDAV v.4
