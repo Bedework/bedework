@@ -27,7 +27,7 @@
       <plugin>
         <groupId>org.asciidoctor</groupId>
         <artifactId>asciidoctor-maven-plugin</artifactId>
-        <version>1.5.7.1</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>output-html</id>
@@ -36,11 +36,10 @@
               <goal>process-asciidoc</goal>
             </goals>
             <configuration>
-              <sourceHighlighter>coderay</sourceHighlighter>
-              <backend>html</backend>
+              <backend>html5</backend>
               <attributes>
                 <linkcss>true</linkcss>
-                <safe>true</safe>
+                <!--<safe>true</safe>-->
               </attributes>
             </configuration>
           </execution>
@@ -51,6 +50,7 @@
               <goal>process-asciidoc</goal>
             </goals>
             <configuration>
+              <outputDirectory>${project.build.directory}/generated-docbook</outputDirectory>
               <backend>docbook</backend>
               <doctype>book</doctype>
             </configuration>
@@ -58,7 +58,6 @@
         </executions>
         <configuration>
           <sourceDirectory>src/main/asciidoc</sourceDirectory>
-          <headerFooter>true</headerFooter>
           <preserveDirectories>true</preserveDirectories>
         </configuration>
       </plugin>
@@ -69,7 +68,7 @@
 
         <executions>
           <execution>
-            <id>copy-generated-index.html</id>
+            <id>copy-generated-asciidoc</id>
             <phase>package</phase>
             <goals>
               <goal>copy-resources</goal>
@@ -82,6 +81,9 @@
                   <filtering>false</filtering>
                   <includes>
                     <include>index.html</include>
+                    <include>asciidoctor.css</include>
+                    <include>tocbot*/*</include>
+                    <include>docinfo/*</include>
                   </includes>
                 </resource>
               </resources>

@@ -2,15 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.7.1">
+<meta name="generator" content="Asciidoctor 2.0.23">
 <title>Bedework Enterprise Calendar System</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <link rel="stylesheet" href="./asciidoctor.css">
-<link rel="stylesheet" href="./coderay-asciidoctor.css">
+<style>
+    #tocbot a.toc-link.node-name--H1{ font-style: italic }
+    @media screen{
+        #tocbot > ul.toc-list{ margin-bottom: 0.5em; margin-left: 0.125em }
+        #tocbot ul.sectlevel0, #tocbot a.toc-link.node-name--H1 + ul{
+            padding-left: 0 }
+        #tocbot a.toc-link{ height:100% }
+        .is-collapsible{ max-height:3000px; overflow:hidden; }
+        .is-collapsed{ max-height:0 }
+        .is-active-link{ font-weight:700 }
+    }
+    @media print{
+        #tocbot a.toc-link.node-name--H4{ display:none }
+    }
+</style>
 </head>
-<body class="standard toc2 toc-left">
+<body class="article toc2 toc-left">
 <div id="header">
 <h1>Bedework Enterprise Calendar System</h1>
 <div id="toc" class="toc2">
@@ -22,15 +36,34 @@
 <li><a href="#features-of-Bedework">1.1. Features of Bedework</a></li>
 <li><a href="#release-notes">1.2. Release Notes</a>
 <ul class="sectlevel3">
-<li><a href="#_dev_to_be_release_4_1_1">1.2.1. Dev - To Be Release 4.1.1:</a></li>
-<li><a href="#_release_4_1_0_20240404">1.2.2. Release 4.1.0 (2024/04/04):</a></li>
-<li><a href="#_some_bug_fixes">1.2.3. Some bug fixes</a></li>
+<li><a href="#_dev_to_be_release_4_1_1">1.2.1. Dev - To Be Release 4.1.1:</a>
+<ul class="sectlevel4">
+<li><a href="#_upcoming_changes">1.2.1.1. Upcoming changes</a></li>
+<li><a href="#_change_summary">1.2.1.2. Change summary</a></li>
+</ul>
+</li>
+<li><a href="#_release_4_1_0_20240404">1.2.2. Release 4.1.0 (2024/04/04):</a>
+<ul class="sectlevel4">
+<li><a href="#_change_summary_2">1.2.2.1. Change summary</a></li>
+</ul>
+</li>
+<li><a href="#_some_bug_fixes">1.2.3. Some bug fixes</a>
+<ul class="sectlevel4">
+<li><a href="#_significant_changes_to_setting_destination_calendar_collection">1.2.3.1. Significant changes to setting destination calendar collection</a></li>
+</ul>
+</li>
 <li><a href="#_workflow_changes">1.2.4. Workflow changes</a></li>
 <li><a href="#_sharethis_removed">1.2.5. sharethis removed</a></li>
 <li><a href="#_release_4_0_3_20220603">1.2.6. Release 4.0.3 (2022/06/03):</a></li>
 <li><a href="#_elasticsearch_replaced_with_opensearch">1.2.7. ElasticSearch replaced with OpenSearch</a></li>
 <li><a href="#_new_wildfly_galleon_feature_pack_install">1.2.8. New wildfly galleon feature pack install.</a></li>
-<li><a href="#_missing_tables_in_database">1.2.9. Missing tables in database</a></li>
+<li><a href="#_missing_tables_in_database">1.2.9. Missing tables in database</a>
+<ul class="sectlevel4">
+<li><a href="#_changes_that_might_need_to_be_made">1.2.9.1. Changes that might need to be made</a></li>
+<li><a href="#_other_bug_fixes">1.2.9.2. Other Bug Fixes</a></li>
+<li><a href="#_updates">1.2.9.3. Updates</a></li>
+</ul>
+</li>
 <li><a href="#_release_3_13_2">1.2.10. Release 3.13.2:</a></li>
 <li><a href="#_release_3_13_1">1.2.11. Release 3.13.1:</a></li>
 <li><a href="#_release_3_13_0">1.2.12. Release 3.13.0:</a></li>
@@ -40,9 +73,35 @@
 <li><a href="#_release_3_12_4">1.2.16. Release 3.12.4:</a></li>
 <li><a href="#_release_3_12_3">1.2.17. Release 3.12.3:</a></li>
 <li><a href="#_release_3_12_2">1.2.18. Release 3.12.2:</a></li>
-<li><a href="#_release_3_12_1">1.2.19. Release 3.12.1:</a></li>
-<li><a href="#_release_3_12_0">1.2.20. Release 3.12.0:</a></li>
-<li><a href="#_release_3_11_2">1.2.21. Release 3.11.2:</a></li>
+<li><a href="#_release_3_12_1">1.2.19. Release 3.12.1:</a>
+<ul class="sectlevel4">
+<li><a href="#_searching_for_contactslocations">1.2.19.1. Searching for contacts/locations</a></li>
+<li><a href="#_es_only_read_only_clients">1.2.19.2. ES only read-only clients.</a></li>
+<li><a href="#_split_out_es_indexes">1.2.19.3. Split out ES indexes</a></li>
+<li><a href="#_use_es_only_read_only_interface_for_caldav_read_only_methods">1.2.19.4. Use ES only read-only interface for CalDAV read-only methods.</a></li>
+<li><a href="#_other_changes">1.2.19.5. Other changes.</a></li>
+</ul>
+</li>
+<li><a href="#_release_3_12_0">1.2.20. Release 3.12.0:</a>
+<ul class="sectlevel4">
+<li><a href="#_move_to_githubmaven">1.2.20.1. Move to github/maven</a></li>
+<li><a href="#_related_to_mavengithub_switch">1.2.20.2. Related to maven/github switch</a></li>
+<li><a href="#_scheduling">1.2.20.3. Scheduling</a></li>
+<li><a href="#_notifications">1.2.20.4. Notifications</a></li>
+<li><a href="#_websockets">1.2.20.5. Websockets</a></li>
+<li><a href="#_other">1.2.20.6. Other</a></li>
+</ul>
+</li>
+<li><a href="#_release_3_11_2">1.2.21. Release 3.11.2:</a>
+<ul class="sectlevel4">
+<li><a href="#_indexing">1.2.21.1. Indexing</a></li>
+<li><a href="#_notifications_2">1.2.21.2. Notifications</a></li>
+<li><a href="#_sync_and_orgsync">1.2.21.3. Sync and orgSync:</a></li>
+<li><a href="#_public_events_admin">1.2.21.4. Public events admin</a></li>
+<li><a href="#_clients">1.2.21.5. Clients</a></li>
+<li><a href="#_other_2">1.2.21.6. Other</a></li>
+</ul>
+</li>
 <li><a href="#_release_3_11_1">1.2.22. Release 3.11.1:</a></li>
 </ul>
 </li>
@@ -145,7 +204,15 @@
 </li>
 <li><a href="#setting-up-databases">6.6. Setting up databases</a>
 <ul class="sectlevel3">
-<li><a href="#_postgresql">6.6.1. postgresql</a></li>
+<li><a href="#_postgresql">6.6.1. postgresql</a>
+<ul class="sectlevel4">
+<li><a href="#_configure_postgresql">6.6.1.1. Configure postgresql</a></li>
+<li><a href="#_check_configurations">6.6.1.2. Check configurations</a></li>
+<li><a href="#_do_the_same_for_other_databases">6.6.1.3. Do the same for other databases.</a></li>
+<li><a href="#_install_opensearch">6.6.1.4. Install opensearch</a></li>
+<li><a href="#_start_wildfly">6.6.1.5. Start wildfly</a></li>
+</ul>
+</li>
 <li><a href="#_mysql">6.6.2. MySQL</a></li>
 </ul>
 </li>
@@ -185,7 +252,11 @@
 <li><a href="#_move_business_logic_out_of_webapps_into_core">7.1.7. Move business logic out of webapps into core</a></li>
 <li><a href="#_categories">7.1.8. Categories</a></li>
 <li><a href="#_locations">7.1.9. Locations</a></li>
-<li><a href="#_searching_improvements">7.1.10. Searching improvements</a></li>
+<li><a href="#_searching_improvements">7.1.10. Searching improvements</a>
+<ul class="sectlevel4">
+<li><a href="#_caching">7.1.10.1. Caching</a></li>
+</ul>
+</li>
 <li><a href="#_deployment_of_ears">7.1.11. Deployment of ears</a></li>
 <li><a href="#_deployment_of_wildfly_modules">7.1.12. Deployment of wildfly modules</a></li>
 <li><a href="#_networked_client_api">7.1.13. Networked client api</a></li>
@@ -193,7 +264,13 @@
 <li><a href="#_index_logs_in_es">7.1.15. Index logs in ES</a></li>
 <li><a href="#_timezones">7.1.16. Timezones</a></li>
 <li><a href="#_general_work_needed">7.1.17. General work needed</a></li>
-<li><a href="#_recurring_events_2">7.1.18. Recurring events</a></li>
+<li><a href="#_recurring_events_2">7.1.18. Recurring events</a>
+<ul class="sectlevel4">
+<li><a href="#_entity_only">7.1.18.1. Entity only</a></li>
+<li><a href="#_overrides">7.1.18.2. Overrides</a></li>
+<li><a href="#_expanded">7.1.18.3. Expanded</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Debugging-the-quickstart">7.2. Debugging the quickstart</a></li>
@@ -411,7 +488,7 @@ position: relative;
 <div class="sect3">
 <h4 id="_dev_to_be_release_4_1_1">1.2.1. Dev - To Be Release 4.1.1:</h4>
 <div class="sect4">
-<h5 id="_upcoming_changes">Upcoming changes</h5>
+<h5 id="_upcoming_changes">1.2.1.1. Upcoming changes</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -430,7 +507,7 @@ position: relative;
 </div>
 </div>
 <div class="sect4">
-<h5 id="_change_summary">Change summary</h5>
+<h5 id="_change_summary">1.2.1.2. Change summary</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -464,7 +541,7 @@ position: relative;
 <div class="sect3">
 <h4 id="_release_4_1_0_20240404">1.2.2. Release 4.1.0 (2024/04/04):</h4>
 <div class="sect4">
-<h5 id="_change_summary_2">Change summary</h5>
+<h5 id="_change_summary_2">1.2.2.1. Change summary</h5>
 <div class="paragraph">
 <p>There are changes that will mean some config or stylesheet
 change when upgrading. More details may be seen below.</p>
@@ -566,7 +643,7 @@ change when upgrading. More details may be seen below.</p>
 </ul>
 </div>
 <div class="sect4">
-<h5 id="_significant_changes_to_setting_destination_calendar_collection">Significant changes to setting destination calendar collection</h5>
+<h5 id="_significant_changes_to_setting_destination_calendar_collection">1.2.3.1. Significant changes to setting destination calendar collection</h5>
 <div class="paragraph">
 <p>Up to now, when adding public events there has been a UI field to set the calendar collection e.g. "/public/cals/MainCal". This has been completely removed. It&#8217;s unnecessary and caused too many problems.</p>
 </div>
@@ -727,7 +804,7 @@ ALTER TABLE ONLY bw_eventann_attachments
 <p>Ensure all configurations are up to date, especially the OpenSearch schema then reindex the data.</p>
 </div>
 <div class="sect4">
-<h5 id="_changes_that_might_need_to_be_made">Changes that might need to be made</h5>
+<h5 id="_changes_that_might_need_to_be_made">1.2.9.1. Changes that might need to be made</h5>
 <div class="paragraph">
 <p>If you deploy your own copy of bedework wars and ears there are changes that might affect you. Most of the properties which were changed by the bedework deployment process have been replaced with run-time wildfly properties or by values.</p>
 </div>
@@ -749,7 +826,7 @@ ALTER TABLE ONLY bw_eventann_attachments
 </div>
 </div>
 <div class="sect4">
-<h5 id="_other_bug_fixes">Other Bug Fixes</h5>
+<h5 id="_other_bug_fixes">1.2.9.2. Other Bug Fixes</h5>
 <div class="paragraph">
 <p>A further significant bug discovered soon after release of 3.13.2:</p>
 </div>
@@ -780,7 +857,7 @@ in some cases - see <a href="https://github.com/Bedework/bw-calendar-engine/comm
 </div>
 </div>
 <div class="sect4">
-<h5 id="_updates">Updates</h5>
+<h5 id="_updates">1.2.9.3. Updates</h5>
 <div class="paragraph">
 <p><strong>Moved most of the deployment into wildfly modules</strong> This is to prepare for splitting
 the deployments into read-only web applications (public calendar, etc) from read-write (admin etc).</p>
@@ -1524,7 +1601,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <div class="sect3">
 <h4 id="_release_3_12_1">1.2.19. Release 3.12.1:</h4>
 <div class="sect4">
-<h5 id="_searching_for_contactslocations">Searching for contacts/locations</h5>
+<h5 id="_searching_for_contactslocations">1.2.19.1. Searching for contacts/locations</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1534,7 +1611,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_es_only_read_only_clients">ES only read-only clients.</h5>
+<h5 id="_es_only_read_only_clients">1.2.19.2. ES only read-only clients.</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1560,7 +1637,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_split_out_es_indexes">Split out ES indexes</h5>
+<h5 id="_split_out_es_indexes">1.2.19.3. Split out ES indexes</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1579,7 +1656,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_use_es_only_read_only_interface_for_caldav_read_only_methods">Use ES only read-only interface for CalDAV read-only methods.</h5>
+<h5 id="_use_es_only_read_only_interface_for_caldav_read_only_methods">1.2.19.4. Use ES only read-only interface for CalDAV read-only methods.</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1589,7 +1666,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_other_changes">Other changes.</h5>
+<h5 id="_other_changes">1.2.19.5. Other changes.</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1602,7 +1679,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <div class="sect3">
 <h4 id="_release_3_12_0">1.2.20. Release 3.12.0:</h4>
 <div class="sect4">
-<h5 id="_move_to_githubmaven">Move to github/maven</h5>
+<h5 id="_move_to_githubmaven">1.2.20.1. Move to github/maven</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1646,7 +1723,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_related_to_mavengithub_switch">Related to maven/github switch</h5>
+<h5 id="_related_to_mavengithub_switch">1.2.20.2. Related to maven/github switch</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1681,7 +1758,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_scheduling">Scheduling</h5>
+<h5 id="_scheduling">1.2.20.3. Scheduling</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1694,7 +1771,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_notifications">Notifications</h5>
+<h5 id="_notifications">1.2.20.4. Notifications</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1704,7 +1781,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_websockets">Websockets</h5>
+<h5 id="_websockets">1.2.20.5. Websockets</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1720,7 +1797,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_other">Other</h5>
+<h5 id="_other">1.2.20.6. Other</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1742,7 +1819,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <div class="sect3">
 <h4 id="_release_3_11_2">1.2.21. Release 3.11.2:</h4>
 <div class="sect4">
-<h5 id="_indexing">Indexing</h5>
+<h5 id="_indexing">1.2.21.1. Indexing</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1773,7 +1850,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_notifications_2">Notifications</h5>
+<h5 id="_notifications_2">1.2.21.2. Notifications</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1786,7 +1863,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_sync_and_orgsync">Sync and orgSync:</h5>
+<h5 id="_sync_and_orgsync">1.2.21.3. Sync and orgSync:</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1844,7 +1921,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_public_events_admin">Public events admin</h5>
+<h5 id="_public_events_admin">1.2.21.4. Public events admin</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1913,7 +1990,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_clients">Clients</h5>
+<h5 id="_clients">1.2.21.5. Clients</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1929,7 +2006,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 </div>
 </div>
 <div class="sect4">
-<h5 id="_other_2">Other</h5>
+<h5 id="_other_2">1.2.21.6. Other</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3408,7 +3485,7 @@ components for the indicated database as a demo system.</p></td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>./galleon-4.2.8.Final/bin/galleon.sh
+<pre class="highlight"><code>./galleon-4.2.8.Final/bin/galleon.sh
 maven add-repository --name=ossrh-snapshots --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
 maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.0.4-SNAPSHOT
 install org.bedework.deploy:bw-wf-feature-pack:4.0.4-SNAPSHOT --dir=wildfly-26.0.1.Final --verbose --layers=bw-demo-pg,web-console
@@ -3558,7 +3635,7 @@ exit</pre>
 <h4 id="_adding_an_admin_account">6.4.1. Adding an admin account</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>cd &lt;quickstart-dir&gt;
+<pre class="highlight"><code>cd &lt;quickstart-dir&gt;
 ./wildfly/bin/add-user.sh  -a -dc wildfly/standalone/configuration
 
    What type of user do you wish to add?
@@ -3654,7 +3731,7 @@ keytool -importkeystore -destkeystore wildfly/standalone/configuration/applicati
 </ul>
 </div>
 <div class="sect4">
-<h5 id="_configure_postgresql">Configure postgresql</h5>
+<h5 id="_configure_postgresql">6.6.1.1. Configure postgresql</h5>
 <div class="paragraph">
 <p>You&#8217;ll probably need to configure postgres to allow your chosen role access to the server and databases.</p>
 </div>
@@ -3666,7 +3743,7 @@ keytool -importkeystore -destkeystore wildfly/standalone/configuration/applicati
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>listen_addresses = 'localhost'     # what IP address(es) to listen on;
+<pre class="highlight"><code>listen_addresses = 'localhost'     # what IP address(es) to listen on;
                                    # comma-separated list of addresses;
                                    # defaults to 'localhost'; use '*' for all
                                    # (change requires restart)
@@ -3684,7 +3761,7 @@ port = 5432                        # (change requires restart)</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>host    all             bedework        10.0.0.1/32        md5</code></pre>
+<pre class="highlight"><code>host    all             bedework        10.0.0.1/32        md5</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3698,7 +3775,7 @@ port = 5432                        # (change requires restart)</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>create role bw with login password 'xxxxxxxxx';
+<pre class="highlight"><code>create role bw with login password 'xxxxxxxxx';
 create database caldb owner bw;</code></pre>
 </div>
 </div>
@@ -3714,7 +3791,7 @@ grant all privileges on database caldb to bw;</pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_check_configurations">Check configurations</h5>
+<h5 id="_check_configurations">6.6.1.2. Check configurations</h5>
 <div class="paragraph">
 <p>You MUST install the postgres version for this to work. Most of the configuration is already done for you. You will need to provide the id and password.</p>
 </div>
@@ -3749,7 +3826,7 @@ grant all privileges on database caldb to bw;</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>psql caldb &lt; &lt;path-to-wildfly&gt;/standalone/data/bedework/postgresql/caldb.sql</code></pre>
+<pre class="highlight"><code>psql caldb &lt; &lt;path-to-wildfly&gt;/standalone/data/bedework/postgresql/caldb.sql</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3757,7 +3834,7 @@ grant all privileges on database caldb to bw;</pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_do_the_same_for_other_databases">Do the same for other databases.</h5>
+<h5 id="_do_the_same_for_other_databases">6.6.1.3. Do the same for other databases.</h5>
 <div class="paragraph">
 <p>If you are running the notifier do the same for that database:</p>
 </div>
@@ -3787,11 +3864,11 @@ psql notifydb &lt; /opt/bedework/wildfly/docs/schema/postgresql/synchschema-pg.s
 </div>
 </div>
 <div class="sect4">
-<h5 id="_install_opensearch">Install opensearch</h5>
+<h5 id="_install_opensearch">6.6.1.4. Install opensearch</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_start_wildfly">Start wildfly</h5>
+<h5 id="_start_wildfly">6.6.1.5. Start wildfly</h5>
 <div class="paragraph">
 <p>There will be a number of erros because of the lack of data</p>
 </div>
@@ -3800,7 +3877,7 @@ psql notifydb &lt; /opt/bedework/wildfly/docs/schema/postgresql/synchschema-pg.s
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>./wildfly/bin/bwcli.sh jmxUrl http://localhost:8080/jolokia -id &lt;id&gt; -pw &lt;pw&gt;
+<pre class="highlight"><code>./wildfly/bin/bwcli.sh jmxUrl http://localhost:8080/jolokia -id &lt;id&gt; -pw &lt;pw&gt;
 restoreCal "/full/path/to/initbedework.xml"</code></pre>
 </div>
 </div>
@@ -3812,7 +3889,7 @@ restoreCal "/full/path/to/initbedework.xml"</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>rebuildidx</code></pre>
+<pre class="highlight"><code>rebuildidx</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3820,7 +3897,7 @@ restoreCal "/full/path/to/initbedework.xml"</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>listidx</code></pre>
+<pre class="highlight"><code>listidx</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3831,7 +3908,7 @@ restoreCal "/full/path/to/initbedework.xml"</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>makeidxprod index-name</code></pre>
+<pre class="highlight"><code>makeidxprod index-name</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3849,7 +3926,7 @@ restoreCal "/full/path/to/initbedework.xml"</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;hibernateProperty&gt;</span>hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect<span class="tag">&lt;/hibernateProperty&gt;</span></code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;hibernateProperty&gt;hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect&lt;/hibernateProperty&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -3873,7 +3950,7 @@ restoreCal "/full/path/to/initbedework.xml"</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>wildfly/standalone/configuration/bedework/opensearch/config/opensearch.yml</code></pre>
+<pre class="highlight"><code>wildfly/standalone/configuration/bedework/opensearch/config/opensearch.yml</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3881,7 +3958,7 @@ restoreCal "/full/path/to/initbedework.xml"</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>action.auto_create_index: "-bw*,+*"
+<pre class="highlight"><code>action.auto_create_index: "-bw*,+*"
 
 # Limit to inline only
 script.allowed_types: inline</code></pre>
@@ -3892,7 +3969,7 @@ script.allowed_types: inline</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>cluster.name: bedework-2019
+<pre class="highlight"><code>cluster.name: bedework-2019
 ...
 node.name: bw2019-1
 ...
@@ -4150,7 +4227,7 @@ The synch engine handles the synchronization of external subscriptions with a be
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>CREATE DATABASE `synchdb` DEFAULT CHARACTER SET utf8;
+<pre class="highlight"><code>CREATE DATABASE `synchdb` DEFAULT CHARACTER SET utf8;
 grant all on synchDb.* to '&lt;id&gt;'@'%' identified by '&lt;pw&gt;';</code></pre>
 </div>
 </div>
@@ -4159,7 +4236,7 @@ grant all on synchDb.* to '&lt;id&gt;'@'%' identified by '&lt;pw&gt;';</code></p
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>CREATE TABLE `bwsynch_subs` (
+<pre class="highlight"><code>CREATE TABLE `bwsynch_subs` (
   `bwsyn_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `bwsyn_seq` int(11) NOT NULL,
   `bwsyn_subid` varchar(250) NOT NULL,
@@ -4188,7 +4265,7 @@ grant all on synchDb.* to '&lt;id&gt;'@'%' identified by '&lt;pw&gt;';</code></p
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code># ------------------------------------------------------------------------
+<pre class="highlight"><code># ------------------------------------------------------------------------
 #       wsdls; ear bw-xml
 # These go together - first name the wsdl directories and files...
 org.bedework.app.bw-xml.bwwsdls.wsdl.synch=wssvc.wsdl
@@ -4206,7 +4283,7 @@ Keys</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>cd bwcli/dist/temp/shellscr/bwcli/ (or wherever your binary is)
+<pre class="highlight"><code>cd bwcli/dist/temp/shellscr/bwcli/ (or wherever your binary is)
 ./bwcli.sh
 /usr/lib/jvm/java-8-oracle/bin/java -cp .:./classes:./resources:lib/bw-access-3.11.0.jar:lib/bw-annotations-3.11.0.jar:lib/bw-calfacade-3.11.0.jar:lib/bwcli-3.11.0.jar:lib/bw-ical4j-vcard-1.0.5.jar:lib/commons-collections4-4.0.jar:lib/commons-lang-2.3.jar:lib/commons-lang3-3.3.2.jar:lib/commons-logging.jar:lib/httpclient-osgi-4.3.3.jar:lib/ical4j-2.0.6.jar:lib/jackson-annotations-2.1.1.jar:lib/jackson-core-2.1.1.jar:lib/jackson-databind-2.1.1.jar:lib/jolokia-client-java-1.3.1.jar:lib/json-simple-1.1.1.jar:lib/log4j-1.2.8.jar:lib/rpiutil-3.11.0.jar org.bedework.bwcli.BwCli
 JMX id:&lt;your id&gt;
@@ -4228,13 +4305,13 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
 
-<span class="tag">&lt;synch</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://bedework.org/ns/</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.bedework.common.jmx.SynchConfigImpl</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-  <span class="tag">&lt;connectorId&gt;</span>localBedework<span class="tag">&lt;/connectorId&gt;</span>
-  <span class="tag">&lt;managerUri&gt;</span>http://localhost:8080/synch/manager<span class="tag">&lt;/managerUri&gt;</span>
-  <span class="tag">&lt;wsdlUri&gt;</span>http://localhost:8080/wsdls/synch/wssvc.wsdl<span class="tag">&lt;/wsdlUri&gt;</span>
-<span class="tag">&lt;/synch&gt;</span></code></pre>
+&lt;synch xmlns="http://bedework.org/ns/" type="org.bedework.common.jmx.SynchConfigImpl"&gt;
+  &lt;connectorId&gt;localBedework&lt;/connectorId&gt;
+  &lt;managerUri&gt;http://localhost:8080/synch/manager&lt;/managerUri&gt;
+  &lt;wsdlUri&gt;http://localhost:8080/wsdls/synch/wssvc.wsdl&lt;/wsdlUri&gt;
+&lt;/synch&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4261,7 +4338,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>&lt;scheme-host-port&gt;/locations/all?[params]</code></pre>
+<pre class="highlight"><code>&lt;scheme-host-port&gt;/locations/all?[params]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4290,7 +4367,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>http://localhost:8080/cal/location/all.gdo?fexpr=loc_all=%27some%27</code></pre>
+<pre class="highlight"><code>http://localhost:8080/cal/location/all.gdo?fexpr=loc_all=%27some%27</code></pre>
 </div>
 </div>
 </div>
@@ -4312,7 +4389,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code>    if ((val.getEntityType() != IcalDefs.entityTypeAvailable) &amp;&amp;
+<pre class="highlight"><code>    if ((val.getEntityType() != IcalDefs.entityTypeAvailable) &amp;&amp;
         (calendarNameExists(val, false, true) ||
           calendarNameExists(val, true, true))) {
       throwException(CalFacadeException.duplicateName, val.getName());
@@ -4386,7 +4463,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 <p>Search for events near a geo-location (requires locations to have geo)</p>
 </div>
 <div class="sect4">
-<h5 id="_caching">Caching</h5>
+<h5 id="_caching">7.1.10.1. Caching</h5>
 <div class="paragraph">
 <p>Implement caching of feeder data as a built in feature of the quickstart.</p>
 </div>
@@ -4461,20 +4538,20 @@ instances based on the master.</p>
 <p>For a query involving other conditions - e.g. categories the master may not appear.</p>
 </div>
 <div class="sect4">
-<h5 id="_entity_only">Entity only</h5>
+<h5 id="_entity_only">7.1.18.1. Entity only</h5>
 <div class="paragraph">
 <p>This is just the master</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_overrides">Overrides</h5>
+<h5 id="_overrides">7.1.18.2. Overrides</h5>
 <div class="paragraph">
 <p>This is master + overrides - again it may be filtered so we need to pull
 in the master if absent. This is in line with CalDAV (I think).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_expanded">Expanded</h5>
+<h5 id="_expanded">7.1.18.3. Expanded</h5>
 <div class="paragraph">
 <p>This is a full expansion of all instances. If the master
 appears in the result we need to generate the appropriate instances for
@@ -4511,12 +4588,12 @@ every instance then deliver the matching instances in the batch.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">  <span class="tag">&lt;logger</span> <span class="attribute-name">category</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.hibernate.SQL</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-      <span class="tag">&lt;level</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">DEBUG</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-  <span class="tag">&lt;/logger&gt;</span>
-  <span class="tag">&lt;logger</span> <span class="attribute-name">category</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.hibernate.type.descriptor.sql</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-      <span class="tag">&lt;level</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">TRACE</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-  <span class="tag">&lt;/logger&gt;</span></code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;logger category="org.hibernate.SQL"&gt;
+      &lt;level name="DEBUG"/&gt;
+  &lt;/logger&gt;
+  &lt;logger category="org.hibernate.type.descriptor.sql"&gt;
+      &lt;level name="TRACE"/&gt;
+  &lt;/logger&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -5321,7 +5398,7 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 <div class="paragraph">
 <p><em>July 17, 2009</em><br>
   * Bug fixes and final enhancements
-  * See href="http://www.bedework.org/trac/bedework/milestone/Bedework%203.5[Bedework 3.5 Milestone page] for information about post-release bug fixes.</p>
+  * See href="<a href="http://www.bedework.org/trac/bedework/milestone/Bedework%203.5">Bedework 3.5 Milestone page</a> for information about post-release bug fixes.</p>
 </div>
 </div>
 <div class="sect2">
@@ -6021,8 +6098,41 @@ See: <a href="http://www.calconnect.org/pubdocs/CD1011%20CalWS-Rest%20Restful%20
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-02 13:33:56 EDT
+Last updated 2024-11-14 13:40:11 -0500
 </div>
 </div>
+<script src="../tocbot-3.0.2/tocbot.js"></script>
+<script>
+  /* Tocbot dynamic TOC, works with tocbot 3.0.2 */
+  /* Source: https://github.com/asciidoctor/asciidoctor/issues/699#issuecomment-321066006 */
+  var oldtoc = document.getElementById('toctitle').nextElementSibling;
+  var newtoc = document.createElement('div');
+  newtoc.setAttribute('id', 'tocbot');
+  newtoc.setAttribute('class', 'js-toc');
+  oldtoc.parentNode.replaceChild(newtoc, oldtoc);
+  tocbot.init({ contentSelector: '#content',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    smoothScroll: false });
+  var handleTocOnResize = function() {
+    var width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+    if (width < 768) {
+      tocbot.refresh({ contentSelector: '#content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 6,
+        activeLinkClass: 'ignoreactive',
+        throttleTimeout: 1000,
+        smoothScroll: false });
+    }
+    else {
+      tocbot.refresh({ contentSelector: '#content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        smoothScroll: false });
+    }
+  };
+  window.addEventListener('resize', handleTocOnResize);
+  handleTocOnResize();
+</script>
 </body>
 </html>
