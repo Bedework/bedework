@@ -24,7 +24,6 @@
         <module name="sched-assist-war (1)" />
         <module name="bw-webdav" />
         <module name="bw-calendar-client-appcommon" />
-        <module name="bw-calendar-engine-dumprestore" />
         <module name="bw-addrbook-client" />
         <module name="bw-selfreg-war" />
         <module name="bw-util-tz" />
@@ -32,6 +31,7 @@
         <module name="bw-self-registration-common" />
         <module name="bw-calendar-engine-indexer" />
         <module name="bw-util2-vcard" />
+        <module name="bw-cli-dbtools" />
         <module name="bw-calsockets-common" />
         <module name="bw-timezone-server-war" />
         <module name="bw-category-impl" />
@@ -41,6 +41,7 @@
         <module name="bw-calendar-client-admin" />
         <module name="bw-carddav-client" />
         <module name="bw-timezone-server-common" />
+        <module name="bw-calendar-dumprestore" />
         <module name="bw-deploy-maven-plugin" />
         <module name="bw-util-servlet" />
         <module name="bw-util-maven-deploy" />
@@ -85,6 +86,7 @@
         <module name="bw-util-xml" />
         <module name="bw-util-xmltools" />
         <module name="bw-calendar-pubcaldav" />
+        <module name="bw-util-annotations" />
         <module name="bw-category-service" />
         <module name="bw-calendar-facade" />
         <module name="bw-calendar-notifyws" />
@@ -138,6 +140,7 @@
         <module name="bw-selfreg-common" />
         <module name="bw-logs" />
         <module name="bw-synch-ws-xml" />
+        <module name="bw-dao" />
         <module name="bw-calsockets-pubwar" />
         <module name="bw-calendar-xsl-caladminrsrc" />
         <module name="bw-event-registration-war" />
@@ -195,6 +198,7 @@
       <module name="bw-calendar-engine-annotations" target="11" />
       <module name="bw-calendar-engine-api-ro" target="11" />
       <module name="bw-calendar-engine-convert" target="11" />
+      <module name="bw-calendar-engine-dumprestore" target="17" />
       <module name="bw-calendar-engine-facade" target="11" />
       <module name="bw-calendar-engine-ical" target="11" />
       <module name="bw-calendar-engine-impl-ro" target="11" />
@@ -265,8 +269,10 @@
       <module name="bw-wfmodules (1)" target="11" />
       <module name="bw-wfmodules (2)" target="11" />
       <module name="bw-wfmodules-apache-http" target="11" />
+      <module name="bw-wfmodules-apache-jdkim-library" target="17" />
       <module name="bw-wfmodules-calendar-client-struts" target="11" />
       <module name="bw-wfmodules-calendar-client-strutsmodule" target="11" />
+      <module name="bw-wfmodules-calendar-engine-dumprestore" target="17" />
       <module name="bw-wfmodules-category-ical" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-databind (1)" target="11" />
       <module name="bw-wfmodules-elasticsearch-rest-client" target="11" />

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="javax.annotation.processing.SupportedAnnotationTypes" />
+    </list>
     <writeAnnotations>
       <writeAnnotation name="picocli.CommandLine.Parameters" />
     </writeAnnotations>
@@ -84,18 +87,24 @@
         <option value="$PROJECT_DIR$/../bw-web/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-webtest/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-testsuite/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-util-annotations/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-dumprestore/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-dav-tester/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-synch/bw-synch-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-webtest/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-caldav/bw-wfmodules-calws-soap-xml/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-dumprestore/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-logging/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-notifier/bw-wfmodules-note-ear/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-apache-jdkim-library/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-api/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-nop/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-timezone-server/bw-wfmodules-timezone-server-ear/pom.xml" />

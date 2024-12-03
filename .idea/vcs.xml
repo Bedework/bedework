@@ -11,6 +11,7 @@
     <mapping directory="$PROJECT_DIR$/../bw-calendar-client" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-common" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-deploy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-calendar-dumprestore" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-engine" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-xsl" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calsockets" vcs="Git" />
@@ -19,6 +20,7 @@
     <mapping directory="$PROJECT_DIR$/../bw-category" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-cli" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-cliutil" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-dao" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-dotwell-known" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-event-registration" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-exchangews-xml" vcs="Git" />
@@ -33,6 +35,7 @@
     <mapping directory="$PROJECT_DIR$/../bw-testsuite" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-timezone-server" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-util-annotations" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-conf" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-deploy" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-hibernate" vcs="Git" />

@@ -57,11 +57,11 @@ and unzip.
 The first time, if you want to install snapshot versions, you need to set up repositories and resolve for the required version
 ----
 maven add-repository --name=ossrh --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
-maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.1.1-SNAPSHOT
+maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.2.0
 ----
 then install
 ----
-install org.bedework.deploy:bw-wf-feature-pack:4.1.0
+install org.bedework.deploy:bw-wf-feature-pack:4.2.0
    --dir=wildfly --verbose --layers=bw-demoall-h2,web-console
 ----
 
@@ -122,7 +122,7 @@ You will probably want to change the *--layers* parameter to
 select a subset of the bedework installation - see <<wildfly-bedework-layers>>
 ----
 ./galleon-5.2.2.Final/bin/galleon.sh \
-   install org.bedework.deploy:bw-wf-feature-pack:4.1.0
+   install org.bedework.deploy:bw-wf-feature-pack:4.2.0
    --dir=wildfly-26.0.1-Final --verbose --layers=bw-cal-eventsubmit-pg,web-console
 
 ln -s wildfly-26.0.1.Final wildfly

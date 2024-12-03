@@ -3,23 +3,41 @@
 
 Specific changes to xsl and javascript can be found at <<xsl-changes>>
 
-==== Dev - To Be Release 4.1.1:
+==== Dev - To Be Release 4.3.0?:
 ===== Upcoming changes
 
 * Cross the jakarta boundary. Will mean upgrading wildfly.
-* Move client side operations into a high level client intended to usable via web actions or a cli.
-* Work on removing struts
+* Work on removing struts - may just upgrade. There seems to be renewed activity on that project.
 * Create migration tool to rewrite or modify database to allow new simplified schema and allow removal of hibernate as a dependency.
+* Move client side operations into a high level client intended to be usable via web actions or a cli.
 
+==== Release 4.2.0 (2024/12/02):
 ===== Change summary
-* When read-only and getting special calendar, return a fake for missing calendar. Caused errors when we were missing the polls calendar for example.
-* Various other VPOLL changes
-* Fix handling of UNTIL element in recurrences when converting to/from xml
+====== UI
 * More changes to detect and prevent multi-tab use in event add/update
-* Cannot have a static variable for the session factory in util-hibernate. Opted to remove and let callers manage that. Prevented synch, notify and others working.
+* Many changes to remove dependencies on action form objects.
+
+====== Indexing
 * Single event retrieval wasn't excluding tombstoned entities.
 * Retrieval of 'special' xprops didn't eliminate tab delimiter when no params were present.
+* Updated to OpenSearch version 2.18.0. It appears that the 2.18.0 server will update the 2.1.0 files so a reindex may not be necessary. It also appears that the 2.18.0 bedework will work with a 2.1.0 server.
+
+====== Translation
+* Fix handling of UNTIL element in recurrences when converting to/from xml
+* Missing checks for absent values
+* Add processing for exdate and fix exrule
+
+====== Synch engine
 * Add refresh feature to synch engine with new button on the admin screen. Will cause an immediate resynch of the subscription. Useful when fixing bugs in the data or the receiving end.
+* Was not updating changes correctly. Added xprops were missed
+
+====== Others
+* Made more exceptions unchecked
+* When read-only and getting special calendar, return a fake for missing calendar. Caused errors when we were missing the polls calendar for example.
+* Various other VPOLL changes including supporting PARTICIPANT as scheduling entities.
+* Cannot have a static variable for the session factory in util-hibernate. Opted to remove and let callers manage that. Prevented synch, notify and others working.
+* Rebuilt the web test suite and added more tests.
+* CalDAV SupportedComponents was not working. Fixed
 
 ==== Release 4.1.0 (2024/04/04):
 ===== Change summary

@@ -1,0 +1,289 @@
+ Strip leading log info with
+ ^.*\] \(.*\)
+
+
+#Current timestamp
+----
+ select
+     current_timestamp as col_0_0_
+ from
+     bw_settings bwsystem0_
+----
+
+#PrincipalsAndPrefsDAO getPrincipal
+----
+  private final static String getPrincipalQuery =
+          "from " + BwUser.class.getName() +
+                  " as u where u.principalRef = :href";
+
+Hibernate SQL:
+ select
+     bwuser0_.userid as userid1_73_,
+     bwuser0_.bwseq as bwseq2_73_,
+     bwuser0_.bw_account as bw_accou3_73_,
+     bwuser0_.bw_principal_ref as bw_princ4_73_,
+     bwuser0_.instance_owner as instance5_73_,
+     bwuser0_.bw_created as bw_creat6_73_,
+     bwuser0_.bw_last_logon as bw_last_7_73_,
+     bwuser0_.bw_last_access as bw_last_8_73_,
+     bwuser0_.bw_last_modify as bw_last_9_73_,
+     bwuser0_.bw_category_access as bw_cate10_73_,
+     bwuser0_.bw_contact_access as bw_cont11_73_,
+     bwuser0_.bw_location_access as bw_loca12_73_,
+     bwuser0_.bw_quota as bw_quot13_73_
+ from
+     bw_users bwuser0_
+ where
+     bwuser0_.bw_principal_ref=?
+----
+
+#PrincipalsAndPrefsDAO getPrincipalHrefs
+----
+private static final String getPrincipalHrefsQuery =
+          "select u.principalRef from " + BwUser.class.getName() +
+                  " u order by u.principalRef";
+----
+
+#PrincipalsAndPrefsDAO getPreferences
+----
+  private static final String getOwnerPreferencesQuery =
+          "from " + BwPreferences.class.getName() + " p " +
+                  "where p.ownerHref=:ownerHref";
+
+
+
+ Hibernate:
+ select
+     bwpreferen0_.prefid as prefid1_63_,
+     bwpreferen0_.bwseq as bwseq2_63_,
+     bwpreferen0_.bw_owner as bw_owner3_63_,
+     bwpreferen0_.email as email4_63_,
+     bwpreferen0_.bw_default_calendar as bw_defau5_63_,
+     bwpreferen0_.skin_name as skin_nam6_63_,
+     bwpreferen0_.skin_style as skin_sty7_63_,
+     bwpreferen0_.preferred_view as preferre8_63_,
+     bwpreferen0_.preferred_view_period as preferre9_63_,
+     bwpreferen0_.bw_page_size as bw_page10_63_,
+     bwpreferen0_.workdays as workday11_63_,
+     bwpreferen0_.workday_start as workday12_63_,
+     bwpreferen0_.workday_end as workday13_63_,
+     bwpreferen0_.preferred_endtype as preferr14_63_,
+     bwpreferen0_.bwuser_mode as bwuser_15_63_,
+     bwpreferen0_.bw_hour24 as bw_hour16_63_,
+     bwpreferen0_.bw_sched_autoresp as bw_sche17_63_,
+     bwpreferen0_.bw_sched_autocancelaction as bw_sche18_63_,
+     bwpreferen0_.bw_sched_double_book as bw_sche19_63_,
+     bwpreferen0_.bw_sched_autoproc_resp as bw_sche20_63_
+ from
+     bw_preferences bwpreferen0_
+ where
+     bwpreferen0_.bw_owner=?
+
+
+ Hibernate:
+     select
+         views0_.prefid as prefid1_72_0_,
+         views0_.elt as elt2_72_0_,
+         bwview1_.viewid as viewid1_75_1_,
+         bwview1_.bwseq as bwseq2_75_1_,
+         bwview1_.viewname as viewname3_75_1_
+     from
+         bw_user_views views0_
+     inner join
+         bw_views bwview1_
+             on views0_.elt=bwview1_.viewid
+     where
+         views0_.prefid=?
+
+
+ Hibernate:
+     select
+         collection0_.viewid as viewid1_74_0_,
+         collection0_.bw_calpath as bw_calpa3_74_0_,
+         collection0_.bw_path_positon as bw_path_2_0_
+     from
+         bw_view_collections collection0_
+     where
+         collection0_.viewid=?
+
+
+ Hibernate:
+     select
+         properties0_.bwid as bwid1_71_0_,
+         properties0_.bw_name as bw_name2_71_0_,
+         properties0_.bw_value as bw_value3_71_0_
+     from
+         bw_user_properties properties0_
+     where
+         properties0_.bwid=?
+
+----
+
+
+#PrincipalsAndPrefsDAO findGroup
+----
+  private static final String getAdminGroupQuery =
+          "from " + BwAdminGroup.class.getName() + " ag " +
+                  "where ag.account = :account";
+
+  private static final String getGroupQuery =
+          "from " + BwGroup.class.getName() + " g " +
+                  "where g.account = :account";
+----
+
+#PrincipalsAndPrefsDAO findGroupParents
+----
+  private static final String getAdminGroupParentsQuery =
+          "select ag from " +
+                  "org.bedework.calfacade.svc.BwAdminGroupEntry age, " +
+                  "org.bedework.calfacade.svc.BwAdminGroup ag " +
+                  "where ag.id = age.groupId and " +
+                  "age.memberId=:grpid and age.memberIsGroup=true";
+
+  private static final String getGroupParentsQuery =
+          "select g from " +
+                  "org.bedework.calfacade.BwGroupEntry ge, " +
+                  "org.bedework.calfacade.BwGroup g " +
+                  "where g.id = ge.groupId and " +
+                  "ge.memberId=:grpid and ge.memberIsGroup=true";
+
+ select
+     bwadmingro1_.bw_groupid as bw_group1_1_,
+     bwadmingro1_.bwseq as bwseq2_1_,
+     bwadmingro1_.account as account3_1_,
+     bwadmingro1_.bw_principal_ref as bw_princ4_1_,
+     bwadmingro1_.description as descript5_1_,
+     bwadmingro1_.bw_group_owner as bw_group6_1_,
+     bwadmingro1_.bw_owner as bw_owner7_1_
+ from
+     bw_adminGroupMembers bwadmingro0_
+ inner join
+     bw_adminGroups bwadmingro1_
+         on bwadmingro0_.bw_groupid=bwadmingro1_.bw_groupid
+ where
+     bwadmingro0_.memberid=?
+     and bwadmingro0_.member_is_group=?
+----
+
+#PrincipalsAndPrefsDAO removeGroup
+----
+  private static final String removeAllAdminGroupMemberRefsQuery =
+          "delete from " +
+                  "org.bedework.calfacade.svc.BwAdminGroupEntry " +
+                  "where grp=:gr";
+  private static final String removeAllGroupMembersQuery =
+          "delete from " +
+
+                  "org.bedework.calfacade.BwGroupEntry " +
+                  "where grp=:gr";
+
+  private static final String removeFromAllAdminGroupsQuery =
+          "delete from " +
+                  "org.bedework.calfacade.svc.BwAdminGroupEntry " +
+                  "where memberId=:mbrId and memberIsGroup=:isgroup";
+
+  private static final String removeFromAllGroupsQuery =
+          "delete from " +
+                  "org.bedework.calfacade.BwGroupEntry " +
+                  "where memberId=:mbrId and memberIsGroup=:isgroup";
+----
+
+#PrincipalsAndPrefsDAO removeMember
+----
+  private static final String findAdminGroupEntryQuery =
+          "from org.bedework.calfacade.svc.BwAdminGroupEntry " +
+                  "where grp=:grp and memberId=:mbrId and memberIsGroup=:isgroup";
+
+  private static final String findGroupEntryQuery =
+          "from org.bedework.calfacade.BwGroupEntry " +
+                  "where grp=:grp and memberId=:mbrId and memberIsGroup=:isgroup";
+----
+
+
+
+#PrincipalsAndPrefsDAO getMembers
+----
+  private static final String getAdminGroupUserMembersQuery =
+          "select u from " +
+                  "org.bedework.calfacade.svc.BwAdminGroupEntry age, " +
+                  "org.bedework.calfacade.BwUser u " +
+                  "where u.id = age.memberId and " +
+                  "age.grp=:gr and age.memberIsGroup=false";
+
+  private static final String getAdminGroupGroupMembersQuery =
+          "select ag from " +
+                  "org.bedework.calfacade.svc.BwAdminGroupEntry age, " +
+                  "org.bedework.calfacade.svc.BwAdminGroup ag " +
+                  "where ag.id = age.memberId and " +
+                  "age.grp=:gr and age.memberIsGroup=true";
+
+  private static final String getGroupUserMembersQuery =
+          "select u from " +
+                  "org.bedework.calfacade.BwGroupEntry ge, " +
+                  "org.bedework.calfacade.BwUser u " +
+                  "where u.id = ge.memberId and " +
+                  "ge.grp=:gr and ge.memberIsGroup=false";
+
+  private static final String getGroupGroupMembersQuery =
+          "select g from " +
+                  "org.bedework.calfacade.BwGroupEntry ge, " +
+                  "org.bedework.calfacade.BwGroup g " +
+                  "where g.id = ge.memberId and " +
+                  "ge.grp=:gr and ge.memberIsGroup=true";
+----
+
+
+#PrincipalsAndPrefsDAO getAllGroups
+----
+  private static final String getAllAdminGroupsQuery =
+          "from " + BwAdminGroup.class.getName() + " ag " +
+                  "order by ag.account";
+
+  private static final String getAllGroupsQuery =
+          "from " + BwGroup.class.getName() + " g " +
+                  "order by g.account";
+----
+
+
+#PrincipalsAndPrefsDAO getGroups(principal)
+----
+  /* Groups principal is a member of */
+  private static final String getAdminGroupsQuery =
+          "select ag.grp from org.bedework.calfacade.svc.BwAdminGroupEntry ag " +
+                  "where ag.memberId=:entId and ag.memberIsGroup=:isgroup";
+
+  /* Groups principal is a event owner for */
+  private static final String getAdminGroupsByEventOwnerQuery =
+          "from org.bedework.calfacade.svc.BwAdminGroup ag " +
+                  "where ag.ownerHref=:ownerHref";
+
+
+ Hibernate SQL:
+ select
+     bwadmingro0_.bw_groupid as bw_group1_1_,
+     bwadmingro0_.bwseq as bwseq2_1_,
+     bwadmingro0_.account as account3_1_,
+     bwadmingro0_.bw_principal_ref as bw_princ4_1_,
+     bwadmingro0_.description as descript5_1_,
+     bwadmingro0_.bw_group_owner as bw_group6_1_,
+     bwadmingro0_.bw_owner as bw_owner7_1_
+ from
+     bw_adminGroups bwadmingro0_
+ where
+     bwadmingro0_.bw_owner=?
+
+
+  private static final String getGroupsQuery =
+          "select g.grp from org.bedework.calfacade.BwGroupEntry g " +
+                  "where g.memberId=:entId and g.memberIsGroup=:isgroup";
+----
+
+
+#PrincipalsAndPrefsDAO
+----
+----
+
+
+#PrincipalsAndPrefsDAO
+----
+----
