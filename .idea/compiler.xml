@@ -12,7 +12,6 @@
         <module name="bw-web" />
         <module name="bw-util-opensearch" />
         <module name="bw-category-web" />
-        <module name="bw-category-ear" />
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
         <module name="bw-wf-undertow-handlers" />
@@ -231,6 +230,7 @@
       <module name="bw-calsockets-war (1)" target="1.8" />
       <module name="bw-calutil" target="1.8" />
       <module name="bw-carddav-client" target="1.8" />
+      <module name="bw-category-ear" target="17" />
       <module name="bw-dav-tester" target="1.5" />
       <module name="bw-deploy-maven-plugin" target="1.8" />
       <module name="bw-esdata" target="11" />
@@ -273,6 +273,7 @@
       <module name="bw-wfmodules-calendar-client-struts" target="11" />
       <module name="bw-wfmodules-calendar-client-strutsmodule" target="11" />
       <module name="bw-wfmodules-calendar-engine-dumprestore" target="17" />
+      <module name="bw-wfmodules-category-ear" target="17" />
       <module name="bw-wfmodules-category-ical" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-databind (1)" target="11" />
       <module name="bw-wfmodules-elasticsearch-rest-client" target="11" />
