@@ -38,7 +38,6 @@ Below is the contents of that settings.xml file. This must be in place before al
       </activation>
       <properties>
         <org.bedework.deployment.basedir>$qs</org.bedework.deployment.basedir>
-        <org.bedework.deployment.properties>$qs/bedework/config/wildfly.deploy.properties</org.bedework.deployment.properties>
       </properties>
     </profile>
   </profiles>
@@ -54,12 +53,9 @@ In many cases it is possible to simply cd in to the appropriate directory and do
 will build a lot of projects eventually building the client project which deploys an ear file.
 
 ### Deploying
-As part of the bedework project there is a maven plugin which uses a properties file to handle post-build deployment issues. Essentially the ear or war as built acts as a template for the deployer.
+As part of the bedework project there is a maven plugin which handles post-build deployment issues. 
 
 The deployment process may involve inserting filters for CAS, adding property values to web.xml files, cloning entire wars for calendar suites etc.
 
-The file **bedework/config/wildfly.deploy.properties** is the quickstart version of that file.
+When developing your own service the first thing to do is create a repository with your files.
 
-When developing your own service the first thing to do is create a repository with your files and copy the above file into that repository. Then set the **org.bedework.deployment.properties** value in your maven settings.xml to point to that file.
-
-DO NOT change the **org.bedework.deployment.basedir** property - unless you move the quickstart. This property is used to locate the wildfly instance.

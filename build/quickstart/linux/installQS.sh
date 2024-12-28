@@ -242,7 +242,6 @@ cat <<EOT >> "$qs"/profile.txt
       </activation>
       <properties>
         <org.bedework.deployment.basedir>$qs</org.bedework.deployment.basedir>
-        <org.bedework.deployment.properties>$qs/bedework/config/wildfly.deploy.properties</org.bedework.deployment.properties>
       </properties>
     </profile>
   </profiles>
