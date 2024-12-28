@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="EntryPointsManager">
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="javax.annotation.processing.SupportedAnnotationTypes" />
+      <item index="1" class="java.lang.String" itemvalue="org.bedework.util.jmx.MBeanInfo" />
     </list>
     <writeAnnotations>
+      <writeAnnotation name="org.apache.maven.plugins.annotations.Parameter" />
       <writeAnnotation name="picocli.CommandLine.Parameters" />
     </writeAnnotations>
   </component>
@@ -95,8 +97,10 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-carddav/bw-carddav-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-category/bw-category-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-dav-tester/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-synch/bw-synch-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-ear/pom.xml" />
@@ -109,6 +113,7 @@
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-apache-jdkim-library/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-api/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-nop/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-spring/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-timezone-server/bw-wfmodules-timezone-server-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util/bw-wfmodules-util-network/bw-wfmodules-util-config-http/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-xml/pom.xml" />

@@ -17,6 +17,7 @@
         <module name="bw-wf-undertow-handlers" />
         <module name="bw-exchangews-xml" />
         <module name="bw-webtest" />
+        <module name="bw-event-registration-webcommon" />
         <module name="bw-webclient-calauth" />
         <module name="bw-util-http" />
         <module name="bw-note-common" />
@@ -39,7 +40,9 @@
         <module name="bw-synch-web" />
         <module name="bw-calendar-client-admin" />
         <module name="bw-carddav-client" />
+        <module name="bw-event-registration-webadmin" />
         <module name="bw-timezone-server-common" />
+        <module name="bw-event-registration-war-admin" />
         <module name="bw-calendar-dumprestore" />
         <module name="bw-deploy-maven-plugin" />
         <module name="bw-util-servlet" />
@@ -49,7 +52,6 @@
         <module name="bw-carddav-public-war" />
         <module name="bw-synch-common" />
         <module name="bw-calendar-publicws" />
-        <module name="bw-event-registration-ear" />
         <module name="bw-util-options" />
         <module name="bw-evreg-war" />
         <module name="bw-cli-jmx" />
@@ -70,10 +72,10 @@
         <module name="bw-carddav-dumpres" />
         <module name="bw-carddav-server" />
         <module name="bw-calendar-ucaldav" />
-        <module name="bw-carddav-ear" />
         <module name="bw-note-servlet" />
         <module name="bw-synch-shared" />
         <module name="bw-calutil" />
+        <module name="bw-event-registration-wsimpl" />
         <module name="bw-category-war" />
         <module name="bw-category-common" />
         <module name="bw-util-cli" />
@@ -135,6 +137,7 @@
         <module name="bw-json" />
         <module name="bw-calendar-client-bedework-common" />
         <module name="bw-synch-war" />
+        <module name="bw-event-registration-ws" />
         <module name="bw-calendar-client-struts2" />
         <module name="bw-selfreg-common" />
         <module name="bw-logs" />
@@ -143,6 +146,7 @@
         <module name="bw-calsockets-pubwar" />
         <module name="bw-calendar-xsl-caladminrsrc" />
         <module name="bw-event-registration-war" />
+        <module name="bw-event-registration-war-common" />
         <module name="bw-calendar-engine-chgnote" />
         <module name="bw-calendar-synchws" />
         <module name="bw-webcache-web" />
@@ -156,7 +160,6 @@
         <module name="bw-util-servlet-filters" />
         <module name="bw-wf-calendar-subsystem" />
         <module name="bw-cli-bwcmd" />
-        <module name="bw-event-registration-web-common" />
         <module name="bw-caldav-server" />
         <module name="bw-calendar-annotations" />
         <module name="bw-util-logging" />
@@ -230,10 +233,12 @@
       <module name="bw-calsockets-war (1)" target="1.8" />
       <module name="bw-calutil" target="1.8" />
       <module name="bw-carddav-client" target="1.8" />
+      <module name="bw-carddav-ear" target="17" />
       <module name="bw-category-ear" target="17" />
       <module name="bw-dav-tester" target="1.5" />
       <module name="bw-deploy-maven-plugin" target="1.8" />
       <module name="bw-esdata" target="11" />
+      <module name="bw-event-registration-ear" target="17" />
       <module name="bw-evreg-common" target="1.7" />
       <module name="bw-evreg-ear" target="1.7" />
       <module name="bw-evreg-service" target="1.7" />
@@ -292,6 +297,7 @@
       <module name="bw-wfmodules-org-slf4j-slf4j-api" target="11" />
       <module name="bw-wfmodules-org-slf4j-slf4j-log4j12" target="11" />
       <module name="bw-wfmodules-org-slf4j-slf4j-nop" target="11" />
+      <module name="bw-wfmodules-spring" target="17" />
       <module name="bw-wfmodules-spring-context-support" target="11" />
       <module name="bw-wfmodules-spring-jdbc" target="11" />
       <module name="bw-wfmodules-spring-ldap-core" target="11" />
