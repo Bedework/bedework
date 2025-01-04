@@ -42,9 +42,9 @@
         <module name="bw-carddav-client" />
         <module name="bw-event-registration-webadmin" />
         <module name="bw-timezone-server-common" />
-        <module name="bw-event-registration-war-admin" />
         <module name="bw-calendar-dumprestore" />
         <module name="bw-deploy-maven-plugin" />
+        <module name="bw-event-registration-admin-war" />
         <module name="bw-util-servlet" />
         <module name="bw-util-maven-deploy" />
         <module name="bw-webcache-war" />
@@ -146,7 +146,6 @@
         <module name="bw-calsockets-pubwar" />
         <module name="bw-calendar-xsl-caladminrsrc" />
         <module name="bw-event-registration-war" />
-        <module name="bw-event-registration-war-common" />
         <module name="bw-calendar-engine-chgnote" />
         <module name="bw-calendar-synchws" />
         <module name="bw-webcache-web" />
@@ -167,6 +166,7 @@
         <module name="bw-hawtio" />
         <module name="bw-util-jmx" />
         <module name="bw-caldavTest" />
+        <module name="bw-event-registration-common-war" />
         <module name="bw-util-dav" />
         <module name="bw-evreg-ear" />
         <module name="bw-calendar-api-ro" />

@@ -227,6 +227,10 @@
     <file url="file://$PROJECT_DIR$/../bw-dotwell-known/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-dotwell-known/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-esdata/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-admin-war/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-admin-war/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common-war/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common-war/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/src/main/java" charset="UTF-8" />
@@ -234,10 +238,6 @@
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war-admin/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war-admin/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war-common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war/src/resources" charset="UTF-8" />
