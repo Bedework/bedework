@@ -298,7 +298,13 @@
       <module name="bw-wfmodules-org-slf4j-slf4j-log4j12" target="11" />
       <module name="bw-wfmodules-org-slf4j-slf4j-nop" target="11" />
       <module name="bw-wfmodules-spring" target="17" />
+      <module name="bw-wfmodules-spring-aop" target="17" />
+      <module name="bw-wfmodules-spring-beans" target="17" />
+      <module name="bw-wfmodules-spring-context" target="17" />
       <module name="bw-wfmodules-spring-context-support" target="11" />
+      <module name="bw-wfmodules-spring-core" target="17" />
+      <module name="bw-wfmodules-spring-expression" target="17" />
+      <module name="bw-wfmodules-spring-jcl" target="17" />
       <module name="bw-wfmodules-spring-jdbc" target="11" />
       <module name="bw-wfmodules-spring-ldap-core" target="11" />
       <module name="bw-wfmodules-spring-oxm" target="11" />
@@ -309,8 +315,10 @@
       <module name="bw-wfmodules-spring-security-taglibs" target="11" />
       <module name="bw-wfmodules-spring-security-web" target="11" />
       <module name="bw-wfmodules-spring-tx" target="11" />
+      <module name="bw-wfmodules-spring-web" target="17" />
       <module name="bw-wfmodules-spring-webflow" target="11" />
       <module name="bw-wfmodules-spring-webflow-spring-binding" target="11" />
+      <module name="bw-wfmodules-spring-webmvc" target="17" />
       <module name="bw-wfmodules-spring-ws-core" target="11" />
       <module name="bw-wfmodules-spring-ws-security" target="11" />
       <module name="bw-wfmodules-spring-ws-xml" target="11" />
