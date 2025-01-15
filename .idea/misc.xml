@@ -82,7 +82,6 @@
         <option value="$PROJECT_DIR$/../bw-json/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-json/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wf-extensions/pom.xml" />
-        <option value="$PROJECT_DIR$/../cc-extract/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-icalendar-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-exchangews-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calws-soap/pom.xml" />

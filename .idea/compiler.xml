@@ -125,7 +125,6 @@
         <module name="bw-calendar-engine-interfaces" />
         <module name="bw-calendar-engine-core-common" />
         <module name="bw-util-misc" />
-        <module name="cc-extract" />
         <module name="bw-webclient-demosoe" />
         <module name="bw-note-shared" />
         <module name="bw-timezone-server-web" />
@@ -334,6 +333,7 @@
       <module name="bwwebcl-appcommon" target="1.7" />
       <module name="bwwebcl-ucalws" target="1.8" />
       <module name="bwwebcl-webcommon" target="1.7" />
+      <module name="cc-extract" target="17" />
       <module name="sched-assist-api" target="11" />
       <module name="sched-assist-mock" target="11" />
       <module name="sched-assist-portlet" target="11" />
