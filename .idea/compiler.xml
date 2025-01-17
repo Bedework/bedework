@@ -107,6 +107,7 @@
         <module name="bw-calendar-api" />
         <module name="bw-calendar-client-bwcommon" />
         <module name="bw-calendar-client-util" />
+        <module name="bw-base" />
         <module name="bw-util-jms" />
         <module name="bw-self-registration-war" />
         <module name="bw-calendar-client-rw" />

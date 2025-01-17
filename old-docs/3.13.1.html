@@ -834,7 +834,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 
        return new String(baos.toByteArray());
      } catch (final Throwable t) {
-       throw new CalFacadeException(t);
+       throw new BedeworkException(t);
 -    } finally {
 -      try {
 -        b64out.close();

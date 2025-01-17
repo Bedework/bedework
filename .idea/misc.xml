@@ -91,6 +91,7 @@
         <option value="$PROJECT_DIR$/../bw-dao/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-annotations/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-dumprestore/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-base/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -8,6 +8,7 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp/tst" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/bw-event-registration" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/webtest-svn" />
     </content>
   </component>
 </module>

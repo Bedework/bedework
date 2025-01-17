@@ -7,6 +7,7 @@
     <mapping directory="$PROJECT_DIR$/../bedework.github.io" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tmp/bw-event-registration" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-access" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-base" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldav" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldavTest" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-client" vcs="Git" />
