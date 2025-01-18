@@ -3116,7 +3116,7 @@ before retrying.
 <div class="listingblock">
 <div class="content">
 <pre>maven add-repository --name=ossrh --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
-maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.1.1-SNAPSHOT</pre>
+maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.2.0</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3124,7 +3124,7 @@ maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.1.1-SNAPSHOT
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>install org.bedework.deploy:bw-wf-feature-pack:4.1.0
+<pre>install org.bedework.deploy:bw-wf-feature-pack:4.2.0
    --dir=wildfly --verbose --layers=bw-demoall-h2,web-console</pre>
 </div>
 </div>
@@ -3229,7 +3229,7 @@ select a subset of the bedework installation - see <a href="#wildfly-bedework-la
 <div class="listingblock">
 <div class="content">
 <pre>./galleon-5.2.2.Final/bin/galleon.sh \
-   install org.bedework.deploy:bw-wf-feature-pack:4.1.0
+   install org.bedework.deploy:bw-wf-feature-pack:4.2.0
    --dir=wildfly-26.0.1-Final --verbose --layers=bw-cal-eventsubmit-pg,web-console
 
 ln -s wildfly-26.0.1.Final wildfly</pre>
@@ -3996,7 +3996,7 @@ restoreCal "/full/path/to/initbedework.xml"</code></pre>
 <div class="sect2">
 <h3 id="installing-opensearch">6.7. Install and configure OpenSearch</h3>
 <div class="paragraph">
-<p>Bedework uses OpenSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as a local application, useful for development - or as an external service - which will be required for clustering.</p>
+<p>Bedework uses OpenSearch as the indexer engine. As objects are created destroyed and updated they are indexed through calls to the indexer. The indexer can run as a local application, useful for development - or as an external service - which will be required for clustering. The version bedework is using is 2.18.0</p>
 </div>
 <div class="paragraph">
 <p>It is safer to NOT run in production with the OpenSearch interfaces open to the outside. OpenSearch now has various configuration options available. Bedework supports basic user authentication. Currently, you can run unauthenticated but OpenSearch will generate a lot of warnings in the log.</p>
@@ -4454,7 +4454,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 <pre class="highlight"><code>    if ((val.getEntityType() != IcalDefs.entityTypeAvailable) &amp;&amp;
         (calendarNameExists(val, false, true) ||
           calendarNameExists(val, true, true))) {
-      throwException(CalFacadeException.duplicateName, val.getName());
+      throwException(CalFacadeErrorCode.duplicateName, val.getName());
     }</code></pre>
 </div>
 </div>
