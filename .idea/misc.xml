@@ -50,7 +50,6 @@
         <option value="$PROJECT_DIR$/../bw-dotwell-known/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-caldavTest/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-util-hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-logging/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-deploy/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-cliutil/pom.xml" />
@@ -92,7 +91,6 @@
         <option value="$PROJECT_DIR$/../bw-util-annotations/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-dumprestore/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-base/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-util-openjpa/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-database/pom.xml" />
       </list>
     </option>
@@ -117,6 +115,7 @@
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-nop/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-spring/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-timezone-server/bw-wfmodules-timezone-server-ear/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util/bw-wfmodules-util-hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util/bw-wfmodules-util-network/bw-wfmodules-util-config-http/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-xml/pom.xml" />
       </set>

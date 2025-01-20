@@ -48,7 +48,6 @@
         <module name="bw-util-servlet" />
         <module name="bw-util-maven-deploy" />
         <module name="bw-webcache-war" />
-        <module name="bw-util-hibernate" />
         <module name="bw-carddav-public-war" />
         <module name="bw-synch-common" />
         <module name="bw-calendar-publicws" />
@@ -85,6 +84,7 @@
         <module name="bw-calendar-engine-caldav" />
         <module name="bw-util-config" />
         <module name="bw-util-xml" />
+        <module name="bw-db" />
         <module name="bw-util-xmltools" />
         <module name="bw-calendar-pubcaldav" />
         <module name="bw-util-annotations" />
@@ -106,6 +106,7 @@
         <module name="bw-evreg-common" />
         <module name="bw-calendar-api" />
         <module name="bw-calendar-client-bwcommon" />
+        <module name="bw-hibernate" />
         <module name="bw-calendar-client-util" />
         <module name="bw-base" />
         <module name="bw-util-jms" />
@@ -143,7 +144,6 @@
         <module name="bw-logs" />
         <module name="bw-synch-ws-xml" />
         <module name="bw-dao" />
-        <module name="bw-util-openjpa" />
         <module name="bw-calsockets-pubwar" />
         <module name="bw-calendar-xsl-caladminrsrc" />
         <module name="bw-event-registration-war" />
@@ -169,6 +169,7 @@
         <module name="bw-caldavTest" />
         <module name="bw-event-registration-common-war" />
         <module name="bw-util-dav" />
+        <module name="bw-openjpa" />
         <module name="bw-evreg-ear" />
         <module name="bw-calendar-api-ro" />
         <module name="bw-webclient-feeder" />
