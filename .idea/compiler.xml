@@ -143,6 +143,7 @@
         <module name="bw-logs" />
         <module name="bw-synch-ws-xml" />
         <module name="bw-dao" />
+        <module name="bw-util-openjpa" />
         <module name="bw-calsockets-pubwar" />
         <module name="bw-calendar-xsl-caladminrsrc" />
         <module name="bw-event-registration-war" />

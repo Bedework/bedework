@@ -226,6 +226,8 @@
     <file url="file://$PROJECT_DIR$/../bw-cliutil/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-dao/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-dao/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-database/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-database/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-dotwell-known/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-dotwell-known/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-esdata/src/main/java" charset="UTF-8" />
@@ -416,6 +418,8 @@
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-openjpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-openjpa/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-security" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-security/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-security/src/main/resources" charset="UTF-8" />
