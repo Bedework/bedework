@@ -18,6 +18,7 @@
         <module name="bw-exchangews-xml" />
         <module name="bw-webtest" />
         <module name="bw-event-registration-webcommon" />
+        <module name="bw-wfmodules-org-openjpa" />
         <module name="bw-webclient-calauth" />
         <module name="bw-util-http" />
         <module name="bw-note-common" />
