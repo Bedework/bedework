@@ -4,6 +4,17 @@
 Specific changes to xsl and javascript can be found at <<xsl-changes>>
 
 ==== Dev - To Be Release 4.3.0?:
+===== Database schema fix.
+A table mapping was removed from hibernate and this has resulted in constraint violation exceptions when deleting events.
+To fix this drop a couple of foreign key constraints.
+
+for mysql:
+
+* alter table bw_recurrences drop foreign key `bw_ri_mstr_fk`;
+alter table bw_recurrences drop foreign key `bw_ri_ov_fk`;
+
+or the equivalent for postgres.
+
 ===== Upcoming changes
 
 * Cross the jakarta boundary. Will mean upgrading wildfly.
