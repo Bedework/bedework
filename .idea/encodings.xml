@@ -111,10 +111,12 @@
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-caldav/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-chgnote/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-chgnote/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core-common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core-common/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core-ro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core-ro/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core-rw-hibernate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core-rw-hibernate/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core-rw-openjpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-core-rw-openjpa/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore/src/main/resources" charset="UTF-8" />
@@ -123,6 +125,8 @@
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-indexer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-indexer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-indexer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-indexing/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-indexing/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-inoutsched/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-inoutsched/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-interfaces/src/main/java" charset="UTF-8" />
@@ -547,20 +551,24 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-chgnote/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-core-ro/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-core-ro/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-core-rw/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-core-rw/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-core-rw-hibernate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-core-rw-hibernate/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-dumprestore/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-dumprestore/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-impl/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-impl/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-indexer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-indexer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-indexing/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-indexing/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-inoutsched/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-inoutsched/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-interfaces/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-interfaces/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-ro/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-ro/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-rw-hibernate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-rw-hibernate/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-rw/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-rw/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-tools/src/main/java" charset="UTF-8" />

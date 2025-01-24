@@ -38,6 +38,7 @@
         <module name="bw-category-impl" />
         <module name="bw-evreg-service" />
         <module name="bw-synch-ear" />
+        <module name="bw-calendar-engine-indexing" />
         <module name="bw-synch-web" />
         <module name="bw-calendar-client-admin" />
         <module name="bw-carddav-client" />
@@ -81,6 +82,7 @@
         <module name="bw-util-cli" />
         <module name="bw-calendar-convert" />
         <module name="bw-caldav-util" />
+        <module name="bw-calendar-engine-core-rw-openjpa" />
         <module name="bw-calendar-engine-impl" />
         <module name="bw-calendar-engine-caldav" />
         <module name="bw-util-config" />
@@ -125,8 +127,8 @@
         <module name="bw-calendar-config" />
         <module name="bw-selfreg-ear" />
         <module name="bw-calendar-engine-tools" />
+        <module name="bw-calendar-engine-core-rw-hibernate" />
         <module name="bw-calendar-engine-interfaces" />
-        <module name="bw-calendar-engine-core-common" />
         <module name="bw-util-misc" />
         <module name="bw-webclient-demosoe" />
         <module name="bw-note-shared" />
@@ -146,6 +148,7 @@
         <module name="bw-synch-ws-xml" />
         <module name="bw-dao" />
         <module name="bw-calsockets-pubwar" />
+        <module name="bw-calendar-engine-core-ro" />
         <module name="bw-calendar-xsl-caladminrsrc" />
         <module name="bw-event-registration-war" />
         <module name="bw-calendar-engine-chgnote" />
@@ -164,7 +167,6 @@
         <module name="bw-caldav-server" />
         <module name="bw-calendar-annotations" />
         <module name="bw-util-logging" />
-        <module name="bw-calendar-engine-core" />
         <module name="bw-hawtio" />
         <module name="bw-util-jmx" />
         <module name="bw-caldavTest" />
@@ -281,6 +283,7 @@
       <module name="bw-wfmodules-calendar-client-struts" target="11" />
       <module name="bw-wfmodules-calendar-client-strutsmodule" target="11" />
       <module name="bw-wfmodules-calendar-engine-dumprestore" target="17" />
+      <module name="bw-wfmodules-calendar-engine-rw-hibernate" target="17" />
       <module name="bw-wfmodules-category-ear" target="17" />
       <module name="bw-wfmodules-category-ical" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-databind (1)" target="11" />
@@ -403,8 +406,8 @@
       <module name="bw-calendar-engine-caldav" options="" />
       <module name="bw-calendar-engine-chgnote" options="" />
       <module name="bw-calendar-engine-convert" options="-proc:none" />
-      <module name="bw-calendar-engine-core" options="" />
-      <module name="bw-calendar-engine-core-common" options="" />
+      <module name="bw-calendar-engine-core-ro" options="" />
+      <module name="bw-calendar-engine-core-rw-hibernate" options="" />
       <module name="bw-calendar-engine-dumprestore" options="" />
       <module name="bw-calendar-engine-facade" options="-proc:none" />
       <module name="bw-calendar-engine-ical" options="-proc:none" />

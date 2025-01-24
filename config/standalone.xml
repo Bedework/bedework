@@ -230,10 +230,10 @@
       <logger category="org.bedework.access.EncodedAcl">
         <level name="INFO"/>
       </logger>
-      <logger category="org.bedework.calcore.common.indexing.BwIndexEsImpl">
+      <logger category="org.bedework.calcore.ro.indexing.BwIndexEsImpl">
         <level name="DEBUG"/>
       </logger>
-      <logger category="org.bedework.calcore.common.AccessUtil">
+      <logger category="org.bedework.calcore.ro.AccessUtil">
         <level name="INFO"/>
       </logger>
       <logger category="org.bedework.calsvc.CalSvc$SvcSimpleFilterParser">
