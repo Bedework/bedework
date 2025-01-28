@@ -4,16 +4,46 @@
 Specific changes to xsl and javascript can be found at <<xsl-changes>>
 
 ==== Dev - To Be Release 4.3.0?:
-===== Database schema fix.
+===== Database schema fixes.
+====== Table mapping removed - drop constraints
 A table mapping was removed from hibernate and this has resulted in constraint violation exceptions when deleting events.
 To fix this drop a couple of foreign key constraints.
 
 for mysql:
 
-* alter table bw_recurrences drop foreign key `bw_ri_mstr_fk`;
+----
+alter table bw_recurrences drop foreign key `bw_ri_mstr_fk`;
+
 alter table bw_recurrences drop foreign key `bw_ri_ov_fk`;
+----
 
 or the equivalent for postgres.
+
+====== Columns missing for rdates and exdates
+This is a very long-standing omission. The flag for floating date/times was not stored. Thankfully used very rarely (not at all in any of th epublic events data).
+
+Adding these cleans up the jpa mapping in orm.xml.
+----
+alter table bw_event_rdates add column r_floating character(1);
+
+alter table bw_event_exdates add column ex_floating character(1);
+
+alter table bw_eventann_rdates add column r_floating character(1);
+
+alter table bw_eventann_exdates add column ex_floating character(1);
+----
+
+====== Freebusy component mapping wrong
+Again for a long time. The fb component is really an embedded item - not an entity.
+
+We'll move the primary key to eventid, drop the not-null constraints on id and seq (though we could just delete the columns).
+
+----
+ALTER TABLE bw_fbcomp DROP CONSTRAINT bw_fbcomp_pkey;
+alter table bw_fbcomp alter column bwid drop not null;
+alter table bw_fbcomp alter column bwseq drop not null;
+ALTER TABLE bw_fbcomp add CONSTRAINT bw_fbcomp_pkey primary key (eventid);
+----
 
 ===== Upcoming changes
 

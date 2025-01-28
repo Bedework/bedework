@@ -5,7 +5,7 @@ Modules that don't need releasing
 
 bw-util-logging
 bw-xml
-bw-util-hibernate
+bw-database
 bw-timezone-server
 bw-synch
 bw-self-registration
@@ -43,7 +43,7 @@ bw-util-index -> bw-util-logging, bw-util, bw-util-conf, bw-util-tz, jackson-dat
 
 bw-util2 -> bw-xml*, bw-util, bw-util-tz, ical4j, ical4j-vcard, jackson-core, jackson-databind, jaxb-api
 
-bw-util-hibernate -> bw-util-logging, bw-util, bw-util-conf, bw-util-tz, hibernate-core, hibernate-ehcache, javassist, javax.servlet.api
+bw-database -> bw-util-logging, bw-util, bw-util-conf, bw-util-tz, hibernate-core, hibernate-ehcache, javassist, javax.servlet.api
 
 bw-access -> bw-util-logging, bw-util
 
