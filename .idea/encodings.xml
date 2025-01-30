@@ -555,6 +555,8 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-chgnote/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-core-ro/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-core-ro/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-core-rw-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-core-rw-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-core-rw-hibernate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-core-rw-hibernate/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-dumprestore/src/main/java" charset="UTF-8" />
@@ -658,6 +660,8 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-database/bw-wfmodules-database-hibernate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-database/bw-wfmodules-database-hibernate/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-database/bw-wfmodules-database-jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-database/bw-wfmodules-database-jpa/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-database/bw-wfmodules-database-openjpa/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-database/bw-wfmodules-database-openjpa/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-database/bw-wfmodules-db/src/main/java" charset="UTF-8" />
