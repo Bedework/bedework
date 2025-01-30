@@ -98,6 +98,7 @@
         <module name="bw-timezone-server-xml" />
         <module name="bw-carddav-user-war" />
         <module name="bw-calendar-mail" />
+        <module name="bw-calendar-engine-core-rw-common" />
         <module name="bw-util-jolokia" />
         <module name="bw-caldav-xml" />
         <module name="bw-carddav-userweb-war" />
@@ -138,6 +139,7 @@
         <module name="bw-util-args" />
         <module name="bw-calendar-xsl-eventsubmitrsrc" />
         <module name="bw-event-registration-service" />
+        <module name="bw-jpa" />
         <module name="bw-json" />
         <module name="bw-calendar-client-bedework-common" />
         <module name="bw-synch-war" />
