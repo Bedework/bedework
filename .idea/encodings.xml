@@ -253,6 +253,8 @@
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-sar/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-sar/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-event-registration/bw-event-registration-war" charset="UTF-8" />

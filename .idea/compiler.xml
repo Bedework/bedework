@@ -155,6 +155,7 @@
         <module name="bw-event-registration-war" />
         <module name="bw-calendar-engine-chgnote" />
         <module name="bw-calendar-synchws" />
+        <module name="bw-event-registration-sar" />
         <module name="bw-webcache-web" />
         <module name="bw-calendar-xsl-calrsrc-MainCampus" />
         <module name="bw-dotwell-known" />
