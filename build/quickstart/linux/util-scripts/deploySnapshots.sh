@@ -18,6 +18,7 @@ deploySnapshot bedework
 deploySnapshot bw-util-deploy
 # deploySnapshot bw-xml
 deploySnapshot bw-util-logging
+deploySnapshot bw-base
 deploySnapshot bw-util
 deploySnapshot bw-util-conf
 deploySnapshot bw-util-network
