@@ -2,72 +2,47 @@
 
 listThem () {
   echo "$1:"
-  cd $1
+  cd $1 || exit
   mvn -Pbedework-dev dependency:resolve > /dev/null
 
-  rm -f /tmp/.bwjavaxtemp*
-  mvn -Pbedework-dev -o dependency:list | grep "javax\." | cut -d] -f2- | sed 's/:[a-z]*$//g' | sed 's/:compile//' | sed 's/:provided//' | sort -u | sed 's/ \-\-.*//' > /tmp/.bwjavaxtemp
-
-  touch /tmp/.bwjavaxtemp-convert
-  touch /tmp/.bwjavaxtemp-ok
-
-  cat /tmp/.bwjavaxtemp | grep "javax.mail" >> /tmp/.bwjavaxtemp-convert
-
-  cat /tmp/.bwjavaxtemp | grep "javax.servlet" >> /tmp/.bwjavaxtemp-convert
-
-  cat /tmp/.bwjavaxtemp | grep -v "javax.mail"| grep -v "javax.servlet" > /tmp/.bwjavaxtemp-ok
-  echo "----- Has references to the following to convert"
-  cat /tmp/.bwjavaxtemp-convert
-
-  echo "----- Has references to the following OK"
-  cat /tmp/.bwjavaxtemp-ok
-
-  if [ -s /tmp/.bwjavaxtemp-convert ]; then
-    # Show the entire tree
-    mvn -Pbedework-dev -o dependency:tree -Dverbose=true
-  else
-    printf "Nothing to convert"
-  fi
-
+  echo "Start $1" >> "$2"
+  mvn -Pbedework-dev dependency:tree -Dverbose -DoutputType=json -DoutputFile=$2 -DappendOutput=true
+  echo "End $1" >> "$2"
   cd ..
 }
 
-listThem bw-timezone-server
-exit 1
-
-
-
-listThem bw-xml
-listThem bw-util-deploy
-listThem bw-util-logging
-listThem bw-util
-listThem bw-util-conf
-listThem bw-util-network
-listThem bw-util-security
-listThem bw-logs
-listThem bw-util-tz
-listThem bw-util-index
-listThem bw-util2
-listThem bw-jsforj
-listThem bw-util-hibernate
-listThem bw-access
-listThem bw-webdav
-listThem bw-caldav
-listThem bw-timezone-server
-listThem bw-synch
-listThem bw-self-registration
-listThem bw-event-registration
-listThem bw-notifier
-listThem bw-sometime
-listThem bw-cliutil
-listThem bw-cli
-listThem bw-carddav
-listThem bw-calendar-common
-listThem bw-calendar-engine
-listThem bw-calendar-client
-listThem bw-calendar-xsl
-listThem bw-categories
-listThem bw-wfmodules
-listThem bw-wf-feature-pack
-listThem bw-calendar-deploy
+listThem bw-timezone-server $1
+#listThem bw-xml $1
+listThem bw-util-deploy $1
+listThem bw-util-logging $1
+listThem bw-util $1
+listThem bw-util-conf $1
+listThem bw-util-network $1
+listThem bw-util-security $1
+listThem bw-logs $1
+listThem bw-util-tz $1
+listThem bw-util-index $1
+listThem bw-util2 $1
+#listThem bw-jsforj $1
+listThem bw-util-hibernate $1
+listThem bw-access $1
+listThem bw-webdav $1
+listThem bw-caldav $1
+listThem bw-timezone-server $1
+listThem bw-synch $1
+listThem bw-self-registration $1
+listThem bw-event-registration $1
+listThem bw-notifier $1
+listThem bw-sometime $1
+listThem bw-cliutil $1
+listThem bw-cli $1
+listThem bw-carddav $1
+listThem bw-calendar-common $1
+listThem bw-calendar-engine $1
+listThem bw-calendar-client $1
+listThem bw-calendar-xsl $1
+listThem bw-category $1
+listThem bw-wfmodules $1
+listThem bw-wildfly-galleon-feature-packs $1
+listThem bw-calendar-deploy $1
 
