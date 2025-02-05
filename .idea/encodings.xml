@@ -230,7 +230,6 @@
     <file url="file://$PROJECT_DIR$/../bw-cliutil/bw-util-jolokia/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cliutil/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-cliutil/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-dao/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-dao/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-database/bw-db/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-database/bw-hibernate/src/main/java" charset="UTF-8" />

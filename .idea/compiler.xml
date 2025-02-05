@@ -148,14 +148,12 @@
         <module name="bw-selfreg-common" />
         <module name="bw-logs" />
         <module name="bw-synch-ws-xml" />
-        <module name="bw-dao" />
         <module name="bw-calsockets-pubwar" />
         <module name="bw-calendar-engine-core-ro" />
         <module name="bw-calendar-xsl-caladminrsrc" />
         <module name="bw-event-registration-war" />
         <module name="bw-calendar-engine-chgnote" />
         <module name="bw-calendar-synchws" />
-        <module name="bw-event-registration-sar" />
         <module name="bw-webcache-web" />
         <module name="bw-calendar-xsl-calrsrc-MainCampus" />
         <module name="bw-dotwell-known" />
@@ -243,6 +241,7 @@
       <module name="bw-carddav-client" target="1.8" />
       <module name="bw-carddav-ear" target="17" />
       <module name="bw-category-ear" target="17" />
+      <module name="bw-dao" target="17" />
       <module name="bw-dav-tester" target="1.5" />
       <module name="bw-deploy-maven-plugin" target="1.8" />
       <module name="bw-esdata" target="11" />

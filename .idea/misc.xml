@@ -99,6 +99,7 @@
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-carddav/bw-carddav-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-category/bw-category-ear/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-dao/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-dav-tester/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/pom.xml" />
