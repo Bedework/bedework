@@ -33,9 +33,9 @@ deploySnapshot bw-util2
 deploySnapshot bw-database
 deploySnapshot bw-access
 deploySnapshot bw-webdav
+deploySnapshot bw-synch
 deploySnapshot bw-caldav
 deploySnapshot bw-timezone-server
-deploySnapshot bw-synch
 deploySnapshot bw-self-registration
 deploySnapshot bw-event-registration
 deploySnapshot bw-notifier
