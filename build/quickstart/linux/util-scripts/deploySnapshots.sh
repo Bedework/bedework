@@ -21,8 +21,10 @@ deploySnapshot bw-util-logging
 deploySnapshot bw-base
 deploySnapshot bw-util
 deploySnapshot bw-util-conf
+deploySnapshot bw-json
 deploySnapshot bw-util-network
 deploySnapshot bw-util-security
+deploySnapshot bw-schemaorgforj
 deploySnapshot bw-logs
 deploySnapshot bw-util-tz
 deploySnapshot bw-util-index
@@ -44,8 +46,6 @@ deploySnapshot bw-cliutil
 deploySnapshot bw-cli
 deploySnapshot bw-carddav
 deploySnapshot bw-category
-deploySnapshot bw-json
-deploySnapshot bw-schemaorgforj
 deploySnapshot bw-calendar-common
 deploySnapshot bw-calendar-engine
 deploySnapshot bw-calendar-client
