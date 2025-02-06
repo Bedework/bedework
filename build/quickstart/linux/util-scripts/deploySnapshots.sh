@@ -26,6 +26,8 @@ deploySnapshot bw-util-security
 deploySnapshot bw-logs
 deploySnapshot bw-util-tz
 deploySnapshot bw-util-index
+deploySnapshot bw-icalendar-xml
+deploySnapshot bw-calws-soap
 deploySnapshot bw-util2
 #deploySnapshot bw-jsforj
 deploySnapshot bw-database
