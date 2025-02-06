@@ -28,7 +28,7 @@ deploySnapshot bw-util-tz
 deploySnapshot bw-util-index
 deploySnapshot bw-util2
 #deploySnapshot bw-jsforj
-deploySnapshot bw-util-hibernate
+deploySnapshot bw-database
 deploySnapshot bw-access
 deploySnapshot bw-webdav
 deploySnapshot bw-caldav
