@@ -32,6 +32,7 @@ deploySnapshot bw-icalendar-xml
 deploySnapshot bw-calws-soap
 deploySnapshot bw-util2
 #deploySnapshot bw-jsforj
+deploySnapshot bw-webcache
 deploySnapshot bw-database
 deploySnapshot bw-access
 deploySnapshot bw-webdav
@@ -52,7 +53,6 @@ deploySnapshot bw-calendar-dumprestore
 deploySnapshot bw-calendar-client
 deploySnapshot bw-calendar-xsl
 deploySnapshot bw-calendar-deploy
-deploySnapshot bw-webcache
 deploySnapshot bw-testsuite
 deploySnapshot bw-wf-extensions
 deploySnapshot bw-quickstart
