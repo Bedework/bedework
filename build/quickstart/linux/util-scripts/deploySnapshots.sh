@@ -14,14 +14,16 @@ deploySnapshot() {
 }
 
 deploySnapshot bedework-parent
-deploySnapshot bedework
 deploySnapshot bw-util-deploy
-# deploySnapshot bw-xml
-deploySnapshot bw-util-logging
+
 deploySnapshot bw-base
+deploySnapshot bw-util-logging
 deploySnapshot bw-util
 deploySnapshot bw-util-conf
+deploySnapshot bw-database
 deploySnapshot bw-json
+
+
 deploySnapshot bw-util-network
 deploySnapshot bw-util-security
 deploySnapshot bw-schemaorgforj
@@ -33,7 +35,6 @@ deploySnapshot bw-calws-soap
 deploySnapshot bw-util2
 #deploySnapshot bw-jsforj
 deploySnapshot bw-webcache
-deploySnapshot bw-database
 deploySnapshot bw-access
 deploySnapshot bw-webdav
 deploySnapshot bw-synch
@@ -58,3 +59,4 @@ deploySnapshot bw-wf-extensions
 deploySnapshot bw-quickstart
 deploySnapshot bw-wfmodules
 deploySnapshot bw-wildfly-galleon-feature-packs
+deploySnapshot bedework

@@ -9,7 +9,10 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/bw-event-registration" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/webtest-svn" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/apacheds" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/full-wildfly-26.1.3.Final" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/keycloak" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly-35.0.1.Final" />
     </content>
   </component>
 </module>
