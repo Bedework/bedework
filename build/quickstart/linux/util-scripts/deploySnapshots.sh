@@ -22,17 +22,18 @@ deploySnapshot bw-util
 deploySnapshot bw-util-conf
 deploySnapshot bw-database
 deploySnapshot bw-json
-
-
+deploySnapshot bw-schemaorgforj
 deploySnapshot bw-util-network
 deploySnapshot bw-util-security
-deploySnapshot bw-schemaorgforj
-deploySnapshot bw-logs
 deploySnapshot bw-util-tz
 deploySnapshot bw-util-index
 deploySnapshot bw-icalendar-xml
 deploySnapshot bw-calws-soap
+# Require ical4j, ical4j-vcard
 deploySnapshot bw-util2
+
+
+deploySnapshot bw-logs
 #deploySnapshot bw-jsforj
 deploySnapshot bw-webcache
 deploySnapshot bw-access

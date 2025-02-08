@@ -288,6 +288,7 @@
       <module name="bw-wfmodules-category-ear" target="17" />
       <module name="bw-wfmodules-category-ical" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-databind (1)" target="11" />
+      <module name="bw-wfmodules-commons-lang" target="21" />
       <module name="bw-wfmodules-elasticsearch-rest-client" target="11" />
       <module name="bw-wfmodules-jasig-cas" target="11" />
       <module name="bw-wfmodules-leveldb" target="11" />
@@ -329,6 +330,7 @@
       <module name="bw-wfmodules-spring-ws-core" target="11" />
       <module name="bw-wfmodules-spring-ws-security" target="11" />
       <module name="bw-wfmodules-spring-ws-xml" target="11" />
+      <module name="bw-wfmodules-sun-mail" target="21" />
       <module name="bw-wfmodules-synch-ear" target="11" />
       <module name="bw-wfmodules-timezone-server-ear" target="17" />
       <module name="bw-wfmodules-util-config-http" target="11" />
