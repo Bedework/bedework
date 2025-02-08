@@ -47,10 +47,10 @@ deploySnapshot bw-notifier
 deploySnapshot bw-cliutil
 deploySnapshot bw-cli
 deploySnapshot bw-carddav
-
-
 deploySnapshot bw-category
 deploySnapshot bw-calendar-common
+
+
 deploySnapshot bw-calendar-engine
 deploySnapshot bw-calendar-dumprestore
 deploySnapshot bw-calendar-client
