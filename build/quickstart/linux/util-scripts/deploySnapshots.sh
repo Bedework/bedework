@@ -31,14 +31,14 @@ deploySnapshot bw-icalendar-xml
 deploySnapshot bw-calws-soap
 # Require ical4j, ical4j-vcard
 deploySnapshot bw-util2
-
-
 deploySnapshot bw-logs
 #deploySnapshot bw-jsforj
 deploySnapshot bw-webcache
 deploySnapshot bw-access
 deploySnapshot bw-webdav
 deploySnapshot bw-synch
+
+# Requires apache-jdkim
 deploySnapshot bw-caldav
 deploySnapshot bw-timezone-server
 deploySnapshot bw-self-registration
