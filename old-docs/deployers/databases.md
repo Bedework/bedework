@@ -48,7 +48,7 @@ create database caldb owner bedework;
 
 Set the hibernate dialect in the config file:
 ```
-    <hibernateProperty>hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect</hibernateProperty>
+    <ormProperty>hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect</ormProperty>
 ```
 
 In standalone.xml replace the datasource definition with something like:
@@ -174,5 +174,5 @@ TBD
 
 Set the hibernate dialect in the config file:
 ```
-    <hibernateProperty>hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect</hibernateProperty>
+    <ormProperty>hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect</ormProperty>
 ```

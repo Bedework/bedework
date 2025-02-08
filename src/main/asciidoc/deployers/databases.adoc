@@ -155,5 +155,5 @@ TBD
 Set the hibernate dialect in the config file:
 [source,xml]
 ----
-    <hibernateProperty>hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect</hibernateProperty>
+    <ormProperty>hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect</ormProperty>
 ----

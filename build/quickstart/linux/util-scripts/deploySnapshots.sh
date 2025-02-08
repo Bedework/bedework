@@ -38,7 +38,7 @@ deploySnapshot bw-access
 deploySnapshot bw-webdav
 deploySnapshot bw-synch
 
-# Requires apache-jdkim
+# Requires apache-jdkim-api
 deploySnapshot bw-caldav
 deploySnapshot bw-timezone-server
 deploySnapshot bw-self-registration
