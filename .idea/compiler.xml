@@ -171,6 +171,7 @@
         <module name="bw-util-jmx" />
         <module name="bw-caldavTest" />
         <module name="bw-event-registration-common-war" />
+        <module name="bw-wfmodules-dom4j" />
         <module name="bw-util-dav" />
         <module name="bw-openjpa" />
         <module name="bw-evreg-ear" />
