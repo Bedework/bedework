@@ -170,7 +170,6 @@
         <module name="bw-util-jmx" />
         <module name="bw-caldavTest" />
         <module name="bw-event-registration-common-war" />
-        <module name="bw-wfmodules-dom4j" />
         <module name="bw-util-dav" />
         <module name="bw-openjpa" />
         <module name="bw-evreg-ear" />
@@ -303,6 +302,7 @@
       <module name="bw-wfmodules-org-apache-struts-core" target="11" />
       <module name="bw-wfmodules-org-apache-struts-taglib" target="11" />
       <module name="bw-wfmodules-org-jasig-cas" target="11" />
+      <module name="bw-wfmodules-org-jolokia-core" target="21" />
       <module name="bw-wfmodules-org-slf4j-slf4j-api" target="11" />
       <module name="bw-wfmodules-org-slf4j-slf4j-log4j12" target="11" />
       <module name="bw-wfmodules-org-slf4j-slf4j-nop" target="11" />
