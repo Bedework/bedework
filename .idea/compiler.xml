@@ -67,6 +67,7 @@
         <module name="bw-util-deployment" />
         <module name="bw-calsockets-web" />
         <module name="bw-calendar-xsl-calrsrc-SoEDepartmental" />
+        <module name="bw-hawtio4" />
         <module name="bw-cli-toolcmd" />
         <module name="bw-carddav-dumpres" />
         <module name="bw-carddav-server" />
@@ -166,7 +167,6 @@
         <module name="bw-caldav-server" />
         <module name="bw-calendar-annotations" />
         <module name="bw-util-logging" />
-        <module name="bw-hawtio" />
         <module name="bw-util-jmx" />
         <module name="bw-caldavTest" />
         <module name="bw-event-registration-common-war" />
@@ -248,6 +248,7 @@
       <module name="bw-evreg-ear" target="1.7" />
       <module name="bw-evreg-service" target="1.7" />
       <module name="bw-evreg-war" target="1.7" />
+      <module name="bw-hawtio" target="21" />
       <module name="bw-jsforj" target="11" />
       <module name="bw-note-ear" target="11" />
       <module name="bw-opensearch-GeoLite2-City (2)" target="11" />

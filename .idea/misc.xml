@@ -102,6 +102,7 @@
         <option value="$PROJECT_DIR$/../bw-dao/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-dav-tester/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-quickstart/bw-hawtio/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-synch/bw-synch-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-ear/pom.xml" />
