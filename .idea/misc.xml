@@ -106,6 +106,7 @@
         <option value="$PROJECT_DIR$/../bw-synch/bw-synch-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-timezone-server/bw-timezone-server-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-webtest/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wf-extensions/bw-wf-undertow-handlers/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-caldav/bw-wfmodules-calws-soap-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-engine/bw-wfmodules-calendar-engine-dumprestore/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-category/bw-wfmodules-category-ear/pom.xml" />

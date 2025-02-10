@@ -14,7 +14,6 @@
         <module name="bw-category-web" />
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
-        <module name="bw-wf-undertow-handlers" />
         <module name="bw-exchangews-xml" />
         <module name="bw-webtest" />
         <module name="bw-event-registration-webcommon" />
@@ -277,6 +276,7 @@
       <module name="bw-util-struts" target="11" />
       <module name="bw-util-timezones" target="11" />
       <module name="bw-util-xmltidy" target="11" />
+      <module name="bw-wf-undertow-handlers" target="21" />
       <module name="bw-wf-xml-feature-pack" target="17" />
       <module name="bw-wfmodules (1)" target="11" />
       <module name="bw-wfmodules (2)" target="11" />
@@ -335,6 +335,7 @@
       <module name="bw-wfmodules-synch-ear" target="11" />
       <module name="bw-wfmodules-timezone-server-ear" target="17" />
       <module name="bw-wfmodules-util-config-http" target="11" />
+      <module name="bw-wfmodules-wfextensions-undertow-handlers" target="21" />
       <module name="bw-wfmodules-wfmodules-ro" target="11" />
       <module name="bw-wfmodules-wfmodules-rw" target="11" />
       <module name="bw-wfmodules-xml" target="17" />
