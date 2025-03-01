@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/bedework.iml" filepath="$PROJECT_DIR$/bedework.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bedework.github.io/bedework.github.io.iml" filepath="$PROJECT_DIR$/../bedework.github.io/bedework.github.io.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-impl-ro/bw-calendar-engine-impl-ro.iml" filepath="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-impl-ro/bw-calendar-engine-impl-ro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bw-calendar-hlc/bw-calendar-hlc.iml" filepath="$PROJECT_DIR$/../bw-calendar-hlc/bw-calendar-hlc.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-synch/bw-synch-engine.iml" filepath="$PROJECT_DIR$/../bw-synch/bw-synch-engine.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org-apache-commons-commons-csv/bw-wfmodules-org-apache-commons-commons-csv.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org-apache-commons-commons-csv/bw-wfmodules-org-apache-commons-commons-csv.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org-apache-jdkim-library/bw-wfmodules-org-apache-jdkim-library.iml" filepath="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org-apache-jdkim-library/bw-wfmodules-org-apache-jdkim-library.iml" />

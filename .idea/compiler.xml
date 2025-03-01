@@ -11,9 +11,11 @@
         <module name="bw-self-registration-web" />
         <module name="bw-web" />
         <module name="bw-util-opensearch" />
+        <module name="bw-calendar-hlc-rw" />
         <module name="bw-category-web" />
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
+        <module name="bw-calendar-hlc-ro" />
         <module name="bw-exchangews-xml" />
         <module name="bw-webtest" />
         <module name="bw-event-registration-webcommon" />
@@ -33,6 +35,7 @@
         <module name="bw-cli-dbtools" />
         <module name="bw-calsockets-common" />
         <module name="bw-timezone-server-war" />
+        <module name="bw-calendar-llc-common" />
         <module name="bw-category-impl" />
         <module name="bw-evreg-service" />
         <module name="bw-synch-ear" />
@@ -69,6 +72,7 @@
         <module name="bw-calendar-xsl-calrsrc-SoEDepartmental" />
         <module name="bw-hawtio4" />
         <module name="bw-cli-toolcmd" />
+        <module name="bw-calendar-hlc-ro-api" />
         <module name="bw-carddav-dumpres" />
         <module name="bw-carddav-server" />
         <module name="bw-calendar-ucaldav" />
@@ -89,6 +93,7 @@
         <module name="bw-db" />
         <module name="bw-util-xmltools" />
         <module name="bw-calendar-pubcaldav" />
+        <module name="bw-calendar-hlc-common" />
         <module name="bw-util-annotations" />
         <module name="bw-category-service" />
         <module name="bw-calendar-facade" />
@@ -108,6 +113,7 @@
         <module name="bw-webclient-ucal" />
         <module name="bw-evreg-common" />
         <module name="bw-calendar-api" />
+        <module name="bw-calendar-hlc-admin-api" />
         <module name="bw-calendar-client-bwcommon" />
         <module name="bw-hibernate" />
         <module name="bw-calendar-client-util" />
@@ -143,6 +149,7 @@
         <module name="bw-calendar-client-bedework-common" />
         <module name="bw-synch-war" />
         <module name="bw-event-registration-ws" />
+        <module name="bw-calendar-hlc-admin" />
         <module name="bw-calendar-client-struts2" />
         <module name="bw-selfreg-common" />
         <module name="bw-logs" />
@@ -158,10 +165,12 @@
         <module name="bw-dotwell-known" />
         <module name="bw-util-caching" />
         <module name="bw-note-outbound" />
+        <module name="bw-calendar-hlc-rw-api" />
         <module name="bw-util-directory" />
         <module name="bw-calendar-sysevents-common" />
         <module name="bw-note-war" />
         <module name="bw-util-servlet-filters" />
+        <module name="bw-calendar-llc-ro" />
         <module name="bw-wf-calendar-subsystem" />
         <module name="bw-cli-bwcmd" />
         <module name="bw-caldav-server" />
@@ -218,6 +227,7 @@
       <module name="bw-calendar-engine-sysevents-msgs" target="11" />
       <module name="bw-calendar-engine-ucaldav" target="11" />
       <module name="bw-calendar-engine-userws" target="11" />
+      <module name="bw-calendar-highlevel-client" target="21" />
       <module name="bw-calendar-ro" target="11" />
       <module name="bw-caleng-annotations" target="1.8" />
       <module name="bw-caleng-api" target="1.8" />
