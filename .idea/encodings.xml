@@ -993,6 +993,8 @@
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-event-registration-feature-pack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-feature-pack/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-feature-pack/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-jquery-feature-pack/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-jquery-feature-pack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-keycloak-saml-filter-feature-pack/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-keycloak-saml-filter-feature-pack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wildfly-galleon-feature-packs/bw-wf-note-feature-pack/src/main/java" charset="UTF-8" />

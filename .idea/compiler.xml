@@ -126,6 +126,7 @@
         <module name="bw-calendar-userws" />
         <module name="bw-access" />
         <module name="bw-util-security" />
+        <module name="bw-wf-jquery-feature-pack" />
         <module name="bw-cli-shell" />
         <module name="bw-webclient-cal" />
         <module name="bw-webclient-submit" />
