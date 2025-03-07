@@ -94,6 +94,7 @@
         <option value="$PROJECT_DIR$/../bw-database/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-hlc/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-llc/pom.xml" />
+        <option value="$PROJECT_DIR$/../bugs/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
