@@ -58,7 +58,6 @@
         <option value="$PROJECT_DIR$/../bw-util-network/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-security/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-conf/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-dav-tester/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-logs/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-common/pom.xml" />
@@ -87,7 +86,6 @@
         <option value="$PROJECT_DIR$/../bw-web/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-webtest/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-testsuite/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-dao/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-annotations/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-dumprestore/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-base/pom.xml" />
@@ -101,10 +99,9 @@
       <set>
         <option value="$PROJECT_DIR$/../bw-calendar-client/bw-calendar-highlevel-client/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-dumprestore/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-oschconfig/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-carddav/bw-carddav-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-category/bw-category-ear/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-dao/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-dav-tester/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-quickstart/bw-hawtio/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/pom.xml" />

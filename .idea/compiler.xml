@@ -13,7 +13,6 @@
         <module name="bw-util-opensearch" />
         <module name="bw-calendar-hlc-rw" />
         <module name="bw-category-web" />
-        <module name="bw-wfmodules-ibm-icu" />
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
         <module name="bw-calendar-hlc-ro" />
@@ -222,6 +221,7 @@
       <module name="bw-calendar-engine-impl-ro" target="11" />
       <module name="bw-calendar-engine-mail" target="11" />
       <module name="bw-calendar-engine-notifyws" target="11" />
+      <module name="bw-calendar-engine-oschconfig" target="21" />
       <module name="bw-calendar-engine-pubcaldav" target="11" />
       <module name="bw-calendar-engine-publicws" target="11" />
       <module name="bw-calendar-engine-synchws" target="11" />
@@ -252,7 +252,7 @@
       <module name="bw-carddav-client" target="1.8" />
       <module name="bw-carddav-ear" target="17" />
       <module name="bw-category-ear" target="17" />
-      <module name="bw-dao" target="17" />
+      <module name="bw-dao" target="1.5" />
       <module name="bw-dav-tester" target="1.5" />
       <module name="bw-deploy-maven-plugin" target="1.8" />
       <module name="bw-esdata" target="11" />

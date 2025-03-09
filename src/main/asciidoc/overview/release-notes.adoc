@@ -4,12 +4,25 @@
 Specific changes to xsl and javascript can be found at <<xsl-changes>>
 
 ==== Dev - To Be Release 5.0.0?:
+===== Change summary
+====== Javax -> Jakarta
+* Crossed the jakarta boundary. Wildfly updated to the latest version. Most modules saw updates to differing degrees
+    ** Db changes
+Changed implementation of hibernate related code to be mostly independent of the actual orm. Created but not tested a jpa compliant mapping of the data. Implementation for openjpa partially created. Made enough changes to get latest hibernate running.
+    ** Struts2
+This had a number of non-backward compatible changes for release 7. Some of these are disabled for the time being as enabling requires significant work.
+    ** Client images and javascript
+Moved into bedework-content to provide a common source for both. We were referencing about 5 different very old jquery libraries. Updating to the latest is now easier and this move guarantees consistency.
+
+====== Misc changes
+* Updated tz data. Fixed bad h2db file
+* Started work on high-level and low-level clients. These will be independent of the presentation layer, e.g. web. Will allow a lightweight public client without the struts overhead.
+* Use icu classes for DateFormat in taglib. Turns out java.util.DateFormat adds odd unicode characters to the output.
+* Whole bunch of eventreg fixes.
 
 ===== Upcoming changes
 
-* Cross the jakarta boundary. Will mean upgrading wildfly.
 * Create migration tool to rewrite or modify database to allow new simplified schema.
-* Move client side operations into a high level client intended to be usable via web actions or a cli.
 
 ==== Release 4.2.1 (2025/02/06):
 This - relatively untested - release, is a precursor to the move to jakarta. Changes made were mostly to prepare for that move.
