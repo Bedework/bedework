@@ -145,6 +145,7 @@
         <module name="bwwebcl-appcommon" />
         <module name="bw-util-args" />
         <module name="bw-calendar-xsl-eventsubmitrsrc" />
+        <module name="testBadUrl" />
         <module name="bw-event-registration-service" />
         <module name="bw-jpa" />
         <module name="bw-json" />

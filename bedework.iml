@@ -15,6 +15,7 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly-26.1.3.Final" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly-35.0.1.Final" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/util" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly-36.0.0.Final" />
     </content>
   </component>
 </module>
