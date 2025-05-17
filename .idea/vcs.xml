@@ -16,6 +16,7 @@
     <mapping directory="$PROJECT_DIR$/../bw-calendar-engine" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-hlc" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-llc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-calendar-webclient" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calendar-xsl" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calsockets" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-calws-soap" vcs="Git" />

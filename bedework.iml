@@ -3,18 +3,18 @@
   <component name="AdditionalModuleElements">
     <content url="file://$MODULE_DIR$" dumb="true">
       <excludeFolder url="file://$MODULE_DIR$/tmp/.m2" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/apacheds" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/bw-event-registration" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/full-wildfly-26.1.3.Final" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/keycloak" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/sv" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/test-install" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/tst" />
-      <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly" />
-      <excludeFolder url="file://$MODULE_DIR$/tmp/bw-event-registration" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/util" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/webtest-svn" />
-      <excludeFolder url="file://$MODULE_DIR$/tmp/apacheds" />
-      <excludeFolder url="file://$MODULE_DIR$/tmp/full-wildfly-26.1.3.Final" />
-      <excludeFolder url="file://$MODULE_DIR$/tmp/keycloak" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly-26.1.3.Final" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly-35.0.1.Final" />
-      <excludeFolder url="file://$MODULE_DIR$/tmp/util" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly-36.0.0.Final" />
     </content>
   </component>

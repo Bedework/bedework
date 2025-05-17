@@ -12,6 +12,7 @@
         <module name="bw-web" />
         <module name="bw-util-opensearch" />
         <module name="bw-calendar-hlc-rw" />
+        <module name="bw-calendar-webclient-ro" />
         <module name="bw-category-web" />
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
@@ -118,6 +119,7 @@
         <module name="bw-calendar-client-bwcommon" />
         <module name="bw-hibernate" />
         <module name="bw-calendar-client-util" />
+        <module name="bw-calendar-webclient-common" />
         <module name="bw-base" />
         <module name="bw-util-jms" />
         <module name="bw-self-registration-war" />
@@ -127,7 +129,6 @@
         <module name="bw-calendar-userws" />
         <module name="bw-access" />
         <module name="bw-util-security" />
-        <module name="bw-wf-jquery-feature-pack" />
         <module name="bw-cli-shell" />
         <module name="bw-webclient-cal" />
         <module name="bw-webclient-submit" />

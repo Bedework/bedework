@@ -93,6 +93,7 @@
         <option value="$PROJECT_DIR$/../bw-calendar-hlc/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calendar-llc/pom.xml" />
         <option value="$PROJECT_DIR$/../bugs/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-calendar-webclient/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
