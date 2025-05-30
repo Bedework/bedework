@@ -36,6 +36,7 @@ deploySnapshot bw-logs
 deploySnapshot bw-webcache
 deploySnapshot bw-access
 deploySnapshot bw-webdav
+deploySnapshot bw-exchangews-xml
 deploySnapshot bw-synch
 # Requires apache-jdkim-api
 deploySnapshot bw-caldav
