@@ -301,6 +301,9 @@
       <module name="bw-wfmodules-calendar-client-strutsmodule" target="11" />
       <module name="bw-wfmodules-calendar-engine-dumprestore" target="17" />
       <module name="bw-wfmodules-calendar-engine-rw-hibernate" target="17" />
+      <module name="bw-wfmodules-calendar-hlc" target="1.5" />
+      <module name="bw-wfmodules-calendar-llc" target="21" />
+      <module name="bw-wfmodules-calendar-llc-common" target="1.5" />
       <module name="bw-wfmodules-category-ear" target="17" />
       <module name="bw-wfmodules-category-ical" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-databind (1)" target="11" />

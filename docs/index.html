@@ -38,23 +38,24 @@
 <ul class="sectlevel3">
 <li><a href="#_dev_to_be_release_5_0_0">1.2.1. Dev - To Be Release 5.0.0?:</a>
 <ul class="sectlevel4">
-<li><a href="#_upcoming_changes">1.2.1.1. Upcoming changes</a></li>
+<li><a href="#_change_summary">1.2.1.1. Change summary</a></li>
+<li><a href="#_upcoming_changes">1.2.1.2. Upcoming changes</a></li>
 </ul>
 </li>
 <li><a href="#_release_4_2_1_20250206">1.2.2. Release 4.2.1 (2025/02/06):</a>
 <ul class="sectlevel4">
-<li><a href="#_change_summary">1.2.2.1. Change summary</a></li>
+<li><a href="#_change_summary_2">1.2.2.1. Change summary</a></li>
 <li><a href="#_database_schema_fixes">1.2.2.2. Database schema fixes.</a></li>
 </ul>
 </li>
 <li><a href="#_release_4_2_0_20241202">1.2.3. Release 4.2.0 (2024/12/02):</a>
 <ul class="sectlevel4">
-<li><a href="#_change_summary_2">1.2.3.1. Change summary</a></li>
+<li><a href="#_change_summary_3">1.2.3.1. Change summary</a></li>
 </ul>
 </li>
 <li><a href="#_release_4_1_0_20240404">1.2.4. Release 4.1.0 (2024/04/04):</a>
 <ul class="sectlevel4">
-<li><a href="#_change_summary_3">1.2.4.1. Change summary</a></li>
+<li><a href="#_change_summary_4">1.2.4.1. Change summary</a></li>
 </ul>
 </li>
 <li><a href="#_some_bug_fixes">1.2.5. Some bug fixes</a>
@@ -498,17 +499,59 @@ position: relative;
 <div class="sect3">
 <h4 id="_dev_to_be_release_5_0_0">1.2.1. Dev - To Be Release 5.0.0?:</h4>
 <div class="sect4">
-<h5 id="_upcoming_changes">1.2.1.1. Upcoming changes</h5>
+<h5 id="_change_summary">1.2.1.1. Change summary</h5>
+<div class="sect5">
+<h6 id="_javax_jakarta">Javax &#8594; Jakarta</h6>
 <div class="ulist">
 <ul>
 <li>
-<p>Cross the jakarta boundary. Will mean upgrading wildfly.</p>
+<p>Crossed the jakarta boundary. Wildfly updated to the latest version. Most modules saw updates to differing degrees</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Db changes
+Changed implementation of hibernate related code to be mostly independent of the actual orm. Created but not tested a jpa compliant mapping of the data. Implementation for openjpa partially created. Made enough changes to get latest hibernate running.</p>
 </li>
+<li>
+<p>Struts2
+This had a number of non-backward compatible changes for release 7. Some of these are disabled for the time being as enabling requires significant work.</p>
+</li>
+<li>
+<p>Client images and javascript
+Moved into bedework-content to provide a common source for both. We were referencing about 5 different very old jquery libraries. Updating to the latest is now easier and this move guarantees consistency.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_misc_changes">Misc changes</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>Updated tz data. Fixed bad h2db file</p>
+</li>
+<li>
+<p>Started work on high-level and low-level clients. These will be independent of the presentation layer, e.g. web. Will allow a lightweight public client without the struts overhead.</p>
+</li>
+<li>
+<p>Use icu classes for DateFormat in taglib. Turns out java.util.DateFormat adds odd unicode characters to the output.</p>
+</li>
+<li>
+<p>Whole bunch of eventreg fixes.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_upcoming_changes">1.2.1.2. Upcoming changes</h5>
+<div class="ulist">
+<ul>
 <li>
 <p>Create migration tool to rewrite or modify database to allow new simplified schema.</p>
-</li>
-<li>
-<p>Move client side operations into a high level client intended to be usable via web actions or a cli.</p>
 </li>
 </ul>
 </div>
@@ -523,7 +566,7 @@ position: relative;
 <p>Component versions have been set to the next major release version.</p>
 </div>
 <div class="sect4">
-<h5 id="_change_summary">1.2.2.1. Change summary</h5>
+<h5 id="_change_summary_2">1.2.2.1. Change summary</h5>
 <div class="sect5">
 <h6 id="_new_bw_base_module">New bw-base module</h6>
 <div class="paragraph">
@@ -637,7 +680,7 @@ ALTER TABLE bw_fbcomp add CONSTRAINT bw_fbcomp_pkey primary key (eventid);</pre>
 <div class="sect3">
 <h4 id="_release_4_2_0_20241202">1.2.3. Release 4.2.0 (2024/12/02):</h4>
 <div class="sect4">
-<h5 id="_change_summary_2">1.2.3.1. Change summary</h5>
+<h5 id="_change_summary_3">1.2.3.1. Change summary</h5>
 <div class="sect5">
 <h6 id="_ui">UI</h6>
 <div class="ulist">
@@ -726,7 +769,7 @@ ALTER TABLE bw_fbcomp add CONSTRAINT bw_fbcomp_pkey primary key (eventid);</pre>
 <div class="sect3">
 <h4 id="_release_4_1_0_20240404">1.2.4. Release 4.1.0 (2024/04/04):</h4>
 <div class="sect4">
-<h5 id="_change_summary_3">1.2.4.1. Change summary</h5>
+<h5 id="_change_summary_4">1.2.4.1. Change summary</h5>
 <div class="paragraph">
 <p>There are changes that will mean some config or stylesheet
 change when upgrading. More details may be seen below.</p>
@@ -4111,7 +4154,7 @@ restoreCal "/full/path/to/initbedework.xml"</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;hibernateProperty&gt;hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect&lt;/hibernateProperty&gt;</code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;ormProperty&gt;hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect&lt;/ormProperty&gt;</code></pre>
 </div>
 </div>
 </div>
