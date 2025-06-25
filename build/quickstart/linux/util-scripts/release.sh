@@ -51,13 +51,13 @@ mvn -Pbedework-rel versions:set -DnewVersion="$releaseVersion"
 
 echo "====== Commit before release"
 # Commit any outstanding changes + commit version
-git commit -am "Release version $releaseVersion of $moduleName" || exit 1
+git commit -am "[skip actions] Release version $releaseVersion of $moduleName" || exit 1
 
 echo "====== Push before release"
 git push || exit 1
 
 echo "====== Set the tag: $releaseVersion"
-git tag -a "$releaseVersion" -m 'Release version $releaseVersion' || exit 1
+git tag -a "$releaseVersion" -m '[skip actions] Release version $releaseVersion' || exit 1
 git push --follow-tags
 
 echo "====== Do clean deploy - this may take some time."
@@ -71,7 +71,6 @@ git commit -am "Update with version $nextSnapshotVersion of $moduleName" || exit
 
 echo "====== Push the new version"
 git push || exit 1
-
 
 echo "====== Now rebuild"
 mvn -Pbedework-dev,bedework-local,release clean deploy || exit 1

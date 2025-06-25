@@ -1,0 +1,46 @@
+[[github-actions]]
+=== github actions to run dependency checks and codeql
+Sonatype migrated its platform, and at that time the owasp dependency checks stopped being run. In any case, these checks were only run on release — meaning possibly having to release again after fixing vulnerabilities.
+
+These checks can be run manually, but it is convenient to have them run on push — if you can get them to work.
+
+==== Codeql
+This was relatively easy — see the action file in each project.
+
+==== owasp dependency check.
+This seemed easy but turned out to have a number of issues. The desired end result was to:
+
+* Run the checks on push
+* At each run put the resulting report somewhere easy to access.
+
+===== Running the checks
+Requires the maven plugin be installed. Configured to put the report into a folder "./target/reports". Perhaps unnecessary but allows other files as well.
+
+The plugin downloads data from a number of sites - in particular nvd.nist.gov. An api key is really a must to access this site or the requests will be throttled. Go to
+
+[source]
+-----
+https://nvd.nist.gov/developers/request-an-api-key
+-----
+
+You may want one per project. Add this as a project or organization secret. I used the name "nvdApiKey".
+
+The owasp data is added to an h2 database which is stored in the maven repository under org/owasp. It can take a long time to build so needs to be cached. The action will restore and save the maven cache. This is also needed to speed up builds.
+
+In the action, we use the goal aggregate for the maven plugin as they are mostly multi-module projects.
+
+The resulting report is copied into the "docs" folder. The main AsciiDoc file has a link to the report, so the latest report is available from the github pages site.
+
+=== Suppress on release
+The release process pushes to the repo a couple of times:
+
+1. After setting the release version
+2. After creating a tag
+3. After setting the snapshot version
+
+Arguably - none of these should trigger an actions run. However at some point we may depend on an action to make a push work.
+
+Suppressing steps 1 and 2 is probably appropriate - especially as they generate push requests themselves which may intefere with the process.
+
+Disabling the actions can be achieve by following the instructions at https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/skipping-workflow-runs
+in our case by adding a string to the commit message.

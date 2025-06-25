@@ -25,11 +25,12 @@ deploySnapshot bw-json
 deploySnapshot bw-schemaorgforj
 deploySnapshot bw-util-network
 deploySnapshot bw-util-security
+# ical4j required here
 deploySnapshot bw-util-tz
 deploySnapshot bw-util-index
 deploySnapshot bw-icalendar-xml
 deploySnapshot bw-calws-soap
-# Require ical4j, ical4j-vcard
+# Require ical4j-vcard
 deploySnapshot bw-util2
 deploySnapshot bw-logs
 #deploySnapshot bw-jsforj
