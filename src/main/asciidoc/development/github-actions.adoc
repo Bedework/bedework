@@ -13,7 +13,7 @@ This seemed easy but turned out to have a number of issues. The desired end resu
 * Run the checks on push
 * At each run put the resulting report somewhere easy to access.
 
-===== Running the checks
+=== Running the checks
 Requires the maven plugin be installed. Configured to put the report into a folder "./target/reports". Perhaps unnecessary but allows other files as well.
 
 The plugin downloads data from a number of sites - in particular nvd.nist.gov. An api key is really a must to access this site or the requests will be throttled. Go to
@@ -29,7 +29,7 @@ The owasp data is added to an h2 database which is stored in the maven repositor
 
 In the action, we use the goal aggregate for the maven plugin as they are mostly multi-module projects.
 
-The resulting report is copied into the "docs" folder. The main AsciiDoc file has a link to the report, so the latest report is available from the github pages site.
+The resulting report is copied into the "docs" folder. The main AsciiDoc file has a link to the report, so the latest report is available from the GitHub pages site.
 
 === Suppress on release
 The release process pushes to the repo a couple of times:
@@ -42,5 +42,8 @@ Arguably - none of these should trigger an actions run. However at some point we
 
 Suppressing steps 1 and 2 is probably appropriate - especially as they generate push requests themselves which may intefere with the process.
 
-Disabling the actions can be achieve by following the instructions at https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/skipping-workflow-runs
+Disabling the actions can be achieved by following the instructions at https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/skipping-workflow-runs
 in our case by adding a string to the commit message.
+
+=== Asciidocs
+I decided the easiest way to get at the reports was to upload them to GitHub pages. None of these projects (other than the main bedework project) used GitHub pages. I set it up with a minimal amount of documentation, and the reports are copied in to the /docs folder for the project.
