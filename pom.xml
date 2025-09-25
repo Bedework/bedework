@@ -8,7 +8,7 @@
   </parent>
 
   <artifactId>bedework</artifactId>
-  <version>5.0.0-SNAPSHOT</version>
+  <version>5.0.0</version>
   <packaging>pom</packaging>
   <name>Bedework</name>
 
