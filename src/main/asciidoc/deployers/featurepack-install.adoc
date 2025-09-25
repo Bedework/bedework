@@ -23,7 +23,7 @@ The best approach is to disable all ports and only open up those necessary. Bede
 ==== Galleon, wildfly and bedework
 Wildfly can be installed by using the galleon installer, which allows the installation of tailored instances of wildfly.
 
-Additionally extra features can be installed using the same approach. Bedework now can be installed in this way with a choice of features.
+Additionally, extra features can be installed using the same approach. Bedework now can be installed in this way with a choice of features.
 
 [[install-demo]]
 ==== Fast-track demo version
@@ -33,13 +33,13 @@ will also be included.
 
 These steps have been tested on a mac and on the latest LTS linux. Any examples are for Ubuntu.
 
-NOTE: If this fails, and you are going to retry I suggest first
-remove the wildfly directory created when running galleon
+NOTE: If this fails, and you are going to retry, I suggest first
+removing the wildfly directory created when running galleon
 before retrying.
 
-* Install jdk 17
+* Install jdk 21
 ----
-apt install openjdk-17-jdk
+apt install openjdk-21-jdk
 ----
 
 * In window 1 - Create a directory and cd into it.

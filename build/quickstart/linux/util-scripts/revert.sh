@@ -36,8 +36,8 @@ fi
 
 # 11 onwards
 javaVersion=$($JAVA_HOME/bin/java -version 2>&1 | sed -E -n 's/.* version "([^.-]*).*/\1/p')
-if [[ "javaVersion" -lt "11" ]]; then
-  echo "Java 11 or greater is required"
+if [[ "javaVersion" -lt "21" ]]; then
+  echo "Java 21 or greater is required"
   exit 1
 fi
 
@@ -50,7 +50,7 @@ git tag -d "$fromVersion"
 git push origin :refs/tags/$fromVersion
 
 echo "====== Set the version: $toVersion"
-mvn -Pbedework-rel versions:set -DnewVersion="$toVersion"
+mvn -Pbedework-dev versions:set -DnewVersion="$toVersion"
 
 echo "====== Commit"
 # Commit any outstanding changes + commit version
@@ -60,7 +60,7 @@ echo "====== Push"
 git push || exit 1
 
 echo "====== Do clean install - this may take some time."
-mvn -Pbedework-rel,bedework-local,release clean install || exit 1
+mvn -Pbedework-dev clean install || exit 1
 
 echo "====== Now cd back to $DIRNAME"
 cd $DIRNAME

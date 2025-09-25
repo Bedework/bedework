@@ -41,13 +41,13 @@ fi
 
 # 11 onwards
 version=$($JAVA_HOME/bin/java -version 2>&1 | sed -E -n 's/.* version "([^.-]*).*/\1/p')
-if [[ "$version" -lt "17" ]]; then
-  echo "Java 17 or greater is required"
+if [[ "$version" -lt "21" ]]; then
+  echo "Java 21 or greater is required"
   exit 1
 fi
 
 echo "====== Set the release version: $releaseVersion"
-mvn -Pbedework-rel versions:set -DnewVersion="$releaseVersion"
+mvn -P!bedework-dev,bedework-rel versions:set -DnewVersion="$releaseVersion"
 
 echo "====== Commit before release"
 # Commit any outstanding changes + commit version
@@ -61,10 +61,10 @@ git tag -a "$releaseVersion" -m '[skip actions] Release version $releaseVersion'
 git push --follow-tags
 
 echo "====== Do clean deploy - this may take some time."
-mvn -Pbedework-rel,bedework-local,release clean deploy || exit 1
+mvn -P!bedework-dev,bedework-rel,bedework-local,release clean deploy || exit 1
 
 echo "====== Set up next snapshot $nextSnapshotVersion:"
-mvn -Pbedework-rel versions:set -DnewVersion=$nextSnapshotVersion || exit 1
+mvn -Pbedework-dev versions:set -DnewVersion=$nextSnapshotVersion || exit 1
 
 echo "====== Commit the new version"
 git commit -am "Update with version $nextSnapshotVersion of $moduleName" || exit 1
@@ -73,7 +73,7 @@ echo "====== Push the new version"
 git push || exit 1
 
 echo "====== Now rebuild"
-mvn -Pbedework-dev,bedework-local,release clean deploy || exit 1
+mvn -Pbedework-dev clean deploy || exit 1
 
 echo "====== Now cd back to $DIRNAME"
 cd $DIRNAME || exit 1

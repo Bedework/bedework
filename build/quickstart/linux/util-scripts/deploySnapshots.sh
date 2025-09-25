@@ -19,6 +19,7 @@ deploySnapshot bw-util-deploy
 deploySnapshot bw-base
 deploySnapshot bw-util-logging
 deploySnapshot bw-util
+deploySnapshot bw-logs
 deploySnapshot bw-util-conf
 deploySnapshot bw-database
 deploySnapshot bw-json
@@ -32,24 +33,21 @@ deploySnapshot bw-icalendar-xml
 deploySnapshot bw-calws-soap
 # Require ical4j-vcard
 deploySnapshot bw-util2
-deploySnapshot bw-logs
-#deploySnapshot bw-jsforj
 deploySnapshot bw-webcache
+deploySnapshot bw-self-registration
 deploySnapshot bw-access
 deploySnapshot bw-webdav
-deploySnapshot bw-exchangews-xml
 deploySnapshot bw-synch
-# Requires apache-jdkim-api
-deploySnapshot bw-caldav
+# Does not require apache-jdkim-api unless configured in.
 deploySnapshot bw-timezone-server
-deploySnapshot bw-self-registration
+deploySnapshot bw-caldav
 deploySnapshot bw-event-registration
 deploySnapshot bw-notifier
 # deploySnapshot bw-sometime
-deploySnapshot bw-cliutil
 deploySnapshot bw-cli
 deploySnapshot bw-carddav
 deploySnapshot bw-category
+#deploySnapshot bw-jsforj
 deploySnapshot bw-calendar-common
 deploySnapshot bw-calendar-engine
 deploySnapshot bw-calendar-dumprestore

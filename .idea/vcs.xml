@@ -23,11 +23,9 @@
     <mapping directory="$PROJECT_DIR$/../bw-carddav" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-category" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-cli" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-cliutil" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-database" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-dotwell-known" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-event-registration" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../bw-exchangews-xml" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-icalendar-xml" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-json" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-logs" vcs="Git" />

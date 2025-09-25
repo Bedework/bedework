@@ -10,6 +10,7 @@
         <module name="bw-icalendar-xml" />
         <module name="bw-self-registration-web" />
         <module name="bw-web" />
+        <module name="bw-calendar-pubcalws" />
         <module name="bw-util-opensearch" />
         <module name="bw-calendar-hlc-rw" />
         <module name="bw-calendar-webclient-ro" />
@@ -17,12 +18,12 @@
         <module name="bw-util-deployment (1)" />
         <module name="bw-wfmodules-org-jasig-cas" />
         <module name="bw-calendar-hlc-ro" />
-        <module name="bw-exchangews-xml" />
         <module name="bw-webtest" />
         <module name="bw-event-registration-webcommon" />
         <module name="simpleDateFormat" />
         <module name="bw-webclient-calauth" />
         <module name="bw-util-http" />
+        <module name="bw-cli-jolokia" />
         <module name="bw-note-common" />
         <module name="sched-assist-war (1)" />
         <module name="bw-webdav" />
@@ -55,7 +56,6 @@
         <module name="bw-webcache-war" />
         <module name="bw-carddav-public-war" />
         <module name="bw-synch-common" />
-        <module name="bw-calendar-publicws" />
         <module name="bw-util-options" />
         <module name="bw-evreg-war" />
         <module name="bw-cli-jmx" />
@@ -72,6 +72,7 @@
         <module name="bw-util-deployment" />
         <module name="bw-calsockets-web" />
         <module name="bw-calendar-xsl-calrsrc-SoEDepartmental" />
+        <module name="bw-calendar-ucalws" />
         <module name="bw-hawtio4" />
         <module name="bw-cli-toolcmd" />
         <module name="bw-calendar-hlc-ro-api" />
@@ -84,10 +85,10 @@
         <module name="bw-event-registration-wsimpl" />
         <module name="bw-category-war" />
         <module name="bw-category-common" />
-        <module name="bw-util-cli" />
         <module name="bw-calendar-convert" />
         <module name="bw-caldav-util" />
         <module name="bw-calendar-engine-core-rw-openjpa" />
+        <module name="bw-dav-access" />
         <module name="bw-calendar-engine-impl" />
         <module name="bw-calendar-engine-caldav" />
         <module name="bw-util-config" />
@@ -105,7 +106,6 @@
         <module name="bw-carddav-user-war" />
         <module name="bw-calendar-mail" />
         <module name="bw-calendar-engine-core-rw-common" />
-        <module name="bw-util-jolokia" />
         <module name="bw-caldav-xml" />
         <module name="bw-carddav-userweb-war" />
         <module name="bw-category-ical" />
@@ -126,8 +126,6 @@
         <module name="bw-calendar-client-rw" />
         <module name="bw-calendar-engine-inoutsched" />
         <module name="bwwebcl-webcommon" />
-        <module name="bw-calendar-userws" />
-        <module name="bw-access" />
         <module name="bw-util-security" />
         <module name="bw-cli-shell" />
         <module name="bw-webclient-cal" />
@@ -254,6 +252,7 @@
       <module name="bw-carddav-client" target="1.8" />
       <module name="bw-carddav-ear" target="17" />
       <module name="bw-category-ear" target="17" />
+      <module name="bw-cliutil" target="21" />
       <module name="bw-dao" target="1.5" />
       <module name="bw-dav-tester" target="1.5" />
       <module name="bw-deploy-maven-plugin" target="1.8" />
@@ -263,6 +262,7 @@
       <module name="bw-evreg-ear" target="1.7" />
       <module name="bw-evreg-service" target="1.7" />
       <module name="bw-evreg-war" target="1.7" />
+      <module name="bw-exchangews-xml" target="21" />
       <module name="bw-hawtio" target="21" />
       <module name="bw-jsforj" target="11" />
       <module name="bw-note-ear" target="11" />
@@ -285,9 +285,12 @@
       <module name="bw-synch" target="11" />
       <module name="bw-timezone-server-ear" target="11" />
       <module name="bw-util-bw-deploy" target="1.8" />
+      <module name="bw-util-cli" target="21" />
+      <module name="bw-util-cli-asciidocs" target="21" />
       <module name="bw-util-config-http" target="11" />
       <module name="bw-util-elasticsearch" target="11" />
       <module name="bw-util-httpmodule" target="11" />
+      <module name="bw-util-jolokia" target="21" />
       <module name="bw-util-struts" target="11" />
       <module name="bw-util-timezones" target="11" />
       <module name="bw-util-xmltidy" target="11" />
@@ -308,8 +311,11 @@
       <module name="bw-wfmodules-category-ical" target="11" />
       <module name="bw-wfmodules-com-fasterxml-jackson-core-databind (1)" target="11" />
       <module name="bw-wfmodules-commons-lang" target="21" />
+      <module name="bw-wfmodules-eclipse" target="21" />
       <module name="bw-wfmodules-elasticsearch-rest-client" target="11" />
+      <module name="bw-wfmodules-exchangews-xml" target="21" />
       <module name="bw-wfmodules-jasig-cas" target="11" />
+      <module name="bw-wfmodules-jdkim-library" target="21" />
       <module name="bw-wfmodules-leveldb" target="11" />
       <module name="bw-wfmodules-logging" target="11" />
       <module name="bw-wfmodules-logging (1)" target="11" />
@@ -353,6 +359,7 @@
       <module name="bw-wfmodules-sun-mail" target="21" />
       <module name="bw-wfmodules-synch-ear" target="11" />
       <module name="bw-wfmodules-timezone-server-ear" target="17" />
+      <module name="bw-wfmodules-util-cli" target="21" />
       <module name="bw-wfmodules-util-config-http" target="11" />
       <module name="bw-wfmodules-wfextensions-undertow-handlers" target="21" />
       <module name="bw-wfmodules-wfmodules-ro" target="11" />
@@ -454,12 +461,12 @@
       <module name="bw-calendar-mail" options="" />
       <module name="bw-calendar-notifyws" options="" />
       <module name="bw-calendar-pubcaldav" options="" />
-      <module name="bw-calendar-publicws" options="" />
+      <module name="bw-calendar-pubcalws" options="" />
       <module name="bw-calendar-synchws" options="" />
       <module name="bw-calendar-sysevents-common" options="" />
       <module name="bw-calendar-sysevents-msgs" options="" />
       <module name="bw-calendar-ucaldav" options="" />
-      <module name="bw-calendar-userws" options="" />
+      <module name="bw-calendar-ucalws" options="" />
       <module name="bw-util-logging" options="" />
       <module name="struts2-core" options="-Auri=/struts-tags -AtlibVersion=2.3 -AjspVersion=2.0 -AshortName=s &quot;-AdisplayName=Struts Tags&quot; -AoutFile=$PROJECT_DIR$/../struts/core/target/classes/META-INF/struts-tags.tld &quot;-Adescription=\&quot;To make it easier to access dynamic data;&#10;                                    the Apache Struts framework includes a library of custom tags.&#10;                                    The tags interact with the framework's validation and&#10;                                    internationalization features;&#10;                                    to ensure that input is correct and output is localized.&#10;                                    The Struts Tags can be used with JSP FreeMarker or Velocity.\&quot;&quot; -AoutTemplatesDir=$PROJECT_DIR$/../struts/core/src/site/resources/tags" />
     </option>

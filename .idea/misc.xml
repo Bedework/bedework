@@ -52,7 +52,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-logging/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-deploy/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-cliutil/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-tz/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-index/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-util-network/pom.xml" />
@@ -81,7 +80,6 @@
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-json/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wf-extensions/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-icalendar-xml/pom.xml" />
-        <option value="$PROJECT_DIR$/../bw-exchangews-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-calws-soap/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-web/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-webtest/pom.xml" />
@@ -103,7 +101,9 @@
         <option value="$PROJECT_DIR$/../bw-calendar-engine/bw-calendar-engine-oschconfig/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-carddav/bw-carddav-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-category/bw-category-ear/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-cliutil/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-event-registration/bw-event-registration-ear/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-exchangews-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-quickstart/bw-hawtio/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-self-registration/bw-self-registration-ear/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-synch/bw-synch-xml/pom.xml" />
@@ -115,9 +115,13 @@
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-hlc/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-calendar/bw-wfmodules-calendar-llc/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-category/bw-wfmodules-category-ear/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-cli/bw-wfmodules-util-cli/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-commons/bw-wfmodules-commons-lang/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-exchangews-xml/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-logging/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-notifier/bw-wfmodules-note-ear/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-apache/bw-wfmodules-jdkim/bw-wfmodules-jdkim-library/pom.xml" />
+        <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-eclipse/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-apache-jdkim-library/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-api/pom.xml" />
         <option value="$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-org/bw-wfmodules-org-slf4j-slf4j-nop/pom.xml" />
