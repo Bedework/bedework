@@ -377,13 +377,15 @@ position: relative;
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="features-of-Bedework">1.1. Features of Bedework</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Java: Written completely in Java, Bedework is system independent.  This version compiles and runs in Java 21.</p>
-</li>
-<li>
-<p>Standards based and interoperable: Interoperability with other calendar systems and clients by way of standards compliance is a fundamental design goal of the Bedework system. The following standards are supported:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Java</dt>
+<dd>
+<p>Written completely in Java, Bedework is system independent.  This version compiles and runs in Java 21.</p>
+</dd>
+<dt class="hdlist1">Standards based and interoperable</dt>
+<dd>
+<p>Interoperability with other calendar systems and clients by way of standards compliance is a fundamental design goal of the Bedework system. The following standards are supported:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -406,86 +408,112 @@ position: relative;
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>CalDAV server : a full CalDAV server is a core feature of Bedework. It can be used with any CalDAV capable client and has been shown to work with Mozilla Lightning, Apple&#8217;s iCal, Evolution, and others.</p>
-</li>
-<li>
-<p>CardDAV server : Bedework provides a CardDAV server providing personal and public contact stores for use in the personal client. A stand-alone JavaScript address book application is included with the personal web client suitable for deployment in other web applications such as email web clients.</p>
-</li>
-<li>
-<p>Web clients :The Bedework web clients provide access to public events in guest mode and to public and personal events in authenticated mode. All web clients are easily skinned allowing a high degree of customization.</p>
-</li>
-<li>
-<p>Public calendar suites: Public events are displayed using "calendar suites" allowing multiple organizations to maintain their own public views of events with whatever degree of visibility is appropriate.  A Bedework public calendaring installation may have one or many calendar suites.   A calendar suite provides a customized view of events, custom theming, and control over how events are tagged by event administrators.</p>
-</li>
-<li>
-<p>Public calendar feeds and embeddable JavaScript widgets, supporting ical, jcal, xcal, json, and XML.</p>
-</li>
-<li>
-<p>Personal calendars: Bedework provides a web client for personal and group calendaring including scheduling.  Using CalDAV desktop clients, users can see a fully synchronized view of their personal and subscribed events between their desktop client and the web client.</p>
-</li>
-<li>
-<p>Administrative client for public events: Public event entry and maintenance is carried out through the administrative web client.  The system supports three roles: Super Users control global system settings including user and calendar maintenance and the setup of  calendar suites.  Calendar Suite Owners can modify the settings of their calendar suite, and Event Administrators can add and edit events for the administrative groups to which they belong.</p>
-</li>
-<li>
-<p>Public event community submission: Bedework provides a web client for submitting events to a public queue allowing members of your community who are not event administrators to suggest public events.</p>
-</li>
-<li>
-<p>Public events registration: Bedework supports registration for public events with waitlisting, registrant caps, and notifications.  Custom registration fields can be built and reused for any registerable event.</p>
-</li>
-<li>
-<p>Account Self-registration: This client allows users to register for a Bedework calendar account to register for events or other features.</p>
-</li>
-<li>
-<p>Highly customizable look and feel and standards based: The web clients are themed using CSS and a theme settings file, or by deeper manipulation of XSLT. Designers can theme Bedework for multiple clients and uses, without involving your programming staff. Bedework comes with skins for producing the web clients, data feeds, and displays suitable for handheld devices. Bedework provides a widget builder that makes it easy to embed dynamic event listings on static web sites.</p>
-</li>
-<li>
-<p>Database independence - Hibernate : The core of the calendar uses Hibernate for all database transactions giving support of many database systems and enterprise level performance and reliability. A number of caching schemes are implemented for Hibernate including clustered systems giving further options for improving availability.</p>
-</li>
-<li>
-<p>Sharing : Full CalDAV access control is available allowing the sharing of calendars and calendar entities based on authentication status and identity.</p>
-</li>
-<li>
-<p>Scheduling :  Bedework supports scheduling of meetings including invitations and their responses. Caldav scheduling (still in draft) is supported. Freebusy is supported and the busy time is displayed as attendee lists are built.  Access control allows users to determine who may attempt to schedule meetings with them.</p>
-</li>
-<li>
-<p>Import and export : Events can be imported and exported in iCalendar (RFC5545) format. This provides an option for populating the calendar from external sources.  A dump/restore utility provides a means to backup and restore xml data files.</p>
-</li>
-<li>
-<p>Calendar subscriptions : Users may subscribe to calendars to which they have access, including public and personal calendars. iCalendar data feeds are available from the public web client.</p>
-</li>
-<li>
-<p>Multiple calendars : The core system supports multiple calendars for users and for public events.</p>
-</li>
-<li>
-<p>Tagging &amp; Filtering :  Events and folders can be tagged by any number of categories and event views, feeds, and widgets can be filtered by these.</p>
-</li>
-<li>
-<p>Internationalization : Bedework supports full internationalization, including multilingual content (though multilingual content creation is not yet exposed in the web UI).</p>
-</li>
-<li>
-<p>Data feeds: Bedework produces RSS, Javascript (e.g. json), iCalendar, and XML feeds.  Custom feeds can be developed by writing an XSL skin. Feeds can be filtered by category or creator, and a feed and widget builder is available to help end users and developers design public feeds and embeddable event widgets.</p>
-</li>
-<li>
-<p>Timezone support : Full timezone support is implemented. There is a set of system defined timezones based upon externally available sets of timezone definitions. In addition users are able to store their own timezone definitions.</p>
-</li>
-<li>
-<p>Recurring events : Extensive recurring event support is available via CalDAV and the web clients.</p>
-</li>
-<li>
-<p>Event references : Users may add public event references to their personal calendars. Event references can be annotated by the user.</p>
-</li>
-<li>
-<p>Pluggable group support : Bedework uses a pluggable class implementation to determine group membership for authenticated users allowing organizations to implement a class which uses an external directory. The default class uses internal tables to maintain group membership. Different implementations can be used for administrative and personal use allowing the separation of any given users roles.</p>
-</li>
-<li>
-<p>Container authentication :  There is no authentication code in Bedework. Rather, Bedework behaves as a standard servlet, and all authentication is carried out through external mechanisms. Standard container authentication (via Tomcat or Jboss) and filter based Yale CAS authentication are used in production.  The quickstart comes packaged with the Apache DS server against which the quickstart deployment of Bedework authenticates.  This server can be used in production, though many deployers opt to authenticate against their organization&#8217;s existing directory.</p>
-</li>
-<li>
-<p>Support for other calendar systems and clients : It is possible to access an entire calendar with a single url. This can be used to subscribe to a Bedework calendar from Google or Outlook. Bedework can also take advantage of the richness of CalDAV capable desktop clients such as Apple&#8217;s iCal and Mozilla Lightning.</p>
-</li>
-</ul>
+</dd>
+<dt class="hdlist1">CalDAV server</dt>
+<dd>
+<p>a full CalDAV server is a core feature of Bedework. It can be used with any CalDAV capable client and has been shown to work with Mozilla Lightning, Apple&#8217;s iCal, Evolution, and others.</p>
+</dd>
+<dt class="hdlist1">CardDAV server</dt>
+<dd>
+<p>Bedework provides a CardDAV server providing personal and public contact stores for use in the personal client. A stand-alone JavaScript address book application is included with the personal web client suitable for deployment in other web applications such as email web clients.</p>
+</dd>
+<dt class="hdlist1">Web clients</dt>
+<dd>
+<p>The Bedework web clients provide access to public events in guest mode and to public and personal events in authenticated mode. All web clients are easily skinned, allowing a high degree of customization.</p>
+</dd>
+<dt class="hdlist1">Public calendar suites</dt>
+<dd>
+<p>Public events are displayed using "calendar suites" allowing multiple organizations to maintain their own public views of events with whatever degree of visibility is appropriate.  A Bedework public calendaring installation may have one or many calendar suites.   A calendar suite provides a customized view of events, custom theming, and control over how events are tagged by event administrators.</p>
+</dd>
+<dt class="hdlist1">Public calendar feeds</dt>
+<dd>
+<p>embeddable JavaScript widgets, supporting ical, jcal, xcal, json, and XML.</p>
+</dd>
+<dt class="hdlist1">Personal calendars</dt>
+<dd>
+<p>Bedework provides a web client for personal and group calendaring including scheduling.  Using CalDAV desktop clients, users can see a fully synchronized view of their personal and subscribed events between their desktop client and the web client.</p>
+</dd>
+<dt class="hdlist1">Administrative client for public events</dt>
+<dd>
+<p>Public event entry and maintenance is carried out through the administrative web client.  The system supports three roles: Super Users control global system settings including user and calendar maintenance and the setup of  calendar suites.  Calendar Suite Owners can modify the settings of their calendar suite, and Event Administrators can add and edit events for the administrative groups to which they belong.</p>
+</dd>
+<dt class="hdlist1">Public event community submission</dt>
+<dd>
+<p>Bedework provides a web client for submitting events to a public queue allowing members of your community who are not event administrators to suggest public events.</p>
+</dd>
+<dt class="hdlist1">Public events registration</dt>
+<dd>
+<p>Bedework supports registration for public events with waitlisting, registrant caps, and notifications.  Custom registration fields can be built and reused for any registerable event.</p>
+</dd>
+<dt class="hdlist1">Account Self-registration</dt>
+<dd>
+<p>This client allows users to register for a Bedework calendar account to register for events or other features.</p>
+</dd>
+<dt class="hdlist1">Highly customizable look and feel and standards based</dt>
+<dd>
+<p>The web clients are themed using CSS and a theme settings file, or by deeper manipulation of XSLT. Designers can theme Bedework for multiple clients and uses, without involving your programming staff. Bedework comes with skins for producing the web clients, data feeds, and displays suitable for handheld devices. Bedework provides a widget builder that makes it easy to embed dynamic event listings on static web sites.</p>
+</dd>
+<dt class="hdlist1">Database independence - Hibernate</dt>
+<dd>
+<p>The core of the calendar uses Hibernate for all database transactions giving support of many database systems and enterprise level performance and reliability. A number of caching schemes are implemented for Hibernate including clustered systems giving further options for improving availability.</p>
+</dd>
+<dt class="hdlist1">Sharing</dt>
+<dd>
+<p>Full CalDAV access control is available allowing the sharing of calendars and calendar entities based on authentication status and identity.</p>
+</dd>
+<dt class="hdlist1">Scheduling</dt>
+<dd>
+<p>Bedework supports scheduling of meetings including invitations and their responses. Caldav scheduling and freebusy is supported, and the busy time is displayed as attendee lists are built.  Access control allows users to determine who may attempt to schedule meetings with them.</p>
+</dd>
+<dt class="hdlist1">Import and export</dt>
+<dd>
+<p>Events can be imported and exported in iCalendar (RFC5545) format. This provides an option for populating the calendar from external sources.  A dump/restore utility provides a means to backup and restore xml data files.</p>
+</dd>
+<dt class="hdlist1">Calendar subscriptions</dt>
+<dd>
+<p>Users may subscribe to calendars to which they have access, including public and personal calendars. iCalendar data feeds are available from the public web client.</p>
+</dd>
+<dt class="hdlist1">Multiple calendars</dt>
+<dd>
+<p>The core system supports multiple calendars for users and for public events.</p>
+</dd>
+<dt class="hdlist1">Tagging &amp; Filtering</dt>
+<dd>
+<p>Events and folders can be tagged by any number of categories and event views, feeds, and widgets can be filtered by these.</p>
+</dd>
+<dt class="hdlist1">Internationalization</dt>
+<dd>
+<p>Bedework supports full internationalization, including multilingual content (though multilingual content creation is not yet exposed in the web UI).</p>
+</dd>
+<dt class="hdlist1">Data feeds</dt>
+<dd>
+<p>Bedework produces RSS, Javascript (e.g. json), iCalendar, and XML feeds.  Custom feeds can be developed by writing an XSL skin. Feeds can be filtered by category or creator, and a feed and widget builder is available to help end users and developers design public feeds and embeddable event widgets.</p>
+</dd>
+<dt class="hdlist1">Timezone support</dt>
+<dd>
+<p>Full timezone support is implemented. There is a set of system defined timezones based upon externally available sets of timezone definitions.</p>
+</dd>
+<dt class="hdlist1">Recurring events</dt>
+<dd>
+<p>Full recurring event support is available via CalDAV and the web clients.</p>
+</dd>
+<dt class="hdlist1">Event references</dt>
+<dd>
+<p>Users may add public event references to their personal calendars. Event references can be annotated by the user.</p>
+</dd>
+<dt class="hdlist1">Pluggable group support</dt>
+<dd>
+<p>Bedework uses a pluggable class implementation to determine group membership for authenticated users allowing organizations to implement a class which uses an external directory. The default class uses internal tables to maintain group membership. Different implementations can be used for administrative and personal use allowing the separation of any given users roles.</p>
+</dd>
+<dt class="hdlist1">Container authentication</dt>
+<dd>
+<p>There is no authentication code in Bedework. Rather, Bedework behaves as a standard servlet, and all authentication is carried out through external mechanisms. Standard container authentication via wildfly and filter based CAS authentication are used in production.  The quickstart comes packaged with the Apache DS server against which the quickstart deployment of Bedework authenticates.  In production, many deployers opt to authenticate against their organization&#8217;s existing directory.</p>
+</dd>
+<dt class="hdlist1">Support for other calendar clients</dt>
+<dd>
+<p>It is possible to access an entire calendar with a single url. This can be used to subscribe to a Bedework calendar from Google or Outlook. Bedework can also take advantage of the richness of CalDAV capable desktop clients such as Apple&#8217;s iCal and Mozilla Lightning.</p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect2">
