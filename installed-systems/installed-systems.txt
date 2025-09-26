@@ -1,0 +1,3 @@
+This directory is used to hold symlinks to installed systems to make them visible to the IDE.
+
+Nothing, other than this file and those links, should be added to this directory.

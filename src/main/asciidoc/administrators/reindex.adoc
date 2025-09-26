@@ -1,14 +1,14 @@
 [[reindex]]
 === Reindexing
-Opensearch is used for indexing and searching the data. Nearly all complex queries take place against OpenSearch. The public facing web client and feeds use ES exclusively - there are no database interactions. CalDAV read-only methods (e.g. GET, PROPFIND, etc) also interact only with ES.
+Opensearch is used for indexing and searching the data. Nearly all complex queries take place against OpenSearch. The public facing web client and feeds use Opensearch exclusively - there are no database interactions. CalDAV read-only methods (e.g. GET, PROPFIND, etc) also interact only with Opensearch.
 
-The database is used only as a transactional store and only the admin clients and CalDAV write methods (PUT, POST etc) use the database. Changes made to the database result in updates to the index which in some cases can take up to a second to appear.
+The database is used only as a transactional store and only the admin clients and CalDAV write methods (PUT, POST etc) use the database. Changes made to the database result in updates to the Opensearch index, which in some cases can take up to a second to appear.
 
-Occasionally the index will get out of step with the database. The database is the authoritative copy of the data. Sometimes - for an individual entity making a trivial change to the data via the admin client can get things back in step. If it's an event which was being destroyed and it remained in the index a super-user can delete by href from the system tab.
+Occasionally, the index will get out of step with the database. The database is the authoritative copy of the data. Sometimes - for an individual entity making a trivial change to the data via the admin client can get things back in step. If it's an event which was being destroyed, and it remained in the index a super-user can delete by href from the system tab.
 
-If things are significantly out of step or you are restoring data you'll need to reindex. Depending on the amount of data present this can take from a few minutes to some hours.
+If things are significantly out of step, or you are restoring data you'll need to reindex. Depending on the amount of data present this can take from a few minutes to some hours.
 
-During reindexing the system can continue to run using the previous index. However, any changes to the data may be lost so it is better to suspend any such changes until after reindexing is complete.
+During reindexing, the system can continue to run using the previous index. However, any changes to the data may be lost so it is better to suspend any such changes until after reindexing is complete.
 
 A reindex takes 2 steps:
 
