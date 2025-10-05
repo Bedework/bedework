@@ -1,7 +1,15 @@
 [[todo-list]]
 === Todo list
 
-This is a (moderately) sorted list of features/changes etc for bedework. Could be a set of tickets but this is easier to read.
+This is a (moderately) sorted list of features/changes etc for bedework. Could be a set of tickets, but this is easier to read.
+
+==== DumpRestore changes
+
+Already a separate module. Move DumpRestoreProperties out of common into the dumprestore  module - it's the only place they are used.
+
+Remove all mention of dumprestore in ConfigurationsImpl.java. Add a sar to the dr module instead.
+
+This may act as a pattern for replacing ConfigurationsImpl.java with a bunch of sars.
 
 ==== CoreEvents exceptions
 Don't do this:
@@ -35,7 +43,7 @@ Need to be indexed in ES so that finding a notification for an entity is efficie
 Change notifications for public events is probably not working correctly. We should be using the creator - or the owner of the alias - all public events have the same owner (public-user) and change notifications seem to be ending up in that bucket.
 
 ==== Limit interactions with db for updates.
-For this we would do all interactions with ES and connect to and update db only as needed. Use sequence numbers to ensure db and index correctness. Benefits are shorter db interactions - only at point we update. Less complexity in web clients - no need to have conversations stretching across multiple requests. This can build on the work of the previous item. The web client code is already structured ro assume that it will do an explicit update of entities which should facilitate the change.
+For this we would do all interactions with ES and connect to and update db only as needed. Use sequence numbers to ensure db and index correctness. Benefits are shorter db interactions - only at point we update. Less complexity in web clients - no need to have conversations stretching across multiple requests. This can build on the work of the previous item. The web client code is already structured to assume that it will do an explicit update of entities which should facilitate the change.
 
 ==== Move business logic out of webapps into core
 Move as much as possible out of the current webapps module into the core APi implementation - this potentially allows a more RESTful style of client - possibly using the new jmap style interface being developed.

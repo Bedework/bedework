@@ -5,6 +5,11 @@ Specific changes to xsl and javascript can be found at <<xsl-changes>>
 
 ==== Dev - To Be Release 5.1.0?:
 * Update build to only do dependency checks with profile selected
+* Fix startup script and conf. Bad quotes and unnecessary definition removed.
+* Allow max page size in feeds to be configured.
+* Added a missing module dependency for the cli.
+* Incorrect value parameter (false instead of true) for admin groups fetch broke the restore.
+* Jolokia client+agent no longer working - possible wildfly bug. Switched to use POST for requests.
 
 ==== Release 5.0.0 (2025/09/04):
 ===== Change summary

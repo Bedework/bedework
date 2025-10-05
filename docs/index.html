@@ -230,11 +230,12 @@
 </ul>
 </li>
 <li><a href="#configure-events-registration">6.8. Enabling and Disabling Public Events Registration</a></li>
-<li><a href="#_initializing_the_database">6.9. Initializing the database</a>
+<li><a href="#deploying-sync-engine">6.9. Deploying the sync engine</a></li>
+<li><a href="#_initializing_the_database">6.10. Initializing the database</a>
 <ul class="sectlevel3">
-<li><a href="#_rebuild_bw_xml">6.9.1. (Re)build bw-xml</a></li>
-<li><a href="#_validating_locations">6.9.2. Validating locations.</a></li>
-<li><a href="#_searching_for_public_locations">6.9.3. Searching for public locations</a></li>
+<li><a href="#_rebuild_bw_xml">6.10.1. (Re)build bw-xml</a></li>
+<li><a href="#_validating_locations">6.10.2. Validating locations.</a></li>
+<li><a href="#_searching_for_public_locations">6.10.3. Searching for public locations</a></li>
 </ul>
 </li>
 </ul>
@@ -252,32 +253,33 @@
 <li><a href="#_asciidocs">7.4. Asciidocs</a></li>
 <li><a href="#todo-list">7.5. Todo list</a>
 <ul class="sectlevel3">
-<li><a href="#_coreevents_exceptions">7.5.1. CoreEvents exceptions</a></li>
-<li><a href="#_indexupdates_after_touch_collection">7.5.2. Index/updates after touch collection</a></li>
-<li><a href="#_filter_x_properties">7.5.3. Filter x-properties</a></li>
-<li><a href="#_api_changes">7.5.4. Api changes</a></li>
-<li><a href="#_notifications_3">7.5.5. Notifications</a></li>
-<li><a href="#_limit_interactions_with_db_for_updates">7.5.6. Limit interactions with db for updates.</a></li>
-<li><a href="#_move_business_logic_out_of_webapps_into_core">7.5.7. Move business logic out of webapps into core</a></li>
-<li><a href="#_categories">7.5.8. Categories</a></li>
-<li><a href="#_locations">7.5.9. Locations</a></li>
-<li><a href="#_searching_improvements">7.5.10. Searching improvements</a>
+<li><a href="#_dumprestore_changes">7.5.1. DumpRestore changes</a></li>
+<li><a href="#_coreevents_exceptions">7.5.2. CoreEvents exceptions</a></li>
+<li><a href="#_indexupdates_after_touch_collection">7.5.3. Index/updates after touch collection</a></li>
+<li><a href="#_filter_x_properties">7.5.4. Filter x-properties</a></li>
+<li><a href="#_api_changes">7.5.5. Api changes</a></li>
+<li><a href="#_notifications_3">7.5.6. Notifications</a></li>
+<li><a href="#_limit_interactions_with_db_for_updates">7.5.7. Limit interactions with db for updates.</a></li>
+<li><a href="#_move_business_logic_out_of_webapps_into_core">7.5.8. Move business logic out of webapps into core</a></li>
+<li><a href="#_categories">7.5.9. Categories</a></li>
+<li><a href="#_locations">7.5.10. Locations</a></li>
+<li><a href="#_searching_improvements">7.5.11. Searching improvements</a>
 <ul class="sectlevel4">
-<li><a href="#_caching">7.5.10.1. Caching</a></li>
+<li><a href="#_caching">7.5.11.1. Caching</a></li>
 </ul>
 </li>
-<li><a href="#_deployment_of_ears">7.5.11. Deployment of ears</a></li>
-<li><a href="#_deployment_of_wildfly_modules">7.5.12. Deployment of wildfly modules</a></li>
-<li><a href="#_networked_client_api">7.5.13. Networked client api</a></li>
-<li><a href="#_groups">7.5.14. Groups</a></li>
-<li><a href="#_index_logs_in_es">7.5.15. Index logs in ES</a></li>
-<li><a href="#_timezones">7.5.16. Timezones</a></li>
-<li><a href="#_general_work_needed">7.5.17. General work needed</a></li>
-<li><a href="#_recurring_events_2">7.5.18. Recurring events</a>
+<li><a href="#_deployment_of_ears">7.5.12. Deployment of ears</a></li>
+<li><a href="#_deployment_of_wildfly_modules">7.5.13. Deployment of wildfly modules</a></li>
+<li><a href="#_networked_client_api">7.5.14. Networked client api</a></li>
+<li><a href="#_groups">7.5.15. Groups</a></li>
+<li><a href="#_index_logs_in_es">7.5.16. Index logs in ES</a></li>
+<li><a href="#_timezones">7.5.17. Timezones</a></li>
+<li><a href="#_general_work_needed">7.5.18. General work needed</a></li>
+<li><a href="#_recurring_events_2">7.5.19. Recurring events</a>
 <ul class="sectlevel4">
-<li><a href="#_entity_only">7.5.18.1. Entity only</a></li>
-<li><a href="#_overrides">7.5.18.2. Overrides</a></li>
-<li><a href="#_expanded">7.5.18.3. Expanded</a></li>
+<li><a href="#_entity_only">7.5.19.1. Entity only</a></li>
+<li><a href="#_overrides">7.5.19.2. Overrides</a></li>
+<li><a href="#_expanded">7.5.19.3. Expanded</a></li>
 </ul>
 </li>
 </ul>
@@ -527,6 +529,21 @@ position: relative;
 <ul>
 <li>
 <p>Update build to only do dependency checks with profile selected</p>
+</li>
+<li>
+<p>Fix startup script and conf. Bad quotes and unnecessary definition removed.</p>
+</li>
+<li>
+<p>Allow max page size in feeds to be configured.</p>
+</li>
+<li>
+<p>Added a missing module dependency for the cli.</p>
+</li>
+<li>
+<p>Incorrect value parameter (false instead of true) for admin groups fetch broke the restore.</p>
+</li>
+<li>
+<p>Jolokia client+agent no longer working - possible wildfly bug. Switched to use POST for requests.</p>
 </li>
 </ul>
 </div>
@@ -2519,19 +2536,19 @@ autokill killing off some of the long running system jobs.</p>
 <div class="sect2">
 <h3 id="reindex">2.1. Reindexing</h3>
 <div class="paragraph">
-<p>Opensearch is used for indexing and searching the data. Nearly all complex queries take place against OpenSearch. The public facing web client and feeds use ES exclusively - there are no database interactions. CalDAV read-only methods (e.g. GET, PROPFIND, etc) also interact only with ES.</p>
+<p>Opensearch is used for indexing and searching the data. Nearly all complex queries take place against OpenSearch. The public facing web client and feeds use Opensearch exclusively - there are no database interactions. CalDAV read-only methods (e.g. GET, PROPFIND, etc) also interact only with Opensearch.</p>
 </div>
 <div class="paragraph">
-<p>The database is used only as a transactional store and only the admin clients and CalDAV write methods (PUT, POST etc) use the database. Changes made to the database result in updates to the index which in some cases can take up to a second to appear.</p>
+<p>The database is used only as a transactional store and only the admin clients and CalDAV write methods (PUT, POST etc) use the database. Changes made to the database result in updates to the Opensearch index, which in some cases can take up to a second to appear.</p>
 </div>
 <div class="paragraph">
-<p>Occasionally the index will get out of step with the database. The database is the authoritative copy of the data. Sometimes - for an individual entity making a trivial change to the data via the admin client can get things back in step. If it&#8217;s an event which was being destroyed and it remained in the index a super-user can delete by href from the system tab.</p>
+<p>Occasionally, the index will get out of step with the database. The database is the authoritative copy of the data. Sometimes - for an individual entity making a trivial change to the data via the admin client can get things back in step. If it&#8217;s an event which was being destroyed, and it remained in the index a super-user can delete by href from the system tab.</p>
 </div>
 <div class="paragraph">
-<p>If things are significantly out of step or you are restoring data you&#8217;ll need to reindex. Depending on the amount of data present this can take from a few minutes to some hours.</p>
+<p>If things are significantly out of step, or you are restoring data you&#8217;ll need to reindex. Depending on the amount of data present this can take from a few minutes to some hours.</p>
 </div>
 <div class="paragraph">
-<p>During reindexing the system can continue to run using the previous index. However, any changes to the data may be lost so it is better to suspend any such changes until after reindexing is complete.</p>
+<p>During reindexing, the system can continue to run using the previous index. However, any changes to the data may be lost so it is better to suspend any such changes until after reindexing is complete.</p>
 </div>
 <div class="paragraph">
 <p>A reindex takes 2 steps:</p>
@@ -4291,25 +4308,28 @@ bwOschdatadir="&lt;somewhere&gt;/&lt;opensearch&gt;/data/"</pre>
 <div class="sect2">
 <h3 id="configure-events-registration">6.8. Enabling and Disabling Public Events Registration</h3>
 <div class="paragraph">
-<p>Full documentation is available at <a href="https://bedework.github.io/bw-event-registration/">github pages for the event registration project</a>
-[[deploying-sync-engine]
-=== Deploying the sync engine
-The synch engine handles the synchronization of external subscriptions with a bedework calendar - for example a Google web calendar or an ical feed from a department.</p>
-</div>
-<div class="paragraph">
-<p>Currently such a synchronization must be carried out to a single calendar collection which only contains data from the external resource. Also only one way synchronization is supported - inbound to bedework.</p>
-</div>
-<div class="paragraph">
-<p>These subscriptions are available to personal calendar users and to public events administrators. For personal calendar users the options are limited as it is intended only to mirror the external resource.</p>
+<p>Full documentation is available at <a href="https://bedework.github.io/bw-event-registration/">github pages for the event registration project</a></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_initializing_the_database">6.9. Initializing the database</h3>
+<h3 id="deploying-sync-engine">6.9. Deploying the sync engine</h3>
 <div class="paragraph">
-<p>If running with mysql the built in hibernate schema export doesn&#8217;t work - mysql jdbc does not support it.</p>
+<p>The synch engine handles the synchronization of external subscriptions with a bedework calendar - for example a Google web calendar or an ical feed from a department.</p>
 </div>
 <div class="paragraph">
-<p>The schema is simple however - it can be generated via the JMX mbeans or use the examples below - to install it manually, create a database - ensure UTF-8 is enabled</p>
+<p>Currently, such a synchronization must be carried out to a single calendar collection which only contains data from the external resource. Also, only one way synchronization is supported - inbound to bedework.</p>
+</div>
+<div class="paragraph">
+<p>These subscriptions are available to personal calendar users and to public events administrators. For personal calendar users, the options are limited as it is intended only to mirror the external resource.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_initializing_the_database">6.10. Initializing the database</h3>
+<div class="paragraph">
+<p>If running with mysql, the built-in hibernate schema export doesn&#8217;t work - mysql jdbc does not support it.</p>
+</div>
+<div class="paragraph">
+<p>The schema is simple however, it can be generated via the JMX mbeans or use the examples below - to install it manually, create a database - ensure UTF-8 is enabled</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4345,7 +4365,7 @@ grant all on synchDb.* to '&lt;id&gt;'@'%' identified by '&lt;pw&gt;';</code></p
 </div>
 </div>
 <div class="sect3">
-<h4 id="_rebuild_bw_xml">6.9.1. (Re)build bw-xml</h4>
+<h4 id="_rebuild_bw_xml">6.10.1. (Re)build bw-xml</h4>
 <div class="paragraph">
 <p>The synch engine uses an extension of CalWS to communicate with bedework. It requires that the wsdl file contain the location of bedework. This is configured into the deploy.properties file - only one change for the synch engine should be necessary. Set the location of (one of) your application servers in the following.</p>
 </div>
@@ -4405,7 +4425,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_validating_locations">6.9.2. Validating locations.</h4>
+<h4 id="_validating_locations">6.10.2. Validating locations.</h4>
 <div class="paragraph">
 <p>When an event arrives at the receiving end with an "X-BEDEWORK-LOCATION" property if the String value of the x-property is &#8230;&#8203;
 === Locations in bedework</p>
@@ -4415,7 +4435,7 @@ Ensure calendar server(s) can locate the synch engine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_searching_for_public_locations">6.9.3. Searching for public locations</h4>
+<h4 id="_searching_for_public_locations">6.10.3. Searching for public locations</h4>
 <div class="paragraph">
 <p>There is a web service endpoint which can be used to search for public locations. It takes a filter expression as a parameter and will return &lt;a limited?&gt; number</p>
 </div>
@@ -4558,10 +4578,22 @@ in our case by adding a string to the commit message.</p>
 <div class="sect2">
 <h3 id="todo-list">7.5. Todo list</h3>
 <div class="paragraph">
-<p>This is a (moderately) sorted list of features/changes etc for bedework. Could be a set of tickets but this is easier to read.</p>
+<p>This is a (moderately) sorted list of features/changes etc for bedework. Could be a set of tickets, but this is easier to read.</p>
 </div>
 <div class="sect3">
-<h4 id="_coreevents_exceptions">7.5.1. CoreEvents exceptions</h4>
+<h4 id="_dumprestore_changes">7.5.1. DumpRestore changes</h4>
+<div class="paragraph">
+<p>Already a separate module. Move DumpRestoreProperties out of common into the dumprestore  module - it&#8217;s the only place they are used.</p>
+</div>
+<div class="paragraph">
+<p>Remove all mention of dumprestore in ConfigurationsImpl.java. Add a sar to the dr module instead.</p>
+</div>
+<div class="paragraph">
+<p>This may act as a pattern for replacing ConfigurationsImpl.java with a bunch of sars.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_coreevents_exceptions">7.5.2. CoreEvents exceptions</h4>
 <div class="paragraph">
 <p>Don&#8217;t do this:</p>
 </div>
@@ -4579,7 +4611,7 @@ in our case by adding a string to the commit message.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_indexupdates_after_touch_collection">7.5.2. Index/updates after touch collection</h4>
+<h4 id="_indexupdates_after_touch_collection">7.5.3. Index/updates after touch collection</h4>
 <div class="paragraph">
 <p>The lastmod db update is not versioned as we get a lot and it causes frequent stale state exceptions.</p>
 </div>
@@ -4591,19 +4623,19 @@ in our case by adding a string to the commit message.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_filter_x_properties">7.5.3. Filter x-properties</h4>
+<h4 id="_filter_x_properties">7.5.4. Filter x-properties</h4>
 <div class="paragraph">
 <p>Filter x-properties in public clients/feeds - list of x-props to retain.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_api_changes">7.5.4. Api changes</h4>
+<h4 id="_api_changes">7.5.5. Api changes</h4>
 <div class="paragraph">
 <p>Change the api to use response objects throughout. No exceptions. Allows for a better networked api.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_notifications_3">7.5.5. Notifications</h4>
+<h4 id="_notifications_3">7.5.6. Notifications</h4>
 <div class="paragraph">
 <p>Need to be indexed in ES so that finding a notification for an entity is efficient (need to merge multiple notifications for same entity)</p>
 </div>
@@ -4612,79 +4644,79 @@ in our case by adding a string to the commit message.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_limit_interactions_with_db_for_updates">7.5.6. Limit interactions with db for updates.</h4>
+<h4 id="_limit_interactions_with_db_for_updates">7.5.7. Limit interactions with db for updates.</h4>
 <div class="paragraph">
-<p>For this we would do all interactions with ES and connect to and update db only as needed. Use sequence numbers to ensure db and index correctness. Benefits are shorter db interactions - only at point we update. Less complexity in web clients - no need to have conversations stretching across multiple requests. This can build on the work of the previous item. The web client code is already structured ro assume that it will do an explicit update of entities which should facilitate the change.</p>
+<p>For this we would do all interactions with ES and connect to and update db only as needed. Use sequence numbers to ensure db and index correctness. Benefits are shorter db interactions - only at point we update. Less complexity in web clients - no need to have conversations stretching across multiple requests. This can build on the work of the previous item. The web client code is already structured to assume that it will do an explicit update of entities which should facilitate the change.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_move_business_logic_out_of_webapps_into_core">7.5.7. Move business logic out of webapps into core</h4>
+<h4 id="_move_business_logic_out_of_webapps_into_core">7.5.8. Move business logic out of webapps into core</h4>
 <div class="paragraph">
 <p>Move as much as possible out of the current webapps module into the core APi implementation - this potentially allows a more RESTful style of client - possibly using the new jmap style interface being developed.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_categories">7.5.8. Categories</h4>
+<h4 id="_categories">7.5.9. Categories</h4>
 <div class="paragraph">
 <p>Use a larger category scheme as the basis for categories. Use SKOS based representation so that they are RDF friendly. Will allow for sub-categorization by event submitters.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_locations">7.5.9. Locations</h4>
+<h4 id="_locations">7.5.10. Locations</h4>
 <div class="paragraph">
 <p>Allow for use of external location sources such as geonames. Will allow good locations on external events.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_searching_improvements">7.5.10. Searching improvements</h4>
+<h4 id="_searching_improvements">7.5.11. Searching improvements</h4>
 <div class="paragraph">
 <p>Search for events near a geo-location (requires locations to have geo)</p>
 </div>
 <div class="sect4">
-<h5 id="_caching">7.5.10.1. Caching</h5>
+<h5 id="_caching">7.5.11.1. Caching</h5>
 <div class="paragraph">
 <p>Implement caching of feeder data as a built in feature of the quickstart.</p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_deployment_of_ears">7.5.11. Deployment of ears</h4>
+<h4 id="_deployment_of_ears">7.5.12. Deployment of ears</h4>
 <div class="paragraph">
 <p>Finish off the deployment process - it&#8217;s THAT close (is there an emoticon for 2 fingers very close together?) to allowing deployers to just replace the ears from prebuilt ears on the site. No builds required - server can detect an update is available.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_deployment_of_wildfly_modules">7.5.12. Deployment of wildfly modules</h4>
+<h4 id="_deployment_of_wildfly_modules">7.5.13. Deployment of wildfly modules</h4>
 <div class="paragraph">
 <p>If all - or many - required dependencies are deployed as wildfly modules it should reduce the size of the deployment and allow for even quicker startup.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_networked_client_api">7.5.13. Networked client api</h4>
+<h4 id="_networked_client_api">7.5.14. Networked client api</h4>
 <div class="paragraph">
 <p>Subset of svci but can be used for web client interactions.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_groups">7.5.14. Groups</h4>
+<h4 id="_groups">7.5.15. Groups</h4>
 <div class="paragraph">
 <p>Directory interface to directly interact with grouper for user and admin groups. Allow consumer only approach for external management of groups. Use extra ldap attributes to allow admin groups to be maintained in ldap.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_index_logs_in_es">7.5.15. Index logs in ES</h4>
+<h4 id="_index_logs_in_es">7.5.16. Index logs in ES</h4>
 <div class="paragraph">
 <p>Use kibana to get metrics etc</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_timezones">7.5.16. Timezones</h4>
+<h4 id="_timezones">7.5.17. Timezones</h4>
 <div class="paragraph">
 <p>Update UI to provide a search - possibly based on map. Use tzdist geo feature (being developed)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_general_work_needed">7.5.17. General work needed</h4>
+<h4 id="_general_work_needed">7.5.18. General work needed</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4700,7 +4732,7 @@ in our case by adding a string to the commit message.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_recurring_events_2">7.5.18. Recurring events</h4>
+<h4 id="_recurring_events_2">7.5.19. Recurring events</h4>
 <div class="paragraph">
 <p>Currently I&#8217;m indexing all of the instances we allow - that can be many.
 The ideal would be not to index any instances but only the master and
@@ -4716,20 +4748,20 @@ instances based on the master.</p>
 <p>For a query involving other conditions - e.g. categories the master may not appear.</p>
 </div>
 <div class="sect4">
-<h5 id="_entity_only">7.5.18.1. Entity only</h5>
+<h5 id="_entity_only">7.5.19.1. Entity only</h5>
 <div class="paragraph">
 <p>This is just the master</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_overrides">7.5.18.2. Overrides</h5>
+<h5 id="_overrides">7.5.19.2. Overrides</h5>
 <div class="paragraph">
 <p>This is master + overrides - again it may be filtered so we need to pull
 in the master if absent. This is in line with CalDAV (I think).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_expanded">7.5.18.3. Expanded</h5>
+<h5 id="_expanded">7.5.19.3. Expanded</h5>
 <div class="paragraph">
 <p>This is a full expansion of all instances. If the master
 appears in the result we need to generate the appropriate instances for

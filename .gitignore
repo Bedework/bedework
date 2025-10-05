@@ -4,5 +4,5 @@
 target
 .idea
 tmp
-/installed-systems/test*
-/installed-systems/wildfly*
+/system-links/test*
+/system-links/wildfly*

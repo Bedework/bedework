@@ -1,15 +1,15 @@
-[[deploying-sync-engine]
+[[deploying-sync-engine]]
 === Deploying the sync engine
 The synch engine handles the synchronization of external subscriptions with a bedework calendar - for example a Google web calendar or an ical feed from a department.
 
-Currently such a synchronization must be carried out to a single calendar collection which only contains data from the external resource. Also only one way synchronization is supported - inbound to bedework.
+Currently, such a synchronization must be carried out to a single calendar collection which only contains data from the external resource. Also, only one way synchronization is supported - inbound to bedework.
 
-These subscriptions are available to personal calendar users and to public events administrators. For personal calendar users the options are limited as it is intended only to mirror the external resource.
+These subscriptions are available to personal calendar users and to public events administrators. For personal calendar users, the options are limited as it is intended only to mirror the external resource.
 
 === Initializing the database
-If running with mysql the built in hibernate schema export doesn't work - mysql jdbc does not support it.
+If running with mysql, the built-in hibernate schema export doesn't work - mysql jdbc does not support it.
 
-The schema is simple however - it can be generated via the JMX mbeans or use the examples below - to install it manually, create a database - ensure UTF-8 is enabled
+The schema is simple however, it can be generated via the JMX mbeans or use the examples below - to install it manually, create a database - ensure UTF-8 is enabled
 
 [source]
 ----
