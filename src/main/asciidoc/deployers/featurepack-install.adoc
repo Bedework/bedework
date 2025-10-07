@@ -42,26 +42,29 @@ before retrying.
 apt install openjdk-21-jdk
 ----
 
-* In window 1 - Create a directory and cd into it.
 
 * Download galleon
 ----
-wget https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip
+wget https://github.com/wildfly/galleon/releases/download/6.1.0.Final/galleon-6.1.0.Final.zip
+unzip galleon-6.1.0.Final.zip
 ----
-and unzip.
 
 * run galleon to install:
 ----
-./galleon-5.2.2.Final/bin/galleon.sh
+./galleon-6.1.0.Final/bin/galleon.sh
 ----
 The first time, if you want to install snapshot versions, you need to set up repositories and resolve for the required version
 ----
-maven add-repository --name=ossrh --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
-maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.2.0
+maven add-repository --name=central --url=https://central.sonatype.com/repository/maven-snapshots/ --enable-snapshot=true
+maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:5.1.0-SNAPSHOT
 ----
-then install
+NOTE: An error message followed the above but the following install worked.
+
+For a non-snapshot version the above isn't required.
+
+Next install
 ----
-install org.bedework.deploy:bw-wf-feature-pack:4.2.0
+install org.bedework.deploy:bw-wf-feature-pack:5.1.0-SNAPSHOT
    --dir=wildfly --verbose --layers=bw-demoall-h2,web-console
 ----
 
@@ -69,7 +72,8 @@ Finally
 ----
 exit
 ----
-* In window 2 cd into the same directory and start the required services:
+
+Now, start the required services:
 ----
     export JAVA_HOME=<where the jdk is installed>
     ./wildfly/bin/bwstarth2.sh
@@ -80,10 +84,10 @@ exit
 
  wait till it says something about cluster state going yellow
 
-* Back in the first window
 ----
 ./wildfly/bin/bwstartwildfly.sh
 ----
+
  and wait for the messages listing the indexes
 
 ----
@@ -104,28 +108,29 @@ for the starter page
 
 ==== More detailed steps:
 These are the steps to install a version closer to a production ready
-bedework. As noted earlier you should run bedework behind a front-end
+bedework. As noted earlier, you should run bedework behind a front-end
 service such as haproxy or apache. Wildfly can deliver any associated
-static content so there is no need to move that content elsewhere.
+static content, so there is no need to move that content elsewhere.
 
-* Install jdk 17
+* Install jdk 21
 
-* If installing for postgres install the database and create an id/pw for access.
+* If installing for postgres, install the database and create an id/pw for access.
 
 * Download galleon
-wget https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip
-and unzip.
-  and unzip.
+----
+wget https://github.com/wildfly/galleon/releases/download/6.1.0.Final/galleon-6.1.0.Final.zip
+unzip galleon-6.1.0.Final.zip
+----
 
 * Run galleon to deploy wildfly with a bedework service +
 You will probably want to change the *--layers* parameter to
 select a subset of the bedework installation - see <<wildfly-bedework-layers>>
 ----
-./galleon-5.2.2.Final/bin/galleon.sh \
-   install org.bedework.deploy:bw-wf-feature-pack:4.2.0
-   --dir=wildfly-26.0.1-Final --verbose --layers=bw-cal-eventsubmit-pg,web-console
+./galleon-6.1.0.Final/bin/galleon.sh \
+   install org.bedework.deploy:bw-wf-feature-pack:5.1.0
+   --dir=wildfly-bw-5.1.0 --verbose --layers=bw-cal-eventsubmit-pg,web-console
 
-ln -s wildfly-26.0.1.Final wildfly
+ln -s wildfly-bw-5.1.0 wildfly
 ----
 
 * <<opensearch,Install and configure OpenSearch>>
@@ -144,7 +149,7 @@ ln -s wildfly-26.0.1.Final wildfly
 ==== Wildfly and bedework layers
 Bedework is installed as a feature pack which has a dependency on wildfly. The galleon tool supports layers which effectively define a particular flavor of the feature.
 
-Many bedework layers have multiple versions for supported databases. For each the appropriate driver will be installed and datasources will be configured. The database is indicated by the suffix "-xx" where xx is:
+Many bedework layers have multiple versions for supported databases. For each, the appropriate driver will be installed and datasources will be configured. The database is indicated by the suffix "-xx" where xx is:
 
 .Bedework supported database configurations
 |===
@@ -164,14 +169,14 @@ Many bedework layers have multiple versions for supported databases. For each th
 
 |===
 
-Following are tables showing all defined layers. Many are flagged as dependencies of others so, for example, bw-calendar-pg will include bw-calendar-ro. In general the only layers to use are the top level
+Following, are tables showing all defined layers. Many are flagged as dependencies of others, so, for example, bw-calendar-pg will include bw-calendar-ro. In general, the only layers to use are the top level
 layers that specify a database.
 
 The bw-prod* levels provide a more production ready version which will probably still require configuration changes but should be close.
 
 The demo systems will include apacheds as an ldap server with
 a preconfigured set of accounts - all with the password
-"bedework". Also the minimal version of OpenSearch will be
+"bedework". Also, the minimal version of OpenSearch will be
 installed. Startup scripts will be included in the wildfly/bin
 directory to start and stop each of the services.
 
@@ -291,29 +296,15 @@ In addition to the bedework layers there are wildfly layers that might be useful
 |===
 
 ==== Installing examples
-These assume galleon has been installed and is runnable. For example it may be installed in the home directory and runnable as:
+These assume galleon has been installed and is runnable. For example, it may be installed in the home directory and runnable as:
 
 ----
-~/galleon-4.2.8.Final/bin/galleon.sh
+~/galleon-6.1.0.Final/bin/galleon.sh
 ----
 
-In the following examples we will simply write galleon.sh
+In the following examples, we will simply write galleon.sh
 
 .Calendar server with console
 =========
-galleon.sh install org.bedework:bw-wf-feature-pack:4.0.3 --dir=wildfly --verbose --layers=bw-public-pg,web-console
+galleon.sh install org.bedework:bw-wf-feature-pack:5.1.0 --dir=wildfly --verbose --layers=bw-public-pg,web-console
 =========
-
-==== Installing snapshot version
-This may not work as snapshots can be out-of-date or inconsistent but for reference...
-
-Download and unzip galleon then run the binary and enter the commands as shown:
-
-[source]
-----
-./galleon-4.2.8.Final/bin/galleon.sh
-maven add-repository --name=ossrh-snapshots --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
-maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.0.4-SNAPSHOT
-install org.bedework.deploy:bw-wf-feature-pack:4.0.4-SNAPSHOT --dir=wildfly-26.0.1.Final --verbose --layers=bw-demo-pg,web-console
-exit
-----

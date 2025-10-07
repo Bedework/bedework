@@ -194,7 +194,6 @@
 <li><a href="#_more_detailed_steps">6.1.4. More detailed steps:</a></li>
 <li><a href="#wildfly-bedework-layers">6.1.5. Wildfly and bedework layers</a></li>
 <li><a href="#_installing_examples">6.1.6. Installing examples</a></li>
-<li><a href="#_installing_snapshot_version">6.1.7. Installing snapshot version</a></li>
 </ul>
 </li>
 <li><a href="#installing-bedwork">6.2. Installing bedework on Ubuntu</a></li>
@@ -3268,20 +3267,15 @@ before retrying.
 <div class="ulist">
 <ul>
 <li>
-<p>In window 1 - Create a directory and cd into it.</p>
-</li>
-<li>
 <p>Download galleon</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>wget https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip</pre>
+<pre>wget https://github.com/wildfly/galleon/releases/download/6.1.0.Final/galleon-6.1.0.Final.zip
+unzip galleon-6.1.0.Final.zip</pre>
 </div>
-</div>
-<div class="paragraph">
-<p>and unzip.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3292,7 +3286,7 @@ before retrying.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>./galleon-5.2.2.Final/bin/galleon.sh</pre>
+<pre>./galleon-6.1.0.Final/bin/galleon.sh</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3300,16 +3294,31 @@ before retrying.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>maven add-repository --name=ossrh --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
-maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.2.0</pre>
+<pre>maven add-repository --name=central --url=https://central.sonatype.com/repository/maven-snapshots/ --enable-snapshot=true
+maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:5.1.0-SNAPSHOT</pre>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+An error message followed the above but the following install worked.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>then install</p>
+<p>For a non-snapshot version the above isn&#8217;t required.</p>
+</div>
+<div class="paragraph">
+<p>Next install</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>install org.bedework.deploy:bw-wf-feature-pack:4.2.0
+<pre>install org.bedework.deploy:bw-wf-feature-pack:5.1.0-SNAPSHOT
    --dir=wildfly --verbose --layers=bw-demoall-h2,web-console</pre>
 </div>
 </div>
@@ -3321,12 +3330,8 @@ maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.2.0</pre>
 <pre>exit</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>In window 2 cd into the same directory and start the required services:</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Now, start the required services:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3341,13 +3346,6 @@ maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.2.0</pre>
 <div class="content">
 <pre>wait till it says something about cluster state going yellow</pre>
 </div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Back in the first window</p>
-</li>
-</ul>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3386,24 +3384,31 @@ for the starter page</p>
 <h4 id="_more_detailed_steps">6.1.4. More detailed steps:</h4>
 <div class="paragraph">
 <p>These are the steps to install a version closer to a production ready
-bedework. As noted earlier you should run bedework behind a front-end
+bedework. As noted earlier, you should run bedework behind a front-end
 service such as haproxy or apache. Wildfly can deliver any associated
-static content so there is no need to move that content elsewhere.</p>
+static content, so there is no need to move that content elsewhere.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Install jdk 17</p>
+<p>Install jdk 21</p>
 </li>
 <li>
-<p>If installing for postgres install the database and create an id/pw for access.</p>
+<p>If installing for postgres, install the database and create an id/pw for access.</p>
 </li>
 <li>
-<p>Download galleon
-wget <a href="https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip" class="bare">https://github.com/wildfly/galleon/releases/download/5.2.2.Final/galleon-5.2.2.Final.zip</a>
-and unzip.
-  and unzip.</p>
+<p>Download galleon</p>
 </li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>wget https://github.com/wildfly/galleon/releases/download/6.1.0.Final/galleon-6.1.0.Final.zip
+unzip galleon-6.1.0.Final.zip</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>Run galleon to deploy wildfly with a bedework service<br>
 You will probably want to change the <strong>--layers</strong> parameter to
@@ -3413,11 +3418,11 @@ select a subset of the bedework installation - see <a href="#wildfly-bedework-la
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>./galleon-5.2.2.Final/bin/galleon.sh \
-   install org.bedework.deploy:bw-wf-feature-pack:4.2.0
-   --dir=wildfly-26.0.1-Final --verbose --layers=bw-cal-eventsubmit-pg,web-console
+<pre>./galleon-6.1.0.Final/bin/galleon.sh \
+   install org.bedework.deploy:bw-wf-feature-pack:5.1.0
+   --dir=wildfly-bw-5.1.0 --verbose --layers=bw-cal-eventsubmit-pg,web-console
 
-ln -s wildfly-26.0.1.Final wildfly</pre>
+ln -s wildfly-bw-5.1.0 wildfly</pre>
 </div>
 </div>
 <div class="ulist">
@@ -3449,7 +3454,7 @@ ln -s wildfly-26.0.1.Final wildfly</pre>
 <p>Bedework is installed as a feature pack which has a dependency on wildfly. The galleon tool supports layers which effectively define a particular flavor of the feature.</p>
 </div>
 <div class="paragraph">
-<p>Many bedework layers have multiple versions for supported databases. For each the appropriate driver will be installed and datasources will be configured. The database is indicated by the suffix "-xx" where xx is:</p>
+<p>Many bedework layers have multiple versions for supported databases. For each, the appropriate driver will be installed and datasources will be configured. The database is indicated by the suffix "-xx" where xx is:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Bedework supported database configurations</caption>
@@ -3484,7 +3489,7 @@ ln -s wildfly-26.0.1.Final wildfly</pre>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Following are tables showing all defined layers. Many are flagged as dependencies of others so, for example, bw-calendar-pg will include bw-calendar-ro. In general the only layers to use are the top level
+<p>Following, are tables showing all defined layers. Many are flagged as dependencies of others, so, for example, bw-calendar-pg will include bw-calendar-ro. In general, the only layers to use are the top level
 layers that specify a database.</p>
 </div>
 <div class="paragraph">
@@ -3493,7 +3498,7 @@ layers that specify a database.</p>
 <div class="paragraph">
 <p>The demo systems will include apacheds as an ldap server with
 a preconfigured set of accounts - all with the password
-"bedework". Also the minimal version of OpenSearch will be
+"bedework". Also, the minimal version of OpenSearch will be
 installed. Startup scripts will be included in the wildfly/bin
 directory to start and stop each of the services.</p>
 </div>
@@ -3703,40 +3708,22 @@ components for the indicated database as a demo system.</p></td>
 <div class="sect3">
 <h4 id="_installing_examples">6.1.6. Installing examples</h4>
 <div class="paragraph">
-<p>These assume galleon has been installed and is runnable. For example it may be installed in the home directory and runnable as:</p>
+<p>These assume galleon has been installed and is runnable. For example, it may be installed in the home directory and runnable as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>~/galleon-4.2.8.Final/bin/galleon.sh</pre>
+<pre>~/galleon-6.1.0.Final/bin/galleon.sh</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In the following examples we will simply write galleon.sh</p>
+<p>In the following examples, we will simply write galleon.sh</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 1. Calendar server with console</div>
 <div class="content">
 <div class="paragraph">
-<p>galleon.sh install org.bedework:bw-wf-feature-pack:4.0.3 --dir=wildfly --verbose --layers=bw-public-pg,web-console</p>
+<p>galleon.sh install org.bedework:bw-wf-feature-pack:5.1.0 --dir=wildfly --verbose --layers=bw-public-pg,web-console</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_installing_snapshot_version">6.1.7. Installing snapshot version</h4>
-<div class="paragraph">
-<p>This may not work as snapshots can be out-of-date or inconsistent but for reference&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>Download and unzip galleon then run the binary and enter the commands as shown:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>./galleon-4.2.8.Final/bin/galleon.sh
-maven add-repository --name=ossrh-snapshots --url=https://oss.sonatype.org/content/repositories/snapshots/ --enable-snapshot=true
-maven resolve-feature-pack org.bedework.deploy:bw-wf-feature-pack:4.0.4-SNAPSHOT
-install org.bedework.deploy:bw-wf-feature-pack:4.0.4-SNAPSHOT --dir=wildfly-26.0.1.Final --verbose --layers=bw-demo-pg,web-console
-exit</code></pre>
 </div>
 </div>
 </div>

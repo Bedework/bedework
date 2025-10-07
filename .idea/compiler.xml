@@ -166,7 +166,6 @@
         <module name="bw-calendar-xsl-calrsrc-MainCampus" />
         <module name="bw-calendar-dumprestore-common" />
         <module name="bw-dotwell-known" />
-        <module name="bw-wfmodules-calendar-dumprestore-service" />
         <module name="bw-util-caching" />
         <module name="bw-note-outbound" />
         <module name="bw-calendar-hlc-rw-api" />

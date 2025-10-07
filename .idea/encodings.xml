@@ -492,6 +492,8 @@
     <file url="file://$PROJECT_DIR$/../bw-util-hibernate/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-elasticsearch/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-elasticsearch/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-index-asciidocs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-index-asciidocs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-indexing/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-indexing/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-index/bw-util-opensearch/src/main/java" charset="UTF-8" />
