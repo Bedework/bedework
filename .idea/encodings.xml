@@ -411,10 +411,10 @@
     <file url="file://$PROJECT_DIR$/../bw-self-registration/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/bw-sometime-doc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/bw-sometime-doc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-sometime/bw-sometime-spi/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-mock/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi-caldav/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi-relationships/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-spi/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-war/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/sched-assist-web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-sometime/src/main/java" charset="UTF-8" />
@@ -523,6 +523,8 @@
     <file url="file://$PROJECT_DIR$/../bw-util-tz/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-args/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-args/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-asciidocs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util/bw-util-asciidocs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-caching/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-caching/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util/bw-util-directory/src/main/java" charset="UTF-8" />
