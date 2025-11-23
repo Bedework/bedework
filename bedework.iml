@@ -21,6 +21,7 @@
       <excludeFolder url="file://$MODULE_DIR$/system-links/wildfly-36.0.0.Final" />
       <excludeFolder url="file://$MODULE_DIR$/system-links/wildfly-bw-5.1.0-a" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/opensearch-dashboards" />
+      <excludeFolder url="file://$MODULE_DIR$/system-links/wildfly-bw-5.1.0-b" />
     </content>
   </component>
 </module>
