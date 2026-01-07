@@ -22,16 +22,16 @@ To reindex
 ....
 cd bw-cli
 ./target/client/bin/client -id <adminid> -pw <adminpw>
-rebuildidx
+idx rebuild
 <some time passes>
-makeidxprod all
+idx makeprod all
 ....
 
 Before the last step ensure that all phases of the indexing took place.
 If - for some reason - the client loses touch with the server, you can check the status with
 
 ....
-rebuildstatus
+idx rebuildstatus
 ....
 
 The response should include a section which might look like this (for the quickstart data)
@@ -53,4 +53,4 @@ resources: 10
 resourceContents: 10
 ....
 
-Note that - other than for filters - there are non-zero counts for everything. If resources for example are 0 check for errors.
+Note that - other than for filters - there are non-zero counts for everything. If resources, for example, are 0 check for errors.
