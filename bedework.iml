@@ -2,11 +2,17 @@
 <module version="4">
   <component name="AdditionalModuleElements">
     <content url="file://$MODULE_DIR$" dumb="true">
+      <excludeFolder url="file://$MODULE_DIR$/system-links/test-mysql" />
+      <excludeFolder url="file://$MODULE_DIR$/system-links/wildfly" />
+      <excludeFolder url="file://$MODULE_DIR$/system-links/wildfly-36.0.0.Final" />
+      <excludeFolder url="file://$MODULE_DIR$/system-links/wildfly-bw-5.1.0-a" />
+      <excludeFolder url="file://$MODULE_DIR$/system-links/wildfly-bw-5.1.0-b" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/.m2" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/apacheds" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/bw-event-registration" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/full-wildfly-26.1.3.Final" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/keycloak" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp/opensearch-dashboards" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/sv" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/test-install" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/tst" />
@@ -16,12 +22,6 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly-26.1.3.Final" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly-35.0.1.Final" />
       <excludeFolder url="file://$MODULE_DIR$/tmp/wildfly-36.0.0.Final" />
-      <excludeFolder url="file://$MODULE_DIR$/system-links/test-mysql" />
-      <excludeFolder url="file://$MODULE_DIR$/system-links/wildfly" />
-      <excludeFolder url="file://$MODULE_DIR$/system-links/wildfly-36.0.0.Final" />
-      <excludeFolder url="file://$MODULE_DIR$/system-links/wildfly-bw-5.1.0-a" />
-      <excludeFolder url="file://$MODULE_DIR$/tmp/opensearch-dashboards" />
-      <excludeFolder url="file://$MODULE_DIR$/system-links/wildfly-bw-5.1.0-b" />
     </content>
   </component>
 </module>
