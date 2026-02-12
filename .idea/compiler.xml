@@ -117,6 +117,7 @@
         <module name="bw-calendar-hlc-admin-api" />
         <module name="bw-calendar-client-bwcommon" />
         <module name="bw-hibernate" />
+        <module name="bw-util-servlet-jsp" />
         <module name="bw-calendar-client-util" />
         <module name="bw-calendar-webclient-common" />
         <module name="bw-base" />

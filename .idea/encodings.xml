@@ -511,6 +511,8 @@
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-http/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet-filters/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet-filters/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet-jsp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet-jsp/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/src/main/java" charset="UTF-8" />
