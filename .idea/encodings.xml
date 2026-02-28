@@ -515,6 +515,8 @@
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet-jsp/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-servlet/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-struts2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-util-network/bw-util-struts2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-network/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-util-openjpa/src/main/resources" charset="UTF-8" />
@@ -1015,6 +1017,8 @@
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util/bw-wfmodules-util-network/bw-wfmodules-util-servlet-filters/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util/bw-wfmodules-util-network/bw-wfmodules-util-servlet/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util/bw-wfmodules-util-network/bw-wfmodules-util-servlet/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util/bw-wfmodules-util-network/bw-wfmodules-util-struts2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util/bw-wfmodules-util-network/bw-wfmodules-util-struts2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util/bw-wfmodules-util-network/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util/bw-wfmodules-util-network/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bw-wfmodules/bw-wfmodules-util/bw-wfmodules-util-security/src/main/java" charset="UTF-8" />

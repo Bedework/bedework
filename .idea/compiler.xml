@@ -53,6 +53,7 @@
         <module name="bw-util-servlet" />
         <module name="bw-util-maven-deploy" />
         <module name="bw-webcache-war" />
+        <module name="bw-util-struts2" />
         <module name="bw-carddav-public-war" />
         <module name="bw-synch-common" />
         <module name="bw-util-options" />
@@ -63,6 +64,7 @@
         <module name="bw-webcache-common" />
         <module name="bw-event-registration-web" />
         <module name="bw-calendar-engine-api" />
+        <module name="bw-wfmodules-util-struts2" />
         <module name="wfmodulesutil" />
         <module name="bw-calws-soap-xml" />
         <module name="bw-calendar-xsl-calfeedrsrc-MainCampus" />
