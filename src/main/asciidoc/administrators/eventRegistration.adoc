@@ -1,7 +1,0 @@
-[[public-events-registration]]
-=== Public Events Registration
-
-Bedework supports a public events registration system that allows authenticated users to register for events. Users may view and modify their registrations, such as unregistering or changing the number of tickets they've requested. When registration is full, users may choose to be placed on a waiting list. Users on waiting lists will automatically be moved up in the queue if space becomes available.
-
-Full documentation is available at https://bedework.github.io/bw-event-registration/[github pages for the event registration project]
-
