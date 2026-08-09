@@ -5,6 +5,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bedework-parent" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bedework.github.io" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tmp/sv/bw-xml" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-access" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-base" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-caldav" vcs="Git" />
@@ -39,6 +40,7 @@
     <mapping directory="$PROJECT_DIR$/../bw-util" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-annotations" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-conf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bw-util-dates" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-deploy" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-index" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bw-util-logging" vcs="Git" />

@@ -22,6 +22,7 @@ doPull bw-base
 doPull bw-util-logging
 doPull bw-util
 doPull bw-util-conf
+doPull bw-logs
 doPull bw-database
 doPull bw-json
 doPull bw-schemaorgforj
@@ -29,25 +30,23 @@ doPull bw-util-network
 doPull bw-util-security
 # ical4j required here
 doPull bw-util-tz
+doPull bw-util-dates
 doPull bw-util-index
 doPull bw-icalendar-xml
 doPull bw-calws-soap
 # Require ical4j-vcard
 doPull bw-util2
-doPull bw-logs
-#doPull bw-jsforj
 doPull bw-webcache
+doPull bw-self-registration
 doPull bw-access
 doPull bw-webdav
 doPull bw-synch
 # Requires apache-jdkim-api
-doPull bw-caldav
 doPull bw-timezone-server
-doPull bw-self-registration
+doPull bw-caldav
 doPull bw-event-registration
 doPull bw-notifier
 # doPull bw-sometime
-doPull bw-cliutil
 doPull bw-cli
 doPull bw-carddav
 doPull bw-category
