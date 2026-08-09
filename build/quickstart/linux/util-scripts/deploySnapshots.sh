@@ -28,6 +28,7 @@ deploySnapshot bw-util-network
 deploySnapshot bw-util-security
 # ical4j required here
 deploySnapshot bw-util-tz
+deploySnapshot bw-util-dates
 deploySnapshot bw-util-index
 deploySnapshot bw-icalendar-xml
 deploySnapshot bw-calws-soap
